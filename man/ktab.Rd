@@ -50,6 +50,7 @@ A 'ktab' object can be created with :\cr
     a list of \code{dudi} objects : \code{\link{ktab.list.dudi}}\cr
     a data.frame : \code{\link{ktab.data.frame}}\cr
     an object \code{within} : \code{\link{ktab.within}}\cr
+    a couple of \code{ktab}s : \code{\link{ktab.match2ktabs}}\cr
 }
 \value{
 \code{c.ktab} returns an object \code{ktab}. It concatenates K-tables with the same rows in common. \cr

@@ -16,11 +16,12 @@ ktab.match2ktabs(KTX, KTY)
 a list of class \code{ktab}, subclass \code{kcoinertia}. See \code{\link{ktab}}
 }
 \references{
-Thioulouse J., Simier M. and Chessel D. (2003). Simultaneous analysis of a sequence of paired ecological tables.  \emph{Ecology} (in press). 
+Thioulouse J., Simier M. and Chessel D. (2004). Simultaneous analysis of a sequence of paired ecological tables.  \emph{Ecology} \bold{85}, 272-283.. 
 
 Simier, M., Blanc L., Pellegrin F., and Nandris D. (1999). Approche simultanée de K couples de tableaux : 
 Application a l'étude des relations pathologie végétale - environnement. \emph{Revue de Statistique Appliquée}, \bold{47}, 31-46.
 }
+\author{Jean Thioulouse \email{ade4@biomserv.univ-lyon1.fr}}
 \section{WARNING }{
 IMPORTANT : \code{KTX} and \code{KTY} must have the same k-tables structure, the same number
 of columns, and the same column weights.

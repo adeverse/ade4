@@ -1,9 +1,9 @@
 Package: ade4
-Version: 1.1-2
+Version: 1.2-1
 Date: 2004/01/09
 Title: Analysis of Environmental Data : Exploratory and Euclidean methods in Environmental sciences
 Author: Jean Thioulouse <ade4@biomserv.univ-lyon1.fr>, Anne-Beatrice Dufour <dufour@biomserv.univ-lyon1.fr> and Daniel Chessel <Daniel.Chessel@biomserv.univ-lyon1.fr>
 Maintainer: Jean Thioulouse <ade4@biomserv.univ-lyon1.fr>
 Description: Multivariate data analysis and graphical display.
 License: GPL version 2 or newer
-URL: http://pbil.univ-lyon1.fr/ADE-4
+URL: http://pbil.univ-lyon1.fr/ADE-4, Mailing list: http://pbil.univ-lyon1.fr/ADE-4/adelist.html

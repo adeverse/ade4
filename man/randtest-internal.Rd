@@ -6,6 +6,7 @@
 \alias{testinter}
 \alias{testprocuste}
 \alias{testmantel}
+\alias{testertracerlq}
 \title{Internal Permutation Tests functions (in C).}
 \description{
 Internal Permutation Tests functions (in C)

@@ -128,21 +128,3 @@ testamova <- function(distab, l1, c1, samtab, l2, c2, strtab, l3, c3, indic, nbh
         as.double(df),
         result = double(r2),
         PACKAGE="ade4")$result
-
-testapdiv <- function(distab, l1, c1, samtab, l2, c2, strtab, l3, c3, indic, nbhapl, npermut, divtotal, r2)
-    .C("testapdiv",
-        as.double(t(distab)),
-        as.integer(l1),
-        as.integer(c1),
-        as.integer(t(samtab)),
-        as.integer(l2),
-        as.integer(c2),
-        as.integer(t(strtab)),
-        as.integer(l3),
-        as.integer(c3),
-        as.integer(indic),
-        as.integer(nbhapl),
-        as.integer(npermut),
-        as.double(divtotal),
-        result = double(r2),
-        PACKAGE="ade4")$result

@@ -33,7 +33,7 @@ data(westafrica)
 s.label(westafrica$cadre, xlim = c(30,500), ylim = c(50,290),
     cpoi = 0, clab = 0, grid = FALSE, addax = 0)
 old.par <- par(no.readonly = TRUE)
-par(mar <- c(0.1, 0.1, 0.1, 0.1))
+par(mar = c(0.1, 0.1, 0.1, 0.1))
 rect(30,0,500,290)
 polygon(westafrica$atlantic,col = "lightblue")
 points(westafrica$riv.xy, pch = 20, cex = 1.5)

@@ -14,9 +14,9 @@ This data set is a list of two components:
   }
 } 
 \source{
-Exemple du logiciel GENETIX.\cr
+Exemple du logiciel GENETIX.
 Belkhir k. et al. GENETIX, logiciel sous WindowsTM pour la génétique des populations. 
-Laboratoire Génome, Populations, Interactions CNRS UMR 5000, Université de Montpellier II, Montpellier (France).
+Laboratoire Génome, Populations, Interactions CNRS UMR 5000, Université de Montpellier II, Montpellier (France). \cr
 \url{http://www.univ-montp2.fr/~genetix/genetix/genetix.htm}
 }
 \references{

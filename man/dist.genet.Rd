@@ -27,6 +27,7 @@ Let \bold{P} the table of general term \eqn{p_{ij}^k}\cr
 \eqn{p_{ij}^+=\sum_{k=1}^{m(j)}p_{ij}^k=1}, \eqn{p_{i+}^+=\sum_{j=1}^{\nu}p_{ij}^+=\nu}, \eqn{p_{++}^+=\sum_{j=1}^{\nu}p_{i+}^+=t\nu}\cr
 
 The option \code{method} computes the distance matrices between populations using the frequencies \eqn{p_{ij}^k}. \cr
+
 1. Nei's distance: \cr
 \eqn{D_1(a,b)=- \ln(\frac{\sum_{k=1}^{\nu} \sum_{j=1}^{m(k)}
 p_{aj}^k p_{bj}^k}{\sqrt{\sum_{k=1}^{\nu} \sum_{j=1}^{m(k)}

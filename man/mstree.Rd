@@ -9,7 +9,7 @@ mstree(xdist, ngmax = 1)
 }
 \arguments{
   \item{xdist}{ an object of class \code{dist} containing an observed dissimilarity }
-  \item{ngmax}{ Component number (default=1). Select 1 for getting classical MST. To add n supplementary edges k times: select k+1. }
+  \item{ngmax}{ a component number (default=1). Select 1 for getting classical MST. To add n supplementary edges k times: select k+1. }
 }
 \value{
 returns an object of class \code{neig}

@@ -19,7 +19,7 @@ summary.witwit(object, \dots)
   \item{object}{an object of class \code{witwit}}
   \item{\dots}{further arguments passed to or from other methods}
 }
-value{
+\value{
 returns a list of class \code{witwit}, \code{coa} and \code{dudi} (see \link{as.dudi}) containing
   \item{rbvar}{a data frame with the within variances of the rows of the factorial coordinates}
   \item{lbw}{a data frame with the marginal weighting of the row classes}

@@ -25,7 +25,7 @@ Data taken from the phylogenetic autocorrelation package starting from:\cr
 \examples{
 data(pap)
 taxo <- taxo2phylog(as.taxo(pap$taxo))
-table.phylog(scalewt(pap$tab), taxo, csi = 2, clabel.nod = 0.6,
+table.phylog(as.data.frame(scalewt(pap$tab)), taxo, csi = 2, clabel.nod = 0.6,
  f.phylog = 0.6)
 }
 \keyword{datasets}

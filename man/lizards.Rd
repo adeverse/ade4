@@ -17,7 +17,7 @@ This data set describes the phylogeny of 18 lizards as reported by Bauwens and D
 Variables of \code{lizards$traits} are the following ones : 
 mean.L (mean length (mm)), matur.L (length at maturity (mm)), 
 max.L (maximum length (mm)), hatch.L (hatchling length (mm)),
-hatch.m (hatchling mass (g), clutch.S} (Clutch size),
+hatch.m (hatchling mass (g)), clutch.S (Clutch size),
 age.mat (age at maturity (number of months of activity)),
 clutch.F (clutch frequency).
 }

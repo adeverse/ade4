@@ -24,7 +24,7 @@ nb2neig returns an object of class \code{neig} using an object of class \code{nb
 
 neig2nb returns an object of class \code{nb} using an object of class \code{neig}
 
-neig2mat returns the incidence matrix between edges (1 = neighbour ; 0 = no neighbour)}
+neig2mat returns the incidence matrix between edges (1 = neighbour ; 0 = no neighbour)
 
 neig.util.GtoL and neig.util.LtoG are utilities.
 }

@@ -31,7 +31,7 @@ freq2genet(PopAllFreq)
 \code{char2genet} returns a list of class \code{genet} with :
 \item{$tab}{a frequencies table of poplations (row) and alleles (column) }
 \item{$center}{the global frequency of each allelic form calculated on the overall individuals classified on each locus} 
-\item{$pop.names}{a vector containing the names of populations present in the data re-coded P01, P02, \dots}}
+\item{$pop.names}{a vector containing the names of populations present in the data re-coded P01, P02, \dots}
 \item{$all.names}{a vector containing the names of the alleles present in the data re-coded L01.1, L01.2, \dots}
 \item{$loc.blocks}{a vector containing the number of alleles by loci}
 \item{$loc.fac}{a factor sharing the alleles by loci}
@@ -43,7 +43,7 @@ freq2genet(PopAllFreq)
 \code{count2genet} and \code{req2genet} return a list of class \code{genet} which don't contain the components \code{pop.loc} and \code{complete}.
 }
 \details{
-As a lot of formats for genetic data are puublished in literature, a list of class \code{genet} contains at least a table of allellic frequencies and an attribut \code{loc.blocks}. The populations (row) and the variables (column) are classified by alphabetic order.
+As a lot of formats for genetic data are published in literature, a list of class \code{genet} contains at least a table of allellic frequencies and an attribut \code{loc.blocks}. The populations (row) and the variables (column) are classified by alphabetic order.
 In the component \code{comp}, each individual per locus of m alleles is re-coded by a vector of length m: for hererozygicy 0,\dots,1,\dots,1,\dots,0 and homozygocy 0,\dots,2,0.
 }
 \author{

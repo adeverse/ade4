@@ -7,7 +7,7 @@ This data set gives the densities per hectare of 11 species of trees
 for 10 transects of topographic moisture values (mean of several stations per class)
 }
 \usage{data(santacatalina)}
-format{
+\format{
 a data frame with 11 rows and 10 columns
 }
 \source{

@@ -37,7 +37,7 @@ wt$ALE <- sqrt(wt$ALE)
 wt$BF[is.na(wt$BF)] <- mean(wt$BF[!is.na(wt$BF)])
 wt$mass <- log(wt$mass)
 wt <- wt[, -6]
-table.phylog(scalewt(wt), pro.phy)
+table.phylog(as.data.frame(scalewt(wt)), pro.phy)
 gearymoran(pro.phy$Amat,wt,9999)
 }
 \keyword{datasets}

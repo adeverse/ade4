@@ -3,7 +3,7 @@
 {
     if (!inherits(X, "ktab")) 
         stop("object 'ktab' expected")
-    if (option == "internal") {
+    if (option[1] == "internal") {
         if (is.null(X$tabw)) {
             warning("Internal weights not found: uniform weigths are used")
             option <- "uniform"
@@ -18,21 +18,21 @@
     ncw <- NULL
     tab.names <- names(X)[1:nbloc]
     auxinames <- ktab.util.names(X)
-    if (option == "lambda1") {
+    if (option[1] == "lambda1") {
         for (i in 1:nbloc) {
             ncw <- c(ncw, rep(1/sepan$Eig[rank.fac == i][1], 
                 sepan$blo[i]))
         }
     }
-    else if (option == "inertia") {
+    else if (option[1] == "inertia") {
         for (i in 1:nbloc) {
             ncw <- c(ncw, rep(1/sum(sepan$Eig[rank.fac == i]), 
                 sepan$blo[i]))
         }
     }
-    else if (option == "uniform") 
+    else if (option[1] == "uniform") 
         ncw <- rep(1, sum(sepan$blo))
-    else if (option == "internal") 
+    else if (option[1] == "internal") 
         ncw <- rep(X$tabw, sepan$blo)
     else stop("unknown option")
     ncw <- cw * ncw

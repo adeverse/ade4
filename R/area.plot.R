@@ -1,7 +1,20 @@
-"area.plot" <- function (x, values = NULL, graph = NULL, lwdgraph = 2, nclasslegend = 8,
+########### area.plot         ################
+########### area.util.contour ################
+########### area.util.xy      ################
+########### area2poly         ################
+########### poly2area         ################
+########### area2link         ################
+
+"area.plot" <- function (x, center= NULL, values = NULL, graph = NULL, lwdgraph = 2, nclasslegend = 8,
     clegend = 0.75, sub = "", csub = 1, possub = "topleft", cpoint = 0, 
     label = NULL, clabel = 0, ...) 
 {
+    # modif vendredi, mars 28, 2003 at 07:35 ajout de l'argument center
+    # doit contenir les centres des polygones (autant de coordonnées que de classes dans area[,1])
+    # si il est nul et utilisé il est calculé comme centre de gravité des sommets du polygones
+    # avec area.util.xy(x)
+    # si il est non nul, doit être de dimensions (nombre de niveaux de x[,1] , 2) et
+    # contenir les coordonnées dans l'ordre de unique(x[,1])
     x.area <- x
     opar <- par(mar = par("mar"), new = par("new"))
     on.exit(par(opar))
@@ -43,7 +56,15 @@
             polygon(a1, a2, col = grey(valgris[numclass[i]]))
         else polygon(a1, a2)
     }
-    w <- area.util.xy(x.area)
+    if (!is.null(graph) | (clabel > 0)) {
+        if (!is.null(center)) {
+            center = as.matrix(center)
+            if (ncol(center)!=2) center <- NULL
+            if (nrow(center)!=length(lev.poly)) center <-NULL
+        }
+        if (!is.null(center)) w=list(x=center[,1],y=center[,2]) else
+        w <- area.util.xy(x.area)
+     }
     if (!is.null(graph)) {
         for (i in 1:nrow(graph)) {
             segments(w$x[graph[i, 1]], w$y[graph[i, 1]], w$x[graph[i, 
@@ -52,14 +73,13 @@
     }
     if (clabel > 0) {
         if (is.null(label)) 
-            label <- row.names(w)
+            label <- as.character(unique(x.area[,1]))
         scatterutil.eti(w$x, w$y, label, clabel = clabel)
     }
     scatterutil.sub(sub, csub, possub)
     if (!is.null(values)) 
         scatterutil.legend.square.grey(br0, valgris, h, clegend)
 }
-
 
 "area.util.contour" <- function (area) {
     poly <- area[, 1]
@@ -163,4 +183,50 @@
     }
     area$reg <- factor(area$reg)
     return(area)
+}
+
+"area2link" <- function(area) {
+    # création vendredi, mars 28, 2003 at 14:49
+    if (!is.factor(area[, 1])) 
+        stop("Factor expected in area[,1]")
+    fac <- area[, 1]
+    levpoly <- unique(fac)
+    npoly <- length(levpoly)
+    res <- matrix(0,npoly,npoly)
+    dimnames(res) <- list(as.character(levpoly),as.character(levpoly))
+    fun1 <- function(niv) {
+        # X est un n-2 système de coordonnées xy
+        # On vérifie que c'est une boucle (sommaire)
+        X <- area[fac == niv, 2:3]
+        n <- nrow(X)
+        if (any(X[1,]!=X[n,])) X <- rbind(X,X[1,])
+        n <- nrow(X)
+        w <- paste(X[1:(n-1),1],X[1:(n-1),2],X[2:(n),1],X[2:(n),2],sep="/")
+        w <- c(w,paste(X[2:(n),1],X[2:(n),2],X[1:(n-1),1],X[1:(n-1),2],sep="/"))
+    }
+    w <- lapply(levpoly,fun1)
+    # w est une liste de vecteurs qui donnent les arêtes des polygones en charactères
+    # du type x1/y1/x2/y2
+    fun2 <- function (cha) {
+        w <- as.numeric(strsplit(cha,"/")[[1]])
+        res <- sqrt((w[1]-w[3])^2+(w[2]-w[4])^2)
+        res
+    }
+    res <- matrix(0,npoly,npoly)
+    x1 <- col(res)[col(res) < row(res)]
+    x2 <- row(res)[col(res) < row(res)]
+    lw <- cbind(x1,x2)
+    fun3 <- function (x) {
+        a <- w[[x[1]]]
+        b <- w[[x[2]]]
+        wd <- 0
+        wab <- unlist(lapply(a, function(x) x%in%b))
+        if (sum(wab)>0)  wd <- sum(unlist(lapply(a[wab], fun2)))
+        wd/2
+    }
+    w <- apply(lw,1,fun3)
+    res[col(res) < row(res) ] <- w
+    res <- res+t(res)
+    dimnames(res)=list(as.character(levpoly),as.character(levpoly))
+    res
 }

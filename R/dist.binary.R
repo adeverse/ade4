@@ -16,7 +16,7 @@
         cat("s2 = (a+d)/(a+b+c+d) --> d = sqrt(1 - s)\n")
         cat("3 = SOCKAL & SNEATH(1963) S5 coefficient of GOWER & LEGENDRE\n")
         cat("s3 = a/(a+2(b+c)) --> d = sqrt(1 - s)\n")
-        cat("4 = ROGERS & TANIMOTO (1960) S5 coefficient of GOWER & LEGENDRE\n")
+        cat("4 = ROGERS & TANIMOTO (1960) S6 coefficient of GOWER & LEGENDRE\n")
         cat("s4 = (a+d)/(a+2(b+c)+d) --> d = sqrt(1 - s)\n")
         cat("5 = CZEKANOWSKI (1913) or SORENSEN (1948)\n")
         cat("s5 = 2*a/(2*a+b+c) --> d = sqrt(1 - s)\n")
@@ -37,7 +37,8 @@
     a <- df %*% t(df)
     b <- df %*% (1 - t(df))
     c <- (1 - df) %*% t(df)
-    d <- nlig - a - b - c
+    d <- ncol(df) - a - b - c
+
     if (method == 1) {
         d <- a/(a + b + c)
     }
@@ -54,10 +55,11 @@
         d <- (a + d)/(a + 2 * (b + c) + d)
     }
     else if (method == 6) {
-        d <- 2 * a/(2 * a + b + c)
+        d <- (a - (b + c) + d)/(a + b + c + d)
+        
     }
     else if (method == 7) {
-        d <- (a - (b + c) + d)/(a + b + c + d)
+        d <- a/sqrt((a+b)*(a+c))
     }
     else if (method == 8) {
         d <- a * d/sqrt((a + b) * (a + c) * (d + b) * (d + c))
@@ -72,6 +74,7 @@
     }
     else stop("Non convenient method")
     d <- sqrt(1 - d)
+    # if (sum(diag(d)^2)>0) stop("diagonale non nulle")
     d <- mat2dist(d)
     attr(d, "Size") <- nlig
     attr(d, "Labels") <- d.names

@@ -19,6 +19,7 @@
     x <- t(apply(x, 1, "*", sqrt(variances)))
     inertot <- sum(variances)
     x <- x/sqrt(inertot)
+    x <- x*sqrt(n)
     x <- data.frame(x)
     names(x) <- paste("C", 1:ncomp, sep = "")
     row.names(x) <- lab

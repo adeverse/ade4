@@ -307,7 +307,7 @@
         return(invisible())
     if (is.null(label)) 
         return(invisible())
-    if (label == "") 
+    if (any(label == "")) 
         return(invisible())
     for (i in 1:(length(x))) {
         cha <- as.character(label[i])

@@ -14,8 +14,8 @@ double alea (void)
 /*************************/
 void aleapermutmat (double **a)
 {
-	// permute au hasard les lignes du tableau a
-	// Manly p. 42 le tableau est modifiÚ
+	/* permute au hasard les lignes du tableau a
+	 Manly p. 42 le tableau est modifie */
 	int lig, i,j, col, n, k;
 	double z;
 
@@ -24,7 +24,7 @@ void aleapermutmat (double **a)
 	for (i=1; i<=lig-1; i++) {
 		j=lig-i+1;
 		k = (int) (j*alea ()+1);
-		//k = (int) (j*genrand()+1);
+		/* k = (int) (j*genrand()+1); */
 		if (k>j) k=j;
 		for (n=1; n<=col; n++) {
 			z = a[j][n];
@@ -36,9 +36,9 @@ void aleapermutmat (double **a)
 /*************************/
 void aleapermutvec (double *a)
 {
-	// permute au hasard les ÚlÚments du vecteur a
-	// Manly p. 42 Le vecteur est modifiÚ
-	// from Knuth 1981 p. 139
+	/*  permute au hasard les ÚlÚments du vecteur a */
+	/*  Manly p. 42 Le vecteur est modifiÚ */
+	/*  from Knuth 1981 p. 139 */
 	int lig, i,j, k;
 	double z;
 	
@@ -46,7 +46,7 @@ void aleapermutvec (double *a)
 	for (i=1; i<=lig-1; i++) {
 		j=lig-i+1;
 		k = (int) (j*alea()+1);
-		//k = (int) (j*genrand()+1);
+		/* k = (int) (j*genrand()+1); */
 		if (k>j) k=j;
 		z = a[j];
 		a[j]=a[k];
@@ -191,7 +191,7 @@ Et7: 	isnou = 1;
 		if (j == k) goto Eta;
 		if (m < ni) goto Etd;
 		
-		//err_message("Error: can't compute matrix eigenvalues");
+		/* err_message("Error: can't compute matrix eigenvalues"); */
 		
 Etd:	m = m + 1;
 		q = (d[k+1]-h) * 0.5 / s[k];
@@ -282,7 +282,7 @@ Eta:;
 Etb:;
 	} /* for (ij=2;ij<=n0;ij++) */
 
-//final:;
+/* final:; */
 	*rang = 0;
 	for (i=1;i<=n0;i++) {
 		/*
@@ -622,7 +622,7 @@ void matmodiffc (double **tab, double *poili)
 	for (j=1;j<=m1;j++) {
 		x = poimoda[j];
 		if (x==0) {
-			//err_message("column has a nul weight (matmodiffc)");
+			/* err_message("column has a nul weight (matmodiffc)"); */
 		}
 		
 		for (i=1;i<=l1;i++) {
@@ -812,7 +812,7 @@ void sqrvec (double *v1)
 	
 	for (i=1;i<=c1;i++) {
 		v2 = v1[i];
-		// if (v2 < 0.0) err_message("Error: Square root of negative number (sqrvec)");
+		/*  if (v2 < 0.0) err_message("Error: Square root of negative number (sqrvec)"); */
 		v2 = sqrt(v2);
 		v1[i] = v2;
 	}
@@ -999,8 +999,8 @@ void vecpermut (double *A, int *num, double *B)
 	
 	
 	if ( (lig!=lig1) || (lig!=lig2) ) {
-		//err_message ("Illegal parameters (vecpermut)");
-		//closelisting();
+		/* err_message ("Illegal parameters (vecpermut)"); */
+		/* closelisting(); */
 	}
 	
 	for (i=1; i<=lig; i++) {

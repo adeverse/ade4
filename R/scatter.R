@@ -166,7 +166,7 @@
 }
 
 ############ scatterutil.eigen #################
-"scatterutil.eigen" <- function (w, xmax = length(w), ymax = max(w), wsel = 1, sub = "Eigen values",
+"scatterutil.eigen" <- function (w, xmax = length(w), ymin=0, ymax = max(w), wsel = 1, sub = "Eigenvalues",
     csub = 2, possub = "topright") 
 {
     opar <- par(mar = par("mar"))
@@ -176,7 +176,7 @@
         w <- c(w, rep(0, xmax - length(w)))
     col.w <- rep(grey(0.8), length(w))
     col.w[wsel] <- grey(0)
-    barplot(w, col = col.w, ylim = c(0, ymax))
+    barplot(w, col = col.w, ylim = c(ymin, ymax))
     scatterutil.sub(cha = sub, csub = csub, possub = possub)
 }
 

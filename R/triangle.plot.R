@@ -213,22 +213,27 @@
     maxi <- apply(tb, 2, max)
     mini <- (floor(mini/0.1))/10
     maxi <- (floor(maxi/0.1) + 1)/10
+    mini[mini<0] <- 0
+    maxi[maxi>1] <- 1
     if (!is.null(min3)) 
         mini <- min3
     if (!is.null(max3)) 
         maxi <- min3
     ampli <- maxi - mini
     amplim <- max(ampli)
-    for (j in 1:3) {
-        k <- amplim - ampli[j]
-        while (k > 0) {
-            if ((k > 0) & (maxi[j] < 1)) {
-                maxi[j] <- maxi[j] + 0.1
-                k <- k - 1
-            }
-            if ((k > 0) & (mini[j] > 0)) {
-                mini[j] <- mini[j] - 0.1
-                k <- k - 1
+    # correction d'un bug trouvé par J. Lobry 15/11/2004
+    if (!all(ampli==amplim)) {
+        for (j in 1:3) {
+            k <- amplim - ampli[j]
+            while (k > 0) {
+                if ((k > 0) & (maxi[j] < 1)) {
+                    maxi[j] <- maxi[j] + 0.1
+                    k <- k - 1
+                }
+                if ((k > 0) & (mini[j] > 0)) {
+                    mini[j] <- mini[j] - 0.1
+                    k <- k - 1
+                }
             }
         }
     }
@@ -274,4 +279,5 @@
     xy <- t(apply(tb, 1, FUN = triangle.posipoint, mini = mini, 
         maxi = maxi))
     return(list(A = A, B = B, C = C, xy = xy, mini = mini, maxi = maxi))
-} 
+}
+

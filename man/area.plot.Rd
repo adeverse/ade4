@@ -71,7 +71,9 @@ area.plot(elec88$area, clab = 0.75)
 # elec88$neig <- neig(area = elec88$area)
 area.plot(elec88$area, graph = elec88$neig, 
 sub = "Neighbourhood graph", possub = "topright")
+par(mfrow = c(1,1))
 
+\dontrun{
 par(mfrow = c(3,3))
 for (i in 1:9) {
     x <- elec88$tab[,i]
@@ -146,7 +148,7 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     s.label(fr.xy, clab = 0, area = fr.area, neig = fr.neig, 
     cneig = 1, cpo = 2, inc = FALSE, addax = FALSE)
 par(mfrow=c(1,1))
-}
+}}
 
 data(irishdata)
 w <- irishdata$area[c(42:53,18:25),]

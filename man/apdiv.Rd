@@ -34,9 +34,13 @@ Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{randtest.apdiv}}}
 \examples{
+data(meaudret)
+fau <- as.data.frame(t(meaudret$fau))
+w <- meaudret$plan$dat
+apdiv(fau,stru=as.data.frame(w))
+\dontrun{
 data(ecomor)
 ecomor.phylog <- taxo2phylog(ecomor$taxo)
 apdiv(ecomor$habitat, ecomor.phylog$Wdist)
-}
+}}
 \keyword{multivariate}
-

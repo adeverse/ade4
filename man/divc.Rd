@@ -28,11 +28,11 @@ Simpson, E.H. (1949) Measurement of diversity. \emph{Nature}, \bold{163}, 688.
 \author{Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
 }
 \examples{
+data(humDNAm)
+divc(humDNAm$samples, sqrt(humDNAm$distances))
+\dontrun{
 data(ecomor)
 ecomor.phylog <- taxo2phylog(ecomor$taxo)
 divc(ecomor$habitat, ecomor.phylog$Wdist)
-
-data(humDNAm)
-divc(humDNAm$samples, sqrt(humDNAm$distances))
-}
+}}
 \keyword{multivariate}

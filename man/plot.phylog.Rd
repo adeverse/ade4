@@ -54,13 +54,15 @@ par(mfrow = c(3,2))
 for(i in 1:6) plot.phylog(newick2phylog(newick.eg[[i]], FALSE),
  clea = 2, clabel.l = 3, cnod = 2.5)
 par(mfrow = c(1,1))
- 
+
+\dontrun{
 par(mfrow = c(1,2))
 plot.phylog(newick2phylog(newick.eg[[11]], FALSE), clea = 1.5,
  clabel.l = 1.5, clabel.nod = 0.75, f = 0.8)
 plot.phylog(newick2phylog(newick.eg[[10]], FALSE), clabel.l = 0,
  clea = 0, cn = 0, f = 1)
 par(mfrow = c(1,1))
+}
 
 par(mfrow = c(2,2))
 w7 <- newick2phylog("(((((1,2,3)b),(6)c),(4,5)d,7)f);")
@@ -75,8 +77,13 @@ data(taxo.eg)
 w <- taxo2phylog(as.taxo(taxo.eg[[1]]))
 plot(w, clabel.lea = 1.25, clabel.n = 1.25, sub = "Taxonomy",
  csub = 3, f = 0.8, possub = "topleft")
+
+provi.tre <- "(((a,b,c,d,e)A,(f,g,h)B)C)D;"
+provi.phy <- newick2phylog(provi.tre)
+plot.phylog(provi.phy, clabel.l = 2, clabel.n = 2, f = 0.8)
 par(mfrow = c(1,1))
 
+\dontrun{
 par(mfrow = c(3,3))
 for (j in 1:6) radial.phylog(newick2phylog(newick.eg[[j]],
  FALSE), clabel.l = 2, cnodes = 2)
@@ -92,7 +99,9 @@ bsetal.phy = taxo2phylog(as.taxo(bsetal97$taxo[,1:3]), FALSE)
 radial.phylog(bsetal.phy, cnod = 1, clea = 1, clabel.l = 0.75,
  draw.box = TRUE, cir = 1.1)
 par(mfrow = c(1,1))
+}
 
+\dontrun{
 # plot all the possible representations of a phylogenetic tree
 a <- "((a,b)A,(c,d,(e,f)B)C)D;"
 wa <- newick2phylog(a)
@@ -108,10 +117,7 @@ fun <- function(x) {
     invisible()}
 apply(wx,1,fun)
 par(mfrow = c(1,1))
+}
 
-provi.tre <- "(((a,b,c,d,e)A,(f,g,h)B)C)D;"
-provi.phy <- newick2phylog(provi.tre)
-plot.phylog(provi.phy, clabel.l = 2, clabel.n = 2, f = 0.8)
-par(mfrow = c(1,1))
 }
 \keyword{hplot}

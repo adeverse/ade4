@@ -38,10 +38,11 @@ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 data(mafragh)
 tab0 <- (as.data.frame(scalewt(mafragh$mil)))
 bilis0 <- neig2mat(mafragh$neig)
-gm0 <- gearymoran(bilis0, tab0, 9999)
+gm0 <- gearymoran(bilis0, tab0, 999)
 gm0
-plot(gm0, nclass = 30)
- 
+plot(gm0, nclass = 20)
+
+\dontrun{
 # a phylogenetic example
 data(mjrochet)
 mjr.phy <- newick2phylog(mjrochet$tre)
@@ -52,6 +53,6 @@ par(mfrow = c(1,2))
 table.value(mjr.phy$Wmat, csi = 0.25, clabel.r = 0)
 table.value(mjr.phy$Amat, csi = 0.35, clabel.r = 0)
 par(mfrow = c(1,1))
-}
+}}
 \keyword{spatial}
 \keyword{ts}

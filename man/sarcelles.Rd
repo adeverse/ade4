@@ -22,6 +22,7 @@ The data frame \code{sarcelles$tab} contains the number of the winter teals (Ana
  \emph{Compte rendu hebdomadaire des séances de l'Académie des sciences}, Paris, D, III, \bold{277}, 2417--2420.
 }
 \examples{
+\dontrun{
 # depends of pixmap
 if (require(pixmap, quietly=TRUE)) {
     bkgnd.pnm <- read.pnm(system.file("pictures/sarcelles.pnm", package = "ade4"))
@@ -33,5 +34,5 @@ if (require(pixmap, quietly=TRUE)) {
     s.value(sarcelles$xy, sarcelles$tab[,i], add.plot = TRUE, cleg = 0)
     }
 }
-}
+}}
 \keyword{datasets}

@@ -23,6 +23,10 @@ Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spa
 }
 \examples{
 data(avijons)
+w1=dudi.coa(avijons$fau,scannf=FALSE)$li
+area.plot(avijons$area,center=avijons$xy,val=w1[,1],clab=0.75,sub="CA Axis 1",csub=3)
+\dontrun{
+data(avijons)
 if (require(pixmap,quiet=TRUE)) {
     pnm.eau <- read.pnm(system.file("pictures/avijonseau.pnm",
         package = "ade4"))
@@ -78,5 +82,5 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)
     s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.eau, inclu = FALSE,
     grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
 par(mfrow=c(1,1))
-}}
+}}}
 \keyword{datasets}

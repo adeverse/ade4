@@ -25,16 +25,18 @@ Rao, C.R. (1982) Diversity and dissimilarity coefficients: a unified approach.
 \author{Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
 }
 \examples{
-data(ecomor)
-ecomor.phylog <- taxo2phylog(ecomor$taxo)
-ecomor.dist <- disc(ecomor$habitat, ecomor.phylog$Wdist)
-ecomor.dist
-is.euclid(ecomor.dist)
-
 data(humDNAm)
 humDNA.dist <- disc(humDNAm$samples, sqrt(humDNAm$distances), humDNAm$structures)
 humDNA.dist
 is.euclid(humDNA.dist$samples)
 is.euclid(humDNA.dist$regions)
+
+\dontrun{
+data(ecomor)
+ecomor.phylog <- taxo2phylog(ecomor$taxo)
+ecomor.dist <- disc(ecomor$habitat, ecomor.phylog$Wdist)
+ecomor.dist
+is.euclid(ecomor.dist)
+}
 }
 \keyword{multivariate}

@@ -21,11 +21,12 @@ returns an object of class \code{krandtest} or \code{randtest}
 \author{Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
 }
 \examples{
+\dontrun{
 data(ecomor)
 ecomor.phylog <- taxo2phylog(ecomor$taxo)
 ecomor.apdiv <- apdiv(ecomor$habitat, ecomor.phylog$Wdist)
-ecomor.test <- randtest.apdiv(ecomor.apdiv, 49)
+ecomor.test <- randtest.apdiv(ecomor.apdiv)
 plot(ecomor.test)
-}
+}}
 \keyword{multivariate}
 \keyword{nonparametric}

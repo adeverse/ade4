@@ -48,15 +48,17 @@ Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr} \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
+data(humDNAm)
+dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
+dpcoahum
+plot(dpcoahum)
+
+\dontrun{
 data(ecomor)
 ecomor.phylog <- taxo2phylog(ecomor$taxo)
 dpcoaeco <- dpcoa(ecomor$habitat, ecomor.phylog$Wdist, scan = FALSE, nf = 2)
 dpcoaeco
 plot(dpcoaeco)
-
-data(humDNAm)
-dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
-dpcoahum
-plot(dpcoahum)
+}
 }
 \keyword{multivariate}

@@ -17,6 +17,7 @@ This data set contains informations about genetic variability of \emph{Atya inno
 Fievet, E., Eppe, F. and Dolédec, S. (2001) Etude de la variabilité morphométrique et génétique des populations de Cacadors (\emph{Atya innocous} et \emph{Atya scabra}) de l'île de Basse-Terre. Direction Régionale de L'Environnement Guadeloupe, Laboratoire des hydrosystèmes fluviaux, Université Lyon 1.
 }
 \examples{
+\dontrun{
 data(atya)
 if (require(pixmap, quiet = TRUE)) {
     atya.digi <- read.pnm(system.file("pictures/atyadigi.pnm",
@@ -32,5 +33,5 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     plot(neig2nb(atya$neig), atya$xy, col = "red", add = TRUE, lwd = 2)
     par(mfrow = c(1,1))
 }
-}
+}}
 \keyword{datasets}

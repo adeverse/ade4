@@ -52,7 +52,7 @@ pca2 <- dudi.pca(diet, scan = FALSE, scale = FALSE)
 s.arrow(pca2$c1)
 w <- as.matrix(diet)%*%as.matrix(pca2$c1)
 s.label(w, clab = 0, add.p = TRUE, cpoi = 2)
-
+\dontrun{
 dmorpho <- dist.quant(log(ecomor$morpho), 3)
 dhabitat <- dist.binary(ecomor$habitat, 1)
 
@@ -68,5 +68,5 @@ plot.phylog(ecophy, clabel.n = 0.75, clabel.l = 0.75,
 dtaxo <- ecophy$Wdist
 mantel.randtest(dmorpho, dtaxo)
 mantel.randtest(dhabitat, dtaxo)
-}
+}}
 \keyword{datasets}

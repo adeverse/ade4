@@ -27,9 +27,11 @@ on the seedling population in the understorey of tropical rain forest. \emph{Jou
 \examples{
 data(julliot)
 par(mfrow = c(3,3))
+\dontrun{
 for(k in 1:7)
     area.plot(julliot$area,val = log(julliot$tab[,k]+1),
      sub = names(julliot$tab)[k], csub = 2.5)
+}
 
 if (require(splancs, quiet = TRUE)){
     par(mfrow = c(3,3))
@@ -38,18 +40,19 @@ if (require(splancs, quiet = TRUE)){
       sub = names(julliot$tab)[k], csub = 2.5)
 }
 
+\dontrun{
 par(mfrow = c(3,3))
 for(k in 1:7) {
     area.plot(julliot$area)
     s.value(julliot$xy, scalewt(log(julliot$tab[,k]+1)),
      sub = names(julliot$tab)[k],csub = 2.5, add.p = TRUE)
-}
-
+}}
 par(mfrow = c(3,3))
 for(k in 1:7)
     s.value(julliot$xy,log(julliot$tab[,k]+1),
      sub = names(julliot$tab)[k], csub = 2.5)
 
+\dontrun{
 if (require(spdep, quiet = TRUE)){
 par(mfrow = c(1,1))
 neig0 <- nb2neig(dnearneigh(as.matrix(julliot$xy), 1, 1.8))
@@ -59,5 +62,5 @@ s.label(julliot$xy, neig = neig0, clab = 0.75, incl = FALSE,
 gearymoran(neig.util.LtoG(neig0), log(julliot$tab+1))
 orthogram(log(julliot$tab[,3]+1), ortho = scores.neig(neig0),
  nrepet = 9999)}
-}
+}}
 \keyword{datasets}

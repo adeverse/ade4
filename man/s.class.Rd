@@ -53,6 +53,7 @@ s.class(xy, posi, cell = 2, axesell = FALSE, csta = 0, col = coul)
 s.chull(xy, posi, cpoi = 1)
 par(mfrow = c(1,1))
 
+\dontrun{
 data(banque)
 dudi1 <- dudi.acm(banque, scannf = FALSE)
 coul = rainbow(length(levels(banque[,20])))
@@ -73,6 +74,6 @@ for (i in 1:(ncol(banque)))
     csub = 2, possub = "topleft", cgrid = 0, csta = 0, cpoi = 0)
 s.label(dudi1$li, clab = 0, sub = "Common background")
 par(mfrow = c(1,1))
-}
+}}
 \keyword{multivariate}
 \keyword{hplot}

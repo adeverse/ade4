@@ -19,11 +19,13 @@ Borrego, J., Morales, J.A., de la Torre, M.L. and Grande, J.A. (2002) Geochemica
 \examples{
 data(tintoodiel)
 
+\dontrun{
 if (require(pixmap, quiet = TRUE)){
 estuary.pnm <- read.pnm(system.file("pictures/tintoodiel.pnm",
     package = "ade4"))
 s.label(tintoodiel$xy,pixmap = estuary.pnm, neig = tintoodiel$neig,
     clab = 0, cpoi = 2, cneig = 3, addax = FALSE, cgrid = 0, grid = FALSE)
+}
 }
 
 estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)

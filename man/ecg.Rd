@@ -24,6 +24,7 @@ Gust Bardy and Per Reinhall, University of Washington
 Percival, D. B., and Walden, A.T. (2000) \emph{Wavelet Methods for Time Series Analysis}, Cambridge University Press.
 }
 \examples{
+\dontrun{
 # figure 130 in Percival and Walden (2000)
 if (require(waveslim) == TRUE) { 
 data(ecg)
@@ -37,6 +38,6 @@ plot(as.ts(ecg), ylab = "ECG")
 apply(res, 2, function(x) plot(as.ts(x), ylim = range(res),
  ylab = ""))
 par(mfrow = c(1,1))
-}
+}}
 }
 \keyword{datasets}

@@ -37,7 +37,7 @@ Returns a list of class \code{mix} and \code{dudi} (see \link{dudi}) containing 
 \emph{Taxon}, \bold{25}:249-255. }
 \author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 
-\seealso{ \code{\link{dudi.mix }}}
+\seealso{ \code{dudi.mix}}
 \examples{
    data(dunedata)
    attributes(dunedata$envir$use)$class <- "factor"   # use dudi.mix for ordered data

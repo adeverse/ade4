@@ -23,7 +23,7 @@ Ter Braak, C. J. F. (1987) The analysis of vegetation-environment relationships 
 
 Chessel, D., Lebreton J. D. and Yoccoz N. (1987) Propriétés de l'analyse canonique des correspondances. Une utilisation en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{35}, 55--72.\cr
 }
-\seealso{\code{\link{cca}} in the package \code{\link{vegan}}}
+\seealso{\code{\link{cca}} in the package \code{vegan}}
 }
 \author{
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

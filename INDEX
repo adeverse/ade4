@@ -2,11 +2,16 @@ PI2newick               Import data files from Phylogenetic
                         Independance Package
 RV.rtest                Monte-Carlo Test on the sum of eigenvalues of
                         a co-inertia analysis (in R).
+RVdist.randtest         Tests of randomization on the correlation
+                        between two distance matrices (in R).
 abouheif.eg             Phylogenies and quantitative traits from
                         Abouheif
 acacia                  Spatial pattern analysis in plant communities
 ade4toR                 Format Change Utility
 aminoacyl               Codon usage
+amova                   Analysis of molecular variance
+apis108                 Allelic frequencies in ten honeybees
+                        populations at eight microsatellites loci
 ardeche                 Fauna Table with double (row and column)
                         partitioning
 area.plot               Graphical Display of Areas
@@ -34,15 +39,20 @@ carni19                 Phylogeny and quantative trait of carnivora
 carni70                 Phylogeny and quantitative traits of carnivora
 carniherbi49            Taxonomy, phylogenies and quantitative traits
                         of carnivora and herbivora
+casitas                 Enzymatic polymorphism in Mus musculus
 cca                     Canonical Correspondence Analysis
 chatcat                 Qualitative Weighted Variables
 chats                   Pair of Variables
 chazeb                  Charolais-Zebus
+chevaine                Enzymatic polymorphism in Leuciscus cephalus
 clementines             Fruit Production
 coinertia               Coinertia Analysis
 coleo                   Table of Fuzzy Biological Traits
+corkdist                Tests of randomization on the correlation
+                        between distances applied to 'kdist' objetcs
 corvus                  Corvus morphology
 deug                    Exam marks for some students
+disc                    Rao's dissimilarity coefficient
 discrimin               Linear Discriminant Analysis (descriptive
                         statistic)
 discrimin.coa           Discriminant Correspondence Analysis
@@ -50,19 +60,25 @@ dist.binary             Computation of Distance Matrices for Binary
                         Data
 dist.dudi               Computation of the Distance Matrix of a
                         Statistical Triplet
+dist.genet              Genetic distances from gene frequencies
 dist.neig               Computation of the Distance Matrix associated
                         to a Neighbouring Graph
 dist.prop               Computation of Distance Matrices of Percentage
                         Data
 dist.quant              Computation of Distance Matrices on
                         Quantitative Variables
+divc                    Rao's diversity coefficient also called
+                        quadratic entropy
 dotcircle               Representation of n values on a circle
 doubs                   Pair of Ecological Tables
+dpcoa                   Double principal coordinate analysis
 dudi                    Duality Diagram
 dudi.acm                Multiple Correspondence Analysis
 dudi.coa                Correspondence Analysis
 dudi.dec                Decentred Correspondence Analysis
 dudi.fca                Fuzzy Correspondence Analysis
+dudi.hillsmith          Ordination of Tables mixing quantitative
+                        variables and factors
 dudi.mix                Ordination of Tables mixing quantitative
                         variables and factors
 dudi.nsc                Non symmetric correspondence analysis
@@ -82,9 +98,12 @@ friday87                Faunistic K-tables
 fruits                  Pair of Tables
 gearymoran              Moran's I and Geary'c randomization tests for
                         spatial and phylogenetic autocorrelation
+genet                   A class of data: tables of populations and
+                        alleles
 granulo                 Granulometric Curves
 gridrowcol              Complete regular grid analysis
 housetasks              Contingency Table
+humDNAm                 human mitochondrial DNA restriction data
 ichtyo                  Point sampling of fish community
 inertia.dudi            Statistics of inertia in a one-table analysis
 irishdata               Geary's Irish Data
@@ -92,6 +111,12 @@ is.euclid               Is a Distance Matrix Euclidean ?
 julliot                 Seed dispersal
 jv73                    K-tables Multi-Regions
 kcponds                 Ponds in a nature reserve
+kdist                   the class of objects 'kdist' (K distance
+                        matrices)
+kdist2ktab              Transformation of K distance matrices (object
+                        'kdist') into K Euclidean representations
+                        (object 'ktab')
+kdisteuclid             a way to obtain Euclidean distance matrices
 kplot                   Generic Function for Multiple Graphs in a
                         K-tables Analysis
 kplot.foucart           Multiple Graphs for the Foucart's
@@ -101,7 +126,7 @@ kplot.mcoa              Multiple Graphs for a Multiple Co-inertia
 kplot.mfa               Multiple Graphs for a Multiple Factorial
                         Analysis
 kplot.pta               Multiple Graphs for a Partial Triadic Analysis
-kplot.sepan             Multiple Graphs for Separed Analyses in a
+kplot.sepan             Multiple Graphs for Separated Analyses in a
                         K-tables
 kplot.statis            Multiple Graphs of a STATIS Analysis
 krandtest               Class of the Permutation Tests (in C).
@@ -143,6 +168,7 @@ mld                     Multi Level Decomposition of unidimensional
 mollusc                 Faunistic Communities and Sampling Experiment
 monde84                 Global State of the World in 1984
 morphosport             Athletes' Morphology
+mstree                  Minimal Spanning Tree
 multispati              Multivariate spatial analysis
 multispati.randtest     Multivariate spatial autocorrelation test (in
                         C)
@@ -181,6 +207,8 @@ pta                     Partial Triadic Analysis of a K-tables
 quasieuclid             Transformation of a distance matrice to a
                         Euclidean one
 randtest                Class of the Permutation Tests (in C).
+randtest.amova          Permutation tests on an analysis of molecular
+                        variance (in C).
 randtest.between        Monte-Carlo Test on the between-groups inertia
                         percentage (in C).
 randtest.coinertia      Monte-Carlo test on a coinertia analysis (in
@@ -190,6 +218,7 @@ randtest.discrimin      Monte-Carlo Test on a Discriminant Analysis
 rankrock                Ordination Table
 reconst                 Reconstitution of Data from a Duality Diagram
 rhone                   Physico-Chemistry Data
+rlq                     RLQ analysis
 rpjdl                   Avifauna and Vegetation
 rtest                   Class of the Permutation Tests (in R).
 rtest.between           Monte-Carlo Test on the between-groups inertia

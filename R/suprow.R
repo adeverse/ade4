@@ -16,6 +16,15 @@
     coosup <- as.matrix(Xsup) %*% as.matrix(x$c1)
     coosup <- data.frame(coosup, row.names = row.names(Xsup))
     names(coosup) <- names(x$li)
+    # bug 25/11/2004 On reproduisait bien les coordonnées supplémentaires
+    # mais pas les valeurs du tableau, donc pas de transferts possibles en inter-intra
+    # voir fiche QR8
+    cwsup <- x$cw
+    cwsup[cwsup == 0] <- 1
+    Xsup <- sweep(Xsup, 2, cwsup, "/")
+    # le centrage n'est pas indispensable
+    Xsup <- Xsup-1
+    Xsup[,cwsup == 1] <- 0
     return(list(tabsup=Xsup, lisup=coosup))
 }
 
@@ -29,7 +38,8 @@
         stop("Xsup is not a data.frame")
     if (ncol(Xsup) != ncol(x$tab)) 
         stop("non convenient col numbers")
-    coosup <- as.matrix(Xsup) %*% t(t(as.matrix(x$c1)) * x$cw)
+    # bug 25/11/2004 vue par fiche QR8
+    coosup <- as.matrix(Xsup) %*% (as.matrix(x$c1) * x$cw)
     coosup <- data.frame(coosup, row.names = row.names(Xsup))
     names(coosup) <- names(x$li)
     return(list(tabsup=Xsup, lisup=coosup))

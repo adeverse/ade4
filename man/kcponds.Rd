@@ -38,11 +38,15 @@ s.label(kcponds$xy, add.p = TRUE, clab = 1.5)
 w <- as.numeric(scalewt(kcponds$tab$N))
 s.value(kcponds$xy, w, cleg = 2, sub = "Nitrogen concentration",
      csub = 4, possub = "topright", include = FALSE)
+par(mfrow = c(1,1))
+\dontrun{
+par(mfrow=c(3,1))
 pca1 <- dudi.pca(kcponds$tab, scan = FALSE, nf = 4)
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
 multi1 <- multispati(pca1, nb2listw(neig2nb(kcponds$neig)),
      scan = FALSE, nfposi = 2, nfnega = 1)
 summary(multi1)}
 par(mfrow = c(1,1))
+}
 }
 \keyword{datasets}

@@ -21,7 +21,8 @@ s.image <- function(dfxy, z, xax=1, yax=2, span=0.5,
             sub = sub, csub = csub, possub = possub, pixmap = pixmap, 
             contour = contour, area = area, add.plot = add.plot)
     if (!require(splancs)) stop ("splancs required for inout")
-    if (!require(modreg)) stop ("modreg required for loess")
+    # package 'modreg' has been merged into 'stats' R >= 2.0.0
+    # if (!require(modreg)) stop ("modreg required for loess")
     w = cbind.data.frame(xy,z)
     ngrid <- floor(kgrid*sqrt(nrow(w)))
     if (ngrid<5) ngrid<-5
@@ -45,4 +46,3 @@ s.image <- function(dfxy, z, xax=1, yax=2, span=0.5,
     if (image.plot) image(xg,yg,mod,add=TRUE, col=gray((32:0)/32))
     if (contour.plot) contour(xg,yg,mod,add=TRUE,labcex=1,lwd=2,nlevels=5,levels=pretty(z,7)[-c(1,7)],col="red")  
 }
-

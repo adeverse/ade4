@@ -7,10 +7,11 @@ This data set describes the phylogeny of 70 carnivora as reported by Diniz-Filho
 }
 \usage{data(carni70)}
 \format{
-\code{carni70} is a list containing the 2 following objects : 
+\code{carni70} is a list containing the 2 following objects: 
 \describe{
-   \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
-   \item{tab}{is a data frame with 70 species and two traits : size (body size (kg)) ; range (geographic range size (km)).}    
+   \item{tre}{is a character string giving the phylogenetic tree in Newick format.
+   Branch lengths are expressed as divergence times (millions of years)} 
+   \item{tab}{is a data frame with 70 species and two traits: size (body size (kg)) ; range (geographic range size (km)).}    
 }}
 \source{
 Diniz-Filho, J. A. F., and N. M. Tôrres. (2002) Phylogenetic comparative methods and the 

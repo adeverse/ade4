@@ -1,7 +1,7 @@
 \name{kplot.sepan}
 \alias{kplot.sepan}
 \alias{kplot.sepan.coa}
-\title{Multiple Graphs for Separed Analyses in a K-tables}
+\title{Multiple Graphs for Separated Analyses in a K-tables}
 \description{
 performs high level plots for Separed Analyses in a K-tables, 
 using an object of class \code{sepan}. 

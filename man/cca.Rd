@@ -14,7 +14,7 @@ cca(sitspe, sitenv, scannf = TRUE, nf = 2)
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
 }
 \value{
-returns an object of class \code{pcaiv}. See \code{pcaiv}
+returns an object of class \code{pcaiv}. See \code{\link{pcaiv}}
 }
 \references{
 Ter Braak, C. J. F. (1986) Canonical correspondence analysis : a new eigenvector technique for multivariate direct gradient analysis. \emph{Ecology}, \bold{67}, 1167--1179.\cr
@@ -23,7 +23,7 @@ Ter Braak, C. J. F. (1987) The analysis of vegetation-environment relationships 
 
 Chessel, D., Lebreton J. D. and Yoccoz N. (1987) Propriétés de l'analyse canonique des correspondances. Une utilisation en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{35}, 55--72.\cr
 }
-\seealso{\code{cca} in the package \code{vegan}
+\seealso{\code{\link{cca}} in the package \code{\link{vegan}}}
 }
 \author{
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

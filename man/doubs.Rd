@@ -18,7 +18,7 @@ This data set gives environmental variables, fish species and spatial coordinate
  Verneaux, J. (1973) 
  \emph{Cours d'eau de Franche-Comté (Massif du Jura). 
  Recherches écologiques sur le réseau hydrographique du Doubs. Essai de biotypologie}. 
- Thèse d'état, Besançon. 1--257
+ Thèse d'état, Besançon. 1--257.
 }
 \examples{
 data(doubs)

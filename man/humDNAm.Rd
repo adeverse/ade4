@@ -3,13 +3,13 @@
 \docType{data}
 \title{human mitochondrial DNA restriction data}
 \description{
-This data set gives the frequencies of haplotypes of mitochondrial DNA restriction data in ten populations all over the world./cr
+This data set gives the frequencies of haplotypes of mitochondrial DNA restriction data in ten populations all over the world.\cr
 It gives also distances among the haplotypes. 
 }
 \usage{data(humDNAm)}
 \format{
     \code{humDNAm} is a list of 3 components.
-\enumerate{
+\describe{
     \item{distances}{is an object of class \code{dist} with 56 haplotypes.
     These distances are computed by counting the number of differences in restriction sites between two haplotypes.}
     \item{samples}{is a data frame with 56 haplotypes, 10 abundance variables (populations). 
@@ -24,6 +24,6 @@ It gives also distances among the haplotypes.
 \examples{
 data(humDNAm)
 dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
-plot(dpcoahum)
+plot(dpcoahum, csize = 1.5)
 }
 \keyword{datasets}

@@ -24,7 +24,7 @@ Returns an object of class \code{randtest} (randomization tests).
 }
 \references{
 Smouse, P. E. and Peakall, R. (1999) Spatial autocorrelation analysis of individual multiallele and multilocus genetic structure. 
-\emph{Heredity},\ bold{82}, 561--573.
+\emph{Heredity}, \bold{82}, 561--573.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}

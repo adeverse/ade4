@@ -3,8 +3,9 @@
 
 \title{ Ordination of Tables mixing quantitative variables and factors }
 \description{ performs a multivariate analysis with mixed quantitative variables and factors.}
-\usage{dudi.hillsmith(df, row.w = rep(1, nrow(df))/nrow(df), scannf = TRUE, nf = 2)}
-
+\usage{dudi.hillsmith(df, row.w = rep(1, nrow(df))/nrow(df), 
+   scannf = TRUE, nf = 2)
+}
 \arguments{
   \item{df}{ a data frame with mixed type variables (quantitative and factor) }
   \item{row.w}{ a vector of row weights, by default uniform row weights are used }
@@ -12,8 +13,8 @@
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
 }
 \details{
-If df contains only quantitative variables, this is equivalent to a normed PCA.\cr
-If df contains only factors, this is equivalent to an MCA.\cr
+If \code{df} contains only quantitative variables, this is equivalent to a normed PCA.\cr
+If \code{df} contains only factors, this is equivalent to an MCA.\cr
 
 This analysis is the Hill and Smith method and is very similar to \code{dudi.mix} function. 
 The differences are that \code{dudi.hillsmith} allow to use various row weights, while
@@ -32,18 +33,17 @@ Returns a list of class \code{mix} and \code{dudi} (see \link{dudi}) containing 
     }
 }
 }
-\references{ Hill, M. O., and A. J. E. Smith. 1976. Principal component analysis of taxonomic data with multi-state discrete characters. \emph{Taxon}, \bold{25}:249-255. }
-\author{ Stephane Dray <dray@biomserv.univ-lyon1.fr>}
+\references{ Hill, M. O., and A. J. E. Smith. 1976. Principal component analysis of taxonomic data with multi-state discrete characters. 
+\emph{Taxon}, \bold{25}:249-255. }
+\author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 
-\seealso{ dudi.mix }
+\seealso{ \code{\link{dudi.mix }}}
 \examples{
-     data(dunedata)
-     attributes(dunedata$envir$use)$class <- "factor"   # use dudi.mix for ordered data
-     dd1 <- dudi.hillsmith(dunedata$envir, scann = FALSE)
-     scatter.dudi(dd1, clab.r = 1, clab.c = 1.5)
-
+   data(dunedata)
+   attributes(dunedata$envir$use)$class <- "factor"   # use dudi.mix for ordered data
+   dd1 <- dudi.hillsmith(dunedata$envir, scann = FALSE)
+   scatter.dudi(dd1, clab.r = 1, clab.c = 1.5)
   }
 }
 
 \keyword{multivariate}
-

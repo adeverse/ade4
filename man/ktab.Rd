@@ -19,7 +19,7 @@
 \alias{ktab.util.addfactor<-}
 \title{the class of objects 'ktab' (K-tables)}
 \description{
-an object of class \code{ktab} is a list of data frame with the same row.names in common.\cr
+an object of class \code{ktab} is a list of data frames with the same row.names in common.\cr
 a list of class 'ktab' contains moreover :
  \item{blo}{: the vector of the numbers of columns for each table}
  \item{lw}{: the vector of the row weightings in common for all tables}

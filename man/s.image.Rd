@@ -6,10 +6,11 @@
 }
 \usage{
 s.image(dfxy, z, xax = 1, yax = 2, span = 0.5, xlim = NULL, ylim = NULL, 
-kgrid = 2, scale = TRUE, grid = FALSE, addaxes = FALSE, cgrid = 0, 
-include.origin = FALSE, origin = c(0, 0), sub = "", csub = 1, 
-possub = "topleft", neig = NULL, cneig = 1, image.plot = TRUE, 
-contour.plot = TRUE, pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE)
+  kgrid = 2, scale = TRUE, grid = FALSE, addaxes = FALSE, cgrid = 0, 
+  include.origin = FALSE, origin = c(0, 0), sub = "", csub = 1, 
+  possub = "topleft", neig = NULL, cneig = 1, image.plot = TRUE, 
+  contour.plot = TRUE, pixmap = NULL, contour = NULL, area = NULL, 
+  add.plot = FALSE)
 }
 \arguments{
   \item{dfxy}{ a data frame containing the two columns for the axes }

@@ -18,7 +18,7 @@ frequencies of 51 bird species ; two factors (habitats and Mediterranean origin)
 \source{
 Blondel, J., Chessel, D., & Frochot, B. (1988)
 Bird species impoverishment, niche expansion, and density inflation in mediterranean island habitats.
-\emph{Ecology}, \bold{69}, 1899--1917
+\emph{Ecology}, \bold{69}, 1899--1917.
 }
 \examples{
 \dontrun{

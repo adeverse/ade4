@@ -14,7 +14,7 @@ as.taxo(df)
 \value{
 Returns a data.frame of class \code{taxo}.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{taxo2phylog}} to transform an object of class \code{taxo} into an object of class \code{phylog}}.

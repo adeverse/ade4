@@ -11,9 +11,9 @@ disc(samples, dis = NULL, structures = NULL)
   \item{samples}{a data frame with elements as rows, samples as columns,
   and abundance, presence-absence or frequencies as entries}
   \item{dis}{an object of class \code{dist} containing distances or dissimilarities among elements.
-  If \code{dis} is null, equidistances are used.}
+  If \code{dis} is NULL, equidistances are used.}
   \item{structures}{a data frame containing, in the jth row and the kth column,
-  the name of the group of level k to which the jth population belongs}
+  the name of the group of level k to which the jth population belongs.}
 }
 \value{
 Returns a list of objects of class \code{dist}

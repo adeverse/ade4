@@ -20,7 +20,7 @@ print.amova(x, full = FALSE, \dots)
   \item{x}{an object of class \code{amova}}
   \item{full}{a logical value indicating whether the original data ('distances','samples','structures')
   should be printed}
-  \item{\dots}{\code{\dots} further arguments passed to or from other methods}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 Returns a list of class \code{amova}

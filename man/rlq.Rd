@@ -58,28 +58,30 @@ randtest.rlq(xtest,nrepet = 999, RV = TRUE, ...)
   \item{aR}{the axis onto co-inertia axis (R)}
   \item{aQ}{the axis onto co-inertia axis (Q)}
 }
-\references{ Dolédec, S., Chessel, D., ter Braak, C.J.F. and Champely, S. (1996) Matching species traits to environmental variables: a new three-table ordination method. \emph{Environmental and Ecological Statistics}, \bold{3}, 143--166.\cr
-Dray, S., Pettorelli, N., Chessel, D. (2002) Matching data sets from two different spatial samplings. \emph{Journal of Vegetation Science}, \bold{13}, 867--874.}
-\author{ Stephane Dray <dray@biomserv.univ-lyon1.fr>}
+\references{ 
+Doledec, S., Chessel, D., ter Braak, C.J.F. and Champely, S. (1996) 
+Matching species traits to environmental variables: a new three-table ordination method. \emph{Environmental and Ecological Statistics}, 
+\bold{3}, 143--166.
+
+Dray, S., Pettorelli, N., Chessel, D. (2002) Matching data sets from two different spatial samplings. 
+\emph{Journal of Vegetation Science}, \bold{13}, 867--874.
+}
+\author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 
 \section{WARNING }{
 IMPORTANT : row weights for \code{dudiR} and \code{dudiQ} must be taken from \code{dudiL}.
 }
 \note{\code{as.coinertia} transforms a \code{rlq} object into a \code{coinertia} object but user must specify which \code{dudi} is fixed and not modified.} 
-\seealso{ coinertia }
+\seealso{ \code{\link{coinertia}} }
 \examples{
-  
-  data(aviurba)
-  coa1<-dudi.coa(aviurba$fau,scannf=FALSE,nf=2)
-  dudimil<-dudi.hillsmith(aviurba$mil,scannf=FALSE,nf=2,row.w=coa1$lw)
-  duditrait<-dudi.hillsmith(aviurba$traits,scannf=FALSE,nf=2,row.w=coa1$cw)
-  rlq1<-rlq(dudimil,coa1,duditrait,scannf=FALSE,nf=2)
-  plot(rlq1)
-  summary(rlq1)
-  randtest.rlq(rlq1)
-  
-  }
-
+data(aviurba)
+   coa1 <- dudi.coa(aviurba$fau, scannf = FALSE, nf = 2)
+   dudimil <- dudi.hillsmith(aviurba$mil, scannf = FALSE, nf = 2, row.w = coa1$lw)
+   duditrait <- dudi.hillsmith(aviurba$traits, scannf = FALSE, nf = 2, row.w = coa1$cw)
+   rlq1 <- rlq(dudimil, coa1, duditrait, scannf = FALSE, nf = 2)
+   plot(rlq1)
+   summary(rlq1)
+   randtest.rlq(rlq1)
+}
 \keyword{ multivariate }
 \keyword{ spatial }
-

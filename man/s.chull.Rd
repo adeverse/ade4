@@ -8,9 +8,9 @@ performs the scatter diagrams with polygons of contour by level of a factor.
 s.chull(dfxy, fac, xax = 1, yax = 2, 
     optchull = c(0.25, 0.5, 0.75, 1), label = levels(fac), clabel = 1, 
     cpoint = 0, col = rep(1, length(levels(fac))), xlim = NULL, ylim = NULL,
-    grid = TRUE, addaxes = TRUE, origin = c(0,0), include.origin = TRUE, sub = "",
-    csub = 1, possub = "bottomleft", cgrid = 1, pixmap = NULL, contour = NULL, 
-    area = NULL, add.plot = FALSE)
+    grid = TRUE, addaxes = TRUE, origin = c(0,0), include.origin = TRUE, 
+    sub = "", csub = 1, possub = "bottomleft", cgrid = 1, pixmap = NULL, 
+    contour = NULL, area = NULL, add.plot = FALSE)
 }
 \arguments{
   \item{dfxy}{a data frame containing the two columns for the axes}

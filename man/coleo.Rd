@@ -19,7 +19,7 @@ This data set coleo (coleoptera) is a a fuzzy biological traits table.
 \source{
 Bournaud, M., Richoux, P. and Usseglio-Polatera, P. (1992)
 An approach to the synthesis of qualitative ecological information from aquatic coleoptera communities.
-\emph{Regulated rivers: Research and Management}, \bold{7}, 165--180
+\emph{Regulated rivers: Research and Management}, \bold{7}, 165--180.
 }
 \examples{
 data(coleo)

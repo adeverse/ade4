@@ -43,7 +43,7 @@ Returns a list of class \code{dpcoa} containing:
   Pavoine, S., Dufour, A.B. and Chessel, D. (in press) From dissimilarities among species to dissimilarities among communities:
   a double principal coordinate analysis. \emph{Journal of Theoretical Biology}.
 }
-\authors{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr} \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
@@ -51,14 +51,12 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 data(humDNAm)
 dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
 dpcoahum
-plot(dpcoahum)
-
+plot(dpcoahum, csize = 1.5)
 \dontrun{
 data(ecomor)
 ecomor.phylog <- taxo2phylog(ecomor$taxo)
 dpcoaeco <- dpcoa(ecomor$habitat, ecomor.phylog$Wdist, scan = FALSE, nf = 2)
 dpcoaeco
-plot(dpcoaeco)
-}
+plot(dpcoaeco, csize = 1.5)}
 }
 \keyword{multivariate}

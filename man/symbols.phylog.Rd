@@ -18,7 +18,8 @@ dotchart.phylog(phylog, values, ceti = 1, cdot = 1, ...)
   \item{values}{a vector giving the position in a \code{dotplot}}
   \item{csize}{ a size coefficient for symbols}
   \item{ceti}{ a character size for the legend of the dot plot, used with \code{par("cex")*ceti}}
-  \item{cdot}{ a character size for plotting the points of the dot plot, used with \code{par("cex")*cdot}}
+  \item{cdot}{ a character size for plotting the points of the dot plot, 
+  used with \code{par("cex")*cdot}}
   \item{clegend}{ a character size for the legend used by \code{par("cex")*clegend}}
   \item{sub}{ a string of characters to be inserted as legend}
   \item{csub}{ a character size for the legend, used with \code{par("cex")*csub}}

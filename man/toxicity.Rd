@@ -19,7 +19,7 @@ This data set gives the toxicity of 7 molecules on 16 targets
 Devillers, J., Thioulouse, J. and Karcher W. (1993)
 Chemometrical Evaluation of Multispecies-Multichemical Data by Means 
 of Graphical Techniques Combined with Multivariate Analyses.
-\emph{Ecotoxicology and Environnemental Safety}, \bold{26}, 333--345
+\emph{Ecotoxicology and Environnemental Safety}, \bold{26}, 333--345.
 }
 \examples{
 data(toxicity)

@@ -11,7 +11,7 @@ divc(df, dis)
   \item{df}{a data frame with elements as rows, samples as columns,
   and abundance, presence-absence or frequencies as entries}
   \item{dis}{an object of class \code{dist} containing distances or dissimilarities among elements.
-  If \code{dis} is null, Gini-Simpson index is performed.}
+  If \code{dis} is NULL, Gini-Simpson index is performed.}
 }
 \value{
 Returns a data frame with samples as rows and the diversity coefficient within samples as column

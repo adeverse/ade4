@@ -14,8 +14,8 @@
     }
 }
 \details{
-One row of \code{tab} corresponds to one group of cats.\
-The value in \code{eff} is the number of cats in this group
+One row of \code{tab} corresponds to one group of cats.\cr
+The value in \code{eff} is the number of cats in this group.
 }
 \source{
 Pontier, D. (1984)

@@ -20,8 +20,8 @@ The measurements are made on 5 groups and 30 Egyptian skulls. The groups are def
 Thompson, A. and Randall-Maciver, R. (1905) \emph{Ancient races of the Thebaid}, Oxford University Press.
 }
 \references{
-Manly, B.F. (1994) \emph{Multivariate Statistical Methods.\cr
-A primer}, Second edition. Chapman & Hall, London. 1--215.\cr
+Manly, B.F. (1994) \emph{Multivariate Statistical Methods. A primer}, 
+Second edition. Chapman & Hall, London. 1--215.\cr
 The example is treated pp. 6, 13, 51, 64, 72, 107, 112 et 117.
 }
 \examples{

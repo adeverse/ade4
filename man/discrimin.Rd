@@ -12,7 +12,7 @@ plot.discrimin (x, xax = 1, yax = 2, \dots)
 print.discrimin (x, \dots) 
 }
 \arguments{
-  \item{dudi}{a duality diagram, object of class 'dudi'}
+  \item{dudi}{a duality diagram, object of class \code{dudi}}
   \item{fac}{a factor defining the classes of discriminant analysis}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}

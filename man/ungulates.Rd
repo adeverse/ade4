@@ -7,18 +7,22 @@ This data set describes the phylogeny of 18 ungulates as reported by Pélabon et 
 }
 \usage{data(ungulates)}
 \format{
-\code{fission} is a list containing the 2 following objects : \cr 
-            \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
-            \item{tab}{is a data frame with 18 species and 4 traits}    
-        
-        Variables of \code{ungulates$tab} are the following ones : \cr
-        \item{afbw}{: is a numeric vector that describes the adult female body weight (g)}
-        \item{mnw}{: is a numeric vector that describes the male neonatal weight (g)}
-        \item{fnw}{: is a numeric vector that describes the female neonatal weight (g)}
-        \item{ls}{: is a numeric vector that describes the litter size}
+\code{fission} is a list containing the 2 following objects : 
+\describe{ 
+   \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
+   \item{tab}{is a data frame with 18 species and 4 traits}    
+}}
+\details{        
+Variables of \code{ungulates$tab} are the following ones : \cr
+afbw: is a numeric vector that describes the adult female body weight (g) \cr
+mnw: is a numeric vector that describes the male neonatal weight (g) \cr
+fnw: is a numeric vector that describes the female neonatal weight (g) \cr
+ls: is a numeric vector that describes the litter size \cr
 }
 \source{
-Data were obtained from Pélabon, C., Gaillard, J.M., Loison, A. and Portier, A. (1995) Is sex-biased maternal care limited by total maternal expenditure in polygynous ungulates? \emph{Behavioral Ecology and Sociobiology}, \bold{37}, 311--319.
+Data were obtained from Pélabon, C., Gaillard, J.M., Loison, A. and Portier, A. (1995) 
+Is sex-biased maternal care limited by total maternal expenditure in polygynous ungulates? 
+\emph{Behavioral Ecology and Sociobiology}, \bold{37}, 311--319.
 }
 \examples{
 data(ungulates)

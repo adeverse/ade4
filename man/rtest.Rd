@@ -28,7 +28,7 @@ rtest is a generic function. It proposes methods for the following objects \code
 \code{as.rtest} returns a list of class \code{rtest}\cr
 \code{plot.rtest} draws the simulated values histograms and the position of the observed value\cr
 }
-\seealso{\link{RV.rtest}, \link{mantel.rtest}, \link{procuste.rtest}, \link{randtest}}
+\seealso{\code{\link{RV.rtest}}, \code{\link{mantel.rtest}}, \code{\link{procuste.rtest}}, \code{\link{randtest}}}
 \examples{
 par(mfrow = c(2,2))
 for (x0 in c(2.4,3.4,5.4,20.4)) {

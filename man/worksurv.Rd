@@ -9,7 +9,7 @@ providing from a French Worker Survey.
 \usage{data(worksurv)}
 \format{
   This data frame contains the following columns:
-  \describe{
+  \enumerate{
     \item{pro}{Professional elections. In professional elections in your firm, would you rather vote for a list supported by?
    \code{CGT}
       \code{CFDT}
@@ -52,13 +52,13 @@ providing from a French Worker Survey.
 The data frame \code{worksurv} has the attribute 'counts' giving the number of responses for each item.
 }
 \source{
-Rouanet, H. and Le Roux, B. (1993)\cr
+Rouanet, H. and Le Roux, B. (1993) 
 \emph{Analyse des données multidimensionnelles}. Dunod, Paris.
 }
 \references{
-Le Roux, B. and Rouanet, H.  (1997)\cr
-Interpreting axes in multiple correspondence analysis: method of the contributions of points and deviation.\cr
-Pages 197-220 in B. J. and M. Greenacre, editors.\cr
+Le Roux, B. and Rouanet, H.  (1997) 
+Interpreting axes in multiple correspondence analysis: method of the contributions of points and deviation. 
+Pages 197-220 in B. J. and M. Greenacre, editors. 
 \emph{Visualization of categorical data}, Acamedic Press, London.
 }
 \examples{

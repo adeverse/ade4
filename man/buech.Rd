@@ -7,29 +7,26 @@ This data set contains informations about Buech basin characteristics.
 }
 \usage{data(buech)}
 \format{
-\code{buech} is a list with the following elements : 
-        \item{tab1}{: a data frame with 10 environmental variables collected on 31 sites in Juin (1984)}
-        \item{tab2}{: a data frame with 10 environmental variables collected on 31 sites in September (1984)}
-        \item{xy}{: a data frame with the coordinates of the sites}
-        \item{neig}{: an object of class \code{'neig'}}
-        \item{contour}{: a data frame for background map}
-
-Variables of \code{buech$tab1} and \code{buech$tab2} are the following ones : \cr
-    \item{pH}{: pH}
-    \item{Conductivity}{: conductivity (µS/cm)}
-    \item{Carbonate}{: water hardness (mg/l CaCO3)}
-    \item{hardness}{: total water hardness (mg/l CaCO3)}
-    \item{Bicarbonate}{: alcalinity (mg/l HCO3-)}
-    \item{Chloride}{: alcalinity (mg/l Cl-)}
-    \item{Suspens}{: particles in suspension (mg/l)}
-    \item{Organic}{: organic particles (mg/l)}
-    \item{Nitrate}{: nitrate rate (mg/l NO3-)}
-    \item{Ammonia}{: amoniac rate (mg/l NH4-)}
+\code{buech} is a list with the following components : 
+\describe{
+   \item{tab1}{: a data frame with 10 environmental variables collected on 31 sites in Juin (1984)}
+   \item{tab2}{: a data frame with 10 environmental variables collected on 31 sites in September (1984)}
+   \item{xy}{: a data frame with the coordinates of the sites}
+   \item{neig}{: an object of class \code{neig}}
+   \item{contour}{: a data frame for background map}}
+}
+\details{
+Variables of \code{buech$tab1} and \code{buech$tab2} are the following ones :\cr 
+pH ; Conductivity (µS/cm) ; Carbonate (water hardness (mg/l CaCO3)) ;
+hardness (total water hardness (mg/l CaCO3)) ; Bicarbonate (alcalinity (mg/l HCO3-)) ;
+Chloride (alcalinity (mg/l Cl-)) ; Suspens (particles in suspension (mg/l)) ;
+Organic (organic particles (mg/l)) ; Nitrate (nitrate rate (mg/l NO3-)) ;
+Ammonia (amoniac rate (mg/l NH4-))
 }
 \source{
-Vespini, F. (1985) Contribution à l'étude hydrobiologique du Buech, rivière non aménagée de Haute-Provence. Thèse de troisième cycle, Université de Provence.
+Vespini, F. (1985) \emph{Contribution à l'étude hydrobiologique du Buech, rivière non aménagée de Haute-Provence}. Thèse de troisième cycle, Université de Provence.
 
-Vespini, F., Légier, P. and Champeau, A. (1987) Ecologie d'une rivière non aménagée des Alpes du Sud : Le Buëch (France) .I Evolution longitudinale des descripteurs physiques et chimiques. \emph{Annales de Limnologie}, \bold{23}, 151--164.
+Vespini, F., Légier, P. and Champeau, A. (1987) Ecologie d'une rivière non aménagée des Alpes du Sud : Le Buëch (France) I. Evolution longitudinale des descripteurs physiques et chimiques. \emph{Annales de Limnologie}, \bold{23}, 151--164.
 }
 \examples{
 data(buech)

@@ -7,11 +7,12 @@ This data set contains informations about geochemical characteristics of heavy m
 }
 \usage{data(tintoodiel)}
 \format{
-\code{tintoodiel} is a list containing the following elements : 
-        \item{xy}{: a data frame that contains spatial coordinates of the 52 sites}   
-        \item{tab}{: a data frame with 12 columns (concentration of heavy metals) and 52 rows (sites)}
-        \item{neig}{: an object of class \code{'neig'}}
-}
+\code{tintoodiel} is a list containing the following objects : 
+\describe{
+   \item{xy}{: a data frame that contains spatial coordinates of the 52 sites}   
+   \item{tab}{: a data frame with 12 columns (concentration of heavy metals) and 52 rows (sites)}
+   \item{neig}{: an object of class \code{neig}}
+}}
 \source{
 Borrego, J., Morales, J.A., de la Torre, M.L. and Grande, J.A. (2002) Geochemical characteristics of heavy metal pollution in surface sediments of the Tinto and Odiel river estuary (south-western Spain). \emph{Environmental Geology}, \bold{41}, 785--796.
 }

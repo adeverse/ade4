@@ -14,7 +14,7 @@ cca(sitspe, sitenv, scannf = TRUE, nf = 2)
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
 }
 \value{
-returns an object of class 'pcaiv'. See \code{pcaiv}
+returns an object of class \code{pcaiv}. See \code{pcaiv}
 }
 \references{
 Ter Braak, C. J. F. (1986) Canonical correspondence analysis : a new eigenvector technique for multivariate direct gradient analysis. \emph{Ecology}, \bold{67}, 1167--1179.\cr

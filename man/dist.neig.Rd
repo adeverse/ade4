@@ -10,10 +10,10 @@ these points.
 dist.neig(neig)
 }
 \arguments{
-  \item{neig}{a neighbouring graph, object of class 'neig'}
+  \item{neig}{a neighbouring graph, object of class \code{neig}}
 }
 \value{
-returns a distance matrix, object of class 'dist'
+returns a distance matrix, object of class \code{dist}
 }
 \examples{
 library(mva)

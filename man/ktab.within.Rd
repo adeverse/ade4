@@ -8,13 +8,13 @@ performs the process to go from a Within Analysis to a K-tables.
 ktab.within(dudiwit, rownames = NULL, colnames = NULL, tabnames = NULL)
 }
 \arguments{
-  \item{dudiwit}{an objet of class 'within'}
+  \item{dudiwit}{an objet of class \code{within}}
   \item{rownames}{the row names of the K-tables (otherwise the row names of \code{dudiwit$tab})}
   \item{colnames}{the column names of the K-tables (otherwise the column names of \code{dudiwit$tab})}
   \item{tabnames}{the names of the arrays of the K-tables (otherwise the levels of the factor which defines the within-classes)}
 }
 \value{
-a list of class 'ktab'. See \code{\link{ktab}}
+a list of class \code{ktab}. See \code{\link{ktab}}
 }
 \examples{
 data(bacteria)

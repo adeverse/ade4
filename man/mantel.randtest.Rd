@@ -9,12 +9,12 @@ Performs a Mantel test between two distance matrices.
 mantel.randtest(m1, m2, nrepet = 999)
 }
 \arguments{
-  \item{m1}{an object of class 'dist'}
-  \item{m2}{an object of class 'dist'}
+  \item{m1}{an object of class \code{dist}}
+  \item{m2}{an object of class \code{dist}}
   \item{nrepet}{the number of permutations}
 }
 \value{
-an object of class 'randtest' (randomization tests)
+an object of class \code{randtest} (randomization tests)
 }
 \references{Mantel, N. (1967) The detection of disease clustering and a generalized regression approach. \emph{Cancer Research}, \bold{27}, 209--220.
 }

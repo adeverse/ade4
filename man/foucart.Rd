@@ -5,7 +5,7 @@
 \title{K-tables Correspondence Analysis with the same rows and the same columns}
 \description{
   K tables have the same rows and the same columns.\cr
-  Each table is transformed by P=X/sum(X). Average of P is computing.\cr
+  Each table is transformed by P = X/sum(X). The average of P is computing.\cr
   A correspondence analysis is realized on this average.\cr
   The initial rows and the initial columns are projected in supplementary elements.
 }
@@ -19,34 +19,33 @@ print.foucart(x, \dots)
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
   \cr
-
   \item{x}{an object of class 'foucart'}
   \item{xax}{the column number of the x-axis}
   \item{yax}{the column number of the y-axis}
   \item{clab}{if not NULL, a character size for the labels, used with \code{par("cex")*clab}}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 
 }
 \value{
   \code{foucart} returns a list of the classes 'dudi', 'coa' and 'foucart'
- 	\item{call}{origine}
-	\item{nf}{axes-components saved}
-	\item{rank}{rank}
-	\item{blo}{useful vector}
-	\item{cw}{vector: column weights}
-	\item{lw}{vector: row weights}
-	\item{eig}{vector: eigen values}
-	\item{tab}{data.frame: modified array}
-	\item{li}{data.frame: row coordinates}
-	\item{l1}{data.frame: row normed scores}
-	\item{co}{data.frame: column coordinates}
-	\item{c1}{data.frame: column normed scores}
-	\item{Tli}{data.frame: row coordinates (each table)}
-	\item{Tco}{data.frame: col coordinates (each table)}
-	\item{TL}{data.frame: factors for Tli}
-	\item{TC}{data.frame: factors for Tco}
+    \item{call}{origine}
+    \item{nf}{axes-components saved}
+    \item{rank}{rank}
+    \item{blo}{useful vector}
+    \item{cw}{vector: column weights}
+    \item{lw}{vector: row weights}
+    \item{eig}{vector: eigen values}
+    \item{tab}{data.frame: modified array}
+    \item{li}{data.frame: row coordinates}
+    \item{l1}{data.frame: row normed scores}
+    \item{co}{data.frame: column coordinates}
+    \item{c1}{data.frame: column normed scores}
+    \item{Tli}{data.frame: row coordinates (each table)}
+    \item{Tco}{data.frame: col coordinates (each table)}
+    \item{TL}{data.frame: factors for Tli}
+    \item{TC}{data.frame: factors for Tco}
 }
 \references{Foucart, T. (1984) \emph{Analyse factorielle de tableaux multiples}, Masson, Paris.
 }

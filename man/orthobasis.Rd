@@ -30,16 +30,16 @@ orthobasis.haar(n)
 print.orthobasis(x,...)
 }
 \arguments{
-  \item{neig}{: is an object of class \code{'neig'}}
-  \item{n}{: is an integer that defines length of vectors}
-  \item{mat}{: is a \emph{n} by \emph{n} phylogenetic or spatial link matrix}
-  \item{listw}{: is a \code{'listw'} object}
-  \item{cnw}{: if TRUE, the matrix of the neighbouring graph is modified to give Constant Neighbouring Weights}
-  \item{x}{: is an object of class \code{'orthobasis'}}
+  \item{neig}{is an object of class \code{neig}}
+  \item{n}{is an integer that defines length of vectors}
+  \item{mat}{is a \emph{n} by \emph{n} phylogenetic or spatial link matrix}
+  \item{listw}{is a \code{'listw'} object}
+  \item{cnw}{if TRUE, the matrix of the neighbouring graph is modified to give Constant Neighbouring Weights}
+  \item{x}{is an object of class \code{orthobasis}}
   \item{\dots}{: further arguments passed to or from other methods}
 }
 \value{
-All the functions excepted \code{print.ortobasis} return an object of class \code{'orthobasis'} containing a data frame.
+All the functions excepted \code{print.ortobasis} return an object of class \code{orthobasis} containing a data frame.
 This data frame defines an orthonormal basis with \emph{n-1} vectors of length \emph{n}. Various attributes are associated to it : \cr
   \item{names}{: names of the vectors}
   \item{row.names}{: row names of the data frame}
@@ -49,9 +49,11 @@ This data frame defines an orthonormal basis with \emph{n-1} vectors of length \
   \item{call}{: call}
 }
 \references{
-Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux classiques par décomposition en ondelettes. \cr \emph{Revue de Statistique Appliquée}, \bold{XLI}, 5--32.
+Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux classiques par décomposition en ondelettes. 
+\emph{Revue de Statistique Appliquée}, \bold{41}, 5--32.
 
-Cornillon, P.A. (1998) Prise en compte de proximités en analyse factorielle et comparative. \cr Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
+Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}.
+Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

@@ -34,7 +34,7 @@ area.util.xy(area)
 \arguments{
 \item{x}{a data frame with three variables}
 \item{center}{a matrix with the same row number as x and two columns, the coordinates
-of polugone centers. If NULL, it is computed with \code{area.util.xy}}
+of polygone centers. If NULL, it is computed with \code{area.util.xy}}
 \item{values}{if not NULL, a vector which values will be mapped to grey levels.
 The values must be in the same order as the values in \code{unique(x.area[,1])}}
 \item{graph}{if not NULL, \code{graph} is a neighbouring graph (object of class "neig") between polygons}
@@ -142,6 +142,7 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     plot(fr.nb, fr.xy, add = TRUE)
     s.label(fr.xy, clab = 0, area = fr.area, neig = fr.neig, 
     cneig = 1, cpo = 2, inc = FALSE, addax = FALSE)
+par(mfrow=c(1,1))
 }
 
 data(irishdata)

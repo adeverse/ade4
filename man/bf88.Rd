@@ -13,8 +13,8 @@ The 6 arrays (S1 to S6) are the 6 stages of vegetation.\cr
 The attribut 'nomesp' of this list is a vector of species french names. 
 }
 \source{
-Blondel, J. and Farre, H. (1988)\cr
-The convergent trajectories of bird communities along ecological successions in european forests.\cr
+Blondel, J. and Farre, H. (1988) 
+The convergent trajectories of bird communities along ecological successions in european forests. 
 \emph{Oecologia} (Berlin), \bold{75}, 83--93.
 }
 \examples{

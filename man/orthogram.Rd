@@ -2,7 +2,7 @@
 \alias{orthogram}
 \title{Orthonormal decomposition of variance}
 \description{
-This function performs the orthonormal decomposition of variance of a quantitative variable on an orthonormal basis. It also returns the results of five non parametric tests associated to variance decomposition. 
+This function performs the orthonormal decomposition of variance of a quantitative variable on an orthonormal basis. It also returns the results of five non parametric tests associated to the variance decomposition. 
 It thus provides tools (graphical displays and test) for analysing phylogenetic, spatial and temporal pattern of one quantitative variable.
 }
 \usage{
@@ -12,38 +12,38 @@ orthogram(x, orthobas = NULL, neig = NULL, phylog = NULL,
      high.scores = 0)
 }
 \arguments{
-  \item{x}{: a numeric vector corresponding to the quantitative variable}
-  \item{orthobas}{: an object of class \code{'orthobasis'}}
-  \item{neig}{: an object of class \code{'neig'}}
-  \item{phylog}{: an object of class \code{'phylog'}}
-  \item{nrepet}{: an integer giving the number of permutations}
-  \item{posinega}{: a parameter for the ratio test. If posinega > 0, the function computes the ratio test.}
-  \item{tol}{: a tolerance threshold for orthonormality condition}
-  \item{na.action}{: if 'fail' stops execution of the current expression when \code{z} contains any missing value. If 'mean' replaces any missing values by mean(\code{z})}
-  \item{cdot}{: a character size for points on the cumulative decomposition display}
-  \item{cfont.main}{: a character size for titles}
-  \item{lwd}{: a character size for dash lines}
-  \item{nclass}{: a single number giving the number of cells for the histogram}
-  \item{high.scores}{: a single number giving the number of vectors to return. If > 0, the functions returns labels of vectors that explains the larger part of variance.}
+  \item{x}{a numeric vector corresponding to the quantitative variable}
+  \item{orthobas}{an object of class \code{'orthobasis'}}
+  \item{neig}{an object of class \code{'neig'}}
+  \item{phylog}{an object of class \code{'phylog'}}
+  \item{nrepet}{an integer giving the number of permutations}
+  \item{posinega}{a parameter for the ratio test. If posinega > 0, the function computes the ratio test.}
+  \item{tol}{a tolerance threshold for orthonormality condition}
+  \item{na.action}{if 'fail' stops the execution of the current expression when \code{z} contains any missing value. If 'mean' replaces any missing values by mean(\code{z})}
+  \item{cdot}{a character size for points on the cumulative decomposition display}
+  \item{cfont.main}{a character size for titles}
+  \item{lwd}{a character size for dash lines}
+  \item{nclass}{a single number giving the number of cells for the histogram}
+  \item{high.scores}{a single number giving the number of vectors to return. If > 0, the function returns labels of vectors that explains the larger part of variance.}
 }
 \details{
-The function computes variance decomposition of a quantitative vector x on an orthonormal basis B. The variable is normalized given the uniform weight to eliminate problem of scales.
+The function computes the variance decomposition of a quantitative vector x on an orthonormal basis B. The variable is normalized given the uniform weight to eliminate problem of scales.
 It plots the squared correlations \eqn{R^{2}}{R^2} between x and vectors of B (variance decomposition) and the cumulated squared correlations \eqn{SR^{2}}{SR^2} (cumulative decomposition).
 The function also provides five non parametric tests to test the existence of autocorrelation. The tests derive from the five following statistics :
     \item{R2Max}{=\eqn{\max(R^{2})}{max(R^2)}. It takes high value when a high part of the variability is explained by one score.}
     \item{SkR2k}{=\eqn{\sum_{i=1}^{n-1}(iR^{2}_i)}{sum_i i*(R^2)_i}. It compares the part of variance explained by internal nodes to the one explained by end nodes.}
     \item{Dmax}{=\eqn{\max(SR^{2}_j - SR^{2}_{j-1})}{max((SR^2)_j - (SR^2)_(j-1))}. It examines the accumulation of variance for a sequence of scores.}
     \item{SCE}{=\eqn{\sum_{i=1}^{n-1} (SR^{2}_i - SR^{2}_{i-1})^{2}}{sum_i ((SR^2)_i - (SR^2)_(i-1))^2}. It examines also the accumulation of variance for a sequence of scores.}
-    \item{ratio}{depends of the parameter posinega. If posinega > 0, the statistic ratio exists and equals \eqn{\sum_{i=1}^{posinega}R^{2}_i}{sum_i (R^2)_i with i < posinega + 1}. It compares the part of variance explained by internal nodes to the one explained by end nodes when we can define how many vectors corresponds to internal nodes.}
+    \item{ratio}{depends of the parameter posinega. If posinega > 0, the statistic ratio exists and equals \eqn{\sum_{i=1}^{posinega}R^{2}_i}{sum_i (R^2)_i with i < posinega + 1}. It compares the part of variance explained by internal nodes to the one explained by end nodes when we can define how many vectors correspond to internal nodes.}
 }
 \value{
 If (high.scores = 0), returns an object of class \code{'krandtest'} (randomization tests) corresponding to the five non parametric tests. \cr \cr
 If (high.scores > 0), returns a list containg : 
     \item{w}{: an object of class \code{'krandtest'} (randomization tests)}
-    \item{scores.order}{: a vector which terms give labels of vectors that explains the larger part of variance}   
+    \item{scores.order}{: a vector which terms give labels of vectors that explain the larger part of variance}   
 }
 \references{
-Ollier, S., Chessel, D. and Couteron, P. (submited) Orthonormal transform to detect and  describe phylogenetic autocorrelation. \emph{Biometrics}.
+Ollier, S., Chessel, D. and Couteron, P. (submitted) Orthonormal transform to detect and  describe phylogenetic autocorrelation. \emph{Biometrics}.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
@@ -86,10 +86,10 @@ data(lynx)
 ortho <- orthobasis.line(114)
 orthogram(lynx,ortho)
 attributes(lynx)$tsp
-par(mfrow=c(2,1))
-par(mar=c(4,4,2,2))
+par(mfrow = c(2,1))
+par(mar = c(4,4,2,2))
 plot.ts(lynx)
-plot(ts(ortho[,23],start=1821,end=1934,freq=1),ylab="score 23")
+plot(ts(ortho[,23], start = 1821, end = 1934, freq = 1), ylab = "score 23")
 par(mfrow = c(1,1))
 }
 \keyword{spatial}

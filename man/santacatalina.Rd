@@ -11,8 +11,8 @@ format{
 a data frame with 11 rows and 10 columns
 }
 \source{
-Gauch, H. G. J., Chase, G. B. and Whittaker R. H. (1974)\cr
-Ordination of vegetation samples by Gaussian species distributions.\cr
+Gauch, H. G. J., Chase, G. B. and Whittaker R. H. (1974)
+Ordination of vegetation samples by Gaussian species distributions.
 \emph{Ecology}, \bold{55}, 1382--1390.
 }
 \examples{

@@ -13,7 +13,7 @@ cailliez(distmat, print = FALSE)
   \item{print}{if TRUE, prints the eigenvalues of the matrix}
 }
 \value{
-an object of class 'dist' containing an Euclidean distance matrix.
+an object of class \code{dist} containing a Euclidean distance matrix.
 }
 \references{
 Cailliez, F. (1983) The analytical solution of the additive constant problem. \emph{Psychometrika}, \bold{48}, 305--310.\cr

@@ -2,22 +2,22 @@
 \alias{as.taxo}
 \title{Taxonomy}
 \description{
-This function creates object of class \code{'taxo'} that is a sub-class of \code{'data.frame'}. Each columns of the data frame must be a factor corresponding to a level \emph{j} of the taxonomy (genus, family, \dots).
-Levels of factor \emph{j} defines some classes that must be completly included in classes of factor \emph{j+1}.
+This function creates an object of class \code{taxo} that is a sub-class of \code{data.frame}. Each column of the data frame must be a factor corresponding to a level \emph{j} of the taxonomy (genus, family, \dots).
+The levels of factor \emph{j} define some classes that must be completly included in classes of factor \emph{j+1}.
 }
 \usage{
 as.taxo(df)
 }
 \arguments{
-\item{df}{: a data frame}
+\item{df}{a data frame}
 }
 \value{
-Returns a data.frame of class \code{'taxo'}.
+Returns a data.frame of class \code{taxo}.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
-\seealso{\code{\link{taxo2phylog}} to transform an object of class \code{'taxo'} into an object of class \code{'phylog'}}.
+\seealso{\code{\link{taxo2phylog}} to transform an object of class \code{taxo} into an object of class \code{phylog}}.
 \examples{
 data(taxo.eg)
 tax <- as.taxo(taxo.eg[[1]])

@@ -7,16 +7,16 @@ This data set gives the presence-absence of 37 species on 515 sites.
 }
 \usage{data(steppe)}
 \format{
-	\code{steppe} is a list of 2 components.
-	\enumerate{
-		\item{tab}{is a data frame with 512 rows (sites) and 37 variables (species) in presence-absence.}
-		\item{esp.names}{is a vector of the species names.}
-	}
+    \code{steppe} is a list of 2 components.
+    \describe{
+        \item{tab}{is a data frame with 512 rows (sites) and 37 variables (species) in presence-absence.}
+        \item{esp.names}{is a vector of the species names.}
+    }
 }
 \source{
 Estève, J. (1978) Les méthodes d'ordination : éléments pour une discussion.
 in J. M. Legay and R. Tomassone, editors. 
-\emph{Biométrie et Ecologie}, Société Française de Biométrie, Paris, 223--250 
+\emph{Biométrie et Ecologie}, Société Française de Biométrie, Paris, 223--250. 
 }
 \examples{
 par(mfrow = c(3,1))

@@ -7,29 +7,28 @@ This data set describes the phylogeny of 19 birds as reported by Bried et al. (2
 }
 \usage{data(procella)}
 \format{
-\code{procella} is a list containing the 2 following objects: \cr 
-        \enumerate{     
-            \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
-            \item{traits}{is a data frame with 19 species and 6 traits}    
-        }
-        
-        Variables of \code{procella$traits} are the following ones: \cr
-        \enumerate{
-        \item{site.fid}{: a numeric vector that describes the percentage of site fidelity}
-        \item{mate.fid}{: a numeric vector that describes the percentage of mate fidelity}
-        \item{mass}{: an integer vector that describes the adult body weight (g)}
-        \item{ALE}{: a numeric vector that describes the adult life expectancy (years)}
-        \item{BF}{: a numeric vector that describes the breeding frequencies}
-        \item{col.size}{: an integer vector that describes the colony size (no nests monitored)}
-        }
+\code{procella} is a list containing the 2 following objects:  
+\describe{     
+   \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
+   \item{traits}{is a data frame with 19 species and 6 traits}    
+}}
+\details{
+Variables of \code{procella$traits} are the following ones: \cr
+site.fid: a numeric vector that describes the percentage of site fidelity\cr
+mate.fid: a numeric vector that describes the percentage of mate fidelity\cr
+mass: an integer vector that describes the adult body weight (g)\cr
+ALE: a numeric vector that describes the adult life expectancy (years)\cr
+BF: a numeric vector that describes the breeding frequencies\cr
+col.size: an integer vector that describes the colony size (no nests monitored)
 }
 \references{
-Bried, J., Pontier, D. and Jouventin, P. (2002) Mate fidelity in monogamus birds: a re-examination of the Procellariiformes. \cr \emph{Animal Behaviour}, \bold{65}, 235--246.
+Bried, J., Pontier, D. and Jouventin, P. (2002) Mate fidelity in monogamus birds: a re-examination of the Procellariiformes. 
+\emph{Animal Behaviour}, \bold{65}, 235--246.
 }
 \examples{
 data(procella)
 pro.phy <- newick2phylog(procella$tre)
-plot(pro.phy,clabel.n=1, clabel.l=1)
+plot(pro.phy,clabel.n = 1, clabel.l = 1)
 wt <- procella$traits
 wt$site.fid[is.na(wt$site.fid)] <- mean(wt$site.fid[!is.na(wt$site.fid)])
 wt$site.fid <- asin(sqrt(wt$site.fid/100))

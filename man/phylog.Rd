@@ -5,9 +5,9 @@
 \alias{phylog.permut}
 \title{Phylogeny}
 \description{
-Create and use objects of class \code{'phylog'}. \cr
-\code{phylog.extract} returns objects of class \code{'phylog'}. It extracts sub-trees from a tree. \cr
-\code{phylog.permut} returns objects of class \code{'phylog'}. It creates the different representations compatible with tree topology.
+Create and use objects of class \code{phylog}. \cr
+\code{phylog.extract} returns objects of class \code{phylog}. It extracts sub-trees from a tree. \cr
+\code{phylog.permut} returns objects of class \code{phylog}. It creates the different representations compatible with tree topology.
 }
 \usage{
 print.phylog(x, ...)
@@ -17,21 +17,21 @@ phylog.permut(phylog, list.nodes = lapply(phylog$parts,
     distance = TRUE))
 }
 \arguments{
-  \item{x, phylog}{: an object of class \code{'phylog'}}
+  \item{x, phylog}{: an object of class \code{phylog}}
   \item{\dots}{: further arguments passed to or from other methods}
   \item{node}{: a string of characters giving a node name. The functions extracts the tree rooted at this node.}
   \item{distance}{: if TRUE, both functions retain branch lengths. If FALSE, they returns tree with arbitrary branch lengths (each branch length equals one)}
   \item{list.nodes}{: a list which elements are vectors of string of character corresponding to direct descendants of nodes. This list defines one representation compatible with tree topology among the set of possibilities.}
 }
 \value{
-Returns a list of class \code{'phylog'} :
+Returns a list of class \code{phylog} :
     \item{tre}{: a character string of the phylogenetic tree in Newick format whithout branch length values}
-    \item{leaves}{: a vector which names corresponds to leaves and values gives the distance between leaves and nodes closest to its}
-    \item{nodes}{: a vector which names corresponds to nodes and values gives the distance between nodes and nodes closest to its}
+    \item{leaves}{: a vector which names corresponds to leaves and values gives the distance between leaves and nodes closest to these leaves}
+    \item{nodes}{: a vector which names corresponds to nodes and values gives the distance between nodes and nodes closest to these leaves}
     \item{parts}{: a list which elements gives the direct descendants of each nodes}
     \item{paths}{: a list which elements gives the path leading from the root to taxonomic units (leaves and nodes)}
     \item{droot}{: a vector which names corresponds to taxonomic units and values gives distance between taxonomic units and the root}
-    \item{call}{: call} \cr
+    \item{call}{: call} 
     \item{Wmat}{: a phylogenetic link matrix, generally called the covariance matrix. Matrix values \eqn{Wmat_{ij}}{Wmat_ij} correspond to path length that lead from root to the first common ancestor of the two leaves i and j}
     \item{Wdist}{: a phylogenetic distance matrix of class \code{'dist'}. Matrix values \eqn{Wdist_{ij}}{Wdist_ij} correspond to $\sqrt{d_{ij}}$ where \eqn{d_{ij}}{d_ij} is the classical distance between two leaves i and j}
     \item{Wvalues}{: a vector with the eigen values of Wmat}
@@ -47,9 +47,9 @@ Returns a list of class \code{'phylog'} :
     \item{Blabels}{: a vector giving for each nodes the name of the vector of Bscores that is associated to its}    
 }
 \references{
-Ollier, S., Pontier, D. and Chessel, D. (submited) Comments on Abouheif's test. \emph{Evolutionary Ecology Research}.
+Ollier, S., Pontier, D. and Chessel, D. (submitted) Comments on Abouheif's test. \emph{Evolutionary Ecology Research}.
 
-Ollier, S., Couteron, P. and Chessel, D. (submited) Orthonormal transforms to detect and describe phylogenetic autocorrelation. \emph{Biometrics}.
+Ollier, S., Couteron, P. and Chessel, D. (submitted) Orthonormal transforms to detect and describe phylogenetic autocorrelation. \emph{Biometrics}.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}

@@ -8,22 +8,22 @@ This data set gives 3 matrices about geographical, genetic and anthropometric di
 \usage{data(yanomama)}
 \format{
     \code{yanomama} is a list of 3 components:
-    \enumerate{
-        \item{geo}{is a matrix of 19-19 geographical distances}
-        \item{gen}{is a matrix of 19-19 SFA (genetic) distances}
-        \item{ant}{is a matrix of 19-19 anthropometric distances}
+\describe{
+   \item{geo}{is a matrix of 19-19 geographical distances}
+   \item{gen}{is a matrix of 19-19 SFA (genetic) distances}
+   \item{ant}{is a matrix of 19-19 anthropometric distances}
     }
 }
 \source{
-Spielman, R.S. (1973)\cr
-Differences among Yanomama Indian villages: do the patterns of allele frequencies, anthropometrics and map locations correspond?\cr
+Spielman, R.S. (1973) 
+Differences among Yanomama Indian villages: do the patterns of allele frequencies, anthropometrics and map locations correspond? 
 \emph{American Journal of Physical Anthropology}, \bold{39}, 461--480.
 }
 \references{
-Table 7.2 Distance matrices for 19 villages of Yanomama Indians.\cr
-All distances are as given by Spielman (1973), multiplied by 100 for convenience in:\cr
-Manly, B.F.J. (1991)\cr
-\emph{Randomization and Monte Carlo methods in biology}\cr
+Table 7.2 Distance matrices for 19 villages of Yanomama Indians. 
+All distances are as given by Spielman (1973), multiplied by 100 for convenience in: 
+Manly, B.F.J. (1991) 
+\emph{Randomization and Monte Carlo methods in biology} 
 Chapman and Hall, London, 1--281.
 }
 \examples{

@@ -12,18 +12,18 @@ plot.pcaiv (x, xax = 1, yax = 2, \dots)
 print.pcaiv (x, \dots) 
 }
 \arguments{
-  \item{dudi}{a duality diagram, object of class 'dudi'}
+  \item{dudi}{a duality diagram, object of class \code{dudi}}
   \item{df}{a data frame with the same rows}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
   \cr
-  \item{x}{an object of class 'pcaiv'}
+  \item{x}{an object of class \code{pcaiv}}
   \item{xax}{the column number for the x-axis}
   \item{yax}{the column number for the y-axis}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
-returns an object of class 'pcaiv', sub-class of class 'dudi'
+returns an object of class \code{pcaiv}, sub-class of class \code{dudi}
   \item{rank}{an integer indicating the rank of the studied matrix}
   \item{nf}{an integer indicating the number of kept axes}
   \item{eig}{a vector with the all eigenvalues}

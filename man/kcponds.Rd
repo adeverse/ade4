@@ -7,27 +7,18 @@ This data set contains informations about 33 ponds in De Maten reserve (Genk, Be
 }
 \usage{data(kcponds)}
 \format{
+\describe{
         \item{tab}{: a data frame with 15 environmental variables(columns) on 33 ponds(rows)}
-        \item{area}{: an object of class \code{'area'}}
+        \item{area}{: an object of class \code{area}}
         \item{xy}{: a data frame with the coordinates of ponds}
-        \item{neig}{: an object of class \code{'neig'}}   
+        \item{neig}{: an object of class \code{neig}}  }}
 
-Variables of \code{kcponds$tab} are the following ones : \cr
-       \item{depth}{: depth}
-       \item{area}{: area}
-       \item{O2}{: oxygen concentration}
-       \item{cond}{: conductivity}
-       \item{pH}{: pH}
-       \item{Fe}{: Fe concentration}
-       \item{secchi}{: Secchi disk depth}
-       \item{N}{: NNO concentration}
-       \item{TP}{: total phosphorus concentration}
-       \item{chla}{: chlorophyll-a concentration}
-       \item{EM}{: emergent macrophyte cover}
-       \item{FM}{: floating macrophyte cover}
-       \item{SM}{: submerged macrophyte cover}
-       \item{denMI}{: total density of macroinvertebrates}
-       \item{divMI}{: diversity macroinvertebrates}
+\details{ 
+Variables of \code{kcponds$tab} are the following ones : depth, area, O2 (oxygen concentration), 
+cond (conductivity), pH, Fe (Fe concentration), secchi (Secchi disk depth), N (NNO concentration),
+TP (total phosphorus concentration), chla (chlorophyll-a concentration), EM (emergent macrophyte cover),
+FM (floating macrophyte cover), SM (submerged macrophyte cover), denMI (total density of macroinvertebrates),
+divMI (diversity macroinvertebrates)
 }
 \source{
 Cottenie, K. (2002) Local and regional processes in a zooplankton metacommunity. PhD, Katholieke Universiteit Leuven, Leuven, Belgium. \cr
@@ -52,5 +43,6 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
 multi1 <- multispati(pca1, nb2listw(neig2nb(kcponds$neig)),
      scan = FALSE, nfposi = 2, nfnega = 1)
 summary(multi1)}
+par(mfrow = c(1,1))
 }
 \keyword{datasets}

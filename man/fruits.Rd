@@ -10,7 +10,7 @@
 \usage{data(fruits)}
 \format{
     \code{fruits} is a list of 3 components:
-    \enumerate{
+    \describe{
     \item{typ}{is a vector returning the type of the 28 batches of fruits (peaches or nectarines).}
     \item{jug}{is a data frame of 28 rows et 16 columns (judges).}
     \item{var}{is a data frame of 28 rows et 16 measures (average of 2 judgements).}
@@ -40,7 +40,7 @@
 Kervella, J. (1991) 
 Analyse de l'attrait d'un produit : exemple d'une comparaison de lots de pêches. 
 Agro-Industrie et méthodes statistiques. 
-Compte-rendu des secondes journées européennes. Nantes 13-14 juin 1991 . 
+Compte-rendu des secondes journées européennes. Nantes 13-14 juin 1991.  
 Association pour la Statistique et ses Utilisations, Paris,  313--325.
 }
 \examples{

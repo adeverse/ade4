@@ -13,7 +13,7 @@ uniquewt.df(x)
 \value{
 The function returns a \code{y} which contains once each duplicated row of \code{x}.\cr
 \code{y} is an attribut 'factor' which gives the number of the row of \code{y} in which each row of \code{x} is found\cr
-\code{y} is an attribut 'length.class' which gives the number of duplicates in \code{x} with an attribut dof each row of \code{y} with an attribut
+\code{y} is an attribut 'length.class' which gives the number of duplicates in \code{x} with an attribut of each row of \code{y} with an attribut
 }
 \examples{
 data(ecomor)

@@ -19,10 +19,10 @@ geographical coordinates, meteorology and bird presences.
     }
 }
 \source{
-Extract from \cr
-Lebreton, Ph. (1977) Les oiseaux nicheurs rhonalpins. \emph{Atlas ornithologique Rhone-Alpes}.\cr
-Centre Ornithologique Rhone-Alpes, Université Lyon 1, 69621 Villeurbanne.\cr
-Direction de la Protection de la Nature, Minist"re de la Qualité de la Vie. 1--354.
+Extract from: \cr
+Lebreton, Ph. (1977) Les oiseaux nicheurs rhonalpins. \emph{Atlas ornithologique Rhone-Alpes}.
+Centre Ornithologique Rhone-Alpes, Université Lyon 1, 69621 Villeurbanne. 
+Direction de la Protection de la Nature, Ministère de la Qualité de la Vie. 1--354.
 }
 \examples{
 data(atlas)
@@ -50,5 +50,5 @@ s.value(atlas$xy, x, contour = atlas$contour, csi = 2,
     incl = FALSE, addax = FALSE)
 triangle.plot(atlas$alti)
 par(op)
-}
+par(mfrow=c(1,1))}
 \keyword{datasets}

@@ -8,16 +8,17 @@ The data frame \code{sarcelles$tab} contains the number of the winter teals (Ana
 \usage{data(sarcelles)}
 \format{
     \code{sarcelles} is a list of 4 components.
-    \enumerate{
+    \describe{
     \item{tab}{is a data frame with 14 rows-areas and 12 columns-months.}
     \item{xy}{is a data frame with the 2 spatial coordinates of the 14 region centers.}
-    \item{neig}{is the neighbouring graph between areas, object of the class 'neig'.}
+    \item{neig}{is the neighbouring graph between areas, object of the class \code{neig}.}
     \item{col.names}{is a vector containing the month items}
     }
 }
 \source{
- Lebreton, J.D. (1973)\cr
- Etude des déplacements saisonniers des Sarcelles d'hiver, Anas c. crecca L., hivernant en Camargue à l'aide de l'analyse factorielle des correspondances.\cr
+ Lebreton, J.D. (1973)
+ Etude des déplacements saisonniers des Sarcelles d'hiver, 
+ Anas c. crecca L., hivernant en Camargue à l'aide de l'analyse factorielle des correspondances.
  \emph{Compte rendu hebdomadaire des séances de l'Académie des sciences}, Paris, D, III, \bold{277}, 2417--2420.
 }
 \examples{
@@ -27,7 +28,8 @@ if (require(pixmap, quietly=TRUE)) {
     data(sarcelles)
     par(mfrow = c(4,3))
     for(i in 1:12) {
-    s.distri(sarcelles$xy, sarcelles$tab[,i], pixmap = bkgnd.pnm, sub = sarcelles$col.names[i], clab = 0, csub = 2)
+    s.distri(sarcelles$xy, sarcelles$tab[,i], pixmap = bkgnd.pnm, 
+       sub = sarcelles$col.names[i], clab = 0, csub = 2)
     s.value(sarcelles$xy, sarcelles$tab[,i], add.plot = TRUE, cleg = 0)
     }
 }

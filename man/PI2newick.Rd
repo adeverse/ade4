@@ -2,13 +2,13 @@
 \alias{PI2newick}
 \title{Import data files from Phylogenetic Independance Package}
 \description{
-This function ensures to transform a data set written for the Phylogenetic Independance package of Abouheif (1999) in a data set which format is suited to ade4's functions.
+This function ensures to transform a data set written for the Phylogenetic Independance package of Abouheif (1999) in a data set formatting for the functions of ade4.
 }
 \usage{
 PI2newick(x)
 }
 \arguments{
-  \item{x}{: is a data frame that contains information on phylogeny topology and trait values}
+  \item{x}{is a data frame that contains information on phylogeny topology and trait values}
 }
 \value{
 Returns a list containing :

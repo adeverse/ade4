@@ -15,7 +15,7 @@ summary.sepan (object, \dots)
 print.sepan (x, \dots)
 }
 \arguments{
-  \item{X}{an object of class 'ktab'}
+  \item{X}{an object of class \code{ktab}}
   \item{nf}{an integer indicating the number of kept axes for each separated analysis}  
   \item{x, object}{an object of class 'sepan'}
   \item{mfrow}{a vector of the form "c(nr,nc)", otherwise computed by a special own function \code{n2mfrow}}
@@ -37,7 +37,7 @@ returns a list of class 'sepan' containing :
   \item{TC}{a data frame with the factors for Co C1}
 }
 \details{
-The function plot on a 'sepan' object allows to compare inertias and structures between arrays.
+The function plot on a \code{sepan} object allows to compare inertias and structures between arrays.
 In black, the eigenvalues of kept axes in the object 'sepan'.
 }
 \examples{

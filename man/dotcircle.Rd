@@ -1,6 +1,6 @@
 \name{dotcircle}
 \alias{dotcircle}
-\title{Representation of a value on a circle}
+\title{Representation of n values on a circle}
 \description{
 This function represents \emph{n} values on a circle. The \emph{n} points are shared out regularly over the circle and put on the radius according to the value attributed to that measure.
 }

@@ -15,7 +15,7 @@ and the broader peak that comes after a R wave is a T wave.
 }
 \usage{data(ecg)}
 \format{
-A vector of class \code{'ts'} containing 2048 observations.
+A vector of class \code{ts} containing 2048 observations.
 }
 \source{
 Gust Bardy and Per Reinhall, University of Washington

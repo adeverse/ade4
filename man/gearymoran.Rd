@@ -15,16 +15,19 @@ gearymoran(bilis, X, nrepet = 999)
 \details{
 \code{bilis} is a squared symmetric matrix which terms are all positive or null. 
 
-\code{bilis} is firstly transformed in frequency matrix A by dividing it by the total sum of data matrix :  \deqn{a_ij = \frac{bilis_ij}{\sum_{i=1}^{n}\sum_{j=1}^{n}bilis_{ij}}}{a_ij = bilis_ij / (sum_i sum_j bilis_ij)}. The neighbouring weights is defined by the matrix \eqn{D = diag(d_1,d_2, \ldots)} where \eqn{d_i = \sum_{j=1}^{n}bilis_{ij}}{d_i = sum_j bilis_ij}.
+\code{bilis} is firstly transformed in frequency matrix A by dividing it by the total sum of data matrix :  
+\deqn{a_{ij} = \frac{bilis_{ij}}{\sum_{i=1}^{n}\sum_{j=1}^{n}bilis_{ij}}}{a_ij = bilis_ij / (sum_i sum_j bilis_ij)}. 
+The neighbouring weights is defined by the matrix \eqn{D = diag(d_1,d_2, \ldots)} where \eqn{d_i = \sum_{j=1}^{n}bilis_{ij}}{d_i = sum_j bilis_ij}.
 For each vector x of the data frame X, the test is based on the Moran statistic \eqn{x^{t}Ax}{t(x)Ax} where x is D-centred. 
 }
 \value{
-Returns an object of class \code{'krandtest'} (randomization tests).
+Returns an object of class \code{krandtest} (randomization tests).
 }
 \references{
 Cliff, A. D. and Ord, J. K. (1973) \emph{Spatial autocorrelation}, Pion, London.
 
-Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. \cr \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
+Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. 
+\emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
@@ -35,9 +38,9 @@ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 data(mafragh)
 tab0 <- (as.data.frame(scalewt(mafragh$mil)))
 bilis0 <- neig2mat(mafragh$neig)
-gm0 <- gearymoran(bilis0,tab0,9999)
+gm0 <- gearymoran(bilis0, tab0, 9999)
 gm0
-plot(gm0,nclass=30)
+plot(gm0, nclass = 30)
  
 # a phylogenetic example
 data(mjrochet)

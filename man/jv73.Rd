@@ -8,7 +8,7 @@ This data set gives physical and physico-chemical variables, fish species, spati
 \usage{data(jv73)}
 \format{
     \code{jv73} is a list of 6 components.
-    \enumerate{
+    \describe{
     \item{morpho}{is a data frame with 92 sites and 6 physical variables.}
     \item{phychi}{is a data frame with 92 sites and 12 physico-chemical variables.}
     \item{poi}{is a data frame with 92 sites and 19 fish species.}
@@ -18,8 +18,8 @@ This data set gives physical and physico-chemical variables, fish species, spati
     }
 }
 \source{
-Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).\cr
-Recherches écologiques sur le réseau hydrographique du Doubs.\cr
+Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).
+Recherches écologiques sur le réseau hydrographique du Doubs.
 Essai de biotypologie. Thèse d'état, Besançon.
 }
 \examples{

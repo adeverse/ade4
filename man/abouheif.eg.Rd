@@ -8,15 +8,16 @@ This data set gathers three phylogenies with three sets of traits as reported by
 \usage{data(abouheif.eg)}
 \format{
 \code{abouheif.eg} is a list containing the 6 following objects :  
-            \item{tre1}{is a character string giving the first phylogenetic tree made up of 8 leaves.}  
-            \item{vec1}{is a numeric vector with 8 values.} 
-            \item{tre2}{is a character string giving the second phylogenetic tree made up of 7 leaves.}
-            \item{vec2}{is a numeric vector with 7 values.} 
-            \item{tre3}{is a character string giving the third phylogenetic tree made up of 15 leaves.}
-            \item{vec3}{is a numeric vector with 15 values.} 
-}
+\describe{
+   \item{tre1}{is a character string giving the first phylogenetic tree made up of 8 leaves.}  
+   \item{vec1}{is a numeric vector with 8 values.} 
+   \item{tre2}{is a character string giving the second phylogenetic tree made up of 7 leaves.}
+   \item{vec2}{is a numeric vector with 7 values.} 
+   \item{tre3}{is a character string giving the third phylogenetic tree made up of 15 leaves.}
+   \item{vec3}{is a numeric vector with 15 values.} 
+}}
 \source{
-Data taken from the phylogenetic independence propgram developped by Ehab Abouheif starting from \url{http://ww2.mcgill.ca/biology/faculty/abouheif/programs.html}.
+Data taken from the phylogenetic independence program developped by Ehab Abouheif starting from \url{http://ww2.mcgill.ca/biology/faculty/abouheif/programs.html}.
 }
 \references{
 Abouheif, E. (1999) A method for testing the assumption of phylogenetic independence in comparative data. \emph{Evolutionary Ecology Research}, \bold{1}, 895--909.
@@ -38,6 +39,5 @@ par(mfrow = c(1,1))
 
 w.phy=newick2phylog(abouheif.eg$tre3)
 dotchart.phylog(w.phy,abouheif.eg$vec3, clabel.n = 1)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

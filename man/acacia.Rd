@@ -7,24 +7,15 @@ Counts of individuals of \emph{Acacia ehrenbergiana} from five parallel transect
 }
 \usage{data(acacia)}
 \format{
-\code{acacia} is a data frame with 15 variables : \cr
-    \item{se.T1}{a numeric vector containing quadrats counts of seedlings from transect 1}
-    \item{se.T2}{a numeric vector containing quadrats counts of seedlings from transect 2}
-    \item{se.T3}{a numeric vector containing quadrats counts of seedlings from transect 3}
-    \item{se.T4}{a numeric vector containing quadrats counts of seedlings from transect 4}
-    \item{se.T5}{a numeric vector containing quadrats counts of seedlings from transect 5}
-    \item{sm.T1}{a numeric vector containing quadrats counts of small trees (crown < 1 \eqn{m^{2}}{m^2} in canopy) of transect 1}
-    \item{sm.T2}{a numeric vector containing quadrats counts of small trees (crown < 1 \eqn{m^{2}}{m^2} in canopy) of transect 2}
-    \item{sm.T3}{a numeric vector containing quadrats counts of small trees (crown < 1 \eqn{m^{2}}{m^2} in canopy) of transect 3}
-    \item{sm.T4}{a numeric vector containing quadrats counts of small trees (crown < 1 \eqn{m^{2}}{m^2} in canopy) of transect 4}
-    \item{sm.T5}{a numeric vector containing quadrats counts of small trees (crown < 1 \eqn{m^{2}}{m^2} in canopy) of transect 5}
-    \item{la.T1}{a numeric vector containing quadrats counts of trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transect 1}
-    \item{la.T2}{a numeric vector containing quadrats counts of trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transect 2}
-    \item{la.T3}{a numeric vector containing quadrats counts of trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transect 3}
-    \item{la.T4}{a numeric vector containing quadrats counts of trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transect 4}
-    \item{la.T5}{a numeric vector containing quadrats counts of trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transect 5}
+\code{acacia} is a data frame with 15 variables :\cr
+se.T1, se.T2, se.T3, se.T4, se.T5 are five numeric vectors containing quadrats counts of 
+seedlings from transects 1 to 5 respectively;\cr
+sm.T1, sm.T2, sm.T3, sm.T4, sm.T5 are five numeric vectors containing quadrats counts of
+ small trees (crown < 1 \eqn{m^{2}}{m^2} in canopy) of transects 1 to 5 respectively; \cr
+la.T1, la.T2, la.T3, la.T4, la.T5 are five numeric vectors containing quadrats counts of 
+trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transects 1 to 5 respectively.
 }
-\references{
+\source{
 Greig-Smith, P. and Chadwick, M.J. (1965) Data on pattern within plant communities. III. \emph{Acacia-Capparis} semi-desert scrub in the Sudan. \emph{Journal of Ecology}, \bold{53}, 465--474.
 
 Hill, M.O. (1973) The intensity of spatial pattern in plant communities. \emph{Journal of Ecology}, \bold{61}, 225--235.
@@ -37,5 +28,5 @@ for(k in 1:15) {
     barplot(acacia[,k],ylim=c(0,20),col=grey(0.8))
     scatterutil.sub(names(acacia)[k],1.5,"topleft")
 }
-}
+par(mfcol=c(1,1))}
 \keyword{datasets}

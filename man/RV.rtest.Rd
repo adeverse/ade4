@@ -5,7 +5,7 @@
 performs a Monte-Carlo Test on the sum of eigenvalues of a co-inertia analysis. 
 }
 \usage{
-RV.rtest(df1, df2, nrepet = 999)
+RV.rtest(df1, df2, nrepet = 99)
 }
 \arguments{
   \item{df1, df2}{two data frames with the same rows}

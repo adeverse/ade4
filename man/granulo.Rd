@@ -8,14 +8,14 @@ This data set gives the repartition in diameter classes of deposit samples.
 \usage{data(granulo)}
 \format{
     \code{granulo} is a list of 2 components.
-    \enumerate{
+    \describe{
         \item{tab}{contains the 49 deposit samples, 9 diameter classes, weight of grains by size class}
         \item{born}{contains the boundaries of the diameter classes}
     }
 }
 \source{
-Gaschignard-Fossati, O. (1986) Répartition spatiale des macroinvertébrés benthiques d'un bras vif du Rhône.\cr
-Rôle des crues et dynamique saisonnière.\cr
+Gaschignard-Fossati, O. (1986) \emph{Répartition spatiale des macroinvertébrés benthiques d'un bras vif du Rhône.
+Rôle des crues et dynamique saisonnière.}
 Thèse de doctorat, Université Lyon 1.
 }
 \examples{

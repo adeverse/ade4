@@ -17,20 +17,31 @@ summary.multispati(object, ...)
 print.multispati(x, ...)
 }
 \arguments{
-  \item{dudi}{: an object of class \code{'dudi'} for the duality diagram analysis}
-  \item{listw}{: an object of class \code{'listw'} for the spatial dependence of data observations}
-  \item{scannf}{: a logical value indicating whether the eigenvalues bar plot should be displayed}
-  \item{nfposi}{: an integer indicating the number of kept positive axes}
-  \item{nfnega}{: an integer indicating the number of kept negative axes}
-  \item{x, object}{: an object of class \code{'multispati'}}
+  \item{dudi}{an object of class \code{dudi} for the duality diagram analysis}
+  \item{listw}{an object of class \code{listw} for the spatial dependence of data observations}
+  \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
+  \item{nfposi}{an integer indicating the number of kept positive axes}
+  \item{nfnega}{an integer indicating the number of kept negative axes}
+  \item{x, object}{an object of class \code{multispati}}
   \item{xax, yax}{the numbers of the x-axis and the y-axis}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
-A faire.
+This analysis generalizes the Wartenberg's multivariate spatial
+correlation analysis to various duality diagrams created by the
+functions (\code{dudi.pca}, \code{dudi.coa}, \code{dudi.acm}, \code{dudi.mix}...)
+If \emph{dudi} is a duality diagram created by the function \code{dudi.pca} 
+and \emph{listw} gives spatial weights created by a row normalized coding scheme,
+the analysis is equivalent to Wartenberg's analysis. 
+
+We note X the data frame with the variables, Q the column weights matrix 
+and D the row weights matrix associated to the duality diagram \emph{dudi}.
+We note L the neighbouring weights matrix associated to  \emph{listw}.
+Then, the \code{'multispati'} analysis gives principal axes v that maximize
+the spatial autocorrelation : \deqn{I(XQv) = \frac{v^{t}Q^{t}X^{t}DLXQv}{v^{t}Q^{t}X^{t}DXQv}}{I(XQv) = t(v)t(Q)t(X)DLXQv / t(v)t(Q)t(X)DXQv}
 }
 \value{
-Returns an object of class \code{'multispati'}.
+Returns an object of class \code{multispati}.
 }
 \references{
 Grunsky, E. C. and Agterberg, F. P. (1988) Spatial and multivariate analysis of geochemical data from metavolcanic rocks in the Ben Nevis area, Ontario. \emph{Mathematical Geology}, \bold{20}, 825--861.
@@ -39,7 +50,7 @@ Switzer, P. and Green, A.A. (1984) Min/max autocorrelation factors for multivari
 
 Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 
-Wartenberg, D. E. (1985) Multivariate spatial correlations: a method for exploratory geographical analysis. \emph{Geographical Analysis}, \bold{17}, 263--283.
+Wartenberg, D. E. (1985) Multivariate spatial correlation: a method for exploratory geographical analysis. \emph{Geographical Analysis}, \bold{17}, 263--283.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}

@@ -32,7 +32,7 @@ s.match(df1xy, df2xy, xax = 1, yax = 2, pch = 20, cpoint = 1,
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
-  \item{pixmap}{aan object 'pixmap' displayed in the map background}
+  \item{pixmap}{aan object \code{pixmap} displayed in the map background}
   \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a line (x1,y1,x2,y2)}
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}

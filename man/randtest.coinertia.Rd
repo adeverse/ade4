@@ -8,14 +8,14 @@ Performs a Monte-Carlo test on a coinertia analysis.
 randtest.coinertia(xtest, nrepet = 999, fixed=0, \dots)
 }
 \arguments{
-  \item{xtest}{an object of class 'coinertia'}
+  \item{xtest}{an object of class \code{coinertia}}
   \item{nrepet}{the number of permutations}
   \item{fixed}{when non uniform row weights are used in the coinertia analysis,
 this parameter must be the number of the table that should be kept fixed in the permutations}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
-a list of the class 'randtest'
+a list of the class \code{randtest}
 }
 \references{
 Doledec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for

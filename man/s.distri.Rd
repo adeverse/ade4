@@ -61,6 +61,7 @@ par(mfrow = c(3,4))
 for (i in c(1,5,8,20,21,23,26,33,36,44,47,49)){
 s.distri(xy, rpjdl$fau[,i], cell = 1.5, sub = rpjdl$frlab[i], 
     csub = 2, cgrid = 1.5)}
+par(mfrow = c(1,1))
 }
 \keyword{multivariate}
 \keyword{hplot}

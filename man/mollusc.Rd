@@ -9,15 +9,15 @@ the sampler types and the time of exposure.
 }
 \usage{data(mollusc)}
 \format{
-    \code{mollusc} is a list of 2 components.
-    \enumerate{
-    \item{fau}{is a data frame with 163 samples and 32 mollusk species(abundance).}
+    \code{mollusc} is a list of 2 objects.
+    \describe{
+    \item{fau}{is a data frame with 163 samples and 32 mollusk species (abundance).}
     \item{plan}{contains the 163 samples and 4 variables.}
     }
 }
 \source{
- Richardot-Coulet, M., Chessel D. and Bournaud M. (1986)\cr
- Typological value of the benthos of old beds of a large river. Methodological approach.\cr
+ Richardot-Coulet, M., Chessel D. and Bournaud M. (1986)
+ Typological value of the benthos of old beds of a large river. Methodological approach.
  \emph{Archiv fùr Hydrobiologie}, \bold{107}, 363--383.
 }
 \examples{
@@ -28,5 +28,5 @@ s.chull(coa1$li, mollusc$plan$site, 2, 3, opt = 1, cpoi = 1)
 s.chull(coa1$li, mollusc$plan$season, 2, 3, opt = 1, cpoi = 1)
 s.chull(coa1$li, mollusc$plan$method, 2, 3, opt = 1, cpoi = 1)
 s.chull(coa1$li, mollusc$plan$duration, 2, 3, opt = 1, cpoi = 1)
-}
+par(mfrow=c(1,1))}
 \keyword{datasets}

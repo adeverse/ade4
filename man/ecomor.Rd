@@ -8,6 +8,7 @@ This data set gives ecomorphological informations about 129 bird species.
 \usage{data(ecomor)}
 \format{
     \code{ecomor} is a list of 7 components.
+\describe{
         \item{forsub}{is a data frame with 129 species, 6 variables (the feeding place classes): 
         foliage, ground , twig , bush, trunk and aerial feeders. These dummy variables indicate the use (1) 
         or  no use (0) of a given feeding place by a species. }
@@ -27,9 +28,11 @@ This data set gives ecomorphological informations about 129 bird species.
         \item{labels}{is a data frame with vectors of the names of species (complete and in abbreviated form.}
         \item{categ}{is a data frame with 129 species, 2 factors : 'forsub' summarizing the feeding place and 
         'diet' the diet type.}
-}
+}}
 \source{
-Blondel, J., Vuilleumier, F., Marcus, L.F., and Terouanne, E. (1984). Is there ecomorphological convergence among mediterranean bird communities of Chile, California, and France. In \emph{Evolutionary Biology} (eds M.K. Hecht, B. Wallace and R.J. MacIntyre), 141--213, Vol. 18. Plenum Press, New York.
+Blondel, J., Vuilleumier, F., Marcus, L.F., and Terouanne, E. (1984). Is there ecomorphological convergence 
+among mediterranean bird communities of Chile, California, and France. In \emph{Evolutionary Biology} 
+(eds M.K. Hecht, B. Wallace and R.J. MacIntyre), 141--213, \bold{18}. Plenum Press, New York.
 }
 \examples{
 data(ecomor)
@@ -57,13 +60,13 @@ mantel.randtest(dmorpho, dhabitat)
 RV.rtest(pcoscaled(dmorpho), pcoscaled(dhabitat), 999)
 procuste.randtest(pcoscaled(dmorpho), pcoscaled(dhabitat))
 
-ecophy <- taxo2phylog(ecomor$tax)
+ecophy <- taxo2phylog(ecomor$taxo)
 table.phylog(ecomor$habitat, ecophy, clabel.n = 0.5, f = 0.6,
      clabel.c = 0.75, clabel.r = 0.5, csi = 0.75, cleg = 0)
 plot.phylog(ecophy, clabel.n = 0.75, clabel.l = 0.75,
      labels.l = ecomor$labels[,"latin"])
 dtaxo <- ecophy$Wdist
-mantel.randtest(dmorpho,dtaxo)
-mantel.randtest(dhabitat,dtaxo)
+mantel.randtest(dmorpho, dtaxo)
+mantel.randtest(dhabitat, dtaxo)
 }
 \keyword{datasets}

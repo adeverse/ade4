@@ -31,12 +31,14 @@ boxplot.acm (x, xax = 1, \dots)
 are the correlation ratios}
 }
 \references{
-Tenenhaus, M. & Young, F.W. (1985) An analysis and synthesis of multiple correspondence analysis, optimal scaling, dual scaling, homogeneity analysis ans other methods for quantifying categorical multivariate data. Psychometrika, \bold{50}, 1, 91-119.\cr\cr
+Tenenhaus, M. & Young, F.W. (1985) An analysis and synthesis of multiple correspondence analysis, 
+optimal scaling, dual scaling, homogeneity analysis ans other methods for quantifying categorical multivariate data. 
+\emph{Psychometrika}, \bold{50}, 1, 91-119.
 
 Lebart, L., A. Morineau, and M. Piron. 1995. Statistique exploratoire multidimensionnelle. Dunod, Paris.
 }
 \seealso{
-	\link{s.chull}, \link{s.class}
+    \code{\link{s.chull}}, \code{\link{s.class}}
 }
 \examples{
 data(banque)

@@ -3,17 +3,18 @@
 \docType{data}
 \title{Geary's Irish Data}
 \description{
-This data set contains geographic informations about 25 counties of Ireland. 
+This data set contains geographical informations about 25 counties of Ireland. 
 }
 \usage{data(irishdata)}
 \format{
-    \code{irishdata} is a list of 5 components.
+    \code{irishdata} is a list of 5 objects.
+\describe{
     \item{area}{is a data frame with polygons for each of the 25 contiguous counties.}
     \item{county.names}{is a vector with the names of the 25 counties.}
     \item{xy}{is a data frame with the coordinates centers of the 25 counties.}
     \item{tab}{is a data frame with 25 rows (counties) and 12 variables.}
     \item{contour}{is a data frame with the global polygon of all the 25 counties.}
-}
+}}
 \source{
 Geary, R.C. (1954) The contiguity ratio and statistical mapping. \emph{The incorporated Statistician}, \bold{5}, 3, 115--145.
 
@@ -30,5 +31,5 @@ s.corcircle(dudi.pca(irishdata$tab, scan = FALSE)$co)
 score <- dudi.pca(irishdata$tab, scan = FALSE, nf = 1)$li$Axis1
 names(score) <- row.names(irishdata$tab)
 area.plot(irishdata$area, score)
-}
+par(mfrow = c(1,1))}
 \keyword{datasets}

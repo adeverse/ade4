@@ -9,15 +9,15 @@ with the number of sample date and the flows of three tributaries.
 \usage{data(rhone)}
 \format{
     \code{rhone} is a list of 3 components.
-    \enumerate{
+\describe{
     \item{tab}{is a data frame with 39 water samples and 15 physico-chemical variables.}
     \item{date}{is a vector of the sample date (in days).}
     \item{disch}{is a data frame with 39 water samples and the flows of the three tributaries.}
     }
 }
 \source{
-Carrel, G., Barthelemy, D., Auda, Y. and Chessel, D. (1986)\cr
-Approche graphique de l'analyse en composantes principales normée : utilisation en hydrobiologie.\cr
+Carrel, G., Barthelemy, D., Auda, Y. and Chessel, D. (1986)
+Approche graphique de l'analyse en composantes principales normée : utilisation en hydrobiologie.
 \emph{Acta Oecologica, Oecologia Generalis}, \bold{7}, 189--203.
 }
 \examples{
@@ -33,5 +33,6 @@ for (i in 1:15) {
     lines(rhone$date, rh2[,i])
     scatterutil.sub(names(rhone$tab)[i], 2, "topright")
 }
+par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -22,7 +22,7 @@ All the distances are of type \eqn{d=\|x-y\|_A = \sqrt{(x-y)^{t}A(x-y)}}{d = ||x
   \item{3 = Mahalanobis}{A = inv(cov)} 
 }
 \value{
-an object of class 'dist'
+an object of class \code{dist}
 }
 \examples{
 library(mva)
@@ -32,6 +32,6 @@ scatter(dudi.pco(dist.quant(ecomor$morpho,3), scan = FALSE))
 scatter(dudi.pco(dist.quant(ecomor$morpho,2), scan = FALSE))
 scatter(dudi.pco(dist(scalewt(ecomor$morpho)), scan = FALSE))
 scatter(dudi.pco(dist.quant(ecomor$morpho,1), scan = FALSE))
-}
+par(mfrow = c(1,1))}
 \keyword{array}
 \keyword{multivariate}

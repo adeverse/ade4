@@ -2,17 +2,17 @@
 \alias{lingoes}
 \title{Transformation of a Distance Matrix for becoming Euclidean}
 \description{
-transforms a distance matrix in an Euclidean one. 
+transforms a distance matrix in a Euclidean one. 
 }
 \usage{
 lingoes(distmat, print = FALSE)
 }
 \arguments{
-  \item{distmat}{an object of class 'dist'}
+  \item{distmat}{an object of class \code{dist}}
   \item{print}{if TRUE, prints the eigenvalues of the matrix}
 }
 \value{
-returns an object of class 'dist' with an Euclidean distance
+returns an object of class \code{dist} with a Euclidean distance
 }
 \references{Lingoes, J.C. (1971) Some boundary conditions for a monotone analysis of symmetric matrices. 
 \emph{Psychometrika}, \bold{36}, 195--203. 

@@ -10,13 +10,13 @@ witwit.coa(dudi, row.blocks, col.blocks, scannf = TRUE, nf = 2)
 summary.witwit(object, \dots)
 }
 \arguments{
-  \item{dudi}{an object of class 'coa' }
+  \item{dudi}{an object of class \code{coa} }
   \item{row.blocks}{a numeric vector indicating the row numbers for each block of rows}
   \item{col.blocks}{a numeric vector indicating the column numbers for each block of columns}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
   \cr
-  \item{object}{an object of class 'witwit'}
+  \item{object}{an object of class \code{witwit}}
   \item{\dots}{further arguments passed to or from other methods}
 }
 value{

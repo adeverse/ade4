@@ -7,11 +7,12 @@ This data set contains informations about genetic variability of \emph{Atya inno
 }
 \usage{data(atya)}
 \format{
-\code{atya} is a list with the following elements : 
-        \item{xy}{: a data frame with the coordinates of the 31 sites}
-        \item{gen}{: a data frame with 22 variables collected on 31 sites}
-        \item{neig}{: an object of class \code{'neig'}}   
-}
+\code{atya} is a list with the following objects : 
+\describe{
+   \item{xy}{: a data frame with the coordinates of the 31 sites}
+   \item{gen}{: a data frame with 22 variables collected on 31 sites}
+   \item{neig}{: an object of class \code{neig}}   
+}}
 \source{
 Fievet, E., Eppe, F. and Dolédec, S. (2001) Etude de la variabilité morphométrique et génétique des populations de Cacadors (\emph{Atya innocous} et \emph{Atya scabra}) de l'île de Basse-Terre. Direction Régionale de L'Environnement Guadeloupe, Laboratoire des hydrosystèmes fluviaux, Université Lyon 1.
 }

@@ -9,12 +9,12 @@ Test of the sum of a discriminant analysis eigenvalues (divided by the rank). No
 randtest.discrimin(xtest, nrepet = 999, \dots)
 }
 \arguments{
-  \item{xtest}{an object of class 'discrimin'}
+  \item{xtest}{an object of class \code{discrimin}}
   \item{nrepet}{the number of permutations}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
-returns a list of class 'randtest'
+returns a list of class \code{randtest}
 }
 \examples{
 data(meaudret)

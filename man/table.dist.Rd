@@ -9,7 +9,7 @@ table.dist(d, x = 1:(attr(d, "Size")), labels = as.character(x),
     clabel = 1, csize = 1, grid = TRUE)
 }
 \arguments{
-  \item{d}{an object of class \code{'dist'}}
+  \item{d}{an object of class \code{dist}}
   \item{x}{a vector of the row and column positions}
   \item{labels}{a vector of strings of characters for the labels}
   \item{clabel}{a character size for the labels}

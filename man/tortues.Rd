@@ -10,8 +10,8 @@ This data set gives a morphological description (4 characters) of 48 turtles.
 a data frame with 48 rows and 4 columns (length (mm), maximum width(mm), height (mm), gender). 
 }
 \source{
-Jolicœur, P. and Mosimann, J. E. (1960)\cr
-Size and shape variation in the painted turtle. A principal component analysis.\cr
+Jolicoeur, P. and Mosimann, J. E. (1960)
+Size and shape variation in the painted turtle. A principal component analysis.
 \emph{Growth}, \bold{24}, 339--354.
 }
 \examples{

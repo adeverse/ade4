@@ -12,16 +12,18 @@ symbols.phylog(phylog, circles, squares, csize = 1, clegend = 1,
 dotchart.phylog(phylog, values, ceti = 1, cdot = 1, ...)
 }
 \arguments{
-  \item{phylog}{: an object of class \code{'phylog'}}
-  \item{circles, squares, values}{: a numeric vector corresponding to the quantitative variable}
-  \item{csize}{: a size coefficient for symbols}
-  \item{ceti}{: a character size for the legend of the dot plot, used with \code{par("cex")*ceti}}
-  \item{cdot}{: a character size for plotting the points of the dot plot, used with \code{par("cex")*cdot}}
-  \item{clegend}{: a character size for the legend used by \code{par("cex")*clegend}}
-  \item{sub}{: a string of characters to be inserted as legend}
-  \item{csub}{: a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{: a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
-  \item{\dots}{: further arguments passed to or from other methods}
+  \item{phylog}{ an object of class \code{phylog}}
+  \item{circles}{ a vector giving the radii of the circles}
+  \item{squares}{ a vector giving the length of the sides of the squares}
+  \item{values}{a vector giving the position in a \code{dotplot}}
+  \item{csize}{ a size coefficient for symbols}
+  \item{ceti}{ a character size for the legend of the dot plot, used with \code{par("cex")*ceti}}
+  \item{cdot}{ a character size for plotting the points of the dot plot, used with \code{par("cex")*cdot}}
+  \item{clegend}{ a character size for the legend used by \code{par("cex")*clegend}}
+  \item{sub}{ a string of characters to be inserted as legend}
+  \item{csub}{ a character size for the legend, used with \code{par("cex")*csub}}
+  \item{possub}{ a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
+  \item{\dots}{ further arguments passed to or from other methods}
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}

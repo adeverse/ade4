@@ -19,13 +19,13 @@ ktab.data.frame(df, blocks, rownames = NULL, colnames = NULL,
   \item{w.col}{a vector of the column weightings}
 }
 \value{
-returns a list of class 'ktab'. See \code{\link{ktab}}.
+returns a list of class \code{ktab}. See \code{\link{ktab}}.
 }
 \examples{
 data(escopage)
 wescopage <- data.frame(scalewt(escopage$tab))
 wescopage <- ktab.data.frame(wescopage, escopage$blo,
-		tabnames = escopage$tab.names)
+        tabnames = escopage$tab.names)
 plot(sepan(wescopage))
 data(friday87)
 w <- data.frame(scale(friday87$fau, scal = FALSE))

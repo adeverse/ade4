@@ -3,8 +3,8 @@
 \alias{Rtoade4}
 \title{Format Change Utility}
 \description{
-  Exchange objects between R and ADE4 (classic version) 
-  \url{http://pbil.univ-lyon1.fr/ADE-4/} 
+  Exchange objects between R and ADE4 (classic version) \cr
+  \url{http://pbil.univ-lyon1.fr/ADE-4} 
 }
 \usage{
 ade4toR (fictab, ficcolnames = NULL, ficrownames = NULL)
@@ -25,18 +25,18 @@ Rtoade4 (x)
 For any table :\cr
     creates a file "xxx.txt"\cr
     creates a file "xxx\_row\_lab.txt" with row names\cr
-    creates a file "xxx\_col\_lab.txt" with column names\cr\cr
+    creates a file "xxx\_col\_lab.txt" with column names\cr
 
 if x has the 'col.blocks' attribute\cr
 creates a file "xxx\_col\_bloc\_lab.txt" with blocks names\cr
-creates a file "xxx\_col\_bloc.txt" with blocks sizes\cr\cr
+creates a file "xxx\_col\_bloc.txt" with blocks sizes\cr
 
 For a table which all columns are factors : \cr
 creates a file "xxx.txt"\cr
 creates a file "xxx\_var\_lab.txt" with row names\cr
-creates a file "xxx\_moda\_lab.txt" with categories names\cr\cr
+creates a file "xxx\_moda\_lab.txt" with categories names\cr
 
-Files are created in the current working directory. \cr
+Files are created in the current working directory.
 }
 \examples{
 data(tarentaise)

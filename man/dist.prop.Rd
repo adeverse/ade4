@@ -22,13 +22,13 @@ dist.prop(df, method = NULL, diag = FALSE, upper = FALSE)
 \item{5 = Edwards 1971 (one locus)}{\eqn{d_5=\sqrt{1-\sum_{i=1}^{K}{\sqrt{p_1 q_i}}}}{d5= sqrt (1 - (Sum(sqrt(p(i)q(i))))}}
 }
 \value{
-returns a distance matrix, object of class 'dist'
+returns a distance matrix, object of class \code{dist}
 }
 \references{
 Edwards, A. W. F. (1971) Distance between populations on the basis of gene frequencies. \emph{Biometrics}, \bold{27}, 
 873--881. 
 
-Manly, B. F. (1994) \emph{Multivariate Statistical Methods. A primer.}, Second edition. Chapman & Hall, London.\cr
+Manly, B. F. (1994) \emph{Multivariate Statistical Methods. A primer.}, Second edition. Chapman & Hall, London.
 
 Nei, M. (1972) Genetic distances between populations. \emph{The American Naturalist}, \bold{106}, 283--292. 
 }
@@ -40,6 +40,6 @@ scatter(dudi.pco(lingoes(dist.prop(w,1)), scann = FALSE))
 scatter(dudi.pco(lingoes(dist.prop(w,2)), scann = FALSE))
 scatter(dudi.pco(dist.prop(w,3), scann = FALSE))
 scatter(dudi.pco(lingoes(dist.prop(w,4)), scann = FALSE))
-}
+par(mfrow = c(1,1))}
 \keyword{array}
 \keyword{multivariate}

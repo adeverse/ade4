@@ -13,10 +13,11 @@ dudi.nsc(df, scannf = TRUE, nf = 2)
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
 }
 \value{
-Returns a list of class \code{nsc} and \code{dudi} (see \link{dudi}) containing also
+Returns a list of class \code{nsc} and \code{dudi} (see \code{\link{dudi}}) containing also
   \item{N}{sum of the values of the initial table}
 }
-\references{Kroonenberg, P. M., and Lombardo  R. (1999) Nonsymmetric correspondence analysis: a tool for analysing contingency tables with a dependence structure. \emph{Multivariate Behavioral Research}, \bold{34}, 367--396.
+\references{Kroonenberg, P. M., and Lombardo  R. (1999) Nonsymmetric correspondence analysis: 
+a tool for analysing contingency tables with a dependence structure. \emph{Multivariate Behavioral Research}, \bold{34}, 367--396.
 }
 \examples{
 data(housetasks)

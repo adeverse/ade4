@@ -11,31 +11,31 @@
 \usage{
 plot.phylog(x, y = NULL, f.phylog = 0.5, cleaves = 1, cnodes = 0,
  labels.leaves = names(x$leaves), clabel.leaves = 1,
-  labels.nodes = names(x$nodes), clabel.nodes = 0, sub = "",
-   csub = 1.25, possub = "bottomleft", draw.box = FALSE, ...)
+ labels.nodes = names(x$nodes), clabel.nodes = 0, sub = "",
+ csub = 1.25, possub = "bottomleft", draw.box = FALSE, ...)
 radial.phylog(phylog, circle = 1, cleaves = 1, cnodes = 0,
  labels.leaves = names(phylog$leaves), clabel.leaves = 1,
-  labels.nodes = names(phylog$nodes), clabel.nodes = 0,
-   draw.box = FALSE)
+ labels.nodes = names(phylog$nodes), clabel.nodes = 0,
+ draw.box = FALSE)
 enum.phylog(phylog, no.over = 1000)
 }
 \arguments{
-  \item{x, phylog}{: an object of class \code{'phylog'}}
-  \item{y}{: a vector which values correspond to leaves positions}
-  \item{f.phylog}{: a size coefficient for tree size (a parameter to draw the tree in proportion to leaves label)}
-  \item{circle}{: a size coefficient for the outer circle}
-  \item{cleaves}{: a character size for plotting the points that represent the leaves, used with \code{par("cex")*cleaves}. If zero, no points are drawn}
-  \item{cnodes}{: a character size for plotting the points that represent the nodes, used with \code{par("cex")*cnodes}. If zero, no points are drawn}
-  \item{labels.leaves}{: a vector of strings of characters for the leaves labels}
-  \item{clabel.leaves}{: a character size for the leaves labels, used with \code{par("cex")*clabel.leaves}. If zero, no leaves labels are drawn}
-  \item{labels.nodes}{: a vector of strings of characters for the nodes labels}
-  \item{clabel.nodes}{: a character size for the nodes labels, used with \code{par("cex")*clabel.nodes}. If zero, no nodes labels are drawn}
-  \item{sub}{: a string of characters to be inserted as legend}
-  \item{csub}{: a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{: a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
-  \item{draw.box}{: if TRUE draws a box around the current plot with the function \code{box()}}
-  \item{\dots}{: further arguments passed to or from other methods}
-  \item{no.over}{: a size coefficient for the number of representations}
+  \item{x, phylog}{an object of class \code{phylog}}
+  \item{y}{a vector which values correspond to leaves positions}
+  \item{f.phylog}{a size coefficient for tree size (a parameter to draw the tree in proportion to leaves label)}
+  \item{circle}{a size coefficient for the outer circle}
+  \item{cleaves}{a character size for plotting the points that represent the leaves, used with \code{par("cex")*cleaves}. If zero, no points are drawn}
+  \item{cnodes}{a character size for plotting the points that represent the nodes, used with \code{par("cex")*cnodes}. If zero, no points are drawn}
+  \item{labels.leaves}{a vector of strings of characters for the leaves labels}
+  \item{clabel.leaves}{a character size for the leaves labels, used with \code{par("cex")*clabel.leaves}. If zero, no leaves labels are drawn}
+  \item{labels.nodes}{a vector of strings of characters for the nodes labels}
+  \item{clabel.nodes}{a character size for the nodes labels, used with \code{par("cex")*clabel.nodes}. If zero, no nodes labels are drawn}
+  \item{sub}{a string of characters to be inserted as legend}
+  \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
+  \item{draw.box}{if TRUE draws a box around the current plot with the function \code{box()}}
+  \item{\dots}{further arguments passed to or from other methods}
+  \item{no.over}{a size coefficient for the number of representations}
 }
 \details{
 The vector y is an argument of the function \code{plot.phylog} that ensures to plot one of the possible representations of a phylogeny.

@@ -8,19 +8,19 @@ For each species, a data frame contains biological traits.
 }
 \usage{data(aviurba)}
 \format{
-	This list contains the following objects:
-	\describe{
-		\item{fau}{is a data frame 51 sites 40 species. }
-		\item{mil}{is a data frame 51 sites 11 environmental variables. }
-		\item{traits}{is a data frame 40 species 4 biological traits.}
-		\item{species.names.fr}{is a vector of the species names in french. }
-		\item{species.names.la}{is a vector of the species names in latin. }
-		\item{species.family}{is a factor : the species families. }
-	}
+    This list contains the following objects:
+    \describe{
+        \item{fau}{is a data frame 51 sites 40 species. }
+        \item{mil}{is a data frame 51 sites 11 environmental variables. }
+        \item{traits}{is a data frame 40 species 4 biological traits.}
+        \item{species.names.fr}{is a vector of the species names in french. }
+        \item{species.names.la}{is a vector of the species names in latin. }
+        \item{species.family}{is a factor : the species families. }
+    }
 }
 \source{
-Dolédec, S., Chessel, D., Ter Braak,C. J. F.  and Champely S. (1996)\cr
-Matching species traits to environmental variables: a new three-table ordination method.\cr
+Dolédec, S., Chessel, D., Ter Braak,C. J. F.  and Champely S. (1996)
+Matching species traits to environmental variables: a new three-table ordination method.
 \emph{Environmental and Ecological Statistics}, \bold{3}, 143--166.
 }
 \examples{

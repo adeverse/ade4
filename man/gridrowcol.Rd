@@ -8,21 +8,22 @@ This function defines objects to analyse data sets associated with complete regu
 gridrowcol(nrow, ncol, cell.names = NULL)
 }
 \arguments{
-  \item{nrow}{: size of the grid (number of rows)}
-  \item{ncol}{: size of the grid (number of columns)}
-  \item{cell.names}{: grid cell labels}
+  \item{nrow}{size of the grid (number of rows)}
+  \item{ncol}{size of the grid (number of columns)}
+  \item{cell.names}{grid cell labels}
 }
 \value{
-Returns a list containg the following items :
+Returns a list containing the following items :
     \item{xy}{: a data frame with grid cell coordinates}
     \item{area}{: a data frame with three variables to display grid cells as areas}
     \item{neig}{: an object of class \code{'neig'} corresponding to a neighbouring graph of the grid (rook case)}
     \item{orthobasis}{: an object of class \code{'orthobasis'} corresponding to the analytical solution for the neighbouring graph}
 }
 \references{
-Méot, A., Chessel, D. and Sabatier, D. (1993) Opérateurs de voisnage et analyse des données spatio-temporelles. \cr Pages 45-72 in J.D. Lebreton and B. Asselain, editors. Biométrie et environnement. Masson.
+Méot, A., Chessel, D. and Sabatier, D. (1993) Opérateurs de voisinage et analyse des données spatio-temporelles.
+\emph{in} J.D. Lebreton and B. Asselain, editors. Biométrie et environnement. Masson, 45-72.
 
-Cornillon, P.A. (1998) Prise en compte de proximités en analyse factorielle et comparative. Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
+Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}. Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
@@ -30,7 +31,7 @@ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 \seealso{\code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link{mld}}}
 \examples{
 w <- gridrowcol(8,5)
-par(mfrow=c(1,2))
+par(mfrow = c(1,2))
 area.plot(w$area,center = w$xy, graph = w$neig, clab = 0.75)
 area.plot(w$area,center = w$xy, graph = w$neig, clab = 0.75,
  label = as.character(1:40))

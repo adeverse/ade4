@@ -7,14 +7,14 @@
 }
 \usage{data(dunedata)}
 \format{
-	\code{dunedata} is a list with 2 components.
-	\enumerate{
-		\item{envir}{is a data frame with 30 rows (sites) 5 columns (environnemental variables).}
-		\item{veg}{is a data frame with 30 rows (sites) 20 columns (plant species).}
-	}
+    \code{dunedata} is a list with 2 components.
+    \describe{
+        \item{envir}{is a data frame with 30 rows (sites) 5 columns (environnemental variables).}
+        \item{veg}{is a data frame with 30 rows (sites) 20 columns (plant species).}
+    }
 }
 \source{
- Jongman, R. H., ter Braak, C. J. F.  and van Tongeren, O. F. R.  (1987)\cr
+ Jongman, R. H., ter Braak, C. J. F.  and van Tongeren, O. F. R.  (1987)
  \emph{Data analysis in community and landscape ecology}, Pudoc, Wageningen.
 }
 \examples{

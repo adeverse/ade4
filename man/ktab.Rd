@@ -19,7 +19,7 @@
 \alias{ktab.util.addfactor<-}
 \title{the class of objects 'ktab' (K-tables)}
 \description{
-an object of class 'ktab' is a list of data frame with the same row.names in common.\cr
+an object of class \code{ktab} is a list of data frame with the same row.names in common.\cr
 a list of class 'ktab' contains moreover :
  \item{blo}{: the vector of the numbers of columns for each table}
  \item{lw}{: the vector of the row weightings in common for all tables}
@@ -40,21 +40,21 @@ col.names(x)
 ktab.util.names(x)
 }
 \arguments{
-  \item{x}{an object of the class 'ktab'}
-  \item{\dots}{a sequence of objects of the class 'ktab'}
+  \item{x}{an object of the class \code{ktab}}
+  \item{\dots}{a sequence of objects of the class \code{ktab}}
   \item{selection}{an integer vector}
 }
 \details{
 A 'ktab' object can be created with :\cr
-	a list of data frame : \code{\link{ktab.list.df}}\cr
-	a list of 'dudi' objects : \code{\link{ktab.list.dudi}}\cr
-	a data.frame : \code{\link{ktab.data.frame}}\cr
-	an object 'within' : \code{\link{ktab.within}}\cr
+    a list of data frame : \code{\link{ktab.list.df}}\cr
+    a list of \code{dudi} objects : \code{\link{ktab.list.dudi}}\cr
+    a data.frame : \code{\link{ktab.data.frame}}\cr
+    an object \code{within} : \code{\link{ktab.within}}\cr
 }
 \value{
-\code{c.ktab} returns an object 'ktab'. It concatenates K-tables with the same rows in common. \cr
-\code{t.ktab} returns an object 'ktab'. It permutes each data frame into a K-tables. All tables have the same column names and the same column weightings (a data cube). \cr
-\code{"["} returns an object 'ktab'. It allows to select some arrays in a K-tables. \cr
+\code{c.ktab} returns an object \code{ktab}. It concatenates K-tables with the same rows in common. \cr
+\code{t.ktab} returns an object \code{ktab}. It permutes each data frame into a K-tables. All tables have the same column names and the same column weightings (a data cube). \cr
+\code{"["} returns an object \code{ktab}. It allows to select some arrays in a K-tables. \cr
 \code{is.ktab} returns TRUE if x is a K-tables. \cr
 \code{row.names} returns the vector of the row names common with all the tables of a K-tables and allowes to modifie them.\cr
 \code{col.names} returns the vector of the column names of a K-tables and allowes to modifie them.\cr

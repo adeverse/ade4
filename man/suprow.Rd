@@ -13,7 +13,7 @@ suprow.default (x, Xsup, \dots)
 suprow.pca (x, Xsup, \dots) 
 }
 \arguments{
-  \item{x}{an object of class 'dudi'}
+  \item{x}{an object of class \code{dudi}}
   \item{Xsup}{an array with the supplementary rows (\code{Xsup} and \code{x$tab} have the same column number)}
   \item{\dots}{further arguments passed to or from other methods}
 }

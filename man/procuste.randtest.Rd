@@ -15,10 +15,10 @@ procuste.randtest(df1, df2, nrepet = 999)
   \item{nrepet}{the number of permutations}
 }
 \value{
-returns a list of class 'randtest'
+returns a list of class \code{randtest}
 }
 \references{
-Jackson, D.A. (1995) PROTEST: a PROcustean randomization TEST of community environment concordance. Ecosciences, \bold{2}, 297--303.
+Jackson, D.A. (1995) PROTEST: a PROcustean randomization TEST of community environment concordance. \emph{Ecosciences}, \bold{2}, 297--303.
 }
 \examples{
 data(doubs)

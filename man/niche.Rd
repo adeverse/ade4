@@ -12,16 +12,16 @@ print.niche (x, \dots)
 plot.niche (x, xax = 1, yax = 2, \dots)
 }
 \arguments{
-  \item{dudiX}{a duality diagram providing from a function dudi.coa, dudi.pca, ... using an array sites-variables}
+  \item{dudiX}{a duality diagram providing from a function \code{dudi.coa}, \code{dudi.pca}, ... using an array sites-variables}
   \item{Y}{a data frame sites-species according to \code{dudiX$tab} with no columns of zero}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
-  \item{x}{an object of class 'niche'}
+  \item{x}{an object of class \code{niche}}
   \item{\dots}{further arguments passed to or from other methods}
   \item{xax, yax}{the numbers of the x-axis and the y-axis}
 }
 \value{
-Returns a list of the class 'niche' (sub-class of 'dudi') containing :
+Returns a list of the class \code{niche} (sub-class of \code{dudi}) containing :
  \item{rank}{an integer indicating the rank of the studied matrix}
  \item{nf}{an integer indicating the number of kept axes}
  \item{RV}{a numeric value indicating the RV coefficient}

@@ -7,14 +7,16 @@ This data set contains informations about spatial distribution of bird species i
 }
 \usage{data(avijons)}
 \format{
-\code{avijons} is a list with the following elements : 
-        \item{xy}{: a data frame with the coordinates of the sites}
-        \item{area}{: an object of class \code{'area'}}
-        \item{fau}{: a data frame with the abundance of 64 bird species in 91 sites}
-        \item{spe.names.fr}{: a vector of strings of character with species name in french}
-}
+\code{avijons} is a list with the following objects :
+\describe{ 
+   \item{xy}{: a data frame with the coordinates of the sites}
+   \item{area}{: an object of class \code{area}}
+   \item{fau}{: a data frame with the abundance of 64 bird species in 91 sites}
+   \item{spe.names.fr}{: a vector of strings of character with the species names in french}
+}}
 \source{
-Bournaud, M., Amoros, C., Chessel, D., Coulet, M., Doledec, S., Michelot, J.L., Pautou, G., Rostan, J.C., Tachet, H. and Thioulouse, J. (1990) Peuplements d'oiseaux et propriétés des écocomplexes de la plaine du Rhône : descripteurs de fonctionnement global et gestion des berges. Rapport programme S.R.E.T.I.E., Ministère de l' Environnement CORA et URA CNRS 367, Univ. Lyon I. 
+Bournaud, M., Amoros, C., Chessel, D., Coulet, M., Doledec, S., Michelot, J.L., Pautou, G., Rostan, J.C., Tachet, H. and Thioulouse, J. (1990) 
+\emph{Peuplements d'oiseaux et propriétés des écocomplexes de la plaine du Rhône : descripteurs de fonctionnement global et gestion des berges.} Rapport programme S.R.E.T.I.E., Ministère de l'Environnement CORA et URA CNRS 367, Univ. Lyon I. 
 }
 \references{
 Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
@@ -44,7 +46,7 @@ if (require(pixmap,quiet=TRUE)) {
     grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+TREES", csub = 3)
     s.value(avijons$xy, jons.coa$li[,2], pixmap = pnm.eau, inclu = FALSE,
     grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
-}
+par(mfrow=c(1,1))}
 
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE) 
         & require( pixmap, quiet = TRUE) ) {
@@ -75,6 +77,6 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)
     grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+TREES", csub = 3)
     s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.eau, inclu = FALSE,
     grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
-    }
-}
+par(mfrow=c(1,1))
+}}
 \keyword{datasets}

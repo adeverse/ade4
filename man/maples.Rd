@@ -7,7 +7,7 @@ This data set describes the phylogeny of 17 flowers as reported by Ackerly and D
 }
 \usage{data(maples)}
 \format{
-\code{tithonia} is a list containing the 2 following objects : \cr 
+\code{tithonia} is a list containing the 2 following objects :  
             \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
             \item{tab}{is a data frame with 17 species and 31 traits}    
 }
@@ -15,7 +15,8 @@ This data set describes the phylogeny of 17 flowers as reported by Ackerly and D
 Data were obtained from the URL \url{http://www.stanford.edu/~dackerly/acerdata.html}.
 }
 \references{
-Ackerly, D. D. and Donoghue, M.J. (1998) Leaf size, sappling allometry, and Corner's rules: phylogeny and correlated evolution in Maples (Acer). \cr \emph{American Naturalist}, \bold{152}, 767--791.
+Ackerly, D. D. and Donoghue, M.J. (1998) Leaf size, sappling allometry, and Corner's rules: phylogeny and correlated evolution in Maples (Acer). 
+\emph{American Naturalist}, \bold{152}, 767--791.
 }
 \examples{
 data(maples)

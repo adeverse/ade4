@@ -9,9 +9,9 @@ It is an array of widower percentages in relation with the age and the socioprof
 \usage{data(veuvage)}
 \format{
     \code{veuvage} is a list of 2 components.
-    \enumerate{
-    \item{tab}{is a data frame with 37 rows (widowers) 6 columns (socio-professional categories)}
-    \item{age}{is a vector of the ages of the 37 widowers. }
+\describe{
+   \item{tab}{is a data frame with 37 rows (widowers) 6 columns (socio-professional categories)}
+   \item{age}{is a vector of the ages of the 37 widowers. }
     }
 }
 \details{

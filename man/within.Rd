@@ -12,7 +12,7 @@ plot.within (x, xax = 1, yax = 2, \dots)
 print.within (x, \dots)
 }
 \arguments{
- \item{dudi}{an object of class 'dudi'}
+ \item{dudi}{an object of class \code{dudi}}
  \item{fac}{a factor distributing the rows of \code{dudi$tab} in classes }
  \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
  \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
@@ -22,7 +22,7 @@ print.within (x, \dots)
  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
-Returns a list of the sub-class 'within' in the class 'dudi'
+Returns a list of the sub-class \code{within} in the class \code{dudi}
   \item{call}{origine}
   \item{nf}{number of axis saved}
   \item{rank}{rank}

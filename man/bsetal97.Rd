@@ -8,7 +8,7 @@ This data set gives ecological and biological characteristics of 131 species of 
 \usage{data(bsetal97)}
 \format{
 'bsetal97' is a list of 8 components.\cr
-    \enumerate{
+    \describe{
     \item{species.names}{is a vector of the species names.}
     \item{taxo}{is a data frame containing the taxonomy of species. }
     \item{biol}{is a data frame containing the biological traits. }
@@ -20,8 +20,8 @@ This data set gives ecological and biological characteristics of 131 species of 
     }
 }
 \source{
- Statzner, B., Hoppenhaus, K., Arens, M.-F. and Richoux, P. (1997)\cr
- Reproductive traits, habitat use and templet theory: a synthesis of world-wide data on aquatic insects.\cr
+ Statzner, B., Hoppenhaus, K., Arens, M.-F. and Richoux, P. (1997) 
+ Reproductive traits, habitat use and templet theory: a synthesis of world-wide data on aquatic insects.
  \emph{Freshwater Biology}, \bold{38}, 109--135.
 }
 \examples{

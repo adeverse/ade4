@@ -5,8 +5,8 @@
 \alias{newick2phylog.addtools}
 \title{Create phylogeny}
 \description{
-The first three functions ensure to create object of class \code{'phylog'} from either a character string in Newick format (\code{newick2phylog}) or an object of class \code{'hclust'} (\code{hclust2phylog}) or a taxonomy (\code{taxo2phylog}).
-The function \code{newick2phylog.addtools} is an internal function called by \code{newick2phylog}, \code{hclust2phylog} and \code{taxo2phylog} when \code{newick2phylog.addtools} = TRUE. It adds somme items in \code{'phylog'} objects.
+The first three functions ensure to create object of class \code{phylog} from either a character string in Newick format (\code{newick2phylog}) or an object of class \code{'hclust'} (\code{hclust2phylog}) or a taxonomy (\code{taxo2phylog}).
+The function \code{newick2phylog.addtools} is an internal function called by \code{newick2phylog}, \code{hclust2phylog} and \code{taxo2phylog} when \code{newick2phylog.addtools} = TRUE. It adds some items in \code{'phylog'} objects.
 }
 \usage{
 newick2phylog(x.tre, add.tools = TRUE, call = match.call())
@@ -15,16 +15,17 @@ taxo2phylog(taxo, add.tools = TRUE)
 newick2phylog.addtools(res, tol = 1e-07)
 }
 \arguments{
-  \item{x.tre}{: is a character string correspondings to a phylogenetic tree in Newick format (see \url{http://evolution.genetics.washington.edu/phylip/newicktree.html})}
-  \item{add.tools}{: if TRUE, execute the function \code{newick2phylog.addtools}}
-  \item{call}{: call}
-  \item{hc}{: an object of class \code{'hclust'}}
-  \item{taxo}{: an object of class \code{'taxo'}}
-  \item{res}{: an object of class \code{'phylog'} (an internal argument of the function \code{newick2phylog})}
-  \item{tol}{: is used in case 3 of \code{method} as a tolerance threshold for null eigenvalues}
+  \item{x.tre}{a character string corresponding to a phylogenetic tree in Newick format\cr
+   (see \url{http://evolution.genetics.washington.edu/phylip/newicktree.html})}
+  \item{add.tools}{if TRUE, executes the function \code{newick2phylog.addtools}}
+  \item{call}{call}
+  \item{hc}{an object of class \code{hclust}}
+  \item{taxo}{an object of class \code{taxo}}
+  \item{res}{an object of class \code{phylog} (an internal argument of the function \code{newick2phylog})}
+  \item{tol}{used in case 3 of \code{method} as a tolerance threshold for null eigenvalues}
 }
 \value{
-Return object of class \code{'phylog'}.
+Return object of class \code{phylog}.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}

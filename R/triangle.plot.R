@@ -2,7 +2,7 @@
 "triangle.plot" <- function (ta, label = as.character(1:nrow(ta)), clabel = 0, cpoint = 1,
     draw.line = TRUE, addaxes = FALSE, addmean = FALSE, labeltriangle = TRUE, 
     sub = "", csub = 0, possub = "topright", show.position = TRUE, 
-    scale = TRUE, min3 = NULL, max3 = NULL) 
+    scale = TRUE, min3 = NULL, max3 = NULL, box = FALSE) 
 {
     seg <- function(a, b, col = par("col")) {
         segments(a[1], a[2], b[1], b[2], col = col)
@@ -96,6 +96,7 @@
     }
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
+    if (box) box()
     return(invisible(xy))
 } 
 
@@ -282,4 +283,3 @@
     dimnames(xy) <- list(row.names(ta),c("x","y"))
     return(list(A = A, B = B, C = C, xy = xy, mini = mini, maxi = maxi))
 }
-

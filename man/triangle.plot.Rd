@@ -15,7 +15,7 @@
 triangle.plot(ta, label = as.character(1:nrow(ta)), clabel = 0, 
     cpoint = 1, draw.line = TRUE, addaxes = FALSE, addmean = FALSE, 
     labeltriangle = TRUE, sub = "", csub = 0, possub = "topright", 
-    show.position = TRUE, scale = TRUE, min3 = NULL, max3 = NULL)
+    show.position = TRUE, scale = TRUE, min3 = NULL, max3 = NULL, box = FALSE)
 triangle.biplot (ta1, ta2, label = as.character(1:nrow(ta1)), 
     draw.line = TRUE, show.position = TRUE, scale = TRUE)
 }
@@ -35,6 +35,7 @@ triangle.biplot (ta1, ta2, label = as.character(1:nrow(ta1)),
   \item{scale}{a logical value indicating whether the smaller equilateral triangle containing the plot should be used}
   \item{min3}{If scale is FALSE, a vector of three values for the minima e.g. c(0.1,0.1,0.1) can be used}
   \item{max3}{If scale is FALSE a vector of three values for the maxima e.g. c(0.9,0.9,0.9) can be used}
+  \item{box}{a logical value indicating whether a box around the current plot should be drawn}
 }
 \author{
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

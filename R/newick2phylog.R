@@ -454,9 +454,10 @@
     }
     
     lapply(1:length(res$parts),floc1)
-    typolo.value <- 1-exp(wnodes-lgamma(effnodes+1))
+    # typolo.value <- 1-exp(wnodes-lgamma(effnodes+1)) abandon
     
-    res$Aparam <- data.frame(x1=I(dimnodes), x2=I(effnodes), x3=I(wnodes), x4=I(typolo.value))
+    ####res$Aparam <- data.frame(x1=I(dimnodes), x2=I(effnodes), x3=I(wnodes), x4=I(typolo.value))
+    res$Aparam <- data.frame(ndir=dimnodes, nlea=effnodes, lnperm=wnodes)
     #############################
     # la composante Aparam est un data.frame de paramètre sur l'ensemble des noeuds
     # x1 = nombre de descendants directs
@@ -470,7 +471,8 @@
 
     # Complément : la base B #
     w1 <- matrix(0, nleaves, nnodes)
-    x1 <- res$Aparam$x2 #le nombre de feuilles descendantes
+    ####x1 <- res$Aparam$x2 #le nombre de feuilles descendantes
+    x1 <- res$Aparam$lnperm #on trie sur le log des permutations
     # on calcule une matrice auxiliaire pour avoir la liste des feuilles descendantes
     # pour chacun des noeuds
     dimnames(w1) <- list(leave.names, names(x1))
@@ -552,7 +554,8 @@
         sum(t(res$Wmat*x)*x)
     }
     # chaque indicatrice donne une valeur
-    w.val <- unlist(apply(w,2, floc))
+    ### w.val <- unlist(apply(w,2, floc))
+    w.val <- x1[nomuni]
     # trie par ordre descendant
     w.val <- rev(sort(w.val))
     # lesquels
@@ -567,7 +570,7 @@
     row.names(w) <- leave.names
     names(w) <- paste("B",1:(nleaves-1),sep="")
     res$Bscores <- w
-    res$Bvalues <- w.val
+    ### res$Bvalues <- w.val
     lw <- lapply(node.names, function (x) which(nomrepet==x))
     names(lw) <- node.names
     fun1 <- function (x) {

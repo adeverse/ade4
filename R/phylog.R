@@ -41,7 +41,7 @@
     if (is.null(phylog$Wmat)) return(invisible())
 
     n1 <- names(phylog)[-(1:7)]
-    n1 <- n1 <-paste("$",n1,sep="")
+    n1 <- paste("$",n1,sep="")
     sumry <- array(" ", c(length(n1), 3), list(n1, c("class", "dim", "content")))
     # 8 Wmat
     k = 1
@@ -99,12 +99,8 @@
     sumry[k,2] <- paste(nrow(phylog$Bscores),ncol(phylog$Bscores),sep="-")
     sumry[k,3] <- "Topological orthonormal basis '1/n' normed"   
     # 19 Bvalues
-    k=12
-    sumry[k,1] <- "numeric"
-    sumry[k,2] <- length(phylog$Bvalues)
-    sumry[k,3] <- "xtWx values for orthonormal basis"
     # 20 Blabels
-    k=13
+    k=12
     sumry[k,1] <- "character"
     sumry[k,2] <- length(phylog$Blabels)
     sumry[k,3] <- "Nodes labelling from orthonormal basis"

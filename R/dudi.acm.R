@@ -49,18 +49,18 @@
         sco.boxplot(x$l1[, xax], oritab[, 1:nvar], clab = 1)
     else if (nvar <= 14) {
         par(mfrow = c(1, 2))
-        sco.boxplot(x$l1[, 1], oritab[, 1:(nvar%/%2)], clab = 1.3)
-        sco.boxplot(x$l1[, 1], oritab[, (nvar%/%2 + 1):nvar], 
+        sco.boxplot(x$l1[, xax], oritab[, 1:(nvar%/%2)], clab = 1.3)
+        sco.boxplot(x$l1[, xax], oritab[, (nvar%/%2 + 1):nvar], 
             clab = 1.3)
     }
     else {
         par(mfrow = c(1, 3))
         if ((a0 <- nvar%/%3) < nvar/3) 
             a0 <- a0 + 1
-        sco.boxplot(x$l1[, 1], oritab[, 1:a0], clab = 1.6)
-        sco.boxplot(x$l1[, 1], oritab[, (a0 + 1):(2 * a0)], 
+        sco.boxplot(x$l1[, xax], oritab[, 1:a0], clab = 1.6)
+        sco.boxplot(x$l1[, xax], oritab[, (a0 + 1):(2 * a0)], 
             clab = 1.6)
-        sco.boxplot(x$l1[, 1], oritab[, (2 * a0 + 1):nvar], 
+        sco.boxplot(x$l1[, xax], oritab[, (2 * a0 + 1):nvar], 
             clab = 1.6)
     }
 }

@@ -1,6 +1,6 @@
-"s.class" <- function (dfxy, fac, wt = rep(1, length(fac)), xax = 1, yax = 2,
+"s.class" <- function (dfxy, fac, wt = rep(1, length(fac)), xax = 1, yax = 2, 
     cstar = 1, cellipse = 1.5, axesell = TRUE, label = levels(fac), 
-    clabel = 1, cpoint = 1, pch = 20, xlim = NULL, ylim = NULL, 
+    clabel = 1, cpoint = 1, pch = 20, col = rep(1, length(levels(fac))), xlim = NULL, ylim = NULL, 
     grid = TRUE, addaxes = TRUE, origin = c(0, 0), include.origin = TRUE, 
     sub = "", csub = 1, possub = "bottomleft", cgrid = 1, pixmap = NULL, 
     contour = NULL, area = NULL, add.plot = FALSE) 
@@ -24,6 +24,7 @@
     if (!is.factor(fac)) 
         stop("factor expected for fac")
     dfdistri <- f1(fac) * wt
+    coul=col
     w1 <- unlist(lapply(dfdistri, sum))
     dfdistri <- t(t(dfdistri)/w1)
     coox <- as.matrix(t(dfdistri)) %*% dfxy[, xax]
@@ -35,18 +36,20 @@
         cgrid = cgrid, include.origin = include.origin, origin = origin, 
         sub = sub, csub = csub, possub = possub, pixmap = pixmap, 
         contour = contour, area = area, add.plot = add.plot)
-    if (cpoint > 0) 
-        points(coo$x, coo$y, pch = pch, cex = par("cex") * cpoint)
+    if (cpoint > 0)
+    	for (i in 1:ncol(dfdistri)) {
+			points(coo$x[dfdistri[,i] > 0], coo$y[dfdistri[,i] > 0], pch = pch, cex = par("cex") * cpoint, col=coul[i])
+		}
     if (cstar > 0) 
         for (i in 1:ncol(dfdistri)) {
-            scatterutil.star(coo$x, coo$y, dfdistri[, i], cstar = cstar)
+            scatterutil.star(coo$x, coo$y, dfdistri[, i], cstar = cstar, coul[i])
         }
     if (cellipse > 0) 
         for (i in 1:ncol(dfdistri)) {
             scatterutil.ellipse(coo$x, coo$y, dfdistri[, i], 
-                cellipse = cellipse, axesell = axesell)
+                cellipse = cellipse, axesell = axesell, coul[i])
         }
     if (clabel > 0) 
-        scatterutil.eti(coox, cooy, label, clabel)
+        scatterutil.eti(coox, cooy, label, clabel, coul)
     box()
 }

@@ -12,7 +12,7 @@ print.amova(x, full = FALSE, \dots)
 }
 \arguments{
   \item{samples}{a data frame with haplotypes (or genotypes) as rows, populations as columns
-  and abundance or presence-absence as entries}
+  and abundance as entries}
   \item{distances}{an object of class \code{dist} computed from Euclidean distance.
   If \code{distances} is null, equidistances are used.}
   \item{structures}{a data frame containing, in the jth row and the kth column,

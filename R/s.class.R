@@ -50,6 +50,6 @@
                 cellipse = cellipse, axesell = axesell, coul[i])
         }
     if (clabel > 0) 
-        scatterutil.eti(coox, cooy, label, clabel, coul)
+        scatterutil.eti(coox, cooy, label, clabel, coul = col)
     box()
 }

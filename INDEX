@@ -1,5 +1,5 @@
-RV.rtest                Monte-Carlo Test on the sum of eigenvalues of a
-                        co-inertia analysis (in R).
+RV.rtest                Monte-Carlo Test on the sum of eigenvalues of
+                        a co-inertia analysis (in R).
 ade4toR                 Format Change Utility
 ardeche                 Fauna Table with double (row and column)
                         partitioning
@@ -25,19 +25,19 @@ chats                   Pair of Variables
 chazeb                  Charolais-Zebus
 clementines             Fruit Production
 coinertia               Coinertia Analysis
-coleo                   Table of Fuzzy Biological Traits 
+coleo                   Table of Fuzzy Biological Traits
 deug                    Exam marks for some students
 discrimin               Linear Discriminant Analysis (descriptive
                         statistic)
-discrimin.coa           Discriminant Correspondence Analysis 
+discrimin.coa           Discriminant Correspondence Analysis
 dist.binary             Computation of Distance Matrices for Binary
                         Data
 dist.dudi               Computation of the Distance Matrix of a
-                        Statistical Triplet 
+                        Statistical Triplet
 dist.neig               Computation of the Distance Matrix associated
-                        to a Neighbouring Graph 
+                        to a Neighbouring Graph
 dist.prop               Computation of Distance Matrices of Percentage
-                        Data 
+                        Data
 dist.quant              Computation of Distance Matrices on
                         Quantitative Variables
 doubs                   Pair of Ecological Tables
@@ -81,7 +81,7 @@ kplot.sepan             Multiple Graphs for Separed Analyses in a
 kplot.statis            Multiple Graphs for a STATIS Analysis
 ktab                    the class of objects 'ktab' (K-tables)
 ktab.data.frame         Creation of K-tables from a Data Frame
-ktab.list.df            Creating a K-tables from a list of data frame. 
+ktab.list.df            Creating a K-tables from a list of data frame.
 ktab.list.dudi          Creation of a K-tables from a list of duality
                         diagrams
 ktab.within             Process to go from a Within Analysis to a
@@ -93,9 +93,9 @@ macaca                  Landmarks
 macon                   Wine Tasting
 mafragh                 Phyto-Ecological Survey
 mantel.randtest         Mantel test (correlation between two distance
-                        matrices (in C).) 
+                        matrices (in C).)
 mantel.rtest            Mantel test (correlation between two distance
-                        matrices (in R).) 
+                        matrices (in R).)
 mariages                Correspondence Analysis Table
 mcoa                    Multiple CO-inertia Analysis
 meaudret                Ecological Data : sites-variables,
@@ -116,34 +116,34 @@ pcaiv                   Principal component analysis with respect to
 pcaivortho              Principal Component Analysis with respect to
                         orthogonal instrumental variables
 pcoscaled               Simplified Analysis in Principal Coordinates
-perthi02                Contingency Table with a partition in Molecular
-                        Biology
+perthi02                Contingency Table with a partition in
+                        Molecular Biology
 procuste                Simple Procruste Rotation between two sets of
                         points
 procuste.randtest       Monte-Carlo Test on the sum of the singular
-                        values of a procustean rotation (in C). 
+                        values of a procustean rotation (in C).
 procuste.rtest          Monte-Carlo Test on the sum of the singular
-                        values of a procustean rotation (in R). 
+                        values of a procustean rotation (in R).
 pta                     Partial Triadic Analysis of a K-tables
 quasieuclid             Transformation of a distance matrice to an
                         Euclidean one
 randtest-internal       Internal Permutation Tests functions (in C).
 randtest                Class of the Permutation Tests (in C).
 randtest.between        Monte-Carlo Test on the between-groups inertia
-                        percentage (in C). 
+                        percentage (in C).
 randtest.coinertia      Monte-Carlo test on a coinertia analysis (in
                         C).
-randtest.discrimin      Monte-Carlo Test on a Discriminant Analysis (in
-                        C).
+randtest.discrimin      Monte-Carlo Test on a Discriminant Analysis
+                        (in C).
 rankrock                Ordination Table
 reconst                 Reconstitution of Data from a Duality Diagram
 rhone                   Physico-Chemistry Data
 rpjdl                   Avifauna and Vegetation
 rtest                   Class of the Permutation Tests (in R).
 rtest.between           Monte-Carlo Test on the between-groups inertia
-                        percentage (in R). 
-rtest.discrimin         Monte-Carlo Test on a Discriminant Analysis (in
-                        R). 
+                        percentage (in R).
+rtest.discrimin         Monte-Carlo Test on a Discriminant Analysis
+                        (in R).
 s.arrow                 Plot of the factorial maps for the projection
                         of a vector basis
 s.chull                 Plot of the factorial maps with polygons of
@@ -163,15 +163,16 @@ scalewt                 Centring and Scaling a Matrix of Any Weighting
 scatter                 Scatter Plot
 scatter.acm             Plot of the factorial maps in multiple
                         correspondence analysis
-scatter.coa             Plot of the factorial maps for a correspondence
-                        analysis
+scatter.coa             Plot of the factorial maps for a
+                        correspondence analysis
 scatter.dudi            Plot of the Factorial Maps
 scatter.fca             Plot of the factorial maps for a fuzzy
                         correspondence analysis
 sco.boxplot             Representation of the link between a variable
                         and a set of qualitative variables
-sco.distri              Representation by mean- standard deviation of a
-                        set of weight distributions on a numeric score
+sco.distri              Representation by mean- standard deviation of
+                        a set of weight distributions on a numeric
+                        score
 sco.quant               Graph to Analyse the Relation between a Score
                         and Quantitative Variables
 score                   Graphs for One Dimension
@@ -199,7 +200,7 @@ tortues                 Morphological Study of the Painted Turtle
 toxicity                Homogeneous Table
 triangle.plot           Triangular Plotting
 trichometeo             Pair of Ecological Data
-unique.df               Elimination of Duplicated Rows in a Array
+uniquewt.df             Elimination of Duplicated Rows in a Array
 veuvage                 Example for Centring in PCA
 within                  Within Analyses
 within.pca              Normed within Principal Component Analysis

@@ -25,7 +25,7 @@ void testmantel(int *npermut1,
 {
 /* Declarations de variables C locales */
 
-	int			i, j, k, lig, i0, j0, npermut, *numero, isel;
+	int		i, j, k, lig, i0, j0, npermut, *numero, isel;
 	double		**m1, **m2;
 	double		trace, trace0, moy1, moy2, car1, car2, a0;
 

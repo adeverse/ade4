@@ -15,14 +15,14 @@
     y <- z0*sin(alpha)
 
     plot( c(0,0), type = "n", ylab = "", asp = 1, xaxt = "n", 
-        yaxt = "n", frame.plot = F, xlim=c(-1.2,1.2), ylim=c(-1.2,1.2))
+        yaxt = "n", frame.plot = FALSE, xlim=c(-1.2,1.2), ylim=c(-1.2,1.2))
    # if (clabel > 0) scatter.util.eti.circ(x, y, label, clabel)
    # if (csub > 0) scatter.util.sub(sub, csub, possub)
    # if (box) box()
     
-    symbols(0, 0, cir=0.2,inc=F,add=T)
+    symbols(0, 0, cir=0.2,inc=FALSE,add=TRUE)
     for (i in 1:2) {
-        symbols(0, 0, cir=leg0[i],inc=F,add=T,fg=grey(0.5))
+        symbols(0, 0, cir=leg0[i],inc=FALSE,add=TRUE,fg=grey(0.5))
     }
     points(x,y,type="o",pch=20,cex=2)
     segments(x[n],y[n],x[1],y[1])

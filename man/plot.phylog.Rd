@@ -43,12 +43,12 @@ The function \code{enum.phylog} returns a matrix with as many columns as leaves.
 \examples{
 data(newick.eg)
 par(mfrow = c(3,2))
-for(i in 1:6) plot.phylog(newick2phylog(newick.eg[[i]], F), clea = 2, clabel.l = 3, cnod = 2.5)
+for(i in 1:6) plot.phylog(newick2phylog(newick.eg[[i]], FALSE), clea = 2, clabel.l = 3, cnod = 2.5)
 par(mfrow = c(1,1))
  
 par(mfrow = c(1,2))
-plot.phylog(newick2phylog(newick.eg[[11]], F), clea = 1.5, clabel.l = 1.5, clabel.nod = 0.75, f = 0.8)
-plot.phylog(newick2phylog(newick.eg[[10]], F), clabel.l = 0, clea = 0, cn = 0, f = 1)
+plot.phylog(newick2phylog(newick.eg[[11]], FALSE), clea = 1.5, clabel.l = 1.5, clabel.nod = 0.75, f = 0.8)
+plot.phylog(newick2phylog(newick.eg[[10]], FALSE), clabel.l = 0, clea = 0, cn = 0, f = 1)
 par(mfrow = c(1,1))
 
 par(mfrow = c(2,2))
@@ -63,14 +63,14 @@ plot(w, clabel.lea = 1.25, clabel.n = 1.25, sub = "Taxonomy", csub = 3, f = 0.8,
 par(mfrow = c(1,1))
 
 par(mfrow = c(3,3))
-for (j in 1:6) radial.phylog(newick2phylog(newick.eg[[j]],F), clabel.l = 2, cnodes = 2)
-radial.phylog(newick2phylog(newick.eg[[7]],F), clabel.l = 2)
-radial.phylog(newick2phylog(newick.eg[[8]],F), clabel.l = 0, circle = 1.8)
-radial.phylog(newick2phylog(newick.eg[[9]],F), clabel.l = 1, clabel.n = 1, cle = 0, cnode = 1)
+for (j in 1:6) radial.phylog(newick2phylog(newick.eg[[j]],FALSE), clabel.l = 2, cnodes = 2)
+radial.phylog(newick2phylog(newick.eg[[7]],FALSE), clabel.l = 2)
+radial.phylog(newick2phylog(newick.eg[[8]],FALSE), clabel.l = 0, circle = 1.8)
+radial.phylog(newick2phylog(newick.eg[[9]],FALSE), clabel.l = 1, clabel.n = 1, cle = 0, cnode = 1)
 par(mfrow = c(1,1))
 
 data(bsetal97)
-bsetal.phy = taxo2phylog(as.taxo(bsetal97$taxo[,1:3]), F)
+bsetal.phy = taxo2phylog(as.taxo(bsetal97$taxo[,1:3]), FALSE)
 radial.phylog(bsetal.phy, cnod = 1, clea = 1, clabel.l = 0.75, draw.box = TRUE, cir = 1.1)
 par(mfrow = c(1,1))
 

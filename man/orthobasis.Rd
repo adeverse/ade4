@@ -34,7 +34,7 @@ print.orthobasis(x,...)
   \item{n}{: is an integer that defines length of vectors}
   \item{mat}{: is a \emph{n} by \emph{n} phylogenetic or spatial link matrix}
   \item{listw}{: is a \code{'listw'} object}
-  \item{cnw}{: if T, the matrix of the neighbouring graph is modified to give Constant Neighbouring Weights}
+  \item{cnw}{: if TRUE, the matrix of the neighbouring graph is modified to give Constant Neighbouring Weights}
   \item{x}{: is an object of class \code{'orthobasis'}}
   \item{\dots}{: further arguments passed to or from other methods}
 }
@@ -61,7 +61,7 @@ Cornillon, P.A. (1998) Prise en compte de proximités en analyse factorielle et c
 par(mfrow = c(4,4))
 w <- gridrowcol(8,8)
  for (k in 1:16)
-    s.value(w$xy, w$orthobasis[,k], cleg = 0, csi = 2, incl = F, addax = F, sub = k, csub = 4, ylim = c(0,10), cgri = 0)
+    s.value(w$xy, w$orthobasis[,k], cleg = 0, csi = 2, incl = FALSE, addax = FALSE, sub = k, csub = 4, ylim = c(0,10), cgri = 0)
 par(mfrow = c(1,1))
 barplot(attr(w$orthobasis, "values"))
 

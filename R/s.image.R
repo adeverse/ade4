@@ -22,12 +22,6 @@ s.image <- function(dfxy, z, xax=1, yax=2, span=0.5,
             contour = contour, area = area, add.plot = add.plot)
     if (!require(splancs)) stop ("splancs required for inout")
     if (!require(modreg)) stop ("modreg required for loess")
-    n1 <- match("package:splancs",search())
- eval(inout,envir=as.environment(n1))
-    n2 <- match("package:modreg",search())
-    browser()
-    inout = eval (inout, envir = as.environment(n1))
-    loess <- eval (loess, envir = as.environment(n2))
     w = cbind.data.frame(xy,z)
     ngrid <- floor(kgrid*sqrt(nrow(w)))
     if (ngrid<5) ngrid<-5

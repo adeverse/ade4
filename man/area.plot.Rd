@@ -109,7 +109,7 @@ if (require(spdep, quiet = TRUE) & require(maptools, quiet = TRUE)) {
     plot(bbs[,1], bbs[,4], xlab = "", ylab = "", asp = 1, type = "n",
     xlim = range(c(bbs[,1], bbs[,3])), ylim = range(c(bbs[,2], bbs[,4])))
     for (i in 1:length(polys)) 
-    polygon(polys[[i]], col = colours[codes(crime.f[i])])
+    polygon(polys[[i]], col = colours[unclass(crime.f[i])])
     legend(x = c(6, 7.75), y = c(13.5, 15), legend = levels(crime.f),
     fill = colours, cex = 0.7)
     title(sub = paste("Columbus OH: residential burglaries and ",

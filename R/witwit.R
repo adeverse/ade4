@@ -13,12 +13,14 @@
     # tabinit contient les pij
     wrmat <- rowsum(tabinit,row.fac, reorder = FALSE)[row.fac,]
     wrvec <- tapply(dudi$lw,row.fac,sum)[row.fac]
+    wrvec <- as.numeric(wrvec)
     wrvec <- dudi$lw/wrvec
     wrmat <- wrmat*wrvec
     # wrmat contient les pi.*pd(i)j/pd(i)+
     
     wcmat <- rowsum(t(tabinit),col.fac, reorder = FALSE)[col.fac,]
     wcvec <- tapply(dudi$cw,col.fac,sum)[col.fac]
+    wcvec <- as.numeric(wcvec)
     wcvec <- dudi$cw/wcvec
     wcmat <- t(wcmat*wcvec)
     # wcmat contient les pj.*pim(j)/p+m(j)

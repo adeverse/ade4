@@ -30,7 +30,7 @@
         cat("s9 = ad-bc)/sqrt((a+b)(a+c)(b+d)(d+c)) --> d = sqrt(1 - s)\n")
         cat("10 = S2 coefficient of GOWER & LEGENDRE\n")
         cat("s10 =  a/(a+b+c+d) --> d = sqrt(1 - s) and unit self-similarity\n")
-        cat("Selec an integer (1-10): ")
+        cat("Select an integer (1-10): ")
         method <- as.integer(readLines(n = 1))
     }
     df <- as.matrix(df)

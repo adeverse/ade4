@@ -1,4 +1,4 @@
-divcmax <- function(dis, epsilon = 1e-008, comment = F)
+divcmax <- function(dis, epsilon = 1e-008, comment = FALSE)
 {
 # inititalisation
     if(!inherits(dis, "dist")) stop("Distance matrix expected")
@@ -25,7 +25,7 @@ divcmax <- function(dis, epsilon = 1e-008, comment = F)
             # determination des contraintes saturees
             sature <- (abs(xk) < epsilon)
             if(relax != 0) {
-                sature[relax] <- F
+                sature[relax] <- FALSE
                 relax <- 0
             }
             # construction du gradient projete

@@ -12,14 +12,14 @@ divcmax <- function(dis, epsilon = 1e-008, comment = FALSE)
     x0 <- apply(D2, 1, sum) / sum(D2)
     result$sim <- x0    # ponderation simple
     objective0 <- t(x0) %*% D2 %*% x0
-    if (comment == T)
+    if (comment == TRUE)
         print("evolution of the objective function:")
     xk <- x0    # grande boucle de test des conditions de Kuhn-Tucker
     repeat {
         # boucle de test de nullite du gradient projete
         repeat {
             maxi.temp <- t(xk) %*% D2 %*% xk
-            if(comment == T) print(as.character(maxi.temp))    
+            if(comment == TRUE) print(as.character(maxi.temp))    
             #calcul du gradient
             deltaf <- (-2 * D2 %*% xk)    
             # determination des contraintes saturees
@@ -56,25 +56,25 @@ divcmax <- function(dis, epsilon = 1e-008, comment = FALSE)
         }
         # verification des conditions de KT
         if (prod(!sature) == 1) {
-            if (comment == T)
+            if (comment == TRUE)
                 print("KT")
             break
         }
         vectD2 <- D2 %*% xk
         u <- 2 * (mean(vectD2[!sature]) - vectD2[sature])
         if (min(u) >= 0) {
-            if (comment == T)
+            if (comment == TRUE)
                 print("KT")
             break
         }
         else {
-            if (comment == T)
+            if (comment == TRUE)
                 print("relaxation")
             satu <- (1:n)[sature]
             relax <- satu[u == min(u)]
         }
     }
-    if (comment == T)
+    if (comment == TRUE)
         print(list(objective.init = objective0, objective.final
              = maxi.temp))
     result$num <- as.vector(xk, mode = "numeric")

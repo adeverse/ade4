@@ -189,10 +189,11 @@
     labels <- attr(x,"labels")
     print(labels)
     euclid <- attr(x,"euclid")
-    print1 <- function (x,size,labels,...) # from stats
+    print1 <- function (x,size,labels,...) 
     # modif error sur CRAN DAILY 18/11:2004
+    # from print.dist de stats
     {
-        df <- matrix(0, size, size,labels)
+        df <- matrix(0, size, size)
         df[row(df) > col(df)] <- x
         df <- format(df)
         df[row(df) <= col(df)] <- ""
@@ -210,6 +211,7 @@
         }
     }
 }
+
 ######################## [.kdist #######################
 "[.kdist" <- function(object,selection) {
     retval <- unclass(object)[selection]

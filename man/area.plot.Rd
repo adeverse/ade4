@@ -20,7 +20,7 @@ area2poly takes an object of type 'area' and returns a list of class 'polylist'\
 area.util.contour and area.util.xy are two utility functions.
 }
 \usage{
-area.plot(x, values = NULL, graph = NULL, lwdgraph = 2,
+area.plot(x, center = NULL, values = NULL, graph = NULL, lwdgraph = 2,
 nclasslegend = 8, clegend = 0.75, sub = "", csub = 1, 
 possub = "topleft", cpoint = 0, label = NULL, clabel = 0, ...)
 
@@ -29,6 +29,8 @@ poly2area (polys)
 }
 \arguments{
 \item{x}{a data frame with three variables}
+\item{center}{a matrix with the same row number as x and two columns, the coordinates
+of polugone centers. If NULL, it is computed with \code{area.util.xy}}
 \item{values}{if not NULL, a vector which values will be mapped to grey levels.
 The values must be in the same order as the values in \code{unique(x.area[,1])}}
 \item{graph}{if not NULL, \code{graph} is a neighbouring graph (object of class "neig") between polygons}

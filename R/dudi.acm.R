@@ -37,6 +37,7 @@
 }
 
 "boxplot.acm" <- function (x, xax = 1, ...) {
+    # correction d'un bug par P. Cornillon 29/10/2004
     if (!inherits(x, "acm")) 
         stop("Object of class 'acm' expected")
     if ((xax < 1) || (xax > x$nf)) 

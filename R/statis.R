@@ -21,7 +21,7 @@
         sep[[k]] <- wk
     }
     ############## calcul des RV ###########
-   sep <- matrix(unlist(sep), nlig * nlig, ntab)
+    sep <- matrix(unlist(sep), nlig * nlig, ntab)
     RV <- t(sep) %*% sep
     ak <- sqrt(diag(RV))
     RV <- sweep(RV, 1, ak, "/")
@@ -29,7 +29,7 @@
     dimnames(RV) <- list(tab.names, tab.names)
     statis$RV <- RV
     ############## diagonalisation de la matrice des RV ###########
-   eig1 <- eigen(RV, sym = TRUE)
+    eig1 <- eigen(RV, sym = TRUE)
     statis$RV.eig <- eig1$values
     if (any(eig1$vectors[, 1] < 0)) 
         eig1$vectors[, 1] <- -eig1$vectors[, 1]
@@ -45,7 +45,7 @@
     C.ro <- apply(t(sep) * tabw, 2, sum)
     C.ro <- matrix(unlist(C.ro), nlig, nlig)
     ############## diagonalisation du compromis ###########
-   eig1 <- eigen(C.ro, sym = TRUE)
+    eig1 <- eigen(C.ro, sym = TRUE)
     eig <- eig1$values
     rank <- sum((eig/eig[1]) > tol)
     if (scannf) {
@@ -195,7 +195,7 @@
         "nrow", "ncol", "content")))
     sumry[1, ] <- c("$C.li", nrow(x$C.li), ncol(x$C.li), "row coordinates")
     sumry[2, ] <- c("$C.Co", nrow(x$C.Co), ncol(x$C.Co), "column coordinates")
-    sumry[3, ] <- c("$T4", nrow(x$T4), ncol(x$T4), "principal vectors (each table)")
+    sumry[3, ] <- c("$C.T4", nrow(x$C.T4), ncol(x$C.T4), "principal vectors (each table)")
     sumry[4, ] <- c("$TL", nrow(x$TL), ncol(x$TL), "factors (not used)")
     sumry[5, ] <- c("$TC", nrow(x$TC), ncol(x$TC), "factors for Co")
     sumry[6, ] <- c("$T4", nrow(x$T4), ncol(x$T4), "factors for T4")

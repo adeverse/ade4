@@ -32,7 +32,7 @@ print.statis (x, \dots)
   \item{rank}{an integer indicating the rank of the studied matrix}
   \item{C.li}{a data frame with the row coordinates}
   \item{C.Co}{a data frame with the column coordinates}
-  \item{T4}{a data frame with the principal vectors (for each table)}
+  \item{C.T4}{a data frame with the principal vectors (for each table)}
   \item{TL}{a data frame with the factors (not used)}
   \item{TC}{a data frame with the factors for Co}
   \item{T4}{a data frame with the factors for T4}

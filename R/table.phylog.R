@@ -42,7 +42,11 @@
     }
     par(mai = c(0.1, 0.1, stry, strx))
     nc <- ncol(df)
-    x <- 1/2/nc+(0:(nc-1))/nc
+    #x <- 1/2/nc+(0:(nc-1))/nc
+    # modif du 06/01/2005 le oaramètre x avait été oublié
+    intermin <- abs(min(diff(sort(x))))
+    intertot <- abs(max(x)-min(x))
+    x <- (x-min(x)+intermin)/(intertot+2*intermin)
     x <- (1 - f.phylog) * x + f.phylog
     nl <- nrow(df)
     y <- 1/2/nl+((nl-1):0)/nl

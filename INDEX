@@ -48,7 +48,7 @@ dudi.dec                Decentred Correspondence Analysis
 dudi.fca                Fuzzy Correspondence Analysis
 dudi.mix                Ordination of Tables mixing quantitative
                         variables and factors
-dudi.nsc                Non symmetrical correspondence analysis
+dudi.nsc                Non symmetric correspondence analysis
 dudi.pca                Principal Component Analysis
 dudi.pco                Principal Coordinates Analysis
 dunedata                Dune Meadow Data
@@ -78,9 +78,9 @@ kplot.mfa               Multiple Graphs for a Multiple Factorial
 kplot.pta               Multiple Graphs for a Partial Triadic Analysis
 kplot.sepan             Multiple Graphs for Separed Analyses in a
                         K-tables
-kplot.statis            Multiple Graphs for a STATIS Analysis
+kplot.statis            Multiple Graphs of a STATIS Analysis
 ktab                    the class of objects 'ktab' (K-tables)
-ktab.data.frame         Creation of K-tables from a Data Frame
+ktab.data.frame         Creation of K-tables from a data frame
 ktab.list.df            Creating a K-tables from a list of data frame.
 ktab.list.dudi          Creation of a K-tables from a list of duality
                         diagrams

@@ -46,7 +46,7 @@ void MSTgraph (double *distances, int *nlig, int *ngmax, double *voisi)
     for (i=1; i<=N; i++) DM[i][i] = borne;
     
     for (numg=1; numg<=numgmax; numg++) {       
-        // Algorithm 422, Kevin & Whitney Comm. ACM 15, 273, 1972
+        /* Algorithm 422, Kevin & Whitney Comm. ACM 15, 273, 1972 */
         CST = 0.;
         NITP = N -1;
         KP = N;

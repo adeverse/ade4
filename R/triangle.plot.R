@@ -278,6 +278,8 @@
     C <- c(0, 2/sqrt(6))
     xy <- t(apply(tb, 1, FUN = triangle.posipoint, mini = mini, 
         maxi = maxi))
+    # pour avoir en sortie une matrice des coordonnées
+    dimnames(xy) <- list(row.names(ta),c("x","y"))
     return(list(A = A, B = B, C = C, xy = xy, mini = mini, maxi = maxi))
 }
 

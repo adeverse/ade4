@@ -7,6 +7,7 @@
     sub = "", csub = 1, possub = "bottomright", show.position = TRUE, 
     scale = TRUE, min3 = NULL, max3 = NULL) 
 { 
+    # modifiée le 18/11/2004 par cohérence avec triangle.param
     f1 <- function(cl) {
         n <- length(cl)
         cl <- as.factor(cl)
@@ -35,7 +36,6 @@
     d <- triangle.param(ta, scale = scale, min3 = min3, max3 = max3)
     opar <- par(mar = par("mar"))
     on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
     A <- d$A
     B <- d$B
     C <- d$C
@@ -43,6 +43,8 @@
     xymoy <- as.matrix(t(dfdistri)) %*% as.matrix(xy)
     mini <- d$mini
     maxi <- d$maxi
+    if (show.position) add.position.triangle(d)
+    par(mar = c(0.1, 0.1, 0.1, 0.1))
     plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
         1), xlab = "", ylab = "", xaxt = "n", yaxt = "n", asp = 1, 
         frame.plot = FALSE)
@@ -96,6 +98,5 @@
     if (clabel > 0) 
         scatterutil.eti(xymoy[,1], xymoy[,2], label, clabel, coul = col)
     if (csub > 0) scatterutil.sub(sub, csub, possub)
-    if (show.position) add.position.triangle(d)
 
 }

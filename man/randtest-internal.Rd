@@ -8,7 +8,6 @@
 \alias{testmantel}
 \alias{testertracerlq}
 \alias{testamova}
-\alias{testapdiv}
 \title{Internal Permutation Tests functions (in C).}
 \description{
 Internal Permutation Tests functions (in C)

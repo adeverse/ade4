@@ -9,7 +9,11 @@ dpcoa <- function(df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e-
         if (nesp != n1) stop("Non convenient dimensions nrow(df)!= attr(dis, 'Size')")
         if (!is.euclid(dis)) stop("an Euclidean matrix is needed")
     }
-    if (is.null(dis)) dis <- as.dist(matrix(1, nrow(df), nrow(df)) - diag(rep(1, nrow(df)))) * sqrt(2)
+    if (is.null(dis)) {
+        dis <- (matrix(1, nrow(df), nrow(df)) - diag(rep(1, nrow(df)))) * sqrt(2)
+        rownames(dis) <- colnames(dis) <- rownames(df)
+        dis <- as.dist(dis)
+    }
     #####################
     # Use 1/2 dij^2 #
     #####################

@@ -17,7 +17,7 @@
     # contenir les coordonnées dans l'ordre de unique(x[,1])
     x.area <- x
     if(dev.cur() == 1) plot.new()
-    opar <- par(mar = par("mar"), new = par("new"))
+    opar <- par(mar = par("mar")) #, new = par("new")
     on.exit(par(opar))
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     if (!is.factor(x.area[, 1])) 

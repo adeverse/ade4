@@ -10,9 +10,9 @@ and species (Trichopters).
 \format{
     \code{meaudret} is a list of 3 components.
 \describe{
-        \item{mil}{is a data frame with 24 sites and 9 variables.}
-        \item{fau}{is a data frame with 24 sites and 13 species (Trichopters).}
-        \item{plan}{is a data frame with 24 sites and 2 factors.
+        \item{mil}{is a data frame with 20 sites and 9 variables.}
+        \item{fau}{is a data frame with 20 sites and 13 species (Trichopters).}
+        \item{plan}{is a data frame with 20 sites and 2 factors.
             \enumerate{
                 \item{dat}{is a factor with 4 levels.}
                 \item{sta}{is a factor with 5 levels.}

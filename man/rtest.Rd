@@ -16,8 +16,7 @@ rtest is a generic function. It proposes methods for the following objects \code
 \arguments{
 \item{xtest}{an object used to select a method}
 \item{x}{an object of class 'rtest'}
-\item{\dots}{\code{\dots} further arguments passed to or from other methods; in \code{plot.randtest} to \code{hist}}
-\item{rtest}{object of class \code{rtest}}
+\item{\dots}{further arguments passed to or from other methods; in \code{plot.randtest} to \code{hist}}
 \item{nclass}{a number of intervals for the histogram}
 \item{coeff}{to fit the magnitude of the graph}
 \item{sim}{a numeric vector of simulated values}

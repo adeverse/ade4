@@ -124,7 +124,7 @@
     sumry[8, ] <- c("$lY", nrow(x$lY), ncol(x$lY), "row coordinates (Y)")
     sumry[9, ] <- c("$mY", nrow(x$mY), ncol(x$mY), "normed row scores (Y)")
     sumry[10, ] <- c("$aX", nrow(x$aX), ncol(x$aX), "axis onto co-inertia axis (X)")
-    sumry[11, ] <- c("$aY", nrow(x$aX), ncol(x$aX), "axis onto co-inertia axis (Y)")
+    sumry[11, ] <- c("$aY", nrow(x$aY), ncol(x$aY), "axis onto co-inertia axis (Y)")
     class(sumry) <- "table"
     print(sumry)
     cat("\n")

@@ -2,6 +2,7 @@
 \alias{area.plot}
 \alias{poly2area}
 \alias{area2poly}
+\alias{area2link}
 \alias{area.util.contour}
 \alias{area.util.xy}
 \title{Graphical Display of Areas}

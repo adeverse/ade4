@@ -22,9 +22,9 @@ dudi.fca(df, scannf = TRUE, nf = 2)
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
 }
 \value{
-The function \code{prep.fuzzy.var} returns a data frame with attribute \code{col.blocks}
+The function \code{prep.fuzzy.var} returns a data frame with the attribute \code{col.blocks}. 
 The function \code{dudi.fca} returns a list of class \code{fca} and \code{dudi} (see \link{dudi}) containing also
-\item{cr}{a data frame which rows are the blocs, columns are the kept axes, and values are correlation ratios.}
+\item{cr}{a data frame which rows are the blocs, columns are the kept axes, and values are the correlation ratios.}
 }
 \references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding approach for the analysis of 
 long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. 

@@ -1,6 +1,6 @@
 \name{atlas}
 \alias{atlas}
-\non_function{}
+\docType{data}
 \title{Small Ecological Dataset}
 \description{
 \code{atlas} is a list containing three kinds of information about 23 regions : \cr
@@ -13,7 +13,7 @@ geographical coordinates, meteorology and bird presences.
     \item{area}{is a convex hull of 23 geographical regions. }
     \item{xy}{are the coordinates of the region centers and altitude (in meters). }
     \item{names.district}{is a vector of region names.}
-    \item{meteo}{is a data frame with 7 variables (temperature and rainfall).}
+    \item{meteo}{is a data frame with 7 variables: min and max temperature in january; min and max temperature in july; january, july and total rainfalls.}
     \item{birds}{is a data frame with 15 variables (species).}
     \item{alti}{is a data frame with 3 variables altitude in percentage [0,800], ]800,1500] and ]1500,5000].}
     }

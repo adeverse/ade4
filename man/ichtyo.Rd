@@ -1,6 +1,6 @@
 \name{ichtyo}
 \alias{ichtyo}
-\non_function{}
+\docType{data}
 \title{Point sampling of fish community}
 \description{
 This data set gives informations between a faunistic array, 
@@ -23,7 +23,7 @@ the year of the sampling occasion.
 \source{
 Dolédec, S., Chessel, D. and Olivier, J. M. (1995)\cr
 L'analyse des correspondances décentrée: application aux peuplements ichtyologiques du haut-Rhône.\cr
-\emph{Bulletin Français de la P"che et de la Pisciculture}, \bold{336}, 29--40.
+\emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{336}, 29--40.
 }
 \examples{
 data(ichtyo)

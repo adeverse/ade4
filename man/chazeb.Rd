@@ -1,13 +1,13 @@
 \name{chazeb}
 \alias{chazeb}
-\non_function{}
+\docType{data}
 \title{Charolais-Zebus}
 \description{
 This data set gives six different weights of 23 charolais and zebu oxen. 
 }
 \usage{data(chazeb)}
 \format{
-  \code{chazeb} is a list with 2 components.
+  \code{chazeb} is a list of 2 components.
   \describe{
 	  \item{tab}{is a data frame with 23 rows and 6 columns.}
 	  \item{cla}{is a factor with two levels "cha" et "zeb". }

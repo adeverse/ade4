@@ -1,13 +1,13 @@
 \name{butterfly}
 \alias{butterfly}
-\non_function{}
+\docType{data}
 \title{Genetics-Ecology-Environment Triple}
 \description{
 This data set contains environmental and genetics informations about 16 Euphydryas editha butterfly colonies studied in California and Oregon
 }
 \usage{data(butterfly)}
 \format{
-\code{butterfly} is a list with 4 objects.\cr
+\code{butterfly} is a list with 4 components.\cr
     \enumerate{
     \item{xy}{is a data frame with the two coordinates of the 16 Euphydryas editha butterfly colonies. }
     \item{envir}{is a environmental data frame of  16 sites - 4 variables. }
@@ -34,6 +34,5 @@ s.value(butterfly$xy, dudi.pca(butterfly$envir, scan = FALSE)$li[,1],
     contour = butterfly$contour, inc = FALSE, csi = 3)
 plot(mantel.randtest(dist(butterfly$xy), dist(butterfly$gen), 99),
     main = "genetic/spatial")
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

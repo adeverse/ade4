@@ -1,6 +1,6 @@
 \name{elec88}
 \alias{elec88}
-\non_function{}
+\docType{data}
 \title{Electoral Data}
 \description{
 This data set gives the results of the presidential election in France in 1988 for each department and all the candidates. 
@@ -36,6 +36,5 @@ pca1 <- dudi.pca(elec88$tab, scal = FALSE, scan = FALSE)
 area.plot(elec88$area, val = elec88$xy[,1] + elec88$xy[,2])
 area.plot(elec88$area, val = pca1$li[,1], sub = "F1 PCA", 
     csub = 2, cleg = 1.5)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

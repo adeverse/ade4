@@ -11,7 +11,7 @@ dudi.pca(df, row.w = rep(1, nrow(df))/nrow(df),
     scannf = TRUE, nf = 2)
 }
 \arguments{
-  \item{df}{a data frame with n rows(individuals) and p columns (numeric variables)}
+  \item{df}{a data frame with n rows (individuals) and p columns (numeric variables)}
   \item{row.w}{an optional row weights (by default, uniform row weights)}
   \item{col.w}{an optional column weights (by default, unit column weights)}
   \item{center}{a logical or numeric value, centring option\cr
@@ -27,7 +27,7 @@ dudi.pca(df, row.w = rep(1, nrow(df))/nrow(df),
 Returns a list of classes \code{pca} and \code{dudi} (see \link{dudi}) containing also :
 \item{cent}{a vector with p components}
 \item{norm}{a vector with p components}
-if \eqn{x_{ij}}{x[i,j]} is the value of the table df and \eqn{y_{ij}}{y[i,j]} is the value of the table '\$tab', we have:
+if \eqn{x_{ij}}{x[i,j]} is the value of the table df and \eqn{y_{ij}}{y[i,j]} is the value of the table \code{$tab}, we have:
 	\deqn{y_{ij}=\frac{x_{ij}-cent_j}{norm_j}}{y[i,j] = (x[i,j] - cent[j]) / norm[j]}
 	\deqn{x_{ij}=y_{ij} \ast norm_j + cent_j}{x[i,j] = y[i,j]*norm[j] + cent[j]}
 }
@@ -57,6 +57,5 @@ hist(deug.dudi$tab[,i], xlim = c(-40,40), breaks = seq(-45, 35, by = 5),
     ylim = c(0,0.10))
 abline(v = 0, lwd = 3)
 }
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}

@@ -8,14 +8,15 @@ performs a Monte-Carlo Test on the sum of eigenvalues of a co-inertia analysis.
 RV.rtest(df1, df2, nrepet = 999)
 }
 \arguments{
-  \item{df1, df2}{two data frame with the same rows}
+  \item{df1, df2}{two data frames with the same rows}
   \item{nrepet}{the number of permutations}
 }
 \value{
 returns a list of class 'rtest'
 }
 \references{
-Heo, M. & Gabriel, K.R. (1997) A permutation test of association between configurations by means of the RV coefficient. Communications in Statistics - Simulation and Computation : 27, 843-856.
+Heo, M. & Gabriel, K.R. (1997) A permutation test of association between configurations by means of the RV coefficient. 
+Communications in Statistics - Simulation and Computation, \bold{27}, 843-856.
 }
 \examples{
 data(doubs)

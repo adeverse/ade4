@@ -1,6 +1,6 @@
 \name{fruits}
 \alias{fruits}
-\non_function{}
+\docType{data}
 \title{Pair of Tables}
 \description{
     28 batches of fruits -two types- are judged by two different ways.\cr

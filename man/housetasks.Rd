@@ -1,6 +1,6 @@
 \name{housetasks}
 \alias{housetasks}
-\non_function{}
+\docType{data}
 \title{Contingency Table}
 \description{
 The \code{housetasks} data frame gives 13 housetasks and their repartition in the couple. 

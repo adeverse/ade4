@@ -6,8 +6,8 @@
 \title{Multiple Correspondence Analysis}
 \description{
 \code{dudi.acm} performs the multiple correspondence analysis of a factor table.\cr
-\code{acm.burt} a utility giving the crossed Burt table of two factor table.\cr
-\code{acm.disjonctif} a utility giving the complete disjunctive table of a factor table.\cr
+\code{acm.burt} an utility giving the crossed Burt table of two factors table.\cr
+\code{acm.disjonctif} an utility giving the complete disjunctive table of a factor table.\cr
 \code{boxplot.acm} a graphic utility to interpret axes.\cr
 }
 \usage{
@@ -17,7 +17,7 @@ acm.disjonctif (df)
 boxplot.acm (x, xax = 1, \dots) 
 }
 \arguments{
-  \item{df, df1, df2}{data frame containing only factors}
+  \item{df, df1, df2}{data frames containing only factors}
   \item{row.w, counts}{vector of row weights, by default, uniform weighting}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
@@ -27,11 +27,11 @@ boxplot.acm (x, xax = 1, \dots)
 }
 \value{
 \code{dudi.acm} returns a list of class \code{acm} and \code{dudi} (see \link{dudi}) containing  
-\item{cr}{ a data frame which rows are the variables, columns are the scores kept and the values
+\item{cr}{ a data frame which rows are the variables, columns are the kept scores and the values
 are the correlation ratios}
 }
 \references{
-Tenenhaus, M. & Young, F.W. (1985) An analysis and synthesis of multiple correspondence analysis, optimal scaling, dual scaling, homogeneity analysis ans other methods for quantifying categorical multivariate data. Psychometrika : 50, 1, 91-119.\cr\cr
+Tenenhaus, M. & Young, F.W. (1985) An analysis and synthesis of multiple correspondence analysis, optimal scaling, dual scaling, homogeneity analysis ans other methods for quantifying categorical multivariate data. Psychometrika, \bold{50}, 1, 91-119.\cr\cr
 
 Lebart, L., A. Morineau, and M. Piron. 1995. Statistique exploratoire multidimensionnelle. Dunod, Paris.
 }

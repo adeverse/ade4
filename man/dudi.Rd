@@ -37,17 +37,17 @@ t.dudi(x)
   \item{full}{a logical value indicating whether all non null eigenvalues should be kept}
   \item{x, dudi}{objects of class \code{dudi}}
   \item{\dots}{further arguments passed to or from other methods}
-  \item{newnf}{a data frame}
+  \item{newnf}{an integer indicating the number of kept axes}
 }
 \value{
 as.dudi and all the functions that use it return a list with the following components :
 \item{tab}{a data frame with n rows et p columns}
 \item{cw}{row weights, a vector with n components} 
-\item{lw}{columns weights, a vector with p components}
+\item{lw}{column weights, a vector with p components}
 \item{eig}{eigenvalues, a vector with min(n,p) components}
 \item{nf}{integer, number of kept axes}
 \item{c1}{principal axes, data frame with p rows et nf columns}
-\item{l1}{principal componants, data frame with n rows et nf columns}
+\item{l1}{principal components, data frame with n rows et nf columns}
 \item{co}{column coordinates, data frame with p rows et nf columns}
 \item{li}{row coordinates, data frame with n rows et nf columns}
 \item{call}{original call}

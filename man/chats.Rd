@@ -1,6 +1,6 @@
 \name{chats}
 \alias{chats}
-\non_function{}
+\docType{data}
 \title{Pair of Variables}
 \description{
 This data set is a contingency table of age classes and fecundity classes of cats felis catus. 
@@ -32,6 +32,5 @@ table.cont(chatsw, x = chatscoa$c1[,1], y = chatscoa$l1[,1],
 table.cont(chatsw,, x = chatscoa$c1[,1], y = chatscoa$l1[,1],
     abmean.y = TRUE, csi = 2, abline.y = TRUE, clabel.r = 1.5, 
     clabel.c = 1.5)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

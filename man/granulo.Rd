@@ -1,6 +1,6 @@
 \name{granulo}
 \alias{granulo}
-\non_function{}
+\docType{data}
 \title{Granulometric Curves}
 \description{
 This data set gives the repartition in diameter classes of deposit samples. 
@@ -15,8 +15,8 @@ This data set gives the repartition in diameter classes of deposit samples.
 }
 \source{
 Gaschignard-Fossati, O. (1986) Répartition spatiale des macroinvertébrés benthiques d'un bras vif du Rhône.\cr
-Rôle des crues et dynamique saisonni"re.\cr
-Th"se de doctorat, Université Lyon 1.
+Rôle des crues et dynamique saisonnière.\cr
+Thèse de doctorat, Université Lyon 1.
 }
 \examples{
 data(granulo)

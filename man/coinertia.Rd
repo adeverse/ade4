@@ -14,7 +14,7 @@ print.coinertia (x, \dots)
 summary.coinertia (object, \dots) 
 }
 \arguments{
-  \item{dudiX}{a duality diagramproviding from one of the functions dudi.coa, dudi.pca, \dots}
+  \item{dudiX}{a duality diagram providing from one of the functions dudi.coa, dudi.pca, \dots}
   \item{dudiY}{a duality diagram providing from one of the functions dudi.coa, dudi.pca, \dots}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}

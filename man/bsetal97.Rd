@@ -1,6 +1,6 @@
 \name{bsetal97}
 \alias{bsetal97}
-\non_function{}
+\docType{data}
 \title{Ecological and Biological Traits}
 \description{
 This data set gives ecological and biological characteristics of 131 species of aquatic insects. 

@@ -1,6 +1,6 @@
 \name{capitales}
 \alias{capitales}
-\non_function{}
+\docType{data}
 \title{Road Distances}
 \description{
 This data set gives the road distances between 15 european capitals and their coordinates. 

@@ -1,6 +1,6 @@
 \name{ardeche}
 \alias{ardeche}
-\non_function{}
+\docType{data}
 \title{Fauna Table with double (row and column) partitioning}
 \description{
   This data set gives informations about species in different sites and dates. 

@@ -1,6 +1,6 @@
 \name{doubs}
 \alias{doubs}
-\non_function{}
+\docType{data}
 \title{Pair of Ecological Tables}
 \description{
 This data set gives environmental variables, fish species and spatial coordinates for 30 sites. 
@@ -18,7 +18,7 @@ This data set gives environmental variables, fish species and spatial coordinate
  Verneaux, J. (1973)\cr
  Cours d'eau de Franche-Comté (Massif du Jura).\cr
  Recherches écologiques sur le réseau hydrographique du Doubs. Essai de biotypologie.\cr
- Th"se d'état, Besançon. 1--257
+ Thèse d'état, Besançon. 1--257
 }
 \examples{
 data(doubs)
@@ -35,6 +35,5 @@ s.corcircle(coiner1$aY)
 s.arrow(coiner1$l1)
 s.value(doubs$xy, coiner1$lY[,1])
 s.value(doubs$xy, coiner1$lY[,2])
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -1,6 +1,6 @@
 \name{friday87}
 \alias{friday87}
-\non_function{}
+\docType{data}
 \title{Faunistic K-tables}
 \description{
 This data set gives informations about sites, species and environmental variables

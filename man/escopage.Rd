@@ -1,6 +1,6 @@
 \name{escopage}
 \alias{escopage}
-\non_function{}
+\docType{data}
 \title{K-tables of wine-tasting}
 \description{
 This data set describes 27 characteristics of 21 wines distributed in four fields : 
@@ -16,10 +16,10 @@ rest, visual, olfactory and global.
 	}
 }
 \source{
-Escofier, B. and Pag"s, J. (1990)\cr
+Escofier, B. and Pagès, J. (1990)\cr
 \emph{Analyses factorielles simples et multiples : objectifs, méthodes et interprétation}\cr
 Dunod, Paris. 1--267.\cr\cr
-Escofier, B. and Pag"s, J. (1994)\cr
+Escofier, B. and Pagès, J. (1994)\cr
 Multiple factor analysis (AFMULT package).\cr
 \emph{Computational Statistics and Data Analysis}, \bold{18}, 121--140.
 }

@@ -1,13 +1,13 @@
 \name{coleo}
 \alias{coleo}
-\non_function{}
+\docType{data}
 \title{Table of Fuzzy Biological Traits }
 \description{
 This data set coleo (coleoptera) is a a fuzzy biological traits table.  
 }
 \usage{data(coleo)}
 \format{
-\code{coleo} is a list with 5 components.
+\code{coleo} is a list of 5 components.
 \describe{
     \item{tab}{is a data frame with 110 rows (species) and 32 columns (categories).}
     \item{species.names}{is a vector of species names.}
@@ -33,6 +33,5 @@ for (j in levels(indica)) s.distri (fca1$l1,
     cell = 0, csta = 0.5, csub = 3, 
     label = coleo$moda.names[which(indica==j)])
 par(op)
-par(mfrow=c(1,1))
 }
 \keyword{datasets}

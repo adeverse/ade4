@@ -1,8 +1,8 @@
 \name{dudi.nsc}
 \alias{dudi.nsc}
-\title{Non symmetrical correspondence analysis}
+\title{Non symmetric correspondence analysis}
 \description{
-performs a non symmetrical correspondence analysis. 
+performs a non symmetric correspondence analysis. 
 }
 \usage{
 dudi.nsc(df, scannf = TRUE, nf = 2)
@@ -14,7 +14,7 @@ dudi.nsc(df, scannf = TRUE, nf = 2)
 }
 \value{
 Returns a list of class \code{nsc} and \code{dudi} (see \link{dudi}) containing also
-  \item{N}{sum of the values in the initial table}
+  \item{N}{sum of the values of the initial table}
 }
 \references{Kroonenberg, P. M., and Lombardo  R. (1999) Nonsymmetric correspondence analysis: a tool for analysing contingency tables with a dependence structure. \emph{Multivariate Behavioral Research}, \bold{34}, 367--396.
 }

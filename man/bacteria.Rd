@@ -1,6 +1,6 @@
 \name{bacteria}
 \alias{bacteria}
-\non_function{}
+\docType{data}
 \title{Genomes of 43 Bacteria}
 \description{
     \code{bacteria} is a list containing 43 species and genomic informations : codons, amino acid and bases. 

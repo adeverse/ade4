@@ -32,7 +32,6 @@ scatter(dudi.pco(dist.quant(ecomor$morpho,3), scan = FALSE))
 scatter(dudi.pco(dist.quant(ecomor$morpho,2), scan = FALSE))
 scatter(dudi.pco(dist(scalewt(ecomor$morpho)), scan = FALSE))
 scatter(dudi.pco(dist.quant(ecomor$morpho,1), scan = FALSE))
-par(mfrow = c(1,1))
 }
 \keyword{array}
 \keyword{multivariate}

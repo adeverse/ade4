@@ -1,6 +1,6 @@
 \name{aviurba}
 \alias{aviurba}
-\non_function{}
+\docType{data}
 \title{Ecological Tables Triplet}
 \description{
 This data set is a list of informations about 51 sites : species and environmental variables. \cr
@@ -13,8 +13,8 @@ For each species, a data frame contains biological traits.
 		\item{fau}{is a data frame 51 sites 40 species. }
 		\item{mil}{is a data frame 51 sites 11 environmental variables. }
 		\item{traits}{is a data frame 40 species 4 biological traits.}
-		\item{species.names.fr}{is a vector species names in french. }
-		\item{species.names.la}{is a vector species names in latin. }
+		\item{species.names.fr}{is a vector of the species names in french. }
+		\item{species.names.la}{is a vector of the species names in latin. }
 		\item{species.family}{is a factor : the species families. }
 	}
 }

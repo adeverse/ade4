@@ -1,6 +1,6 @@
 \name{clementines}
 \alias{clementines}
-\non_function{}
+\docType{data}
 \title{Fruit Production}
 \description{
 The \code{clementines} is a data set containing the fruit production of 20 clementine trees during 15 years.
@@ -12,7 +12,7 @@ A data frame with 15 rows and 20 columns
 \source{
 Tisné-Agostini, D. (1988)\cr
 Description par analyse en composantes principales de l'évolution de la production du clémentinier en association avec 12 types de porte-greffe.\cr
-Rapport technique, DEA Analyse et modélisation des syst"mes biologiques, Université Lyon 1. 
+Rapport technique, DEA Analyse et modélisation des systèmes biologiques, Université Lyon 1. 
 }
 \examples{
 data(clementines)

@@ -1,13 +1,13 @@
 \name{chatcat}
 \alias{chatcat}
-\non_function{}
+\docType{data}
 \title{Qualitative Weighted Variables}
 \description{
   This data set gives the age, the fecundity and the number of litters for 26 groups of cats. 
 }
 \usage{data(chatcat)}
 \format{
-\code{chatcat} is a list with two components :
+\code{chatcat} is a list of two components :
     \describe{
     \item{tab}{is a data frame with 3 factors (age, feco, nport). }
     \item{eff}{is a vector of numbers. }
@@ -20,7 +20,7 @@ The value in \code{eff} is the number of cats in this group
 \source{
 Pontier, D. (1984)\cr
 Contribution à la biologie et à la génétique des populations de chats domestiques (Felis catus).\cr
-Th"se de 3° cycle. Université Lyon 1, p. 67.
+Thèse de 3ème cycle. Université Lyon 1, p. 67.
 }
 \examples{
 data(chatcat)

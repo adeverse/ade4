@@ -1,6 +1,6 @@
 \name{baran95}
 \alias{baran95}
-\non_function{}
+\docType{data}
 \title{African Estuary Fishes}
 \description{
 This data set is a list containing relations between sites and species linked to dates
@@ -16,7 +16,7 @@ This data set is a list containing relations between sites and species linked to
 }
 \source{
 Baran, E. (1995) Dynamique spatio-temporelle des peuplements de Poissons estuariens en Guinée (Afrique de l'Ouest).\cr
-Th"se de Doctorat, Université de Bretagne Occidentale.\cr
+Thèse de Doctorat, Université de Bretagne Occidentale.\cr
 Data collected by net fishing sampling in the Fatala river estuary
 }
 \examples{

@@ -1,6 +1,6 @@
 \name{banque}
 \alias{banque}
-\non_function{}
+\docType{data}
 \title{Table of Factors}
 \description{
 \code{banque} gives the results of a bank survey onto 810 customers. 

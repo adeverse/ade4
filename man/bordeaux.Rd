@@ -1,6 +1,6 @@
 \name{bordeaux}
 \alias{bordeaux}
-\non_function{}
+\docType{data}
 \title{Wine Tasting}
 \description{
 The \code{bordeaux} data frame gives the opinions of 200 judges in a blind tasting of five different types of claret 
@@ -18,7 +18,7 @@ The \code{bordeaux} data frame gives the opinions of 200 judges in a blind tasti
 }
 \source{
  van Rijckevorsel, J. (1987)\cr
- The application of fuzzy coding and hoerseshoes in multiple correspondence analysis.\cr
+ The application of fuzzy coding and horseshoes in multiple correspondence analysis.\cr
  DSWO Press, Leiden (p. 32)
 }
 \examples{

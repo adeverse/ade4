@@ -2,7 +2,7 @@
 \alias{dist.binary}
 \title{Computation of Distance Matrices for Binary Data}
 \description{
-computes for binary data some distances matrices. 
+computes for binary data some distance matrice. 
 }
 \usage{
 dist.binary(df, method = NULL, diag = FALSE, upper = FALSE)
@@ -11,7 +11,7 @@ dist.binary(df, method = NULL, diag = FALSE, upper = FALSE)
   \item{df}{a data frame with positive or zero values. Used with \code{as.matrix(1 * (df > 0))}}
   \item{method}{an integer between 1 and 10 . If NULL the choice is made with a console message. See details}
   \item{diag}{a logical value indicating whether the diagonal of the distance matrix should be printed by `print.dist'}
-  \item{upper}{a logical value indicating whether the upper triangle of the distance matrix should be printed by `print.dist}
+  \item{upper}{a logical value indicating whether the upper triangle of the distance matrix should be printed by `print.dist'}
 }
 \details{
 All these distances are of type \eqn{d=\sqrt{1-s}}{d = sqrt(1 - s)} with s a similarity coefficient. 
@@ -24,7 +24,7 @@ All these distances are of type \eqn{d=\sqrt{1-s}}{d = sqrt(1 - s)} with s a sim
 \item{7 = Ochiai (1957)}{S12 coefficient of Gower & Legendre \eqn{s_7 =\frac{a}{\sqrt{(a+b)(a+c)}}}{s7 = a / sqrt((a + b)(a + c))}}
 \item{8 = Sockal & Sneath (1963)}{S13 coefficient of Gower & Legendre \eqn{s_8 =\frac{ad}{sqrt{(a+b)(a+c)(d+b)(d+c)}}}{s8 = ad / sqrt((a + b)(a + c)(d + b)(d + c))}}
 \item{9 = Phi of Pearson}{S14 coefficient of Gower & Legendre \eqn{s_9 =\frac{ad-bc}{\sqrt{(a+b)(a+c)(b+d)(d+c)}}}{s9 = (ad - bc) / sqrt((a + b)(a + c)(d + b)(d + c))}}
-\item{10 = S2 coefficient of Gower & Legendre}{\eqn{s_10 = \frac{a}{a+b+c+d}}{s10 = a / (a + b + c + d)}}
+\item{10 = S2 coefficient of Gower & Legendre}{\eqn{s_1 = \frac{a}{a+b+c+d}}{s10 = a / (a + b + c + d)}}
 }
 \value{
 returns a distance matrix of class \code{dist} between the rows of the data frame

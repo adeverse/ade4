@@ -1,6 +1,6 @@
 \name{bf88}
 \alias{bf88}
-\non_function{}
+\docType{data}
 \title{Cubic Ecological Data}
 \description{
 \code{bf88} is a list of 6 data frames corresponding to 6 stages of vegetation. \cr

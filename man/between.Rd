@@ -4,7 +4,7 @@
 \alias{plot.between}
 \title{Between-Class Analysis}
 \description{
-Performs a particular case of a Principal Component Analysis on Instrumental Variables,
+Performs a particular case of a Principal Component Analysis with respect to Instrumental Variables,
 in which there is only one instrumental variable, and it is a factor
 }
 \usage{

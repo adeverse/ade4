@@ -15,9 +15,9 @@ dudi.dec(df, eff, scannf = TRUE, nf = 2)
 }
 \value{
 Returns a list of class \code{dec} and \code{dudi} (see \link{dudi}) containing also 
-  \item{R}{sum of the values in the initial table}
+  \item{R}{sum of all the values of the initial table}
 }
-\references{Dolédec, S., Chessel, D. and Olivier J. M. (1995) L'analyse des correspondances décentrée: application aux peuplements ichtyologiques du haut-Rhône. \emph{Bulletin Français de la P"che et de la Pisciculture}, \bold{336}, 29--40.}
+\references{Dolédec, S., Chessel, D. and Olivier J. M. (1995) L'analyse des correspondances décentrée: application aux peuplements ichtyologiques du haut-Rhône. \emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{336}, 29--40.}
 \examples{
 data(ichtyo)
 dudi1 <- dudi.dec(ichtyo$tab, ichtyo$eff, scan = FALSE)

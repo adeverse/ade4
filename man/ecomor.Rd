@@ -1,6 +1,6 @@
 \name{ecomor}
 \alias{ecomor}
-\non_function{}
+\docType{data}
 \title{Ecomorphological Convergence}
 \description{
 This data set gives ecomorphological informations about 129 bird species. 

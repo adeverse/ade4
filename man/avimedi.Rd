@@ -1,6 +1,6 @@
 \name{avimedi}
 \alias{avimedi}
-\non_function{}
+\docType{data}
 \title{Fauna Table for Constrained Ordinations}
 \description{
 \code{avimedi} is a list containing the informations about 302 sites : \cr
@@ -37,6 +37,5 @@ s.match(pcaiv1$li, pcaiv1$ls, clab = 0,
     sub = "Canonical Correspondences Analysis")
 s.class(pcaiv1$li, avimedi$plan$str:avimedi$plan$reg, 
     add.plot = TRUE)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -28,8 +28,9 @@
         typX<-"fc"
     } else if (appelX[[1]] == "dudi.fca") {
         typX<-"fc"
-    } else if (appelX[[1]] == "dudi.mca") {
+    } else if (appelX[[1]] == "dudi.acm") {
         typX<-"cm"
+        Xinit <- acm.disjonctif(Xinit)
     }
     Y<-dudiY$tab
     Y.cw<-dudiY$cw
@@ -52,9 +53,10 @@
         typY<-"fc"
     } else if (appelY[[1]] == "dudi.fca") {
         typY<-"fc"
-    } else if (appelY[[1]] == "dudi.mca") {
+    } else if (appelY[[1]] == "dudi.acm") {
         typY<-"cm"
-    }
+        Yinit <- acm.disjonctif(Yinit)
+   }
     if (all(X.lw==Y.lw)) {
         if ( all(X.lw==rep(1/nrow(X), nrow(X))) ) {
             isim<-testertrace(nrepet, X.cw, Y.cw, X, Y, nrow(X), ncol(X), ncol(Y))

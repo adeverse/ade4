@@ -457,7 +457,7 @@
     # typolo.value <- 1-exp(wnodes-lgamma(effnodes+1)) abandon
     
     ####res$Aparam <- data.frame(x1=I(dimnodes), x2=I(effnodes), x3=I(wnodes), x4=I(typolo.value))
-    res$Aparam <- data.frame(ndir=dimnodes, nlea=effnodes, lnperm=wnodes)
+    res$Aparam <- data.frame(ndir=dimnodes, nlea=effnodes, lnperm=I(wnodes))
     #############################
     # la composante Aparam est un data.frame de paramètre sur l'ensemble des noeuds
     # x1 = nombre de descendants directs

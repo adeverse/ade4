@@ -3,12 +3,15 @@
 #include <string.h>
 #include <stdlib.h>
 
+int dtodelta (double **data, double *pl);
+void initvec (double *v1, double r);
 double alea (void);
 void aleapermutvec (double *a);
 void aleapermutmat (double **a);
 void aleapermutmat (double **a);
 void aleapermutvec (double *a);
 void DiagobgComp (int n0, double **w, double *d, int *rang);
+void freeinttab (int **tab);
 void freeintvec (int *vec);
 void freetab (double **tab);
 void freevec (double *vec);
@@ -26,8 +29,10 @@ void prodmatABC (double **a, double **b, double **c);
 void prodmatAtAB (double **a, double **b);
 void prodmatAtBC (double **a, double **b, double **c);
 void prodmatAtBrandomC (double **a, double **b, double **c, int*permut);
+double traceXtdLXq (double **X, double **L, double *d, double *q);
 void sqrvec (double *v1);
 void taballoc (double ***tab, int l1, int c1);
+void tabintalloc (int ***tab, int l1, int c1);
 void trild (double *x , int *num, int gauche, int droite);
 void trildintswap (int *v, int i, int j);
 void trildswap (double *v, int i, int j);

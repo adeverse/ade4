@@ -99,9 +99,9 @@ void freeinttab (int **tab)
 /*********************/
 int dtodelta (double **data, double *pl)
 {
-	// la matrice de distances d2ij dans data est associee aux poids pl
-	// Elle est transformee par aij - ai. -a.j + a..
-	// aij = -d2ij/2);
+	/* la matrice de distances d2ij dans data est associee aux poids pl
+	Elle est transformee par aij - ai. -a.j + a..
+	aij = -d2ij/2);*/
 
 	int lig, i, j;
 	double *moy, a0, moytot;
@@ -152,7 +152,7 @@ double alea (void)
 void aleapermutmat (double **a)
 {
 	/* permute au hasard les lignes du tableau a
-	 Manly p. 42 le tableau est modifie */
+	Manly p. 42 le tableau est modifié */
 	int lig, i,j, col, n, k;
 	double z;
 
@@ -161,7 +161,7 @@ void aleapermutmat (double **a)
 	for (i=1; i<=lig-1; i++) {
 		j=lig-i+1;
 		k = (int) (j*alea ()+1);
-		/* k = (int) (j*genrand()+1); */
+		/*k = (int) (j*genrand()+1);*/
 		if (k>j) k=j;
 		for (n=1; n<=col; n++) {
 			z = a[j][n];
@@ -173,9 +173,9 @@ void aleapermutmat (double **a)
 /*************************/
 void aleapermutvec (double *a)
 {
-	/*  permute au hasard les ÚlÚments du vecteur a */
-	/*  Manly p. 42 Le vecteur est modifiÚ */
-	/*  from Knuth 1981 p. 139 */
+	/* permute au hasard les ÚlÚments du vecteur a
+	Manly p. 42 Le vecteur est modifié
+	from Knuth 1981 p. 139*/
 	int lig, i,j, k;
 	double z;
 	
@@ -183,7 +183,7 @@ void aleapermutvec (double *a)
 	for (i=1; i<=lig-1; i++) {
 		j=lig-i+1;
 		k = (int) (j*alea()+1);
-		/* k = (int) (j*genrand()+1); */
+		/*k = (int) (j*genrand()+1);*/
 		if (k>j) k=j;
 		z = a[j];
 		a[j]=a[k];
@@ -199,13 +199,14 @@ void DiagobgComp (int n0, double **w, double *d, int *rang)
 * de LEBART et coll.
 --------------------------------------------------*/
 {
-	double			*s;
+	double			*s, epsilon;
 	double			a, b, c, x, xp, q, bp, ab, ep, h, t, u , v;
 	double			dble;
 	int				ni, i, i2, j, k, jk, ijk, ij, l, ix, m, m1, isnou;
 	
 	vecalloc(&s, n0);
 	a = 0.000000001;
+	epsilon = 0.0000001;
 	ni = 100;
 	if (n0 == 1) {
 		d[1] = w[1][1];
@@ -328,7 +329,7 @@ Et7: 	isnou = 1;
 		if (j == k) goto Eta;
 		if (m < ni) goto Etd;
 		
-		/* err_message("Error: can't compute matrix eigenvalues"); */
+		/*err_message("Error: can't compute matrix eigenvalues");*/
 		
 Etd:	m = m + 1;
 		q = (d[k+1]-h) * 0.5 / s[k];
@@ -419,14 +420,10 @@ Eta:;
 Etb:;
 	} /* for (ij=2;ij<=n0;ij++) */
 
-/* final:; */
 	*rang = 0;
 	for (i=1;i<=n0;i++) {
-		/*
-		if (d[i] / d[1] < 0.00001) d[i] = 0.0;
+		if (d[i] / d[1] < epsilon) d[i] = 0.0;
 		if (d[i] != 0.0) *rang = *rang + 1;
-		*/
-		if (d[i] > 0.0) *rang = *rang + 1;
 	}
 	freevec(s);
 } /* DiagoCompbg */
@@ -759,7 +756,7 @@ void matmodiffc (double **tab, double *poili)
 	for (j=1;j<=m1;j++) {
 		x = poimoda[j];
 		if (x==0) {
-			/* err_message("column has a nul weight (matmodiffc)"); */
+			/*err_message("column has a nul weight (matmodiffc)");*/
 		}
 		
 		for (i=1;i<=l1;i++) {
@@ -775,7 +772,7 @@ void matpermut (double **A, int *num, double **B)
 /*---------------------------------------
 * A est une matrice n-p
 * B est une matrice n-p
-* num est une permutation alÚatoire des n premiers entiers
+* num est une permutation aléatoire des n premiers entiers
 * B contient en sortie les lignes de A permutÚes
 * ---------------------------------------*/
 
@@ -949,7 +946,7 @@ void sqrvec (double *v1)
 	
 	for (i=1;i<=c1;i++) {
 		v2 = v1[i];
-		/*  if (v2 < 0.0) err_message("Error: Square root of negative number (sqrvec)"); */
+		/* if (v2 < 0.0) err_message("Error: Square root of negative number (sqrvec)");*/
 		v2 = sqrt(v2);
 		v1[i] = v2;
 	}
@@ -1118,6 +1115,9 @@ void vecintalloc (int **vec, int n)
 		return;
 	}
 }
+
+
+
 /***********************************************************************/
 void vecpermut (double *A, int *num, double *B)
 {
@@ -1136,8 +1136,8 @@ void vecpermut (double *A, int *num, double *B)
 	
 	
 	if ( (lig!=lig1) || (lig!=lig2) ) {
-		/* err_message ("Illegal parameters (vecpermut)"); */
-		/* closelisting(); */
+		/*err_message ("Illegal parameters (vecpermut)");
+		closelisting();*/
 	}
 	
 	for (i=1; i<=lig; i++) {

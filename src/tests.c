@@ -13,7 +13,269 @@ void testertracenubis (	int *npermut,double *pc1r, int *npc1,double *pc2r, int *
 void testinter(	int *npermut,double *pl1,int *npl,double *pc1,int *npc,int *moda1,double *indica1,int *nindica,double *tab1, int *l1, int *c1,double *inersim);
 void testmantel(int *npermut1,int *lig1,double *init11,double *init21,double *inersim);
 void testprocuste(int *npermut1,int *lig1,int *c11,int *c21,double *init11,double *init21,double *inersim);
+void testmultispati (int *npermut, int *lig1, int *col1, double *tab, double *mat, double *lw, double *cw, double *inersim)	;
+void testdistRV(int *npermut1,int *lig1,double *init11,double *init21,double *RV);
+void MSTgraph (double *distances, int *nlig, int *ngmax, double *voisi);
 
+/**************************/
+void MSTgraph (double *distances, int *nlig, int *ngmax, double *voisi)
+{
+	int N, NITP, KP, i, k, j, lig;
+	double **DM, **voisiloc, *UI, CST, D, UK;
+	double a0;
+	int **MST, *JI, *NIT, IMST, NI, numg, numgmax;
+	double borne = 1.0e20;
+	
+	lig = N = *nlig;
+	numgmax=*ngmax;
+	
+	taballoc (&DM, N, N);
+	taballoc (&voisiloc, N, N);
+	tabintalloc (&MST, 2, N);
+	vecalloc (&UI, N);
+	vecintalloc (&JI, N);
+	vecintalloc (&NIT, N);
+	
+	k = 0;
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) {
+			DM[i][j] = distances[k];
+			k = k + 1;
+		}
+	}
+	for (i=1; i<=N; i++) DM[i][i] = borne;
+	
+	for (numg=1; numg<=numgmax; numg++) {		
+		// Algorithm 422, Kevin & Whitney Comm. ACM 15, 273, 1972
+		CST = 0.;
+		NITP = N -1;
+		KP = N;
+		IMST = 0;
+		for (i=1; i<=NITP; i++) {
+			NIT[i] = i;
+			UI[i] = DM [i][KP];
+			JI[i] = KP;
+		}
+		while (NITP > 0) {
+			for (i=1; i<=NITP; i++) {
+				NI = NIT[i];
+				D = DM[NI][KP];
+				if (UI[i]>D) {
+					UI[i] = D;
+					JI[i] = KP;
+				}
+			}
+			UK = UI[1];
+			for (i=1; i<=NITP; i++) {
+				if (UI[i]<=UK) {
+					UK = UI[i];
+					k = i;
+				}
+			}
+			IMST = IMST + 1;
+			MST[1][IMST] = NIT[k];
+			MST[2][IMST] = JI[k];
+			CST = CST + UK;
+			KP = NIT[k];
+		
+			UI[k]=UI[NITP];
+			NIT[k] = NIT[NITP];
+			JI[k]=JI[NITP];
+			NITP = NITP - 1;
+		}
+		for (i=1; i<=IMST; i++) {
+			voisiloc [MST[1][i]] [MST[2][i]] = numg;
+			voisiloc [MST[2][i]] [MST[1][i]] = numg;			
+			DM [MST[1][i]] [MST[2][i]] = borne;
+			DM [MST[2][i]] [MST[1][i]] = borne;			
+		}
+	}
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) {
+			a0 = voisiloc [i][j];
+			if ( (a0>0) &&  (a0<=numgmax) ){
+				voisiloc [i][j] = 1;
+			} else voisiloc [i][j] = 0;
+		}
+	}
+
+	k = 0;
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) {
+			voisi[k]=voisiloc[i][j];
+			k = k + 1;
+		}
+	}
+
+	freetab (DM);
+	freetab (voisiloc);
+	freeinttab (MST);
+	freevec (UI);
+	freeintvec (JI);
+	freeintvec (NIT);
+}
+
+/*********************************************/
+void testdistRV(int *npermut1,int *lig1,double *init11,double *init21,double *RV)
+{
+/* Declarations de variables C locales */
+
+	int			i, j, k, lig, i0, j0, npermut, *numero, isel;
+	double		**m1, **m2, *pl;
+	double		trace, trace0, car1, car2, a0;
+
+/* Allocation memoire pour les variables C locales */
+
+	npermut = *npermut1;
+	lig = *lig1;
+
+	taballoc(&m1, lig, lig);
+	taballoc(&m2, lig, lig);
+	vecintalloc (&numero, lig);
+	vecalloc (&pl, lig);
+
+/* On recopie les objets R dans les variables C locales */
+
+	k = 0;
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) {
+			m1[i][j] = init11[k];
+			k = k + 1;
+		}
+	}
+
+	k = 0;
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) {
+			m2[i][j] = init21[k];
+			k = k + 1;
+		}
+	}
+
+/* m1 et m2 sont des matrices de distances simples */
+	initvec(pl, 1.0/(double)lig);
+	dtodelta (m1, pl);
+	dtodelta (m2,pl);			
+	car1 = 0;
+	trace=0;
+	car2 = 0;
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) {
+			car1 = car1 + m1[i][j]*m1[i][j];
+			trace = trace + m1[i][j]*m2[i][j];
+			car2 = car2 + m2[i][j]*m2[i][j];
+		}
+	}
+	car1 = sqrt ( (double) car1);
+	car2 = sqrt ( (double) car2);
+	a0 = trace/car1/car2;
+	if (a0<-1) a0 = -1;
+	if (a0>1) a0 = 1;
+	RV[0] = a0;
+	for (isel=1; isel<=npermut; isel++) {
+		getpermutation (numero, isel);
+		trace0=0;
+		for (i=1; i<=lig; i++) {
+			i0 = numero[i];
+			for (j=1; j<=lig; j++) {
+				j0 = numero[j];
+				trace0 = trace0 + m1[i][j]*m2[i0][j0];
+			}
+		}
+		a0 = trace0/car1/car2;
+		if (a0<-1) a0 = -1;
+		if (a0>1) a0 = 1;
+		RV[isel] = a0;
+	}
+	freevec(pl);
+	freeintvec(numero);	
+	freetab (m1);
+	freetab (m2);
+}
+
+/*********************************************/
+/* 	On commence par une première version ou l'on importe la liste listw	sous forme matricielle. 
+	On pourrait suivre la logique de Bivand qui est plus judicieuse, surtout quand les matrices
+	L on beaucoup de 0. Il travaille avec des listes et calcul le produit L%*%X par la fonction
+	lagw.c.	*/
+
+void testmultispati (int *npermut, int *lig1, int *col1, double *tab, double *mat, double *lw, double *cw, double *inersim)	
+{
+/* Declarations de variables C locales */
+	
+	int			i, j, k, lig, col, nper, *numero;
+	double		**X, **L, **Xperm;
+	double		*d, *q, *dperm;
+	
+/* Allocation memoire pour les variables C locales */
+	
+	nper = *npermut;
+	lig = *lig1;
+	col= *col1;
+	
+	
+
+	taballoc(&X, lig, col);
+	taballoc(&L, lig, lig);
+	taballoc(&Xperm, lig, col);
+	vecintalloc (&numero, lig);
+	vecalloc(&dperm, lig);
+	vecalloc(&d, lig);
+	vecalloc(&q, col);
+	
+/* On recopie les objets R dans les variables C locales */
+
+	k = 0;
+	for (j=1; j<=col; j++) {
+		for (i=1; i<=lig; i++) {
+			X[i][j] = tab[k];
+			k = k + 1;
+		}
+	}
+
+	k = 0;
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) {
+			L[j][i] = mat[k];
+			k = k + 1;
+		}
+	}
+
+	k=0;
+	for (i=1; i<=lig; i++) {
+		d[i]=lw[k];
+		k = k + 1;
+	}
+	
+	k=0;
+	for (i=1; i<=col; i++) {
+		q[i]=cw[k];
+		k = k + 1;
+	}
+	
+/* On calcul la valeur observée	*/
+	inersim[0]=traceXtdLXq(X, L, d, q);
+	
+/* On calcul les valeurs pour chaque simulation	*/
+
+	for (j=1; j<=nper; j++) {
+		getpermutation(numero, j);
+		matpermut(X, numero ,Xperm);
+		vecpermut(d, numero, dperm);
+		inersim[j]=traceXtdLXq(Xperm, L, dperm, q);
+	}
+	
+	
+/* Libération des réservations locales */
+	
+freetab(X);
+freetab(L);
+freetab(Xperm);
+freeintvec(numero);
+freevec(dperm);
+freevec(d);
+freevec(q);
+}
 
 /*********************************************/
 void testmantel(int *npermut1,
@@ -25,7 +287,7 @@ void testmantel(int *npermut1,
 {
 /* Declarations de variables C locales */
 
-	int		i, j, k, lig, i0, j0, npermut, *numero, isel;
+	int			i, j, k, lig, i0, j0, npermut, *numero, isel;
 	double		**m1, **m2;
 	double		trace, trace0, moy1, moy2, car1, car2, a0;
 

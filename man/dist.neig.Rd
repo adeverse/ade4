@@ -19,7 +19,6 @@ returns a distance matrix, object of class \code{dist}
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 }
 \examples{
-library(mva)
     data(elec88)
     d0 <- dist.neig(elec88$neig)
     plot(dist(elec88$xy),d0)

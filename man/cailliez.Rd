@@ -29,7 +29,6 @@ From the DistPCoa program of P. Legendre et M.J. Anderson\cr
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 }
 \examples{
-library(mva)
 data(capitales)
 d0 <- as.dist(capitales$df)
 is.euclid(d0) # FALSE

@@ -25,7 +25,6 @@ Manly, B.F. (1994) \emph{Multivariate Statistical Methods. A primer.}
 Second edition. Chapman & Hall, London. 1--215.
 }
 \examples{
-library(mva)
 data(butterfly)
 par(mfrow = c(2,2))
 s.label(butterfly$xy, contour = butterfly$contour, inc = FALSE)

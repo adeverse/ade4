@@ -27,7 +27,6 @@ Manly, B.F.J. (1991)
 Chapman and Hall, London, 1--281.
 }
 \examples{
-library(mva)
     data(yanomama)
     gen <- quasieuclid(as.dist(yanomama$gen)) # depends of mva
     ant <- quasieuclid(as.dist(yanomama$ant)) # depends of mva

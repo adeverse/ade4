@@ -20,7 +20,6 @@ an object of class \code{rtest} (randomization tests)
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
-library(mva)
     data(yanomama)
     gen <- quasieuclid(as.dist(yanomama$gen))
     geo <- quasieuclid(as.dist(yanomama$geo))

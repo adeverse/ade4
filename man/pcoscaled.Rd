@@ -19,7 +19,6 @@ returns a data frame containing the Euclidean representation of the distance mat
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
-library(mva)
     a <- 1 / sqrt(3) - 0.2
     w <- matrix(c(0,0.8,0.8,a,0.8,0,0.8,a,
         0.8,0.8,,0,a,a,a,a,0),4,4)

@@ -18,7 +18,6 @@ This list contains the following objects:
 }
 \examples{
 if (require(pixmap, quiet = TRUE)) {
-    library(mva)
     data(capitales)
     names(capitales$df)
     # [1] "Madrid"     "Paris"      "Londres"    "Dublin"     "Rome"      

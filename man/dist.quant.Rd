@@ -28,7 +28,6 @@ an object of class \code{dist}
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 }
 \examples{
-library(mva)
 data(ecomor)
 par(mfrow = c(2,2))
 scatter(dudi.pco(dist.quant(ecomor$morpho,3), scan = FALSE))

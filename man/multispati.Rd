@@ -81,10 +81,10 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
 
     par(mfrow = c(1,2))
     w1 <- -maf.coa$li[,1:2]
-    w1m <- apply(w1, 2, lag.listw, listw = maf.listw)
+    w1m <- apply(w1, 2, lag.listw, x = maf.listw)
     s.match(w1, w1m, clab = 0.75)
     w1.ms <- maf.coa.ms$li[,1:2]
-    w1.msm <- apply(w1.ms, 2, lag.listw, listw = maf.listw)
+    w1.msm <- apply(w1.ms, 2, lag.listw, x = maf.listw)
     s.match(w1.ms, w1.msm, clab = 0.75)
     par(mfrow = c(1,1))
 

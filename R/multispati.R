@@ -86,7 +86,7 @@
     eig=dudi$eig[1:nf]
     cum=cumsum (dudi$eig) [1:nf]
     ratio = cum/sum(dudi$eig)
-    w = apply(dudi$l1,2,lag.listw,listw=listw)
+    w = apply(dudi$l1,2,lag.listw,x=listw)
     moran = apply(w*as.matrix(dudi$l1)*dudi$lw,2,sum)
     res=data.frame(var=eig,cum=cum,ratio=ratio, moran=moran)
     cat("\nScores from the first duality diagramm:\n")

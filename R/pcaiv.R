@@ -87,7 +87,8 @@
     nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
-    s.arrow(x$fa, xax, yax, sub = "Loadings", csub = 2, 
+    # modif mail P. Giraudoux 25/10/2004
+    s.arrow(na.omit(x$fa), xax, yax, sub = "Loadings", csub = 2, 
         clab = 1.25)
     s.arrow(na.omit(x$cor), xax = xax, yax = yax, sub = "Correlation", 
         csub = 2, clab = 1.25)

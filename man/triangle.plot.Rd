@@ -20,7 +20,7 @@ triangle.biplot (ta1, ta2, label = as.character(1:nrow(ta1)),
     draw.line = TRUE, show.position = TRUE, scale = TRUE)
 }
 \arguments{
-  \item{ta ta1 ta2}{data frame with three columns, will be transformed in \bold{percentages} by rows}
+  \item{ta, ta1, ta2,}{data frame with three columns, will be transformed in \bold{percentages} by rows}
   \item{label}{a vector of strings of characters for the point labels}
   \item{clabel}{if not NULL, a character size for the labels, used with  \code{par("cex")*clabel}}
   \item{cpoint}{a character size for plotting the points, used with \code{par("cex")*cpoint}. If zero, no points are drawn}

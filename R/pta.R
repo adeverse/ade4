@@ -76,8 +76,8 @@
     atp$eig <- comp$eig
     atp$li <- comp$li
     atp$co <- comp$co
-    atp$l1 <- comp$li
-    atp$c1 <- comp$co
+    atp$l1 <- comp$l1
+    atp$c1 <- comp$c1
     w1 <- matrix(0, nblo * 4, nf)
     w2 <- matrix(0, nblo * 4, nf)
     i1 <- 0
@@ -145,8 +145,36 @@
     atp$tab.names <- tnames
     atp$call <- match.call()
     class(atp) <- c("pta", "dudi")
+    if (!inherits (X,"kcoinertia")) return(atp) 
+    # Modifs pour prendre en compte STATICO
+    # on a affaire à une pta de type STATICO
+    # nblo nombre de tableau
+    blocks <- X$supblo
+    nblo <- length(blocks)
+    w <- NULL
+    for (i in 1:nblo) w <- c(w, 1:blocks[i])
+    w <- cbind.data.frame(factor(rep(1:nblo, blocks)), factor(w))
+    names(w) <- c("T", "I")
+    atp$supTI <- w
+    lw <- X$suplw
+    lw <- split(lw, factor(rep(1:length(blocks),blocks)))
+    lw <- lapply(lw, function(x) x/sum(x))
+    lw <- unlist(lw)    
+    # les lignes d'origine en supplémentaires X
+    w <- X$supX%*%as.matrix(atp$l1*atp$lw)
+    w <- scalewt(w, lw, center = FALSE, scale = TRUE)
+    w <- as.data.frame(w)
+    names(w) <- gsub("RS","sco",names(atp$l1))
+    atp$supIX <- w
+    # les lignes d'origine en supplémentaires Y
+    w <- X$supY%*%as.matrix(atp$c1*atp$cw)
+    w <- scalewt(w, lw, center = FALSE, scale = TRUE)
+    w <- as.data.frame(w)
+    names(w) <- gsub("RS","sco",names(atp$l1))
+    atp$supIY <- w
     return(atp)
 }
+ 
 
 "plot.pta" <- function (x, xax = 1, yax = 2, option = 1:4, ...) {
     if (!inherits(x, "pta")) 
@@ -257,3 +285,4 @@
     print(sumry)
     cat("\n")
 }
+

@@ -25,7 +25,7 @@
     ntab <- ntabX
     indica <- as.factor(rep(1:ntab, KTX$blo))
     lw <- split(cwX, indica)
- #### Compute crossed ktab
+#### Compute crossed ktab
     for (i in 1:ntab) {
         tx <- as.matrix(KTX[[i]])
         ty <- as.matrix(KTY[[i]])
@@ -37,6 +37,17 @@
     blo <- rep(nligY,ntab)
     res$blo <- blo
     ktab.util.addfactor(res) <- list(blo, length(res$lw))
+#### Enregistrement des tableaux de départ
+    res$supX <- KTX[[1]]
+    res$supY <- KTY[[1]]
+    for (i in 2:ntab) {
+        res$supX <- cbind(res$supX, KTX[[i]])
+        res$supY <- cbind(res$supY, KTY[[i]])
+    }
+    res$supX=t(res$supX)
+    res$supY=t(res$supY)
+    res$supblo <- KTX$blo
+    res$suplw <- cwX
     res$call <- match.call()
     class(res) <- c("ktab", "kcoinertia")
     col.names(res) <- rep(row.names(KTY),ntab)

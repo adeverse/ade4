@@ -47,41 +47,40 @@ Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
 \examples{
 if(require(spdep, quiet = TRUE)){
-data(mafragh)
-maf.xy <- mafragh$xy
-maf.flo <- mafragh$flo
-maf.listw <- nb2listw(neig2nb(mafragh$neig))
-s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
-maf.coa <- dudi.coa(maf.flo)
-multispati.randtest(maf.coa, maf.listw)
-maf.coa.ms <- multispati(maf.coa, maf.listw)
-summary(maf.coa.ms)
-par(mfrow = c(1,3))
-barplot(maf.coa$eig)
-barplot(maf.coa.ms$eig) 
-s.corcircle(maf.coa.ms$as)
-par(mfrow = c(1,1))
+    data(mafragh)
+    maf.xy <- mafragh$xy
+    maf.flo <- mafragh$flo
+    maf.listw <- nb2listw(neig2nb(mafragh$neig))
+    s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
+    maf.coa <- dudi.coa(maf.flo,scannf = FALSE)
+    multispati.randtest(maf.coa, maf.listw)
+    maf.coa.ms <- multispati(maf.coa, maf.listw, scannf = FALSE, nfposi = 2, nfnega = 2)
+    summary(maf.coa.ms)
+    par(mfrow = c(1,3))
+    barplot(maf.coa$eig)
+    barplot(maf.coa.ms$eig) 
+    s.corcircle(maf.coa.ms$as)
+ 
+    par(mfrow = c(2,2))
+    s.value(maf.xy, -maf.coa$li[,1])
+    s.value(maf.xy, -maf.coa$li[,2])
+    s.value(maf.xy, maf.coa.ms$li[,1])
+    s.value(maf.xy, maf.coa.ms$li[,2])
+    par(mfrow = c(1,1))
 
-par(mfrow = c(2,2))
-s.value(maf.xy, -maf.coa$li[,1])
-s.value(maf.xy, -maf.coa$li[,2])
-s.value(maf.xy, maf.coa.ms$li[,1])
-s.value(maf.xy, maf.coa.ms$li[,2])
-par(mfrow = c(1,1))
+    par(mfrow = c(1,2))
+    w1 <- -maf.coa$li[,1:2]
+    w1m <- apply(w1, 2, lag.listw, listw = maf.listw)
+    s.match(w1, w1m, clab = 0.75)
+    w1.ms <- maf.coa.ms$li[,1:2]
+    w1.msm <- apply(w1.ms, 2, lag.listw, listw = maf.listw)
+    s.match(w1.ms, w1.msm, clab = 0.75)
+    par(mfrow = c(1,1))
 
-par(mfrow = c(1,2))
-w1 <- -maf.coa$li[,1:2]
-w1m <- apply(w1, 2, lag.listw, listw = maf.listw)
-s.match(w1, w1m, clab = 0.75)
-w1.ms <- maf.coa.ms$li[,1:2]
-w1.msm <- apply(w1.ms, 2, lag.listw, listw = maf.listw)
-s.match(w1.ms, w1.msm, clab = 0.75)
-par(mfrow = c(1,1))
-
-maf.pca <- dudi.pca(mafragh$mil, scan = FALSE)
-multispati.randtest(maf.pca, maf.listw)
-maf.pca.ms <- multispati(maf.pca, maf.listw)
-plot(maf.pca.ms)
+    maf.pca <- dudi.pca(mafragh$mil, scannf = FALSE)
+    multispati.randtest(maf.pca, maf.listw)
+    maf.pca.ms <- multispati(maf.pca, maf.listw, scannf=FALSE)
+    plot(maf.pca.ms)
 }
 }
 \keyword{multivariate}

@@ -1,17 +1,17 @@
-"multispati" <- function(dudi, listw, scannf=T, nfposi=2, nfnega=0) {
+"multispati" <- function(dudi, listw, scannf=TRUE, nfposi=2, nfnega=0) {
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected")
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
     nvar = ncol (dudi$tab)
     dudi$cw = dudi$cw
     row.w = dudi$lw
-    fun = function (x) lag.listw(listw,x,T)
+    fun = function (x) lag.listw(listw,x,TRUE)
     tablag = apply(dudi$tab,2,fun)
     covar = t(tablag)%*%as.matrix((dudi$tab*dudi$lw))
     covar = (covar+t(covar))/2
     covar <- covar * sqrt(dudi$cw)
     covar <- t(t(covar) * sqrt(dudi$cw))
-    covar = eigen(covar, sym=T)  
+    covar = eigen(covar, sym=TRUE)  
     if (scannf) {
         barplot(covar$values)
         cat("Select the first number of axes (>=1): ")

@@ -21,29 +21,30 @@ Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spa
 }
 \examples{
 data(avijons)
-pnm.eau <- read.pnm(system.file("pictures/avijonseau.pnm",
-     package = "ade4"))
-pnm.rou <- read.pnm(system.file("pictures/avijonsrou.pnm",
-     package = "ade4"))
-pnm.veg <- read.pnm(system.file("pictures/avijonsveg.pnm",
-     package = "ade4"))
-pnm.vil <- read.pnm(system.file("pictures/avijonsvil.pnm",
-     package = "ade4"))
-jons.coa <- dudi.coa(avijons$fau, scan = FALSE, nf = 4)
-
-par(mfcol = c(3,2))
-s.value(avijons$xy, jons.coa$li[,1], pixmap = pnm.rou, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+ROADS", csub = 3)
-s.value(avijons$xy, jons.coa$li[,1], pixmap = pnm.veg, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+TREES", csub = 3)
-s.value(avijons$xy, jons.coa$li[,1], pixmap = pnm.eau, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+WATER", csub = 3)
-s.value(avijons$xy, jons.coa$li[,2], pixmap = pnm.rou, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+ROADS", csub = 3)
-s.value(avijons$xy, jons.coa$li[,2], pixmap = pnm.veg, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+TREES", csub = 3)
-s.value(avijons$xy, jons.coa$li[,2], pixmap = pnm.eau, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
+if (require(pixmap,quiet=TRUE)) {
+    pnm.eau <- read.pnm(system.file("pictures/avijonseau.pnm",
+        package = "ade4"))
+    pnm.rou <- read.pnm(system.file("pictures/avijonsrou.pnm",
+        package = "ade4"))
+    pnm.veg <- read.pnm(system.file("pictures/avijonsveg.pnm",
+        package = "ade4"))
+    pnm.vil <- read.pnm(system.file("pictures/avijonsvil.pnm",
+        package = "ade4"))
+    jons.coa <- dudi.coa(avijons$fau, scan = FALSE, nf = 4)
+    par(mfcol = c(3,2))
+    s.value(avijons$xy, jons.coa$li[,1], pixmap = pnm.rou, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+ROADS", csub = 3)
+    s.value(avijons$xy, jons.coa$li[,1], pixmap = pnm.veg, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+TREES", csub = 3)
+    s.value(avijons$xy, jons.coa$li[,1], pixmap = pnm.eau, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+WATER", csub = 3)
+    s.value(avijons$xy, jons.coa$li[,2], pixmap = pnm.rou, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+ROADS", csub = 3)
+    s.value(avijons$xy, jons.coa$li[,2], pixmap = pnm.veg, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+TREES", csub = 3)
+    s.value(avijons$xy, jons.coa$li[,2], pixmap = pnm.eau, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
+}
 
 if (require(spdep, quiet = TRUE)) {
     link1 <- area2link(avijons$area)
@@ -59,20 +60,22 @@ if (require(spdep, quiet = TRUE)) {
     barplot(jons.ms$eig)
     s.corcircle(jons.ms$as)
     plot(jons.coa$li[,1], jons.ms$li[,1])
-
-par(mfcol=c(3,2))
-s.value(avijons$xy, jons.ms$li[,1], pixmap = pnm.rou, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+ROADS", csub = 3)
-s.value(avijons$xy, jons.ms$li[,1], pixmap = pnm.veg, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+TREES", csub = 3)
-s.value(avijons$xy, jons.ms$li[,1], pixmap = pnm.eau, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+WATER", csub = 3)
-s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.rou, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+ROADS", csub = 3)
-s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.veg, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+TREES", csub = 3)
-s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.eau, inclu = FALSE,
- grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
 }
+
+if (require(pixmap,quiet=TRUE)) {
+    par(mfcol=c(3,2))
+    s.value(avijons$xy, jons.ms$li[,1], pixmap = pnm.rou, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+ROADS", csub = 3)
+    s.value(avijons$xy, jons.ms$li[,1], pixmap = pnm.veg, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+TREES", csub = 3)
+    s.value(avijons$xy, jons.ms$li[,1], pixmap = pnm.eau, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+WATER", csub = 3)
+    s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.rou, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+ROADS", csub = 3)
+    s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.veg, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+TREES", csub = 3)
+    s.value(avijons$xy, jons.ms$li[,2], pixmap = pnm.eau, inclu = FALSE,
+    grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
+    }
 }
 \keyword{datasets}

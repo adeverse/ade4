@@ -5,7 +5,7 @@
 This function performs a multivariate autocorrelation test.
 }
 \usage{
-multispati.randtest(dudi, listw, nrepet = 99)
+multispati.randtest(dudi, listw, nrepet = 999)
 }
 \arguments{
   \item{dudi}{: an object of class \code{'dudi'} for the duality diagram analysis}
@@ -27,13 +27,13 @@ Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
 \examples{
 if(require(spdep, quiet = TRUE)){
-data(mafragh)
-maf.xy <- mafragh$xy
-maf.flo <- mafragh$flo
-maf.listw <- nb2listw(neig2nb(mafragh$neig))
-s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
-maf.coa <- dudi.coa(maf.flo)
-multispati.randtest(maf.coa, maf.listw)
+    data(mafragh)
+    maf.xy <- mafragh$xy
+    maf.flo <- mafragh$flo
+    maf.listw <- nb2listw(neig2nb(mafragh$neig))
+    s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
+    maf.coa <- dudi.coa(maf.flo,scannf = FALSE)
+    multispati.randtest(maf.coa, maf.listw)
 }
 }
 \keyword{multivariate}

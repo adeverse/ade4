@@ -33,11 +33,11 @@ s.class(coa1$li, mafragh$partition, sub = "Plane 1-2 - COA")
 s.chull(mafragh$xy, mafragh$partition, optchull = 1)
 
 link1 <- area2link(mafragh$area)
+neig1 <- neig(mat01 = 1*(link1>0))
+nb1 <- neig2nb(neig1)
 par(mfrow = c(2,1))
 area.plot(mafragh$area,center = mafragh$xy,clab=0.75)
 area.plot(mafragh$area,center = mafragh$xy,graph=neig1)
-neig1 <- neig(mat01 = 1*(link1>0))
-nb1 <- neig2nb(neig1)
 if (require(spdep, quiet = TRUE)){
     lw1 <- apply(link1,1,function(x) x[x>0])
     listw1 <- nb2listw(nb1,lw1)

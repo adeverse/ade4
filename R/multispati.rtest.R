@@ -1,4 +1,4 @@
-multispati.rtest <- function (dudi, listw, nrepet = 99) {
+"multispati.rtest" <- function (dudi, listw, nrepet = 99) {
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
     n = length(listw$weights)

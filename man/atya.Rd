@@ -17,14 +17,16 @@ Fievet, E., Eppe, F. and Dolédec, S. (2001) Etude de la variabilité morphométriq
 }
 \examples{
 data(atya)
-atya.digi <- read.pnm(system.file("pictures/atyadigi.pnm",
- package = "ade4"))
-atya.carto <- read.pnm(system.file("pictures/atyacarto.pnm",
- package = "ade4"))
-par(mfrow = c(1,2))
-plot(atya.digi)
-plot(atya.carto)
-points(atya$xy, pch = 20, cex = 2)
+if (require(pixmap,quiet=TRUE)) {
+    atya.digi <- read.pnm(system.file("pictures/atyadigi.pnm",
+        package = "ade4"))
+    atya.carto <- read.pnm(system.file("pictures/atyacarto.pnm",
+        package = "ade4"))
+    par(mfrow = c(1,2))
+    plot(atya.digi)
+    plot(atya.carto)
+    points(atya$xy, pch = 20, cex = 2)
+}
 if (require(spdep, quiet = TRUE))
     plot(neig2nb(atya$neig), atya$xy, col = "red", add = TRUE,
      lwd = 2)

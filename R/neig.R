@@ -105,6 +105,25 @@
     return(res)
 }
 
+"neig2mat" <- function (neig) {
+    # synonyme de neig.util.GtoL plus simple de mémorisation
+    # donne la matrice d'incidence sommet-sommet en 0-1
+    if (!inherits(neig,"neig")) stop ("Object 'neig' expected")
+    deg <- attr(neig, "degrees")
+    n <- length(deg)
+    labels <- names(deg)
+    if (is.null(labels)) labels <- paste("P",1:nrow(mat),sep="")
+    neig <- unclass(neig)
+    G <- matrix(0, n, n)
+    for (i in 1:n) {
+        w <- neig[neig[, 1] == i, 2]
+        if (length(w) > 0) G[i, w] <- 1
+    }
+    G <- G + t(G)
+    G <- 1 * (G > 0)
+    dimnames(G) <- list(labels,labels)
+    return(G)
+}
 
 "neig.util.GtoL" <- function (G) {
     G <- as.matrix(G)

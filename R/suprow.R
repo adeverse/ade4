@@ -32,7 +32,6 @@
     coosup <- as.matrix(Xsup) %*% t(t(as.matrix(x$c1)) * x$cw)
     coosup <- data.frame(coosup, row.names = row.names(Xsup))
     names(coosup) <- names(x$li)
-    return(coosup)
     return(list(tabsup=Xsup, lisup=coosup))
 }
 

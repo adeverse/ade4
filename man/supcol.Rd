@@ -20,18 +20,20 @@ supcol.coa (x, Xsup, \dots)
 If \code{supcol.default} is used, the column vectors of \code{Xsup} are projected without prior modification onto the principal components of dudi with the scalar product associated to the row weightings of dudi.
 }
 \value{
-returns a data frame containing the coordinates of the supplementary projections
+returns a list of two components :
+\code{$tabsup} {data frame containing the array with the supplementary columns transformed or not}
+\code{$cosup} {data frame containing the coordinates of the supplementary projections}
 }
 \examples{
 data(rpjdl)
 rpjdl.coa <- dudi.coa(rpjdl$fau, scan = FALSE, nf = 4)
 rpjdl.coa$co[1:3,]
-supcol (rpjdl.coa,rpjdl$fau[,1:3]) # the same
+supcol (rpjdl.coa,rpjdl$fau[,1:3])$cosup # the same
 
 data(doubs)
 dudi1 <- dudi.pca(doubs$poi, scal = FALSE, scan = FALSE)
 s.arrow(dudi1$co)
-s.arrow(supcol.default(dudi1,data.frame(scalewt(doubs$mil))),
+s.arrow(supcol.default(dudi1,data.frame(scalewt(doubs$mil)))$cosup,
     add.p = TRUE, clab = 2)
 symbols(0, 0, circles = 1, inches = FALSE, add = TRUE)
 }

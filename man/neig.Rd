@@ -7,6 +7,7 @@
 \alias{scores.neig}
 \alias{nb2neig}
 \alias{neig2nb}
+\alias{neig2mat}
 \title{Neighbourhood Graphs}
 \description{
 \code{neig} creates objects of class 'neig' with : \cr
@@ -34,6 +35,7 @@ print.neig  (x, \dots)
 summary.neig  (object, \dots)
 nb2neig (nb)
 neig2nb (neig)
+neig2mat (neig)
 }
 \arguments{
 \item{list}{a list which each component gives the number of neighbours}

@@ -14,6 +14,8 @@
     Y <- scale(df2, scale = FALSE)
     X <- X/(sum(svd(X)$d^4)^0.25)
     Y <- Y/(sum(svd(Y)$d^4)^0.25)
+    X <- as.matrix(X)
+    Y <- as.matrix(Y)
     obs <- sum(svd(t(X) %*% Y)$d^2)
     if (nrepet == 0) 
         return(obs)

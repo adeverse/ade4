@@ -16,6 +16,8 @@
     tra2 <- sum(var2)
     X <- X/sqrt(tra1)
     Y <- Y/sqrt(tra2)
+    X <- as.matrix(X)
+    Y <- as.matrix(Y)
     obs <- sum(svd(t(X) %*% Y)$d)
     if (nrepet == 0) 
         return(obs)

@@ -22,6 +22,8 @@
         X <- X/sqrt(tra1)
         Y <- Y/sqrt(tra2)
     }
+    X <-as.matrix(X)
+    Y <- as.matrix(Y)
     PS <- t(X) %*% Y
     svd1 <- svd(PS)
     rank <- sum((svd1$d/svd1$d[1]) > tol)

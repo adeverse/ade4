@@ -172,8 +172,8 @@ return(res)
 }
 
 #######################################################################################
-phylog.permut<-function(phylog,list.nodes=
-    lapply(phylog$parts,function(a) if (length(a)==1) a else sample(a)),distance = TRUE){
+phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
+    if (is.null(list.nodes)) list.nodes <- lapply(phylog$parts,function(a) if (length(a)==1) a else sample(a))
     #############################
     adddistances<-function(){
         # cette fonction assure la conversion de tre

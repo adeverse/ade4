@@ -4,7 +4,6 @@
     cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0) 
 {
     "orthoneig" <- function (obj) {
-        tol <- 1e-07
         if (!inherits(obj, "neig")) 
             stop("Object of class 'neig' expected")
         b0 <- neig.util.LtoG(obj)
@@ -66,12 +65,13 @@
         else stop("unknown method for 'na.action'")
     }
     w <- t(vecpro/nobs)%*%vecpro
-    if (any(abs(diag(w)-1)>1e-07)) {
+    if (any(abs(diag(w)-1)>tol)) {
         # print(abs(diag(w)-1))
         stop("'orthobas' is not orthonormal for uniform weighting")
     }
     diag(w) <- 0
-    if ( any( abs(as.numeric(w))>1e-07) ) stop("'orthobas' is not orthogonal for uniform weighting")
+    if ( any( abs(as.numeric(w))>tol) )
+        stop("'orthobas' is not orthogonal for uniform weighting")
     if (nrepet < 99) nrepet <- 99
     if (posinega !=0) {
         if (posinega >= nobs-1) stop ("Non convenient value in 'posinega'")

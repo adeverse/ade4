@@ -26,11 +26,12 @@ for(k in 1:7)
     area.plot(julliot$area,val = log(julliot$tab[,k]+1),
      sub = names(julliot$tab)[k], csub = 2.5)
 
-par(mfrow = c(3,3))
-for(k in 1:7)
-    s.image(julliot$xy, log(julliot$tab[,k]+1), kgrid = 3, span = 0.25,
-     sub = names(julliot$tab)[k], csub = 2.5)
-
+if (require(splancs, quiet = TRUE)){
+    par(mfrow = c(3,3))
+    for(k in 1:7)
+      s.image(julliot$xy, log(julliot$tab[,k]+1), kgrid = 3, span = 0.25,
+      sub = names(julliot$tab)[k], csub = 2.5)
+}
 
 par(mfrow = c(3,3))
 for(k in 1:7) {
@@ -44,6 +45,7 @@ for(k in 1:7)
     s.value(julliot$xy,log(julliot$tab[,k]+1),
      sub = names(julliot$tab)[k], csub = 2.5)
 
+if (require(spdep, quiet = TRUE)){
 par(mfrow = c(1,1))
 neig0 <- nb2neig(dnearneigh(as.matrix(julliot$xy), 1, 1.8))
 s.label(julliot$xy, neig = neig0, clab = 0.75, incl = FALSE,
@@ -51,6 +53,6 @@ s.label(julliot$xy, neig = neig0, clab = 0.75, incl = FALSE,
 
 gearymoran(neig.util.LtoG(neig0), log(julliot$tab+1))
 orthogram(log(julliot$tab[,3]+1), ortho = scores.neig(neig0),
- nrepet = 9999)
+ nrepet = 9999)}
 }
 \keyword{datasets}

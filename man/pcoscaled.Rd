@@ -18,17 +18,16 @@ returns a data frame containing the Euclidean representation of the distance mat
 \references{Gower, J. C. (1966) Some distance properties of latent root and vector methods used in multivariate analysis. \emph{Biometrika}, \bold{53}, 325--338.
 }
 \examples{
-if (require(mva, quietly = TRUE)) {
-	a <- 1 / sqrt(3) - 0.2
-	w <- matrix(c(0,0.8,0.8,a,0.8,0,0.8,a,
-		0.8,0.8,,0,a,a,a,a,0),4,4)
-	w <- as.dist(w)
-	w <- cailliez(w)
-	w
-	pcoscaled(w)
-	dist(pcoscaled(w)) # w
-	dist(pcoscaled(2 * w)) # the same
-	sum(pcoscaled(w)^2) # unity
-}
+library(mva)
+    a <- 1 / sqrt(3) - 0.2
+    w <- matrix(c(0,0.8,0.8,a,0.8,0,0.8,a,
+        0.8,0.8,,0,a,a,a,a,0),4,4)
+    w <- as.dist(w)
+    w <- cailliez(w)
+    w
+    pcoscaled(w)
+    dist(pcoscaled(w)) # w
+    dist(pcoscaled(2 * w)) # the same
+    sum(pcoscaled(w)^2) # unity
 }
 \keyword{array}

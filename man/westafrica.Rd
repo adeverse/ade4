@@ -80,8 +80,7 @@ if (require(spdep, quiet = TRUE)){
 }
 
 par(mfrow = c(1,1))
-if (require(mva, quiet = TRUE)) {
+library(mva)
 plot(hclust(afri.dist,"ward"),h=-0.2)
-}
 }
 \keyword{datasets}

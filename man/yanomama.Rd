@@ -7,12 +7,12 @@ This data set gives 3 matrices about geographical, genetic and anthropometric di
 }
 \usage{data(yanomama)}
 \format{
-	\code{yanomama} is a list of 3 components:
-	\enumerate{
-		\item{geo}{is a matrix of 19-19 geographical distances}
-		\item{gen}{is a matrix of 19-19 SFA (genetic) distances}
-		\item{ant}{is a matrix of 19-19 anthropometric distances}
-	}
+    \code{yanomama} is a list of 3 components:
+    \enumerate{
+        \item{geo}{is a matrix of 19-19 geographical distances}
+        \item{gen}{is a matrix of 19-19 SFA (genetic) distances}
+        \item{ant}{is a matrix of 19-19 anthropometric distances}
+    }
 }
 \source{
 Spielman, R.S. (1973)\cr
@@ -27,18 +27,17 @@ Manly, B.F.J. (1991)\cr
 Chapman and Hall, London, 1--281.
 }
 \examples{
-if (require(mva, quietly = TRUE)) {
-	data(yanomama)
-	gen <- quasieuclid(as.dist(yanomama$gen)) # depends of mva
-	ant <- quasieuclid(as.dist(yanomama$ant)) # depends of mva
-	par(mfrow = c(2,2))
-	plot(gen, ant)
-	t1 <- mantel.randtest(gen, ant, 99);
-	plot(t1, main = "gen-ant-mantel") ; print(t1)
-	t1 <- procuste.rtest(pcoscaled(gen), pcoscaled(ant), 99)
-	plot(t1, main = "gen-ant-procuste") ; print(t1)
-	t1 <- RV.rtest(pcoscaled(gen), pcoscaled(ant), 99)
-	plot(t1, main = "gen-ant-RV") ; print(t1)
-}
+library(mva)
+    data(yanomama)
+    gen <- quasieuclid(as.dist(yanomama$gen)) # depends of mva
+    ant <- quasieuclid(as.dist(yanomama$ant)) # depends of mva
+    par(mfrow = c(2,2))
+    plot(gen, ant)
+    t1 <- mantel.randtest(gen, ant, 99);
+    plot(t1, main = "gen-ant-mantel") ; print(t1)
+    t1 <- procuste.rtest(pcoscaled(gen), pcoscaled(ant), 99)
+    plot(t1, main = "gen-ant-procuste") ; print(t1)
+    t1 <- RV.rtest(pcoscaled(gen), pcoscaled(ant), 99)
+    plot(t1, main = "gen-ant-RV") ; print(t1)
 }
 \keyword{datasets}

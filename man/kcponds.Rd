@@ -51,7 +51,6 @@ pca1 <- dudi.pca(kcponds$tab, scan = FALSE, nf = 4)
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
 multi1 <- multispati(pca1, nb2listw(neig2nb(kcponds$neig)),
      scan = FALSE, nfposi = 2, nfnega = 1)
-}
-summary(multi1)
+summary(multi1)}
 }
 \keyword{datasets}

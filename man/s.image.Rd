@@ -36,15 +36,16 @@ s.image(dfxy, z, xax = 1, yax = 2, span = 0.5, xlim = NULL, ylim = NULL, kgrid =
 }
 \examples{
     data(t3012)
+    if (require(splancs, quiet = TRUE)){
     par(mfrow=c(4,4))
     for(k in 1:12)  s.image(t3012$xy,scalewt(t3012$temp[,k]),kgrid=3)
     
     data(elec88)
-par(mfrow=c(4,4))
-for(k in 1:12)
+    par(mfrow=c(4,4))
+    for(k in 1:12)
     s.image(t3012$xy,scalewt(t3012$temp[,k]),kgrid=3,sub=names(t3012$temp)[k],
         csub=3,area=elec88$area)
 
-
+}
 }
 \keyword{hplot}

@@ -31,11 +31,11 @@ par(mfrow = c(1,1))
 plot(bif,dom,pch = 20)
 abline(lm(dom~bif))
 summary(lm(dom~bif))
-library(ape)
+if (require(ape, quiet = TRUE)){
 cor.test(bif,dom)
 phylo <- read.tree(text = maples$tre)
 pic.bif <- pic(bif, phylo)
 pic.dom <- pic(dom, phylo)
-cor.test(pic.bif, pic.dom)
+cor.test(pic.bif, pic.dom)}
 }
 \keyword{datasets}

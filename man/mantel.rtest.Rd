@@ -19,13 +19,12 @@ an object of class 'rtest' (randomization tests)
 \references{Mantel, N. (1967) The detection of disease clustering and a generalized regression approach. \emph{Cancer Research}, \bold{27}, 209--220.
 }
 \examples{
-if (require(mva, quietly=TRUE)) {
-	data(yanomama)
-	gen <- quasieuclid(as.dist(yanomama$gen))
-	geo <- quasieuclid(as.dist(yanomama$geo))
-	plot(r1 <- mantel.rtest(geo,gen), main = "Mantel's test")
-	r1
-}
+library(mva)
+    data(yanomama)
+    gen <- quasieuclid(as.dist(yanomama$gen))
+    geo <- quasieuclid(as.dist(yanomama$geo))
+    plot(r1 <- mantel.rtest(geo,gen), main = "Mantel's test")
+    r1
 }
 \keyword{array}
 \keyword{nonparametric}

@@ -16,11 +16,10 @@ dist.neig(neig)
 returns a distance matrix, object of class 'dist'
 }
 \examples{
-if (require(mva, quiet = TRUE)) {
-	data(elec88)
-	d0 <- dist.neig(elec88$neig)
-	plot(dist(elec88$xy),d0)
-}
+library(mva)
+    data(elec88)
+    d0 <- dist.neig(elec88$neig)
+    plot(dist(elec88$xy),d0)
 }
 \keyword{array}
 \keyword{multivariate}

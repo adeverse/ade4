@@ -85,14 +85,17 @@
 } 
 
 "acm.disjonctif" <- function (df) {
-    acm.util <- function(cl) {
+    acm.util <- function(i) {
+        cl <- df[,i]
+        cha <- names(df)[i] 
         n <- length(cl)
         cl <- as.factor(cl)
         x <- matrix(0, n, length(levels(cl)))
         x[(1:n) + n * (unclass(cl) - 1)] <- 1
-        dimnames(x) <- list(names(cl), levels(cl))
-        data.frame(x)
+        dimnames(x) <- list(row.names(df), paste(cha,levels(cl),sep="."))
+        return(x)
     }
-    G <- data.frame(c(lapply(df, acm.util), check.names = FALSE))
+    G <- lapply(1:ncol(df), acm.util)
+    G <- data.frame (G, check.names = FALSE)
     return(G)
 }

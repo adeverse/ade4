@@ -1,10 +1,20 @@
+PI2newick               Import data files from Phylogenetic
+                        Independance Package
 RV.rtest                Monte-Carlo Test on the sum of eigenvalues of
                         a co-inertia analysis (in R).
+abouheif.eg             Phylogenies and quantitative traits from
+                        Abouheif
+acacia                  Spatial pattern analysis in plant communities
 ade4toR                 Format Change Utility
+aminoacyl               Codon usage
 ardeche                 Fauna Table with double (row and column)
                         partitioning
 area.plot               Graphical Display of Areas
+arrival                 Arrivals at an intensive care unit
+as.taxo                 Taxonomy
 atlas                   Small Ecological Dataset
+atya                    Genetic variability of Cacadors
+avijons                 Bird species distribution
 avimedi                 Fauna Table for Constrained Ordinations
 aviurba                 Ecological Tables Triplet
 bacteria                Genomes of 43 Bacteria
@@ -15,10 +25,15 @@ bf88                    Cubic Ecological Data
 bicenter.wt             Double Weighted Centring
 bordeaux                Wine Tasting
 bsetal97                Ecological and Biological Traits
+buech                   Buech basin
 butterfly               Genetics-Ecology-Environment Triple
 cailliez                Transformation to make Euclidean a distance
                         matrix
 capitales               Road Distances
+carni19                 Phylogeny and quantative trait of carnivora
+carni70                 Phylogeny and quantitative traits of carnivora
+carniherbi49            Taxonomy, phylogenies and quantitative traits
+                        of carnivora and herbivora
 cca                     Canonical Correspondence Analysis
 chatcat                 Qualitative Weighted Variables
 chats                   Pair of Variables
@@ -26,6 +41,7 @@ chazeb                  Charolais-Zebus
 clementines             Fruit Production
 coinertia               Coinertia Analysis
 coleo                   Table of Fuzzy Biological Traits
+corvus                  Corvus morphology
 deug                    Exam marks for some students
 discrimin               Linear Discriminant Analysis (descriptive
                         statistic)
@@ -40,6 +56,7 @@ dist.prop               Computation of Distance Matrices of Percentage
                         Data
 dist.quant              Computation of Distance Matrices on
                         Quantitative Variables
+dotcircle               Representation of n values on a circle
 doubs                   Pair of Ecological Tables
 dudi                    Duality Diagram
 dudi.acm                Multiple Correspondence Analysis
@@ -52,21 +69,29 @@ dudi.nsc                Non symmetric correspondence analysis
 dudi.pca                Principal Component Analysis
 dudi.pco                Principal Coordinates Analysis
 dunedata                Dune Meadow Data
+ecg                     Electrocardiogram data
 ecomor                  Ecomorphological Convergence
 elec88                  Electoral Data
 escopage                K-tables of wine-tasting
 euro123                 Triangular Data
+fission                 Fission pattern and heritable morphological
+                        traits
 foucart                 K-tables Correspondence Analysis with the same
                         rows and the same columns
 friday87                Faunistic K-tables
 fruits                  Pair of Tables
+gearymoran              Moran's I and Geary'c randomization tests for
+                        spatial and phylogenetic autocorrelation
 granulo                 Granulometric Curves
+gridrowcol              Complete regular grid analysis
 housetasks              Contingency Table
 ichtyo                  Point sampling of fish community
 inertia.dudi            Statistics of inertia in a one-table analysis
 irishdata               Geary's Irish Data
 is.euclid               Is a Distance Matrix Euclidean ?
+julliot                 Seed dispersal
 jv73                    K-tables Multi-Regions
+kcponds                 Ponds in a nature reserve
 kplot                   Generic Function for Multiple Graphs in a
                         K-tables Analysis
 kplot.foucart           Multiple Graphs for the Foucart's
@@ -79,16 +104,21 @@ kplot.pta               Multiple Graphs for a Partial Triadic Analysis
 kplot.sepan             Multiple Graphs for Separed Analyses in a
                         K-tables
 kplot.statis            Multiple Graphs of a STATIS Analysis
+krandtest               Class of the Permutation Tests (in C).
 ktab                    the class of objects 'ktab' (K-tables)
 ktab.data.frame         Creation of K-tables from a data frame
-ktab.list.df            Creating a K-tables from a list of data frame.
+ktab.list.df            Creating a K-tables from a list of data
+                        frames.
 ktab.list.dudi          Creation of a K-tables from a list of duality
                         diagrams
+ktab.match2ktabs        STATIS and Co-Inertia : Analysis of a series
+                        of paired ecological tables
 ktab.within             Process to go from a Within Analysis to a
                         K-tables
 lascaux                 Genetic/Environment and types of variables
 lingoes                 Transformation of a Distance Matrix for
                         becoming Euclidean
+lizards                 Phylogeny and quantitative traits of lizards
 macaca                  Landmarks
 macon                   Wine Tasting
 mafragh                 Phyto-Ecological Survey
@@ -96,21 +126,41 @@ mantel.randtest         Mantel test (correlation between two distance
                         matrices (in C).)
 mantel.rtest            Mantel test (correlation between two distance
                         matrices (in R).)
+maples                  Phylogeny and quantitative traits of flowers
 mariages                Correspondence Analysis Table
 mcoa                    Multiple CO-inertia Analysis
+meau                    Ecological Data : sites-variables,
+                        sites-species, where and when
 meaudret                Ecological Data : sites-variables,
                         sites-species, where and when
 mfa                     Multiple Factorial Analysis
 microsatt               Genetic Relationships between cattle breeds
                         with microsatellites
+mjrochet                Phylogeny and quantitative traits of teleos
+                        fishes
+mld                     Multi Level Decomposition of unidimensional
+                        data
 mollusc                 Faunistic Communities and Sampling Experiment
 monde84                 Global State of the World in 1984
 morphosport             Athletes' Morphology
+multispati              Multivariate spatial analysis
+multispati.randtest     Multivariate spatial autocorrelation test (in
+                        C)
+multispati.rtest        Multivariate spatial autocorrelation test
 neig                    Neighbourhood Graphs
+newick.eg               Phylogenetic trees in Newick format
+newick2phylog           Create phylogeny
 niche                   Method to Analyse a pair of tables :
                         Environmental and Faunistic Data
+njplot                  Phylogeny and trait of bacteria
 olympic                 Olympic Decathlon
+oribatid                Oribatid mite
+orthobasis              Orthonormal basis for orthonormal transform
+orthogram               Orthonormal decomposition of variance
 ours                    A table of Qualitative Variables
+palm                    Phylogenetic and quantitative traits of
+                        amazonian palm trees
+pap                     Taxonomy and quantitative traits of carnivora
 pcaiv                   Principal component analysis with respect to
                         instrumental variables
 pcaivortho              Principal Component Analysis with respect to
@@ -118,6 +168,9 @@ pcaivortho              Principal Component Analysis with respect to
 pcoscaled               Simplified Analysis in Principal Coordinates
 perthi02                Contingency Table with a partition in
                         Molecular Biology
+phylog                  Phylogeny
+plot.phylog             Plot phylogenies
+procella                Phylogeny and quantitative traits of birds
 procuste                Simple Procruste Rotation between two sets of
                         points
 procuste.randtest       Monte-Carlo Test on the sum of the singular
@@ -125,9 +178,8 @@ procuste.randtest       Monte-Carlo Test on the sum of the singular
 procuste.rtest          Monte-Carlo Test on the sum of the singular
                         values of a procustean rotation (in R).
 pta                     Partial Triadic Analysis of a K-tables
-quasieuclid             Transformation of a distance matrice to an
+quasieuclid             Transformation of a distance matrice to a
                         Euclidean one
-randtest-internal       Internal Permutation Tests functions (in C).
 randtest                Class of the Permutation Tests (in C).
 randtest.between        Monte-Carlo Test on the between-groups inertia
                         percentage (in C).
@@ -153,6 +205,9 @@ s.class                 Plot of factorial maps with representation of
 s.corcircle             Plot of the factorial maps of a correlation
                         circle
 s.distri                Plot of a frequency distribution
+s.hist                  Display of a scatterplot and its two marginal
+                        histograms
+s.image                 Graph of a variable using image and contour
 s.label                 Scatter Plot
 s.match                 Plot of Paired Coordinates
 s.traject               Trajectory Plot
@@ -189,21 +244,34 @@ statis                  STATIS, a method for analysing K-tables
 steppe                  Transect in the Vegetation
 supcol                  Projections of Supplementary Columns
 suprow                  Projections of Supplementary Rows
+symbols.phylog          Representation of a quantitative variable in
+                        front of a phylogenetic tree
 syndicats               Two Questions asked on a Sample of 1000
                         Respondents
+t3012                   Average temperatures of 30 French cities
 table.cont              Plot of Contingency Tables
 table.dist              Graph Display for Distance Matrices
 table.paint             Plot of the arrays by grey levels
+table.phylog            Plot arrays in front of a phylogenetic tree
 table.value             Plot of the Arrays
 tarentaise              Mountain Avifauna
+taxo.eg                 Examples of taxonomy
+testdiscrimin           Internal Permutation Tests functions (in C).
+tintoodiel              Tinto and Odiel estuary geochemistry
+tithonia                Phylogeny and quantitative traits of flowers
 tortues                 Morphological Study of the Painted Turtle
 toxicity                Homogeneous Table
 triangle.plot           Triangular Plotting
 trichometeo             Pair of Ecological Data
+ungulates               Phylogeny and quantitative traits of
+                        ungulates.
 uniquewt.df             Elimination of Duplicated Rows in a Array
+variance.phylog         The phylogenetic ANOVA
 veuvage                 Example for Centring in PCA
+westafrica              Freshwater fish zoogeography in west Africa
 within                  Within Analyses
 within.pca              Normed within Principal Component Analysis
 witwit.coa              Internal Correspondence Analysis
 worksurv                French Worker Survey (1970)
 yanomama                Distance Matrices
+zealand                 Road distances in New-Zealand

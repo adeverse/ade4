@@ -1,93 +1,85 @@
-RDA2
-A
+RDA1
+4 0
+9 row.names
+5 class
+5 names
+8 bordeaux
+2 0 0
+1 0 0
+4
+-1
+19 0 1
+4
+14 0 0
+5
+ 45
+ 87
+ 0
+ 36
+ 0
+-1
+
+14 0 0
+5
+ 126
+ 93
+ 0
+ 68
+ 30
+-1
+
+14 0 0
+5
+ 24
+ 19
+ 52
+ 74
+ 111
+-1
+
+14 0 0
+5
+ 5
+ 1
+ 148
+ 22
+ 59
+-1
+
+2 0 0
+1 0 0
+3
+-1
+16 0 0
+4
+ 9 excellent
+ 4 good
+ 8 mediocre
+ 6 boring
+-1
+2 0 0
+1 0 0
 2
-67074
-66560
-1026
+-1
+16 0 0
 1
-5129
-8
-bordeaux
-1811
-4
-1038
-5
-45
-87
-0
-36
-0
-1038
-5
-126
-93
-0
-68
-30
-1038
-5
-24
-19
-52
-74
-111
-1038
-5
-5
+ 10 data.frame
+-1
+2 0 0
+1 0 0
 1
-148
-22
-59
-1026
-1
-5129
+-1
+16 0 0
 5
-names
-1040
-4
-1033
-9
-excellent
-1033
-4
-good
-1033
-8
-mediocre
-1033
-6
-boring
-1026
-1
-5129
-5
-class
-1040
-1
-1033
-10
-data.frame
-1026
-1
-5129
-9
-row.names
-1040
-5
-1033
-13
-Cru_Bourgeois
-1033
-16
-Grand_Cru_class\351
-1033
-12
-Vin_de_table
-1033
-18
-Bordeaux_d_origine
-1033
-13
-Vin_de_marque
-254
-254
+ 13 Cru_Bourgeois
+ 16 Grand_Cru_class\351
+ 12 Vin_de_table
+ 18 Bordeaux_d_origine
+ 13 Vin_de_marque
+-1
+-1
+-1
+-1
+-1
+-1
+-1

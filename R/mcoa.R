@@ -3,6 +3,7 @@
 {
     if (!inherits(X, "ktab")) 
         stop("object 'ktab' expected")
+    option <- option[1]
     if (option == "internal") {
         if (is.null(X$tabw)) {
             warning("Internal weights not found: uniform weigths are used")

@@ -6,6 +6,7 @@
         stop("Object of type 'mcoa' expected")
     opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
     on.exit(par(opar))
+    option <- option[1]
     if (option == "points") {
         if (is.null(mfrow)) 
             mfrow <- n2mfrow(length(which.tab) + 1)

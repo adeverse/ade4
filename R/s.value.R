@@ -32,6 +32,8 @@
         }
         apply(unclass(neig), 1, fun, coo = coo)
     }
+    
+    method <- method [1]
     if (method == "greylevel") {
         br0 <- pretty(z, 6)
         nborn <- length(br0)

@@ -9,6 +9,7 @@
     if ((xax > nf) || (xax < 1) || (yax > nf) || (yax < 1) || 
         (xax == yax)) 
         stop("Non convenient selection")
+    method <- method[1]
     if (method == 1) {
         coolig <- x$li[, c(xax, yax)]
         coocol <- x$co[, c(xax, yax)]

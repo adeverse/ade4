@@ -60,6 +60,7 @@
         return(w)
     }
     index <- cbind(col(d)[col(d) < row(d)], row(d)[col(d) < row(d)])
+    method <- method[1]
     if (method == 1) 
         d <- unlist(apply(index, 1, fun1))
     else if (method == 2) 

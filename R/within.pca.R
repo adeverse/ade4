@@ -17,6 +17,7 @@
     tabw <- tabw/sum(tabw)
     tabwit <- df
     tabwit <- tabwit - tabmoy[fac, ]
+    scaling <- scaling[1]
     if (scaling == "total") {
         tabwit <- scalewt(tabwit, center = FALSE, scale = TRUE)
     }

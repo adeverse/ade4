@@ -21,7 +21,7 @@
     if (clabel > 0) {
         coox <- tapply(coo$x, fac, mean)
         cooy <- tapply(coo$y, fac, mean)
-        scatterutil.eti(coox, cooy, label, clabel, col)
+        scatterutil.eti(coox, cooy, label, clabel, coul = col)
     }
     box()
 }

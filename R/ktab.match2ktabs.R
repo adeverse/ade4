@@ -22,13 +22,15 @@
     if (any(cwX != cwY)) stop("The two ktabs must have the same column weights")
     if (ntabX != ntabY) stop("The two ktabs must have the same number of tables")
     if (!all(bloX == bloY)) stop("The two tables of one pair must have the same number of columns")
-#### Compute crossed ktab
     ntab <- ntabX
+    indica <- as.factor(rep(1:ntab, KTX$blo))
+    lw <- split(cwX, indica)
+ #### Compute crossed ktab
     for (i in 1:ntab) {
-	tx <- as.matrix(KTX[[i]])
-	ty <- as.matrix(KTY[[i]])
-	res[[i]] <- as.data.frame(tx %*% t(ty) * cwX)
-    }
+        tx <- as.matrix(KTX[[i]])
+        ty <- as.matrix(KTY[[i]])
+        res[[i]] <- as.data.frame(tx %*% (t(ty) * lw[[i]]))
+     }
 #### Complete crossed ktab structure
     res$lw <- rep(1, nligX)/nligX
     res$cw <- rep(rep(1, nligY)/nligY,ntab)

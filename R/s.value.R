@@ -1,5 +1,5 @@
 "s.value" <- function (dfxy, z, xax = 1, yax = 2, method = c("squaresize",
-    "greylevel", "circle"), csize = 1, cpoint = 0, pch = 20, 
+    "greylevel"), csize = 1, cpoint = 0, pch = 20, 
     clegend = 0.75, neig = NULL, cneig = 1, xlim = NULL, ylim = NULL, 
     grid = TRUE, addaxes = TRUE, cgrid = 0.75, include.origin = TRUE, 
     origin = c(0, 0), sub = "", csub = 1, possub = "topleft", 
@@ -77,7 +77,7 @@
             points(coo$x, coo$y, pch = pch, cex = par("cex") * 
                 cpoint)
     }
-    else if (method == "circles") {
+    else if (method == "circlesize") {
         print("not yet implemented")
     }
     box()

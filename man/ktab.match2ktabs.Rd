@@ -1,12 +1,12 @@
-\name{statico}
-\alias{statico}
+\name{ktab.match2ktabs}
+\alias{ktab.match2ktabs}
 \title{STATIS and Co-Inertia : Analysis of a series of paired ecological tables}
 \description{
 Prepares the analysis of a series of paired ecological tables. Partial Triadic
 Analysis (see \code{\link{pta}}) can be used thereafter to perform the analysis of this k-table.
 }
 \usage{
-statico(KTX, KTY)
+ktab.match2ktabs(KTX, KTY)
 }
 \arguments{
   \item{KTX}{an objet of class 'ktab'}
@@ -30,7 +30,7 @@ pcafau <- dudi.pca(meau$fau, scale = FALSE, scan = FALSE, nf = 2)
 wit2 <- within(pcafau, meau$plan$dat, scan = FALSE, nf = 2)
 kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5","S6"), 4))
 kta2 <- ktab.within(wit2, colnames = rep(c("S1","S2","S3","S4","S5","S6"), 4))
-kcoi <- statico(kta1, kta2)
+kcoi <- ktab.match2ktabs(kta1, kta2)
 ptacoi <- pta(kcoi, scan = FALSE, nf = 2)
 plot(ptacoi)
 kplot(ptacoi)

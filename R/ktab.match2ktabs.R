@@ -1,4 +1,4 @@
-"statico" <- function (KTX, KTY) {
+"ktab.match2ktabs" <- function (KTX, KTY) {
     if (!inherits(KTX, "ktab")) stop("The first argument must be a 'ktab'")
     if (!inherits(KTY, "ktab")) stop("The second argument must be a 'ktab'")
 #### crossed ktab

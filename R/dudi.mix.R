@@ -73,7 +73,7 @@
             w <- acm.util(factor(df[, j]))
             cha <- paste(substr(names(df)[j], 1, 5), ".", names(w), 
                 sep = "")
-            col.w.provi <- drop(row.w %*% as.matrix(w))
+            col.w.provi <- apply(w, 2, function(x) sum(x*row.w))
             w <- t(t(w)/col.w.provi) - 1
             col.w <- c(col.w, col.w.provi)
             res <- cbind(res, w)

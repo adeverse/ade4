@@ -95,7 +95,7 @@ s.label(xy, area = irishdata$area, incl = FALSE, clab = 0,
 cpoi = 3, addax = FALSE, contour = w)
 s.label(xy, area = irishdata$area, incl = FALSE, 
 addax = FALSE, contour = w)
-if (require(spdep, quiet = TRUE) & require(maptools, quiet = TRUE)) {
+if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(columbus)
     par(mfrow = c(2,2))
     plot(col.gal.nb, coords, pch = 20, cex = 2)

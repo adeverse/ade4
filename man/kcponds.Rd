@@ -48,7 +48,7 @@ w <- as.numeric(scalewt(kcponds$tab$N))
 s.value(kcponds$xy, w, cleg = 2, sub = "Nitrogen concentration",
      csub = 4, possub = "topright", include = FALSE)
 pca1 <- dudi.pca(kcponds$tab, scan = FALSE, nf = 4)
-if(require(spdep, quiet = TRUE)){
+if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
 multi1 <- multispati(pca1, nb2listw(neig2nb(kcponds$neig)),
      scan = FALSE, nfposi = 2, nfnega = 1)
 }

@@ -46,7 +46,8 @@ if (require(pixmap,quiet=TRUE)) {
     grid = FALSE, addax = FALSE, cleg = 0, sub = "F2+WATER", csub = 3)
 }
 
-if (require(spdep, quiet = TRUE)) {
+if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE) 
+        & require( pixmap, quiet = TRUE) ) {
     link1 <- area2link(avijons$area)
     lw1 <- apply(link1,1,function(x) x[x>0])
     neig1 <- neig(mat01=1*(link1>0))
@@ -60,9 +61,7 @@ if (require(spdep, quiet = TRUE)) {
     barplot(jons.ms$eig)
     s.corcircle(jons.ms$as)
     plot(jons.coa$li[,1], jons.ms$li[,1])
-}
 
-if (require(pixmap,quiet=TRUE)) {
     par(mfcol=c(3,2))
     s.value(avijons$xy, jons.ms$li[,1], pixmap = pnm.rou, inclu = FALSE,
     grid = FALSE, addax = FALSE, cleg = 0, sub = "F1+ROADS", csub = 3)

@@ -59,24 +59,24 @@ barplot(afri.pco$li[,2])
 barplot(afri.pco$li[,3])
 
 if (require(spdep, quiet = TRUE)){
-#multivariate spatial analysis
-afri.neig <- neig(n.line = 33)
-afri.nb <- neig2nb(afri.neig)
-afri.listw <- nb2listw(afri.nb)
-afri.ms <- multispati(afri.pco, afri.listw, scan = FALSE,
-    nfposi = 6, nfnega = 0)
-par(mfrow=c(3,1))
-barplot(afri.ms$li[,1])
-barplot(afri.ms$li[,2])
-barplot(afri.ms$li[,3])
+    #multivariate spatial analysis
+    afri.neig <- neig(n.line = 33)
+    afri.nb <- neig2nb(afri.neig)
+    afri.listw <- nb2listw(afri.nb)
+    afri.ms <- multispati(afri.pco, afri.listw, scan = FALSE,
+        nfposi = 6, nfnega = 0)
+    par(mfrow=c(3,1))
+    barplot(afri.ms$li[,1])
+    barplot(afri.ms$li[,2])
+    barplot(afri.ms$li[,3])
 
-par(mfrow=c(2,2))
-s.label(afri.ms$li, clab = 0.75, cpoi = 0, neig = afri.neig,
-    cneig = 1.5)
-s.value(afri.ms$li, afri.ms$li[,3])
-s.value(afri.ms$li, afri.ms$li[,4])
-s.value(afri.ms$li, afri.ms$li[,5])
-summary(afri.ms)
+    par(mfrow=c(2,2))
+    s.label(afri.ms$li, clab = 0.75, cpoi = 0, neig = afri.neig,
+       cneig = 1.5)
+    s.value(afri.ms$li, afri.ms$li[,3])
+    s.value(afri.ms$li, afri.ms$li[,4])
+    s.value(afri.ms$li, afri.ms$li[,5])
+    summary(afri.ms)
 }
 
 par(mfrow = c(1,1))

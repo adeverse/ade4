@@ -103,7 +103,7 @@ if (require(tripack, quietly=TRUE)) {
 }
 par(mfrow = c(1,1))
 
-if (require(spdep, quietly=TRUE)) {
+if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(columbus)
     par(mfrow = c(2,1))
     par(mar = c(0.1,0.1,0.1,0.1))

@@ -26,7 +26,7 @@ s.label(tintoodiel$xy,pixmap = estuary.pnm, neig = tintoodiel$neig,
 }
 
 estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
-if (require(spdep, quiet = TRUE)){
+if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
 estuary.listw <- nb2listw(neig2nb(tintoodiel$neig))
 estuary.pca.ms <- multispati(estuary.pca, estuary.listw, scan = FALSE,
     nfposi = 3,nfnega = 2)

@@ -26,7 +26,7 @@ Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
 \examples{
-if(require(spdep, quiet = TRUE)){
+if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(mafragh)
     maf.xy <- mafragh$xy
     maf.flo <- mafragh$flo

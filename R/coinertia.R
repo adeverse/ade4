@@ -26,37 +26,117 @@
         nf <- dudiX$nf
     if (nf > dudiY$nf) 
         nf <- dudiY$nf
-    coi <- as.dudi(tabcoiner, dudiX$cw, dudiY$cw, scannf = scannf, 
-        nf = nf, call = match.call(), type = "coinertia")
-    U <- as.matrix(coi$c1) * unlist(coi$cw)
-    U <- data.frame(as.matrix(dudiX$tab) %*% U)
-    row.names(U) <- row.names(dudiX$tab)
-    names(U) <- paste("AxcX", (1:coi$nf), sep = "")
-    coi$lX <- U
-    U <- normalise.w(U, dudiX$lw)
-    names(U) <- paste("NorS", (1:coi$nf), sep = "")
-    coi$mX <- U
-    U <- as.matrix(coi$l1) * unlist(coi$lw)
-    U <- data.frame(as.matrix(dudiY$tab) %*% U)
-    row.names(U) <- row.names(dudiY$tab)
-    names(U) <- paste("AxcY", (1:coi$nf), sep = "")
-    coi$lY <- U
-    U <- normalise.w(U, dudiY$lw)
-    names(U) <- paste("NorS", (1:coi$nf), sep = "")
-    coi$mY <- U
-    U <- as.matrix(coi$c1) * unlist(coi$cw)
-    U <- data.frame(t(as.matrix(dudiX$c1)) %*% U)
-    row.names(U) <- paste("Ax", (1:dudiX$nf), sep = "")
-    names(U) <- paste("AxcX", (1:coi$nf), sep = "")
-    coi$aX <- U
-    U <- as.matrix(coi$l1) * unlist(coi$lw)
-    U <- data.frame(t(as.matrix(dudiY$c1)) %*% U)
-    row.names(U) <- paste("Ax", (1:dudiY$nf), sep = "")
-    names(U) <- paste("AxcY", (1:coi$nf), sep = "")
-    coi$aY <- U
-    RV <- sum(coi$eig)/sqrt(sum(dudiX$eig^2))/sqrt(sum(dudiY$eig^2))
-    coi$RV <- RV
-    return(coi)
+    if ((lig1<col1) & (lig1<col2)) {
+        tol <- 1e-07
+        w1 <- t(dudiX$tab)*dudiX$cw
+        w1 <- as.matrix(dudiX$tab)%*%w1
+        w1 <- dudiX$lw*w1
+        w2 <- t(dudiY$tab)*dudiY$cw
+        w2 <- as.matrix(dudiY$tab)%*%w2
+        w2 <- dudiY$lw*w2
+        w1 <- w1%*%w2
+        w1 <- eigen(w1)
+        res <- list(tab = tabcoiner, cw = dudiX$cw, lw = dudiY$cw)
+        rank <- sum((w1$values/w1$values[1]) > tol)
+        if (scannf) {
+            barplot(w1$values[1:rank])
+            cat("Select the number of axes: ")
+            nf <- as.integer(readLines(n = 1))
+        }
+        if (nf <= 0) 
+            nf <- 2
+        if (nf > rank) 
+            nf <- rank
+        res$eig <- w1$values[1:rank]
+        res$rank <- rank
+        res$nf <- nf
+        w1 <- w1$vectors[,1:nf]
+        U <- t(dudiY$tab)%*%w1
+        U <- normalise.w(U, dudiY$cw)
+        res$l1 <- U
+        res$l1 <- as.data.frame(res$l1)
+        names(res$l1) <- paste("RS", (1:nf), sep = "")
+        row.names(res$l1) <- names(dudiY$tab)
+        U <- t(t(U)*sqrt(res$eig[1:nf]))
+        res$li <- U
+        res$li <- as.data.frame(res$li)
+        names(res$li) <- paste("Axis", (1:nf), sep = "")
+        row.names(res$li) <- names(dudiY$tab)
+        U <- as.matrix(dudiY$tab)
+        U <- U*dudiY$lw
+        U <- U%*%(as.matrix(res$l1)*dudiY$cw)
+        U <- t(dudiX$tab)%*%U
+        res$co <- U
+        res$co <- as.data.frame(res$co)
+        names(res$co) <- paste("Comp", (1:nf), sep = "")
+        row.names(res$co) <- names(dudiX$tab)
+        U <- t(t(U)/sqrt(res$eig[1:nf]))
+        res$c1 <- U
+        res$c1 <- as.data.frame(res$c1)
+        names(res$c1) <- paste("CS", (1:nf), sep = "")
+        row.names(res$c1) <- names(dudiX$tab)
+
+        U <- as.matrix(res$c1) * dudiX$cw
+        U <- data.frame(as.matrix(dudiX$tab) %*% U)
+        row.names(U) <- row.names(dudiX$tab)
+        names(U) <- paste("AxcX", (1:res$nf), sep = "")
+        res$lX <- U
+        U <- normalise.w(U, dudiX$lw)
+        names(U) <- paste("NorS", (1:res$nf), sep = "")
+        res$mX <- U
+        U <- as.matrix(res$l1) * dudiY$cw
+        U <- data.frame(as.matrix(dudiY$tab) %*% U)
+        row.names(U) <- row.names(dudiY$tab)
+        names(U) <- paste("AxcY", (1:res$nf), sep = "")
+        res$lY <- U
+        U <- normalise.w(U, dudiY$lw)
+        names(U) <- paste("NorS", (1:res$nf), sep = "")
+        res$mY <- U
+        U <- as.matrix(res$c1) * dudiX$cw
+        U <- data.frame(t(as.matrix(dudiX$c1)) %*% U)
+        row.names(U) <- paste("Ax", (1:dudiX$nf), sep = "")
+        names(U) <- paste("AxcX", (1:res$nf), sep = "")
+        res$aX <- U
+        U <- as.matrix(res$l1) * dudiY$cw
+        U <- data.frame(t(as.matrix(dudiY$c1)) %*% U)
+        row.names(U) <- paste("Ax", (1:dudiY$nf), sep = "")
+        names(U) <- paste("AxcY", (1:res$nf), sep = "")
+        res$aY <- U
+        res$call <- match.call()
+        class(res) <- c("coinertia", "dudi")
+    } else {
+        res <- as.dudi(tabcoiner, dudiX$cw, dudiY$cw, scannf = scannf, 
+            nf = nf, call = match.call(), type = "coinertia")
+        U <- as.matrix(res$c1) * unlist(res$cw)
+        U <- data.frame(as.matrix(dudiX$tab) %*% U)
+        row.names(U) <- row.names(dudiX$tab)
+        names(U) <- paste("AxcX", (1:res$nf), sep = "")
+        res$lX <- U
+        U <- normalise.w(U, dudiX$lw)
+        names(U) <- paste("NorS", (1:res$nf), sep = "")
+        res$mX <- U
+        U <- as.matrix(res$l1) * unlist(res$lw)
+        U <- data.frame(as.matrix(dudiY$tab) %*% U)
+        row.names(U) <- row.names(dudiY$tab)
+        names(U) <- paste("AxcY", (1:res$nf), sep = "")
+        res$lY <- U
+        U <- normalise.w(U, dudiY$lw)
+        names(U) <- paste("NorS", (1:res$nf), sep = "")
+        res$mY <- U
+        U <- as.matrix(res$c1) * unlist(res$cw)
+        U <- data.frame(t(as.matrix(dudiX$c1)) %*% U)
+        row.names(U) <- paste("Ax", (1:dudiX$nf), sep = "")
+        names(U) <- paste("AxcX", (1:res$nf), sep = "")
+        res$aX <- U
+        U <- as.matrix(res$l1) * unlist(res$lw)
+        U <- data.frame(t(as.matrix(dudiY$c1)) %*% U)
+        row.names(U) <- paste("Ax", (1:dudiY$nf), sep = "")
+        names(U) <- paste("AxcY", (1:res$nf), sep = "")
+        res$aY <- U
+    }
+    RV <- sum(res$eig)/sqrt(sum(dudiX$eig^2))/sqrt(sum(dudiY$eig^2))
+    res$RV <- RV
+    return(res)
 }
 
 "plot.coinertia" <- function (x, xax = 1, yax = 2, ...) {

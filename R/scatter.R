@@ -326,8 +326,8 @@
         x1 <- x[i]
         y1 <- y[i]
         if (boxes) {
-        	xh <- strwidth(cha, cex = cex0)
-        	yh <- strheight(cha, cex = cex0) * 5/3
+            xh <- strwidth(cha, cex = cex0)
+            yh <- strheight(cha, cex = cex0) * 5/3
             rect(x1 - xh/2, y1 - yh/2, x1 + xh/2, y1 + yh/2, col= "white", border = coul[i])
         }
         text(x1, y1, cha, cex = cex0, col=coul[i])

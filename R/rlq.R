@@ -28,9 +28,8 @@ function (dudiRLQ, fixed="R")
 
     }
     return(coinertia(dudiX,dudiY,scannf=F,nf=dudiRLQ$nf))
-    
-
 }
+
 "dudi.hillsmith" <-
 function (df, row.w=rep(1, nrow(df))/nrow(df), scannf = TRUE, nf = 2) 
 {

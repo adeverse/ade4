@@ -5,6 +5,7 @@
 \alias{area2link}
 \alias{area.util.contour}
 \alias{area.util.xy}
+\alias{area.util.class}
 \title{Graphical Display of Areas}
 \description{
 'area' is a data frame with three variables.\cr
@@ -18,7 +19,7 @@ poly2area takes an object of class 'polylist' (spdep package, that contains the
 older package 'spweights') and returns a data frame of type area.\cr
 area2poly takes an object of type 'area' and returns a list of class 'polylist'\cr
 area2link takes an object of type 'area' and returns a proximity matrix which terms are given by the length of the frontier between two polygons. \cr
-area.util.contour and area.util.xy are two utility functions.
+area.util.contour,area.util.xy and area.util.class are three utility functions.
 }
 \usage{
 area.plot(x, center = NULL, values = NULL, graph = NULL, lwdgraph = 2,

@@ -1,6 +1,6 @@
 \name{mafragh}
 \alias{mafragh}
-\non_function{}
+\docType{data}
 \title{Phyto-Ecological Survey}
 \description{
 This data set gives environmental and spatial informations about species and sites. 
@@ -34,6 +34,5 @@ s.value(mafragh$xy, pca1$li[,1], sub = "Axis 1 - PCA")
 s.class(pca1$li, mafragh$partition, sub = "Plane 1-2 - PCA")
 s.class(coa1$li, mafragh$partition, sub = "Plane 1-2 - COA")
 s.chull(mafragh$xy, mafragh$partition, optchull = 1)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -1,6 +1,6 @@
 \name{seconde}
 \alias{seconde}
-\non_function{}
+\docType{data}
 \title{Students and  Subjects}
 \description{
 The \code{seconde} data frame gives the marks of 22 students for 8 subjects. 

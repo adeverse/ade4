@@ -60,7 +60,5 @@ interAplusB <- pcaiv(coa1, avimedi$plan, scan = FALSE)
 s.match(interAplusB$li, interAplusB$ls, clab = 0, 
     sub = "Contrainte A + B")
 s.class(interAplusB$li, cla, add.plot = TRUE)
-
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}

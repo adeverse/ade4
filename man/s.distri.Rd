@@ -32,7 +32,7 @@ s.distri(dfxy, dfdistri, xax = 1, yax = 2, cstar = 1,
   \item{include.origin}{a logical value indicating whether the point "origin" should be belonged to the graph space}
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{cgrid}{a character size, parameter used with par("cex")* \code{cgrid} to indicate the mesh of the grid}
   \item{pixmap}{an object 'pixmap' displayed in the map background}
   \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a line (x1,y1,x2,y2)}
@@ -61,7 +61,6 @@ par(mfrow = c(3,4))
 for (i in c(1,5,8,20,21,23,26,33,36,44,47,49)){
 s.distri(xy, rpjdl$fau[,i], cell = 1.5, sub = rpjdl$frlab[i], 
     csub = 2, cgrid = 1.5)}
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}
 \keyword{hplot}

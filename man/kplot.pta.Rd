@@ -24,7 +24,7 @@ kplot.pta(object, xax = 1, yax = 2, which.tab = 1:nrow(atp$RV),
   \item{clab}{a character size for the labels}
   \item{cpoint}{a character size for plotting the points, used with \code{par("cex")}*cpoint. If zero, no points are drawn.}
   \item{csub}{a character size for the sub-titles, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{ask}{a logical value indicating if the graphs requires several arrays of figures}
   \item{\dots}{further arguments passed to or from other methods}
 }

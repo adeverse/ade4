@@ -12,7 +12,7 @@ plot.procuste (x, xax = 1, yax = 2, \dots)
 print.procuste (x, \dots)
 }
 \arguments{
-  \item{df1, df2}{two data frame with the same rows}
+  \item{df1, df2}{two data frames with the same rows}
   \item{scale}{a logical value indicating whether a transformation by the Gower's scaling (1971) should be applied}
   \item{nf}{an integer indicating the number of kept axes}
   \item{tol}{a tolerance threshold to test whether the distance matrix is Euclidean : an eigenvalue is considered positive if it is larger than \code{-tol*lambda1} where \code{lambda1} is the largest eigenvalue.}
@@ -41,8 +41,8 @@ returns a list of 9 components of the class 'procuste'
 Digby, P. G. N. and Kempton, R. A. (1987) Multivariate Analysis of Ecological Communities. \emph{Population and Community Biology Series}, Chapman and Hall, London.\cr\cr
 Gower, J.C. (1971) Statistical methods of comparing different multivariate analyses of the same data. In \emph{Mathematics in the archaeological and historical sciences}, Hodson, F.R, Kendall, D.G. & Tautu, P. (Eds.) University Press, Edinburgh,  138--149.\cr\cr
 Schönemann, P.H. (1968) On two-sided Procustes problems. \emph{Psychometrika}, \bold{33}, 19--34.\cr\cr
-Torre, F. and Chessel, D. (1994) Co-structure de deux tableaux totalement appariés. \emph{Revue de Statistique Appliquée}, \bold{43}, 109--121.\cr
-Dray, S., Chessel, D. and Thioulouse, J.  (2002) Procustean co-inertia analysis for the linking of multivariate datasets. \emph{Ecoscience}, in press
+Torre, F. and Chessel, D. (1994) Co-structure de deux tableaux totalement appariés. \emph{Revue de Statistique Appliquée}, \bold{43}, 109--121.\cr\cr
+Dray, S., Chessel, D. and Thioulouse, J.  (2003) Procustean co-inertia analysis for the linking of multivariate datasets. \emph{Ecoscience}, \bold{10}, 1, 110-119.
 }
 \examples{
 data(macaca)

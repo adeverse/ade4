@@ -18,7 +18,7 @@ s.corcircle(dfxy, xax = 1, yax = 2, label = row.names(df),
   \item{grid}{a logical value indicating whether a grid in the background of the plot should be drawn}
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{cgrid}{a character size, parameter used with par("cex")*\code{cgrid} to indicate the mesh of the grid}
   \item{fullcircle}{a logical value indicating whether the complete circle sould be drawn}
   \item{box}{a logical value indcating whether a box should be drawn}
@@ -34,7 +34,6 @@ s.corcircle(dudi1$co, lab = as.character(1:11), cgrid = 2,
     full = FALSE, sub = "Correlation circle", csub = 2.5, 
     possub = "bottomleft", box = TRUE)
 s.arrow(dudi1$co, clab = 1)
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}
 \keyword{hplot}

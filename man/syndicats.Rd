@@ -1,6 +1,6 @@
 \name{syndicats}
 \alias{syndicats}
-\non_function{}
+\docType{data}
 \title{Two Questions asked on a Sample of 1000 Respondents}
 \description{
 This data set is extracted from an opinion poll (period 1970-1980) on 1000 respondents. 
@@ -22,6 +22,5 @@ par(mfrow = c(1,2))
 dudi1 <- dudi.coa(syndicats, scan = FALSE)
 score (dudi1, 1, TRUE)
 score (dudi1, 1, FALSE)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -1,6 +1,6 @@
 \name{morphosport}
 \alias{morphosport}
-\non_function{}
+\docType{data}
 \title{Athletes' Morphology}
 \description{
 This data set gives a morphological description of 153 athletes split in five different sports. 
@@ -35,7 +35,7 @@ This data set gives a morphological description of 153 athletes split in five di
 \source{
 Mimouni , N. (1996)\cr
 Contribution de méthodes biométriques à l'analyse de la morphotypologie des sportifs.\cr
-Th"se de doctorat. Université Lyon 1.
+Thèse de doctorat. Université Lyon 1.
 }
 \examples{
 data(morphosport)

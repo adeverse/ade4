@@ -1,9 +1,9 @@
 \name{yanomama}
 \alias{yanomama}
-\non_function{}
+\docType{data}
 \title{Distance Matrices}
 \description{
-This data set gives 3 matrices about goegroaphical, genetic and anthropoemtric distances. 
+This data set gives 3 matrices about geographical, genetic and anthropometric distances. 
 }
 \usage{data(yanomama)}
 \format{
@@ -39,7 +39,6 @@ if (require(mva, quietly = TRUE)) {
 	plot(t1, main = "gen-ant-procuste") ; print(t1)
 	t1 <- RV.rtest(pcoscaled(gen), pcoscaled(ant), 99)
 	plot(t1, main = "gen-ant-RV") ; print(t1)
-	par(mfrow = c(1,1))
 }
 }
 \keyword{datasets}

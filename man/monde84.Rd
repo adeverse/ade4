@@ -1,6 +1,6 @@
 \name{monde84}
 \alias{monde84}
-\non_function{}
+\docType{data}
 \title{Global State of the World in 1984}
 \usage{data(monde84)}
 \description{
@@ -18,7 +18,7 @@ for 48 countries in the world.
   }
 }
 \source{
-G"ze, F. and Coll., eds. (1984)\cr
+Geze, F. and Coll., eds. (1984)\cr
 L'état du Monde 1984 : annuaire économique et géopolitique mondial. La Découverte, Paris.
 }
 \examples{

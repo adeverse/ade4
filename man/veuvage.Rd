@@ -1,6 +1,6 @@
 \name{veuvage}
 \alias{veuvage}
-\non_function{}
+\docType{data}
 \title{Example for Centring in PCA}
 \description{
 The data come from the INSEE (National Institute of Statistics and Economical Studies). 
@@ -28,6 +28,5 @@ par(mfrow = c(3,2))
 for (j in 1:6) plot(veuvage$age, veuvage$tab[,j],
     xlab = "âge", ylab = "pourcentage de veufs",
     type = "b", main = names(veuvage$tab)[j])
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

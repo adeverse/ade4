@@ -1,6 +1,6 @@
 \name{ours}
 \alias{ours}
-\non_function{}
+\docType{data}
 \title{A table of Qualitative Variables}
 \usage{data(ours)}
 \description{

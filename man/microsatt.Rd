@@ -1,9 +1,9 @@
 \name{microsatt}
 \alias{microsatt}
-\non_function{}
+\docType{data}
 \title{Genetic Relationships between cattle breeds with microsatellites}
 \description{
-This data set gives genetic relationships between clattle breeds with microsatellites. 
+This data set gives genetic relationships between cattle breeds with microsatellites. 
 }
 \usage{data(microsatt)}
 \format{
@@ -16,17 +16,17 @@ This data set gives genetic relationships between clattle breeds with microsatel
 	}
 }
 \source{
-Extract of data prepared by D. Lalo" \email{ugendla@dga2.jouy.inra.fr} from data used in:\cr\cr
+Extract of data prepared by D. Laloe \email{ugendla@dga2.jouy.inra.fr} from data used in:\cr\cr
 
-Moazami-Goudarzi, K., D. Lalo", J. P. Furet, and F. Grosclaude. 1997.\cr
+Moazami-Goudarzi, K., D. Laloe, J. P. Furet, and F. Grosclaude. 1997.\cr
 Analysis of genetic relationships between 10 cattle breeds with 17 microsatellites.\cr
 \emph{Animal Genetics}, \bold{28}, 338--345.\cr\cr
 
-Souvenir Zafindrajaona, P.,Zeuh V. ,Moazami-Goudarzi K., Lalo" D., Bourzat D., Idriss A., and Grosclaude F. (1999)\cr
+Souvenir Zafindrajaona, P.,Zeuh V. ,Moazami-Goudarzi K., Laloe D., Bourzat D., Idriss A., and Grosclaude F. (1999)\cr
 Etude du statut phylogénétique du bovin Kouri du lac Tchad à l'aide de marqueurs moléculaires.\cr
 \emph{Revue d'Elevage et de Médecine Vétérinaire des pays Tropicaux}, \bold{55}, 155--162.\cr\cr
 
-Moazami-Goudarzi, K., Belemsaga D. M. A., Ceriotti G., Lalo" D. , Fagbohoun F., Kouagou N. T., Sidibé I., Codjia V., Crimella M. C., Grosclaude F. and Touré S. M. (2001)\cr
+Moazami-Goudarzi, K., Belemsaga D. M. A., Ceriotti G., Laloe D. , Fagbohoun F., Kouagou N. T., Sidibé I., Codjia V., Crimella M. C., Grosclaude F. and Touré S. M. (2001)\cr
 Caractérisation de la race bovine Somba à l'aide de marqueurs moléculaires.\cr
 \emph{Revue d'Elevage et de Médecine Vétérinaire des pays Tropicaux}, \bold{54}, 1--10
 }

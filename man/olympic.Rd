@@ -1,6 +1,6 @@
 \name{olympic}
 \alias{olympic}
-\non_function{}
+\docType{data}
 \title{Olympic Decathlon}
 \description{
 This data set gives the performances of 33 men's decathlon in the 1988 Olympics
@@ -14,7 +14,7 @@ This data set gives the performances of 33 men's decathlon in the 1988 Olympics
     }
 }
 \source{
-Example n° 357 in: \cr
+Example 357 in: \cr
 Hand, D.J., Daly, F., Lunn, A.D., McConway, K.J. and Ostrowski, E. (1994)\cr
 \emph{A handbook of small data sets}, Chapman & Hall, London. 458 p.\cr\cr
 
@@ -30,6 +30,5 @@ plot(olympic$score, pca1$l1[,1])
 abline(lm(pca1$l1[,1]~olympic$score))
 s.label(pca1$l1, clab = 0.5)
 s.arrow(2 * pca1$co, add.p = TRUE)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

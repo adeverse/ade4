@@ -27,7 +27,7 @@ kplot.sepan.coa (object, xax = 1, yax = 2, which.tab = 1:length(sep$blo),
   \item{clab.col}{a character size for the column labels}
   \item{traject.row}{a logical value indicating whether the trajectories between rows should be drawn in a natural order}
   \item{csub}{a character size for the sub-titles, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{show.eigen.value}{a logical value indicating whether the eigenvalues bar plot should be drawn}
   \item{poseig}{if "top" the eigenvalues bar plot is upside, if "bottom", it is downside}
   \item{\dots}{further arguments passed to or from other methods}

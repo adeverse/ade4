@@ -1,6 +1,6 @@
 \name{trichometeo}
 \alias{trichometeo}
-\non_function{}
+\docType{data}
 \title{Pair of Ecological Data}
 \description{
 This data set gives for trappong nights informations about 
@@ -21,7 +21,7 @@ species and meteorological variables.
 \references{
 Usseglio-Polatera, P. and Auda, Y. (1987)\cr
 Influence des facteurs météorologiques sur les résultats de piégeage lumineux.\cr
-\emph{Annales de Limnologie}, \bold{23}, 65--79, code des esp"ces p. 76
+\emph{Annales de Limnologie}, \bold{23}, 65--79, code des espèces p. 76
 }
 \examples{
 data(trichometeo)

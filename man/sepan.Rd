@@ -5,7 +5,7 @@
 \alias{summary.sepan}
 \title{Separated Analyses in a K-tables}
 \description{
-performs K separated multivariate analyses of on object of class \code{ktab} 
+performs K separated multivariate analyses of an object of class \code{ktab} 
 containing K tables. 
 }
 \usage{

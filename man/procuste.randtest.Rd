@@ -18,7 +18,7 @@ procuste.randtest(df1, df2, nrepet = 999)
 returns a list of class 'randtest'
 }
 \references{
-Jackson, D.A. (1995) PROTEST: a PROcustean randomization TEST of community environment concordance. Ecosciences : 2, 297-303.
+Jackson, D.A. (1995) PROTEST: a PROcustean randomization TEST of community environment concordance. Ecosciences, \bold{2}, 297--303.
 }
 \examples{
 data(doubs)

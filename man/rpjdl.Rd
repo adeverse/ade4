@@ -1,6 +1,6 @@
 \name{rpjdl}
 \alias{rpjdl}
-\non_function{}
+\docType{data}
 \title{Avifauna and Vegetation}
 \description{
 This data set gives the abundance of 52 species and 8 environmental variables 
@@ -24,7 +24,7 @@ Breeding avifauna of a Mediterranean succession : the holm oak and cork oak seri
 \emph{Oïkos}, \bold{37}, 21--38.\cr\cr
 
 Lebreton, J. D., Chessel D., Prodon R. and Yoccoz N. (1988)\cr
-L'analyse des relations esp"ces-milieu par l'analyse canonique des correspondances.\cr
+L'analyse des relations espèces-milieu par l'analyse canonique des correspondances.\cr
 I. Variables de milieu quantitatives.\cr
 \emph{Acta Oecologica, Oecologia Generalis}, \bold{9}, 53--67.
 }

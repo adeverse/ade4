@@ -3,7 +3,7 @@
 \alias{reconst.pca}
 \title{Reconstitution of Data from a Duality Diagram}
 \description{
-Generic Function. Nowadays just reconst.pca
+Generic Function. Nowadays just \code{reconst.pca}
 }
 \usage{
 reconst (dudi, ...)
@@ -33,6 +33,5 @@ for (i in 1:15) {
     lines(rhone$date, rh2[,i], lty = 1)
     scatterutil.sub(names(rhone$tab)[i], 2, "topright")
 }
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}

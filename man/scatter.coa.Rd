@@ -35,7 +35,6 @@ scatter.coa(w, method = 2,
     sub = "2 / Columns -> averaging -> Rows", posieig = "none")
 scatter.coa(w, method = 3, 
     sub = "3 / Rows -> averaging -> Columns ", posieig = "none")
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}
 \keyword{hplot}

@@ -1,6 +1,6 @@
 \name{tortues}
 \alias{tortues}
-\non_function{}
+\docType{data}
 \title{Morphological Study of the Painted Turtle}
 \description{
 This data set gives a morphological description (4 characters) of 48 turtles. 

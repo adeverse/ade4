@@ -1,6 +1,6 @@
 \name{rhone}
 \alias{rhone}
-\non_function{}
+\docType{data}
 \title{Physico-Chemistry Data}
 \description{
 This data set gives for 39 water samples a physico-chemical description 
@@ -18,7 +18,7 @@ with the number of sample date and the flows of three tributaries.
 \source{
 Carrel, G., Barthelemy, D., Auda, Y. and Chessel, D. (1986)\cr
 Approche graphique de l'analyse en composantes principales normée : utilisation en hydrobiologie.\cr
-\emph{Acta Oecologica, Oecologia Generalis}, \bold{7}, 189--203
+\emph{Acta Oecologica, Oecologia Generalis}, \bold{7}, 189--203.
 }
 \examples{
 data(rhone)
@@ -33,6 +33,5 @@ for (i in 1:15) {
     lines(rhone$date, rh2[,i])
     scatterutil.sub(names(rhone$tab)[i], 2, "topright")
 }
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

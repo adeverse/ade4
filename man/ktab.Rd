@@ -21,7 +21,7 @@
 \description{
 an object of class 'ktab' is a list of data frame with the same row.names in common.\cr
 a list of class 'ktab' contains moreover :
- \item{blo}{: the vector of the number of columns for each table}
+ \item{blo}{: the vector of the numbers of columns for each table}
  \item{lw}{: the vector of the row weightings in common for all tables}
  \item{cw}{: the vector of the column weightings}
  \item{TL}{: a data frame of two components to manage the parameter positions associated with the rows of tables}
@@ -36,8 +36,8 @@ t.ktab(x)
 row.names.ktab(x)
 col.names.ktab(x)
 tab.names(x)
-col.names(x)<-value
-tab.names(x)<-value
+col.names(x)
+tab.names(x)
 ktab.util.names(x)
 }
 \arguments{
@@ -53,10 +53,10 @@ A 'ktab' object can be created with :\cr
 	an object 'within' : \code{\link{ktab.within}}\cr
 }
 \value{
-\code{c.ktab} returns an object 'ktab'. It concatenates K-tables with the same rows in common\cr
-\code{t.ktab} returns an object 'ktab'. It permutes each data frame into a K-tables. All tables have the same column names and the same column weightings (a data cube)\cr
-\code{"["} returns an object 'ktab'. It allowes to select some arrays in a K-tables\cr
-\code{is.ktab} returns TRUE if x is a K-tables\cr
+\code{c.ktab} returns an object 'ktab'. It concatenates K-tables with the same rows in common. \cr
+\code{t.ktab} returns an object 'ktab'. It permutes each data frame into a K-tables. All tables have the same column names and the same column weightings (a data cube). \cr
+\code{"["} returns an object 'ktab'. It allowes to select some arrays in a K-tables. \cr
+\code{is.ktab} returns TRUE if x is a K-tables. \cr
 \code{row.names} returns the vector of the row names common with all the tables of a K-tables and allowes to modifie them.\cr
 \code{col.names} returns the vector of the column names of a K-tables and allowes to modifie them.\cr
 \code{tab.names} returns the vector of the array names of a K-tables and allowes to modifie them.\cr

@@ -1,6 +1,6 @@
 \name{meaudret}
 \alias{meaudret}
-\non_function{}
+\docType{data}
 \title{Ecological Data : sites-variables, sites-species, where and when}
 \description{
 This data set contains informations about sites, environmental variables
@@ -20,7 +20,7 @@ and species (Trichopters).
 Pegaz-Maucet, D. (1980)\cr
 Impact d'une perturbation d'origine organique sur la dérive des macro-invertébérés benthiques d'un cours d'eau.\cr
 Comparaison avec le benthos.\cr
-Th"se de 3° cycle, Université Lyon 1, 130 p.
+Thèse de troisième cycle, Université Lyon 1, 130 p.
 }
 \examples{
 data(meaudret)
@@ -32,6 +32,5 @@ pca2 <- between(pca1, meaudret$plan$dat, scan = FALSE, nf = 2)
 s.class(pca2$ls, meaudret$plan$dat, sub = "Between dates Principal Component Analysis")
 s.corcircle(pca1$co)
 s.corcircle(pca2$as)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

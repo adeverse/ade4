@@ -1,6 +1,6 @@
 \name{sarcelles}
 \alias{sarcelles}
-\non_function{}
+\docType{data}
 \title{Array of Recapture of Rings}
 \description{
 The data frame \code{sarcelles$tab} contains the number of the winter teals (Anas C. Crecca) for which the ring was retrieved in the area i during the month j (n=3049)
@@ -31,6 +31,5 @@ if (require(pixmap, quietly=TRUE)) {
     s.value(sarcelles$xy, sarcelles$tab[,i], add.plot = TRUE, cleg = 0)
 	}
 }
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -1,6 +1,6 @@
 \name{macaca}
 \alias{macaca}
-\non_function{}
+\docType{data}
 \title{Landmarks}
 \description{
 This data set gives the landmarks of a macaca at the ages of 0.9 and 5.77 years. 
@@ -27,6 +27,5 @@ s.match(pro1$tab1, pro1$rot2, clab = 0.7)
 s.match(pro1$tab2, pro1$rot1, clab = 0.7)
 pro2 <- procuste(macaca$xy1, macaca$xy2)
 s.match(pro2$tab2, pro2$rot1, clab = 0.7)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -22,7 +22,7 @@ kplot.mfa(object, xax = 1, yax = 2, mfrow = NULL,
   \item{permute.row.col}{if TRUE, the rows are represented by vectors and columns by points, otherwise it is the opposite}
   \item{clab}{a character size for the labels}
   \item{csub}{a character size for the sub-titles, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \examples{

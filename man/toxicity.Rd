@@ -1,6 +1,6 @@
 \name{toxicity}
 \alias{toxicity}
-\non_function{}
+\docType{data}
 \title{Homogeneous Table}
 \description{
 This data set gives the toxicity of 7 molecules on 16 targets

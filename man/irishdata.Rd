@@ -1,6 +1,6 @@
 \name{irishdata}
 \alias{irishdata}
-\non_function{}
+\docType{data}
 \title{Geary's Irish Data}
 \description{
 This data set contains geographic informations about 25 counties of Ireland. 
@@ -32,6 +32,5 @@ s.corcircle(dudi.pca(irishdata$tab, scan = FALSE)$co)
 score <- dudi.pca(irishdata$tab, scan = FALSE, nf = 1)$li$Axis1
 names(score) <- row.names(irishdata$tab)
 area.plot(irishdata$area, score)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

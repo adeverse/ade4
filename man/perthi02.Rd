@@ -1,6 +1,6 @@
 \name{perthi02}
 \alias{perthi02}
-\non_function{}
+\docType{data}
 \title{Contingency Table with a partition in Molecular Biology}
 \description{
 This data set gives the amino acids of 904 proteins 
@@ -16,9 +16,9 @@ distributed in three classes.
     The levels of \code{perthi02$cla} are \code{cyto} (cytoplasmic proteins) \code{memb} (integral membran proteins) \code{peri} (periplasmic proteins)
 }
 \source{
-Perri"re, G. and Thioulouse, J. (2002)\cr
+Perriere, G. and Thioulouse, J. (2002)\cr
 Use of Correspondence Discriminant Analysis to predict the subcellular location of bacterial proteins.\cr
-\emph{Computer Methods and Programs in Biomedicine}, in press.
+\emph{Computer Methods and Programs in Biomedicine}, \bold{70}, 2, 99--105.
 }
 \examples{
 data(perthi02)

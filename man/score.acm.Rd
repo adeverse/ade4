@@ -15,7 +15,7 @@ score.acm(x, xax = 1, which.var = NULL, mfrow = NULL,
   \item{mfrow}{a vector of the form "c(nr,nc)", otherwise computed by a special own function \code{n2mfrow}}
   \item{sub}{a vector of strings of characters to be inserted as sub-titles, otherwise the variable names of the initial array}
   \item{csub}{a character size for the sub-titles}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \examples{

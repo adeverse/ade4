@@ -1,6 +1,6 @@
 \name{worksurv}
 \alias{worksurv}
-\non_function{}
+\docType{data}
 \title{French Worker Survey (1970)}
 \description{
 The \code{worksurv} data frame gives 319 response items and 4 questions 
@@ -68,6 +68,5 @@ acm1 <- dudi.acm(worksurv, row.w = attr(worksurv,"counts"),
 par(mfrow = c(2,2))
 apply(worksurv,2, function(x) s.class(acm1$li, factor(x),
     attr(worksurv, 'counts')))
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

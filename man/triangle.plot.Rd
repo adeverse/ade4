@@ -30,7 +30,7 @@ triangle.biplot (ta1, ta2, label = as.character(1:nrow(ta1)),
   \item{labeltriangle}{a logical value indicating whether the variable names should be wrote}
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{show.position}{a logical value indicating whether the used triangle should be shown in the complete one}
   \item{scale}{a logical value indicating whether the smaller equilateral triangle containing the plot should be used}
   \item{min3}{If scale is FALSE, a vector of three values for the minima e.g. c(0.1,0.1,0.1) can be used}
@@ -58,7 +58,5 @@ triangle.plot(euro123[[2]], min3 = c(0,0.2,0.3), max3 = c(0.5,0.7,0.8),
 triangle.plot(euro123[[3]], min3 = c(0,0.2,0.3), max3 = c(0.5,0.7,0.8), 
     clab = 1, label = row.names(euro123[[1]]), addax = TRUE)
 triangle.plot(rbind.data.frame(euro123[[1]], euro123[[2]], euro123[[3]]))
-
-par(mfrow = c(1,1))
 }
 \keyword{hplot}

@@ -1,6 +1,6 @@
 \name{jv73}
 \alias{jv73}
-\non_function{}
+\docType{data}
 \title{K-tables Multi-Regions}
 \description{
 This data set gives physical and physico-chemical variables, fish species, spatial coordinates about 92 sites. 
@@ -20,7 +20,7 @@ This data set gives physical and physico-chemical variables, fish species, spati
 \source{
 Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).\cr
 Recherches écologiques sur le réseau hydrographique du Doubs.\cr
-Essai de biotypologie. Th"se d'état, Besançon.
+Essai de biotypologie. Thèse d'état, Besançon.
 }
 \examples{
 data(jv73)

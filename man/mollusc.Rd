@@ -1,6 +1,6 @@
 \name{mollusc}
 \alias{mollusc}
-\non_function{}
+\docType{data}
 \title{Faunistic Communities and Sampling Experiment}
 \description{
 This data set gives the abundance of 32 mollusk species in 163 samples. 
@@ -28,6 +28,5 @@ s.chull(coa1$li, mollusc$plan$site, 2, 3, opt = 1, cpoi = 1)
 s.chull(coa1$li, mollusc$plan$season, 2, 3, opt = 1, cpoi = 1)
 s.chull(coa1$li, mollusc$plan$method, 2, 3, opt = 1, cpoi = 1)
 s.chull(coa1$li, mollusc$plan$duration, 2, 3, opt = 1, cpoi = 1)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -1,6 +1,6 @@
 \name{santacatalina}
 \alias{santacatalina}
-\non_function{}
+\docType{data}
 \title{Indirect Ordination}
 \description{
 This data set gives the densities per hectare of 11 species of trees 
@@ -24,6 +24,5 @@ coa1 <- dudi.coa(log(santacatalina + 1), scan = FALSE) # 2 factors
 table.value(log(santacatalina + 1)[order(coa1$li[,1]), 
     order(coa1$co[,1])], grid = TRUE) 
 scatter(coa1, posi = "bottom")
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

@@ -39,8 +39,8 @@ The values must be in the same order as the values in \code{unique(x.area[,1])}}
 \item{clegend}{if not NULL, a character size for the legend, used with \code{par("cex")*clegend}}
 \item{sub}{a string of characters to be inserted as sub-title}
 \item{csub}{a character size for the sub-titles, used with \code{par("cex")*csub}}
-\item{possub}{a string of characters indicating the sub-titles position: 
-"topleft","topright","bottomleft","bottomright"}
+\item{possub}{a string of characters indicating the sub-titles position 
+("topleft", "topright", "bottomleft", "bottomright")}
 \item{cpoint}{if positive, a character size for drawing the polygons vertices (check up),
 used with \code{par("cex")*cpoint}}
 \item{label}{if not NULL, by default the levels of the factor that define the polygons

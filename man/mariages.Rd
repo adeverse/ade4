@@ -1,6 +1,6 @@
 \name{mariages}
 \alias{mariages}
-\non_function{}
+\docType{data}
 \title{Correspondence Analysis Table}
 \description{
 This array contains the socio-professionnal repartitions of 5850 couples.
@@ -36,6 +36,5 @@ scatter(w, met = 1, posi = "bottom")
 scatter(w, met = 2, posi = "bottom")
 scatter(w, met = 3, posi = "bottom")
 score(w, 3)
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

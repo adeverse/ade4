@@ -11,7 +11,7 @@ ktab.list.dudi(obj, rownames = NULL, colnames = NULL, tabnames = NULL)
   \item{obj}{a list of objects of class 'dudi'. Each element of the list must have the same row names for \code{$tab} and even for \code{$lw}}
   \item{rownames}{the row names of the K-tables (otherwise the row names of the \code{$tab})}
   \item{colnames}{the column names of the K-tables (otherwise the column names of the \code{$tab})}
-  \item{tabnames}{the names of the arrays of the K-tables (otherwise the names of the \code{obj}  if they exist, or else "Ana1", "Ana2", …)}
+  \item{tabnames}{the names of the arrays of the K-tables (otherwise the names of the \code{obj}  if they exist, or else "Ana1", "Ana2", \dots)}
 }
 \value{
 returns a list of class 'ktab'. See \code{\link{ktab}}

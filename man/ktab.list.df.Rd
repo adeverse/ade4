@@ -3,7 +3,7 @@
 \title{Creating a K-tables from a list of data frame.
 }
 \description{
-creates a list of class \code{ktab} from a list of data frame. 
+creates a list of class \code{ktab} from a list of data frame 
 }
 \usage{
 ktab.list.df(obj, rownames = NULL, colnames = NULL, tabnames = NULL, 
@@ -14,7 +14,7 @@ ktab.list.df(obj, rownames = NULL, colnames = NULL, tabnames = NULL,
   \item{obj}{a list of data frame}
   \item{rownames}{the names of the K-tables rows (otherwise, the row names of the arrays)}
   \item{colnames}{the names of the K-tables columns (otherwise, the column names of the arrays)}
-  \item{tabnames}{the names of the arrays of the K-tables (otherwise, the names of the obj if they exist, or else "Ana1", "Ana2", …)}
+  \item{tabnames}{the names of the arrays of the K-tables (otherwise, the names of the obj if they exist, or else "Ana1", "Ana2", \dots)}
   \item{w.row}{a vector of the row weightings in common with all the arrays}
   \item{w.col}{a list of the vector of the column weightings for each array}
 }

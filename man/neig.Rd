@@ -53,7 +53,7 @@ neig2mat (neig)
 \references{
 Thioulouse, J., D. Chessel, and S. Champely. 1995.\cr
 Multivariate analysis of spatial patterns: a unified approach to local and global structures.\cr
-Environmental and Ecological Statistics 2:1-14.
+Environmental and Ecological Statistics, \bold{2}, 1--14.
 }
 \examples{
 data(mafragh)

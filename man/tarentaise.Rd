@@ -1,6 +1,6 @@
 \name{tarentaise}
 \alias{tarentaise}
-\non_function{}
+\docType{data}
 \title{Mountain Avifauna}
 \description{
 This data set gives informations between sites, species, environmental and biolgoical variables. 

@@ -1,6 +1,6 @@
 \name{kplot.statis}
 \alias{kplot.statis}
-\title{Multiple Graphs for a STATIS Analysis}
+\title{Multiple Graphs of a STATIS Analysis}
 \description{
 performs high level plots for a STATIS analysis, 
 using an object of class \code{statis}. 
@@ -23,7 +23,7 @@ kplot.statis(object, xax = 1, yax = 2, mfrow = NULL,
   \item{class}{if not NULL, a factor of length equal to the number of the total columns of the K-tables}
   \item{unique.scale}{if TRUE, all the arrays of figures have the same scale}
   \item{csub}{a character size for the labels of the arrays of figures used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \examples{

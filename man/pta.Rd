@@ -49,7 +49,7 @@ returns a list of class 'pta', sub-class of  'dudi' containing :
   \item{T4}{a data frame with the factors for Tax and Tcomp}
 }
 \references{
-Blanc, L., Chessel, D. and Dolédec, S. (1998) Etude de la stabilité temporelle des structures spatiales par Analyse d'une série de tableaux faunistiques totalement appariés. \emph{Bulletin Français de la P"che et de la Pisciculture}, \bold{348}, 1--21.\cr\cr
+Blanc, L., Chessel, D. and Dolédec, S. (1998) Etude de la stabilité temporelle des structures spatiales par Analyse d'une série de tableaux faunistiques totalement appariés. \emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{348}, 1--21.\cr\cr
 Thioulouse, J., and D. Chessel. 1987. Les analyses multi-tableaux en écologie factorielle. I De la typologie d'état à la typologie de fonctionnement par l'analyse triadique. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 463--480.
 }
 \author{P. Bady}

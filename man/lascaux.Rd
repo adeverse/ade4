@@ -1,6 +1,6 @@
 \name{lascaux}
 \alias{lascaux}
-\non_function{}
+\docType{data}
 \title{Genetic/Environment and types of variables}
 \description{
 This data set gives meristic, genetic and morphological data frame 
@@ -24,7 +24,7 @@ for 306 trouts.
 \source{
 Lascaux, J.M. (1996)\cr
 Analyse de la variabilité morphologique de la truite commune (Salmo trutta L.) dans les cours d'eau du bassin pyrénéen méditerranéen.\cr
-Th"se de doctorat en sciences agronomiques, INP Toulouse.
+Thèse de doctorat en sciences agronomiques, INP Toulouse.
 }
 \examples{
 data(lascaux)
@@ -37,6 +37,5 @@ barplot(dudi.pca(na.omit(lascaux$morpho), scan = FALSE)$eig)
 title(main = "Morphometric")
 barplot(dudi.acm(na.omit(lascaux$orne), scan = FALSE)$eig)
 title(main = "Ornemental")
-par(mfrow = c(1,1))
 }
 \keyword{datasets}

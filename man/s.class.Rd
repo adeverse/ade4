@@ -33,7 +33,7 @@ s.class(dfxy, fac, wt = rep(1, length(fac)), xax = 1,
   \item{include.origin}{a logical value indicating whether the point "origin" should be belonged to the graph space}
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{cgrid}{a character size, parameter used with par("cex")* \code{cgrid} to indicate the mesh of the grid}
   \item{pixmap}{an object 'pixmap' displayed in the map background}
   \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a line (x1,y1,x2,y2)}
@@ -66,7 +66,6 @@ for (i in 1:(ncol(banque)))
     s.class(dudi1$li, banque[,i], clab = 1.5, sub = names(banque)[i], 
     csub = 2, possub = "topleft", cgrid = 0, csta = 0, cpoi = 0)
 s.label(dudi1$li, clab = 0, sub = "Common background")
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}
 \keyword{hplot}

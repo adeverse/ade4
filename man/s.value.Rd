@@ -35,7 +35,7 @@ s.value(dfxy, z, xax = 1, yax = 2, method = c("squaresize", "greylevel"),
   \item{origin}{the fixed point in the graph space, for example c(0,0) the origin axes}
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
-  \item{possub}{a string of characters indicating the sub-title position ("topleft","topright","bottomleft","bottomright")}
+  \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{pixmap}{an object 'pixmap' displayed in the map background}
   \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a line (x1,y1,x2,y2)}
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
@@ -61,7 +61,6 @@ for (i in 1:12) {
     csub = 2, sub = nam, cleg = 1.5, cgrid = 0, inc = FALSE,
     xlim = c(16,205), ylim = c(-50,268), adda = FALSE, grid = FALSE)
 }
-par(mfrow = c(1,1))
 }
 \keyword{multivariate}
 \keyword{hplot}

@@ -1,0 +1,37 @@
+ "rtest.discrimin" <- function (xtest, nrepet = 99, ...) {
+    if (!inherits(xtest, "discrimin")) 
+        stop("'discrimin' object expected")
+    appel <- as.list(xtest$call)
+    dudi <- eval(appel$dudi, sys.frame(0))
+    fac <- eval(appel$fac, sys.frame(0))
+    lig <- nrow(dudi$tab)
+    if (length(fac) != lig) 
+        stop("Non convenient dimension")
+    rank <- dudi$rank
+    dudi <- redo.dudi(dudi, rank)
+    dudi.lw <- dudi$lw
+    dudi <- dudi$l1
+    between.var <- function(x, w, group, group.w) {
+        z <- x * w
+        z <- tapply(z, group, sum)/group.w
+        return(sum(z * z * group.w))
+    }
+    inertia.ratio <- function(perm = TRUE) {
+        if (perm) {
+            sigma <- sample(lig)
+            Y <- dudi[sigma, ]
+            Y.w <- dudi.lw[sigma]
+        }
+        else {
+            Y <- dudi
+            Y.w <- dudi.lw
+        }
+        cla.w <- tapply(Y.w, fac, sum)
+        ww <- apply(Y, 2, between.var, w = Y.w, group = fac, 
+            group.w = cla.w)
+        return(sum(ww)/rank)
+    }
+    obs <- inertia.ratio(perm = FALSE)
+    sim <- unlist(lapply(1:nrepet, inertia.ratio))
+    return(as.rtest(sim, obs))
+}

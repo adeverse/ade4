@@ -103,6 +103,7 @@ w <- orthobasis.circ(n = 26)
 par(mfrow = c(1,1))
 #barplot(attr(w, "values"))
 
+\dontrun{
 # a spatial orthobasis
 data(mafragh)
 w <- orthobasis.neig(mafragh$neig)
@@ -122,6 +123,6 @@ wW <- phy$Wscores
 table.phylog(phylog = phy, wA, clabel.row = 0, clabel.col  = 0.5)
 table.phylog(phylog = phy, wW, clabel.row = 0, clabel.col  = 0.5)
 
-}
+}}
 \keyword{spatial}
 \keyword{ts}

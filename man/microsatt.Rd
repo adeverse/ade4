@@ -31,6 +31,7 @@ Caractérisation de la race bovine Somba à l'aide de marqueurs moléculaires.
 \emph{Revue d'Elevage et de Médecine Vétérinaire des pays Tropicaux}, \bold{54}, 1--10.
 }
 \examples{
+\dontrun{
 data(microsatt)
 fac <- factor(rep(microsatt$loci.names, microsatt$loci.eff))
 w <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE)
@@ -41,5 +42,5 @@ plot(sepan(microsatt.ktab)) # 9 separated correspondence analyses
 plot(mcoa(microsatt.ktab, scan = FALSE))
 plot(mfa(microsatt.ktab, scan = FALSE))
 plot(statis(microsatt.ktab, scan = FALSE))
-}
+}}
 \keyword{datasets}

@@ -29,6 +29,7 @@ I. Variables de milieu quantitatives.
 \emph{Acta Oecologica, Oecologia Generalis}, \bold{9}, 53--67.
 }
 \examples{
+\dontrun{
 data(rpjdl)
 xy <- dudi.coa(rpjdl$fau, scann = FALSE)$l1
 s.distri(xy, rpjdl$fau, 2, 1, cstar = 0.3, cell = 0)
@@ -39,5 +40,5 @@ s.distri(xy1, rpjdl$fau, 2, 1, cstar = 0.3, cell = 0)
 cca1 <- cca(rpjdl$fau, rpjdl$mil, scan = FALSE)
 plot(cca1)
 
-}
+}}
 \keyword{datasets}

@@ -26,6 +26,7 @@ Garland, T. J. and Janis, C.M. (1993) Does metatarsal-femur ratio predict maxima
 \emph{Journal of  Zoology}, \bold{229}, 133--151.
 }
 \examples{
+\dontrun{
 data(carniherbi49)
 par(mfrow=c(1,3))
 plot(newick2phylog(carniherbi49$tre1), clabel.leaves = 0,
@@ -35,5 +36,5 @@ plot(newick2phylog(carniherbi49$tre2), clabel.leaves = 0,
 taxo <- as.taxo(carniherbi49$taxo)
 plot(taxo2phylog(taxo), clabel.nodes = 1.2, clabel.leaves = 1.2)
 par(mfrow = c(1,1))
-}
+}}
 \keyword{datasets}

@@ -17,6 +17,7 @@ Diniz-Filho, J. A. F., and N. M. Tôrres. (2002) Phylogenetic comparative methods
 geographic range size-body size relationship in new world terrestrial carnivora. \emph{Evolutionary Ecology}, \bold{16}, 351--367.
 }
 \examples{
+\dontrun{
 data(carni70)
 carni70.phy <- newick2phylog(carni70$tre)
 plot.phylog(carni70.phy)
@@ -31,6 +32,6 @@ names(yrange) <- row.names(carni70$tab)
 symbols.phylog(carni70.phy,yrange)
 orthogram(yrange, phylog = carni70.phy)
 
-#s.hist(cbind.data.frame(size, yrange), clabel = 0)
-}
+s.hist(cbind.data.frame(size, yrange), clabel = 0)
+}}
 \keyword{datasets}

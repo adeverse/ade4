@@ -32,8 +32,18 @@ Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{phylog}}, \code{\link{plot.phylog}}, \code{\link{as.taxo}}}
 \examples{
-# newick2phylog
+
+ w <- "((((,,),,(,)),),(,));"
+ w.phy <- newick2phylog(w)
+ print(w.phy)
+ plot(w.phy)
+
 \dontrun{
+# newick2phylog
+data(newick.eg)
+radial.phylog(newick2phylog(newick.eg[[8]], FALSE), cnode = 1,
+ clabel.l = 0.8)
+
 w <- NULL
 w[1] <- "(,((((((((((((((((,,(,(,))),),(((,(,)),(,)),),(,(,)),(,)),((((("
 w[2] <- ",(,)),),),(,)),((((,((,),((,(,)),))),(,)),(,(,),,((,),(,)),)),("
@@ -60,14 +70,12 @@ w[22] <- ",),),),),(,)),),((,),(,),,,)),(,(,(,)))),),(,)),),);"
 phy1 <- newick2phylog(w,FALSE)
 phy1
 radial.phylog(phy1, clabel.l = 0, circle = 2.2, clea = 0.5,
- cnod = 0.5)}
-
+ cnod = 0.5)
 data(newick.eg)
 radial.phylog(newick2phylog(newick.eg[[8]], FALSE), cnode = 1,
  clabel.l = 0.8)
 
 # hclust2phylog
-\dontrun{
 data(USArrests)
 hc <- hclust(dist(USArrests), "ave")
 par(mfrow = c(1,2))
@@ -86,7 +94,6 @@ row.names(USArrests)
 names(phy$leaves) #the same
 table.phylog(data.frame(scalewt(USArrests)), phy, csi = 2.5,
  clabel.r = 0.75, f = 0.7)
-}
 
 #taxo2phylog
 data(taxo.eg)
@@ -100,5 +107,5 @@ plot.phylog(taxo2phylog(as.taxo(taxo.eg[[1]][sample(15),])),
 par(mfrow=c(1,1))
 plot.phylog(taxo2phylog(as.taxo(taxo.eg[[2]])), clabel.l = 1,
  clabel.n = 0.75, f = 0.65)
-}
+}}
 \keyword{manip}

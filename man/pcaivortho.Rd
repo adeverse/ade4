@@ -37,6 +37,7 @@ Rao, C. R. (1964) The use and interpretation of principal component analysis in 
 Sabatier, R., Lebreton J. D. and Chessel D. (1989) Principal component analysis with instrumental variables as a tool for modelling composition data. In R. Coppi and S. Bolasco, editors. \emph{Multiway data analysis}, Elsevier Science Publishers B.V., North-Holland, 341--352
 }
 \examples{
+\dontrun{
 par(mfrow = c(2,2))
 data(avimedi)
 cla <- avimedi$plan$reg:avimedi$plan$str
@@ -62,5 +63,5 @@ s.match(interAplusB$li, interAplusB$ls, clab = 0,
     sub = "Contrainte A + B")
 s.class(interAplusB$li, cla, add.plot = TRUE)
 
-par(mfrow = c(1,1))}
+par(mfrow = c(1,1))}}
 \keyword{multivariate}

@@ -27,6 +27,7 @@ This data set was obtained by Clémentine Gimaret-Carpentier\cr
  \email{gimaret@biomserv.univ-lyon1.fr}.
 }
 \examples{
+\dontrun{
 data(palm)
 palm.phy <- newick2phylog(palm$tre)
 radial.phylog(palm.phy,clabel.l=1.25)
@@ -40,5 +41,5 @@ names(w)[6] <- names(palm$traits[4])
 table.phylog(w, palm.phy, clabel.r = 0.75, f = 0.5)
 
 gearymoran(palm.phy$Amat, palm$traits[,-c(1,3)])
-}
+}}
 \keyword{datasets}

@@ -32,7 +32,9 @@ s.value(mafragh$xy, pca1$li[,1], sub = "Axis 1 - PCA")
 s.class(pca1$li, mafragh$partition, sub = "Plane 1-2 - PCA")
 s.class(coa1$li, mafragh$partition, sub = "Plane 1-2 - COA")
 s.chull(mafragh$xy, mafragh$partition, optchull = 1)
+par(mfrow=c(1,1))
 
+\dontrun{
 link1 <- area2link(mafragh$area)
 neig1 <- neig(mat01 = 1*(link1>0))
 nb1 <- neig2nb(neig1)
@@ -52,5 +54,5 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     plot(coa1$li[,1], ms1$li[,1])
 }
 par(mfrow = c(1,1))
-}
+}}
 \keyword{datasets}

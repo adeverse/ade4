@@ -57,6 +57,7 @@ Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
 \examples{
+\dontrun{
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(mafragh)
     maf.xy <- mafragh$xy
@@ -93,6 +94,6 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     maf.pca.ms <- multispati(maf.pca, maf.listw, scannf=FALSE)
     plot(maf.pca.ms)
 }
-}
+}}
 \keyword{multivariate}
 \keyword{spatial}

@@ -30,7 +30,7 @@ a list of class 'ktab' contains moreover :
 }
 \usage{
 c.ktab (...)
-object [selection]
+x[selection]
 is.ktab(x)
 t.ktab(x)
 row.names.ktab(x)
@@ -54,7 +54,7 @@ A 'ktab' object can be created with :\cr
 \value{
 \code{c.ktab} returns an object 'ktab'. It concatenates K-tables with the same rows in common. \cr
 \code{t.ktab} returns an object 'ktab'. It permutes each data frame into a K-tables. All tables have the same column names and the same column weightings (a data cube). \cr
-\code{"["} returns an object 'ktab'. It allowes to select some arrays in a K-tables. \cr
+\code{"["} returns an object 'ktab'. It allows to select some arrays in a K-tables. \cr
 \code{is.ktab} returns TRUE if x is a K-tables. \cr
 \code{row.names} returns the vector of the row names common with all the tables of a K-tables and allowes to modifie them.\cr
 \code{col.names} returns the vector of the column names of a K-tables and allowes to modifie them.\cr

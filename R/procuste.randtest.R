@@ -1,4 +1,5 @@
 "procuste.randtest" <- function(df1, df2, nrepet=999) {
+    nrepet <- nrepet +1
     if (!is.data.frame(df1)) 
         stop("data.frame expected")
     if (!is.data.frame(df2)) 

@@ -1,4 +1,5 @@
 "randtest.discrimin" <- function(xtest, nrepet=999, ...) {
+    nrepet <- nrepet +1
     if (!inherits(xtest, "discrimin"))
         stop("'discrimin' object expected")
     appel<-as.list(xtest$call)

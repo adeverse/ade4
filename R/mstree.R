@@ -8,7 +8,7 @@ mstree <- function(xdist, ngmax=1) {
     ngmax=as.integer(ngmax)
     voisi=as.double(matrix(0,nlig,nlig))
     #MSTgraph (double *distances, int *nlig, int *ngmax, double *voisi)
-    mst = .C("MSTgraph", distances = xdist, nlig = nlig, ngmax = ngmax, voisi = voisi)$voisi
+    mst = .C("MSTgraph", distances = xdist, nlig = nlig, ngmax = ngmax, voisi = voisi,PACKAGE="ade4")$voisi
     mst = matrix(mst, nlig, nlig)
     mst = neig (mat01=mst)
     return(mst)

@@ -107,7 +107,8 @@
         SkR2k = double(nrepet+1), 
         Dmax = double(nrepet+1), 
         SCE = double(nrepet+1), 
-        ratio = double(nrepet+1), 
+        ratio = double(nrepet+1),
+        PACKAGE="ade4"
     )
    ylim <- max(c(w$phylogram, w$phylo95))
    z0 <- apply(vecpro, 2, function(x) sum(z * x))

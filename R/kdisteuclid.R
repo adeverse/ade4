@@ -28,7 +28,7 @@ kdisteuclid <- function(obj,method=c("lingoes","cailliez","quasi")) {
         mat[row(mat) > col(mat)] <- x
         mat <- mat + t(mat)
         delta <- -0.5 * bicenter.wt(mat*mat)
-        eig <- La.eigen(delta, sym = TRUE)
+        eig <- eigen(delta, sym = TRUE)
         ncompo <- sum(eig$value>0)
         tabnew <- t( t(eig$vectors[,1:ncompo])*sqrt(eig$values[1:ncompo]) )
         mat <- unclass(dist.quant(tabnew,1))
@@ -45,7 +45,7 @@ kdisteuclid <- function(obj,method=c("lingoes","cailliez","quasi")) {
         m2 <- -bicenter.wt(mat*mat)
             m2 <- rbind(m2, 2*bicenter.wt(mat))
             m1 <- cbind(m1,m2)
-            lambda <- La.eigen(m1,only=TRUE)$values
+            lambda <- eigen(m1,only=TRUE)$values
         c <- max(Re(lambda)[Im(lambda)<1e-08])
         print(paste("Cailliez constant =", c))
         return(x+c)

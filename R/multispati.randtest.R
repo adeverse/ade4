@@ -12,7 +12,8 @@
             as.double(mat),
             as.double(lw),
             as.double(cw),
-            inersim=double(nrepet+1))$inersim
+            inersim=double(nrepet+1),
+            PACKAGE="ade4")$inersim
     }
  
     tab<- dudi$tab

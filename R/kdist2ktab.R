@@ -15,7 +15,7 @@
         d <- d+t(d)
         d <- (-0.5)*bicenter.wt(d*d)
         # d est une matrice de produits scalaires
-        eig <- La.eigen(d, symmetric = TRUE)
+        eig <- eigen(d, symmetric = TRUE)
         ncomp <- sum(eig$values > (eig$values[1] * tol))
         d <- eig$vectors[, 1:ncomp]
         variances <- eig$values[1:ncomp]

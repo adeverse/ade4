@@ -12,7 +12,7 @@
     m2 <- dist2mat(m2)
     col <- ncol(m1)
     res <- .C("testdistRV", as.integer(nrepet), as.integer (n), as.double(m1),
-        as.double(m2), RV=double(nrepet+1))$RV
+        as.double(m2), RV=double(nrepet+1),PACKAGE="ade4")$RV
     obs=res[1]
     return(as.randtest(res[-1],obs))
 }

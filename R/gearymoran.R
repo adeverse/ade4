@@ -19,7 +19,8 @@
         obs = double(nvar),
         result = double (nrepet*nvar),
         obstot = double(1),
-        restot = double (nrepet)
+        restot = double (nrepet),
+        PACKAGE="ade4"
     )
     res <- c(res$obs,res$result)
     res <- matrix(res, ncol=nvar, byr=TRUE)

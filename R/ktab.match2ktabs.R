@@ -32,8 +32,8 @@
         res[[i]] <- as.data.frame(tx %*% (t(ty) * lw[[i]]))
      }
 #### Complete crossed ktab structure
-    res$lw <- rep(1, nligX)/nligX
-    res$cw <- rep(rep(1, nligY)/nligY,ntab)
+    res$lw <- lwX
+    res$cw <- rep(lwY,ntab)
     blo <- rep(nligY,ntab)
     res$blo <- blo
     ktab.util.addfactor(res) <- list(blo, length(res$lw))

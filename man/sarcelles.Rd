@@ -23,13 +23,13 @@ The data frame \code{sarcelles$tab} contains the number of the winter teals (Ana
 \examples{
 # depends of pixmap
 if (require(pixmap, quietly=TRUE)) {
-	#bkgnd.pnm <- read.pnm(system.file("pictures/sarcelles.pnm", package = "ade4"))
-	data(sarcelles)
-	par(mfrow = c(4,3))
-	for(i in 1:12) {
-    #s.distri(sarcelles$xy, sarcelles$tab[,i], pixmap = bkgnd.pnm, sub = sarcelles$col.names[i], clab = 0, csub = 2)
+    bkgnd.pnm <- read.pnm(system.file("pictures/sarcelles.pnm", package = "ade4"))
+    data(sarcelles)
+    par(mfrow = c(4,3))
+    for(i in 1:12) {
+    s.distri(sarcelles$xy, sarcelles$tab[,i], pixmap = bkgnd.pnm, sub = sarcelles$col.names[i], clab = 0, csub = 2)
     s.value(sarcelles$xy, sarcelles$tab[,i], add.plot = TRUE, cleg = 0)
-	}
+    }
 }
 }
 \keyword{datasets}

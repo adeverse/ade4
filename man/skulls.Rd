@@ -22,7 +22,7 @@ Thompson, A. and Randall-Maciver, R. (1905) \emph{Ancient races of the Thebaid},
 \references{
 Manly, B.F. (1994) \emph{Multivariate Statistical Methods. A primer}, 
 Second edition. Chapman & Hall, London. 1--215.\cr
-The example is treated pp. 6, 13, 51, 64, 72, 107, 112 et 117.
+The example is treated pp. 6, 13, 51, 64, 72, 107, 112 and 117.
 }
 \examples{
 data(skulls)

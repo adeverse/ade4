@@ -7,7 +7,7 @@
 \alias{plot.corkdist}
 \title{Tests of randomization between distances applied to 'kdist' objetcs}
 \description{
-The mantelkdist and RVkdist functions apply to blocks of distance matrices the mantel.rtest et RV.rtest functions.
+The mantelkdist and RVkdist functions apply to blocks of distance matrices the mantel.rtest and RV.rtest functions.
 }
 \usage{
 mantelkdist (kd, nrepet = 999)

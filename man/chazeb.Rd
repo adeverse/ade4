@@ -10,7 +10,7 @@ This data set gives six different weights of 23 charolais and zebu oxen.
   \code{chazeb} is a list of 2 components.
   \describe{
       \item{tab}{is a data frame with 23 rows and 6 columns.}
-      \item{cla}{is a factor with two levels "cha" et "zeb". }
+      \item{cla}{is a factor with two levels "cha" and "zeb". }
   }
 }
 \source{

@@ -64,12 +64,12 @@
     
     \item{eparlog}{: "Savings and loan association account amount" a factor with levels 
         \code{for} > 20000 
-        \code{fai} >0 et <20000 
+        \code{fai} >0 and <20000 
         \code{nul} nulle  }
     
     \item{eparliv}{: "Savings bank amount" a factor with levels 
         \code{for} > 20000 
-        \code{fai} >0 et <20000 
+        \code{fai} >0 and <20000 
         \code{nul} nulle  }
     
     \item{credhab}{: "Home loan owner" a factor with levels 

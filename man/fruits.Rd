@@ -12,8 +12,8 @@
     \code{fruits} is a list of 3 components:
     \describe{
     \item{typ}{is a vector returning the type of the 28 batches of fruits (peaches or nectarines).}
-    \item{jug}{is a data frame of 28 rows et 16 columns (judges).}
-    \item{var}{is a data frame of 28 rows et 16 measures (average of 2 judgements).}
+    \item{jug}{is a data frame of 28 rows and 16 columns (judges).}
+    \item{var}{is a data frame of 28 rows and 16 measures (average of 2 judgements).}
     }
 }
 \details{

@@ -12,9 +12,11 @@ Create and use objects of class \code{phylog}. \cr
 \usage{
 print.phylog(x, ...)
 phylog.extract(phylog, node, distance = TRUE)
-phylog.permut(phylog, list.nodes = lapply(phylog$parts,
-    function(a) if (length(a) == 1) a else sample(a)),
-    distance = TRUE)
+<<<<<<< phylog.Rd
+phylog.permut(phylog, list.nodes = NULL, distance = TRUE))
+=======
+phylog.permut(phylog, NULL, distance = TRUE)
+>>>>>>> 1.4
 }
 \arguments{
   \item{x, phylog}{: an object of class \code{phylog}}

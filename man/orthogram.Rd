@@ -81,7 +81,6 @@ dotcircle(arrival$hours)
 dotcircle(w[,2])
 par(mfrow = c(1,1))
 
-require(ts)
 data(lynx)
 ortho <- orthobasis.line(114)
 orthogram(lynx,ortho)

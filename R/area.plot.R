@@ -164,6 +164,8 @@
     class(res) <- "polylist"
     attr(res, "region.id") <- label.poly
     attr(res, "region.rect") <- r0
+    # message de Stéphane Dray du 06/02/2004
+    attr(res,"maplim") <- list(x=range(x1),y=range(x2))
     return(res)
 } 
 

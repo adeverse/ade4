@@ -53,7 +53,7 @@ orthobasis.mat <- function(mat, cnw=TRUE) {
     wt <- sqrt(wt)
     mat <- t(t(mat)/wt)
     mat <- mat/wt
-    eig <- La.eigen(mat,sym=TRUE)
+    eig <- eigen(mat,sym=TRUE)
     w0 <- abs(eig$values)/max(abs(eig$values))
     tol <- 1e-07
     w0 <- which(w0<tol)
@@ -314,7 +314,7 @@ return(res)
     if (is.null(names(poivoisi))) names(poivoisi) <- as.character(1:n)
     d0 = neig2mat(neig)
     d0 = diag(poivoisi)-d0/m
-    eig <- La.eigen(d0, sym = TRUE)
+    eig <- eigen(d0, sym = TRUE)
     ########
     tol <- 1e-07
     w0 <- abs(eig$values)/max(abs(eig$values))

@@ -29,7 +29,7 @@
     wsqrt <- sqrt(row.w)
     delta <- delta * wsqrt
     delta <- t(t(delta) * wsqrt)
-    eig <- La.eigen(delta, symmetric = TRUE)
+    eig <- eigen(delta, symmetric = TRUE)
     lambda <- eig$values
     w0 <- lambda[n]/lambda[1]
     if (w0 < -tol) 

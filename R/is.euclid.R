@@ -4,7 +4,7 @@
     distmat <- dist2mat(distmat)
     n <- ncol(distmat)
     delta <- -0.5 * bicenter.wt(distmat * distmat)
-    lambda <- La.eigen(delta, symmetric = TRUE, only = TRUE)$values
+    lambda <- eigen(delta, symmetric = TRUE, only = TRUE)$values
     w0 <- lambda[n]/lambda[1]
     if (plot) 
         barplot(lambda)

@@ -13,7 +13,7 @@
         n <- length(deg)
         b0 <- -b0/m + diag(deg)/m
         # b0 est la matrice D-P
-        eig <- La.eigen (b0, sym = TRUE)
+        eig <- eigen (b0, sym = TRUE)
         w0 <- abs(eig$values)/max(abs(eig$values))
         w0 <- which(w0<tol)
         if (length(w0)==0) stop ("abnormal output : no null eigenvalue")

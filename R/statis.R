@@ -29,7 +29,7 @@
     dimnames(RV) <- list(tab.names, tab.names)
     statis$RV <- RV
     ############## diagonalisation de la matrice des RV ###########
-   eig1 <- La.eigen(RV, sym = TRUE)
+   eig1 <- eigen(RV, sym = TRUE)
     statis$RV.eig <- eig1$values
     if (any(eig1$vectors[, 1] < 0)) 
         eig1$vectors[, 1] <- -eig1$vectors[, 1]
@@ -45,7 +45,7 @@
     C.ro <- apply(t(sep) * tabw, 2, sum)
     C.ro <- matrix(unlist(C.ro), nlig, nlig)
     ############## diagonalisation du compromis ###########
-   eig1 <- La.eigen(C.ro, sym = TRUE)
+   eig1 <- eigen(C.ro, sym = TRUE)
     eig <- eig1$values
     rank <- sum((eig/eig[1]) > tol)
     if (scannf) {

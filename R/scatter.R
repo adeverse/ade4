@@ -189,7 +189,7 @@
     
     util.ellipse <- function(mx, my, vx, cxy, vy, coeff) {
         lig <- 100
-        epsi <- 1e-05
+        epsi <- 1e-10
         x <- 0
         y <- 0
         if (vx < 0) 

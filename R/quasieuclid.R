@@ -6,7 +6,7 @@
     distmat <- dist2mat(distmat)
     n <- ncol(distmat)
     delta <- -0.5 * bicenter.wt(distmat * distmat)
-    eig <- La.eigen(delta, sym = TRUE)
+    eig <- eigen(delta, sym = TRUE)
     ncompo <- sum(eig$value > 0)
     tabnew <- eig$vectors[, 1:ncompo] * rep(sqrt(eig$values[1:ncompo]), 
         rep(n, ncompo))

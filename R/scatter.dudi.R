@@ -1,4 +1,4 @@
-"scatter.dudi" <- function (x, xax = 1, yax = 2, clab.row = 0.5, clab.col = 1,
+"scatter.dudi" <- function (x, xax = 1, yax = 2, clab.row = .75, clab.col = 1,
     permute = FALSE, posieig = "top", sub = NULL, ...) 
 {
     if (!inherits(x, "dudi")) 

@@ -5,7 +5,7 @@
 performs the scatter diagrams of objects of class \code{dudi}. 
 }
 \usage{
-scatter.dudi(x, xax = 1, yax = 2, clab.row = 0.5, clab.col = 1, 
+scatter.dudi(x, xax = 1, yax = 2, clab.row = 0.75, clab.col = 1, 
     permute = FALSE, posieig = "top", sub = NULL, \dots)
 }
 \arguments{

@@ -7,7 +7,7 @@ using an object of class \code{statis}.
 }
 \usage{
 kplot.statis(object, xax = 1, yax = 2, mfrow = NULL, 
-    which.tab = 1:length(x$tab.names), clab = 1.5, cpoi = 2, 
+    which.tab = 1:length(object$tab.names), clab = 1.5, cpoi = 2, 
     traject = FALSE, arrow = TRUE, class = NULL, 
     unique.scale = FALSE, csub = 2, possub = "bottomright",\dots)
 }

@@ -6,7 +6,7 @@ performs high level plots of a Partial Triadic Analysis,
 using an object of class \code{pta}. 
 }
 \usage{
-kplot.pta(object, xax = 1, yax = 2, which.tab = 1:nrow(atp$RV), 
+kplot.pta(object, xax = 1, yax = 2, which.tab = 1:nrow(object$RV), 
     mfrow = NULL, which.graph = 1:4, clab = 1, cpoint = 2, csub = 2, 
     possub = "bottomright", ask = par("ask"), ...)
 }
@@ -16,10 +16,10 @@ kplot.pta(object, xax = 1, yax = 2, which.tab = 1:nrow(atp$RV),
   \item{which.tab}{a numeric vector containing the numbers of the tables to analyse}
   \item{mfrow}{parameter of the array of figures to be drawn, otherwise the graphs associated to a table are drawn on the same row}
  \item{which.graph}{an option for drawing, an integer between 1 and 4. For each table of which.tab, are drawn :
-	  \item{1}{the projections of the principal axes}
-	  \item{2}{the projections of the rows}
-	  \item{3}{the projections of the columns}
-	  \item{4}{the projections of the principal components onto the planes of the compromise}
+      \item{1}{the projections of the principal axes}
+      \item{2}{the projections of the rows}
+      \item{3}{the projections of the columns}
+      \item{4}{the projections of the principal components onto the planes of the compromise}
   }
   \item{clab}{a character size for the labels}
   \item{cpoint}{a character size for plotting the points, used with \code{par("cex")}*cpoint. If zero, no points are drawn.}

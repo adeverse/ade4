@@ -6,7 +6,7 @@ performs high level plots of a Multiple Co-inertia Analysis,
 using an object of class \code{mcoa}. 
 }
 \usage{
-kplot.mcoa(object, xax = 1, yax = 2, which.tab = 1:nrow(mcoa$cov2), 
+kplot.mcoa(object, xax = 1, yax = 2, which.tab = 1:nrow(object$cov2), 
     mfrow = NULL, option = c("points", "axis", "columns"), 
     clab = 1, cpoint = 2, csub = 2, possub = "bottomright",\dots)
 }
@@ -16,9 +16,9 @@ kplot.mcoa(object, xax = 1, yax = 2, which.tab = 1:nrow(mcoa$cov2),
   \item{which.tab}{a numeric vector containing the numbers of the tables to analyse}
   \item{mfrow}{a vector of the form 'c(nr,nc)', otherwise computed by as special own function \code{n2mfrow}}
   \item{option}{a string of characters for the drawing option
-	  \item{"points"}{plot of the projected scattergram onto the co-inertia axes}
-	  \item{"axis"}{projections of inertia axes onto the co-inertia axes.}
-	  \item{"columns"}{projections of variables onto the synthetic variables planes.}
+      \item{"points"}{plot of the projected scattergram onto the co-inertia axes}
+      \item{"axis"}{projections of inertia axes onto the co-inertia axes.}
+      \item{"columns"}{projections of variables onto the synthetic variables planes.}
   }
   \item{clab}{a character size for the labels}
   \item{cpoint}{a character size for plotting the points, used with \code{par("cex")}*cpoint. If zero, no points are drawn.}

@@ -7,7 +7,7 @@ performs the scatter diagram of a correlation circle.
 \usage{
 s.corcircle(dfxy, xax = 1, yax = 2, label = row.names(df), 
     clabel = 1, grid = TRUE, sub = "", csub = 1, possub = "bottomleft", 
-    cgrid = 1, fullcircle = TRUE, box = FALSE, add.plot = FALSE)
+    cgrid = 0, fullcircle = TRUE, box = FALSE, add.plot = FALSE)
 }
 \arguments{
   \item{dfxy}{a data frame with two coordinates }

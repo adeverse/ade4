@@ -41,6 +41,9 @@ print.statis (x, \dots)
 Lavit, C. (1988) \emph{Analyse conjointe de tableaux quantitatifs}, Masson, Paris.\cr\cr
 Lavit, C., Escoufier, Y., Sabatier, R. and Traissac, P. (1994) The ACT (Statis method). \emph{Computational Statistics and Data Analysis}, \bold{18}, 97--119.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(jv73)
 kta1 <- ktab.within(within.pca(jv73$morpho, jv73$fac.riv, scann = FALSE))

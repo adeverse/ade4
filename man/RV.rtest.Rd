@@ -18,6 +18,7 @@ returns a list of class 'rtest'
 Heo, M. & Gabriel, K.R. (1997) A permutation test of association between configurations by means of the RV coefficient. 
 Communications in Statistics - Simulation and Computation, \bold{27}, 843-856.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(doubs)
 pca1 <- dudi.pca(doubs$mil, scal = TRUE, scann = FALSE)

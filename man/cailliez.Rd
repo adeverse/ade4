@@ -25,6 +25,9 @@ Legendre, P., and Legendre, L. (1998) \emph{Numerical ecology}, 2nd English edit
 From the DistPCoa program of P. Legendre et M.J. Anderson\cr
 \url{http://www.fas.umontreal.ca/BIOL/Casgrain/en/labo/distpcoa.html}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 library(mva)
 data(capitales)

@@ -15,6 +15,7 @@ scatter.acm(x, xax = 1, yax = 2, csub = 2, possub = "topleft", ...)
   \item{possub}{a string of characters indicating the legend position ("topleft", "topright", "bottomleft", "bottomright") in a array of figures}
   \item{\dots}{further arguments passed to or from other methods}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(lascaux)
 scatter(dudi.acm(lascaux$ornem, sca = FALSE), csub = 3)

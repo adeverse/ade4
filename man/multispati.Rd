@@ -56,6 +56,7 @@ Wartenberg, D. E. (1985) Multivariate spatial correlation: a method for explorat
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(mafragh)

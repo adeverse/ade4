@@ -28,6 +28,7 @@ kplot.pta(object, xax = 1, yax = 2, which.tab = 1:nrow(object$RV),
   \item{ask}{a logical value indicating if the graphs requires several arrays of figures}
   \item{\dots}{further arguments passed to or from other methods}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(meaudret)
 wit1 <- within(dudi.pca(meaudret$fau, scan = FALSE, scal = FALSE), 

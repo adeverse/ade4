@@ -24,6 +24,9 @@ All the distances are of type \eqn{d=\|x-y\|_A = \sqrt{(x-y)^{t}A(x-y)}}{d = ||x
 \value{
 an object of class \code{dist}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 library(mva)
 data(ecomor)

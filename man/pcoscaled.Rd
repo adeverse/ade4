@@ -17,6 +17,7 @@ returns a data frame containing the Euclidean representation of the distance mat
 }
 \references{Gower, J. C. (1966) Some distance properties of latent root and vector methods used in multivariate analysis. \emph{Biometrika}, \bold{53}, 325--338.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 library(mva)
     a <- 1 / sqrt(3) - 0.2

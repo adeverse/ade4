@@ -21,6 +21,7 @@ ktab.list.df(obj, rownames = NULL, colnames = NULL, tabnames = NULL,
 \details{
 Each element of the initial list have to possess the same names and row numbers
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \value{
 returns a list of class \code{ktab}. See \code{\link{ktab}}
 }

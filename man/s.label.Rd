@@ -37,6 +37,7 @@ s.label(dfxy, xax = 1, yax = 2, label = row.names(dfxy),
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 layout(matrix(c(1,2,3,2), 2, 2))
 data(atlas)
@@ -57,9 +58,9 @@ s.label(data.frame(x,y), lab = as.character(z < 1))
 s.label(data.frame(x,y), clab = 0, cpoi = 1, add.plot = TRUE)
 symbols(0, 0, circles = 1, add = TRUE, inch = FALSE)
 s.label(cbind.data.frame(runif(100,0,10), runif(100,5,12)), 
-	incl = FALSE, clab = 0)
+    incl = FALSE, clab = 0)
 s.label(cbind.data.frame(runif(100,-3,12),
-	runif(100,2,10)), cl = 0, cp = 2, include = FALSE)
+    runif(100,2,10)), cl = 0, cp = 2, include = FALSE)
 }
 \keyword{multivariate}
 \keyword{hplot}

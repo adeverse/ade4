@@ -33,6 +33,7 @@ Lebart, L., Morineau, A. and Piron, M. (1995) \emph{Statistique exploratoire mul
 }
 \details{Contributions are printed in 1/10000 and the sign is the sign of the coordinate
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(housetasks)
 coa1 <- dudi.coa(housetasks, scann = FALSE)

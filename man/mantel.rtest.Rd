@@ -18,6 +18,7 @@ an object of class \code{rtest} (randomization tests)
 }
 \references{Mantel, N. (1967) The detection of disease clustering and a generalized regression approach. \emph{Cancer Research}, \bold{27}, 209--220.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 library(mva)
     data(yanomama)

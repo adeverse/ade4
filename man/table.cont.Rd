@@ -26,6 +26,9 @@ table.cont(df, x = 1:ncol(df), y = 1:nrow(df),
   \item{clegend}{if not NULL, a character size for the legend used with  \code{par("cex")*clegend}}
   \item{grid}{a logical value indicating whether a grid in the background of the plot should be drawn}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(chats)
 chatsw <- data.frame(t(chats))

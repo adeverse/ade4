@@ -22,6 +22,9 @@ table.value(df, x = 1:ncol(df), y = nrow(df):1,
   \item{clegend}{a character size for the legend (if 0, no legend)}
   \item{grid}{a logical value indicating whether the grid should be plotted}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(olympic)
 w <- olympic$tab

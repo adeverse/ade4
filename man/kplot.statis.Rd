@@ -26,6 +26,7 @@ kplot.statis(object, xax = 1, yax = 2, mfrow = NULL,
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(jv73)
 dudi1 <- dudi.pca(jv73$poi, scann = FALSE, scal = FALSE)

@@ -19,6 +19,9 @@ Returns a list of class \code{nsc} and \code{dudi} (see \code{\link{dudi}}) cont
 \references{Kroonenberg, P. M., and Lombardo  R. (1999) Nonsymmetric correspondence analysis: 
 a tool for analysing contingency tables with a dependence structure. \emph{Multivariate Behavioral Research}, \bold{34}, 367--396.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(housetasks)
 nsc1 <- dudi.nsc(housetasks, scan = FALSE)

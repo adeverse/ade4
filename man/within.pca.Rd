@@ -23,6 +23,9 @@ returns a list of the sub-class \code{within} of class \code{dudi'}. See \code{\
 \references{Bouroche, J. M. (1975) \emph{Analyse des données ternaires: la double analyse en composantes principales}. 
  Thèse de 3ème cycle, Université de Paris VI.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(meaudret)
 wit1 <- within.pca(meaudret$mil, meaudret$plan$dat, 

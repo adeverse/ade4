@@ -32,11 +32,14 @@ returns a distance matrix of class \code{dist} between the rows of the data fram
 \references{Gower, J.C. and Legendre, P. (1986) Metric and Euclidean properties of dissimilarity coefficients. 
 \emph{Journal of Classification}, \bold{3}, 5--48.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(aviurba)
 for (i in 1:10) {
-	d <- dist.binary(aviurba$fau, method = i)
-	cat(attr(d, "method"), is.euclid(d), "\n")}
+    d <- dist.binary(aviurba$fau, method = i)
+    cat(attr(d, "method"), is.euclid(d), "\n")}
 }
 \keyword{array}
 \keyword{multivariate}

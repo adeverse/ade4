@@ -15,6 +15,9 @@ dist.neig(neig)
 \value{
 returns a distance matrix, object of class \code{dist}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 library(mva)
     data(elec88)

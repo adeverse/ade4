@@ -61,6 +61,7 @@ A 'ktab' object can be created with :\cr
 \code{tab.names} returns the vector of the array names of a K-tables and allowes to modifie them.\cr
 \code{ktab.util.names} is a useful function.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(friday87)
 wfri <- data.frame(scale(friday87$fau, scal = FALSE))

@@ -39,6 +39,7 @@ s.distri(dfxy, dfdistri, xax = 1, yax = 2, cstar = 1,
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 xy <- cbind.data.frame(x = runif(200,-1,1), y = runif(200,-1,1))
 distri <- data.frame(w1 = rpois(200, xy$x * (xy$x > 0)))

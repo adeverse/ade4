@@ -30,6 +30,9 @@ returns a list of class \code{witwit}, \code{coa} and \code{dudi} (see \link{as.
 Cazes, P., Chessel, D. and Dolédec, S. (1988) L'analyse des correspondances internes d'un tableau partitionné :
 son usage en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{36}, 39--54. 
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(ardeche)
 coa1 <- dudi.coa(ardeche$tab, scann = FALSE, nf = 4)

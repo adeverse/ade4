@@ -40,6 +40,9 @@ returns a list of class 'sepan' containing :
 The function plot on a \code{sepan} object allows to compare inertias and structures between arrays.
 In black, the eigenvalues of kept axes in the object 'sepan'.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(escopage)
 w <- data.frame(scale(escopage$tab))

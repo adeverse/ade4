@@ -17,6 +17,9 @@ dotcircle(z, alpha0 = pi/2, xlim = range(pretty(z)),
   \item{cleg}{: a character size for the ranges, used with \code{par("cex")*cleg}}
 }
 \seealso{\code{\link[CircStats]{circ.plot}}}
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 w <- scores.neig(neig(n.cir = 24))
 par(mfrow = c(4,4))

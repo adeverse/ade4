@@ -16,6 +16,7 @@ rtest.between(xtest, nrepet = 99, \dots)
 \value{
 a list of the class \code{rtest}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \references{
 Romesburg, H. C. (1985) Exploring, confirming and randomization tests. \emph{Computers and Geosciences}, \bold{11}, 19--37.
 }

@@ -29,6 +29,9 @@ The function \code{dudi.fca} returns a list of class \code{fca} and \code{dudi} 
 \references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding approach for the analysis of 
 long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. 
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 w1 <- matrix(c(1,0,0,2,1,1,0,2,2,0,1,0,1,1,1,0,1,3,1,0), 4, 5)
 w1 <- data.frame(w1)

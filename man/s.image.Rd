@@ -39,6 +39,7 @@ contour.plot = TRUE, pixmap = NULL, contour = NULL, area = NULL, add.plot = FALS
   \item{area}{ a data frame of class 'area' to plot a set of surface units in contour }
   \item{add.plot}{ if TRUE uses the current graphics window }
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(t3012)
     if (require(splancs, quiet = TRUE)){

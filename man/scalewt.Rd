@@ -18,6 +18,7 @@ returns a centred, scaled matrix
 }
 \note{The norms are calculated with 1/n and the columns of null variance are still equal to zero.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 scalewt(matrix(1:12,4,3))
 scale((matrix(1:12,4,3)))

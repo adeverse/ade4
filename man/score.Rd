@@ -25,6 +25,7 @@ scoreutil.base(y, xlim, grid, cgrid, include.origin, origin, sub, csub)
 }
 \seealso{\code{\link{sco.boxplot}}, \code{\link{sco.distri}}, \code{\link{sco.quant}}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 \dontrun{
 par(mar = c(1,1,1,1))

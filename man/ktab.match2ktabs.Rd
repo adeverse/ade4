@@ -25,6 +25,7 @@ Application a l'étude des relations pathologie végétale - environnement. \emph{R
 IMPORTANT : \code{KTX} and \code{KTY} must have the same k-tables structure, the same number
 of columns, and the same column weights.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(meau)
 wit1 <- within.pca(meau$mil, meau$plan$dat, scan = FALSE, scal = "total")

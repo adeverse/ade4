@@ -18,6 +18,7 @@ s.hist(dfxy, xax = 1, yax = 2, cgrid = 1, cbreaks = 2, adjust = 1, ...)
   \item{adjust}{a parameter passed to \code{density} to display a kernel density estimation}
   \item{\dots}{further arguments passed from the \code{s.label} for the scatter plot}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(rpjdl)
 coa1 <- dudi.coa(rpjdl$fau, scannf = FALSE, nf = 4)

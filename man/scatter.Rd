@@ -50,6 +50,7 @@ scatter(x, ...)
 \code{\link{s.corcircle}},\code{\link{s.distri}},\code{\link{s.label}},
 \code{\link{s.match}},\code{\link{s.traject}},\code{\link{s.value}}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 par(mfrow = c(3,3))
 plot.new()

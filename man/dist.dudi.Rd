@@ -15,6 +15,9 @@ dist.dudi(dudi, amongrow = TRUE)
 \value{
 an object of class \code{dist}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data (meaudret)
 pca1 <- dudi.pca(meaudret$mil, scan = FALSE)

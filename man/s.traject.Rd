@@ -38,6 +38,7 @@ s.traject(dfxy, fac = factor(rep(1, nrow(dfxy))),
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 rw <- function(a){
     x <- 0

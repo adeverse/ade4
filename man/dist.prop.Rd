@@ -32,6 +32,9 @@ Manly, B. F. (1994) \emph{Multivariate Statistical Methods. A primer.}, Second e
 
 Nei, M. (1972) Genetic distances between populations. \emph{The American Naturalist}, \bold{106}, 283--292. 
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(microsatt)
 w <- microsatt$tab[1:microsatt$loci.eff[1]]

@@ -22,6 +22,9 @@ Perriere, G.,Lobry,  J. R.  and Thioulouse J. (1996) Correspondence discriminant
 
 Perriere, G. and Thioulouse, J. (2002) Use of Correspondence Discriminant Analysis to predict the subcellular location of bacterial proteins. \emph{Computer Methods and Programs in Biomedicine}, in press.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(perthi02)
 plot(discrimin.coa(perthi02$tab, perthi02$cla, scan = FALSE))

@@ -26,6 +26,9 @@ returns a data frame containing the coordinates of the supplementary projections
 \references{
 Gower, J. C. (1967) Multivariate analysis and multivariate geometry. \emph{The statistician}, \bold{17}, 13--28.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(euro123)
 par(mfrow = c(2,2))

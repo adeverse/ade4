@@ -20,6 +20,9 @@ table.paint(df, x = 1:ncol(df), y = nrow(df):1,
   \item{csize}{if 'clegend' not NULL, a coefficient for the legend size}
   \item{clegend}{a character size for the legend, otherwise no legend}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(rpjdl)
 X <- data.frame(t(rpjdl$fau))

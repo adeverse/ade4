@@ -50,6 +50,9 @@ Dolédec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method fo
 \section{WARNING }{
 IMPORTANT : \code{dudi1} and \code{dudi2} must have identical row weights.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(doubs)
 dudi1 <- dudi.pca(doubs$mil, scale = TRUE, scan = FALSE, nf = 3)

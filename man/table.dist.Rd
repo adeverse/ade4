@@ -16,6 +16,9 @@ table.dist(d, x = 1:(attr(d, "Size")), labels = as.character(x),
   \item{csize}{a coefficient for the circle size}
   \item{grid}{a logical value indicating whether a grid in the background of the plot should be drawn}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(eurodist)
 table.dist(eurodist, labels = attr(eurodist, "Labels"))

@@ -57,6 +57,9 @@ The duality diagram  : a means of better practical applications
 In \emph{Development in numerical ecology}, Legendre, P. & Legendre, L. (Eds.) 
 NATO advanced Institute,  Serie G. Springer Verlag, Berlin,  139--156.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(deug)
 dd1 <- dudi.pca(deug$tab, scannf = FALSE)

@@ -43,6 +43,9 @@ Returns a list of subclass 'between' of class 'dudi' (see \code{\link{dudi}})
 Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique
 I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(meaudret)
 par(mfrow = c(2,2))

@@ -18,12 +18,13 @@ scatter.fca(x, xax = 1, yax = 2, clab.moda = 1, labels = names(x$tab),
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
   \item{\dots}{further arguments passed to or from other methods}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(coleo)
 coleo.fuzzy <- prep.fuzzy.var(coleo$tab, coleo$col.blocks)
 fca1 <- dudi.fca(coleo.fuzzy, sca = FALSE, nf = 3)
 scatter(fca1, labels = coleo$moda.names, clab.moda = 1.5,
-	sub = names(coleo$col.blocks), csub = 3)
+    sub = names(coleo$col.blocks), csub = 3)
 }
 \keyword{multivariate}
 \keyword{hplot}

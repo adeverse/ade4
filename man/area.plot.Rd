@@ -59,6 +59,9 @@ are used as labels. To change this value, use label. These labels must be in the
 poly2area returns a data frame 'factor,x,y'. \cr
 area2poly returns a list of class \code{polylist}. \cr
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(elec88)
 par(mfrow = c(2,2))

@@ -17,6 +17,7 @@ rtest.discrimin(xtest, nrepet = 99, \dots)
 \value{
 returns a list of class \code{rtest}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(meaudret)
 pca1 <- dudi.pca(meaudret$mil, scan = FALSE, nf = 3)

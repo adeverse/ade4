@@ -266,7 +266,7 @@
             lty = 2)
 }
 ############ scatterutil.eti.circ #################
-"scatterutil.eti.circ" <- function (x, y, label, clabel, origin=c(0,0)) {
+"scatterutil.eti.circ" <- function (x, y, label, clabel, origin=c(0,0), boxes=TRUE) {
     if (is.null(label)) 
         return(invisible())
     # message de JT warning pour R 1.7 modif samedi, mars 29, 2003 at 14:31
@@ -282,32 +282,35 @@
         cha <- as.character(label[i])
         cha <- paste(" ", cha, " ", sep = "")
         cex0 <- par("cex") * clabel
-        xh <- strwidth(cha, cex = cex0)
-        yh <- strheight(cha, cex = cex0) * 5/6
-        if ((xref[i] > yref[i]) & (xref[i] > -yref[i])) {
-            x1 <- x[i] + xh/2
-            y1 <- y[i]
+        
+        if (boxes) {
+            xh <- strwidth(cha, cex = cex0)
+            yh <- strheight(cha, cex = cex0) * 5/6
+            if ((xref[i] > yref[i]) & (xref[i] > -yref[i])) {
+                x1 <- x[i] + xh/2
+                y1 <- y[i]
+            }
+            else if ((xref[i] > yref[i]) & (xref[i] <= (-yref[i]))) {
+                x1 <- x[i]
+                y1 <- y[i] - yh
+            }
+            else if ((xref[i] <= yref[i]) & (xref[i] <= (-yref[i]))) {
+                x1 <- x[i] - xh/2
+                y1 <- y[i]
+            }
+            else if ((xref[i] <= yref[i]) & (xref[i] > (-yref[i]))) {
+                x1 <- x[i]
+                y1 <- y[i] + yh
+            }
+            rect(x1 - xh/2, y1 - yh, x1 + xh/2, y1 + yh, col = "white", 
+                border = 1)
         }
-        else if ((xref[i] > yref[i]) & (xref[i] <= (-yref[i]))) {
-            x1 <- x[i]
-            y1 <- y[i] - yh
-        }
-        else if ((xref[i] <= yref[i]) & (xref[i] <= (-yref[i]))) {
-            x1 <- x[i] - xh/2
-            y1 <- y[i]
-        }
-        else if ((xref[i] <= yref[i]) & (xref[i] > (-yref[i]))) {
-            x1 <- x[i]
-            y1 <- y[i] + yh
-        }
-        rect(x1 - xh/2, y1 - yh, x1 + xh/2, y1 + yh, col = "white", 
-            border = 1)
         text(x1, y1, cha, cex = cex0)
     }
 }
 
 ############ scatterutil.eti #################
-"scatterutil.eti" <- function (x, y, label, clabel) {
+scatterutil.eti<-function (x, y, label, clabel, boxes=TRUE) {
     if (length(label) == 0) 
         return(invisible())
     if (is.null(label)) 
@@ -318,15 +321,18 @@
         cha <- as.character(label[i])
         cha <- paste(" ", cha, " ", sep = "")
         cex0 <- par("cex") * clabel
-        xh <- strwidth(cha, cex = cex0)
-        yh <- strheight(cha, cex = cex0) * 5/3
         x1 <- x[i]
         y1 <- y[i]
-        rect(x1 - xh/2, y1 - yh/2, x1 + xh/2, y1 + yh/2, col = "white", 
-            border = 1)
+        if (boxes) {
+                xh <- strwidth(cha, cex = cex0)
+                yh <- strheight(cha, cex = cex0) * 5/3
+                rect(x1 - xh/2, y1 - yh/2, x1 + xh/2, y1 + yh/2, col= "white",
+                border = 1)
+        }
         text(x1, y1, cha, cex = cex0)
     }
 }
+
 
 ############ scatterutil.grid #################
 "scatterutil.grid" <- function (cgrid) {

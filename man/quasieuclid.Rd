@@ -17,6 +17,7 @@ quasieuclid(distmat)
 \value{
 object of class \code{dist} containing a Euclidean distance matrice
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(yanomama)
 geo <- as.dist(yanomama$geo)

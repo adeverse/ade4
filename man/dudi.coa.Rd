@@ -21,6 +21,9 @@ Benzécri, J.P. and Coll. (1973) \emph{L'analyse des données. II L'analyse des co
 
 Greenacre, M. J. (1984) \emph{Theory and applications of correspondence analysis}, Academic Press, London.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(rpjdl)
 chisq.test(rpjdl$fau)$statistic

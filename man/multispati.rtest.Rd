@@ -30,6 +30,7 @@ Smouse, P. E. and Peakall, R. (1999) Spatial autocorrelation analysis of individ
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 if(require(spdep, quiet = TRUE)){
     data(mafragh)

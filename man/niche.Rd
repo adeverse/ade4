@@ -38,6 +38,7 @@ Returns a list of the class \code{niche} (sub-class of \code{dudi}) containing :
 \references{
 Dolédec, S., Chessel, D. and Gimaret, C. (2000) Niche separation in community analysis: a new method. \emph{Ecology}, \bold{81}, 2914--1927.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(doubs)
 dudi1 <- dudi.pca(doubs$mil, scale = TRUE, scan = FALSE, nf = 3)

@@ -18,10 +18,10 @@ plot.mcoa (x, xax = 1, yax = 2, eig.bottom = TRUE, \dots)
 \arguments{
   \item{X}{an object of class \code{ktab}}
   \item{option}{a string of characters for the weightings of the arrays options :
-  	 \item{"inertia"}{weighting of group k by the inverse of the total inertia of the array k}
-  	 \item{"lambda1"}{weighting of group k by the inverse of the first eigenvalue of the k analysis}
-  	 \item{"uniform"}{uniform weighting of groups}
-  	 \item{"internal"}{weighting included in \code{X$tabw}}
+     \item{"inertia"}{weighting of group k by the inverse of the total inertia of the array k}
+     \item{"lambda1"}{weighting of group k by the inverse of the first eigenvalue of the k analysis}
+     \item{"uniform"}{uniform weighting of groups}
+     \item{"internal"}{weighting included in \code{X$tabw}}
   }
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
@@ -51,6 +51,7 @@ mcoa returns a list of  class 'mcoa' containing :
 \references{
 Chessel, D. and Hanafi, M. (1996) Analyses de la co-inertie de K nuages de points, \emph{Revue de Statistique Appliquée}, \bold{44}, 35--60.
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(friday87)
 w1 <- data.frame(scale(friday87$fau, scal = FALSE))

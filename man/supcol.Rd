@@ -24,6 +24,9 @@ returns a list of two components :
 \code{$tabsup} {data frame containing the array with the supplementary columns transformed or not}
 \code{$cosup} {data frame containing the coordinates of the supplementary projections}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(rpjdl)
 rpjdl.coa <- dudi.coa(rpjdl$fau, scan = FALSE, nf = 4)

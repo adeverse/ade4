@@ -40,6 +40,9 @@ Lebart, L., A. Morineau, and M. Piron. 1995. Statistique exploratoire multidimen
 \seealso{
     \code{\link{s.chull}}, \code{\link{s.class}}
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(banque)
 banque.acm <- dudi.acm(banque, scann = FALSE, nf = 3)

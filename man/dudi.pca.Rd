@@ -34,6 +34,9 @@ if \eqn{x_{ij}}{x[i,j]} is the value of the table df and \eqn{y_{ij}}{y[i,j]} is
 \seealso{
     \code{prcomp}, \code{princomp} in the \code{mva} library
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(deug)
 deug.dudi <- dudi.pca(deug$tab, center = deug$cent, 

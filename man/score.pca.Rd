@@ -18,6 +18,7 @@ score.pca(x, xax = 1, which.var = NULL, mfrow = NULL, csub = 2,
   \item{abline}{a logical value indicating whether a regression line should be added}
   \item{\dots}{further arguments passed to or from other methods}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data(deug)
 dd1 <- dudi.pca(deug$tab, scan = FALSE)

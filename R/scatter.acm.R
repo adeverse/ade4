@@ -10,7 +10,10 @@
     oritab <- eval(as.list(x$call)[[2]], sys.frame(0))
     nvar <- ncol(oritab)
     par(mfrow = n2mfrow(nvar))
-    for (i in 1:(nvar)) s.class(x$li, oritab[, i], clab = 1.5, 
+    # modif lundi, décembre 16, 2002 at 16:48 
+    # suite à message d'Alain Guerreau  
+    for (i in 1:(nvar)) s.class(x$li, oritab[, i], xax=xax, yax=yax, clab = 1.5, 
         sub = names(oritab)[i], csub = csub, possub = possub, 
         cgrid = 0, csta = 0)
 }
+

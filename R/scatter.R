@@ -180,6 +180,11 @@
 
 ############ scatterutil.ellipse #################
 "scatterutil.ellipse" <- function (x, y, z, cellipse, axesell) {
+   
+    # modif du vendredi, mars 28, 2003 at 08:01 ajout des tests 
+    if (any(is.na(z)))  return (invisible())
+    if (sum(z*z)==0) return (invisible())
+    
     util.ellipse <- function(mx, my, vx, cxy, vy, coeff) {
         lig <- 100
         epsi <- 1e-05
@@ -258,15 +263,16 @@
         segments(ell$seg2[1], ell$seg2[2], ell$seg2[3], ell$seg2[4], 
             lty = 2)
 }
-
 ############ scatterutil.eti.circ #################
 "scatterutil.eti.circ" <- function (x, y, label, clabel) {
     if (is.null(label)) 
         return(invisible())
-    if (is.na(label)) 
+    # message de JT warning pour R 1.7 modif samedi, mars 29, 2003 at 14:31
+    if (any(is.na(label)))
         return(invisible())
-    if (label == "") 
+    if (any(label == ""))
         return(invisible())
+    # fin de modif
     for (i in 1:(length(x))) {
         cha <- as.character(label[i])
         cha <- paste(" ", cha, " ", sep = "")

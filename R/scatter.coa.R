@@ -15,8 +15,9 @@
         names(coocol) <- names(coolig)
         s.label(rbind.data.frame(coolig, coocol), clab = 0, 
             cpoi = 0, sub = sub, csub = csub)
-        s.label(coolig, xax, yax, clab = clab.row, add.p = TRUE)
-        s.label(coocol, xax, yax, clab = clab.col, add.p = TRUE)
+        # samedi, mars 29, 2003 at 15:35 correction SD pour ZAN
+        s.label(coolig, clab = clab.row, add.p = TRUE)
+        s.label(coocol, clab = clab.col, add.p = TRUE)
     }
     else if (method == 2) {
         coocol <- x$c1[, c(xax, yax)]
@@ -33,3 +34,4 @@
     else stop("Unknown method")
     add.scatter.eig(x$eig, x$nf, xax, yax, posi = posieig, ratio = 1/4)
 }
+

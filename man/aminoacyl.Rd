@@ -10,7 +10,9 @@
         \code{aminoacyl} is a list containing the 5 following objects:  
         \enumerate{     
         \item{genes}{is a vector giving the gene names.} 
-        \item{localisation}{is a vector giving the cellular localisation of the proteins (M=mitochondrial,C=cytoplasmic, I=indetermined, CI=cyto and mito).}    
+        \item{localisation}{is a vector giving the cellular localisation
+         of the proteins (M = mitochondrial, C = cytoplasmic,
+         I = indetermined, CI = cyto and mito).}    
         \item{codon}{is a vector containing the codon.}
         \item{AA}{is a factor giving the amino acid names for each codon.}
         \item{usage.codon}{is a dataframe containing the codon counts for each gene.}

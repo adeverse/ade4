@@ -7,11 +7,9 @@ This data set describes the phylogeny of carnivora as reported by Diniz-Filho et
 }
 \usage{data(carni19)}
 \format{
-\code{carni19} is a list containing the 2 following objects : \cr 
-        \enumerate{     
+\code{carni19} is a list containing the 2 following objects : \cr     
             \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
             \item{bm}{is a numeric vector which values correspond to the body mass of the 19 species (log scale).}
-        } 
 }
 \references{
 Diniz-Filho, J. A. F., de Sant'Ana, C.E.R. and Bini, L.M. (1998) An eigenvector method for estimating phylogenetic inertia. \emph{Evolution}, \bold{52}, 1247--1262.

@@ -34,7 +34,8 @@ res <- cbind.data.frame(apply(ecg.mld[,1:5],1,sum), ecg.mld[,6:11])
 par(mfrow = c(8,1))
 par(mar = c(2, 5, 1.5, 0.6))
 plot(as.ts(ecg), ylab = "ECG")
-apply(res, 2, function(x) plot(as.ts(x), ylim = range(res), ylab = ""))
+apply(res, 2, function(x) plot(as.ts(x), ylim = range(res),
+ ylab = ""))
 par(mfrow = c(1,1))
 }
 }

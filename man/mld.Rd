@@ -7,7 +7,8 @@ The function \code{mld} performs an additive decomposition of the input vector \
 The function \code{haar2level} builds the factor \code{level} such that the multi level decomposition coresponds exactly to a multiresolution analysis performed with the haar basis.
 }
 \usage{
-mld(x, orthobas, level, na.action = c("fail", "mean"), plot = TRUE, dfxy = NULL, phylog = NULL, ...)
+mld(x, orthobas, level, na.action = c("fail", "mean"),
+ plot = TRUE, dfxy = NULL, phylog = NULL, ...)
 haar2level(x)
 }
 \arguments{
@@ -28,7 +29,9 @@ Mallat, S. G. (1989) A theory for multiresolution signal decomposition: the wave
 
 Percival, D. B. and Walden, A. T. (2000) \emph{Wavelet Methods for Time Series Analysis}, Cambridge University Press.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} and Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{gridrowcol}}, \code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link[waveslim]{mra}} for multiresolution analysis with various families of wavelets}
 \examples{
 # decomposition of a time serie
@@ -51,7 +54,9 @@ palm.phy<-newick2phylog(palm$tre)
 level <- rep("F", 65)
 level[c(4, 21, 3, 6, 13)] <- LETTERS[1:5]
 level <- as.factor(level)
-res <- mld(as.vector(vfruit), palm.phy$Bscores, level, phylog = palm.phy, clabel.nod = 0.7, f.phylog=0.8, csize=2,clabel.row=0.7,clabel.col=0.7)
+res <- mld(as.vector(vfruit), palm.phy$Bscores, level,
+ phylog = palm.phy, clabel.nod = 0.7, f.phylog=0.8,
+  csize = 2, clabel.row = 0.7, clabel.col = 0.7)
 
 }
 \keyword{ts}

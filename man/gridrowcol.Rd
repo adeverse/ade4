@@ -24,18 +24,23 @@ Méot, A., Chessel, D. and Sabatier, D. (1993) Opérateurs de voisnage et analyse 
 
 Cornillon, P.A. (1998) Prise en compte de proximités en analyse factorielle et comparative. Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} and Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link{mld}}}
 \examples{
 w <- gridrowcol(8,5)
 par(mfrow=c(1,2))
-area.plot(w$area,center=w$xy,graph=w$neig,clab=0.75)
-area.plot(w$area,center=w$xy,graph=w$neig,clab=0.75,label=as.character(1:40))
+area.plot(w$area,center = w$xy, graph = w$neig, clab = 0.75)
+area.plot(w$area,center = w$xy, graph = w$neig, clab = 0.75,
+ label = as.character(1:40))
 par(mfrow = c(1,1))
 
 par(mfrow = c(5,8))
 for(k in 1:39)
-    s.value(w$xy, w$orthobasis[,k], csi = 3, cleg = 0, csub = 2, sub = as.character(signif(attr(w$orthobasis, "values")[k],3)), incl = FALSE, addax = FALSE, cgr = 0, ylim = c(0,10))
+    s.value(w$xy, w$orthobasis[,k], csi = 3, cleg = 0, csub = 2,
+     sub = as.character(signif(attr(w$orthobasis, "values")[k],3)),
+      incl = FALSE, addax = FALSE, cgr = 0, ylim = c(0,10))
 par(mfrow = c(1,1))
 }
 \keyword{spatial}

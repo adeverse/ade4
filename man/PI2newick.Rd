@@ -2,7 +2,7 @@
 \alias{PI2newick}
 \title{Import data files from Phylogenetic Independance Package}
 \description{
-This function ensures to transform a data set written for the Phylogenetic Independance package of Abouheif (1999) in a data set which format is suited to ade's functions.
+This function ensures to transform a data set written for the Phylogenetic Independance package of Abouheif (1999) in a data set which format is suited to ade4's functions.
 }
 \usage{
 PI2newick(x)
@@ -18,9 +18,16 @@ Returns a list containing :
 \references{
 Abouheif, E. (1999) A method for testing the assumption of phylogenetic independence in comparative data. \emph{Evolutionary Ecology Research}, \bold{1}, 895--909.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} and Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \examples{
-x <- c(2.0266, 0.5832, 0.2460, 1.2963, 0.2460, 0.1565, -99.0000, -99.0000, 10.1000, -99.0000,  20.2000,  28.2000, -99.0000, 14.1000, 11.2000, -99.0000, 21.3000, 27.5000, 1.0000, 2.0000, -1.0000, 4.0000, -1.0000, -1.0000, 3.0000, -1.0000, -1.0000, 5.0000, -1.0000, -1.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000)
+x <- c(2.0266, 0.5832, 0.2460, 1.2963, 0.2460, 0.1565, -99.0000,
+        -99.0000, 10.1000, -99.0000,  20.2000,  28.2000, -99.0000, 
+        14.1000, 11.2000, -99.0000, 21.3000, 27.5000, 1.0000, 2.0000,
+        -1.0000, 4.0000, -1.0000, -1.0000, 3.0000, -1.0000, -1.0000,
+        5.0000, -1.0000, -1.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+        0.0000, 0.0000)
 x <- matrix(x, nrow = 6)
 x <- as.data.frame(x)
 res <- PI2newick(x)

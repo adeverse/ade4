@@ -25,6 +25,7 @@ Martins, E. P. and Hansen, T.F. (1997) Phylogenies and the comparative method: \
 \examples{
 data(newick.eg)
 newick2phylog(newick.eg[[11]])
-radial.phylog(newick2phylog(newick.eg[[7]]),circ=1,clabel.l=0.75)
+radial.phylog(newick2phylog(newick.eg[[7]]), circ = 1,
+ clabel.l = 0.75)
 }
 \keyword{datasets}

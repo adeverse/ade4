@@ -8,13 +8,10 @@ This data set describes the phylogeny of 49 teleos fishes as reported by Rochet 
 \usage{data(mjrochet)}
 \format{
 \code{mjrochet} is a list containing the 2 following objects : \cr 
-        \enumerate{     
             \item{tre}{is a character string giving the phylogenetic tree in Newick format.}
             \item{tab}{is a data frame with 49 rows and 7 traits.}  
-        } 
         
         Variables of \code{mjrochet$tab} are the following ones : \cr
-        \enumerate{
         \item{tm}{: age at maturity (years)}
         \item{lm}{: length at maturity (cm)}
         \item{l05}{: length at 5 per cent survival (cm)}
@@ -22,7 +19,6 @@ This data set describes the phylogeny of 49 teleos fishes as reported by Rochet 
         \item{fb}{: slope of the log-log fecundity-length relationship}
         \item{fm}{: fecundity the year of maturity}
         \item{egg}{: volume of eggs (\eqn{mm^{3}}{mm^3})}
-        }
 }
 \source{
 Data taken from: \cr

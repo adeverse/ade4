@@ -5,7 +5,8 @@
 This function performs the variance analysis of a trait on eigenvectors associated to a phylogenetic tree.
 }
 \usage{
-variance.phylog(phylog, z, bynames = TRUE, na.action = c("fail", "mean"))
+variance.phylog(phylog, z, bynames = TRUE,
+ na.action = c("fail", "mean"))
 }
 \arguments{
   \item{phylog}{: an object of class \code{'phylog'}}
@@ -29,14 +30,17 @@ Grafen, A. (1989) The phylogenetic regression. \emph{Philosophical Transactions 
 
 Diniz-Filho, J. A. F., Sant'Ana, C.E.R. and Bini, L.M. (1998) An eigenvector method for estimating phylogenetic inertia. \emph{Evolution}, \bold{52}, 1247--1262.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} and Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{phylog}}, \code{\link[base]{lm}}}
 \examples{
 data(njplot)
 njplot.phy <- newick2phylog(njplot$tre)
 variance.phylog(njplot.phy,njplot$tauxcg)
 par(mfrow = c(1,2))
-table.phylog(njplot.phy$Ascores, njplot.phy, clabel.row = 0, clabel.col = 0.1, clabel.nod = 0.6, csize = 1)
+table.phylog(njplot.phy$Ascores, njplot.phy, clabel.row = 0,
+ clabel.col = 0.1, clabel.nod = 0.6, csize = 1)
 dotchart.phylog(njplot.phy, njplot$tauxcg, clabel.nodes = 0.6)
 orthogram(njplot$tauxcg, njplot.phy$Ascores)
 }

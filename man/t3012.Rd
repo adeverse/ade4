@@ -8,11 +8,9 @@
 \usage{data(t3012)}
 \format{
     \code{t3012} is a list of 3 components:
-    \enumerate{
     \item{xy}{is a data frame with 30 rows (cities) and 2 coordinates (x,y).}
     \item{temp}{is a data frame with 30 rows (cities) and 12 columns (months). Each column contains the average temperature in tenth of degree Celsius. }
     \item{contour}{is a data frame with 4 columns (x1,y1,x2,y2) for the contour display of France.}
-}
 }
 \source{
 Besse, P. (1979)\cr
@@ -23,6 +21,7 @@ Besse, P. (1979)\cr
 data(t3012)
 data(elec88)
 area.plot(elec88$area)
-s.arrow(t3012$xy, ori = as.numeric(t3012$xy["Paris",]), add.p = TRUE)
+s.arrow(t3012$xy, ori = as.numeric(t3012$xy["Paris",]),
+ add.p = TRUE)
 }
 \keyword{datasets}

@@ -9,8 +9,14 @@
 \code{enum.phylog} enumerate all the possible representations for a phylogeny.
 }
 \usage{
-plot.phylog(x, y = NULL, f.phylog = 0.5, cleaves = 1, cnodes = 0, labels.leaves = names(x$leaves), clabel.leaves = 1, labels.nodes = names(x$nodes), clabel.nodes = 0, sub = "", csub = 1.25, possub = "bottomleft", draw.box = FALSE, ...)
-radial.phylog(phylog, circle = 1, cleaves = 1, cnodes = 0, labels.leaves = names(phylog$leaves), clabel.leaves = 1, labels.nodes = names(phylog$nodes), clabel.nodes = 0, draw.box = FALSE)
+plot.phylog(x, y = NULL, f.phylog = 0.5, cleaves = 1, cnodes = 0,
+ labels.leaves = names(x$leaves), clabel.leaves = 1,
+  labels.nodes = names(x$nodes), clabel.nodes = 0, sub = "",
+   csub = 1.25, possub = "bottomleft", draw.box = FALSE, ...)
+radial.phylog(phylog, circle = 1, cleaves = 1, cnodes = 0,
+ labels.leaves = names(phylog$leaves), clabel.leaves = 1,
+  labels.nodes = names(phylog$nodes), clabel.nodes = 0,
+   draw.box = FALSE)
 enum.phylog(phylog, no.over = 1000)
 }
 \arguments{
@@ -38,40 +44,53 @@ The vector y is a permutation of the set of leaves \{1,2,\dots,f\} compatible wi
 \value{
 The function \code{enum.phylog} returns a matrix with as many columns as leaves. Each row gives a permutation of the set of leaves \{1,2,\dots,f\} compatible with the phylogeny's topology. 
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} and Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{phylog}}}
 \examples{
 data(newick.eg)
 par(mfrow = c(3,2))
-for(i in 1:6) plot.phylog(newick2phylog(newick.eg[[i]], FALSE), clea = 2, clabel.l = 3, cnod = 2.5)
+for(i in 1:6) plot.phylog(newick2phylog(newick.eg[[i]], FALSE),
+ clea = 2, clabel.l = 3, cnod = 2.5)
 par(mfrow = c(1,1))
  
 par(mfrow = c(1,2))
-plot.phylog(newick2phylog(newick.eg[[11]], FALSE), clea = 1.5, clabel.l = 1.5, clabel.nod = 0.75, f = 0.8)
-plot.phylog(newick2phylog(newick.eg[[10]], FALSE), clabel.l = 0, clea = 0, cn = 0, f = 1)
+plot.phylog(newick2phylog(newick.eg[[11]], FALSE), clea = 1.5,
+ clabel.l = 1.5, clabel.nod = 0.75, f = 0.8)
+plot.phylog(newick2phylog(newick.eg[[10]], FALSE), clabel.l = 0,
+ clea = 0, cn = 0, f = 1)
 par(mfrow = c(1,1))
 
 par(mfrow = c(2,2))
 w7 <- newick2phylog("(((((1,2,3)b),(6)c),(4,5)d,7)f);")
-plot.phylog(w7,clabel.l = 1.5, clabel.n = 1.5, f = 0.8, cle = 2, cnod = 3, sub = "(((((1,2,3)b),(6)c),(4,5)d,7)f);", csub = 2)
-plot(newick2phylog("((((e1:4,e2:4)a:5,(e3:7,e4:7)b:2)c:2,e5:11)d:2,((e6:5,e7:5)e:4,(e8:4,e9:4)f:5)g:4);"), f = 0.8, cnod = 2, cleav = 2, clabel.l = 2)
-w <- c("((((a:1,b:1,c:1)HTU1:1,d:1,(e:1,f:1)HTU2:1)HTU3:1,g:1",")HTU4:1,(h:1,i:1)HTU5:1)HTU6:1;")
-plot(newick2phylog(w), clea = 1, cnod = 1, clabel.l = 1.5, clabel.n = 1.5, f = 0.8)
+plot.phylog(w7,clabel.l = 1.5, clabel.n = 1.5, f = 0.8, cle = 2,
+ cnod = 3, sub = "(((((1,2,3)b),(6)c),(4,5)d,7)f);", csub = 2)
+w <- NULL
+w[1] <- "((((e1:4,e2:4)a:5,(e3:7,e4:7)b:2)c:2,e5:11)d:2,"
+w[2] <- "((e6:5,e7:5)e:4,(e8:4,e9:4)f:5)g:4);"
+plot(newick2phylog(w), f = 0.8, cnod = 2, cleav = 2, clabel.l = 2)
+
 data(taxo.eg)
 w <- taxo2phylog(as.taxo(taxo.eg[[1]]))
-plot(w, clabel.lea = 1.25, clabel.n = 1.25, sub = "Taxonomy", csub = 3, f = 0.8, possub = "topleft")
+plot(w, clabel.lea = 1.25, clabel.n = 1.25, sub = "Taxonomy",
+ csub = 3, f = 0.8, possub = "topleft")
 par(mfrow = c(1,1))
 
 par(mfrow = c(3,3))
-for (j in 1:6) radial.phylog(newick2phylog(newick.eg[[j]],FALSE), clabel.l = 2, cnodes = 2)
+for (j in 1:6) radial.phylog(newick2phylog(newick.eg[[j]],
+ FALSE), clabel.l = 2, cnodes = 2)
 radial.phylog(newick2phylog(newick.eg[[7]],FALSE), clabel.l = 2)
-radial.phylog(newick2phylog(newick.eg[[8]],FALSE), clabel.l = 0, circle = 1.8)
-radial.phylog(newick2phylog(newick.eg[[9]],FALSE), clabel.l = 1, clabel.n = 1, cle = 0, cnode = 1)
+radial.phylog(newick2phylog(newick.eg[[8]],FALSE), clabel.l = 0,
+ circle = 1.8)
+radial.phylog(newick2phylog(newick.eg[[9]],FALSE), clabel.l = 1,
+ clabel.n = 1, cle = 0, cnode = 1)
 par(mfrow = c(1,1))
 
 data(bsetal97)
 bsetal.phy = taxo2phylog(as.taxo(bsetal97$taxo[,1:3]), FALSE)
-radial.phylog(bsetal.phy, cnod = 1, clea = 1, clabel.l = 0.75, draw.box = TRUE, cir = 1.1)
+radial.phylog(bsetal.phy, cnod = 1, clea = 1, clabel.l = 0.75,
+ draw.box = TRUE, cir = 1.1)
 par(mfrow = c(1,1))
 
 # plot all the possible representations of a phylogenetic tree
@@ -84,7 +103,8 @@ par(mfrow = c(6,8))
 fun <- function(x) {
     w  <-NULL
     lapply(x, function(y) w<<-paste(w,as.character(y),sep=""))
-    plot(wa, x, clabel.n = 1.25, f = 0.75, clabel.l = 2, box = FALSE, cle = 1.5, sub = w, csub = 2)
+    plot(wa, x, clabel.n = 1.25, f = 0.75, clabel.l = 2,
+     box = FALSE, cle = 1.5, sub = w, csub = 2)
     invisible()}
 apply(wx,1,fun)
 par(mfrow = c(1,1))

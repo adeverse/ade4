@@ -7,7 +7,8 @@
 \code{dotchart.phylog} represents the phylogenetic tree and draws a Cleveland dot plot of the variable.
 }
 \usage{
-symbols.phylog(phylog, circles, squares, csize = 1, clegend = 1, sub = "", csub = 1, possub = "topleft")
+symbols.phylog(phylog, circles, squares, csize = 1, clegend = 1,
+ sub = "", csub = 1, possub = "topleft")
 dotchart.phylog(phylog, values, ceti = 1, cdot = 1, ...)
 }
 \arguments{
@@ -22,7 +23,9 @@ dotchart.phylog(phylog, values, ceti = 1, cdot = 1, ...)
   \item{possub}{: a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{: further arguments passed to or from other methods}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} and Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{table.phylog}} for many variables}
 \examples{
 data(mjrochet)
@@ -31,7 +34,8 @@ tab0 <- data.frame(scalewt(log(mjrochet$tab)))
 par(mfrow=c(3,2))
 for (j in 1:6) {
     w <- tab0[,j]
-    symbols.phylog(phylog=mjrochet.phy, w,csi=1.5,cleg=1.5,sub=names(tab0)[j],csub=3)
+    symbols.phylog(phylog = mjrochet.phy, w, csi = 1.5, cleg = 1.5,
+     sub = names(tab0)[j], csub = 3)
 }
 par(mfrow=c(1,1))
 

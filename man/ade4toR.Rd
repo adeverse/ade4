@@ -3,14 +3,15 @@
 \alias{Rtoade4}
 \title{Format Change Utility}
 \description{
-  Exchange objects between \R and ADE4 (classic version) \url{http://pbil.univ-lyon1.fr/ADE-4/} 
+  Exchange objects between R and ADE4 (classic version) 
+  \url{http://pbil.univ-lyon1.fr/ADE-4/} 
 }
 \usage{
 ade4toR (fictab, ficcolnames = NULL, ficrownames = NULL)
 Rtoade4 (x)
 }
 \arguments{
-  \item{fictab}{a name of ADE4 text file.  A data frame with the same name is created in the \R environment.} 
+  \item{fictab}{a name of ADE4 text file.  A data frame with the same name is created in the R environment.} 
   \item{ficcolnames}{the column names label file}
   \item{ficrownames}{the row names label file}
   \item{x}{a data frame}
@@ -22,9 +23,9 @@ Rtoade4 (x)
 \details{
 "xxx" is the name of object x (\code{(deparse(substitute(x)))})\cr
 For any table :\cr
-	creates a file "xxx.txt"\cr
-	creates a file "xxx\_row\_lab.txt" with row names\cr
-	creates a file "xxx\_col\_lab.txt" with column names\cr\cr
+    creates a file "xxx.txt"\cr
+    creates a file "xxx\_row\_lab.txt" with row names\cr
+    creates a file "xxx\_col\_lab.txt" with column names\cr\cr
 
 if x has the 'col.blocks' attribute\cr
 creates a file "xxx\_col\_bloc\_lab.txt" with blocks names\cr

@@ -8,10 +8,8 @@ This data set describes the phylogenety of 36 bacteria as reported by Perrière a
 \usage{data(njplot)}
 \format{
 \code{njplot} is a list containing the 2 following objects: \cr 
-        \enumerate{     
             \item{tre}{is a character string giving the fission tree in Newick format.} 
             \item{tauxcg}{is a numeric vector that gives the CG rate of the 36 species.}    
-        }
 }
 \source{
 Data were obtained by Manolo Gouy \email{mgouy@biomserv.univ-lyon1.fr}

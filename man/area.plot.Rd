@@ -17,6 +17,7 @@ area.plot : grey levels areas mapping
 poly2area takes an object of class 'polylist' (spdep package, that contains the
 older package 'spweights') and returns a data frame of type area.\cr
 area2poly takes an object of type 'area' and returns a list of class 'polylist'\cr
+area2link takes an object of type 'area' and returns a proximity matrix which terms are given by the length of the frontier between two polygons. \cr
 area.util.contour and area.util.xy are two utility functions.
 }
 \usage{
@@ -25,7 +26,10 @@ nclasslegend = 8, clegend = 0.75, sub = "", csub = 1,
 possub = "topleft", cpoint = 0, label = NULL, clabel = 0, ...)
 
 area2poly(area)
-poly2area (polys)
+poly2area(polys)
+area2link(area)
+area.util.contour(area)
+area.util.xy(area)
 }
 \arguments{
 \item{x}{a data frame with three variables}
@@ -107,7 +111,8 @@ if (require(spdep, quiet = TRUE) & require(maptools, quiet = TRUE)) {
     include.lowest = TRUE))
     colours <- c("salmon1", "salmon2", "red3", "brown", "black")
     plot(bbs[,1], bbs[,4], xlab = "", ylab = "", asp = 1, type = "n",
-    xlim = range(c(bbs[,1], bbs[,3])), ylim = range(c(bbs[,2], bbs[,4])))
+    xlim = range(c(bbs[,1], bbs[,3])), ylim = range(c(bbs[,2],
+     bbs[,4])))
     for (i in 1:length(polys)) 
     polygon(polys[[i]], col = colours[unclass(crime.f[i])])
     legend(x = c(6, 7.75), y = c(13.5, 15), legend = levels(crime.f),
@@ -138,5 +143,17 @@ if (require(spdep, quiet = TRUE) & require(maptools, quiet = TRUE)) {
     s.label(fr.xy, clab = 0, area = fr.area, neig = fr.neig, 
     cneig = 1, cpo = 2, inc = FALSE, addax = FALSE)
 }
+
+data(irishdata)
+w <- irishdata$area[c(42:53,18:25),]
+w
+w$poly <- as.factor(as.character(w$poly))
+area.plot(w, clab = 2)
+ 
+points(68, 59, pch = 20, col = "red", cex = 3)
+points(68, 35, pch = 20, col = "red", cex = 3)
+points(45, 12, pch = 20, col = "red", cex = 3)
+sqrt((59-35)^2)+sqrt((68-45)^2+(35-12)^2)
+area2link(w)
 }
 \keyword{hplot}

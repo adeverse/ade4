@@ -8,18 +8,14 @@ This data set describes the phylogeny of 18 ungulates as reported by Pélabon et 
 \usage{data(ungulates)}
 \format{
 \code{fission} is a list containing the 2 following objects : \cr 
-        \enumerate{     
             \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
             \item{tab}{is a data frame with 18 species and 4 traits}    
-        }
         
         Variables of \code{ungulates$tab} are the following ones : \cr
-        \enumerate{
         \item{afbw}{: is a numeric vector that describes the adult female body weight (g)}
         \item{mnw}{: is a numeric vector that describes the male neonatal weight (g)}
         \item{fnw}{: is a numeric vector that describes the female neonatal weight (g)}
         \item{ls}{: is a numeric vector that describes the litter size}
-        }
 }
 \source{
 Data were obtained from Pélabon, C., Gaillard, J.M., Loison, A. and Portier, A. (1995) Is sex-biased maternal care limited by total maternal expenditure in polygynous ungulates? \emph{Behavioral Ecology and Sociobiology}, \bold{37}, 311--319.

@@ -5,7 +5,8 @@
 This function represents \emph{n} values on a circle. The \emph{n} points are shared out regularly over the circle and put on the radius according to the value attributed to that measure.
 }
 \usage{
-dotcircle(z, alpha0 = pi/2, xlim = range(pretty(z)), labels = names(z), clabel = 1, cleg = 1)
+dotcircle(z, alpha0 = pi/2, xlim = range(pretty(z)),
+ labels = names(z), clabel = 1, cleg = 1)
 }
 \arguments{
   \item{z}{: a numeric vector}

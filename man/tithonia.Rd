@@ -7,14 +7,11 @@ This data set describes the phylogeny of 11 flowers as reported by Morales (2000
 }
 \usage{data(tithonia)}
 \format{
-\code{tithonia} is a list containing the 2 following objects : \cr 
-        \enumerate{     
+\code{tithonia} is a list containing the 2 following objects : \cr  
             \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
             \item{tab}{is a data frame with 11 species and 14 traits (6 morphologic traits and 8 demographic).}    
-        }
         
         Variables of \code{tithonia$tab} are the following ones : \cr
-        \enumerate{
         \item{morho1}{: is a numeric vector that describes the seed size (mm)}
         \item{morho2}{: is a numeric vector that describes the flower size (mm)}
         \item{morho3}{: is a numeric vector that describes the female leaf size (cm)}
@@ -29,7 +26,6 @@ This data set describes the phylogeny of 11 flowers as reported by Morales (2000
         \item{demo12}{: is a numeric vector that describes the germination (per cent)}
         \item{demo13}{: is a integer vector that describes the resource allocation}
         \item{demo14}{: is a numeric vector that describes the adult height (m)}
-        }
 }
 \source{
 Data were obtained from Morales, E. (2000) Estimating phylogenetic inertia in Tithonia (Asteraceae) : a comparative approach. \cr \emph{Evolution}, \bold{54}, 2, 475--484.

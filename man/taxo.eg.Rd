@@ -7,24 +7,18 @@ This data sets contains two taxonomies.
 }
 \usage{data(taxo.eg)}
 \format{
-\code{taxo.eg} is a list containing the 2 following objects: \cr 
-        \enumerate{     
+\code{taxo.eg} is a list containing the 2 following objects: \cr     
         \item{taxo.eg[[1]]}{is a data frame with 15 species and 3 columns.} 
         \item{taxo.eg[[2]]}{is a data frame with 40 species and 2 columns.}
-        }
         
         Variables of the first data frame are : \cr
-        \enumerate{
         \item{genre}{: a factor genre with 8 levels}
         \item{famille}{: a factor familiy with 5 levels}
         \item{ordre}{: a factor order with 2 levels}
-        }
         
         Variables of the second data frame are : \cr
-        \enumerate{
         \item{gen}{: a factor genre with 29 levels}
         \item{fam}{: a factor family with 19 levels}
-        }
 }
 \source{
 Dolédec, S., Chessel, D., Ter Braak,C. J. F.  and Champely S. (1996) Matching species traits to environmental variables: a new three-table ordination method. \cr \emph{Environmental and Ecological Statistics}, \bold{3}, 143--166.

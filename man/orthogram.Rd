@@ -6,7 +6,10 @@ This function performs the orthonormal decomposition of variance of a quantitati
 It thus provides tools (graphical displays and test) for analysing phylogenetic, spatial and temporal pattern of one quantitative variable.
 }
 \usage{
-orthogram(x, orthobas = NULL, neig = NULL, phylog = NULL, nrepet = 999, posinega = 0, tol = 1e-07, na.action = c("fail", "mean"), cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0)
+orthogram(x, orthobas = NULL, neig = NULL, phylog = NULL,
+     nrepet = 999, posinega = 0, tol = 1e-07, na.action = c("fail",
+     "mean"), cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass,
+     high.scores = 0)
 }
 \arguments{
   \item{x}{: a numeric vector corresponding to the quantitative variable}
@@ -27,13 +30,11 @@ orthogram(x, orthobas = NULL, neig = NULL, phylog = NULL, nrepet = 999, posinega
 The function computes variance decomposition of a quantitative vector x on an orthonormal basis B. The variable is normalized given the uniform weight to eliminate problem of scales.
 It plots the squared correlations \eqn{R^{2}}{R^2} between x and vectors of B (variance decomposition) and the cumulated squared correlations \eqn{SR^{2}}{SR^2} (cumulative decomposition).
 The function also provides five non parametric tests to test the existence of autocorrelation. The tests derive from the five following statistics :
-    \enumerate{
-    \item{the statistic R2Max}{ equals \max(\eqn{R^{2}}{R^2}). It takes high value when a high part of the variability is explained by one score.}
-    \item{the statistic SkR2k}{ equals \eqn{\sum{i=1}^{n-1}(iR^{2}_i)}{sum_i i*(R^2)_i}. It compares the part of variance explained by internal nodes to the one explained by end nodes.}
-    \item{the statistic Dmax}{ equals \max(\eqn{SR^{2}_j - SR^{2}_j-1}{(SR^2)_j - (SR^2)_(j-1)}). It examines the accumulation of variance for a sequence of scores.}
-    \item{the statistic SCE}{ equals \eqn{\sum{i=1}^{n-1} (SR^{2}_i - SR^{2}_i-1)^{2}}{sum_i ((SR^2)_i - (SR^2)_(i-1))^2}. It examines also the accumulation of variance for a sequence of scores.}
-    \item{the statistic ratio}{ depends of the parameter posinega. If posinega > 0, the statistic ratio exists and equals \eqn{\sum{i=1}^{posinega}R^{2}_i}{sum_i (R^2)_i with i < posinega + 1}. It compares the part of variance explained by internal nodes to the one explained by end nodes when we can define how many vectors corresponds to internal nodes.}
-    }
+    \item{R2Max}{=\eqn{\max(R^{2})}{max(R^2)}. It takes high value when a high part of the variability is explained by one score.}
+    \item{SkR2k}{=\eqn{\sum_{i=1}^{n-1}(iR^{2}_i)}{sum_i i*(R^2)_i}. It compares the part of variance explained by internal nodes to the one explained by end nodes.}
+    \item{Dmax}{=\eqn{\max(SR^{2}_j - SR^{2}_{j-1})}{max((SR^2)_j - (SR^2)_(j-1))}. It examines the accumulation of variance for a sequence of scores.}
+    \item{SCE}{=\eqn{\sum_{i=1}^{n-1} (SR^{2}_i - SR^{2}_{i-1})^{2}}{sum_i ((SR^2)_i - (SR^2)_(i-1))^2}. It examines also the accumulation of variance for a sequence of scores.}
+    \item{ratio}{depends of the parameter posinega. If posinega > 0, the statistic ratio exists and equals \eqn{\sum_{i=1}^{posinega}R^{2}_i}{sum_i (R^2)_i with i < posinega + 1}. It compares the part of variance explained by internal nodes to the one explained by end nodes when we can define how many vectors corresponds to internal nodes.}
 }
 \value{
 If (high.scores = 0), returns an object of class \code{'krandtest'} (randomization tests) corresponding to the five non parametric tests. \cr \cr
@@ -44,7 +45,9 @@ If (high.scores > 0), returns a list containg :
 \references{
 Ollier, S., Chessel, D. and Couteron, P. (submited) Orthonormal transform to detect and  describe phylogenetic autocorrelation. \emph{Biometrics}.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} and Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{gridrowcol}}, \code{\link{orthobasis}}, \code{\link{mld}}}
 \examples{
 # a phylogenetic example
@@ -55,8 +58,10 @@ NeonatBodyMass <- log((ungulates$tab[,2]+ungulates$tab[,3])/2)
 plot(FemBodyMass,NeonatBodyMass, pch = 20, cex = 2)
 abline(lm(NeonatBodyMass~FemBodyMass))
 z <- residuals(lm(NeonatBodyMass~FemBodyMass))
-dotchart.phylog(ung.phy,val = z, clabel.n = 1, labels.n = ung.phy$Blabels, cle = 1.5, cdot = 2)
-table.phylog(ung.phy$Bscores, ung.phy,clabel.n = 1, labels.n = ung.phy$Blabels)
+dotchart.phylog(ung.phy,val = z, clabel.n = 1,
+     labels.n = ung.phy$Blabels, cle = 1.5, cdot = 2)
+table.phylog(ung.phy$Bscores, ung.phy,clabel.n = 1,
+     labels.n = ung.phy$Blabels)
 orthogram(z, ung.phy$Bscores)
 orthogram(z, phyl=ung.phy) # the same thing
 

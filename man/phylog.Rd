@@ -12,7 +12,9 @@ Create and use objects of class \code{'phylog'}. \cr
 \usage{
 print.phylog(x, ...)
 phylog.extract(phylog, node, distance = TRUE)
-phylog.permut(phylog, list.nodes = lapply(phylog$parts, function(a) if (length(a) == 1) a else sample(a)), distance = TRUE))
+phylog.permut(phylog, list.nodes = lapply(phylog$parts,
+    function(a) if (length(a) == 1) a else sample(a)),
+    distance = TRUE))
 }
 \arguments{
   \item{x, phylog}{: an object of class \code{'phylog'}}
@@ -30,8 +32,8 @@ Returns a list of class \code{'phylog'} :
     \item{paths}{: a list which elements gives the path leading from the root to taxonomic units (leaves and nodes)}
     \item{droot}{: a vector which names corresponds to taxonomic units and values gives distance between taxonomic units and the root}
     \item{call}{: call} \cr
-    \item{Wmat}{: a phylogenetic link matrix, generally called the covariance matrix. Matrix values Wmat_ij correspond to path length that lead from root to the first common ancestor of the two leaves i and j}
-    \item{Wdist}{: a phylogenetic distance matrix of class \code{'dist'}. Matrix values Wdist_ij correspond to \sqrt{d_ij} where d_ij is the classical distance between two leaves i and j}
+    \item{Wmat}{: a phylogenetic link matrix, generally called the covariance matrix. Matrix values \eqn{Wmat_{ij}}{Wmat_ij} correspond to path length that lead from root to the first common ancestor of the two leaves i and j}
+    \item{Wdist}{: a phylogenetic distance matrix of class \code{'dist'}. Matrix values \eqn{Wdist_{ij}}{Wdist_ij} correspond to $\sqrt{d_{ij}}$ where \eqn{d_{ij}}{d_ij} is the classical distance between two leaves i and j}
     \item{Wvalues}{: a vector with the eigen values of Wmat}
     \item{Wscores}{: a data frame with eigen vectors of Wmat. This data frame defines an orthobasis that could be used to calculate the orthonormal decomposition of a biological trait on a tree.}
     \item{Amat}{: a phylogenetic link matrix stemed from Abouheif's test and defined in Ollier et al. (submited)}
@@ -45,13 +47,18 @@ Returns a list of class \code{'phylog'} :
     \item{Blabels}{: a vector giving for each nodes the name of the vector of Bscores that is associated to its}    
 }
 \references{
-Ollier, S., Pontier, D. and Chessel, D. (submited) Comments on Abouheif's test. \emph{Evolutionary Ecology Research}. \cr \cr
+Ollier, S., Pontier, D. and Chessel, D. (submited) Comments on Abouheif's test. \emph{Evolutionary Ecology Research}.
+
 Ollier, S., Couteron, P. and Chessel, D. (submited) Orthonormal transforms to detect and describe phylogenetic autocorrelation. \emph{Biometrics}.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} and Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{newick2phylog}}, \code{\link{plot.phylog}}}
 \examples{
-marthans.tre <-c("((((1:4,2:4)a:5,(3:7,4:7)b:2)c:2,5:11)d:2,((6:5,7:5)e:4,(8:4,9:4)f:5)g:4);")
+marthans.tre <- NULL
+marthans.tre[1] <-"((((1:4,2:4)a:5,(3:7,4:7)b:2)c:2,5:11)d:2,"
+marthans.tre[2] <- "((6:5,7:5)e:4,(8:4,9:4)f:5)g:4);"
 marthans.phylog <- newick2phylog(marthans.tre)
 marthans.phylog
 

@@ -14,7 +14,9 @@ as.taxo(df)
 \value{
 Returns a data.frame of class \code{'taxo'}.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} and Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+}
 \seealso{\code{\link{taxo2phylog}} to transform an object of class \code{'taxo'} into an object of class \code{'phylog'}}.
 \examples{
 data(taxo.eg)
@@ -22,7 +24,8 @@ tax <- as.taxo(taxo.eg[[1]])
 tax.phy <- taxo2phylog(as.taxo(taxo.eg[[1]]))
 par(mfrow = c(1,2))
 plot.phylog(tax.phy, clabel.l = 1.25, clabel.n = 1.25, f = 0.75)
-plot.phylog(taxo2phylog(as.taxo(taxo.eg[[1]][sample(15),])), clabel.l = 1.25, clabel.n = 1.25, f = 0.75)
+plot.phylog(taxo2phylog(as.taxo(taxo.eg[[1]][sample(15),])),
+ clabel.l = 1.25, clabel.n = 1.25, f = 0.75)
 par(mfrow = c(1,1))
 }
 \keyword{manip}

@@ -1,0 +1,38 @@
+\name{statico}
+\alias{statico}
+\title{STATIS and Co-Inertia : Analysis of a series of paired ecological tables}
+\description{
+Prepares the analysis of a series of paired ecological tables. Partial Triadic
+Analysis (see \code{\link{pta}}) can be used thereafter to perform the analysis of this k-table.
+}
+\usage{
+statico(KTX, KTY)
+}
+\arguments{
+  \item{KTX}{an objet of class 'ktab'}
+  \item{KTY}{an objet of class 'ktab'}
+}
+\value{
+a list of class 'ktab', subclass 'kcoinertia'. See \code{\link{ktab}}
+}
+\references{
+Thioulouse J., Simier M. and Chessel D. (2003). Simultaneous analysis of a sequence of paired ecological tables.  \emph{Ecology} (in press). \cr\cr
+Simier, M., Blanc L., Pellegrin F., and Nandris D. (1999). Approche simultanée de K couples de tableaux : Application a l'étude des relations pathologie végétale - environnement. \emph{Revue de Statistique Appliquée}, \bold{47}, 31-46.
+}
+\section{WARNING }{
+IMPORTANT : \code{KTX} and \code{KTY} must have the same k-tables structure, the same number
+of columns, and the same column weights.
+}
+\examples{
+data(meau)
+wit1 <- within.pca(meau$mil, meau$plan$dat, scan = FALSE, scal = "total")
+pcafau <- dudi.pca(meau$fau, scale = FALSE, scan = FALSE, nf = 2)
+wit2 <- within(pcafau, meau$plan$dat, scan = FALSE, nf = 2)
+kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5","S6"), 4))
+kta2 <- ktab.within(wit2, colnames = rep(c("S1","S2","S3","S4","S5","S6"), 4))
+kcoi <- statico(kta1, kta2)
+ptacoi <- pta(kcoi, scan = FALSE, nf = 2)
+plot(ptacoi)
+kplot(ptacoi)
+}
+\keyword{multivariate}

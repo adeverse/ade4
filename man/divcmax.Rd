@@ -77,8 +77,8 @@ v0 <- France.m$value
 # spatial diversity.
 w1 = elec88$xy[c(6, 28, 66), ]
 w.c = apply(w1 * w0[c(6, 28, 66)], 2, sum)
-symbols(w.c[1], w.c[2], circles = sqrt(v0), inc = F, add = T)
-s.value(elec88$xy, w0, add.plot = T)
+symbols(w.c[1], w.c[2], circles = sqrt(v0), inc = FALSE, add = TRUE)
+s.value(elec88$xy, w0, add.plot = TRUE)
 par(mar = par.safe)
 
 \dontrun{

@@ -4,6 +4,7 @@
     labels.nod = names(phylog$nodes), clabel.nod = 0, cleaves = 1,
     cnodes = 1, csize = 1, grid = TRUE, clegend=0.75)
 {
+    df <- as.data.frame(df)
     if (!inherits(df,"data.frame")) stop ("data.frame expected for 'df'")
     if (!inherits(phylog,"phylog")) stop ("class 'phylog' expected for 'phylog'")
     leave.names <- names(phylog$leaves)

@@ -12,7 +12,7 @@ table.phylog(df, phylog, x = 1:ncol(df), f.phylog = 0.5,
  cnodes = 1, csize = 1, grid = TRUE, clegend = 0.75)
 }
 \arguments{
-  \item{df}{: a data frame}
+  \item{df}{: a data frame or a matrix}
   \item{phylog}{: an object of class \code{'phylog'}}
   \item{x}{: a vector of values to position the columns}
   \item{f.phylog}{: a size coefficient for tree size (a parameter to draw the tree in proportion to leaves labels)}
@@ -31,6 +31,8 @@ table.phylog(df, phylog, x = 1:ncol(df), f.phylog = 0.5,
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
+\details{The function verifies that \code{sort(row.names(df))==sort(names(phylog$leaves))}. If df is a matrix the function uses as.data.frame(df)}
+ 
 \seealso{\code{\link{symbols.phylog}} for one variable}
 \examples{
 data(newick.eg)

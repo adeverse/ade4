@@ -256,7 +256,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
     }
     /* simul contient maintenant les cumulés simulés en écarts */
     /* locphylogram contient maintenant les cumulés observés en écart*/
-   //Dmax
+    /* Dmax */
     for (j=1; j<=npro; j++) {
         for (irepet=1; irepet<=nrepet; irepet++) {
             for (j=1; j<=npro; j++) copivec[j] = simul[irepet][j];

@@ -301,8 +301,6 @@
 
    
 "newick2phylog.addtools" <- function(res, tol =1e-07) {
-    require(ade4)
-    
     nleaves <- length(res$leaves) # nombre de feuilles
     nnodes <- length(res$nodes)    # nombre de noeuds
     node.names <- names(res$nodes) # noms des feuilles

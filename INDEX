@@ -46,10 +46,11 @@ chats                   Pair of Variables
 chazeb                  Charolais-Zebus
 chevaine                Enzymatic polymorphism in Leuciscus cephalus
 clementines             Fruit Production
+cnc2003                 Frequenting movie theaters in France in 2003
 coinertia               Coinertia Analysis
 coleo                   Table of Fuzzy Biological Traits
-corkdist                Tests of randomization on the correlation
-                        between distances applied to 'kdist' objetcs
+corkdist                Tests of randomization between distances
+                        applied to 'kdist' objetcs
 corvus                  Corvus morphology
 deug                    Exam marks for some students
 disc                    Rao's dissimilarity coefficient
@@ -69,6 +70,8 @@ dist.quant              Computation of Distance Matrices on
                         Quantitative Variables
 divc                    Rao's diversity coefficient also called
                         quadratic entropy
+divcmax                 Maximal value of Rao's diversity coefficient
+                        also called quadratic entropy
 dotcircle               Representation of n values on a circle
 doubs                   Pair of Ecological Tables
 dpcoa                   Double principal coordinate analysis
@@ -96,6 +99,8 @@ foucart                 K-tables Correspondence Analysis with the same
                         rows and the same columns
 friday87                Faunistic K-tables
 fruits                  Pair of Tables
+fuzzygenet              Reading a table of genetic data (diploid
+                        individuals)
 gearymoran              Moran's I and Geary'c randomization tests for
                         spatial and phylogenetic autocorrelation
 genet                   A class of data: tables of populations and
@@ -196,6 +201,8 @@ perthi02                Contingency Table with a partition in
                         Molecular Biology
 phylog                  Phylogeny
 plot.phylog             Plot phylogenies
+presid2002              Results of the French presidential elections
+                        of 2002
 procella                Phylogeny and quantitative traits of birds
 procuste                Simple Procruste Rotation between two sets of
                         points
@@ -237,6 +244,7 @@ s.distri                Plot of a frequency distribution
 s.hist                  Display of a scatterplot and its two marginal
                         histograms
 s.image                 Graph of a variable using image and contour
+s.kde2d                 Scatter Plot with Kernel Density Estimate
 s.label                 Scatter Plot
 s.match                 Plot of Paired Coordinates
 s.traject               Trajectory Plot
@@ -285,11 +293,11 @@ table.phylog            Plot arrays in front of a phylogenetic tree
 table.value             Plot of the Arrays
 tarentaise              Mountain Avifauna
 taxo.eg                 Examples of taxonomy
-testdiscrimin           Internal Permutation Tests functions (in C).
 tintoodiel              Tinto and Odiel estuary geochemistry
 tithonia                Phylogeny and quantitative traits of flowers
 tortues                 Morphological Study of the Painted Turtle
 toxicity                Homogeneous Table
+triangle.class          Triangular Representation and Groups of points
 triangle.plot           Triangular Plotting
 trichometeo             Pair of Ecological Data
 ungulates               Phylogeny and quantitative traits of

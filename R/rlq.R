@@ -28,8 +28,9 @@ function (dudiRLQ, fixed="R")
 
     }
     return(coinertia(dudiX,dudiY,scannf=F,nf=dudiRLQ$nf))
-}
+    
 
+}
 "dudi.hillsmith" <-
 function (df, row.w=rep(1, nrow(df))/nrow(df), scannf = TRUE, nf = 2) 
 {
@@ -334,7 +335,7 @@ function (object, ...)
 
 }
 
-randtest.rlq<-function(xtest, nrepet=999,RV=TRUE,...)
+randtest.rlq<-function(xtest, nrepet=999,...)
 {
     nrepet<-nrepet+1
     if (!inherits(xtest,"dudi"))
@@ -479,7 +480,6 @@ randtest.rlq<-function(xtest, nrepet=999,RV=TRUE,...)
     L.lw<-dudiL$lw
     isim<-testertracerlq(nrepet, R.cw, Q.cw, L.lw, L.cw, Rinit,Qinit,L, typQ,typR,ifelse(indexR=='f',1,2),assignR,ifelse(indexQ=='f',1,2),assignQ)
     # On calcule le RV a partir de la coinertie
-    if (RV) {isim<-isim/sqrt(sum(dudiR$eig^2))/sqrt(sum(dudiQ$eig^2))}
     obs<-isim[1]
     return(as.randtest(isim[-1],obs,call=match.call()))
 }

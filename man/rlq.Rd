@@ -17,7 +17,7 @@ print.rlq(x, ...)
 plot.rlq(x, xax = 1, yax = 2, ...)
 summary.rlq(object, ...)
 as.coinertia (dudiRLQ, fixed="R")
-randtest.rlq(xtest,nrepet = 999, RV = TRUE, ...)
+randtest.rlq(xtest,nrepet = 999, ...)
 }
 
 \arguments{
@@ -32,7 +32,6 @@ randtest.rlq(xtest,nrepet = 999, RV = TRUE, ...)
   \item{dudiRLQ}{ an rlq object }
   \item{object}{ an rlq object }
   \item{fixed}{ "R" indicates that dudiR is not modified, otherwise "Q" }
-  \item{RV}{ a logical value indicating whether the test is based on RV or inertia }
   \item{xtest}{ an rlq object }
   \item{nrepet}{ the number of permutations }
   \item{\dots}{further arguments passed to or from other methods}
@@ -85,3 +84,4 @@ data(aviurba)
 }
 \keyword{ multivariate }
 \keyword{ spatial }
+

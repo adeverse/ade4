@@ -37,7 +37,6 @@ row.names.ktab(x)
 col.names.ktab(x)
 tab.names(x)
 col.names(x)
-tab.names(x)
 ktab.util.names(x)
 }
 \arguments{

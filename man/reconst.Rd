@@ -10,10 +10,9 @@ reconst (dudi, ...)
 reconst.pca (dudi, nf = 1, ...) 
 }
 \arguments{
-  \item{x}{an object used to select a method}
+  \item{dudi}{an object used to select a method}
   \item{\dots}{\code{\dots} further arguments passed to or from other methods}
   
-  \item{dudi}{an object of class \code{pca}}
   \item{nf}{an integer indicating the number of kept axes}
 }
 \value{

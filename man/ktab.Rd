@@ -36,7 +36,6 @@ t.ktab(x)
 row.names.ktab(x)
 col.names.ktab(x)
 tab.names(x)
-row.names(x)<-value
 col.names(x)<-value
 tab.names(x)<-value
 ktab.util.names(x)

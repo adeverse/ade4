@@ -27,6 +27,7 @@
 
     df <- df[names(phylog$leaves), ]
     # df données phylog structure
+    frame()
     labels.row <- paste(" ", labels.row, " ", sep = "")
     labels.col <- paste(" ", labels.col, " ", sep = "")
     cexrow <- par("cex") * clabel.row

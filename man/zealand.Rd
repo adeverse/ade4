@@ -26,7 +26,6 @@ d1 = cailliez (d0)
 d2 = lingoes(d0)
 s.label(zealand$xy,lab=as.character(1:13),neig=zealand$neig)
 par(mfrow = c(2,2))
-library(mva)
     s.label(cmdscale(dist(zealand$xy)),lab = as.character(1:13),
      neig = zealand$neig, sub = "Distance canonique", csub = 2)
     s.label(cmdscale(d0), lab = as.character(1:13), neig = zealand$neig,

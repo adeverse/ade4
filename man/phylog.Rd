@@ -14,7 +14,7 @@ print.phylog(x, ...)
 phylog.extract(phylog, node, distance = TRUE)
 phylog.permut(phylog, list.nodes = lapply(phylog$parts,
     function(a) if (length(a) == 1) a else sample(a)),
-    distance = TRUE))
+    distance = TRUE)
 }
 \arguments{
   \item{x, phylog}{: an object of class \code{phylog}}

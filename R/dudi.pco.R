@@ -12,7 +12,7 @@
         stop("missing value in d")
     if (is.null(rownames)) 
         rownames <- as.character(1:n)
-    if (row.w == "uniform") {
+    if (any(row.w == "uniform")) {
         row.w <- rep(1, n)
     }
     else {

@@ -111,7 +111,8 @@
     n <- nrow(G)
     if (ncol(G) != n) 
         stop("Square matrix expected")
-    if (t(G) != G) 
+    # modif du any samedi, mai 31, 2003 at 16:19
+    if (any(t(G) != G))
         stop("Symetric matrix expected")
     if (sum(G == 0 | G == 1) != n * n) 
         stop("0-1 values expected")
@@ -167,20 +168,42 @@
     cat("Edges (pairs of vertices):", m, "\n")
 }
 
-"scores.neig" <- function (obj) {
-    if (is.null(class(obj))) 
-        stop("Object of class 'neig' expected")
-    if (class(obj) != "neig") 
+"scores.neig" <- function (obj) { 
+    tol <- 1e-07
+    if (!inherits(obj, "neig")) 
         stop("Object of class 'neig' expected")
     b0 <- neig.util.LtoG(obj)
     deg <- attr(obj, "degrees")
+    m <- sum(deg)
     n <- length(deg)
-    b0 <- -b0 + diag(deg)
-    a0 <- eigen(b0, sym = TRUE)
-    barplot(sqrt(1/a0$values[(n - 1):1]))
-    a0 <- a0$vectors
-    a0 <- as.data.frame(sqrt(n) * a0[, (n - 1):1])
-    row.names(a0) <- names(deg)
-    names(a0) <- paste("VP", (1:(n - 1)), sep = "")
-    return(a0)
+    b0 <- -b0/m + diag(deg)/m
+    # b0 est la matrice D-P
+    eig <- La.eigen (b0, sym = TRUE)
+    w0 <- abs(eig$values)/max(abs(eig$values))
+    w0 <- which(w0<tol)
+    if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
+    if (length(w0)==1) w0 <- (1:n)[-w0]
+    else if (length(w0)>1) {
+        # on ajoute le vecteur dérivé de 1n 
+        w <- cbind(rep(1,n),eig$vectors[,w0])
+        # on orthonormalise l'ensemble
+        w <- qr.Q(qr(w))
+        # on met les valeurs propres à 0
+        eig$values[w0] <- 0
+        # on remplace les vecteurs du noyau par une base orthonormée contenant 
+        # en première position le parasite
+        eig$vectors[,w0] <- w[,-ncol(w)]
+        # on enlève la position du parasite
+        w0 <- (1:n)[-w0[1]]
+    }
+    w0=rev(w0)
+    rank <- length(w0)
+    values <- n-eig$values[w0]*n
+    eig <- eig$vectors[,w0]*sqrt(n)
+    eig <- data.frame(eig)
+    row.names(eig) <- names(deg)
+    names(eig) <- paste("V",1:rank,sep="")
+    attr(eig,"values")<-values
+    eig
 }
+

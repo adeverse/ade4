@@ -16,5 +16,5 @@
 #   isim<-testinter(nrepet, X.lw, X.cw, length(unique(fac)), fac, X, nrow(X), ncol(X))/inertot
     isim<-testinter(nrepet, dudi1$lw, dudi1$cw, length(unique(fac)), fac, dudi1$tab, nrow(X), ncol(X))/inertot
     obs<-isim[1]
-    return(as.randtest(isim[-1],obs))
+    return(as.randtest(isim[-1],obs),call=match.call())
 }

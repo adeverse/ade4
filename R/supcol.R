@@ -1,6 +1,8 @@
 "supcol" <- function (x, ...) UseMethod("supcol") 
 
 "supcol.coa" <- function (x, Xsup, ...) {
+    # modif pour Culhane, Aedin" <a.culhane@ucc.ie> 
+    # supcol renvoie une liste à deux éléments tabsup et cosup
     Xsup <- data.frame(Xsup)
     if (!inherits(x, "dudi")) 
         stop("Object of class 'dudi' expected")
@@ -16,8 +18,8 @@
     coosup <- t(as.matrix(Xsup)) %*% as.matrix(x$l1)
     coosup <- data.frame(coosup, row.names = names(Xsup))
     names(coosup) <- names(x$co)
-    return(coosup)
-} 
+    return(list(tabsup=Xsup, cosup=coosup))
+}
 
 "supcol.default" <- function (x, Xsup, ...) {
     Xsup <- data.frame(Xsup)
@@ -30,5 +32,5 @@
     coosup <- t(as.matrix(Xsup)) %*% (as.matrix(x$l1) * x$lw)
     coosup <- data.frame(coosup, row.names = names(Xsup))
     names(coosup) <- names(x$co)
-    return(coosup)
+    return(list(tabsup=Xsup, cosup=coosup))
 }

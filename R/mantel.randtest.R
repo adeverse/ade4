@@ -12,5 +12,5 @@
     col <- ncol(m1)
     isim<-testmantel(nrepet, col, as.matrix(m1), as.matrix(m2))
     obs<-isim[1]
-    return(as.randtest(isim[-1],obs))
+    return(as.randtest(isim[-1],obs,call=match.call()))
 }

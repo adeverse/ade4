@@ -37,7 +37,7 @@
     for (i in 1:(length(coo$x))) arrow1(origin[1], origin[2], 
         coo$x[i], coo$y[i], edge = edge)
     if (clabel > 0) 
-        scatterutil.eti.circ(coo$x, coo$y, label, clabel)
+        scatterutil.eti.circ(coo$x, coo$y, label, clabel, origin)
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
     box()

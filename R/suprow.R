@@ -16,10 +16,12 @@
     coosup <- as.matrix(Xsup) %*% as.matrix(x$c1)
     coosup <- data.frame(coosup, row.names = row.names(Xsup))
     names(coosup) <- names(x$li)
-    return(coosup)
+    return(list(tabsup=Xsup, lisup=coosup))
 }
 
 "suprow.default" <- function (x, Xsup, ...) {
+    # modif pour Culhane, Aedin" <a.culhane@ucc.ie> 
+    # suprow renvoie une liste à deux éléments tabsup et lisup
     Xsup <- data.frame(Xsup)
     if (!inherits(x, "dudi")) 
         stop("Object of class 'dudi' expected")
@@ -31,6 +33,7 @@
     coosup <- data.frame(coosup, row.names = row.names(Xsup))
     names(coosup) <- names(x$li)
     return(coosup)
+    return(list(tabsup=Xsup, lisup=coosup))
 }
 
 "suprow.pca" <- function (x, Xsup, ...) {
@@ -48,5 +51,5 @@
     coosup <- as.matrix(Xsup) %*% as.matrix(x$c1)
     coosup <- data.frame(coosup, row.names = row.names(Xsup))
     names(coosup) <- names(x$li)
-    return(coosup)
+    return(list(tabsup=Xsup, lisup=coosup))
 }

@@ -4,6 +4,143 @@
 #include <stdlib.h>
 #include "adesub.h"
 
+/***********************************************************************/
+double traceXtdLXq (double **X, double **L, double *d, double *q)
+/*	Produit matriciel XtDLXQ avec LX comme lag.matrix	*/
+{
+	/* Declarations de variables C locales */
+	int j, i, lig, col;
+	double **auxi, **A, trace;
+	
+	
+	
+	/* Allocation memoire pour les variables C locales */
+	lig = X[0][0];
+	col = X[1][0];
+	taballoc(&auxi, lig, col);
+	taballoc(&A, col, col);
+	
+	
+	/* Calcul de LX */
+	prodmatABC(L, X, auxi);
+	
+	/* Calcul de DLX */
+	for (i=1;i<=lig;i++) {
+		for (j=1;j<=col;j++) {
+			auxi[i][j] = auxi[i][j] * d[i];
+		}		
+	}
+	
+	/* Calcul de XtDLX */
+	prodmatAtBC(X,auxi,A);
+	
+	/* Calcul de trace(XtDLXQ) */
+	trace=0;
+	for (i=1;i<=col;i++) {
+		trace = trace + A[i][i] * q[i];
+	}
+	
+	/* Libération des réservations locales */
+	freetab (auxi);
+	freetab (A);
+	return(trace);
+}
+
+/***********************************************************************/
+void tabintalloc (int ***tab, int l1, int c1)
+/*--------------------------------------------------
+* Allocation de memoire dynamique pour un tableau
+* d'entiers (l1, c1)
+--------------------------------------------------*/
+{
+	int     i, j;
+	
+	*tab = (int **) calloc(l1+1, sizeof(int *));
+
+	if ( *tab != NULL) {
+		for (i=0;i<=l1;i++) {
+			
+			*(*tab+i)=(int *) calloc(c1+1, sizeof(int));		
+			if ( *(*tab+i) == NULL ) {
+				for (j=0;j<i;j++) {
+					free(*(*tab+j));
+				}
+				return;
+			}
+		}
+	} else return;
+	**(*tab) = l1;
+	**(*tab+1) = c1;
+	for (i=1;i<=l1;i++) {
+		for (j=1;j<=c1;j++) {
+			(*tab)[i][j] = 0;
+		}
+	}
+}
+
+/***********************************************************************/
+void freeinttab (int **tab)
+/*--------------------------------------------------
+* Allocation de memoire dynamique pour un tableau
+--------------------------------------------------*/
+{
+	int 	i, n;
+	
+	n = *(*(tab));
+	
+	for (i=0;i<=n;i++) {
+			free((char *) *(tab+i) );
+	}
+	
+	free((char *) tab);
+}
+
+
+/*********************/
+int dtodelta (double **data, double *pl)
+{
+	// la matrice de distances d2ij dans data est associee aux poids pl
+	// Elle est transformee par aij - ai. -a.j + a..
+	// aij = -d2ij/2);
+
+	int lig, i, j;
+	double *moy, a0, moytot;
+	
+	lig=data[0][0];
+	vecalloc(&moy, lig);
+	
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) data[i][j] = 0.0 - data[i][j] * data[i][j] / 2.0;
+	} 
+
+	for (i=1; i<=lig; i++) {
+		a0=0;
+		for (j=1; j<=lig; j++) a0 = a0 + pl[j]*data[i][j];
+		moy[i] = a0;
+	}
+	moytot=0;
+	for (i=1; i<=lig; i++) {
+		moytot = moytot+pl[i]*moy[i];
+	}
+	for (i=1; i<=lig; i++) {
+		for (j=1; j<=lig; j++) data[i][j] = data[i][j] - moy[i] - moy[j] + moytot;
+	}
+	freevec (moy);
+	return 1;
+}
+/***************************/
+void initvec (double *v1, double r)
+/*--------------------------------------------------
+* Initialisation des elements d'un vecteur
+--------------------------------------------------*/
+{
+	int i, c1;
+	
+	c1 = v1[0];
+	for (i=1;i<=c1;i++) {
+		v1[i] = r;
+	}
+}
 /**************************/
 double alea (void)
 {

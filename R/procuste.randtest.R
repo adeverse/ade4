@@ -22,5 +22,5 @@
     c2<-ncol(Y)
     isim<-testprocuste(nrepet, lig, c1, c2, as.matrix(X), as.matrix(Y))
     obs<-isim[1]
-    return(as.randtest(isim[-1],obs))
+    return(as.randtest(isim[-1],obs,call=match.call()))
 }

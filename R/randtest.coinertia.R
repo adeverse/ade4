@@ -80,7 +80,7 @@
         # On calcule le RV a partir de la coinertie
         isim<-isim/sqrt(sum(dudiX$eig^2))/sqrt(sum(dudiY$eig^2))
         obs<-isim[1]
-        return(as.randtest(isim[-1],obs))
+        return(as.randtest(isim[-1],obs),call=match.call())
     } else {
         stop ("Equal row weights expected")
     }

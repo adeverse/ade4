@@ -45,6 +45,7 @@
             border = 0)
         text(x1 - xh/2 - x0/2, y1 - yh/2 - y0/2, cha, cex = cex0)
     }
+    origin <-c(0,0)
     df <- data.frame(dfxy)
     if (!is.data.frame(df)) 
         stop("Non convenient selection for df")
@@ -83,7 +84,7 @@
     for (i in 1:length(x)) arrow1(0, 0, x[i], y[i], len = 0.1, 
         ang = 15, edge = TRUE)
     if (clabel > 0) 
-        scatterutil.eti.circ(x, y, label, clabel)
+        scatterutil.eti.circ(x, y, label, clabel,origin)
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
     if (box) 

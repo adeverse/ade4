@@ -12,13 +12,15 @@
     d <- triangle.param(ta, scale = scale, min3 = min3, max3 = max3)
     opar <- par(mar = par("mar"))
     on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
     A <- d$A
     B <- d$B
     C <- d$C
     xy <- d$xy
     mini <- d$mini
     maxi <- d$maxi
+    if (show.position) 
+        add.position.triangle(d)
+    par(mar = c(0.1, 0.1, 0.1, 0.1))
     plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
         1), xlab = "", ylab = "", xaxt = "n", yaxt = "n", asp = 1, 
         frame.plot = FALSE)
@@ -94,8 +96,7 @@
     }
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
-    if (show.position) 
-        add.position.triangle(d)
+    return(invisible(xy))
 } 
 
 ######################### triangle.posipoint ######################################
@@ -109,9 +110,6 @@
 
 ######################### add.position.triangle ######################################
 "add.position.triangle" <- function (d) {
-    opar <- par(new = par("new"), mar = par("mar"))
-    on.exit(par(opar))
-    par(new = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     w <- matrix(0, 3, 3)
     w[1, 1] <- d$mini[1]
@@ -134,6 +132,8 @@
         asp = 1, frame.plot = FALSE)
     polygon(c(A[1], B[1], C[1]), c(A[2], B[2], C[2]))
     polygon(c(a[1], b[1], c[1]), c(a[2], b[2], c[2]), col = grey(0.75))
+    par(new = TRUE)
+
 }
 
 ######################### triangle.biplot ######################################
@@ -149,13 +149,15 @@
     d <- triangle.param(rbind(ta1, ta2), scale = scale)
     opar <- par(mar = par("mar"))
     on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
     A <- d$A
     B <- d$B
     C <- d$C
     xy <- d$xy
     mini <- d$mini
     maxi <- d$maxi
+    if (show.position) 
+        add.position.triangle(d)
+    par(mar = c(0.1, 0.1, 0.1, 0.1))
     plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
         1), xlab = "", ylab = "", xaxt = "n", yaxt = "n", asp = 1, 
         frame.plot = FALSE)
@@ -195,9 +197,7 @@
     }
     points(xy[1:nrow(ta1), ])
     text(xy[1:nrow(ta1), ], label, pos = 4)
-    if (show.position) 
-        add.position.triangle(d)
-}
+ }
 
 ######################### triangle.param ######################################
 "triangle.param" <- function (ta, scale = TRUE, min3 = NULL, max3 = NULL) {

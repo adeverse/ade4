@@ -189,14 +189,15 @@
     labels <- attr(x,"labels")
     print(labels)
     euclid <- attr(x,"euclid")
-    print1 <- function (x,size,labels,...) # from mva
+    print1 <- function (x,size,labels,...) # from stats
+    # modif error sur CRAN DAILY 18/11:2004
     {
-        df <- matrix(NA, size, size,labels)
+        df <- matrix(0, size, size,labels)
         df[row(df) > col(df)] <- x
-        #df <- df + t(df)
-        diag(df) <- 0
+        df <- format(df)
+        df[row(df) <= col(df)] <- ""
         dimnames(df) <- list(labels, labels)
-        print(df, na = "",...)
+        print(df, quote = FALSE, ...)
     }
     for (i in 1:n) {
         w <- x[[i]]

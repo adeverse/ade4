@@ -21,7 +21,7 @@ Thioulouse J., Simier M. and Chessel D. (2004). Simultaneous analysis of a seque
 Simier, M., Blanc L., Pellegrin F., and Nandris D. (1999). Approche simultanée de K couples de tableaux : 
 Application a l'étude des relations pathologie végétale - environnement. \emph{Revue de Statistique Appliquée}, \bold{47}, 31-46.
 }
-\author{Jean Thioulouse \email{ade4@biomserv.univ-lyon1.fr}}
+\author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr}}
 \section{WARNING }{
 IMPORTANT : \code{KTX} and \code{KTY} must have the same k-tables structure, the same number
 of columns, and the same column weights.

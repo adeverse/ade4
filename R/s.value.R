@@ -1,10 +1,13 @@
 "s.value" <- function (dfxy, z, xax = 1, yax = 2, method = c("squaresize",
-    "greylevel"), csize = 1, cpoint = 0, pch = 20, 
+    "greylevel"), zmax=NULL, csize = 1, cpoint = 0, pch = 20, 
     clegend = 0.75, neig = NULL, cneig = 1, xlim = NULL, ylim = NULL, 
     grid = TRUE, addaxes = TRUE, cgrid = 0.75, include.origin = TRUE, 
     origin = c(0, 0), sub = "", csub = 1, possub = "topleft", 
     pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE) 
 {
+    # modif samedi, novembre 29, 2003 at 08:43 le coefficient de taille
+    # est rapporté aux bornes utilisateurs pour reproduire les mêmes
+    # valeurs sur plusieurs fenêtres
     dfxy <- data.frame(dfxy)
     if (length(z) != nrow(dfxy)) 
         stop(paste("Non equal row numbers", nrow(dfxy), length(z)))
@@ -37,7 +40,7 @@
     if (method == "greylevel") {
         br0 <- pretty(z, 6)
         nborn <- length(br0)
-        coeff <- diff(range(coo$x))/15
+        coeff <- diff(par("usr")[1:2])/15
         numclass <- cut.default(z, br0, include = TRUE, lab = FALSE)
         valgris <- seq(1, 0, le = (nborn - 1))
         h <- csize * coeff
@@ -51,18 +54,19 @@
                 cpoint)
     }
     else if (method == "squaresize") {
-        coeff <- diff(range(coo$x))/15
+        coeff <- diff(par("usr")[1:2])/15
         sq <- sqrt(abs(z))
-        w1 <- max(sq)
+        if (is.null(zmax)) zmax <- max(abs(z))
+        w1 <- sqrt(zmax)
         sq <- csize * coeff * sq/w1
         for (i in 1:(nrow(dfxy))) {
             if (sign(z[i]) >= 0) {
-                symbols(coo$x[i], coo$y[i], squares = sq[i], 
-                  bg = 1, fg = 0, add = TRUE, inch = FALSE)
+                symbols(coo$x[i], coo$y[i], squares = sq[i],
+                    bg = "black", fg = "white", add = TRUE, inch = FALSE)
             }
             else {
                 symbols(coo$x[i], coo$y[i], squares = sq[i], 
-                  bg = "white", fg = 1, add = TRUE, inch = FALSE)
+                  bg = "white", fg = "black", add = TRUE, inch = FALSE)
             }
         }
         br0 <- pretty(z, 4)

@@ -125,6 +125,7 @@
         w <- strsplit(x.tre, "[(),;]")[[1]]
         w <- w[w != ""]
         leurre <- make.names(w, unique = TRUE)
+        leurre <- gsub("[.]","_", leurre, ext = FALSE)
         for (i in 1:length(w)) {
             old <- paste(w[i])
             x.tre <- sub(old, leurre[i], x.tre, ext = FALSE)

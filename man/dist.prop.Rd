@@ -17,8 +17,8 @@ dist.prop(df, method = NULL, diag = FALSE, upper = FALSE)
 \details{
 \item{1 = Manly}{\eqn{d_1=\frac{1}{2} \sum_{i=1}^{K}{|{p_i-q_i}|}}{d1 = sum|p(i) - q(i)|/2}}
 \item{2 = Overlap index Manly}{\eqn{d_2=1-\frac{\sum_{i=1}^{K}{p_i}}{\sqrt{\sum_{i=1}^{K}{p_i^2}}{\sqrt{\sum_{i=1}^{K}{q_i^2}}}}}{d2 = 1 - Sum(p(i)q(i))/sqrt(Sum(p(i)^2)/sqrt(Sum(q(i)^2)}}
-\item{3 = Rogers 1972 (one locus)}{\eqn{d_3=\frac{1}{n} \sqrt{\frac{1}{2} \sum_{i=1}^{K}{({p_i-q_i})^2}}}{d3 = sqrt(0.5*Sum(p(i)-q(i)^2))}}
-\item{4 = Nei 1972 (one locus)}{\eqn{d_4=\frac{1}{n} \ln{\frac{\sum_{i=1}^{K}{p_i q_i}}{\sqrt{\sum_{i=1}^{K}{p_i^2}}{\sqrt{\sum_{i=1}^{K}{q_i^2}}}}}}{d4 = -ln(Sum(p(i)q(i)/sqrt(Sum(p(i)^2)/sqrt(Sum(q(i)^2))}}
+\item{3 = Rogers 1972 (one locus)}{\eqn{d_3=\sqrt{\frac{1}{2} \sum_{i=1}^{K}{({p_i-q_i})^2}}}{d3 = sqrt(0.5*Sum(p(i)-q(i)^2))}}
+\item{4 = Nei 1972 (one locus)}{\eqn{d_4=\ln{\frac{\sum_{i=1}^{K}{p_i q_i}}{\sqrt{\sum_{i=1}^{K}{p_i^2}}{\sqrt{\sum_{i=1}^{K}{q_i^2}}}}}}{d4 = -ln(Sum(p(i)q(i)/sqrt(Sum(p(i)^2)/sqrt(Sum(q(i)^2))}}
 \item{5 = Edwards 1971 (one locus)}{\eqn{d_5=\sqrt{1-\sum_{i=1}^{K}{\sqrt{p_1 q_i}}}}{d5= sqrt (1 - (Sum(sqrt(p(i)q(i))))}}
 }
 \value{

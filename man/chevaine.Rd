@@ -13,12 +13,6 @@ This data set is a list of two components:
     \item{coo}{ a list containing all the elements to build a spatial map}
   }
 } 
-\source{
-Exemple du logiciel GENETIX.
-Belkhir k. et al. GENETIX, logiciel sous WindowsTM pour la génétique des populations. 
-Laboratoire Génome, Populations, Interactions CNRS UMR 5000, Université de Montpellier II, Montpellier (France). \cr
-\url{http://www.univ-montp2.fr/~genetix/genetix/genetix.htm}
-}
 \references{
 Guinand B., Bouvet Y. and Brohon B. (1996) Spatial aspects of genetic differentiation of the European chub in the Rhone River basin. \emph{Journal of Fish Biology}, \bold{49}, 714--726.
 }

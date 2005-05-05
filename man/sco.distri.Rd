@@ -24,6 +24,7 @@ sco.distri(score, df, y.rank = TRUE, csize = 1, labels = names(df), clabel = 1,
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
 }
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 w <-seq(-1, 1, le = 200)
 distri <- data.frame(lapply(1:50, 

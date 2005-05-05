@@ -21,6 +21,7 @@ a list of the class \code{randtest}
 Doledec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for
 studying species-environment relationships. \emph{Freshwater Biology}, \bold{31}, 277--294.
 }
+\author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr}}
 \examples{
 data(doubs)
 dudi1 <- dudi.pca(doubs$mil, scale = TRUE, scan = FALSE, nf = 3)

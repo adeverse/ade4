@@ -1,9 +1,10 @@
 \name{dudi.fca}
 \alias{dudi.fca}
+\alias{dudi.fpca}
 \alias{prep.fuzzy.var}
-\title{Fuzzy Correspondence Analysis}
+\title{Fuzzy Correspondence Analysis and Fuzzy Principal Components Analysis}
 \description{
- This function analyses a table of fuzzy variables.\cr\cr
+ Theses functions analyse a table of fuzzy variables.\cr\cr
  A fuzzy variable takes values of type \eqn{a=(a_1,\dots,a_k)}{a=(a1,\dots,ak)} 
  giving the importance of k categories.\cr\cr
  A missing data is denoted (0,...,0).\cr
@@ -13,6 +14,7 @@
 \usage{
 prep.fuzzy.var (df, col.blocks, row.w = rep(1, nrow(df)))
 dudi.fca(df, scannf = TRUE, nf = 2)
+dudi.fpca(df, scannf = TRUE, nf = 2) {
 }
 \arguments{
   \item{df}{a data frame containing positive or null values}
@@ -25,29 +27,39 @@ dudi.fca(df, scannf = TRUE, nf = 2)
 The function \code{prep.fuzzy.var} returns a data frame with the attribute \code{col.blocks}. 
 The function \code{dudi.fca} returns a list of class \code{fca} and \code{dudi} (see \link{dudi}) containing also
 \item{cr}{a data frame which rows are the blocs, columns are the kept axes, and values are the correlation ratios.}
+The function \code{dudi.fpca} returns a list of class \code{pca} and \code{dudi} (see \link{dudi}) containing also
+\enurate{
+\item{cent}
+\item{norm}
+\item{blo}
+\item{indica}
+\item{FST}
+\item{inertia}
 }
-\references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding approach for the analysis of 
-long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. 
-}
-\author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
-}
+
+\references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding 
+approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. } \author{ 
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }
+
 \examples{
 w1 <- matrix(c(1,0,0,2,1,1,0,2,2,0,1,0,1,1,1,0,1,3,1,0), 4, 5)
-w1 <- data.frame(w1)
-w2 <- prep.fuzzy.var(w1, c(2,3))
+w1 <- data.frame(w1) w2 <- prep.fuzzy.var(w1, c(2,3))
 w1
-w2
+w2 
 attributes(w2)
 
 data(bsetal97)
 w <- prep.fuzzy.var(bsetal97$biol, bsetal97$biol.blo)
 scatter(dudi.fca(w, scann = FALSE, nf = 3), csub = 3, clab.moda = 1.5)
+scatter(dudi.fpca(w, scann = FALSE, nf = 3), csub = 3, clab.moda = 1.5)
 
+\dontrun{
 w1 <- prep.fuzzy.var(bsetal97$biol, bsetal97$biol.blo)
 w2 <- prep.fuzzy.var(bsetal97$ecol, bsetal97$ecol.blo)
 d1 <- dudi.fca(w1, scann = FALSE, nf = 3)
 d2 <- dudi.fca(w2, scann = FALSE, nf = 3)
 plot(coinertia(d1, d2, scann = FALSE))
+}
+
 }
 \keyword{multivariate}

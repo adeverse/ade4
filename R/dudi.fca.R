@@ -90,3 +90,42 @@
     attr(df, "col.num") <- col.num
     return(df)
 }
+
+"dudi.fpca" <- function (df, scannf = TRUE, nf = 2) {
+    if (!is.data.frame(df)) 
+        stop("data.frame expected")
+    if (is.null(attr(df, "col.blocks"))) 
+        stop("attribute 'col.blocks' expected for df")
+    if (is.null(attr(df, "row.w"))) 
+        stop("attribute 'row.w' expected for df")
+    bloc <- attr(df, "col.blocks")
+    row.w <- attr(df, "row.w")
+    indica <- attr(df, "col.num")
+    nvar <- length(bloc)
+    col.w <- unlist(lapply(bloc, function(k) rep(1/k,k)))
+    X <- dudi.pca (df, row.w = row.w, col.w = col.w, center = TRUE,
+        scale = FALSE, scannf = scannf, nf = nf)
+    X$blo <- bloc
+    X$indica <- indica
+    w1 <- unlist(lapply(X$tab,function(x) sum(x*x*row.w)))
+    w1 <- unlist(tapply(w1*col.w,indica,sum))
+    w2 <- tapply(X$cent,indica,function(x) 1-sum(x*x))
+    ratio <- w1/sum(w1)
+    w1 <- cbind.data.frame(inertia=w1,max=w2,FST=w1/w2)
+    row.names(w1) <- names(bloc)
+    X$FST <- w1
+    row.names(w1) <- names(bloc)
+    floc1 <- function(ifac)
+        tapply(col.w*X$co[,ifac]*X$co[,ifac],indica,sum)
+    w2 <- unlist(lapply(1:X$nf,floc1))
+    w2 <- matrix(w2,nvar,X$nf)
+    w3 <- X$eig[1:X$nf]
+    w2 <- t(apply(w2,1,function(x) x/w3))
+    w2 <- as.data.frame(w2)
+    names(w2)=paste("Ax",1:X$nf,sep="")
+    row.names(w2) <- names(bloc)
+    w2 <- cbind.data.frame(w2,total=ratio)
+    w2 <- round(1000*w2,0)
+    X$inertia <- w2
+    return(X)
+} 

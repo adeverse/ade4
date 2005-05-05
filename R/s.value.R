@@ -84,5 +84,5 @@
     else if (method == "circlesize") {
         print("not yet implemented")
     }
-    box()
+    if (!add.plot) box()
 }

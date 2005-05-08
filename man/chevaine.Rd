@@ -3,14 +3,15 @@
 \alias{chevaine}
 \title{Enzymatic polymorphism in Leuciscus cephalus}
 \description{
-  This data set contains a list of two components: a spatial map and allellic profiles.
+  This data set contains a list of three components: spatial map, allellic profiles and sample sizes.
 } 
 \usage{data(chevaine)} 
 \format{
-This data set is a list of two components:
+This data set is a list of three components:
   \describe{
-    \item{tab}{ a data frame with 27 populations and 9 allellic profiles}
+    \item{tab}{ a data frame with 27 populations and 9 allellic frequencies (4 locus)}
     \item{coo}{ a list containing all the elements to build a spatial map}
+    \item{eff}{ a numeric containing the numbers of fish samples per station}
   }
 } 
 \references{

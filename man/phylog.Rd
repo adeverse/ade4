@@ -12,7 +12,7 @@ Create and use objects of class \code{phylog}. \cr
 \usage{
 print.phylog(x, ...)
 phylog.extract(phylog, node, distance = TRUE)
-phylog.permut(phylog, list.nodes = NULL, distance = TRUE))
+phylog.permut(phylog, list.nodes = NULL, distance = TRUE)
 }
 \arguments{
   \item{x, phylog}{: an object of class \code{phylog}}

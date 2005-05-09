@@ -3,14 +3,16 @@
 \docType{data}
 \title{African Estuary Fishes}
 \description{
-This data set is a list containing relations between sites and species linked to dates.
+This data set is a list containing relations between sites and fish species linked to dates.
 }
 \usage{data(baran95)}
 \format{
     This list contains the following objects:
     \describe{
-        \item{fau}{is a data frame 95 sites 33 species. }
-        \item{plan}{is a data frame 2 factors date and site. }
+        \item{fau}{is a data frame 95 seinings and 33 fish species. }
+        \item{plan}{is a data frame 2 factors : date and site. The \code{date} has 6 levels (april 1993, june 1993, 
+        august 1993, october 1993, december 1993 and february 1994) and the \code{sites} are defined by 4 distances to the
+        Atlantic Ocean (km03, km17, km33 and km46). }
         \item{species.names}{is a vector of species latin names. }
     }
 }

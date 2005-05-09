@@ -31,9 +31,9 @@ The function computes the variance decomposition of a quantitative vector x on a
 It plots the squared correlations \eqn{R^{2}}{R^2} between x and vectors of B (variance decomposition) and the cumulated squared correlations \eqn{SR^{2}}{SR^2} (cumulative decomposition).
 The function also provides five non parametric tests to test the existence of autocorrelation. The tests derive from the five following statistics :
     \item{R2Max}{=\eqn{\max(R^{2})}{max(R^2)}. It takes high value when a high part of the variability is explained by one score.}
-    \item{SkR2k}{=\eqn{\sum_{i=1}^{n-1}(iR^{2}_i)}{sum_i i*(R^2)_i}. It compares the part of variance explained by internal nodes to the one explained by end nodes.}
-    \item{Dmax}{=\eqn{\max(SR^{2}_j - SR^{2}_{j-1})}{max((SR^2)_j - (SR^2)_(j-1))}. It examines the accumulation of variance for a sequence of scores.}
-    \item{SCE}{=\eqn{\sum_{i=1}^{n-1} (SR^{2}_i - SR^{2}_{i-1})^{2}}{sum_i ((SR^2)_i - (SR^2)_(i-1))^2}. It examines also the accumulation of variance for a sequence of scores.}
+    \item{SkR2k}{=\eqn{\sum_{i=1}^{n-1}(iR^{2}_i)}{sum_i^(n-1) i*(R^2)_i}. It compares the part of variance explained by internal nodes to the one explained by end nodes.}
+    \item{Dmax}{=\eqn{\max_{m=1,...,n-1}(\sum_{j=1}^{m}R^{2}_j - \frac{m}{n-1})}{max_(m=1,...,n-1)(sum_(j=1)^m(R^2_j) - (m/n-1))}. It examines the accumulation of variance for a sequence of scores.}
+    \item{SCE}{=\eqn{\sum_{m=1}^{n-1} (\sum_{j=1}^{m}R^{2}_j - \frac{m}{n-1})^{2}}{sum_(m=1)^(n-1)(sum_(j=1)^m(R^2_j) - (m/n-1))^2}. It examines also the accumulation of variance for a sequence of scores.}
     \item{ratio}{depends of the parameter posinega. If posinega > 0, the statistic ratio exists and equals \eqn{\sum_{i=1}^{posinega}R^{2}_i}{sum_i (R^2)_i with i < posinega + 1}. It compares the part of variance explained by internal nodes to the one explained by end nodes when we can define how many vectors correspond to internal nodes.}
 }
 \value{

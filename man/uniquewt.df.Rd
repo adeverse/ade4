@@ -15,7 +15,7 @@ The function returns a \code{y} which contains once each duplicated row of \code
 \code{y} is an attribut 'factor' which gives the number of the row of \code{y} in which each row of \code{x} is found\cr
 \code{y} is an attribut 'length.class' which gives the number of duplicates in \code{x} with an attribut of each row of \code{y} with an attribut
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}} \cr
 \examples{
 data(ecomor)
 forsub.r <- uniquewt.df(ecomor$forsub)

@@ -3,15 +3,17 @@
 \docType{data}
 \title{Fauna Table for Constrained Ordinations}
 \description{
-\code{avimedi} is a list containing the informations about 302 sites : \cr
+\code{avimedi} is a list containing the information about 302 sites : \cr
 frequencies of 51 bird species ; two factors (habitats and Mediterranean origin). 
 }
 \usage{data(avimedi)}
 \format{
   This list contains the following objects:
   \describe{
-    \item{fau}{is a data frame 302 sites - 51 species. }
-    \item{plan}{is a data frame 302 sites - 2 factors. }
+    \item{fau}{is a data frame 302 sites - 51 bird species. }
+    \item{plan}{is a data frame 302 sites - 2 factors : \code{reg} with two levels Provence (\code{Pr}, 
+    South of France) and Corsica (\code{Co}) ;
+    \code{str} with six levels describing the vegetation from a very low matorral (1) up to a mature forest of holm oak (6).}
     \item{nomesp}{is a vector 51 latin names. }
   }
 }

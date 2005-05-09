@@ -3,7 +3,8 @@
 \alias{casitas}
 \title{Enzymatic polymorphism in Mus musculus}
 \description{
-  This data set is a data frame with 74 rows (mice) and 15 columns (loci enzymatic polymorphism of the DNA mitochondrial). Each value contains 6 characters coding for two allelles. The missing values are coding by '000000'.
+  This data set is a data frame with 74 rows (mice) and 15 columns (loci enzymatic polymorphism of the DNA mitochondrial). 
+  Each value contains 6 characters coding for two allelles. The missing values are coding by '000000'.
 } 
 \usage{data(casitas)} 
 \format{
@@ -27,7 +28,8 @@ Orth, A., T. Adama, W. Din and F. Bonhomme. (1998) Hybridation naturelle entre d
 }
 \examples{
 data(casitas)
-casitas.pop <- as.factor(rep(c("dome", "cast", "musc", "casi"), c(24,11,9,30)))
+casitas.pop <- as.factor(rep(c("dome", "cast", "musc", "casi"), 
+    c(24,11,9,30)))
 table(casitas.pop,casitas[,1]) 
 casi.genet <- char2genet(casitas, casitas.pop)
 names(casi.genet)

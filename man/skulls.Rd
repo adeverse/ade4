@@ -8,7 +8,11 @@ skulls belonging to five different historical periods.
 }
 \usage{data(skulls)}
 \format{
-The \code{skulls} data frame has 150 rows and 4 columns.
+The \code{skulls} data frame has 150 rows (egyptean skulls) and 4 columns (anthropometric measures). 
+The four variables are the maximum breadth (V1), the basibregmatic height (V2), the basialveolar length (V3)
+and the nasal height (V4). All measurements were taken in millimeters.
+}
+\details{
 The measurements are made on 5 groups and 30 Egyptian skulls. The groups are defined as follows :\cr
 1 - the early predynastic period (circa 4000 BC)\cr
 2 - the late predynastic period (circa 3300 BC)\cr

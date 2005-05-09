@@ -17,7 +17,7 @@ dudi.pca(df, row.w = rep(1, nrow(df))/nrow(df),
   \item{center}{a logical or numeric value, centring option\cr
     if TRUE, centring by the mean\cr
     if FALSE no centring\cr
-    if a numeric vector, its length must be equal to the number of columns of df (p)
+    if a numeric vector, its length must be equal to the number of columns of the data frame df
     and gives the decentring}
   \item{scale}{a logical value indicating whether the column vectors should be normed for the row.w weighting}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}

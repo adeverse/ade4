@@ -14,7 +14,7 @@
 \usage{
 prep.fuzzy.var (df, col.blocks, row.w = rep(1, nrow(df)))
 dudi.fca(df, scannf = TRUE, nf = 2)
-dudi.fpca(df, scannf = TRUE, nf = 2) {
+dudi.fpca(df, scannf = TRUE, nf = 2)
 }
 \arguments{
   \item{df}{a data frame containing positive or null values}

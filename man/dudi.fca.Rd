@@ -36,7 +36,7 @@ The function \code{dudi.fpca} returns a list of class \code{pca} and \code{dudi}
 \item{FST}
 \item{inertia}
 }
-
+}
 \references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding 
 approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. } \author{ 
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }

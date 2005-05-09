@@ -21,7 +21,7 @@ print.krandtest(x, ...)
 \value{
 \code{plot.krandtest} draws the \emph{p} simulated values histograms and the position of the observed value.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }\cr
+\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }
 \seealso{\code{\link{randtest}}}
 \examples{
 wkrandtest <- data.frame(eg1=c(0, rnorm(200)))

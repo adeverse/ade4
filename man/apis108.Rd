@@ -3,11 +3,12 @@
 \alias{apis108}
 \title{Allelic frequencies in ten honeybees populations at eight microsatellites loci}
 \description{
-This data set gives the occurences for the allelic form on 8 loci in 10 populations.
+This data set gives the occurences for the allelic form on 8 loci in 10 populations of honeybees.
 } 
 \usage{data(apis108)} 
 \format{
-A data frame containing 180 rows (allelic forms on 8 loci) and 10 columns (populations).
+A data frame containing 180 rows (allelic forms on 8 loci) and 10 columns (populations of honeybees : El.Hermel, Al.Hoceima, 
+Nimba, Celinda, Pretoria, Chalkidiki, Forli, Valenciennes, Umea and Seville).
 } 
 \source{
 \url{http://www.montpellier.inra.fr/URLB/apis/libanfreq.pdf}\cr

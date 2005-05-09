@@ -15,7 +15,7 @@ It gives also distances among the haplotypes.
     \item{samples}{is a data frame with 56 haplotypes, 10 abundance variables (populations). 
     These variables give the haplotype abundance in a given population.}
     \item{structures}{is a data frame with 10 populations, 1 variable (classification).
-    This variable gives the name of the continent in which a given population is located}
+    This variable gives the name of the continent in which a given population is located. }
 }}
 \source{
   Excoffier, L., Smouse, P.E. and Quattro, J.M. (1992) Analysis of molecular variance inferred from metric distances
@@ -23,7 +23,8 @@ It gives also distances among the haplotypes.
 }
 \examples{
 data(humDNAm)
-dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
+dpcoahum <- dpcoa(humDNAm$samples, 
+    sqrt(humDNAm$distances), scan = FALSE, nf = 2)
 plot(dpcoahum, csize = 1.5)
 }
 \keyword{datasets}

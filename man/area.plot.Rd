@@ -67,7 +67,7 @@ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 data(elec88)
 par(mfrow = c(2,2))
 area.plot(elec88$area, cpoint = 1)
-area.plot(elec88$area, lab = elec88$lab, clab = 0.75)
+area.plot(elec88$area, lab = elec88$lab$dep, clab = 0.75)
 area.plot(elec88$area, clab = 0.75)
 # elec88$neig <- neig(area = elec88$area)
 area.plot(elec88$area, graph = elec88$neig, 

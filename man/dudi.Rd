@@ -42,8 +42,8 @@ t.dudi(x)
 \value{
 as.dudi and all the functions that use it return a list with the following components :
 \item{tab}{a data frame with n rows and p columns}
-\item{cw}{row weights, a vector with n components} 
-\item{lw}{column weights, a vector with p components}
+\item{cw}{column weights, a vector with n components} 
+\item{lw}{row (lines) weights, a vector with p components}
 \item{eig}{eigenvalues, a vector with min(n,p) components}
 \item{nf}{integer, number of kept axes}
 \item{c1}{principal axes, data frame with p rows and nf columns}

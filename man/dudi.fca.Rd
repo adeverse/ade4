@@ -43,7 +43,8 @@ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }
 
 \examples{
 w1 <- matrix(c(1,0,0,2,1,1,0,2,2,0,1,0,1,1,1,0,1,3,1,0), 4, 5)
-w1 <- data.frame(w1) w2 <- prep.fuzzy.var(w1, c(2,3))
+w1 <- data.frame(w1) 
+w2 <- prep.fuzzy.var(w1, c(2,3))
 w1
 w2 
 attributes(w2)

@@ -12,7 +12,7 @@ This data set gives the performances of 33 men's decathlon in the 1988 Olympics
     \item{tab}{is a data frame with 33 rows and 10 columns events of the decathlon: 100 meters (100), 
     long jump (long), shotput (poid), high jump (haut), 400 meters (400), 110-meter hurdles (110),
     discus throw (disq), pole vault (perc), javelin (jave) and 1500 meters (1500).}
-    \item{scores}{is a vector of the final points scores of the competition.}
+    \item{score}{is a vector of the final points scores of the competition.}
     }
 }
 \source{

@@ -2,6 +2,7 @@ disc <- function(samples, dis = NULL, structures=NULL){
     # checking of user's data and initialization.
     if (!inherits(samples, "data.frame")) stop("Non convenient samples")
     if (any(samples < 0)) stop("Negative value in samples")
+    if (any(apply(samples, 2, sum) < 1e-16)) stop("Empty samples")
     if (!is.null(dis)) {
         if (!inherits(dis, "dist")) stop("Object of class 'dist' expected for distance")
         if (!is.euclid(dis)) stop("Euclidean property is expected for distance")

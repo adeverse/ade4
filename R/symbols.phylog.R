@@ -1,31 +1,3 @@
-"dotchart.phylog" <- function (phylog, values, ceti=1, cdot=1, ...) { 
-    if (!inherits(phylog, "phylog")) 
-        stop("Non convenient data")
-    if (! is.numeric (values)) stop ("'values' is not numeric")
-    n <- length(values)
-    if (length(phylog$leaves)!=n) stop ("Non convenient length")
-    on.exit(par(mar=mar.old))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    w <- plot.phylog (x=phylog, clabel.leaves=0, ...)
-    mar.old <- par("mar")
-    par("usr"=c(0,1,-0.05,1))
-    val.ref <- pretty(values,4)
-    x1 <- w$xbase
-    x2 <- 1 - (x1-max(w$xy$x))
-    x1.use <- min(val.ref)
-    x2.use <- max(val.ref)
-    fun1 <- function (x) x1+(x2-x1)*(x-x1.use)/(x2.use-x1.use)
-    xleg <- fun1(val.ref)
-    miny <- 0 # min(w$xy$y)
-    maxy <- max(w$xy$y)
-    nleg <- length(xleg)
-    segments(xleg,rep(miny,nleg),xleg,rep(maxy,nleg), col=grey(0.75))
-    segments (w$xy$x,w$xy$y,rep(max(w$xy$x),n),w$xy$y, col=grey(0.75))
-    segments (rep(xleg[1],n),w$xy$y,rep(max(xleg),n),w$xy$y, col=grey(0.5))
-    if (cdot>0) points(fun1(values),w$xy$y,pch=21,cex=cdot,bg=1)
-    if (ceti>0) text(xleg, rep((miny-0.05)/2,nleg),as.character(val.ref),cex=par("cex")*ceti) #(miny-0.05)/2
-}
-
 "symbols.phylog" <- function (phylog, circles, squares, csize = 1, clegend = 1, sub = "",
     csub = 1, possub = "topleft") 
 {

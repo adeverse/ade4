@@ -4,7 +4,7 @@ divc <- function(df, dis = NULL, scale = FALSE){
     if (any(df < 0)) stop("Negative value in df")
     if (!is.null(dis)) {
         if (!inherits(dis, "dist")) stop("Object of class 'dist' expected for distance")
-        if (!is.euclid(dis)) stop("Euclidean property is expected for distance")
+        if (!is.euclid(dis)) warning("Euclidean property is expected for distance")
         dis <- as.matrix(dis)
         if (nrow(df)!= nrow(dis)) stop("Non convenient df")
         dis <- as.dist(dis)
@@ -15,7 +15,8 @@ divc <- function(df, dis = NULL, scale = FALSE){
     names(div) <- "diversity"
     rownames(div) <- names(df)
     for (i in 1:ncol(df)) {
-        div[i, ] <- (t(df[, i]) %*% (as.matrix(dis)^2) %*% df[, i]) / 2 / (sum(df[, i])^2)
+        if(sum(df[, i]) < 1e-16) div[i, ] <- 0
+        else div[i, ] <- (t(df[, i]) %*% (as.matrix(dis)^2) %*% df[, i]) / 2 / (sum(df[, i])^2)
     }
     if(scale == TRUE){
         divmax <- divcmax(dis)$value

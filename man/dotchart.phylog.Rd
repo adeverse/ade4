@@ -6,16 +6,13 @@
  plot of each variable.
 }
 \usage{
-dotchart.phylog(phylog, values, ceti = 1, cdot = 1, y = NULL, scaling = TRUE, 
- ranging = TRUE, yranging = NULL, joining = TRUE, yjoining = NULL, 
- csub = 1, f.phylog = 1/(1 + ncol(values)), ...)
+dotchart.phylog(phylog, values, y = NULL, scaling = TRUE, ranging = TRUE, yranging = NULL, 
+    joining = TRUE, yjoining = NULL, ceti = 1, cdot = 1, csub = 1, 
+    f.phylog = 1/(1 + ncol(values)), ...)
 }
 \arguments{
   \item{phylog}{ an object of class \code{phylog}}
   \item{values}{ a vector or a data frame giving the variables}
-  \item{ceti}{ a character size for editing horizontal limits, used with \code{par("cex")*ceti}}
-  \item{cdot}{ a character size for plotting the points of the dot plot,
-   used with \code{par("cex")*cdot}}
   \item{y}{ a vector which values correspond to leaves positions}
   \item{scaling}{ if TRUE, data are scaled}
   \item{ranging}{ if TRUE, dotplots are drawn with the same horizontal limits}
@@ -23,6 +20,9 @@ dotchart.phylog(phylog, values, ceti = 1, cdot = 1, y = NULL, scaling = TRUE,
    If NULL, horizontal limits are defined by lower and upper values of data}
   \item{joining}{ if TRUE, segments join each point to a central value}
   \item{yjoining}{ a vector with the central value. If NULL, the central value equals 0}
+  \item{ceti}{ a character size for editing horizontal limits, used with \code{par("cex")*ceti}}
+  \item{cdot}{ a character size for plotting the points of the dot plot,
+   used with \code{par("cex")*cdot}}
   \item{csub}{ a character size for editing the names of variables, used with \code{par("cex")*csub}}
   \item{f.phylog}{ a size coefficient for tree size (a parameter to draw the tree
    in proportion to leaves labels)}

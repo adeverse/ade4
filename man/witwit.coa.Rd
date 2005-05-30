@@ -41,6 +41,7 @@ son usage en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{36}, 39
 }
 \author{
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(ardeche)
@@ -51,6 +52,6 @@ s.class(ww$co, ardeche$sta.fac, clab = 1.5, cell = 0, axesell = FALSE)
 s.label(ww$co, add.p = TRUE, clab = 0.75)
 summary(ww)
 
-witwitsepan(ww, c(4 ,6))
+witwitsepan(ww, c(4,6))
 }
 \keyword{multivariate}

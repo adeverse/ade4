@@ -17,7 +17,7 @@ witwitsepan <- function (ww, mfrow = NULL, csub = 2, plot = TRUE) {
     listblocrow = split(tab,rowfac)
     listbloc = NULL
     lapply(listblocrow, function(x)
-         listbloc <<- c(listbloc,split(as.data.frame(t(x)),col.fac)))    
+         listbloc <<- c(listbloc,split(as.data.frame(t(x)),colfac)))    
 
     fun1 <- function(x) {
         x <- data.frame(x)
@@ -27,7 +27,7 @@ witwitsepan <- function (ww, mfrow = NULL, csub = 2, plot = TRUE) {
         if (sum(sumlig>0)<2) return (NULL)
         sumcol <- apply(x,2,sum)
         if (sum(sumcol>0)<2) return (NULL)
-        return(dudi.coa(x,scann=F)$eig)
+        return(dudi.coa(x,scann=FALSE)$eig)
     }
     
     names(listbloc) <- t(outer(names(rowblo),names(colblo),function(x,y) paste(x,y,sep="/")))

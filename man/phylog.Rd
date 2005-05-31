@@ -45,7 +45,8 @@ Returns a list of class \code{phylog} :
     \item{Blabels}{: a vector giving for each nodes the name of the vector of Bscores that is associated to its}    
 }
 \references{
-Ollier, S., Couteron, P. and Chessel, D. (accepted) Orthonormal transforms to detect and describe phylogenetic autocorrelation. \emph{Biometrics}.
+Ollier, S., Couteron, P. and Chessel, D. (2005) Orthonormal transforms to detect and describe 
+phylogenetic autocorrelation. \emph{Biometrics} (in press).
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}

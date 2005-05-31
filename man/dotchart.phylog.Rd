@@ -20,10 +20,12 @@ dotchart.phylog(phylog, values, y = NULL, scaling = TRUE, ranging = TRUE, yrangi
    If NULL, horizontal limits are defined by lower and upper values of data}
   \item{joining}{ if TRUE, segments join each point to a central value}
   \item{yjoining}{ a vector with the central value. If NULL, the central value equals 0}
-  \item{ceti}{ a character size for editing horizontal limits, used with \code{par("cex")*ceti}}
+  \item{ceti}{ a character size for editing horizontal limits, \cr 
+  used with \code{par("cex")*ceti}}
   \item{cdot}{ a character size for plotting the points of the dot plot,
    used with \code{par("cex")*cdot}}
-  \item{csub}{ a character size for editing the names of variables, used with \code{par("cex")*csub}}
+  \item{csub}{ a character size for editing the names of variables, \cr 
+  used with \code{par("cex")*csub}}
   \item{f.phylog}{ a size coefficient for tree size (a parameter to draw the tree
    in proportion to leaves labels)}
   \item{\dots}{ further arguments passed to or from other methods}

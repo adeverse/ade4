@@ -3,7 +3,7 @@
 \docType{data}
 \title{Genetic variability of Cacadors}
 \description{
-This data set contains informations about genetic variability of \emph{Atya innocous} and \emph{Atya scabra} in Guadeloupe (France).
+This data set contains information about genetic variability of \emph{Atya innocous} and \emph{Atya scabra} in Guadeloupe (France).
 }
 \usage{data(atya)}
 \format{

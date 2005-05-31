@@ -53,7 +53,7 @@ are any dissimilarities suitable? \emph{Theoretical Population Biology},
 
 }
 \author{
-Stéphane Champely \email{Stephane.Champely@univ-lyon1.fr}
+Stéphane Champely \email{Stephane.Champely@univ-lyon1.fr} \cr
 Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
 }
 \examples{

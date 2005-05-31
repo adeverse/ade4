@@ -14,7 +14,7 @@
 }
 \details{
 If \code{df} contains only quantitative variables, this is equivalent to a normed PCA.\cr
-If \code{df} contains only factors, this is equivalent to an MCA.\cr
+If \code{df} contains only factors, this is equivalent to a MCA.\cr
 
 This analysis is the Hill and Smith method and is very similar to \code{dudi.mix} function. 
 The differences are that \code{dudi.hillsmith} allow to use various row weights, while
@@ -34,7 +34,7 @@ Returns a list of class \code{mix} and \code{dudi} (see \link{dudi}) containing 
 }
 }
 \references{ Hill, M. O., and A. J. E. Smith. 1976. Principal component analysis of taxonomic data with multi-state discrete characters. 
-\emph{Taxon}, \bold{25}:249-255. }
+\emph{Taxon}, \bold{25}, 249-255. }
 \author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 
 \seealso{ \code{dudi.mix}}

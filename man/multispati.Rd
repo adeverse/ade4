@@ -66,7 +66,8 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
     maf.coa <- dudi.coa(maf.flo,scannf = FALSE)
     multispati.randtest(maf.coa, maf.listw)
-    maf.coa.ms <- multispati(maf.coa, maf.listw, scannf = FALSE, nfposi = 2, nfnega = 2)
+    maf.coa.ms <- multispati(maf.coa, maf.listw, scannf = FALSE, nfposi = 2, 
+        nfnega = 2)
     summary(maf.coa.ms)
     par(mfrow = c(1,3))
     barplot(maf.coa$eig)

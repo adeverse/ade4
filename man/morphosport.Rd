@@ -28,6 +28,7 @@ Thèse de doctorat. Université Lyon 1.
 }
 \examples{
 data(morphosport)
-plot(discrimin(dudi.pca(morphosport$tab, scan = FALSE), morphosport$sport, scan = FALSE))
+plot(discrimin(dudi.pca(morphosport$tab, scan = FALSE), 
+    morphosport$sport, scan = FALSE))
 }
 \keyword{datasets}

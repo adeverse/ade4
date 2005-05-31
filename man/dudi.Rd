@@ -10,8 +10,8 @@
 \code{as.dudi} is called by many functions (\code{dudi.pca}, \code{dudi.coa}, \code{dudi.acm}, ...) 
 and not directly by the user. It creates duality diagrams.
 
-\code{t.dudi} returns an object of class 'dudi' where the rows are the columns and the columns are the rows
-of the initial dudi. 
+\code{t.dudi} returns an object of class '\code{dudi}' where the rows are the columns and the columns are the rows
+of the initial \code{dudi}. 
 
 \code{is.dudi} returns TRUE if the object is of class \code{dudi} 
 
@@ -26,7 +26,7 @@ redo.dudi(dudi, newnf = 2)
 t.dudi(x) 
 }
 \arguments{
-  \item{df}{a data frame with n rows and p columns}
+  \item{df}{a data frame with \emph{n} rows and \emph{p} columns}
   \item{col.w}{a numeric vector containing the row weights}
   \item{row.w}{a numeric vector containing the column weights}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}

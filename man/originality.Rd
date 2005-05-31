@@ -1,6 +1,6 @@
 \name{originality}
 \alias{originality}
-\title{originality of a species
+\title{Originality of a species
 }
 \description{
 computes originality values for species from an ultrametric phylogenetic tree.
@@ -24,7 +24,8 @@ Returns a data frame with species in rows, and the selected indices of originali
 Indices are expressed as percentages.
 }
 \references{
-Pavoine, S., Ollier, S. and Dufour, A.-B. (2005)  Is the originality of a species measurable? \emph{Ecology Letters}, in press.
+Pavoine, S., Ollier, S. and Dufour, A.-B. (2005)  Is the originality of a species measurable? 
+\emph{Ecology Letters}, \bold{8}, 579--586.
 
 Vane-Wright, R.I., Humphries, C.J. and Williams, P.H. (1991). What to protect? Systematics 
 and the agony of choice. \emph{Biological Conservation}, \bold{55}, 235--254. 
@@ -42,7 +43,7 @@ data(carni70)
 carni70.phy <- newick2phylog(carni70$tre)
 ori.tab <- originality(carni70.phy, 1:5)
 names(ori.tab)
-dotchart.phylog(carni70.phy, ori.tab, scaling=FALSE, yjoining=0, cleaves=0, ceti=0.5, csub=0.7, cdot=0.5)
+dotchart.phylog(carni70.phy, ori.tab, scaling=FALSE, yjoining=0, 
+    cleaves=0, ceti=0.5, csub=0.7, cdot=0.5)
 }
 \keyword{multivariate}
-

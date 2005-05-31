@@ -3,7 +3,7 @@
 \docType{data}
 \title{Olympic Decathlon}
 \description{
-This data set gives the performances of 33 men's decathlon in the 1988 Olympics
+This data set gives the performances of 33 men's decathlon at the Olympic Games (1988).
 }
 \usage{data(olympic)}
 \format{

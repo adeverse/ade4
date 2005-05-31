@@ -10,7 +10,7 @@ Each data frame gives some bird species informations for 4 counties.
 \format{
 A list of six data frames with 79 rows (bird species) and 4 columns (counties).\cr
 The 6 arrays (S1 to S6) are the 6 stages of vegetation.\cr
-The attribut 'nomesp' of this list is a vector of species french names. 
+The attribut 'nomesp' of this list is a vector of species French names. 
 }
 \source{
 Blondel, J. and Farre, H. (1988) 

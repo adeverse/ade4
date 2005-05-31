@@ -9,7 +9,7 @@ This data set gives genetic relationships between cattle breeds with microsatell
 \format{
     \code{microsatt} is a list of 4 components. 
     \describe{
-        \item{tab}{contains the allelic frequencies for 18 cattle breeds (taurine or zebu,french or african) and 9 microsatellites.}
+        \item{tab}{contains the allelic frequencies for 18 cattle breeds (Taurine or Zebu,French or African) and 9 microsatellites.}
         \item{loci.names}{is a vector of the names of loci.}
         \item{loci.eff}{is a vector of the number of alleles per locus.}
         \item{alleles.names}{is a vector of the names of alleles.}

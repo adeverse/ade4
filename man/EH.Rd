@@ -1,6 +1,6 @@
 \name{EH}
 \alias{EH}
-\title{amount of Evolutionary History
+\title{Amount of Evolutionary History
 }
 \description{
 computes the sum of branch lengths on an ultrametric phylogenetic tree.
@@ -18,7 +18,7 @@ EH(phyl, select = NULL)
 returns a real value.
 }
 \references{
-Nee, S. and May, R.M. (1997) Extinction and the loss of evolutionary history. \emph{Science} 
+Nee, S. and May, R.M. (1997) Extinction and the loss of evolutionary history. \emph{Science},  
 \bold{278}, 692--694.
 }
 \author{

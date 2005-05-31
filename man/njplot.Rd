@@ -3,7 +3,7 @@
 \docType{data}
 \title{Phylogeny and trait of bacteria}
 \description{
-This data set describes the phylogenety of 36 bacteria as reported by Perrière and Gouy (1996). It also gives the GC rate corresponding to these 36 species.
+This data set describes the phylogeny of 36 bacteria as reported by Perrière and Gouy (1996). It also gives the GC rate corresponding to these 36 species.
 }
 \usage{data(njplot)}
 \format{

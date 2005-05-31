@@ -18,7 +18,7 @@ optimEH(phyl, nbofsp, tol = 1e-8, give.list = TRUE)
 \arguments{
   \item{phyl}{an object of class phylog}
   \item{nbofsp}{an integer indicating the number of species saved (k).}
-  \item{tol}{a tolerance threshold for null values (a value less than \code{tol} in absolute terms is considered as null). }
+  \item{tol}{a tolerance threshold for null values (a value less than \code{tol} in absolute terms is considered as NULL). }
   \item{give.list}{logical value indicating whether a list of optimizing species should be provided. If \code{give.list = TRUE}, 
   \code{optimPD} provides the list of the k species which optimize the amount of evolutionary history preserved 
   and are the most original species in their clades. If \code{give.list = FALSE}, \code{optimPD} returns directly the real 
@@ -27,7 +27,7 @@ optimEH(phyl, nbofsp, tol = 1e-8, give.list = TRUE)
 \value{
 Returns a list containing: 
   \item{value}{a real value providing the amount of evolutionary history preserved.}
-  \item{selected.sp} {a data frame containing the list of the k species which optimize the amount of evolutionary history preserved 
+  \item{selected.sp}{a data frame containing the list of the k species which optimize the amount of evolutionary history preserved 
   and are the most original species in their clades.}
 }
 \references{
@@ -36,7 +36,7 @@ Nee, S. and May, R.M. (1997) Extinction and the loss of evolutionary history. \e
 
 Pavoine, S., Ollier, S. and Dufour, A.-B. (2005)  
 Is the originality of a species measurable? 
-\emph{Ecology Letters}, in press.
+\emph{Ecology Letters}, \bold{8}, 579--586.
 }
 \author{
 Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}

@@ -3,13 +3,13 @@
 \docType{data}
 \title{Road Distances}
 \description{
-This data set gives the road distances between 15 european capitals and their coordinates. 
+This data set gives the road distances between 15 European capitals and their coordinates. 
 }
 \usage{data(capitales)}
 \format{
 This list contains the following objects:
     \describe{
-    \item{df}{is a data frame containing the road distances between 15 european capitals. }
+    \item{df}{is a data frame containing the road distances between 15 European capitals. }
     \item{xy}{is a data frame containing the coordinates of capitals. }
     }
 }

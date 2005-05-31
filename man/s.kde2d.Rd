@@ -8,7 +8,8 @@
 s.kde2d(dfxy, xax = 1, yax = 2, pch = 20, cpoint = 1, neig = NULL, cneig = 2, 
     xlim = NULL, ylim = NULL, grid = TRUE, addaxes = TRUE, cgrid = 1, 
     include.origin = TRUE, origin = c(0, 0), sub = "", csub = 1.25, 
-    possub = "bottomleft", pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE)
+    possub = "bottomleft", pixmap = NULL, contour = NULL, 
+    area = NULL, add.plot = FALSE)
 }
 \arguments{
   \item{dfxy}{ a data frame with at least two coordinates }

@@ -16,7 +16,7 @@
 \alias{scatterutil.sub}
 \title{Scatter Plot}
 \description{
-scatter is a generic function. It has methods for the classes \code{coa}, \code{dudi}, \code{fca}, \code{acm} and \code{pco}.\cr
+\code{scatter} is a generic function. It has methods for the classes \code{coa}, \code{dudi}, \code{fca}, \code{acm} and \code{pco}.\cr
 The scale of the grid is situated on the right-top of the graph.\cr
 The points are in the middle of the labels.\cr
 This process plots the graphs of the multivariate analyses.\cr
@@ -46,9 +46,9 @@ scatter(x, ...)
   \item{scatterutil.sub}{adds a string of characters in sub-title of a graph}
   \item{add.scatter.eig}{adds a eigenvalues bar plot on a graph}
 }
-\seealso{\code{\link{s.arrow}},\code{\link{s.chull}},\code{\link{s.class}},
-\code{\link{s.corcircle}},\code{\link{s.distri}},\code{\link{s.label}},
-\code{\link{s.match}},\code{\link{s.traject}},\code{\link{s.value}}
+\seealso{\code{\link{s.arrow}}, \code{\link{s.chull}}, \code{\link{s.class}}, 
+\code{\link{s.corcircle}}, \code{\link{s.distri}}, \code{\link{s.label}}, 
+\code{\link{s.match}}, \code{\link{s.traject}}, \code{\link{s.value}}
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{

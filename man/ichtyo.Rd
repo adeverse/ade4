@@ -17,8 +17,8 @@ the year of the sampling occasion.
     }
 }
 \details{
-    The value n(i,j) at the ith row and the jth column in \code{tab} corresponds to the number of sampling
-    points of the ith sampling occasion (in \code{eff}) that contains the jth species.
+    The value \emph{n(i,j)} at the \emph{ith} row and the \emph{jth} column in \code{tab} corresponds
+    to the number of sampling points of the \emph{ith} sampling occasion (in \code{eff}) that contains the \emph{jth} species.
 }
 \source{
 Dolédec, S., Chessel, D. and Olivier, J. M. (1995)

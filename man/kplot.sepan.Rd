@@ -33,7 +33,8 @@ kplot.sepan.coa (object, xax = 1, yax = 2, which.tab = 1:length(object$blo),
   \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
-\code{kplot.sepan} superimposes the points for the rows and the arrows for the columns using an adapted rescaling such as the scatter.dudi.\cr
+\code{kplot.sepan} superimposes the points for the rows and the arrows for the columns using an 
+adapted rescaling such as the \code{scatter.dudi}.\cr
 \code{kplot.sepan.coa} superimposes the row coordinates and the column coordinates with the same scale.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}

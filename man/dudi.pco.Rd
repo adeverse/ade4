@@ -13,9 +13,9 @@ scatter.pco (x, xax = 1, yax = 2, clab.row = 1, posieig = "top",
     sub = NULL, csub = 2, \dots) 
 }
 \arguments{
-  \item{d}{an object of class 'dist' containing an Euclidean distance matrix.}
+  \item{d}{an object of class \code{dist} containing a Euclidean distance matrix.}
   \item{row.w}{an optional distance matrix row weights. 
-  If not null, must be a vector of positive numbers with length equal to the size of the distance matrix}
+  If not NULL, must be a vector of positive numbers with length equal to the size of the distance matrix}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
   \item{full}{a logical value indicating whether all the axes should be kept}

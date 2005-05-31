@@ -5,7 +5,8 @@
 \description{
 When branch lengths in an ultrametric phylogenetic tree are expressed as divergence times, the total sum of branch 
 lengths in that tree expresses the amount of evolutionary history. The function \code{randPD}
-calculates the amount of evolutionary history preserved when k random species out of n original species are saved. 
+calculates the amount of evolutionary history preserved when \emph{k} random species out of \emph{n} 
+original species are saved. 
 }
 \usage{
 randEH(phyl, nbofsp, nbrep = 10) 
@@ -24,7 +25,7 @@ Nee, S. and May, R.M. (1997) Extinction and the loss of evolutionary history. \e
 
 Pavoine, S., Ollier, S. and Dufour, A.-B. (2005)  
 Is the originality of a species measurable? 
-\emph{Ecology Letters}, in press.
+\emph{Ecology Letters}, \bold{8}, 579--586.
 }
 \author{
 Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}

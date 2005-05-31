@@ -12,7 +12,7 @@ as.taxo(df)
 \item{df}{a data frame}
 }
 \value{
-Returns a data.frame of class \code{taxo}.
+Returns a data frame of class \code{taxo}.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}

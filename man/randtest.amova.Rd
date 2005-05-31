@@ -11,7 +11,7 @@ randtest.amova(xtest, nrepet = 99, \dots)
 \arguments{
   \item{xtest}{an object of class \code{amova}}
   \item{nrepet}{the number of permutations}
-  \item{\dots}{\code{\dots} further arguments passed to or from other methods}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 returns an object of class \code{krandtest} or \code{randtest}

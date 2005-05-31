@@ -44,7 +44,11 @@ returns an object of class \code{pcaiv}, sub-class of class \code{dudi}
 \references{
 Rao, C. R. (1964) The use and interpretation of principal component analysis in applied research. \emph{Sankhya}, \bold{A 26}, 329--359.\cr\cr
 Obadia, J. (1978) L'analyse en composantes explicatives. \emph{Revue de Statistique Appliquée}, \bold{24}, 5--28.\cr\cr
-Lebreton, J. D., Sabatier, R., Banco G. and  Bacou A. M. (1991) Principal component and correspondence analyses with respect to instrumental variables : an overview of their role in studies of structure-activity and species- environment relationships. In J. Devillers and W. Karcher, editors. \emph{Applied Multivariate Analysis in SAR and Environmental Studies}, Kluwer Academic Publishers, 85--114 
+Lebreton, J. D., Sabatier, R., Banco G. and  Bacou A. M. (1991) 
+Principal component and correspondence analyses with respect to instrumental variables : 
+an overview of their role in studies of structure-activity and species- environment relationships. 
+In J. Devillers and W. Karcher, editors. \emph{Applied Multivariate Analysis in SAR and Environmental Studies}, 
+Kluwer Academic Publishers, 85--114.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{

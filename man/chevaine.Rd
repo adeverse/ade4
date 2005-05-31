@@ -9,13 +9,14 @@
 \format{
 This data set is a list of three components:
   \describe{
-    \item{tab}{ a data frame with 27 populations and 9 allellic frequencies (4 locus)}
+    \item{tab}{ a data frame with 27 populations and 9 allelic frequencies (4 locus)}
     \item{coo}{ a list containing all the elements to build a spatial map}
     \item{eff}{ a numeric containing the numbers of fish samples per station}
   }
 } 
 \references{
-Guinand B., Bouvet Y. and Brohon B. (1996) Spatial aspects of genetic differentiation of the European chub in the Rhone River basin. \emph{Journal of Fish Biology}, \bold{49}, 714--726.
+Guinand B., Bouvet Y. and Brohon B. (1996) Spatial aspects of genetic differentiation of the European 
+chub in the Rhone River basin. \emph{Journal of Fish Biology}, \bold{49}, 714--726.
 }
 \examples{
 data(chevaine)

@@ -6,8 +6,8 @@
 \title{Is a Distance Matrix Euclidean ?}
 \description{
 Confirmation of the Euclidean nature of a distance matrix by the Gower's theorem.\cr
-is.euclid is used in summary.dist.\cr
-mat2dist and dist2mat are local copies of as.dist and as.matrix.dist of mva.
+\code{is.euclid} is used in \code{summary.dist}.\cr
+\code{mat2dist} and \code{dist2mat} are local copies of \code{as.dist} and \code{as.matrix.dist} of mva.
 }
 \usage{
 is.euclid(distmat, plot = FALSE, print = FALSE, tol = 1e-07)

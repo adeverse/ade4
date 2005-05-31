@@ -40,8 +40,8 @@ Returns a list of class \code{dpcoa} containing:
   \item{c1}{a data frame with the scores of the principal axes of the elements}
 }
 \references{
-  Pavoine, S., Dufour, A.B. and Chessel, D. (in press) From dissimilarities among species to dissimilarities among communities:
-  a double principal coordinate analysis. \emph{Journal of Theoretical Biology}.
+  Pavoine, S., Dufour, A.B. and Chessel, D. (2004) From dissimilarities among species to dissimilarities among communities:
+  a double principal coordinate analysis. \emph{Journal of Theoretical Biology}, \bold{228}, 523--537.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr} \cr

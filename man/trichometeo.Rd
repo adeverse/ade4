@@ -21,7 +21,8 @@ species and meteorological variables.
 \references{
 Usseglio-Polatera, P. and Auda, Y. (1987) 
 Influence des facteurs météorologiques sur les résultats de piégeage lumineux. 
-\emph{Annales de Limnologie}, \bold{23}, 65--79, code des espèces p. 76
+\emph{Annales de Limnologie}, \bold{23}, 65--79. cr
+(code des espèces p. 76)
 }
 \examples{
 data(trichometeo)

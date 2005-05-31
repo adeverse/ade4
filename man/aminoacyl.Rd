@@ -23,7 +23,9 @@
  \url{http://www.expasy.org/sprot/}
 }
 \references{
-Chiapello H., Olivier E., Landes-Devauchelle C., Nitschké P. and Risler J.L (1999) Codon usage as a tool to predict the cellular localisation of eukariotic ribosomal proteins and aminoacyl-tRNA synthetases. ,\emph{Nucleic Acids Res.}, \bold{27}, 14, 2848--2851.
+Chiapello H., Olivier E., Landes-Devauchelle C., Nitschké P. and Risler J.L (1999) 
+Codon usage as a tool to predict the cellular localisation of eukariotic ribosomal 
+proteins and aminoacyl-tRNA synthetases. \emph{Nucleic Acids Res.}, \bold{27}, 14, 2848--2851.
 }
 \examples{
 data(aminoacyl)

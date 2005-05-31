@@ -3,7 +3,7 @@
 \docType{data}
 \title{Bird species distribution}
 \description{
-This data set contains informations about spatial distribution of bird species in a zone surrounding the river Rhône near Lyon (France).
+This data set contains information about spatial distribution of bird species in a zone surrounding the river Rhône near Lyon (France).
 }
 \usage{data(avijons)}
 \format{

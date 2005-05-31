@@ -13,7 +13,7 @@ frequencies of 51 bird species ; two factors (habitats and Mediterranean origin)
     \item{fau}{is a data frame 302 sites - 51 bird species. }
     \item{plan}{is a data frame 302 sites - 2 factors : \code{reg} with two levels Provence (\code{Pr}, 
     South of France) and Corsica (\code{Co}) ;
-    \code{str} with six levels describing the vegetation from a very low matorral (1) up to a mature forest of holm oak (6).}
+    \code{str} with six levels describing the vegetation from a very low matorral (1) up to a mature forest of holm oaks (6).}
     \item{nomesp}{is a vector 51 latin names. }
   }
 }

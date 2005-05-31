@@ -15,7 +15,8 @@
 triangle.plot(ta, label = as.character(1:nrow(ta)), clabel = 0, 
     cpoint = 1, draw.line = TRUE, addaxes = FALSE, addmean = FALSE, 
     labeltriangle = TRUE, sub = "", csub = 0, possub = "topright", 
-    show.position = TRUE, scale = TRUE, min3 = NULL, max3 = NULL, box = FALSE)
+    show.position = TRUE, scale = TRUE, min3 = NULL, max3 = NULL, 
+    box = FALSE)
 triangle.biplot (ta1, ta2, label = as.character(1:nrow(ta1)), 
     draw.line = TRUE, show.position = TRUE, scale = TRUE)
 }
@@ -66,7 +67,8 @@ triangle.plot(euro123[[3]], min3 = c(0,0.2,0.3), max3 = c(0.5,0.7,0.8),
     clab = 1, label = row.names(euro123[[1]]), addax = TRUE)
 triangle.plot(rbind.data.frame(euro123[[1]], euro123[[2]], euro123[[3]]))
 
-wtriangleplot <- cbind.data.frame(a = runif(100), b = runif(100), c = runif(100,4,5))
+wtriangleplot <- cbind.data.frame(a = runif(100), b = runif(100), 
+    c = runif(100,4,5))
 wtriangleplot <- triangle.plot(wtriangleplot)
 points(wtriangleplot, col = "blue", cex = 2)
 wtriangleplot <- colMeans(wtriangleplot)

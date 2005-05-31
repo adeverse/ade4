@@ -1,8 +1,8 @@
-\name{scatter.acm}
+\name{scatter.acm} 
 \alias{scatter.acm}
-\title{Plot of the factorial maps in multiple correspondence analysis}
+\title{Plot of the factorial maps in a Multiple Correspondence Analysis}
 \description{
-performs the scatter diagrams of a multiple correspondence analysis. 
+performs the scatter diagrams of a Multiple Correspondence Analysis. 
 }
 \usage{
 scatter.acm(x, xax = 1, yax = 2, csub = 2, possub = "topleft", ...)

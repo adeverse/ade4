@@ -11,7 +11,7 @@ reconst.pca (dudi, nf = 1, ...)
 }
 \arguments{
   \item{dudi}{an object used to select a method}
-  \item{\dots}{\code{\dots} further arguments passed to or from other methods}
+  \item{\dots}{further arguments passed to or from other methods}
   
   \item{nf}{an integer indicating the number of kept axes}
 }

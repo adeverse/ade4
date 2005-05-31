@@ -1,8 +1,8 @@
 \name{randtest.coinertia}
 \alias{randtest.coinertia}
-\title{Monte-Carlo test on a coinertia analysis (in C).}
+\title{Monte-Carlo test on a Co-inertia analysis (in C).}
 \description{
-Performs a Monte-Carlo test on a coinertia analysis. 
+Performs a Monte-Carlo test on a Co-inertia analysis. 
 }
 \usage{
 randtest.coinertia(xtest, nrepet = 999, fixed=0, \dots)

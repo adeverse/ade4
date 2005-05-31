@@ -3,7 +3,7 @@
 \docType{data}
 \title{Ecological Data : sites-variables, sites-species, where and when}
 \description{
-This data set contains informations about sites, environmental variables
+This data set contains information about sites, environmental variables
 and species (Trichopters). 
 }
 \usage{data(meaudret)}

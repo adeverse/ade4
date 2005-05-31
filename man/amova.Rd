@@ -18,7 +18,7 @@ print.amova(x, full = FALSE, \dots)
   \item{structures}{a data frame containing, in the jth row and the kth column,
   the name of the group of level k to which the jth population belongs}
   \item{x}{an object of class \code{amova}}
-  \item{full}{a logical value indicating whether the original data ('distances','samples','structures')
+  \item{full}{a logical value indicating whether the original data ('distances', 'samples', 'structures')
   should be printed}
   \item{\dots}{further arguments passed to or from other methods}
 }

@@ -5,8 +5,8 @@
 represents the mean- standard deviation of a set of weight distributions on a numeric score. 
 }
 \usage{
-sco.distri(score, df, y.rank = TRUE, csize = 1, labels = names(df), clabel = 1,
-    xlim = NULL, grid = TRUE, cgrid = 0.75,
+sco.distri(score, df, y.rank = TRUE, csize = 1, labels = names(df), 
+    clabel = 1, xlim = NULL, grid = TRUE, cgrid = 0.75,
     include.origin = TRUE, origin = 0, sub = NULL, csub = 1)
 }
 \arguments{

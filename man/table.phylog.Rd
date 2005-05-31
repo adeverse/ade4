@@ -31,7 +31,8 @@ table.phylog(df, phylog, x = 1:ncol(df), f.phylog = 0.5,
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
-\details{The function verifies that \code{sort(row.names(df))==sort(names(phylog$leaves))}. If df is a matrix the function uses as.data.frame(df)}
+\details{The function verifies that \code{sort(row.names(df))==sort(names(phylog$leaves))}. 
+If \code{df} is a matrix the function uses \code{as.data.frame(df)}. }
  
 \seealso{\code{\link{symbols.phylog}} for one variable}
 \examples{

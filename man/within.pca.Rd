@@ -2,7 +2,7 @@
 \alias{within.pca}
 \title{Normed within Principal Component Analysis}
 \description{
-performs a normed within principal component analysis. 
+performs a normed within Principal Component Analysis. 
 }
 \usage{
 within.pca(df, fac, scaling = c("partial", "total"), 

@@ -11,7 +11,8 @@
 }
 \usage{
 foucart(X, scannf = TRUE, nf = 2)
-plot.foucart(x, xax = 1, yax = 2, clab = 1, csub = 2, possub = "bottomright", \dots) 
+plot.foucart(x, xax = 1, yax = 2, clab = 1, csub = 2, 
+    possub = "bottomright", \dots) 
 print.foucart(x, \dots) 
 }
 \arguments{
@@ -49,7 +50,7 @@ print.foucart(x, \dots)
 }
 \references{Foucart, T. (1984) \emph{Analyse factorielle de tableaux multiples}, Masson, Paris.
 }
-\author{P. Bady
+\author{P. Bady \email{pierre.bady@univ-lyon1.fr}
 }
 \examples{
 data(bf88)

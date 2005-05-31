@@ -3,7 +3,8 @@
 \docType{data}
 \title{Array of Recapture of Rings}
 \description{
-The data frame \code{sarcelles$tab} contains the number of the winter teals (Anas C. Crecca) for which the ring was retrieved in the area i during the month j (n=3049)
+The data frame \code{sarcelles$tab} contains the number of the winter teals (Anas C. Crecca) 
+for which the ring was retrieved in the area \emph{i} during the month \emph{j} (\emph{n}=3049).
 }
 \usage{data(sarcelles)}
 \format{

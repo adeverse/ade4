@@ -3,7 +3,7 @@
 \docType{data}
 \title{Fauna Table with double (row and column) partitioning}
 \description{
-  This data set gives informations about species of demersal macroinvertebrates in different sites and dates. 
+  This data set gives information about species of demersal macroinvertebrates in different sites and dates. 
 }
 \usage{data(ardeche)}
 \format{

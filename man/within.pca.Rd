@@ -24,7 +24,8 @@ returns a list of the sub-class \code{within} of class \code{dudi'}. See \code{\
  Thèse de 3ème cycle, Université de Paris VI.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

@@ -1,6 +1,6 @@
 \name{dist.dudi}
 \alias{dist.dudi}
-\title{Computation of the Distance Matrix of a Statistical Triplet
+\title{Computation of the Distance Matrix from a Statistical Triplet
 }
 \description{
 computes for a statistical triplet a distance matrix. 
@@ -16,7 +16,8 @@ dist.dudi(dudi, amongrow = TRUE)
 an object of class \code{dist}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{
 data (meaudret)

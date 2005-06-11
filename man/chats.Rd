@@ -3,7 +3,7 @@
 \docType{data}
 \title{Pair of Variables}
 \description{
-This data set is a contingency table of age classes and fecundity classes of cats felis catus. 
+This data set is a contingency table of age classes and fecundity classes of cats \emph{Felis catus}. 
 }
 \usage{data(chats)}
 \format{

@@ -50,7 +50,10 @@ an overview of their role in studies of structure-activity and species- environm
 In J. Devillers and W. Karcher, editors. \emph{Applied Multivariate Analysis in SAR and Environmental Studies}, 
 Kluwer Academic Publishers, 85--114.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(rhone)
 pca1 <- dudi.pca(rhone$tab, scan = FALSE, nf = 3)

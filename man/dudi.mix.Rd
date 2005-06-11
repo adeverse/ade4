@@ -38,7 +38,8 @@ De Leeuw, J., J. van Rijckevorsel, and . 1980. HOMALS and PRINCALS - Some genera
 Kiers, H. A. L. 1994. Simple structure in component analysis techniques for mixtures of qualitative ans quantitative variables. \emph{Psychometrika}, \bold{56}, 197-212.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(dunedata)

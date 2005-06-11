@@ -11,7 +11,7 @@ A data frame with 15 rows and 20 columns
 }
 \source{
 Tisné-Agostini, D. (1988) \emph{Description par analyse en composantes principales de l'évolution de 
-a production du clémentinier en association avec 12 types de porte-greffe}.
+la production du clémentinier en association avec 12 types de porte-greffe}.
 Rapport technique, DEA Analyse et modélisation des systèmes biologiques, Université Lyon 1. 
 }
 \examples{

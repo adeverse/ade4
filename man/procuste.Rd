@@ -37,7 +37,10 @@ returns a list of 9 components of the class \code{procuste}
   \item{scor2}{a data frame with the scores of array 2}
   \item{call}{a call order of the analysis}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+}
 \references{
 Digby, P. G. N. and Kempton, R. A. (1987) Multivariate Analysis of Ecological Communities. \emph{Population and Community Biology Series}, Chapman and Hall, London.\cr\cr
 Gower, J.C. (1971) Statistical methods of comparing different multivariate analyses of the same data. In \emph{Mathematics in the archaeological and historical sciences}, Hodson, F.R, Kendall, D.G. & Tautu, P. (Eds.) University Press, Edinburgh,  138--149.\cr\cr

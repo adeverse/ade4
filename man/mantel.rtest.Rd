@@ -18,7 +18,10 @@ an object of class \code{rtest} (randomization tests)
 }
 \references{Mantel, N. (1967) The detection of disease clustering and a generalized regression approach. \emph{Cancer Research}, \bold{27}, 209--220.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+}
 \examples{
     data(yanomama)
     gen <- quasieuclid(as.dist(yanomama$gen))

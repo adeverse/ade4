@@ -20,7 +20,10 @@ returns a list of class \code{rtest}
 \references{
 Jackson, D.A. (1995) PROTEST: a PROcustean randomization TEST of community environment concordance. \emph{Ecosciences}, \bold{2}, 297--303.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(doubs)
 pca1 <- dudi.pca(doubs$mil, scal = TRUE, scann = FALSE)

@@ -21,7 +21,10 @@ ktab.data.frame(df, blocks, rownames = NULL, colnames = NULL,
 \value{
 returns a list of class \code{ktab}. See \code{\link{ktab}}.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(escopage)
 wescopage <- data.frame(scalewt(escopage$tab))

@@ -24,12 +24,16 @@ water: water content of the substratum (\eqn{g.L^{-1}}{g.L^-1})
 \source{
 Data prepared by P. Legendre \email{Pierre.Legendre@umontreal.ca} and \cr
 D. Borcard \email{borcardd@magellan.umontreal.ca} starting from \cr
-\url{http://www.fas.umontreal.ca/biol/casgrain/fr/labo/oribates.html}
+\url{http://www.fas.umontreal.ca/biol/casgrain/fr/labo/oribates.html}\cr
 }
 \references{
-Borcard, D., and Legendre, P. (1994) Environmental control and spatial structure in ecological communities: an example using Oribatid mites (\emph{Acari Oribatei}). \emph{Environmental and Ecological Statistics}, \bold{1}, 37--61.
+Borcard, D., and Legendre, P. (1994) Environmental control and spatial structure in ecological communities: 
+an example using Oribatid mites (\emph{Acari Oribatei}). \emph{Environmental and Ecological Statistics}, \bold{1}, 37--61.
 
-Borcard, D., Legendre, P., and Drapeau, P. (1992) Partialling out the spatial component of ecological variation. \emph{Ecology}, \bold{73}, 1045--1055.
+Borcard, D., Legendre, P., and Drapeau, P. (1992) Partialling out the spatial component of ecological variation. 
+\emph{Ecology}, \bold{73}, 1045--1055.
+
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps039.pdf} (in French).
 }
 \examples{
 data(oribatid)

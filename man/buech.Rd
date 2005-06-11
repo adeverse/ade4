@@ -17,7 +17,7 @@ This data set contains informations about Buech basin characteristics.
 }
 \details{
 Variables of \code{buech$tab1} and \code{buech$tab2} are the following ones :\cr 
-pH ; Conductivity (µS/cm) ; Carbonate (water hardness (mg/l CaCO3)) ;
+pH ; Conductivity ($\mu$ S/cm) ; Carbonate (water hardness (mg/l CaCO3)) ;
 hardness (total water hardness (mg/l CaCO3)) ; Bicarbonate (alcalinity (mg/l HCO3-)) ;
 Chloride (alcalinity (mg/l Cl-)) ; Suspens (particles in suspension (mg/l)) ;
 Organic (organic particles (mg/l)) ; Nitrate (nitrate rate (mg/l NO3-)) ;

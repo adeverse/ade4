@@ -16,17 +16,19 @@ la.T1, la.T2, la.T3, la.T4, la.T5 are five numeric vectors containing quadrats c
 trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transects 1 to 5 respectively.
 }
 \source{
-Greig-Smith, P. and Chadwick, M.J. (1965) Data on pattern within plant communities. III. \emph{Acacia-Capparis} semi-desert scrub in the Sudan. \emph{Journal of Ecology}, \bold{53}, 465--474.
-
+Greig-Smith, P. and Chadwick, M.J. (1965) Data on pattern within plant communities. III. \emph{Acacia-Capparis} 
+semi-desert scrub in the Sudan. \emph{Journal of Ecology}, \bold{53}, 465--474.
+}
+\reference{
 Hill, M.O. (1973) The intensity of spatial pattern in plant communities. \emph{Journal of Ecology}, \bold{61}, 225--235.
 }
 \examples{
 data(acacia)
-par(mfcol=c(5,3))
+par(mfcol = c(5,3))
 par(mar = c(2,2,2,2))
 for(k in 1:15) {
-    barplot(acacia[,k],ylim=c(0,20),col=grey(0.8))
-    scatterutil.sub(names(acacia)[k],1.5,"topleft")
+    barplot(acacia[,k], ylim = c(0,20), col = grey(0.8))
+    scatterutil.sub(names(acacia)[k], 1.5, "topleft")
 }
-par(mfcol=c(1,1))}
+par(mfcol = c(1,1))}
 \keyword{datasets}

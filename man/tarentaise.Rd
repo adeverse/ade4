@@ -35,6 +35,8 @@ Oiseaux de Vanoise. Guide de l'ornithologue en montagne.
 Lebreton, Ph., Lebrun, Ph., Martinot, J.P., Miquet, A. and Tournier, H. (1999) 
 Approche écologique de l'avifaune de la Vanoise. 
 \emph{Travaux scientifiques du Parc national de la Vanoise}, \bold{21}, 7--304.
+
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps038.pdf} (in French).
 }
 \examples{
 data(tarentaise)

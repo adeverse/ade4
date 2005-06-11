@@ -34,6 +34,9 @@ Blondel, J., Vuilleumier, F., Marcus, L.F., and Terouanne, E. (1984). Is there e
 among mediterranean bird communities of Chile, California, and France. In \emph{Evolutionary Biology} 
 (eds M.K. Hecht, B. Wallace and R.J. MacIntyre), 141--213, \bold{18}. Plenum Press, New York.
 }
+\references{
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps023.pdf} (in French).
+}
 \examples{
 data(ecomor)
 ric <- apply(ecomor$habitat, 2, sum)

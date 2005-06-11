@@ -34,6 +34,9 @@ and the season.
  Reproductive traits, habitat use and templet theory: a synthesis of world-wide data on aquatic insects.
  \emph{Freshwater Biology}, \bold{38}, 109--135.
 }
+\references{
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps029.pdf} (in French).
+}
 \examples{
 data(bsetal97)
 X <- prep.fuzzy.var(bsetal97$biol, bsetal97$biol.blo)

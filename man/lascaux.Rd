@@ -26,6 +26,9 @@ Lascaux, J.M. (1996)
 \emph{Analyse de la variabilité morphologique de la truite commune (Salmo trutta L.) dans les cours d'eau du bassin pyrénéen méditerranéen}.
 Thèse de doctorat en sciences agronomiques, INP Toulouse.
 }
+\references{
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps022.pdf} (in French).
+}
 \examples{
 data(lascaux)
 par(mfrow = c(2,2))

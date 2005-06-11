@@ -28,6 +28,9 @@ L'analyse des relations espèces-milieu par l'analyse canonique des correspondanc
 I. Variables de milieu quantitatives.
 \emph{Acta Oecologica, Oecologia Generalis}, \bold{9}, 53--67.
 }
+\references{
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps048.pdf} (in French).
+}
 \examples{
 \dontrun{
 data(rpjdl)

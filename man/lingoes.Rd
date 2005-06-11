@@ -20,7 +20,10 @@ returns an object of class \code{dist} with a Euclidean distance
 \details{
  The function uses the smaller positive constant k which transforms the matrix of \eqn{\sqrt{d_{ij}^2 + 2 \ast k}}{sqrt(dij² + 2*k)} in an Euclidean one
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(capitales)
 d0 <- as.dist(capitales$df)

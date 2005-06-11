@@ -21,6 +21,9 @@ Baran, E. (1995) \emph{Dynamique spatio-temporelle des peuplements de Poissons e
 Thèse de Doctorat, Université de Bretagne Occidentale. 
 Data collected by net fishing sampling in the Fatala river estuary.
 }
+\references{
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps027.pdf} (in French).
+}
 \examples{
 data(baran95)
 w <- dudi.pca(log(baran95$fau+1), scal = FALSE, scann = FALSE, 

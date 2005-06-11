@@ -20,6 +20,10 @@ a data frame reconstituting the data
 }
 \references{Gabriel, K.R. (1978) Least-squares approximation of matrices by additive and multiplicative models. \emph{Journal of the Royal Statistical Society}, B , \bold{40}, 186--196.
 }
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(rhone)
 dd1 <- dudi.pca(rhone$tab, nf = 2, scann = FALSE)

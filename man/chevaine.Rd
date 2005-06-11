@@ -17,6 +17,8 @@ This data set is a list of three components:
 \references{
 Guinand B., Bouvet Y. and Brohon B. (1996) Spatial aspects of genetic differentiation of the European 
 chub in the Rhone River basin. \emph{Journal of Fish Biology}, \bold{49}, 714--726.
+
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps054.pdf} (in French).
 }
 \examples{
 data(chevaine)

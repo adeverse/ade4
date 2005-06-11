@@ -17,7 +17,10 @@ ktab.within(dudiwit, rownames = NULL, colnames = NULL, tabnames = NULL)
 \value{
 a list of class \code{ktab}. See \code{\link{ktab}}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(bacteria)
 w1 <- data.frame(t(bacteria$espcodon))

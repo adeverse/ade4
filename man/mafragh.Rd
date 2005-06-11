@@ -18,7 +18,11 @@ This data set gives environmental and spatial informations about species and sit
         \item{area}{is a data frame of class \code{area}}
 }}
 \source{
-Belair, G.d. and Bencheikh-Lehocine, M. (1987) Composition et déterminisme de la végétation d'une plaine côtière marécageuse : La Mafragh (Annaba, Algérie). \emph{Bulletin d'Ecologie}, \bold{18}, 393--407.
+Belair, G.d. and Bencheikh-Lehocine, M. (1987) Composition et déterminisme de la végétation d'une 
+plaine côtière marécageuse : La Mafragh (Annaba, Algérie). \emph{Bulletin d'Ecologie}, \bold{18}, 393--407.
+}
+\references{
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps053.pdf} (in French).
 }
 \examples{
 data(mafragh)

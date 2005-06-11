@@ -22,6 +22,9 @@ Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).
 Recherches écologiques sur le réseau hydrographique du Doubs.
 Essai de biotypologie. Thèse d'Etat, Besançon.
 }
+\references{
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps047.pdf} (in French).
+}
 \examples{
 data(jv73)
 s.label(jv73$xy, contour = jv73$contour, incl = FALSE, 

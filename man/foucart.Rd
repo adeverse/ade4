@@ -50,7 +50,8 @@ print.foucart(x, \dots)
 }
 \references{Foucart, T. (1984) \emph{Analyse factorielle de tableaux multiples}, Masson, Paris.
 }
-\author{P. Bady \email{pierre.bady@univ-lyon1.fr}
+\author{P. Bady \email{pierre.bady@univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(bf88)

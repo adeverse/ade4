@@ -35,7 +35,8 @@ if \eqn{x_{ij}}{x[i,j]} is the value of the table df and \eqn{y_{ij}}{y[i,j]} is
     \code{prcomp}, \code{princomp} in the \code{mva} library
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(deug)

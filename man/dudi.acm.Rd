@@ -41,7 +41,8 @@ Lebart, L., A. Morineau, and M. Piron. 1995. Statistique exploratoire multidimen
     \code{\link{s.chull}}, \code{\link{s.class}}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(ours)

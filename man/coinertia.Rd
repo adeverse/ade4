@@ -45,13 +45,18 @@ Returns a list of class 'coinertia', sub-class 'dudi' containing:
   \item{aY}{the axis onto co-inertia axis (Y)}
 }
 \references{
-Dolédec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for studying species-environment relationships. \emph{Freshwater Biology}, \bold{31}, 277--294.
+Dolédec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for studying species-environment relationships. 
+\emph{Freshwater Biology}, \bold{31}, 277--294.\cr
+
+Dray, S., Chessel, D. and J. Thioulouse (2003) Co-inertia analysis and the linking of the ecological data tables.
+\emph{Ecology}, \bold{84}, 11, 3078--3089.
 }
 \section{WARNING }{
 IMPORTANT : \code{dudi1} and \code{dudi2} must have identical row weights.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(doubs)

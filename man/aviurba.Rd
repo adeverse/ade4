@@ -4,7 +4,7 @@
 \title{Ecological Tables Triplet}
 \description{
 This data set is a list of information about 51 sites : bird species and environmental variables. \cr
-For each species, a data frame contains biological traits. 
+A data frame contains biological traits for each species. 
 }
 \usage{data(aviurba)}
 \format{

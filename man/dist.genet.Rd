@@ -76,7 +76,7 @@ Avise, J. C. (1994) Molecular markers, natural history and evolution. Chapman & 
 
 Distance 5:\cr
 Prevosti A. (1974) La distancia genética entre poblaciones. \emph{Miscellanea Alcobé}, \bold{68}, 109--118. \cr
-Prevosti A., Ocaña J. and Alonso G. (1975) Distances between populations of Drosophila subobscura, based on chromosome arrangements frequencies. \emph{Theoretical and Applied Genetics}, \bold{45}, 231--241. \cr
+Prevosti A., Oca\~na J. and Alonso G. (1975) Distances between populations of Drosophila subobscura, based on chromosome arrangements frequencies. \emph{Theoretical and Applied Genetics}, \bold{45}, 231--241. \cr
 
 To find some useful explanations:\cr
 Sanchez-Mazas A. (2003) Cours de Génétique Moléculaire des Populations. Cours VIII Distances génétiques - Représentation des populations. \cr

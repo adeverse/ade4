@@ -22,7 +22,7 @@ Returns a data frame with samples as rows and the diversity coefficient within s
 Rao, C.R. (1982) Diversity and dissimilarity coefficients: a unified approach.
 \emph{Theoretical Population Biology}, \bold{21}, 24--43.
 
-Gini, C. (1912) Variabilitá e mutabilitá. \emph{Universite di Cagliari III}, Parte II.
+Gini, C. (1912) Variabilit\'a e mutabilit\'a. \emph{Universite di Cagliari III}, Parte II.
 
 Simpson, E.H. (1949) Measurement of diversity. \emph{Nature}, \bold{163}, 688.
 

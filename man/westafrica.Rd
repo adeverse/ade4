@@ -24,13 +24,14 @@ Data provided by B. Hugueny \email{hugueny@biomserv.univ-lyon1.fr}.
 Paugy, D., Traoré, K. and Diouf, P.F. (1994) Faune ichtyologique des eaux douces d'Afrique de l'Ouest. 
 In \emph{Diversité biologique des poissons des eaux douces et saumâtres d'Afrique. Synthèses géographiques}, 
 Teugels, G.G., Guégan, J.F. and Albaret, J.J. (Editors). Annales du Musée Royal de l'Afrique Centrale,  
-Zoologie, N° 275, Tervuren, Belgique, 35--66.
+Zoologie, \bold{275}, Tervuren, Belgique, 35--66.
 
 Hugueny, B. (1989) \emph{Biogéographie et structure des peuplements de Poissons d'eau douce de l'Afrique de l'ouest : 
 approches quantitatives}. Thèse de doctorat, Université Paris 7.
 }
 \references{
-Hugueny, B., and Lévêque, C. (1994) Freshwater fish zoogeography in west Africa: faunal similarities between river basins. \emph{Environmental Biology of Fishes}, \bold{39}, 365--380.
+Hugueny, B., and Lévêque, C. (1994) Freshwater fish zoogeography in west Africa: 
+faunal similarities between river basins. \emph{Environmental Biology of Fishes}, \bold{39}, 365--380.
 }
 \examples{
 data(westafrica)

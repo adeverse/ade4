@@ -85,7 +85,7 @@ if (require(tripack, quietly=TRUE)) {
     for (i in 1:6) s.value(irishdata$xy, irish.scores[,i],
         inc = FALSE, grid = FALSE, addax = FALSE,
         neig = irish.neig,
-        csi = 2, cleg = 0, sub = paste("Eigenvector n°",i), csub = 2)
+        csi = 2, cleg = 0, sub = paste("Eigenvector ",i), csub = 2)
     par(mfrow = c(1,1))
     
     a.neig <- neig(n.circle = 16)

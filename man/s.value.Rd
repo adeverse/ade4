@@ -2,7 +2,7 @@
 \alias{s.value}
 \title{Representation of a value in a graph}
 \description{
-performs the scatter diagram. 
+performs the scatter diagram with the representation of a value for a variable 
 }
 \usage{
 s.value(dfxy, z, xax = 1, yax = 2, method = c("squaresize", "greylevel"), 
@@ -38,7 +38,7 @@ s.value(dfxy, z, xax = 1, yax = 2, method = c("squaresize", "greylevel"),
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{pixmap}{an object 'pixmap' displayed in the map background}
-  \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a line (x1,y1,x2,y2)}
+  \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a segment (x1,y1,x2,y2)}
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
 }

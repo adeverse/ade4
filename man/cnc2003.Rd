@@ -3,7 +3,7 @@
 \docType{data}
 \title{Frequenting movie theaters in France in 2003}
 \description{
-    \code{cnc2003} is a data frame with 93 rows (93 departments from continental Metropolitan France)and 12 variables. 
+    \code{cnc2003} is a data frame with 94 rows (94 departments from continental Metropolitan France)and 12 variables. 
 }
 \usage{data(cnc2003)}
 \format{

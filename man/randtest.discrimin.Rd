@@ -16,6 +16,8 @@ randtest.discrimin(xtest, nrepet = 999, \dots)
 \value{
 returns a list of class \code{randtest}
 }
+\author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr}
+}
 \examples{
 data(meaudret)
 pca1 <- dudi.pca(meaudret$mil, scan = FALSE, nf = 3)

@@ -3,7 +3,7 @@
 \docType{data}
 \title{Morphometric Evolution}
 \description{
-This data set gives four anthropometric measures of 30 Egyptean 
+This data set gives four anthropometric measures of 150 Egyptean 
 skulls belonging to five different historical periods. 
 }
 \usage{data(skulls)}

@@ -4,7 +4,7 @@
 \alias{plot.statis}
 \title{STATIS, a method for analysing K-tables}
 \description{
-performs a STATIS analysis of K-tables. 
+performs a STATIS analysis of a \code{ktab} object. 
 }
 \usage{
 statis(X, scannf = TRUE, nf = 3, tol = 1e-07)

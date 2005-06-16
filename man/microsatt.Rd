@@ -16,17 +16,17 @@ This data set gives genetic relationships between cattle breeds with microsatell
     }
 }
 \source{
-Extract of data prepared by D. Laloe \email{ugendla@dga2.jouy.inra.fr} from data used in:
+Extract of data prepared by D. Lalo\"e \email{ugendla@dga2.jouy.inra.fr} from data used in:
 
-Moazami-Goudarzi, K., D. Laloe, J. P. Furet, and F. Grosclaude. 1997.
+Moazami-Goudarzi, K., D. Lalo\"e, J. P. Furet, and F. Grosclaude (1997)
 Analysis of genetic relationships between 10 cattle breeds with 17 microsatellites.
 \emph{Animal Genetics}, \bold{28}, 338--345.
 
-Souvenir Zafindrajaona, P.,Zeuh V. ,Moazami-Goudarzi K., Laloe D., Bourzat D., Idriss A., and Grosclaude F. (1999)
+Souvenir Zafindrajaona, P.,Zeuh V. ,Moazami-Goudarzi K., Lalo\"e D., Bourzat D., Idriss A., and Grosclaude F. (1999)
 Etude du statut phylogénétique du bovin Kouri du lac Tchad à l'aide de marqueurs moléculaires.
 \emph{Revue d'Elevage et de Médecine Vétérinaire des pays Tropicaux}, \bold{55}, 155--162.
 
-Moazami-Goudarzi, K., Belemsaga D. M. A., Ceriotti G., Laloe D. , Fagbohoun F., Kouagou N. T., Sidibé I., Codjia V., Crimella M. C., Grosclaude F. and Touré S. M. (2001)\cr
+Moazami-Goudarzi, K., Belemsaga D. M. A., Ceriotti G., Lalo\"e D. , Fagbohoun F., Kouagou N. T., Sidibé I., Codjia V., Crimella M. C., Grosclaude F. and Touré S. M. (2001)\cr
 Caractérisation de la race bovine Somba à l'aide de marqueurs moléculaires.
 \emph{Revue d'Elevage et de Médecine Vétérinaire des pays Tropicaux}, \bold{54}, 1--10.
 }

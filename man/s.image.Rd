@@ -36,7 +36,7 @@ s.image(dfxy, z, xax = 1, yax = 2, span = 0.5, xlim = NULL, ylim = NULL,
   \item{image.plot}{ if TRUE, the image is traced }
   \item{contour.plot}{ if TRUE, the contour lines are plotted }
   \item{pixmap}{ an object 'pixmap' displayed in the map background }
-  \item{contour}{ a data frame with 4 columns to plot the contour of the map : each row gives a line (x1,y1,x2,y2) }
+  \item{contour}{ a data frame with 4 columns to plot the contour of the map : each row gives a segment (x1,y1,x2,y2) }
   \item{area}{ a data frame of class 'area' to plot a set of surface units in contour }
   \item{add.plot}{ if TRUE uses the current graphics window }
 }

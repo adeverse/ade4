@@ -21,13 +21,24 @@ This data set gives ecological and biological characteristics of 131 species of 
 }
 \details{
 The 10 variables of the data frame \code{bsetal97$biol} are called in \code{bsetal97$biol.blo.names} 
-and the number of modalities per variable given in \code{bsetal97$biol.blo}. The variables are the female size,
-the egg length, the egg number, the generation per year, the oviposition period, the incubation time,
-the egg shape, the egg attachment, the clutch structure and the clutch number. \cr
+and the number of modalities per variable given in \code{bsetal97$biol.blo}. The variables are:
+female size - the body length from the front of the head to the end of the abdomen (7 length modalities),
+egg length - the egg size (6 modalities), egg number - count of eggs actually oviposited, 
+generations per year (3 modalities: \eqn{\leq 1}{<= 1}, 2, > 2), 
+oviposition period - the length of time during which oviposition occurred (3 modalities: \eqn{\leq 2}{<= 2} months, 
+between 2 and 5 months, > 5 months), incubation time - the time between oviposition and hatching of the larvae 
+(3 modalities: \eqn{\leq 4}{<= 4} weeks, between 4 and 12 weeks, > 12 weeks), egg shape (1-spherical, 2-oval, 3-cylindrical),
+ egg attachment - physiological feature of the egg and of the female (4 modalities), clutch structure (1-single eggs, 2-grouped eggs, 
+ 3-egg masses), clutch number (3 modalities : 1, 2, > 2).
+
+
 The 7 variables of the data frame \code{bsetal97$ecol} are called in \code{bsetal97$ecol.blo.names} 
-and the number of modalities per variable given in \code{bsetal97$ecol.blo}. The variables are the oviposition site,
-the substratum type for eggs, the egg deposition, the gross habitat, the saturation variance, the time of day
-and the season.
+and the number of modalities per variable given in \code{bsetal97$ecol.blo}. The variables are:
+oviposition site - position relative to the water (7 modalities), substratum type for eggs - the substratum to which 
+the eggs are definitely attached (6 modalities), egg deposition - the position of the eggs during the oviposition process (4 modalities),
+ gross habitat - the general habitat use of the species such as temporary waters or estuaries (8 modalities), saturation variance -
+ the exposure of eggs to the risk of dessication (2 modalities), time of day  (1-morning, 2-day, 3-evening, 4-night), 
+ season -  time of the year (1-Spring, 2-Summer, 3-Automn).
 }
 \source{
  Statzner, B., Hoppenhaus, K., Arens, M.-F. and Richoux, P. (1997) 

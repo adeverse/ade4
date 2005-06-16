@@ -2,7 +2,7 @@
 \alias{score.coa}
 \title{Graphs to analyse a factor in a correspondence analysis}
 \description{
-represents the graphs to analyse a factor in a correspondence analysis. 
+performs the canonical graph of a correspondence analysis. 
 }
 \usage{
 score.coa (x, xax = 1, dotchart = FALSE, clab.r = 1, clab.c = 1, 

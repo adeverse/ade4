@@ -28,7 +28,7 @@ The function \code{prep.fuzzy.var} returns a data frame with the attribute \code
 The function \code{dudi.fca} returns a list of class \code{fca} and \code{dudi} (see \link{dudi}) containing also
 \item{cr}{a data frame which rows are the blocs, columns are the kept axes, and values are the correlation ratios.}
 The function \code{dudi.fpca} returns a list of class \code{pca} and \code{dudi} (see \link{dudi}) containing also
-\enurate{
+\enumerate{
 \item{cent}
 \item{norm}
 \item{blo}

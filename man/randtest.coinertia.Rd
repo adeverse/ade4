@@ -18,7 +18,7 @@ this parameter must be the number of the table that should be kept fixed in the 
 a list of the class \code{randtest}
 }
 \references{
-Doledec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for
+Dol\'{e}dec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for
 studying species-environment relationships. \emph{Freshwater Biology}, \bold{31}, 277--294.
 }
 \author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr}}

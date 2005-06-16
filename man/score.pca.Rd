@@ -2,7 +2,7 @@
 \alias{score.pca}
 \title{Graphs to Analyse a factor in PCA}
 \description{
-represents the graphs of a factor in a Principal Component Analysis. 
+performs the canonical graph of a Principal Component Analysis. 
 }
 \usage{
 score.pca(x, xax = 1, which.var = NULL, mfrow = NULL, csub = 2, 

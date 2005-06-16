@@ -2,7 +2,7 @@
 \alias{score.acm}
 \title{Graphs to study one factor in a Multiple Correspondence Analysis}
 \description{
-performs the graphs to study one factor in a Multiple Correspondence Analysis. 
+performs the canonical graph of a Multiple Correspondence Analysis. 
 }
 \usage{
 score.acm(x, xax = 1, which.var = NULL, mfrow = NULL, 

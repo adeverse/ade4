@@ -40,7 +40,7 @@ freq2genet(PopAllFreq)
 \item{$comp}{the complete individual typing with the code 02000 or 01001 if the option \code{complete} is TRUE}
 \item{$comp.pop}{a factor indicating the population if the option \code{complete} is TRUE}
 
-\code{count2genet} and \code{req2genet} return a list of class \code{genet} which don't contain the components \code{pop.loc} and \code{complete}.
+\code{count2genet} and \code{freq2genet} return a list of class \code{genet} which don't contain the components \code{pop.loc} and \code{complete}.
 }
 \details{
 As a lot of formats for genetic data are published in literature, a list of class \code{genet} contains at least a table of allellic frequencies and an attribut \code{loc.blocks}. The populations (row) and the variables (column) are classified by alphabetic order.

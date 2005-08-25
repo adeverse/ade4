@@ -2,7 +2,6 @@
     xax=1, yax=2,
     labelcat = row.names(dfxy), clabelcat = 1,
     cpointcat = if (clabelcat == 0) 2 else 0, 
-    pchcat = 20,
     labelrowprof = row.names(dfrowprof),  clabelrowprof = 0.75,  
     cpointrowprof = if (clabelrowprof == 0) 2 else 0,
     pchrowprof = 20, coulrowprof = grey(0.8),
@@ -98,9 +97,8 @@
     row.names(res) <- labelrowprof
 
     row.names(res) <- labelrowprof
-    s.label(dfxy, 1, 2, clab=0, cpoi=cpointcat, pch=pchcat, ...)
-    s.arrow(dfxy,add.p=T,origin=-mgene,clab=clabelcat,
-    pch = pchcat, label = labelcat)
+    s.label(dfxy, 1, 2, clab=0, cpoi=cpointcat, ...)
+    s.arrow(dfxy,add.p=T,origin=-mgene,clab=clabelcat, label = labelcat)
     s.chull(dfxy,add.p=T, fac = factor(rep(1,ncat)),opt=1,clab=0)
     for (k in 1:nrowprof) draw.rowprof(k)           
     if (clabelrowprof > 0) 

@@ -53,7 +53,7 @@
             y1 <- y[ord[i + 1]]
             arrow1(x0, y0, x1, y1, lty = fac, edge = edge)
             if (cpoint > 0) 
-                points(x0, y0, pch = 14 + fac, cex = par("cex") * 
+                points(x0, y0, pch = (14 + fac)%%25, cex = par("cex") * 
                   cpoint)
             d0 <- sqrt((origin[1] - (x0 + x1)/2)^2 + (origin[2] - 
                 (y0 + y1)/2)^2)
@@ -64,8 +64,8 @@
             }
         }
         if (cpoint > 0) 
-            points(x[ord[length(x)]], y[ord[length(x)]], pch = 14 + 
-                fac, cex = par("cex") * cpoint)
+            points(x[ord[length(x)]], y[ord[length(x)]], pch = (14 + 
+                fac)%%25, cex = par("cex") * cpoint)
         return(c(xmax, ymax))
     }
     provi <- cbind.data.frame(x = coo$x, y = coo$y, fac = fac, 

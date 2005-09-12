@@ -3,20 +3,17 @@
 \alias{print.rlq}
 \alias{plot.rlq}
 \alias{summary.rlq}
-\alias{as.coinertia}
 \alias{randtest.rlq}
 \title{RLQ analysis }
 \description{
 RLQ analysis performs a double inertia analysis of two arrays (R and Q) with a link expressed by a contingency table (L).
 The rows of L correspond to the rows of R and the columns of Q correspond to the rows of Q.
-RLQ analysis is an extension of coinertia analysis (see as.coinertia function).
 }
 \usage{
 rlq(dudiR, dudiL, dudiQ, scannf = TRUE, nf = 2)
 print.rlq(x, ...)
 plot.rlq(x, xax = 1, yax = 2, ...)
 summary.rlq(object, ...)
-as.coinertia (dudiRLQ, fixed="R")
 randtest.rlq(xtest,nrepet = 999, ...)
 }
 
@@ -29,9 +26,7 @@ randtest.rlq(xtest,nrepet = 999, ...)
   \item{x}{ an rlq object }
   \item{xax}{the column number for the x-axis}
   \item{yax}{the column number for the y-axis}
-  \item{dudiRLQ}{ an rlq object }
   \item{object}{ an rlq object }
-  \item{fixed}{ "R" indicates that dudiR is not modified, otherwise "Q" }
   \item{xtest}{ an rlq object }
   \item{nrepet}{ the number of permutations }
   \item{\dots}{further arguments passed to or from other methods}
@@ -70,7 +65,12 @@ Dray, S., Pettorelli, N., Chessel, D. (2002) Matching data sets from two differe
 \section{WARNING }{
 IMPORTANT : row weights for \code{dudiR} and \code{dudiQ} must be taken from \code{dudiL}.
 }
-\note{\code{as.coinertia} transforms a \code{rlq} object into a \code{coinertia} object but user must specify which \code{dudi} is fixed and not modified.} 
+\note{A testing procedure based on the total coinertia of the RLQ
+  analysis is available by the function \code{randtest.rlq}. The
+  function allows to deal with various analyses for tables R and Q. The
+  case of decentred PCA (PCA where centers are entered by the user) for R or Q is not yet implemented. If you want
+  to use the testing procedure for this case, you must firstly center
+  the table and then perform a non-centered PCA on the modified table.} 
 \seealso{ \code{\link{coinertia}} }
 \examples{
 data(aviurba)

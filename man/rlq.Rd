@@ -68,9 +68,9 @@ IMPORTANT : row weights for \code{dudiR} and \code{dudiQ} must be taken from \co
 \note{A testing procedure based on the total coinertia of the RLQ
   analysis is available by the function \code{randtest.rlq}. The
   function allows to deal with various analyses for tables R and Q. The
-  case of decentred PCA (PCA where centers are entered by the user) for R or Q is not yet implemented. If you want
-  to use the testing procedure for this case, you must firstly center
-  the table and then perform a non-centered PCA on the modified table.} 
+  case of decentred PCA (PCA where centers are entered by the user) for
+  R or Q is not yet implemented. If you want to use the testing
+  procedure for this case, you must firstly center the table and then perform a non-centered PCA on the modified table.} 
 \seealso{ \code{\link{coinertia}} }
 \examples{
 data(aviurba)

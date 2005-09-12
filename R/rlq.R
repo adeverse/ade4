@@ -1,137 +1,3 @@
-"as.coinertia" <-
-function (dudiRLQ, fixed="R") 
-{
-    if (!inherits(dudiRLQ, "rlq")) 
-        stop("to be used with 'rlq' object")
-    appel <- as.list(dudiRLQ$call)
-    dudiL <- eval(appel$dudiL, sys.frame(0))
-    dudiR <- eval(appel$dudiR, sys.frame(0))
-    dudiQ <- eval(appel$dudiQ, sys.frame(0))
-    if(fixed!="R" && fixed!="Q") {
-        stop("fixed must be R or Q")
-    }
-    if(fixed=="R") {
-        dudiX <- dudiR
-        tabY <- (as.matrix(dudiL$tab)) %*% diag(dudiL$cw) %*% (as.matrix(dudiQ$tab))
-        tabY <- as.data.frame(tabY)
-        names(tabY) <- names(dudiQ$tab)
-        row.names(tabY) <- row.names(dudiL$tab)
-        dudiY <- as.dudi(tabY,dudiQ$cw,dudiL$lw,scannf=F,nf=2,call=match.call(),type="pca")
-    }
-    if(fixed=="Q") {
-        dudiX <- dudiQ
-        tabY <- t(as.matrix(dudiL$tab)) %*% diag(dudiL$lw) %*% (as.matrix(dudiR$tab))
-        tabY <- as.data.frame(tabY)
-        names(tabY) <- names(dudiR$tab)
-        row.names(tabY) <- names(dudiL$tab)
-        dudiY <- as.dudi(tabY,dudiR$cw,dudiL$cw,scannf=F,nf=2,call=match.call(),type="pca")
-
-    }
-    return(coinertia(dudiX,dudiY,scannf=F,nf=dudiRLQ$nf))
-    
-
-}
-"dudi.hillsmith" <-
-function (df, row.w=rep(1, nrow(df))/nrow(df), scannf = TRUE, nf = 2) 
-{
-    if (!is.data.frame(df)) 
-        stop("data.frame expected")
-
-    acm.util <- function(cl) {
-        n <- length(cl)
-        cl <- as.factor(cl)
-        x <- matrix(0, n, length(levels(cl)))
-        x[(1:n) + n * (unclass(cl) - 1)] <- 1
-        dimnames(x) <- list(names(cl), as.character(levels(cl)))
-        data.frame(x)
-    }
-    df <- data.frame(df)
-    nc <- ncol(df)
-    nl <- nrow(df)
-    row.w <- row.w/sum(row.w)
-    if (any(is.na(df))) 
-        stop("na entries in table")
-    index <- rep("", nc)
-    for (j in 1:nc) {
-        w1 <- "q"
-        if (is.factor(df[, j])) 
-            w1 <- "f"
-        if (is.ordered(df[, j])) 
-            stop("use dudi.mix for ordered data")
-        index[j] <- w1
-    }
-    res <- matrix(0, nl, 1)
-    provinames <- "0"
-    col.w <- NULL
-    col.assign <- NULL
-    k <- 0
-    for (j in 1:nc) {
-        if (index[j] == "q") {
-            
-                res <- cbind(res, scalewt(df[, j],w=row.w))
-                provinames <- c(provinames, names(df)[j])
-                col.w <- c(col.w, 1)
-                k <- k + 1
-                col.assign <- c(col.assign, k)
-            
-        }
-        else if (index[j] == "f") {
-            w <- acm.util(factor(df[, j]))
-            cha <- paste(substr(names(df)[j], 1, 5), ".", names(w), 
-                sep = "")
-            col.w.provi <- drop(row.w %*% as.matrix(w))
-            w <- t(t(w)/col.w.provi) - 1
-            col.w <- c(col.w, col.w.provi)
-            res <- cbind(res, w)
-            provinames <- c(provinames, cha)
-            k <- k + 1
-            col.assign <- c(col.assign, rep(k, length(cha)))
-        }
-    }
-    res <- data.frame(res)
-    names(res) <- make.names(provinames, unique = TRUE)
-    row.names(res)<-row.names(df)
-    res <- res[, -1]
-    names(col.w) <- provinames[-1]
-    X <- as.dudi(res, col.w, row.w, scannf = scannf, nf = nf, 
-        call = match.call(), type = "mix")
-    X$assign <- factor(col.assign)
-    X$index <- factor(index)
-    rcor <- matrix(0, nc, X$nf)
-    rcor <- row(rcor) + 0 + (0 + (0+1i)) * col(rcor)
-    floc <- function(x) {
-        i <- Re(x)
-        j <- Im(x)
-        if (index[i] == "q") {
-            if (sum(col.assign == i)) {
-                w <- X$l1[, j] * X$lw * X$tab[, col.assign == 
-                  i]
-                return(sum(w)^2)
-            }
-            else {
-                w <- X$lw * X$l1[, j]
-                w <- X$tab[, col.assign == i] * w
-                w <- apply(w, 2, sum)
-                return(sum(w^2))
-            }
-        }
-        else if (index[i] == "f") {
-            x <- X$l1[, j] * X$lw
-            qual <- df[, i]
-            poicla <- unlist(tapply(X$lw, qual, sum))
-            z <- unlist(tapply(x, qual, sum))/poicla
-            return(sum(poicla * z * z))
-        }
-        else return(NA)
-    }
-    rcor <- apply(rcor, c(1, 2), floc)
-    rcor <- data.frame(rcor)
-    row.names(rcor) <- names(df)
-    names(rcor) <- names(X$l1)
-    X$cr <- rcor
-    X
-}
-
 "plot.rlq" <-
 function (x, xax = 1, yax = 2, ...) 
 {
@@ -330,8 +196,6 @@ function (object, ...)
     U <- cbind.data.frame(corr, max, ratio)
     row.names(U) <- 1:object$nf
     print(U)
-    RV <- sum(object$eig)/sqrt(sum(dudiR$eig^2))/sqrt(sum(dudiQ$eig^2))
-    cat("\nRV:\n", RV, "\n")
 
 }
 
@@ -359,19 +223,18 @@ randtest.rlq<-function(xtest, nrepet=999,...)
     R.lw<-dudiR$lw
     appelR<-as.list(dudiR$call)
     Rinit<-eval(appelR$df,sys.frame(0))
-    if (appelR[[1]] == "dudi.pca") {        
-        if (is.null(appelR$scale)) appelR$scale<-TRUE
-        if (appelR$scale=="TRUE") appelR$scale<-TRUE
-        if (appelR$scale=="FALSE") appelR$scale<-FALSE
-        if (is.null(appelR$center)) appelR$center<-TRUE
-        if (appelR$center=="TRUE") appelR$center<-TRUE
-        if (appelR$center=="FALSE") appelR$center<-FALSE
-        if (appelR$center == FALSE && appelR$scale == FALSE) typR<-"nc"
-        if (appelR$center == FALSE && appelR$scale == TRUE) typR<-"cs"
-        if (appelR$center == TRUE  && appelR$scale == FALSE) typR<-"cp"
-        if (appelR$center == TRUE  && appelR$scale == TRUE) typR<-"cn"
-        indexR<-rep("q",ncol(Rinit))
-        assignR<-1:ncol(Rinit)
+    if (appelR[[1]] == "dudi.pca") {
+      appelR$scale<-eval(appelR$scale,sys.frame(0))
+      appelR$center<-eval(appelR$center,sys.frame(0))
+      if (is.null(appelR$scale)) appelR$scale<-TRUE
+      if (is.null(appelR$center)) appelR$center<-TRUE
+      if(!(is.logical(appelR$center))) stop("Not implemented for decentred PCA: read the documentation file.")      
+      if (appelR$center == FALSE && appelR$scale == FALSE) typR<-"nc"
+      if (appelR$center == FALSE && appelR$scale == TRUE) typR<-"cs"
+      if (appelR$center == TRUE  && appelR$scale == FALSE) typR<-"cp"
+      if (appelR$center == TRUE  && appelR$scale == TRUE) typR<-"cn"
+      indexR<-rep("q",ncol(Rinit))
+      assignR<-1:ncol(Rinit)
     } else if (appelR[[1]] == "dudi.coa") {
         typR<-"fc"
         indexR<-rep("q",ncol(Rinit))
@@ -422,18 +285,17 @@ randtest.rlq<-function(xtest, nrepet=999,...)
     Qinit<-eval(appelQ$df,sys.frame(0))
     
     if (appelQ[[1]] == "dudi.pca") {        
-        if (is.null(appelQ$scale)) appelQ$scale<-TRUE
-        if (appelQ$scale=="TRUE") appelQ$scale<-TRUE
-        if (appelQ$scale=="FALSE") appelQ$scale<-FALSE
-        if (is.null(appelQ$center)) appelQ$center<-TRUE
-        if (appelQ$center=="TRUE") appelQ$center<-TRUE
-        if (appelQ$center=="FALSE") appelQ$center<-FALSE
-        if (appelQ$center == FALSE && appelQ$scale == FALSE) typQ<-"nc"
-        if (appelQ$center == FALSE && appelQ$scale == TRUE) typQ<-"cs"
-        if (appelQ$center == TRUE  && appelQ$scale == FALSE) typQ<-"cp"
-        if (appelQ$center == TRUE  && appelQ$scale == TRUE) typQ<-"cn"
-        indexQ<-rep("q",ncol(Qinit))
-        assignQ<-1:ncol(Qinit)
+      appelQ$scale<-eval(appelQ$scale,sys.frame(0))
+      appelQ$center<-eval(appelQ$center,sys.frame(0))
+      if (is.null(appelQ$scale)) appelQ$scale<-TRUE
+      if (is.null(appelQ$center)) appelQ$center<-TRUE
+      if(!(is.logical(appelR$center))) stop("Not implemented for decentred PCA: read the documentation file.")      
+      if (appelQ$center == FALSE && appelQ$scale == FALSE) typQ<-"nc"
+      if (appelQ$center == FALSE && appelQ$scale == TRUE) typQ<-"cs"
+      if (appelQ$center == TRUE  && appelQ$scale == FALSE) typQ<-"cp"
+      if (appelQ$center == TRUE  && appelQ$scale == TRUE) typQ<-"cn"
+      indexQ<-rep("q",ncol(Qinit))
+      assignQ<-1:ncol(Qinit)
     } else if (appelQ[[1]] == "dudi.coa") {
         typQ<-"fc"
         indexQ<-rep("q",ncol(Qinit))

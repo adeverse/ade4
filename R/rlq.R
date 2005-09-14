@@ -274,7 +274,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
             }
             Rinit<-res[,-1]
         }
-    }
+    } else stop ("Not yet available")
 
 
     
@@ -335,7 +335,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
             }
             Qinit<-res[,-1]
         }
-    }   
+    }  else stop ("Not yet available")  
 
     L<-dudiL$tab
     L.cw<-dudiL$cw

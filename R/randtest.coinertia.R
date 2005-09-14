@@ -30,7 +30,7 @@
   } else if (appelX[[1]] == "dudi.acm") {
     typX<-"cm"
     Xinit <- acm.disjonctif(Xinit)
-  }
+  } else stop ("Not yet available")
   Y<-dudiY$tab
   Y.cw<-dudiY$cw
   Y.lw<-dudiY$lw
@@ -54,7 +54,7 @@
   } else if (appelY[[1]] == "dudi.acm") {
     typY<-"cm"
     Yinit <- acm.disjonctif(Yinit)
-  }
+  } else stop ("Not yet available")
   if (identical(all.equal(X.lw,Y.lw),TRUE)) {
     if (identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE)) {
       isim<-testertrace(nrepet, X.cw, Y.cw, X, Y, nrow(X), ncol(X), ncol(Y))

@@ -33,7 +33,7 @@
     x <- dfxy[,xax]
     y <- dfxy[,yax]
 
-    util.ellipse <- function(param, coeftai) {  
+      util.ellipse <- function(param, coeftai) {       
         vx <- param[3] ; cxy <- param[4]; vy <- param[5]
         lig <- 100
         if (vx < 0) vx <- 0 ; if (vy < 0) vy <- 0
@@ -55,7 +55,8 @@
         return (res)
     }
 
-    calcul.rowprof<- function(w1) {
+    calcul.rowprof<- function(k) {
+        w1 <- dfrowprof[k,]
         if (sum(w1)<1e-07) stop (paste("n°",k,"profile without data"))
         w1 <- w1/sum(w1)
         mx <- sum(w1*x)
@@ -69,24 +70,23 @@
      }
      
     draw.rowprof<- function(k) {
-        cell <- 0
-        if (n.sample[k] >0) cell <- coeff/sqrt(n.sample[k])
-        if (cell==0) return(NULL)
         w <- as.numeric(res[k,])
+        if (n.sample[k] >0) cell <- coeff/sqrt(n.sample[k]) else cell <- 0
         ell <- util.ellipse(w, cell)
-        polygon(ell$x, ell$y,border=coulrowprof[k],col=coulrowprof[k], lwd=2)
-        if (axesell) {
-            segments(ell$seg1[1], ell$seg1[2], ell$seg1[3], ell$seg1[4]) #, lty = 2
-            segments(ell$seg2[1], ell$seg2[2], ell$seg2[3], ell$seg2[4]) #, lty = 2
+        if (!is.null(ell)) {
+            polygon(ell$x, ell$y,border=coulrowprof[k],col=coulrowprof[k], lwd=2)
+            if (axesell) {
+                segments(ell$seg1[1], ell$seg1[2], ell$seg1[3], ell$seg1[4]) #, lty = 2
+                segments(ell$seg2[1], ell$seg2[2], ell$seg2[3], ell$seg2[4]) #, lty = 2
+            }
         }
     }
-    
     opar <- par(mar = par("mar"))
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     on.exit(par(opar))
     
     # calcul des paramètres de position et dispersion
-    res <- t(apply(dfrowprof,1,calcul.rowprof))
+    res <- t( matrix(unlist(lapply(1:nrowprof,calcul.rowprof)),nrow=5))
     res <- as.data.frame(res)
     names(res) <- c("mx","my","vx","cxy","vy")
     if (translate) {
@@ -98,8 +98,8 @@
 
     row.names(res) <- labelrowprof
     s.label(dfxy, 1, 2, clab=0, cpoi=cpointcat, ...)
-    s.arrow(dfxy,add.p=T,origin=-mgene,clab=clabelcat, label = labelcat)
-    s.chull(dfxy,add.p=T, fac = factor(rep(1,ncat)),opt=1,clab=0)
+    s.arrow(dfxy,add.p=TRUE,origin=-mgene,clab=clabelcat, label = labelcat)
+    s.chull(dfxy,add.p=TRUE, fac = factor(rep(1,ncat)),opt=1,clab=0)
     for (k in 1:nrowprof) draw.rowprof(k)           
     if (clabelrowprof > 0) 
         scatterutil.eti(as.numeric(res$mx), as.numeric(res$my),labelrowprof, clabelrowprof, coul = coulrowprof)
@@ -108,4 +108,5 @@
     box()
     res[,1:2] <- sweep(res[,1:2],2,mgene,"+")
     return(invisible(list(ell=res,tra=mgene)))
+    
 }

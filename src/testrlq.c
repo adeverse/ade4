@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "adesub.h"
+#include <R.h>
 
 void testertracerlq ( int *npermut,
                 double *pcRr, int *npcR,
@@ -59,8 +60,6 @@ void testertracerlq ( int *npermut,
     strncpy(typQ, (char const *) *typQr, 2);
     typR[2] = 0;
     typQ[2] = 0;
-    
-   
 /* Allocation memoire pour les variables C locales */
 
     vecalloc (&pcR, cR);
@@ -147,13 +146,15 @@ void testertracerlq ( int *npermut,
     }
     if (strcmp (typR,"hi") == 0) {
        matcentragehi(XR,plL,indexR,assignR);
-        }
-   else {matcentrage (XR, plL, typR);}
+              }
+   else {matcentrage (XR, plL, typR);
+      }
         
     if (strcmp (typQ,"hi") == 0) {
         matcentragehi(XQ,pcL,indexQ,assignQ);
+	}
+    else {matcentrage (XQ, pcL, typQ);
         }
-    else {matcentrage (XQ, pcL, typQ);}
 
     prodmatAtBC (XR, XL, provi);
     prodmatABC (provi,XQ, ta);
@@ -168,32 +169,99 @@ void testertracerlq ( int *npermut,
     }
     inersimul[0] = inertot;
            k = 0;
-    for (i=1; i<=lL; i++) 
-    {
-        for (j=1; j<=cR; j++) 
-        {
-          
-            tabRr[k]= XR[i][j];
-          k = k + 1;
-        }
-    }
+ 
 
+
+    
+    
+    
     for (k=1; k<=*npermut; k++) {
         getpermutation (numero1,k);
         getpermutation (numero2,2*k);
-
-        matpermut (initR, numero1, XR);
+        aleapermutmat(initR);
+	aleapermutmat(initQ);
+	matpermut (initR, numero1, XR);
         matpermut (initQ, numero2, XQ);
 
+
     if (strcmp (typR,"hi") == 0) {
-        matcentragehi(XR,plL,indexR,assignR);
-        }
-    else {matcentrage (XR, plL, typR);}
+        for(j=1;j<=cR;j++){
+		if(indexR[assignR[j]]==1){
+			pcR[j]=0;
+		}
+	}
+    	for(i=1;i<=lL;i++){
+		for(j=1;j<=cR;j++){
+			if(indexR[assignR[j]]==1){
+				pcR[j]=pcR[j]+XR[i][j]*plL[i];
+			}
+		}
+	}
+	matcentragehi(XR,plL,indexR,assignR);
+        // on recalcule le poids colonne pour les qualitatives
+	}
+    else {
+    	// on recalcule le poids colonne pour les qualitatives pour une acm
+	if (strcmp (typR,"cm") == 0) {
+		for(j=1;j<=cR;j++){
+			pcR[j]=0;
+			}
+    		for(i=1;i<=lL;i++){
+			for(j=1;j<=cR;j++){
+				pcR[j]=pcR[j]+XR[i][j]*plL[i];
+			}
+		}
+		for(j=1;j<=cR;j++){
+			pcR[j]=pcR[j]/(*nindexR);				
+			}
+			
+	
+	}
+    
+    	matcentrage (XR, plL, typR);
+    	
+    	
+	}
         
     if (strcmp (typQ,"hi") == 0) {
+    	// on recalcule le poids colonne pour les qualitatives
+	for(j=1;j<=cQ;j++){
+		if(indexQ[assignQ[j]]==1){
+			pcQ[j]=0;
+		}
+	}
+    	for(i=1;i<=cL;i++){
+		for(j=1;j<=cQ;j++){
+			if(indexQ[assignQ[j]]==1){
+				pcQ[j]=pcQ[j]+XQ[i][j]*pcL[i];
+			}
+		}
+	}
+	
         matcentragehi(XQ,pcL,indexQ,assignQ);
+	
         }
-    else {matcentrage (XQ, pcL, typQ);}
+    else {
+    	// on recalcule le poids colonne pour les qualitatives pour une acm
+	if (strcmp (typQ,"cm") == 0) {
+		for(j=1;j<=cQ;j++){
+			pcQ[j]=0;
+			}
+    		for(i=1;i<=cL;i++){
+			for(j=1;j<=cQ;j++){
+				pcQ[j]=pcQ[j]+XQ[i][j]*pcL[i];
+			}
+		}
+		for(j=1;j<=cQ;j++){
+			pcQ[j]=pcQ[j]/(*nindexQ);
+			}	
+	}
+	
+	
+    	matcentrage (XQ, pcL, typQ);
+    	
+
+    }
 
         prodmatAtBC (XR, XL, provi);
         prodmatABC (provi,XQ, ta);
@@ -209,7 +277,7 @@ void testertracerlq ( int *npermut,
         }
         inersimul[k]=inersim;
     }
- /* matcentragehi(initR,plL,indexR,assignR);  */
+ 
  
     
     freeintvec(numero1);
@@ -248,32 +316,56 @@ index indique si chaque variables est quali (1) ou quanti (2)
 assign vecteur entier qui donne l'index de la variable pour chaque colonne
 */
 
-    int l1,c1,i,j;
+    int l1,c1,i,j,nquant=0,nqual=0,jqual=1,jquant=1;
     double **tabqual, **tabquant;
     l1 = tab[0][0];
     c1 = tab[1][0];
-    taballoc(&tabqual,l1,c1);
-    taballoc(&tabquant,l1,c1);
+    for(j=1;j<=c1;j++){
+	if(index[assign[j]]==1){
+		nqual=nqual+1;
+	}
+	else if (index[assign[j]]==2){
+		nquant=nquant+1;
+	}
+    }
+
+    taballoc(&tabqual,l1,nqual);
+    taballoc(&tabquant,l1,nquant);
 
     for (j=1;j<=c1;j++){
         if (index[assign[j]]==1) {
             for (i=1; i<=l1;i++) {
-                tabqual[i][j]=tab[i][j];
+                tabqual[i][jqual]=tab[i][j];
+		
                 }
+	    jqual=jqual+1;
         } else if (index[assign[j]]==2){
             for (i=1; i<=l1;i++) {
-                tabquant[i][j]=tab[i][j];
+                tabquant[i][jquant]=tab[i][j];
+		
                 }
+	    jquant=jquant+1;
             }
      }   
         
     
     matmodifcm (tabqual, poili);
     matmodifcn (tabquant, poili);
-    for (i=1;i<=l1;i++) {
-        for (j=1;j<=c1;j++) {
-            tab[i][j] = tabqual[i][j] + tabquant[i][j];
-            
+    jqual=1;
+    jquant=1;
+    
+    for (j=1;j<=c1;j++) {
+	if (index[assign[j]]==1) {
+        	for (i=1;i<=l1;i++) {
+			tab[i][j] = tabqual[i][jqual];
+            	}
+	jqual=jqual+1;	
+        }
+	else if (index[assign[j]]==2) {
+        	for (i=1;i<=l1;i++) {
+			tab[i][j] = tabquant[i][jquant];
+            	}
+	jquant=jquant+1;	
         }
     }
     freetab(tabqual);

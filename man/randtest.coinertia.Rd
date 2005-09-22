@@ -21,14 +21,14 @@ a list of the class \code{randtest}
 Dol\'{e}dec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for
 studying species-environment relationships. \emph{Freshwater Biology}, \bold{31}, 277--294.
 }
-\author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr}}
+\author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr} modified by Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 \note{A testing procedure based on the total coinertia of the analysis
   is available by the function \code{randtest.coinertia}. The function
   allows to deal with various analyses for the two tables. The test is
   based on random permutations of the rows of the two tables. If the row
   weights are not uniform, mean and variances are recomputed for each
-  permutation. If weights are computed using the data contained in one
-  table (e.g. COA), yuo must fix this table and permute only the rows of
+  permutation (PCA); for MCA, tables are recentred and column weights are recomputed. If weights are computed using the data contained in one
+  table (e.g. COA), you must fix this table and permute only the rows of
   the other table. The case of decentred PCA (PCA where centers are
   entered by the user) is not yet implemented. If you want to use the
   testing procedure for this case, you must firstly center the table and then perform a

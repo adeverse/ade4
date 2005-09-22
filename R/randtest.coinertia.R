@@ -63,18 +63,24 @@
         cat("Warning: non uniform weight. The results from simulations\n")
         cat("are not valid if weights are computed from analysed data.\n")
         isim<-testertracenu(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY)
+	if(typX=="cm") {isim[-1]=isim[-1]/ncol(eval(appelX$df,sys.frame(0)))}
+	if(typY=="cm") {isim[-1]=isim[-1]/ncol(eval(appelY$df,sys.frame(0)))}
       } else if (fixed==1) {
         cat("Warning: non uniform weight. The results from permutations\n")
         cat("are valid only if the row weights come from the fixed table.\n")
         cat("The fixed table is table X : ")
         print(apx)
         isim<-testertracenubis(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY, fixed)
+	if(typY=="cm") {isim[-1]=isim[-1]/ncol(eval(appelY$df,sys.frame(0)))
+	}
       } else if (fixed==2) {
         cat("Warning: non uniform weight. The results from permutations\n")
         cat("are valid only if the row weights come from the fixed table.\n")
         cat("The fixed table is table Y : ")
         print(apy)
         isim<-testertracenubis(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY, fixed)
+	if(typX=="cm") {isim[-1]=isim[-1]/ncol(eval(appelX$df,sys.frame(0)))}
+	
       }
       else if (fixed>2) {stop ("Error : fixed must be =< 2")}
     }

@@ -251,17 +251,8 @@ randtest.rlq<-function(xtest, nrepet=999,...)
     } else if (appelR[[1]] == "dudi.hillsmith") {
         indexR<-dudiR$index
         assignR<-dudiR$assign
-        if (all(indexR=="f")){
-            typR<-"cm"
-            Rinit <- acm.disjonctif(Rinit)
-        }
-        else if (all(indexR=="q")){
-            typR<-"cn"
-        }
-        
-        else{
-            typR<-"hi"
-            res <- matrix(0, nrow(Rinit), 1)
+        typR<-"hi"
+        res <- matrix(0, nrow(Rinit), 1)
 
             for (j in 1:(ncol(Rinit))) {
                 if (indexR[j] == "q") {
@@ -273,7 +264,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
                 }
             }
             Rinit<-res[,-1]
-        }
+        
     } else stop ("Not yet available")
 
 
@@ -313,16 +304,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
     } else if (appelQ[[1]] == "dudi.hillsmith") {
         indexQ<-dudiQ$index
         assignQ<-dudiQ$assign
-        if (all(indexQ=="f")){
-            typQ<-"cm"
-            Qinit <- acm.disjonctif(Qinit)
-        }
-        else if (all(indexQ=="q")){
-            typQ<-"cn"
-        }
-        
-        else{
-            typQ<-"hi"
+ 	 typQ<-"hi"
             res <- matrix(0, nrow(Qinit), 1)
             for (j in 1:(ncol(Qinit))) {
                 if (indexQ[j] == "q") {
@@ -334,7 +316,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
                 }
             }
             Qinit<-res[,-1]
-        }
+        
     }  else stop ("Not yet available")  
 
     L<-dudiL$tab

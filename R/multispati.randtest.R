@@ -22,6 +22,9 @@
     mat<-listw2mat(listw)
     lw<- dudi$lw
     cw<- dudi$cw
+    if (!(identical(all.equal(lw,rep(1/nrow(tab), nrow(tab))),TRUE))) {
+    	stop ("Not implemented for non-uniform weights")
+    }
     inersim<- testmultispati(nrepet, nr, nc, tab, mat, lw, cw)
     inertot<- sum(dudi$eig)
     inersim<- inersim/inertot

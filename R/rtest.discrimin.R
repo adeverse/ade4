@@ -9,8 +9,13 @@
         stop("Non convenient dimension")
     rank <- dudi$rank
     dudi <- redo.dudi(dudi, rank)
-    dudi.lw <- dudi$lw
+    dudi.lw <- dudi$lw  
+
     dudi <- dudi$l1
+    if (!(identical(all.equal(dudi.lw,rep(1/nrow(dudi), nrow(dudi))),TRUE))) {
+    	stop ("Not implemented for non-uniform weights")
+    }    
+    
     between.var <- function(x, w, group, group.w) {
         z <- x * w
         z <- tapply(z, group, sum)/group.w

@@ -9,6 +9,9 @@
     X <- dudi1$tab
     X.lw <- dudi1$lw
     X.lw <- X.lw/sum(X.lw)
+    if (!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE))) {
+    	stop ("Not implemented for non-uniform weights")
+    }
     X.cw <- sqrt(dudi1$cw)
     X <- t(t(X) * X.cw)
     inertot <- sum(dudi1$eig)

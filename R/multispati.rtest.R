@@ -1,6 +1,9 @@
 "multispati.rtest" <- function (dudi, listw, nrepet = 99) {
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
+    if (!(identical(all.equal(dudi$lw,rep(1/nrow(dudi$tab), nrow(dudi$tab))),TRUE))) {
+    	stop ("Not implemented for non-uniform weights")
+    }
     n = length(listw$weights)
     fun.lag = function (x) lag.listw(listw,x,TRUE)
     fun <- function (permuter = TRUE) {

@@ -15,7 +15,9 @@
     X.lw<-dudi$lw
     # dudi et dudi.lw sont soumis a la permutation
     # fac reste fixe
-
+     if (!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE))) {
+    	stop ("Not implemented for non-uniform weights")
+    }
     isim<-testdiscrimin(nrepet, rank, X.lw, length(unique(fac)), fac, X, nrow(X), ncol(X))
     obs<-isim[1]
     return(as.randtest(isim[-1],obs,call=match.call()))

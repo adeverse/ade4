@@ -918,7 +918,33 @@ void testertracenu (    int *npermut,
         
         matpermut (init1, numero1, X1);
         matpermut (init2, numero2, X2);
-        
+	
+	// calcul de poids colonnes dans le cas d'une acm
+	
+	if (strcmp (typ1,"cm") == 0) {
+		for(j=1;j<=c1;j++){
+			pc1[j]=0;
+			}
+    		for(i=1;i<=l1;j++){
+			for(j=1;j<=c1;i++){
+				pc1[j]=pc1[j]+X1[i][j]*pl[i];
+			}
+		}
+
+	}
+
+	if (strcmp (typ2,"cm") == 0) {
+		for(j=1;j<=c2;j++){
+			pc2[j]=0;
+			}
+    		for(i=1;i<=l1;i++){
+			for(j=1;j<=c2;j++){
+				pc2[j]=pc2[j]+X2[i][j]*pl[i];
+			}
+		}
+
+	
+	}	        
         matcentrage (X1, pl, typ1);
         matcentrage (X2, pl, typ2);
 
@@ -1098,11 +1124,36 @@ void testertracenubis ( int *npermut,
         if (ntab == 1) {
             getpermutation (numero2,k);
             matpermut (init2, numero2, X2);
+	    // poids colonne recalculé si acm
+	    if (strcmp (typ2,"cm") == 0) {
+		for(j=1;j<=c2;j++){
+			pc2[j]=0;
+			}
+    		for(i=1;i<=l1;i++){
+			for(j=1;j<=c2;j++){
+				pc2[j]=pc2[j]+X2[i][j]*pl[i];
+			}
+		}
+
+	    }
+	 		        
             matcentrage (X2, pl, typ2);
         } else {
             getpermutation (numero1,k);
             matpermut (init1, numero1, X1);
-            matcentrage (X1, pl, typ1);
+	    // poids colonne recalculé si acm
+	    if (strcmp (typ1,"cm") == 0) {
+		for(j=1;j<=c1;j++){
+			pc1[j]=0;
+			}
+    		for(i=1;i<=l1;i++){
+			for(j=1;j<=c1;j++){
+				pc1[j]=pc1[j]+X1[i][j]*pl[i];
+			}
+		}
+	
+	    }	    
+	    matcentrage (X1, pl, typ1);
         }
         
         prodmatAtBC (X2, X1, cov);

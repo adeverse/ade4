@@ -33,12 +33,11 @@ Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 \examples{
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(mafragh)
-    maf.xy <- mafragh$xy
-    maf.flo <- mafragh$flo
     maf.listw <- nb2listw(neig2nb(mafragh$neig))
-    s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
-    maf.coa <- dudi.coa(maf.flo,scannf = FALSE)
-    multispati.randtest(maf.coa, maf.listw)
+    maf.pca <- dudi.pca(mafragh$mil, scannf = FALSE)
+    multispati.randtest(maf.pca, maf.listw)
+    maf.pca.ms <- multispati(maf.pca, maf.listw, scannf=FALSE)
+    plot(maf.pca.ms)
 }
 }
 \keyword{multivariate}

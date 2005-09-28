@@ -198,10 +198,10 @@ void testertracerlq ( int *npermut,
 		}
 	}
 	matcentragehi(XR,plL,indexR,assignR);
-        // on recalcule le poids colonne pour les qualitatives
+        /* on recalcule le poids colonne pour les qualitatives */
 	}
     else {
-    	// on recalcule le poids colonne pour les qualitatives pour une acm
+      /* on recalcule le poids colonne pour les qualitatives pour une acm*/
 	if (strcmp (typR,"cm") == 0) {
 		for(j=1;j<=cR;j++){
 			pcR[j]=0;
@@ -224,7 +224,7 @@ void testertracerlq ( int *npermut,
 	}
         
     if (strcmp (typQ,"hi") == 0) {
-    	// on recalcule le poids colonne pour les qualitatives
+      /* on recalcule le poids colonne pour les qualitatives*/
 	for(j=1;j<=cQ;j++){
 		if(indexQ[assignQ[j]]==1){
 			pcQ[j]=0;
@@ -242,7 +242,7 @@ void testertracerlq ( int *npermut,
 	
         }
     else {
-    	// on recalcule le poids colonne pour les qualitatives pour une acm
+      /* on recalcule le poids colonne pour les qualitatives pour une acm*/
 	if (strcmp (typQ,"cm") == 0) {
 		for(j=1;j<=cQ;j++){
 			pcQ[j]=0;

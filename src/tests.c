@@ -919,7 +919,7 @@ void testertracenu (    int *npermut,
         matpermut (init1, numero1, X1);
         matpermut (init2, numero2, X2);
 	
-	// calcul de poids colonnes dans le cas d'une acm
+	/* calcul de poids colonnes dans le cas d'une acm*/
 	
 	if (strcmp (typ1,"cm") == 0) {
 		for(j=1;j<=c1;j++){
@@ -1124,7 +1124,7 @@ void testertracenubis ( int *npermut,
         if (ntab == 1) {
             getpermutation (numero2,k);
             matpermut (init2, numero2, X2);
-	    // poids colonne recalculé si acm
+	    /* poids colonne recalculé si acm*/
 	    if (strcmp (typ2,"cm") == 0) {
 		for(j=1;j<=c2;j++){
 			pc2[j]=0;
@@ -1141,7 +1141,7 @@ void testertracenubis ( int *npermut,
         } else {
             getpermutation (numero1,k);
             matpermut (init1, numero1, X1);
-	    // poids colonne recalculé si acm
+	    /* poids colonne recalculé si acm*/
 	    if (strcmp (typ1,"cm") == 0) {
 		for(j=1;j<=c1;j++){
 			pc1[j]=0;

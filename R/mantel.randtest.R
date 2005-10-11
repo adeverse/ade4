@@ -7,8 +7,8 @@
     n <- attr(m1, "Size")
     if (n != attr(m2, "Size")) 
         stop("Non convenient dimension")
-    m1 <- dist2mat(m1)
-    m2 <- dist2mat(m2)
+    m1 <- as.matrix(m1)
+    m2 <- as.matrix(m2)
     col <- ncol(m1)
     isim<-testmantel(nrepet, col, as.matrix(m1), as.matrix(m2))
     obs<-isim[1]

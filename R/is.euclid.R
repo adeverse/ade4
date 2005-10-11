@@ -1,7 +1,7 @@
 "is.euclid" <- function (distmat, plot = FALSE, print = FALSE, tol = 1e-07) {
     if (!inherits(distmat, "dist")) 
         stop("Object of class 'dist' expected")
-    distmat <- dist2mat(distmat)
+    distmat <- as.matrix(distmat)
     n <- ncol(distmat)
     delta <- -0.5 * bicenter.wt(distmat * distmat)
     lambda <- eigen(delta, symmetric = TRUE, only = TRUE)$values
@@ -27,31 +27,3 @@
     cat("Euclidean matrix (Gower 1966):", is.euclid(object), "\n")
 }
 
-"mat2dist" <- function (m, diag = FALSE, upper = FALSE) {
-    m <- as.matrix(m)
-    retval <- m[row(m) > col(m)]
-    attributes(retval) <- NULL
-    attr(retval, "Labels") <- as.character(1:nrow(m))
-    if (!is.null(rownames(m))) 
-        attr(retval, "Labels") <- rownames(m)
-    else if (!is.null(colnames(m))) 
-        attr(retval, "Labels") <- colnames(m)
-    attr(retval, "Size") <- nrow(m)
-    attr(retval, "Diag") <- diag
-    attr(retval, "Upper") <- upper
-    attr(retval, "call") <- match.call()
-    class(retval) <- "dist"
-    retval
-}
-
-"dist2mat" <- function (x) {
-    size <- attr(x, "Size")
-    df <- matrix(0, size, size)
-    df[row(df) > col(df)] <- x
-    df <- df + t(df)
-    labels <- attr(x, "Labels")
-    dimnames(df) <- if (is.null(labels)) 
-        list(1:size, 1:size)
-    else list(labels, labels)
-    df
-}

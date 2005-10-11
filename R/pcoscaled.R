@@ -4,7 +4,7 @@
     if (!is.euclid(distmat)) 
         stop("Euclidean distance expected")
     lab <- attr(distmat, "Labels")
-    distmat <- dist2mat(distmat)
+    distmat <- as.matrix(distmat)
     n <- ncol(distmat)
     if (is.null(lab)) 
         lab <- as.character(1:n)

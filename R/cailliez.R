@@ -3,7 +3,7 @@
         warning("Euclidean distance found : no correction need")
         return(distmat)
     }
-    distmat <- dist2mat(distmat)
+    distmat <- as.matrix(distmat)
     size <- ncol(distmat)
     m1 <- matrix(0, size, size)
     m1 <- rbind(m1, -diag(size))
@@ -14,7 +14,7 @@
     c <- max(Re(lambda)[Im(lambda) < 1e-08])
     if (print) 
         cat(paste("Cailliez constant =", round(c, dig = 5), "\n"))
-    distmat <- mat2dist(distmat + c)
+    distmat <- as.dist(distmat + c)
     attr(distmat, "call") <- match.call()
     attr(distmat, "method") <- "Cailliez"
     return(distmat)

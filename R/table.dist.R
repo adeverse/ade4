@@ -8,7 +8,7 @@
     table.prepare(x, x, labels, labels, clabel, clabel, grid, 
         "leftbottom")
     n <- attr(d, "Size")
-    d <- dist2mat(d)
+    d <- as.matrix(d)
     xtot <- x[col(d)]
     ytot <- x[row(d)]
     coeff <- diff(range(x))/n

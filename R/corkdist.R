@@ -26,7 +26,7 @@
         m1 <- matrix(0, nind, nind)
         m1[row(m1) > col(m1)] <- kd[[i]]
         m1 <- m1 + t(m1)
-        m1 <- mat2dist(m1)
+        m1 <- as.dist(m1)
         m1
     }
     k <- 0
@@ -70,7 +70,7 @@
         m1 <- matrix(0, nind, nind)
         m1[row(m1) > col(m1)] <- kd[[i]]
         m1 <- m1 + t(m1)
-        m1 <- mat2dist(m1)
+        m1 <- as.dist(m1)
         m1
     }
     k <- 0

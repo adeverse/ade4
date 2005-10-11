@@ -76,7 +76,7 @@
     else stop("Non convenient method")
     d <- sqrt(1 - d)
     # if (sum(diag(d)^2)>0) stop("diagonale non nulle")
-    d <- mat2dist(d)
+    d <- as.dist(d)
     attr(d, "Size") <- nlig
     attr(d, "Labels") <- d.names
     attr(d, "Diag") <- diag

@@ -51,14 +51,14 @@
         d <- d/vec[col(d)]
         d <- d/vec[row(d)]
         d <- -log(d)
-        d <- mat2dist(d)
+        d <- as.dist(d)
     } else if (method == 2) {
         df <- sqrt(df)
         d <- df%*%t(df)
         d <- 1-d/nloci
         diag(d) <- 0
         d <- sqrt(d)
-        d <- mat2dist(d)
+        d <- as.dist(d)
     } else if (method == 3) {
        denomi <- df%*%t(df)
        vec <- apply(df,1,function(x) sum(x*x))
@@ -68,7 +68,7 @@
        diag(denomi) <- 1
        d <- d/denomi
        d <- sqrt(d)
-       d <- mat2dist(d)
+       d <- as.dist(d)
     } else if (method == 4) {
         loci.fac <- rep( names(col.blocks),col.blocks)
         loci.fac <- as.factor(loci.fac)
@@ -85,7 +85,7 @@
         d <- matrix(0,nlig,nlig)
         lapply(ltab, dcano)
         d <- d/length(ltab)
-        d <- mat2dist(d)
+        d <- as.dist(d)
     } else if (method ==5) {
         w0 <- 1:(nlig-1)
         "loca" <- function (k) {

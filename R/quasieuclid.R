@@ -3,7 +3,7 @@
         warning("Euclidean distance found : no correction need")
         return(distmat)
     }
-    distmat <- dist2mat(distmat)
+    distmat <- as.matrix(distmat)
     n <- ncol(distmat)
     delta <- -0.5 * bicenter.wt(distmat * distmat)
     eig <- eigen(delta, sym = TRUE)

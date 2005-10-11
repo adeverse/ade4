@@ -3,7 +3,7 @@
         warning("Euclidean distance found : no correction need")
         return(distmat)
     }
-    distmat <- dist2mat(distmat)
+    distmat <- as.matrix(distmat)
     n <- ncol(distmat)
     delta <- -0.5 * bicenter.wt(distmat * distmat)
     lambda <- eigen(delta, sym = TRUE)$values
@@ -12,7 +12,7 @@
     if (print) 
         cat("Lingoes constant =", round(abs(lder), dig = 6), 
             "\n")
-    distmat <- mat2dist(distmat)
+    distmat <- as.dist(distmat)
     attr(distmat, "call") <- match.call()
     attr(distmat, "method") <- "Lingoes"
     return(distmat)

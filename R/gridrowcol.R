@@ -30,7 +30,7 @@
     area <- cbind.data.frame(area,w)
     names(area) <- c("cell","x","y")
     res$area <- area
-    d0 <- dist2mat(dist.quant(xy,1))
+    d0 <- as.matrix(dist.quant(xy,1))
     d0 <- 1*(d0<1.2)
     diag(d0) <-0
     pvoisi <- unlist(apply(d0,1,sum))

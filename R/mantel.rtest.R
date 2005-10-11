@@ -8,13 +8,13 @@
         stop("Non convenient dimension")
     permutedist <- function(m) {
         permutevec <- function(v, perm) return(v[perm])
-        m <- dist2mat(m)
+        m <- as.matrix(m)
         n <- ncol(m)
         w0 <- sample(n)
         mperm <- apply(m, 1, permutevec, perm = w0)
         mperm <- t(mperm)
         mperm <- apply(mperm, 2, permutevec, perm = w0)
-        return(mat2dist(t(mperm)))
+        return(as.dist(t(mperm)))
     }
     mantelnoneuclid <- function(m1, m2, nrepet) {
         obs <- cor(unclass(m1), unclass(m2))

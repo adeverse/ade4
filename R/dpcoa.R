@@ -17,7 +17,7 @@ dpcoa <- function(df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e-
     #####################
     # Use 1/2 dij^2 #
     #####################
-    d <- dist2mat(dis)
+    d <- as.matrix(dis)
     d <- d * d / 2
     result <- list()
     w.rel <- apply(df, 2, sum)

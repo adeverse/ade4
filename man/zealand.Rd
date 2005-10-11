@@ -21,7 +21,7 @@
 \examples{
 data(zealand)
 
-d0 = mat2dist(as.matrix(zealand$road))
+d0 = as.dist(as.matrix(zealand$road))
 d1 = cailliez (d0)
 d2 = lingoes(d0)
 s.label(zealand$xy,lab=as.character(1:13),neig=zealand$neig)

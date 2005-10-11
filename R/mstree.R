@@ -1,6 +1,6 @@
 mstree <- function(xdist, ngmax=1) { 
     if(!inherits (xdist,"dist")) stop ("Object of class 'dist' expected")
-    xdist <- dist2mat(xdist)
+    xdist <- as.matrix(xdist)
     nlig=nrow(xdist)
     xdist <- as.double(xdist)
     if (ngmax<=1) ngmax=1

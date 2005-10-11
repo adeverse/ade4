@@ -5,7 +5,7 @@
         stop("Distance matrix expected")
     if (full) 
         scannf <- FALSE
-    distmat <- dist2mat(d)
+    distmat <- as.matrix(d)
     n <- ncol(distmat)
     rownames <- attr(d, "Labels")
     if (any(is.na(d))) 

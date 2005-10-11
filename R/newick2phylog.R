@@ -352,7 +352,7 @@
     w <- diag(res$Wmat)
     w <- matrix(w, nleaves, nleaves)
     w <- w + t(w) - 2 * res$Wmat
-    w <- mat2dist(sqrt(w))
+    w <- as.dist(sqrt(w))
     attr(w, "Labels") <- leave.names
     
     res$Wdist <- w

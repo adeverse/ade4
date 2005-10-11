@@ -14,5 +14,5 @@
             break
         res <- res + auxi2
     }
-    return(mat2dist(res))
+    return(as.dist(res))
 }

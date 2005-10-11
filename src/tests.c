@@ -919,7 +919,7 @@ void testertracenu (    int *npermut,
         matpermut (init1, numero1, X1);
         matpermut (init2, numero2, X2);
 	
-	/* calcul de poids colonnes dans le cas d'une acm*/
+/* calcul de poids colonnes dans le cas d'une acm*/
 	
 	if (strcmp (typ1,"cm") == 0) {
 		for(j=1;j<=c1;j++){

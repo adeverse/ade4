@@ -37,7 +37,7 @@
     # le tableau est doublement centré par classe de lignes et de colonnes
     tabinit <- tabinit/dudi$lw
     tabinit <- t(t(tabinit)/dudi$cw)
-    tabinit <- data.frame(tabinit+wrmat)
+    tabinit <- data.frame(tabinit)
     ww <- as.dudi(tabinit, dudi$cw, dudi$lw, scannf = scannf, nf = nf, 
         call = match.call(), type = "witwit")
    class(ww) <- c("witwit", "coa", "dudi")

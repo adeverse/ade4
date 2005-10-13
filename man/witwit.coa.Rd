@@ -42,6 +42,7 @@ son usage en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{36}, 39
 \author{
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Correction by Campo Elías PARDO \email{cepardot@cable.net.co}
 }
 \examples{
 data(ardeche)

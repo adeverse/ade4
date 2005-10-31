@@ -3,7 +3,8 @@
 \title{Taxonomy}
 \description{
 This function creates an object of class \code{taxo} that is a sub-class of \code{data.frame}. Each column of the data frame must be a factor corresponding to a level \emph{j} of the taxonomy (genus, family, \dots).
-The levels of factor \emph{j} define some classes that must be completly included in classes of factor \emph{j+1}.
+The levels of factor \emph{j} define some classes that must be completly included in classes of factor \emph{j+1}.\cr
+A factor with exactly one level is not allowed. A factor with exactly one individual in each level is not allowed.
 }
 \usage{
 as.taxo(df)

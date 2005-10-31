@@ -257,46 +257,42 @@
 }
 
 
-"taxo2phylog" <- function (taxo, add.tools = TRUE) {
+taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE) 
+{
     if (!inherits(taxo, "taxo")) 
         stop("Object 'taxo' expected")
     nr <- nrow(taxo)
-    nc <- ncol(taxo)  
+    nc <- ncol(taxo)
+    for (k in 1:nc) { 
+        w <- as.character(k)
+        w <- paste("l", w, sep="")
+        w1 <- levels(taxo[,k])
+        if (abbrev) w1 <- abbreviate(w1)
+        levels(taxo[,k]) <- paste(w, w1,sep="")
+    }
     leaves.names <- row.names(taxo)
-    res <- paste("root;")
+    res <- paste(root,";",sep="")
     x <- taxo[, nc]
     xred <- as.character(levels(x))
     w <- "("
     for (i in xred) w <- paste(w, i, ",", sep = "")
     res <- paste(w, ")", res, sep = "")
-    res <- sub(",)", ")", res, ext = FALSE)  
-  
-    for (j in nc:2) {
+    res <- sub(",)", ")", res, ext = FALSE)
+    for (j in nc:1) {
         x <- taxo[, j]
-        y <- taxo[, j - 1]
+        if (j>1) y <- taxo[, j - 1] else y <- as.factor(leaves.names)
         for (k in 1:nlevels(x)) {
             w <- "("
             old <- as.character(levels(x)[k])
             yred <- unique(y[x == levels(x)[k]])
-            yred <- levels(y)[yred]
+            yred <- sort(as.character(yred))
             for (i in yred) w <- paste(w, i, ",", sep = "")
             w <- paste(w, ")", old, sep = "")
             w <- sub(",)", ")", w, ext = FALSE)
-            res <- sub(old, w, res, ext = FALSE)
+        res <- gsub(old, w, res, ext = FALSE)
         }
-    }          
-    x <- taxo[, 1]
-    y <- leaves.names
-    for (k in 1:nlevels(x)) {
-        w <- "("
-        old <- as.character(levels(x)[k])
-        yred <- y[x == levels(x)[k]]
-        for (i in yred) w <- paste(w, i, ",", sep = "")
-        w <- paste(w, ")", old, sep = "")
-        w <- sub(",)", ")", w, ext = FALSE)
-        res <- sub(old, w, res, ext = FALSE)
-    }         
-    return(newick2phylog(res, add.tools, call=match.call()))
+    }
+    return(newick2phylog(res, add.tools, call = match.call()))
 }
 
    

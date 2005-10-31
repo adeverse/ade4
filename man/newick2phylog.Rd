@@ -11,7 +11,7 @@ The function \code{newick2phylog.addtools} is an internal function called by \co
 \usage{
 newick2phylog(x.tre, add.tools = TRUE, call = match.call())
 hclust2phylog(hc, add.tools = TRUE)
-taxo2phylog(taxo, add.tools = TRUE)
+taxo2phylog(taxo, add.tools = FALSE, root="Root", abbrev=TRUE)
 newick2phylog.addtools(res, tol = 1e-07)
 }
 \arguments{
@@ -23,6 +23,8 @@ newick2phylog.addtools(res, tol = 1e-07)
   \item{taxo}{an object of class \code{taxo}}
   \item{res}{an object of class \code{phylog} (an internal argument of the function \code{newick2phylog})}
   \item{tol}{used in case 3 of \code{method} as a tolerance threshold for null eigenvalues}
+  \item{root}{a character string for the root of the tree}
+  \item{abbrev}{logical : if TRUE levels are abbreviated by column and two characters are added before}
 }
 \value{
 Return object of class \code{phylog}.

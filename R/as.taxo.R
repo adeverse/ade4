@@ -1,25 +1,29 @@
 "as.taxo" <-                                                             
-function (df)                                                            
-{                                                                        
-    if (!inherits(df, "data.frame"))                                     
-        stop("df is not a data.frame")                                   
-    nr <- nrow(df)                                                       
-    nc <- ncol(df)                                                       
-    for (i in 1:nc) if (!is.factor(df[, i]))                             
-        stop(paste("column", i, "of 'df' is not a factor"))              
-    for (i in 1:(nc - 1)) {                                              
-        t <- table(df[, c(i, i + 1)])                                    
-        w <- apply(t, 1, function(x) sum(x != 0))                        
+function (df) 
+{
+    if (!inherits(df, "data.frame")) 
+        stop("df is not a data.frame")
+    nr <- nrow(df)
+    nc <- ncol(df)
+    for (i in 1:nc) {
+        w <- df[, i]
+        if (!is.factor(w))  stop(paste("column", i, "of" ,deparse(substitute(df)),"is not a factor"))
+        if (nlevels(w) == 1) stop(paste("One level in column", i,  "of" ,deparse(substitute(df))))
+        if (nlevels(w) == length(w)) stop(paste("Column", i,  "of" ,deparse(substitute(df)),"has one row in each class"))
+    }
+    for (i in 1:(nc - 1)) {
+        t <- table(df[, c(i, i + 1)])
+        w <- apply(t, 1, function(x) sum(x != 0))
         if (any(w != 1)) {
-            print(w)                                                 
-            stop(paste("non hierarchical design", i, "in", i +           
-                1))   
-        }                                                   
-    }                                                                    
-    fac <- df[, nc]                                                      
-    for (i in (nc - 1):1) fac <- fac:df[, i]                             
-    df <- df[order(fac), ]                                               
-    class(df) <- c("data.frame", "taxo")                                 
-    return(df)                                                           
-}                                      
-                                                                                                                                                                                                                    
+            print(w)
+            stop(paste("non hierarchical design", i, "in", i + 
+                1))
+        }
+    }
+    fac <- as.character(df[, nc])
+    for (i in (nc - 1):1) fac <- paste(fac,as.character(df[, i]),sep=":")
+    df <- df[order(fac), ]
+    class(df) <- c("data.frame", "taxo")
+    return(df)
+}
+

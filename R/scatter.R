@@ -284,25 +284,28 @@
         cha <- paste(" ", cha, " ", sep = "")
         cex0 <- par("cex") * clabel
         
+        xh <- strwidth(cha, cex = cex0)
+        yh <- strheight(cha, cex = cex0) * 5/6
+        if ((xref[i] > yref[i]) & (xref[i] > -yref[i])) {
+            x1 <- x[i] + xh/2
+            y1 <- y[i]
+        }
+        else if ((xref[i] > yref[i]) & (xref[i] <= (-yref[i]))) {
+            x1 <- x[i]
+            y1 <- y[i] - yh
+        }
+        else if ((xref[i] <= yref[i]) & (xref[i] <= (-yref[i]))) {
+            x1 <- x[i] - xh/2
+            y1 <- y[i]
+        }
+        else if ((xref[i] <= yref[i]) & (xref[i] > (-yref[i]))) {
+            x1 <- x[i]
+            y1 <- y[i] + yh
+        }
+        # modif JT du 7 dec 2005
+        # le bloc if(boxes) ne doit contenir que la fonction rect, sinon ca plante
+        # si boxes = FALSE
         if (boxes) {
-            xh <- strwidth(cha, cex = cex0)
-            yh <- strheight(cha, cex = cex0) * 5/6
-            if ((xref[i] > yref[i]) & (xref[i] > -yref[i])) {
-                x1 <- x[i] + xh/2
-                y1 <- y[i]
-            }
-            else if ((xref[i] > yref[i]) & (xref[i] <= (-yref[i]))) {
-                x1 <- x[i]
-                y1 <- y[i] - yh
-            }
-            else if ((xref[i] <= yref[i]) & (xref[i] <= (-yref[i]))) {
-                x1 <- x[i] - xh/2
-                y1 <- y[i]
-            }
-            else if ((xref[i] <= yref[i]) & (xref[i] > (-yref[i]))) {
-                x1 <- x[i]
-                y1 <- y[i] + yh
-            }
             rect(x1 - xh/2, y1 - yh, x1 + xh/2, y1 + yh, col = "white", 
                 border = 1)
         }
@@ -325,9 +328,11 @@
         cex0 <- par("cex") * clabel
         x1 <- x[i]
         y1 <- y[i]
+        xh <- strwidth(cha, cex = cex0)
+        yh <- strheight(cha, cex = cex0) * 5/3
+        # modif JT du 7 dec 2005
+        # le bloc if(boxes) ne doit contenir que la fonction rect
         if (boxes) {
-            xh <- strwidth(cha, cex = cex0)
-            yh <- strheight(cha, cex = cex0) * 5/3
             rect(x1 - xh/2, y1 - yh/2, x1 + xh/2, y1 + yh/2, col= "white", border = coul[i])
         }
         text(x1, y1, cha, cex = cex0, col=coul[i])

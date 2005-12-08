@@ -59,7 +59,7 @@ d1 <- dist.binary(ecomor$habitat, 1)
 d2 <- dist.prop(ecomor$forsub, 5)
 d3 <- dist.prop(ecomor$diet, 5)
 d4 <- dist.quant(ecomor$morpho, 3)
-d5 <- taxo2phylog(ecomor$taxo)$Wdist
+d5 <- taxo2phylog(ecomor$taxo,add.tools=TRUE)$Wdist
 ecomor.kd <- kdist(d1, d2, d3, d4, d5)
 names(ecomor.kd) = c("habitat", "forsub", "diet", "morpho", "taxo")
 class(ecomor.kd)

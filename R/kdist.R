@@ -66,6 +66,7 @@
         }
         attr(retval, "size") <- size
         attr(retval, "labels") <- attr(list.obj[[1]],"Labels")
+	if(is.null(attr(retval, "labels"))) attr(retval, "labels") <- as.character(1:size)
         attr(retval, "euclid") <- res
         return(retval)
     }

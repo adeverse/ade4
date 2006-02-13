@@ -5,7 +5,6 @@
     if (cbreaks>=1) cbreaks <- floor(cbreaks)
     else if (cbreaks<0.1) cbreaks <- 2
     else cbreaks <-  1/floor(1/cbreaks)
-    layout.show(nf)
     ## tracé du nuage 
     s.label(dfxy,xax,yax,cgrid=cgrid,...)
     par(mar=c(0.1,0.1,0.1,0.1))

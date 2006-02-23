@@ -19,7 +19,7 @@ trees with large crown (crown > 1 \eqn{m^{2}}{m^2} in canopy) of transects 1 to 
 Greig-Smith, P. and Chadwick, M.J. (1965) Data on pattern within plant communities. III. \emph{Acacia-Capparis} 
 semi-desert scrub in the Sudan. \emph{Journal of Ecology}, \bold{53}, 465--474.
 }
-\reference{
+\references{
 Hill, M.O. (1973) The intensity of spatial pattern in plant communities. \emph{Journal of Ecology}, \bold{61}, 225--235.
 }
 \examples{

@@ -15,8 +15,8 @@ originality(phyl, method = 5)
 \Details{
 1 = Vane-Wright et al.'s (1991) node-counting index
 2 = May's (1990) branch-counting index
-3 = Nixon & Wheeler's (1991) unweighted index*, *based on the sum of units in binary values
-4 = Nixon & Wheeler's (1991) weighted index 
+3 = Nixon and Wheeler's (1991) unweighted index, based on the sum of units in binary values
+4 = Nixon and Wheeler's (1991) weighted index 
 5 = QE-based index
 }
 \value{

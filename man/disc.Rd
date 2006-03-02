@@ -33,8 +33,8 @@ is.euclid(humDNA.dist$regions)
 
 \dontrun{
 data(ecomor)
-ecomor.phylog <- taxo2phylog(ecomor$taxo)
-ecomor.dist <- disc(ecomor$habitat, ecomor.phylog$Wdist)
+dtaxo <- dist.taxo(ecomor$taxo)
+ecomor.dist <- disc(ecomor$habitat, dtaxo)
 ecomor.dist
 is.euclid(ecomor.dist)
 }

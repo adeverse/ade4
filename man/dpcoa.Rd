@@ -54,8 +54,8 @@ dpcoahum
 plot(dpcoahum, csize = 1.5)
 \dontrun{
 data(ecomor)
-ecomor.phylog <- taxo2phylog(ecomor$taxo)
-dpcoaeco <- dpcoa(ecomor$habitat, ecomor.phylog$Wdist, scan = FALSE, nf = 2)
+dtaxo <- dist.taxo(ecomor$taxo)
+dpcoaeco <- dpcoa(ecomor$habitat, dtaxo, scan = FALSE, nf = 2)
 dpcoaeco
 plot(dpcoaeco, csize = 1.5)}
 }

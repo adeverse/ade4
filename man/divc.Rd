@@ -34,8 +34,8 @@ Champely, S. and Chessel, D. (2002) Measuring biological diversity using Euclide
 }
 \examples{
 data(ecomor)
-ecomor.phylog <- taxo2phylog(ecomor$taxo)
-divc(ecomor$habitat, ecomor.phylog$Wdist)
+dtaxo <- dist.taxo(ecomor$taxo)
+divc(ecomor$habitat, dtaxo)
 
 data(humDNAm)
 divc(humDNAm$samples, sqrt(humDNAm$distances))

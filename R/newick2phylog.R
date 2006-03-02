@@ -285,7 +285,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
             w <- "("
             old <- as.character(levels(x)[k])
             yred <- unique(y[x == levels(x)[k]])
-            yred <- sort(as.character(yred))
+            yred <- as.character(yred)
             for (i in yred) w <- paste(w, i, ",", sep = "")
             w <- paste(w, ")", old, sep = "")
             w <- sub(",)", ")", w, ext = FALSE)

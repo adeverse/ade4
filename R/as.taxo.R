@@ -27,3 +27,18 @@ function (df)
     return(df)
 }
 
+"dist.taxo" <-
+function(taxo)
+{
+    if (!inherits(taxo, "taxo")) 
+        stop("class 'taxo' expected")
+    distance<-matrix(2,nrow(taxo),nrow(taxo))
+    diag(distance)<-0
+    for (k in ncol(taxo):1) {
+        toto=as.matrix( acm.disjonctif(as.data.frame(taxo[,k])))
+        distance = distance +  2*(1-toto%*%t(toto))
+    }
+    dimnames(distance) <- list(row.names(taxo),row.names(taxo))
+    return(as.dist(sqrt(distance)))
+} 
+

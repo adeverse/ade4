@@ -5,14 +5,14 @@
 # l'argument scaling décide si l'on normalise les données ou non
 # l'argument ranging décide si l'on adopte une échelle commune pour toutes les séries ou non
 # l'argument yranging permet de fixer l'échelle commune à toutes les séries lorsque ranging = TRUE. Par défaut, l'échelle
-    #commune est choisit en prenant les valeurs extrêmes de l'ensemble des valeurs
+# commune est choisit en prenant les valeurs extrêmes de l'ensemble des valeurs
 # l'argument joining décide si'lon rajoute ou non des traits verticaux qui relie chaque point à un axe horizontal
 # l'argument yjoining définit le niveau de l'axe horizontal. Par défaut, il s'agit de la moyenne de chaque série.
 # les autres arguments sont des arguments graphiques:
-    # ceti pour la taille des absisses
-    # cdot pour la taille des carrés
-    # csub pour la taille du titre de chaque série
-    # f.phylog pour la taille relative de la phylogénie
+# ceti pour la taille des absisses
+# cdot pour la taille des carrés
+# csub pour la taille du titre de chaque série
+# f.phylog pour la taille relative de la phylogénie
     
     if (!inherits(phylog, "phylog")) 
         stop("Non convenient data")
@@ -37,8 +37,8 @@
         values <- scalewt(values)
         values <- as.data.frame(values)
         names(values) <- names.var
-        }
-
+    }
+    
     w <- plot.phylog(x = phylog, y = y, clabel.leaves = 0, f.phylog = f.phylog, ...)
     mar.old <- par("mar")
     on.exit(par(mar = mar.old))
@@ -50,6 +50,7 @@
     x2 <- x1 + space
     fun1 <- function(x) {x1 + (x2 - x1) * (x - x1.use)/(x2.use - x1.use)}
     
+    ret <- cbind.data.frame(values,w$xy[,"y"])
     for(i in 1:nvar){
     
     if (ranging == TRUE){
@@ -91,8 +92,11 @@
         
     if (csub > 0)
         text(xleg[3], 1 - (1-max(w$xy$y))/3, names(values)[i], cex = par("cex") * csub)
+    
+    ret[,i] <- fun1(values[,i])
         
     x1 <- x1 + space + (w$xbase - max(w$xy$x))/2
     x2 <- x2 + space + (w$xbase - max(w$xy$x))/2
     }
+    return(invisible(ret))
 }

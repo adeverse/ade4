@@ -13,8 +13,8 @@ This data set gives genetic relationships among giant Galapagos tortoises with m
         belonging to six Galapagos islands and 10 microsatellites.}
         \item{loci.names}{is a vector of the names of loci.}
         \item{loci.eff}{is a vector of the number of alleles per locus.}
-        \item{pop.islands}{is a factor of the six islands concerned : Isabela, Santa_Cruz, Pinzon,
-        Santiago, San_Cristobal and Espanola.}
+        \item{pop.islands}{is a factor of the six islands concerned : Isabela, Santa-Cruz, Pinzon,
+        Santiago, San-Cristobal and Espanola.}
     }
 }
 \source{

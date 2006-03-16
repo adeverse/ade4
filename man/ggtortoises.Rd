@@ -1,38 +1,40 @@
 \name{ggtortoises}
 \alias{ggtortoises}
 \docType{data}
-\title{Genetic Relationships among giant Galapagos tortoises with microsatellites}
+\title{Microsatellites of Galapagos tortoises populations}
 \description{
-This data set gives genetic relationships among giant Galapagos tortoises with microsatellites. 
+This data set gives genetic relationships between Galapagos tortoises populations with 10 microsatellites. 
 }
 \usage{data(ggtortoises)}
 \format{
-    \code{ggtortoises} is a list of 4 components. 
+    \code{ggtortoises} is a list of 6 components. 
     \describe{
-        \item{tab}{contains the allelic frequencies for 17 populations of giant tortoises  
-        belonging to six Galapagos islands and 10 microsatellites.}
-        \item{loci.names}{is a vector of the names of loci.}
-        \item{loci.eff}{is a vector of the number of alleles per locus.}
-        \item{pop.islands}{is a factor of the six islands concerned : Isabela, Santa-Cruz, Pinzon,
-        Santiago, San-Cristobal and Espanola.}
+        \item{area}{is a data frame designed to be used in area.plot function.}
+        \item{ico}{is a list of three pixmap icons representing the tortoises morphotypes.}
+        \item{pop}{is a data frame containing meta informations about populations.}
+        \item{misc}{is a data frame containing the coordinates of the island labels.}
+        \item{loc}{is a numeric vector giving the number of alleles by marker.}
+        \item{tab}{is a data frame containing the number of alleles by populations for 10 microsatellites.} 
     }
 }
 \source{
-Ciofi C., Milinkovitch M.C., Gibbs J.P., Caccone A. and Powell J.R. (2002)
-Microsatellite analysis of genetic divergence among populations of giant Galapagos tortoises.
-\emph{Molecular Ecology}, \bold{11}, 2265--2283.
+M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Microsatellite analysis of genetic divergence among populations of giant galapagos tortoises.
+\emph{Molecular Ecology} \bold{11}: 2265-2283.
+}
+\references{
+M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Microsatellite analysis of genetic divergence among populations of giant galapagos tortoises.
+\emph{Molecular Ecology} \bold{11}: 2265-2283.
+
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps069.pdf} (in French).
 }
 \examples{
-\dontrun{
 data(ggtortoises)
-fac <- factor(rep(ggtortoises$loci.names, ggtortoises$loci.eff))
-w <- dudi.coa(data.frame(t(ggtortoises$tab)), scann = FALSE)
-wit <- within(w, fac, scann = FALSE)
-ggtortoises.ktab <- ktab.within(wit)
-
-plot(sepan(ggtortoises.ktab)) # 10 separated correspondence analyses
-plot(mcoa(ggtortoises.ktab, scan = FALSE))
-plot(mfa(ggtortoises.ktab, scan = FALSE))
-plot(statis(ggtortoises.ktab, scan = FALSE))
-}}
+a1 <- ggtortoises$area
+area.plot(a1)
+rect(min(a1$x), min(a1$y), max(a1$x), max(a1$y), col = "lightblue")
+invisible(lapply(split(a1, a1$id), function(x) polygon(x[, -1],col = "white")))
+s.label(ggtortoises$misc, ,grid=F,include.ori=F,addaxes=F,add.p=T)
+listico <- ggtortoises$ico[as.character(ggtortoises$pop$carap)]
+s.logo(ggtortoises$pop,listico,add.p=T)
+}
 \keyword{datasets}

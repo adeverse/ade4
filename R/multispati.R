@@ -2,16 +2,16 @@
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected")
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
-    nvar = ncol (dudi$tab)
-    dudi$cw = dudi$cw
-    row.w = dudi$lw
-    fun = function (x) lag.listw(listw,x,TRUE)
-    tablag = apply(dudi$tab,2,fun)
-    covar = t(tablag)%*%as.matrix((dudi$tab*dudi$lw))
-    covar = (covar+t(covar))/2
+    nvar <- ncol (dudi$tab)
+    dudi$cw <- dudi$cw
+    row.w <- dudi$lw
+    fun <- function (x) lag.listw(listw,x,TRUE)
+    tablag <- apply(dudi$tab,2,fun)
+    covar <- t(tablag)%*%as.matrix((dudi$tab*dudi$lw))
+    covar <- (covar+t(covar))/2
     covar <- covar * sqrt(dudi$cw)
     covar <- t(t(covar) * sqrt(dudi$cw))
-    covar = eigen(covar, sym=TRUE)  
+    covar <- eigen(covar, sym=TRUE)  
     if (scannf) {
         barplot(covar$values)
         cat("Select the first number of axes (>=1): ")
@@ -20,32 +20,32 @@
         nfnega <- as.integer(readLines(n = 1))
     }
     if (nfposi <= 0)  nfposi <- 1
-    if (nfnega<=0) nfnega = 0       
-    res=list()
+    if (nfnega<=0) nfnega <- 0       
+    res <- list()
     res$eig <- covar$values
     res$nfposi <- nfposi
     res$nfnega <- nfnega
-    agarder = c(1:nfposi,if (nfnega>0) (nvar-nfnega+1):nvar else NULL)
-    agarder = unique (agarder)
-    agarder = agarder[which(agarder<=nvar)]
-    agarder = agarder[which(agarder>=1)]
+    agarder <- c(1:nfposi,if (nfnega>0) (nvar-nfnega+1):nvar else NULL)
+    agarder <- unique (agarder)
+    agarder <- agarder[which(agarder<=nvar)]
+    agarder <- agarder[which(agarder>=1)]
     dudi$cw[which(dudi$cw == 0)] <- 1
     auxi <- data.frame(covar$vectors[, agarder] /sqrt(dudi$cw))
     names(auxi) <- paste("CS", agarder, sep = "")
     row.names(auxi) <- names(dudi$tab)
     res$c1 <- auxi                     
   
-    auxi = as.matrix(auxi)*dudi$cw
-    auxi1 = as.matrix(dudi$tab)%*%auxi
-    auxi1 = data.frame(auxi1)
-    names(auxi1)=names(res$c1)
-    row.names(auxi1) = row.names(dudi$tab)
-    res$li = auxi1
-    auxi1 = as.matrix(tablag)%*%auxi
-    auxi1 = data.frame(auxi1)
-    names(auxi1)=names(res$c1)
-    row.names(auxi1) = row.names(dudi$tab)    
-    res$ls = auxi1
+    auxi <- as.matrix(auxi)*dudi$cw
+    auxi1 <- as.matrix(dudi$tab)%*%auxi
+    auxi1 <- data.frame(auxi1)
+    names(auxi1) <- names(res$c1)
+    row.names(auxi1) <- row.names(dudi$tab)
+    res$li <- auxi1
+    auxi1 <- as.matrix(tablag)%*%auxi
+    auxi1 <- data.frame(auxi1)
+    names(auxi1) <- names(res$c1)
+    row.names(auxi1) <-  row.names(dudi$tab)    
+    res$ls <- auxi1
     
     auxi <- as.matrix(res$c1) * unlist(dudi$cw)
     auxi <- data.frame(t(as.matrix(dudi$c1)) %*% auxi)
@@ -58,6 +58,8 @@
     class(res) <- "multispati"
     return(res)
 }
+
+
 
 "summary.multispati" <- function (object, ...) {
     util <- function(n) {
@@ -82,13 +84,13 @@
     listw <- eval(appel$listw, sys.frame(0))
     
     # les scores de l'analyse de base
-    nf = dudi$nf
-    eig=dudi$eig[1:nf]
-    cum=cumsum (dudi$eig) [1:nf]
-    ratio = cum/sum(dudi$eig)
-    w = apply(dudi$l1,2,lag.listw,x=listw)
-    moran = apply(w*as.matrix(dudi$l1)*dudi$lw,2,sum)
-    res=data.frame(var=eig,cum=cum,ratio=ratio, moran=moran)
+    nf <- dudi$nf
+    eig <- dudi$eig[1:nf]
+    cum <- cumsum (dudi$eig) [1:nf]
+    ratio <- cum/sum(dudi$eig)
+    w <- apply(dudi$l1,2,lag.listw,x=listw)
+    moran <- apply(w*as.matrix(dudi$l1)*dudi$lw,2,sum)
+    res <- data.frame(var=eig,cum=cum,ratio=ratio, moran=moran)
     cat("\nScores from the first duality diagramm:\n")
     print(res)
     
@@ -97,19 +99,65 @@
     nfnega <- object$nfnega
     nvar <- nrow(object$c1)
     nf <- nfposi + nfnega
-    agarder = c(1:nfposi,if (nfnega>0) (nvar-nfnega+1):nvar else NULL)
-    eig = object$eig[agarder]
-    varspa=norm.w(object$li,dudi$lw)
-    moran = apply(as.matrix(object$li)*as.matrix(object$ls)*dudi$lw,2,sum)
-    res=data.frame(eig=eig,var=varspa,moran=moran/varspa)
+    agarder <- c(1:nfposi,if (nfnega>0) (nvar-nfnega+1):nvar else NULL)
+    eig <- object$eig[agarder]
+    varspa <- norm.w(object$li,dudi$lw)
+    moran <- apply(as.matrix(object$li)*as.matrix(object$ls)*dudi$lw,2,sum)
+    res <- data.frame(eig=eig,var=varspa,moran=moran/varspa)
     
     cat("\nEigenvalues decomposition:\n")
     print(res)
 }
 
-"print.multispati" <- function (x, ...) {
 
+
+print.multispati <- function(x, ...)
+{
+    cat("Multispati object \n")
+    cat("class: ")
+    cat(class(x))
+    cat("\n$call: ")
+    print(x$call)
+    cat("\n$nfposi:", x$nfposi, "axis-components saved")
+    cat("\n$nfnega:", x$nfnega, "axis-components saved")
+    #cat("\n$rank: ")
+    #cat(x$rank)
+    cat("\nPositive eigenvalues: ")
+    l0 <- sum(x$eig >= 0)
+    cat(signif(x$eig, 4)[1:(min(5, l0))])
+    if (l0 > 5) 
+        cat(" ...\n")
+    else cat("\n")  
+    cat("Negative eigenvalues: ")
+    l0 <- sum(x$eig <= 0)
+    cat(sort(signif(x$eig, 4))[1:(min(5, l0))])
+    if (l0 > 5) 
+        cat(" ...\n")
+    else cat("\n")
+    cat('\n')
+    sumry <- array("", c(1, 4), list(1, c("vector", "length", 
+        "mode", "content")))
+   # sumry[1, ] <- c("$cw", length(x$cw), mode(x$cw), "column weights")
+   # sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weights")
+    sumry[1, ] <- c('$eig', length(x$eig), mode(x$eig), 'eigen values')
+    class(sumry) <- "table"
+    print(sumry)
+    cat("\n")
+    sumry <- array("", c(4, 4), list(1:4, c("data.frame", "nrow", "ncol", "content")))
+    #sumry[1, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "modified array")
+    sumry[1, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
+    sumry[2, ] <- c("$li", nrow(x$li), ncol(x$li), "row coordinates")
+    sumry[3, ] <- c("$ls", nrow(x$ls), ncol(x$ls), 'lag vector coordinates')
+    sumry[4, ] <- c("$as", nrow(x$as), ncol(x$as), 'inertia axes onto multispati axes')
+    
+    class(sumry) <- "table"
+    print(sumry)
+    cat("other elements: ")
+    if (length(names(x)) > 8) 
+        cat(names(x)[9:(length(names(x)))], "\n")
+    else cat("NULL\n")
 }
+
 
 
 "plot.multispati" <- function (x, xax = 1, yax = 2, ...) {
@@ -119,7 +167,7 @@
     appel <- as.list(x$call)
     dudi <- eval(appel$dudi, sys.frame(0))
     listw <- eval(appel$listw, sys.frame(0))
-    nf = x$nfposi + x$nfnega
+    nf <- x$nfposi + x$nfnega
     if ((nf == 1) || (xax == yax)) {
         sco.quant(x$li[, 1], dudi$tab)
         return(invisible())
@@ -132,14 +180,14 @@
     {
         opar <- par(mar = par("mar"))
         on.exit(par(opar))
-        m=length(x$eig)
+        m <- length(x$eig)
         par(mar = c(0.8, 2.8, 0.8, 0.8))
-        col.w = rep (grey(1), m) # elles sont toutes blanches
-        col.w[1:x$nfposi] = grey(0.8)
+        col.w <- rep(grey(1), m) # elles sont toutes blanches
+        col.w[1:x$nfposi] <- grey(0.8)
         if (x$nfnega>0) col.w[m:(m-x$nfnega+1)] = grey(0.8)
-        j1 = xax
+        j1 <- xax
         if (j1>x$nfposi) j1 = j1-x$nfposi +m -x$nfnega
-        j2 = yax
+        j2 <- yax
         if (j2>x$nfposi) j2 = j2-x$nfposi +m -x$nfnega
         col.w[c(j1,j2)] = grey(0)
          barplot(x$eig, col = col.w)

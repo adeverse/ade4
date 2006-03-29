@@ -38,10 +38,18 @@ We note X the data frame with the variables, Q the column weights matrix
 and D the row weights matrix associated to the duality diagram \emph{dudi}.
 We note L the neighbouring weights matrix associated to  \emph{listw}.
 Then, the \code{'multispati'} analysis gives principal axes v that maximize
-the spatial autocorrelation : \deqn{I(XQv) = \frac{v^{t}Q^{t}X^{t}DLXQv}{v^{t}Q^{t}X^{t}DXQv}}{I(XQv) = t(v)t(Q)t(X)DLXQv / t(v)t(Q)t(X)DXQv}
+the product of spatial autocorrelation and inertia of row scores : 
+\deqn{I(XQv)*\|XQv\|^2 = v^{t}Q^{t}X^{t}DLXQv}{I(XQv)*\|\|XQv\|\|^2 = t(v)t(Q)t(X)DLXQv}
 }
 \value{
-Returns an object of class \code{multispati}.
+Returns an object of class \code{multispati}, which contains the following elements :
+	\item{eig}{a numeric vector containing the eigenvalues}
+	\item{nfposi}{integer, number of kept axes associated to positive eigenvalues}
+	\item{nfnega}{integer, number of kept axes associated to negative eigenvalues}
+	\item{c1}{principle axes (v), data frame with p rows and (nfposi + nfnega) columns}
+	\item{li}{principal components (XQv), data frame with n rows and (nfposi + nfnega) columns}
+	\item{ls}{lag vector onto the principal axes (LXQv), data frame with n rows and (nfposi + nfnega) columns}
+	\item{as}{principal axes of the dudi analysis (u) onto principal axes of multispati (t(u)Qv), data frame with dudi\$nf rows and (nfposi + nfnega) columns}
 }
 \references{
 Grunsky, E. C. and Agterberg, F. P. (1988) Spatial and multivariate analysis of geochemical data from metavolcanic rocks in the Ben Nevis area, Ontario. \emph{Mathematical Geology}, \bold{20}, 825--861.

@@ -10,7 +10,7 @@ randtest is a generic function. It proposes methods for the following objects \c
 \usage{
     randtest(xtest, \dots)
     plot.randtest(x, nclass = 10, coeff = 1, \dots)
-    as.randtest (sim, obs, call = match.call())
+    as.randtest (sim, obs,alter=c("greater", "less", "two-sided"), call = match.call())
     print.randtest (x, \dots)
 }
 \arguments{
@@ -21,6 +21,8 @@ randtest is a generic function. It proposes methods for the following objects \c
 \item{coeff}{to fit the magnitude of the graph}
 \item{sim}{a numeric vector of simulated values}
 \item{obs}{a numeric vector of an observed value}
+\item{alter}{a character string specifying the alternative hypothesis,
+  must be one of "greater" (default), "less" or "two-sided"}
 \item{call}{a call order}
 }
 \value{

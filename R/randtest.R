@@ -15,7 +15,7 @@
     else if(res$alter=="two-sided") {
       res$pvalue <- (sum(abs(sim) >= abs(obs)) + 1)/(length(sim) + 1)
     }
-    res$expvar <- c(Expectation=mean(c(obs,sim)),Variance=var(c(obs,sim)))
+    res$expvar <- c(Std.Obs=(res$obs-mean(c(obs,sim)))/sqrt(var(c(obs,sim))),Expectation=mean(c(obs,sim)),Variance=var(c(obs,sim)))
     res$call <- call
     class(res) <- "randtest"
     return(res)
@@ -30,8 +30,9 @@
     cat("\nObservation:", x$obs, "\n")
     cat("\nBased on", x$rep, "replicates\n")
     cat("Simulated p-value:", x$pvalue, "\n")
-    cat("Alternative hypothesis:", x$alter, "\n")
-    print(x$expvar)
+    cat("Alternative hypothesis:", x$alter, "\n\n")
+    if(x$alter=="two-sided")
+      print(x$expvar)
 }
 
 "plot.randtest" <- function (x, nclass = 10, coeff = 1, ...) {

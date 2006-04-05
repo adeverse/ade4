@@ -6,6 +6,7 @@
     res <- list(sim = sim, obs = obs)
     res$alter <- match.arg(alter)
     res$rep <- length(sim)
+    res$expvar <- c(Std.Obs=(res$obs-mean(sim))/sd(sim),Expectation=mean(sim),Variance=var(sim))
     if(res$alter=="greater"){
       res$pvalue <- (sum(sim >= obs) + 1)/(length(sim) + 1)
     }
@@ -13,9 +14,10 @@
       res$pvalue <- (sum(sim <= obs) + 1)/(length(sim) + 1)
     }
     else if(res$alter=="two-sided") {
-      res$pvalue <- (sum(abs(sim) >= abs(obs)) + 1)/(length(sim) + 1)
+      sim0 <- abs(sim-mean(sim))
+      obs0 <- abs(obs-mean(sim))
+      res$pvalue <- (sum(sim0 >= obs0) + 1)/(length(sim) +1)
     }
-    res$expvar <- c(Std.Obs=(res$obs-mean(c(obs,sim)))/sqrt(var(c(obs,sim))),Expectation=mean(c(obs,sim)),Variance=var(c(obs,sim)))
     res$call <- call
     class(res) <- "randtest"
     return(res)
@@ -31,8 +33,7 @@
     cat("\nBased on", x$rep, "replicates\n")
     cat("Simulated p-value:", x$pvalue, "\n")
     cat("Alternative hypothesis:", x$alter, "\n\n")
-    if(x$alter=="two-sided")
-      print(x$expvar)
+    print(x$expvar)
 }
 
 "plot.randtest" <- function (x, nclass = 10, coeff = 1, ...) {

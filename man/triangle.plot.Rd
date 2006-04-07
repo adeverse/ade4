@@ -39,7 +39,7 @@ triangle.biplot (ta1, ta2, label = as.character(1:nrow(ta1)),
   \item{box}{a logical value indicating whether a box around the current plot should be drawn}
 }
 \value{
-Returns a matrix \code{xy} containing the coordinates used for the plot. The graph can be supplemented in various ways.
+\code{triangle.plot} returns an invisible matrix  containing the coordinates used for the plot. The graph can be supplemented in various ways.
 }  
 \author{
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

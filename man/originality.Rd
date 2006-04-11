@@ -12,7 +12,7 @@ originality(phyl, method = 5)
   \item{phyl}{an object of class phylog}
   \item{method}{a vector containing integers between 1 and 5. }
 }
-\Details{
+\details{
 1 = Vane-Wright et al.'s (1991) node-counting index
 2 = May's (1990) branch-counting index
 3 = Nixon and Wheeler's (1991) unweighted index, based on the sum of units in binary values

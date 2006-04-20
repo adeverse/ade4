@@ -59,7 +59,7 @@ par(mfrow = c(3,4))
 irq0 <- data.frame(scale(irishdata$tab, scale = TRUE))
 for (i in 1:12) {
     z <- irq0[,i] ; nam <- names(irq0)[i]
-    s.value(irishdata$xy, irq0[,1], area = irishdata$area, csi = 3,
+    s.value(irishdata$xy, z, area = irishdata$area, csi = 3,
     csub = 2, sub = nam, cleg = 1.5, cgrid = 0, inc = FALSE,
     xlim = c(16,205), ylim = c(-50,268), adda = FALSE, grid = FALSE)
 }

@@ -1,3 +1,0 @@
-Put C/Fortran code here
-If you have compiled code add a .First.lib() function
-in the R/ subdirectory to load it.

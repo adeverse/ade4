@@ -23,9 +23,13 @@
     eig <- svd1$d^2
     rank <- sum((eig/eig[1]) > tol)
     if (scannf) {
-        barplot(eig[1:rank])
-        cat("Select the number of axes: ")
-        nf <- as.integer(readLines(n = 1))
+        if (exists("ade4TkGUIFlag") && ade4TkGUIFlag) {
+            nf <- chooseaxes(eig, rank)
+        } else {
+            barplot(eig[1:rank])
+            cat("Select the number of axes: ")
+            nf <- as.integer(readLines(n = 1))
+        }
     }
     if (nf <= 0) 
         nf <- 2

@@ -36,9 +36,13 @@
         warning("Non euclidean distance")
     r <- sum(lambda > (lambda[1] * tol))
     if (scannf) {
-        barplot(lambda)
-        cat("Select the number of axes: ")
-        nf <- as.integer(readLines(n = 1))
+        if (exists("ade4TkGUIFlag") && ade4TkGUIFlag) {
+            nf <- chooseaxes(lambda, length(lambda))
+        } else {
+            barplot(lambda)
+            cat("Select the number of axes: ")
+            nf <- as.integer(readLines(n = 1))
+        }
     }
     if (nf <= 0) 
         nf <- 2

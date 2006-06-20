@@ -39,9 +39,13 @@
         res <- list(tab = tabcoiner, cw = dudiX$cw, lw = dudiY$cw)
         rank <- sum((w1$values/w1$values[1]) > tol)
         if (scannf) {
-            barplot(w1$values[1:rank])
-            cat("Select the number of axes: ")
-            nf <- as.integer(readLines(n = 1))
+            if (exists("ade4TkGUIFlag") && ade4TkGUIFlag) {
+                nf <- chooseaxes(w1$values, rank)
+            } else {
+                barplot(w1$values[1:rank])
+                cat("Select the number of axes: ")
+                nf <- as.integer(readLines(n = 1))
+            }
         }
         if (nf <= 0) 
             nf <- 2

@@ -23,6 +23,7 @@ for 404 microsatellite markers.
         a vector containing the number of alleles by loci \code{hdpg$locus$chromosome} 
         \code{hdpg$locus$maposition} indicating the position of the locus in the chromosome}
 }
+}
 \details{
 The rows of \code{hdgp$pop} are the names of the 52 populations belonging to the geographic regions
 contained in the rows of hdgp$region. The chosen regions are: America, Asia, Europe, 

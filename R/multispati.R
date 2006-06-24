@@ -1,8 +1,10 @@
 "multispati" <- function(dudi, listw, scannf=TRUE, nfposi=2, nfnega=0) {
+    if(!require(spdep,quietly=TRUE)) stop("the library spdep is required; please install the package")
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected")
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
-    if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
-    nvar <- ncol (dudi$tab)
+    if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected")
+    thres <- 1e-14
+    nvar <- ncol(dudi$tab)
     dudi$cw <- dudi$cw
     row.w <- dudi$lw
     fun <- function (x) lag.listw(listw,x,TRUE)
@@ -15,7 +17,8 @@
     if (scannf) {
         barplot(covar$values)
         cat("Select the first number of axes (>=1): ")
-        nfposi <- as.integer(readLines(n = 1) )
+        nfposi <- as.integer(readLines(n = 1))
+        
         cat("Select the second number of axes (>=0): ")
         nfnega <- as.integer(readLines(n = 1))
     }
@@ -23,18 +26,22 @@
     if (nfnega<=0) nfnega <- 0       
     res <- list()
     res$eig <- covar$values
+    if(nfposi > sum(res$eig > thres)){
+          nfposi <- sum(res$eig > thres)
+          warning(paste("There are only",sum(res$eig>thres),"positive factors."))
+        }
+    if(nfnega > sum(res$eig < -thres)){
+          nfnega <- sum(res$eig < -thres)
+          warning(paste("There are only",sum(res$eig< -thres),"negative factors."))
+        }
     res$nfposi <- nfposi
     res$nfnega <- nfnega
     agarder <- c(1:nfposi,if (nfnega>0) (nvar-nfnega+1):nvar else NULL)
-    agarder <- unique (agarder)
-    agarder <- agarder[which(agarder<=nvar)]
-    agarder <- agarder[which(agarder>=1)]
     dudi$cw[which(dudi$cw == 0)] <- 1
     auxi <- data.frame(covar$vectors[, agarder] /sqrt(dudi$cw))
     names(auxi) <- paste("CS", agarder, sep = "")
     row.names(auxi) <- names(dudi$tab)
     res$c1 <- auxi                     
-  
     auxi <- as.matrix(auxi)*dudi$cw
     auxi1 <- as.matrix(dudi$tab)%*%auxi
     auxi1 <- data.frame(auxi1)
@@ -46,19 +53,15 @@
     names(auxi1) <- names(res$c1)
     row.names(auxi1) <-  row.names(dudi$tab)    
     res$ls <- auxi1
-    
     auxi <- as.matrix(res$c1) * unlist(dudi$cw)
     auxi <- data.frame(t(as.matrix(dudi$c1)) %*% auxi)
     row.names(auxi) <- names(dudi$li)
     names(auxi) <- names(res$li)
     res$as <- auxi
-
-
     res$call <- match.call()
     class(res) <- "multispati"
     return(res)
 }
-
 
 
 "summary.multispati" <- function (object, ...) {
@@ -73,8 +76,8 @@
         return(norm)
     }
 
-    if (!inherits(object, "multispati")) 
-        stop("to be used with 'multispati' object")
+    if (!inherits(object, "multispati"))stop("to be used with 'multispati' object")
+    if(!require(spdep,quietly=TRUE)) stop("the library spdep is required; please install the package")
     cat("\nMultivariate Spatial Analysis\n")
     cat("Call: ")
     print(object$call)
@@ -137,14 +140,11 @@ print.multispati <- function(x, ...)
     cat('\n')
     sumry <- array("", c(1, 4), list(1, c("vector", "length", 
         "mode", "content")))
-   # sumry[1, ] <- c("$cw", length(x$cw), mode(x$cw), "column weights")
-   # sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weights")
     sumry[1, ] <- c('$eig', length(x$eig), mode(x$eig), 'eigen values')
     class(sumry) <- "table"
     print(sumry)
     cat("\n")
     sumry <- array("", c(4, 4), list(1:4, c("data.frame", "nrow", "ncol", "content")))
-    #sumry[1, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "modified array")
     sumry[1, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
     sumry[2, ] <- c("$li", nrow(x$li), ncol(x$li), "row coordinates")
     sumry[3, ] <- c("$ls", nrow(x$ls), ncol(x$ls), 'lag vector coordinates')

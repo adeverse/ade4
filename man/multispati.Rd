@@ -61,7 +61,9 @@ Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spa
 Wartenberg, D. E. (1985) Multivariate spatial correlation: a method for exploratory geographical analysis. \emph{Geographical Analysis}, \bold{17}, 263--283.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sebastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+Thibaut Jombart \email{jombart@biomserv.univ-lyon1.fr}
+
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
 \examples{

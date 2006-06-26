@@ -8,25 +8,27 @@ for 404 microsatellite markers.
 }
 \usage{data(hdpg)}
 \format{
-    \code{hdpg} is a list of 3 components. 
-    \describe{
-         \item{tab}{is a data frame with the genotypes of 1066 individuals encoded with 6 characters,
-         (individuals in row, locus in column), for example '123098' for a heterozygote carrying alleles '123' and '098', 
-         '123123' for a homozygote carrying two alleles '123' and '000000' for a not classified locus (missing data)}
-         \item{ind}{is a a data frame with 4 columns containing information about the 1066 individuals
-          \code{hdgp$ind$id} containing the Diversity Panel identification number of each individual,
-          and three factors \code{hdgp$ind$sex},
-          \code{hdgp$ind$population} and \code{hdgp$ind$region} containing the names of 
-          the 52 populations belonging to 7 major geographic regions (see \Details)}
-        \item{locus}{is a dataframe containing four columns : \code{hdgp$locus$marknames} 
-        a vector of names of the microsatellite markers, \code{hdpg$locus$allbyloc} 
-        a vector containing the number of alleles by loci \code{hdpg$locus$chromosome} 
-        \code{hdpg$locus$maposition} indicating the position of the locus in the chromosome}
-}
+\code{hdpg} is a list of 3 components. \cr
+   \describe{
+   \item{tab}{ is a data frame with the genotypes of 1066 individuals 
+      encoded with 6 characters (individuals in row, locus in column), for 
+      example \sQuote{123098} for a heterozygote carrying alleles \sQuote{123} and \sQuote{098}, 
+      \sQuote{123123} for a homozygote carrying two alleles \sQuote{123} and,
+      \sQuote{000000} for a not classified locus (missing data). }
+   \item{ind}{ is a a data frame with 4 columns containing information about the 1066 individuals: 
+      \code{hdpg$ind$id} containing the Diversity Panel identification number of each individual,
+      and three factors \code{hdpg$ind$sex}, \code{hdpg$ind$population} and \code{hdpg$ind$region} 
+      containing the names of the 52 populations belonging to 7 major geographic regions (see details). }
+   \item{locus}{ is a dataframe containing four columns: \code{hdpg$locus$marknames} 
+      a vector of names of the microsatellite markers, \code{hdpg$locus$allbyloc} 
+      a vector containing the number of alleles by loci, \code{hdpg$locus$chromosome} 
+      a factor defining a number for one chromosome and,
+      \code{hdpg$locus$maposition} indicating the position of the locus in the chromosome. }
+      }
 }
 \details{
-The rows of \code{hdgp$pop} are the names of the 52 populations belonging to the geographic regions
-contained in the rows of hdgp$region. The chosen regions are: America, Asia, Europe, 
+The rows of \code{hdpg$pop} are the names of the 52 populations belonging to the geographic regions
+contained in the rows of \code{hdpg$region}. The chosen regions are: America, Asia, Europe, 
 Middle East North Africa, Oceania, Subsaharan AFRICA. \cr
 
 The 52 populations are: Adygei, Balochi, Bantu, Basque, Bedouin, Bergamo, Biaka Pygmies, 
@@ -36,7 +38,7 @@ Mbuti Pygmies, Melanesian, Miaozu, Mongola, Mozabite, Naxi, NewGuinea, Nilote, O
 Oroqen, Palestinian, Pathan, Pima, Russian, San, Sardinian, She, Sindhi, Surui, Tu, Tujia, Tuscan,
 Uygur, Xibo, Yakut, Yizu, Yoruba. \cr
 
-\code{hdgp$freq} is a data frame with 52 rows, 
+\code{hdpg$freq} is a data frame with 52 rows, 
 corresponding to the 52 populations described above, and 4992 microsatellite markers.
 }
 \source{

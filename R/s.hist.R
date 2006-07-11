@@ -83,6 +83,7 @@
     scatterutil.eti (sqrt(0.5)*leg, sqrt(0.5)*leg, as.character(leg), clabel=1)
     ## restauration des paramètres
     par(def.par)#- reset to default
+    invisible(match.call())
 }
 
 

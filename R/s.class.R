@@ -52,4 +52,5 @@
     if (clabel > 0) 
         scatterutil.eti(coox, cooy, label, clabel, coul = col)
     box()
+    invisible(match.call())
 }

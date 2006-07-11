@@ -89,4 +89,5 @@
         scatterutil.sub(sub, csub, possub)
     if (box) 
         box()
+    invisible(match.call())
 }

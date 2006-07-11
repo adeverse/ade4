@@ -53,4 +53,5 @@
         scatterutil.eti(a, b, label, clabel)
     }
     box()
+    invisible(match.call())
 }

@@ -32,7 +32,8 @@
     }
     if (clabel > 0) 
         scatterutil.eti(coo$x, coo$y, label, clabel)
-    if (cpoint > 0) 
+    if (cpoint > 0 & clabel < 1e-6) 
         points(coo$x, coo$y, pch = pch, cex = par("cex") * cpoint)
     box()
+    invisible(match.call())
 }

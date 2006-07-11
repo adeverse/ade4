@@ -85,4 +85,5 @@
         print("not yet implemented")
     }
     if (!add.plot) box()
+    invisible(match.call())
 }

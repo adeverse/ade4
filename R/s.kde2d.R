@@ -44,6 +44,7 @@
     # col0 = heat.colors(6)
     # col0 = rainbow(6)
     col0="blue"
-    contour(xykde,add=TRUE,lwd=2,col=col0,levels=lev,drawlabels=FALSE) 
+    contour(xykde,add=TRUE,lwd=2,col=col0,levels=lev,drawlabels=FALSE)
+    invisible(match.call())
  }
 

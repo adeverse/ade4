@@ -44,4 +44,5 @@
     if (clabel > 0) 
         scatterutil.eti(unlist(coox), unlist(cooy), label, clabel)
     box()
+    invisible(match.call())
 }

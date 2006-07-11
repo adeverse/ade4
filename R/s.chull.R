@@ -24,4 +24,5 @@
         scatterutil.eti(coox, cooy, label, clabel, coul = col)
     }
     box()
+    invisible(match.call())
 }

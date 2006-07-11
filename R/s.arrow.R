@@ -41,4 +41,5 @@
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
     box()
+    invisible(match.call())
 }

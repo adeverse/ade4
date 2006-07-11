@@ -77,4 +77,5 @@
     if (clabel > 0) 
         scatterutil.eti(w[, 1], w[, 2], label, clabel)
     box()
+    invisible(match.call())
 }

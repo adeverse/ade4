@@ -44,5 +44,6 @@ s.image <- function(dfxy, z, xax=1, yax=2, span=0.5,
     }
     mod = matrix(mod,ngrid,ngrid)
     if (image.plot) image(xg,yg,mod,add=TRUE, col=gray((32:0)/32))
-    if (contour.plot) contour(xg,yg,mod,add=TRUE,labcex=1,lwd=2,nlevels=5,levels=pretty(z,7)[-c(1,7)],col="red")  
+    if (contour.plot) contour(xg,yg,mod,add=TRUE,labcex=1,lwd=2,nlevels=5,levels=pretty(z,7)[-c(1,7)],col="red")
+    invisible(match.call())
 }

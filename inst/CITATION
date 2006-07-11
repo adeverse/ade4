@@ -1,0 +1,18 @@
+citHeader("To cite ade4 in publications use:")
+
+citEntry(entry="Article",
+	title = "The ade4 package-{I}- {O}ne-table methods",
+        author = "Chessel, D. and Dufour, A.-.B. and Thioulouse, J.",
+	journal = "R News",
+  	year = "2004",
+	volume = "4",
+	pages = "5-10",
+	         
+        textVersion = 
+        paste("Chessel, D. and Dufour, A.-.B. and Thioulouse, J. ",
+	       "(2004): ", 
+               "The ade4 package-I- One-table methods. ",
+               "R News. ",
+               "4: 5-10.",
+               sep="")
+         )

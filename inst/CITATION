@@ -2,7 +2,7 @@ citHeader("To cite ade4 in publications use:")
 
 citEntry(entry="Article",
 	title = "The ade4 package-{I}- {O}ne-table methods",
-        author = "Chessel, D. and Dufour, A.-.B. and Thioulouse, J.",
+        author = personList(as.person("D. Chessel"),as.person("A.-.B. Dufour"), as.person("J. Thioulouse")),
 	journal = "R News",
   	year = "2004",
 	volume = "4",

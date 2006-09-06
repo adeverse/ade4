@@ -57,7 +57,7 @@
 
     calcul.rowprof<- function(k) {
         w1 <- dfrowprof[k,]
-        if (sum(w1)<1e-07) stop (paste("n°",k,"profile without data"))
+        if (sum(w1)<1e-07) stop (paste("number",k,"profile without data"))
         w1 <- w1/sum(w1)
         mx <- sum(w1*x)
         my <- sum(w1*y)

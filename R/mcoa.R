@@ -309,7 +309,7 @@
     Xsepan <- sepan(X, nf)
     rank.fac <- factor(rep(1:nbloc, Xsepan$rank))
     for (i in 1:nbloc) {
-        cat("Array n°", i, names(X)[[i]], "Rows", nrow(X[[i]]), 
+        cat("Array number", i, names(X)[[i]], "Rows", nrow(X[[i]]), 
             "Cols", ncol(X[[i]]), "\n")
         eigval <- unlist(object$lambda[i, ])
         eigval <- zapsmall(eigval)

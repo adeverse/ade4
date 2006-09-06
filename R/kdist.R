@@ -161,7 +161,7 @@
 }
 
 ############# as.data.frame.kdist ######################
-"as.data.frame.kdist" <- function(x, row.names=NULL, optional=FALSE) {
+"as.data.frame.kdist" <- function(x, row.names=NULL, optional=FALSE,...) {
     if (!inherits (x, "kdist")) stop ("object 'kdist' expected")
     res <- as.data.frame(unclass(x))
     nind <- attr(x,"size")

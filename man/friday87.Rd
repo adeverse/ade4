@@ -10,7 +10,7 @@ This data set gives informations about sites, species and environmental variable
     \code{friday87} is a list of 4 components.
     \describe{
     \item{fau}{is a data frame containing a faunistic table with 16 sites and 91 species.}
-    \item{mil}{is a data frame with 16 sites and 9 environmental variables.}
+    \item{mil}{is a data frame with 16 sites and 11 environmental variables.}
     \item{fau.blo}{is a vector of the number of species per group.}
     \item{tab.names}{is the name of each group of species.}
     }

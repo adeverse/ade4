@@ -70,7 +70,7 @@
      }
      
     draw.rowprof<- function(k) {
-        w <- as.numeric(res[k,])
+        w <- as.numeric(unlist(res[k,]))
         if (n.sample[k] >0) cell <- coeff/sqrt(n.sample[k]) else cell <- 0
         ell <- util.ellipse(w, cell)
         if (!is.null(ell)) {

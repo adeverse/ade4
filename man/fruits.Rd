@@ -47,7 +47,8 @@ Statistique et ses Utilisations, Paris,  313--325. }
 data(fruits) 
 par(mfrow = c(2,2)) 
 pcajug <- dudi.pca(fruits$jug, scann = FALSE) 
-s.corcircle(pcajug$co) s.class(pcajug$li, fac = fruits$type)
+s.corcircle(pcajug$co)
+s.class(pcajug$li, fac = fruits$type)
 
 pcavar <- dudi.pca(fruits$var, scann = FALSE)
 s.corcircle(pcavar$co)

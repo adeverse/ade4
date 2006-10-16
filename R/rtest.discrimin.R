@@ -12,9 +12,14 @@
     dudi.lw <- dudi$lw  
 
     dudi <- dudi$l1
-    if (!(identical(all.equal(dudi.lw,rep(1/nrow(dudi), nrow(dudi))),TRUE))) {
-    	stop ("Not implemented for non-uniform weights")
-    }    
+    if ((!(identical(all.equal(dudi.lw,rep(1/nrow(dudi), nrow(dudi))),TRUE)))) {
+      if(as.list(eval(appel$dudi, sys.frame(0))$call)[[1]] == "dudi.acm" )
+    	stop ("Not implemented for non-uniform weights in the case of dudi.acm")
+      else if(as.list(eval(appel$dudi, sys.frame(0))$call)[[1]] == "dudi.hillsmith" )
+        stop ("Not implemented for non-uniform weights in the case of dudi.hillsmith")
+      else if(as.list(eval(appel$dudi, sys.frame(0))$call)[[1]] == "dudi.mix" )
+        stop ("Not implemented for non-uniform weights in the case of dudi.mix")
+    }
     
     between.var <- function(x, w, group, group.w) {
         z <- x * w

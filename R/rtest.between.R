@@ -9,9 +9,15 @@
     X <- dudi1$tab
     X.lw <- dudi1$lw
     X.lw <- X.lw/sum(X.lw)
-    if (!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE))) {
-    	stop ("Not implemented for non-uniform weights")
+    if ((!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE)))) {
+      if(as.list(dudi1$call)[[1]] == "dudi.acm" )
+    	stop ("Not implemented for non-uniform weights in the case of dudi.acm")
+      else if(as.list(dudi1$call)[[1]] == "dudi.hillsmith" )
+        stop ("Not implemented for non-uniform weights in the case of dudi.hillsmith")
+      else if(as.list(dudi1$call)[[1]] == "dudi.mix" )
+        stop ("Not implemented for non-uniform weights in the case of dudi.mix")
     }
+    
     X.cw <- sqrt(dudi1$cw)
     X <- t(t(X) * X.cw)
     inertot <- sum(dudi1$eig)

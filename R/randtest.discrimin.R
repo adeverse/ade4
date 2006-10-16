@@ -15,8 +15,13 @@
     X.lw<-dudi$lw
     # dudi et dudi.lw sont soumis a la permutation
     # fac reste fixe
-     if (!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE))) {
-    	stop ("Not implemented for non-uniform weights")
+    if ((!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE)))) {
+      if(as.list(dudi$call)[[1]] == "dudi.acm" )
+    	stop ("Not implemented for non-uniform weights in the case of dudi.acm")
+      else if(as.list(dudi$call)[[1]] == "dudi.hillsmith" )
+        stop ("Not implemented for non-uniform weights in the case of dudi.hillsmith")
+      else if(as.list(dudi$call)[[1]] == "dudi.mix" )
+        stop ("Not implemented for non-uniform weights in the case of dudi.mix")
     }
     isim<-testdiscrimin(nrepet, rank, X.lw, length(unique(fac)), fac, X, nrow(X), ncol(X))
     obs<-isim[1]

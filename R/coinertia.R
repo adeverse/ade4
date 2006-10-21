@@ -1,6 +1,7 @@
 "coinertia" <- function (dudiX, dudiY, scannf = TRUE, nf = 2) {
     normalise.w <- function(X, w) {
-        f2 <- function(v) sqrt(sum(v * v * w)/sum(w))
+        # Correction d'un bug siganlé par Sandrine Pavoine le 21/10/2006
+        f2 <- function(v) sqrt(sum(v * v * w))
         norm <- apply(X, 2, f2)
         X <- sweep(X, 2, norm, "/")
         return(X)

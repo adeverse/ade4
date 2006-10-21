@@ -8,4 +8,5 @@ Maintainer: Simon Penel <penel@biomserv.univ-lyon1.fr>
 Suggests: waveslim, splancs, MASS, maptools, spdep, pixmap, ape, tripack
 Description: Multivariate data analysis and graphical display.
 License: GPL version 2 or newer
-URL: http://pbil.univ-lyon1.fr/ADE-4, Mailing list: http://pbil.univ-lyon1.fr/ADE-4/adelist.html
+URL: http://pbil.univ-lyon1.fr/ADE-4, Mailing list: http://listes.univ-lyon1.fr/wws/info/adelist
+

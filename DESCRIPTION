@@ -1,7 +1,7 @@
 Package: ade4
 Version: 1.4-2
 Date: 2006/09/22
-Title: Analysis of Environmental Data : Exploratory and Euclidean methods in Environmental sciences
+Title: Analysis of Ecological Data : Exploratory and Euclidean methods in Environmental sciences
 Author: Daniel Chessel <chessel@biomserv.univ-lyon1.fr>,  Anne-Beatrice Dufour <dufour@biomserv.univ-lyon1.fr> and Stephane Dray <dray@biomserv.univ-lyon1.fr>, with
  contributions from Jean R. Lobry, Sebastien Ollier, Sandrine Pavoine and Jean Thioulouse.
 Maintainer: Simon Penel <penel@biomserv.univ-lyon1.fr>

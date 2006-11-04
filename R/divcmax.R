@@ -72,6 +72,7 @@ divcmax <- function(dis, epsilon = 1e-008, comment = FALSE)
                 print("relaxation")
             satu <- (1:n)[sature]
             relax <- satu[u == min(u)]
+            relax <-relax[1]
         }
     }
     if (comment == TRUE)

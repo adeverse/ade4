@@ -60,18 +60,19 @@
     names(w) <- paste("A", 1:r, sep = "")
     row.names(w) <- rownames
     res$tab <- w
-    res$li <- w[, 1:nf]
+    res$li <- data.frame(w[, 1:nf])
+    names(res$li) <- names(res$tab)[1:nf]
     w <- t(t(eig$vectors[, 1:nf])/wsqrt)
     w <- data.frame(w)
     names(w) <- paste("RS", 1:nf, sep = "")
     row.names(w) <- rownames
     res$l1 <- w
     w <- data.frame(diag(1, r))
-    names(w) <- paste("CS", (1:r), sep = "")
     row.names(w) <- names(res$tab)
-    res$c1 <- w[, 1:nf]
+    res$c1 <- data.frame(w[, 1:nf])
+    names(res$c1) <- paste("CS", (1:nrow(res$c1)), sep = "")
     w <- data.frame(matrix(0, r, nf))
-    w[1:nf, 1:nf] <- diag(sqrt(lambda[1:nf]))
+    w[1:nf, 1:nf] <- diag(sqrt(lambda[1:nf]),nrow=nf)
     names(w) <- paste("Comp", (1:nf), sep = "")
     row.names(w) <- names(res$tab)
     res$co <- w

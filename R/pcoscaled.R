@@ -14,9 +14,9 @@
     if ((w0 < -tol)) 
         stop("Euclidean distance matrix expected")
     ncomp <- sum(eig$values > (eig$values[1] * tol))
-    x <- eig$vectors[, 1:ncomp]
+    x <- as.matrix(eig$vectors[, 1:ncomp])
     variances <- eig$values[1:ncomp]
-    x <- t(apply(x, 1, "*", sqrt(variances)))
+    x <- sweep(x,2,sqrt(variances),"*")
     inertot <- sum(variances)
     x <- x/sqrt(inertot)
     x <- x*sqrt(n)

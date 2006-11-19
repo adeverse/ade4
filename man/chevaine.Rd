@@ -27,7 +27,7 @@ data(chevaine)
         on.exit(par(opar))
         par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.label(chevaine$coo$poi, xlim = c(-20,400), clab = 0, cpoi = 0)
-    invisible(lapply(chevaine$coo$lac, polygon,col = "blue", type = "l", lwd = 2)) 
+    invisible(lapply(chevaine$coo$lac, polygon, col = "blue", lwd = 2)) 
     invisible(lapply(chevaine$coo$riv, points, col = "blue", type = "l", lwd = 2))
     if (label){
         s.label(chevaine$coo$poi, clab = 0.75, add.p = TRUE)

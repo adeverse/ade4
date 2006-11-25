@@ -52,31 +52,48 @@
         nf <- r
     res <- list()
     res$eig <- lambda[1:r]
+# valeurs propres variances des coordonnees
     res$rank <- r
+# rang de la representation euclidienne
     res$nf <- nf
+# nombre de facteurs conserves
     res$cw <- rep(1, r)
+# poids des colonnes unitaires
     w <- t(t(eig$vectors[, 1:r]) * sqrt(lambda[1:r]))/wsqrt
     w <- data.frame(w)
     names(w) <- paste("A", 1:r, sep = "")
     row.names(w) <- rownames
     res$tab <- w
+# res$tab contient la representation euclidienne globale
+# tous les scores de variance lambda superieure a tol*(la plus grande)
     res$li <- data.frame(w[, 1:nf])
     names(res$li) <- names(res$tab)[1:nf]
+# res$li contient la representation euclidienne 
+# les nf premiers scores conserves
+# cas particulier d'un tableau de coordonnees dont on fait l'ACP
     w <- t(t(eig$vectors[, 1:nf])/wsqrt)
     w <- data.frame(w)
     names(w) <- paste("RS", 1:nf, sep = "")
     row.names(w) <- rownames
     res$l1 <- w
+# res$l1 contient les scores normes  
+# pour la ponderation des individus
+# Cette pco admet une ponderation de centrage arbitraire
+# plus generale que cmdscale
     w <- data.frame(diag(1, r))
     row.names(w) <- names(res$tab)
     res$c1 <- data.frame(w[, 1:nf])
-    names(res$c1) <- paste("CS", (1:nrow(res$c1)), sep = "")
+    names(res$c1) <- paste("CS", (1:nf), sep = "")
+# res$c1 contient le debut de la base canonique
+# cas particulier d'un tableau de coordonnees dont on fait l'ACP
     w <- data.frame(matrix(0, r, nf))
     w[1:nf, 1:nf] <- diag(sqrt(lambda[1:nf]),nrow=nf)
     names(w) <- paste("Comp", (1:nf), sep = "")
     row.names(w) <- names(res$tab)
     res$co <- w
+# res$co indique que la variable est le composante * la norme
     res$lw <- row.w
+# re$lw est le poids des lignes introduits si non uniforme
     res$call <- match.call()
     class(res) <- c("pco", "dudi")
     return(res)

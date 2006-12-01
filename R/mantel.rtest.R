@@ -22,7 +22,7 @@
             return(obs)
         perm <- matrix(0, nrow = nrepet, ncol = 1)
         perm <- apply(perm, 1, function(x) cor(unclass(m1), unclass(permutedist(m2))))
-        w <- as.rtest(obs = obs, sim = perm, , call = match.call())
+        w <- as.rtest(obs = obs, sim = perm, call = match.call())
         return(w)
     }
     if (is.euclid(m1) & is.euclid(m2)) {

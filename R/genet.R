@@ -47,7 +47,7 @@
         cha = paste("0",cha,sep="")
         cha = cha6car(cha)
      }
-     X <- apply(X,c(1,2),cha6car)
+     X <- as.data.frame(apply(X,c(1,2),cha6car))
      
      # Toutes les chaînes sont de 6 charactères suppose que le codage est complet
      # ou qu'il ne manque des zéros qu'au début
@@ -58,8 +58,11 @@
         w3 <- sort(unique (c(w1,w2)))
         return(w3)
     }
-    all.util <- apply(X,2,enumallel)
+    all.util <- lapply(X,enumallel)
     # all.util est une liste dont les composantes sont les noms des allèles ordonnés
+    # Correction d'un bug mis en evidence par Amalia
+    # amalia@mail.imsdd.meb.uni-bonn.de 
+    # La liste etait une matrice quand le nombre d'allele par locus est constant
     # peut comprendre 000 pour un non typé
     # on conserve le nombre d'individus typés par locus et par populations
     "compter" <- function(x) {
@@ -212,6 +215,7 @@
      class(res) <- c("genet", "list")
     return(res)
 }
+
 
 "count2genet" <- function (PopAllCount) {
     # PopAllCount est un data.frame qui contient des dénombrements

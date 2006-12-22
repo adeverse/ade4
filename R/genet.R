@@ -62,7 +62,7 @@
     # all.util est une liste dont les composantes sont les noms des allèles ordonnés
     # Correction d'un bug mis en evidence par Amalia
     # amalia@mail.imsdd.meb.uni-bonn.de 
-    # La liste etait une matrice quand le nombre d'allele par locus est constant
+    # La liste etait automatiquement une matrice quand le nombre d'allele par locus est constant
     # peut comprendre 000 pour un non typé
     # on conserve le nombre d'individus typés par locus et par populations
     "compter" <- function(x) {

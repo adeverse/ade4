@@ -58,7 +58,13 @@ Switzer, P. and Green, A.A. (1984) Min/max autocorrelation factors for multivari
 
 Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 
-Wartenberg, D. E. (1985) Multivariate spatial correlation: a method for exploratory geographical analysis. \emph{Geographical Analysis}, \bold{17}, 263--283.
+Wartenberg, D. E. (1985) Multivariate spatial correlation: a method for
+exploratory geographical analysis. \emph{Geographical Analysis},
+\bold{17}, 263--283.
+
+Jombart, T., Devillard, S., Dufour, A.-B. and Pontier, D. A
+spatially explicit multivariate method to disentangle global and local
+patterns of genetic variability. Submitted to \emph{Genetics}.
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
 Sebastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
@@ -77,7 +83,35 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     maf.coa <- dudi.coa(maf.flo,scannf = FALSE)
     maf.coa.ms <- multispati(maf.coa, maf.listw, scannf = FALSE, nfposi = 2, 
         nfnega = 2)
-    summary(maf.coa.ms)
+    maf.coa.ms
+    sum.ms <- summary(maf.coa.ms)
+    ### detail eigenvalues components
+    # compute Imin and Imax
+    L <- listw2mat(maf.listw)
+    Imin <- min(eigen(0.5*(L+t(L)))$values)
+    Imax <- max(eigen(0.5*(L+t(L)))$values)
+    I0 <- -1/(nrow(maf.xy)-1)
+    # create labels
+    labels <- lapply(1:nrow(sum.ms),function(i) bquote(lambda[.(i)]))
+    # draw the plot
+    xmax <- maf.coa$eig[1]*1.1
+    par(las=1)
+    var <- sum.ms[,2]
+    moran <- sum.ms[,3]
+    plot(x=var,y=moran,type='n',xlab='Inertia',ylab="Spatial autocorrelation (I)",
+         xlim=c(0,xmax),ylim=c(Imin*1.1,Imax*1.1),yaxt='n')
+    text(x=var,y=moran,do.call(expression,labels))
+    ytick <- c(I0,round(seq(Imin,Imax,le=5),1))
+    ytlab <- as.character(round(seq(Imin,Imax,le=5),1))
+    ytlab <- c(as.character(round(I0,1)),as.character(round(Imin,1)),ytlab[2:4],as.character(round(Imax,1)))
+    axis(side=2,at=ytick,labels=ytlab)
+    rect(0,Imin,xmax,Imax,lty=2)
+    segments(0,I0,xmax,I0,lty=2)
+    abline(v=0)
+    title("Spatial and inertia components of the eigenvalues")
+    ## end eigenvalues details
+
+
     par(mfrow = c(1,3))
     barplot(maf.coa$eig)
     barplot(maf.coa.ms$eig) 

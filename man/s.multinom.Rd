@@ -45,10 +45,12 @@ s.multinom(dfxy, dfrowprof, translate = FALSE, xax = 1, yax = 2,
 }
 
 \value{
-  Returns in a hidden way a list of two components :
+  Returns in a hidden way a list of three components :
   \item{tra}{a vector with two values giving the done original translation. }
   \item{ell}{a matrix, with 5 columns and for rows the number of profiles, giving the means, 
-  the variances and the covariance of the profile for the used numerical codes (column of \code{dfxy})}
+    the variances and the covariance of the profile for the used
+    numerical codes (column of \code{dfxy})}
+  \item{call}{the matched call}
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
 }

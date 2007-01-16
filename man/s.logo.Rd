@@ -37,6 +37,9 @@ s.logo(dfxy, listlogo, klogo=NULL, clogo=1, rectlogo=TRUE,
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
 }
+\value{
+The matched call.
+}
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} and Thibaut Jombart \email{jombart@biomserv.univ-lyon1.fr}}
 \examples{
 if(require(pixmap, quiet=TRUE)){

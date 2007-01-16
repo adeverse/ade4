@@ -37,6 +37,9 @@ s.match(df1xy, df2xy, xax = 1, yax = 2, pch = 20, cpoint = 1,
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
 }
+\value{
+The matched call.
+}
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 X <- data.frame(x = runif(50,-1,2), y = runif(50,-1,2))

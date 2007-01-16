@@ -24,6 +24,9 @@ s.corcircle(dfxy, xax = 1, yax = 2, label = row.names(df),
   \item{box}{a logical value indcating whether a box should be drawn}
   \item{add.plot}{if TRUE uses the current graphics window}
 }
+\value{
+The matched call.
+}
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 data (olympic)

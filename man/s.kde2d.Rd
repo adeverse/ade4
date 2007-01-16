@@ -46,6 +46,9 @@ s.kde2d(dfxy, xax = 1, yax = 2, pch = 20, cpoint = 1, neig = NULL, cneig = 2,
           in contour }
   \item{add.plot}{ if TRUE uses the current graphics window }
 }
+\value{
+The matched call.
+}
 \author{ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} 
 }
 \examples{

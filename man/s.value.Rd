@@ -42,6 +42,9 @@ s.value(dfxy, z, xax = 1, yax = 2, method = c("squaresize", "greylevel"),
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
 }
+\value{
+The matched call.
+}
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 xy <- cbind.data.frame(x = runif(500), y = runif(500))

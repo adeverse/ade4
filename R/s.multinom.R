@@ -107,6 +107,6 @@
         points(as.numeric(res$mx), as.numeric(res$my), pch=pchrowprof, cex=par("cex")*cpointrowprof)
     box()
     res[,1:2] <- sweep(res[,1:2],2,mgene,"+")
-    return(invisible(list(ell=res,tra=mgene)))
+    return(invisible(list(ell=res,tra=mgene,call=match.call())))
     
 }

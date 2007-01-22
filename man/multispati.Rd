@@ -84,31 +84,37 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     maf.coa.ms <- multispati(maf.coa, maf.listw, scannf = FALSE, nfposi = 2, 
         nfnega = 2)
     maf.coa.ms
-    sum.ms <- summary(maf.coa.ms)
+    
     ### detail eigenvalues components
-    # compute Imin and Imax
-    L <- listw2mat(maf.listw)
-    Imin <- min(eigen(0.5*(L+t(L)))$values)
-    Imax <- max(eigen(0.5*(L+t(L)))$values)
-    I0 <- -1/(nrow(maf.xy)-1)
-    # create labels
-    labels <- lapply(1:nrow(sum.ms),function(i) bquote(lambda[.(i)]))
-    # draw the plot
-    xmax <- maf.coa$eig[1]*1.1
-    par(las=1)
-    var <- sum.ms[,2]
-    moran <- sum.ms[,3]
-    plot(x=var,y=moran,type='n',xlab='Inertia',ylab="Spatial autocorrelation (I)",
-         xlim=c(0,xmax),ylim=c(Imin*1.1,Imax*1.1),yaxt='n')
-    text(x=var,y=moran,do.call(expression,labels))
-    ytick <- c(I0,round(seq(Imin,Imax,le=5),1))
-    ytlab <- as.character(round(seq(Imin,Imax,le=5),1))
-    ytlab <- c(as.character(round(I0,1)),as.character(round(Imin,1)),ytlab[2:4],as.character(round(Imax,1)))
-    axis(side=2,at=ytick,labels=ytlab)
-    rect(0,Imin,xmax,Imax,lty=2)
-    segments(0,I0,xmax,I0,lty=2)
-    abline(v=0)
-    title("Spatial and inertia components of the eigenvalues")
+    fgraph <- function(obj){
+      # use multispati summary
+      sum.obj <- summary(obj)
+      # compute Imin and Imax
+      L <- listw2mat(eval(as.list(obj$call)$listw))
+      Imin <- min(eigen(0.5*(L+t(L)))$values)
+      Imax <- max(eigen(0.5*(L+t(L)))$values)
+      I0 <- -1/(nrow(obj$li)-1)
+      # create labels
+      labels <- lapply(1:length(obj$eig),function(i) bquote(lambda[.(i)]))
+      # draw the plot
+      xmax <- eval(as.list(obj$call)$dudi)$eig[1]*1.1
+      par(las=1)
+      var <- sum.obj[,2]
+      moran <- sum.obj[,3]
+      plot(x=var,y=moran,type='n',xlab='Inertia',ylab="Spatial autocorrelation (I)",
+           xlim=c(0,xmax),ylim=c(Imin*1.1,Imax*1.1),yaxt='n')
+      text(x=var,y=moran,do.call(expression,labels))
+      ytick <- c(I0,round(seq(Imin,Imax,le=5),1))
+      ytlab <- as.character(round(seq(Imin,Imax,le=5),1))
+      ytlab <- c(as.character(round(I0,1)),as.character(round(Imin,1)),
+           ytlab[2:4],as.character(round(Imax,1)))
+      axis(side=2,at=ytick,labels=ytlab)
+      rect(0,Imin,xmax,Imax,lty=2)
+      segments(0,I0,xmax,I0,lty=2)
+      abline(v=0)
+      title("Spatial and inertia components of the eigenvalues")
+    }
+    fgraph(maf.coa.ms)
     ## end eigenvalues details
 
 

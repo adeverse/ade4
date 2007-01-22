@@ -3,8 +3,8 @@
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected")
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected")
-    thres <- 1e-14
-    nvar <- ncol(dudi$tab)
+    NEARZERO <- 1e-14
+    
     dudi$cw <- dudi$cw
     row.w <- dudi$lw
     fun <- function (x) lag.listw(listw,x,TRUE)
@@ -13,9 +13,14 @@
     covar <- (covar+t(covar))/2
     covar <- covar * sqrt(dudi$cw)
     covar <- t(t(covar) * sqrt(dudi$cw))
-    covar <- eigen(covar, sym=TRUE)  
+    covar <- eigen(covar, sym=TRUE)
+    res <- list()
+    res$eig <- covar$values[abs(covar$values)>NEARZERO]
+    ndim <- length(res$eig)
+    covar$vectors <- covar$vectors[, abs(covar$values)>NEARZERO]
+    
     if (scannf) {
-        barplot(covar$values)
+        barplot(res$eig)
         cat("Select the first number of axes (>=1): ")
         nfposi <- as.integer(readLines(n = 1))
         
@@ -24,19 +29,18 @@
     }
     if (nfposi <= 0)  nfposi <- 1
     if (nfnega<=0) nfnega <- 0       
-    res <- list()
-    res$eig <- covar$values
-    if(nfposi > sum(res$eig > thres)){
-          nfposi <- sum(res$eig > thres)
-          warning(paste("There are only",sum(res$eig>thres),"positive factors."))
+    
+    if(nfposi > sum(res$eig > 0)){
+          nfposi <- sum(res$eig > 0)
+          warning(paste("There are only",sum(res$eig>0),"positive factors."))
         }
-    if(nfnega > sum(res$eig < -thres)){
-          nfnega <- sum(res$eig < -thres)
-          warning(paste("There are only",sum(res$eig< -thres),"negative factors."))
+    if(nfnega > sum(res$eig < 0)){
+          nfnega <- sum(res$eig < 0)
+          warning(paste("There are only",sum(res$eig< 0),"negative factors."))
         }
     res$nfposi <- nfposi
     res$nfnega <- nfnega
-    agarder <- c(1:nfposi,if (nfnega>0) (nvar-nfnega+1):nvar else NULL)
+    agarder <- c(1:nfposi,if (nfnega>0) (ndim-nfnega+1):ndim else NULL)
     dudi$cw[which(dudi$cw == 0)] <- 1
     auxi <- data.frame(covar$vectors[, agarder] /sqrt(dudi$cw))
     names(auxi) <- paste("CS", agarder, sep = "")
@@ -78,9 +82,7 @@
 
     if (!inherits(object, "multispati"))stop("to be used with 'multispati' object")
     if(!require(spdep,quietly=TRUE)) stop("the library spdep is required; please install this package")
-
-    NEARZERO <- 1e-14
-    
+ 
     cat("\nMultivariate Spatial Analysis\n")
     cat("Call: ")
     print(object$call)
@@ -105,14 +107,13 @@
     eig <- object$eig
     nfposi <- object$nfposi
     nfnega <- object$nfnega
-    nfposimax <- sum(eig > NEARZERO)
-    nfnegamax <- sum(eig < -NEARZERO)
+    nfposimax <- sum(eig > 0)
+    nfnegamax <- sum(eig < 0)
     
     ms <- multispati(dudi=dudi, listw=listw, scannf=FALSE,
                      nfposi=nfposimax, nfnega=nfnegamax)
 
-    eig <- eig[abs(eig)>NEARZERO]
-    ndim <- length(eig)
+    ndim <- dudi$rank
     nf <- nfposi + nfnega
     agarder <- c(1:nfposi,if (nfnega>0) (ndim-nfnega+1):ndim else NULL)
     varspa <- norm.w(ms$li,dudi$lw)

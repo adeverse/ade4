@@ -6,7 +6,7 @@ performs the scatter diagrams with labels.
 }
 \usage{
 s.label(dfxy, xax = 1, yax = 2, label = row.names(dfxy), 
-    clabel = 1, pch = 20, cpoint = if (clabel == 0) 1 else 0, 
+    clabel = 1, pch = 20, cpoint = if (clabel == 0) 1 else 0, boxes = TRUE,
     neig = NULL, cneig = 2, xlim = NULL, ylim = NULL, grid = TRUE, 
     addaxes = TRUE, cgrid = 1, include.origin = TRUE, origin = c(0,0), 
     sub = "", csub = 1.25, possub = "bottomleft", pixmap = NULL, 
@@ -20,6 +20,7 @@ s.label(dfxy, xax = 1, yax = 2, label = row.names(dfxy),
   \item{clabel}{if not NULL, a character size for the labels, used with \code{par("cex")*clabel}}
   \item{pch}{if \code{cpoint} > 0, an integer specifying the symbol or the single character to be used in plotting points}
   \item{cpoint}{a character size for plotting the points, used with \code{par("cex")*cpoint}. If zero, no points are drawn}
+  \item{boxes}{if TRUE, labels are framed}
   \item{neig}{a neighbouring graph}
   \item{cneig}{a size for the neighbouring graph lines used with par("lwd")*\code{cneig}}
   \item{xlim}{the ranges to be encompassed by the x axis, if NULL, they are computed}

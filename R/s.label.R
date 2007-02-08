@@ -1,5 +1,5 @@
 "s.label" <- function (dfxy, xax = 1, yax = 2, label = row.names(dfxy), clabel = 1,
-    pch = 20, cpoint = if (clabel == 0) 1 else 0, neig = NULL, 
+    pch = 20, cpoint = if (clabel == 0) 1 else 0, boxes = TRUE, neig = NULL, 
     cneig = 2, xlim = NULL, ylim = NULL, grid = TRUE, addaxes = TRUE, 
     cgrid = 1, include.origin = TRUE, origin = c(0, 0), sub = "", 
     csub = 1.25, possub = "bottomleft", pixmap = NULL, contour = NULL, 
@@ -31,7 +31,7 @@
         apply(unclass(neig), 1, fun, coo = coo)
     }
     if (clabel > 0) 
-        scatterutil.eti(coo$x, coo$y, label, clabel)
+        scatterutil.eti(coo$x, coo$y, label, clabel, boxes)
     if (cpoint > 0 & clabel < 1e-6) 
         points(coo$x, coo$y, pch = pch, cex = par("cex") * cpoint)
     box()

@@ -43,8 +43,7 @@ If (high.scores > 0), returns a list containg :
     \item{scores.order}{: a vector which terms give labels of vectors that explain the larger part of variance}   
 }
 \references{
-Ollier, S., Chessel, D. and Couteron, P. (2005) Orthonormal transform to detect and  
-describe phylogenetic autocorrelation. \emph{Biometrics} (in press).
+Ollier, S., Chessel, D. and Couteron, P. (2005) Orthonormal Transform to Decompose the Variance of a Life-History Trait across a Phylogenetic Tree. \emph{Biometrics}, \bold{62}, 471--477.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
 Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

@@ -1,5 +1,5 @@
 "s.arrow" <- function (dfxy, xax = 1, yax = 2, label = row.names(dfxy), clabel = 1,
-    pch = 20, cpoint = 0, edge = TRUE, origin = c(0, 0), xlim = NULL, 
+    pch = 20, cpoint = 0, boxes = TRUE, edge = TRUE, origin = c(0, 0), xlim = NULL, 
     ylim = NULL, grid = TRUE, addaxes = TRUE, cgrid = 1, sub = "", 
     csub = 1.25, possub = "bottomleft", pixmap = NULL, contour = NULL, 
     area = NULL, add.plot = FALSE) 
@@ -37,7 +37,7 @@
     for (i in 1:(length(coo$x))) arrow1(origin[1], origin[2], 
         coo$x[i], coo$y[i], edge = edge)
     if (clabel > 0) 
-        scatterutil.eti.circ(coo$x, coo$y, label, clabel, origin)
+        scatterutil.eti.circ(coo$x, coo$y, label, clabel, origin, boxes)
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
     box()

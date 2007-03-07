@@ -1,3 +1,9 @@
+2007-03-07  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
+
+	reviewed by: <delete if not using a buddy>
+
+	* data/rpjdl.rda: removed accents
+
 2007-02-19  Jean Thioulouse  <jthioulo@biomserv.univ-lyon1.fr>
 
 	* R/s.arrow.R: added the "boxes" argument

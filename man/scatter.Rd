@@ -1,7 +1,6 @@
 \name{scatter}
 \alias{scatter}
 \alias{scatterutil.base}
-\alias{add.scatter.eig}
 \alias{scatterutil.chull}
 \alias{scatterutil.eigen}
 \alias{scatterutil.ellipse}
@@ -44,11 +43,10 @@ scatter(x, ...)
   \item{scatterutil.scaling}{to fit a plot on a background bipmap}
   \item{scatterutil.star}{plots a star for a weighting distribution}
   \item{scatterutil.sub}{adds a string of characters in sub-title of a graph}
-  \item{add.scatter.eig}{adds a eigenvalues bar plot on a graph}
 }
 \seealso{\code{\link{s.arrow}}, \code{\link{s.chull}}, \code{\link{s.class}}, 
 \code{\link{s.corcircle}}, \code{\link{s.distri}}, \code{\link{s.label}}, 
-\code{\link{s.match}}, \code{\link{s.traject}}, \code{\link{s.value}}
+\code{\link{s.match}}, \code{\link{s.traject}}, \code{\link{s.value}}, \code{\link{add.graph}}
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{

@@ -47,8 +47,7 @@
         if (length(w) < neig) 
             w <- c(w, rep(0, neig - length(w)))
         if (show.eigen.value) 
-            add.scatter.eig(w, nf, xax, yax, posi = c("bottom", 
-                "top"), ratio = 1/4)
+            add.scatter.eig(w, xax, yax, posi = c("bottom","top"), ratio = 1/4)
     }
 } 
 
@@ -100,6 +99,6 @@
         if (length(w) < neig) 
             w <- c(w, rep(0, neig - length(w)))
         if (show.eigen.value) 
-            add.scatter.eig(w, nf, xax, yax, posi = poseig, ratio = 1/4)
+            add.scatter.eig(w, xax, yax, posi = poseig, ratio = 1/4)
     }
 }

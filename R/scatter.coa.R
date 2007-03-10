@@ -33,6 +33,6 @@
         s.label(coocol, clab = clab.row, add.plot = TRUE)
     }
     else stop("Unknown method")
-    add.scatter.eig(x$eig, x$nf, xax, yax, posi = posieig, ratio = 1/4)
+    add.scatter.eig(x$eig, xax, yax, posi = posieig, ratio = 1/4)
 }
 

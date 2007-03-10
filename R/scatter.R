@@ -85,35 +85,6 @@
     return(list(x = x, y = y))
 }
 
-############ add.scatter.eig #################
-"add.scatter.eig" <- function (w, nf, xax, yax, posi = c("bottom", "top", "none"),
-    ratio = 1/4) 
-{
-    posi <- posi[1]
-    if (posi == "none") 
-        return(invisible())
-    born <- par("usr")
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    neig <- min(length(w), 15)
-    w <- w[1:neig]
-    col <- rep(grey(1), length(w))
-    col[1:nf] <- grey(0.8)
-    col[c(xax, yax)] <- grey(0)
-    x <- seq(born[1], born[1] + (born[2] - born[1]) * ratio, 
-        le = neig + 1)
-    w <- w/max(w)
-    w <- w * (born[4] - born[3]) * ratio
-    if (posi == "bottom") 
-        m3 <- born[3]
-    else m3 <- born[4] - w[1]
-    w <- m3 + w
-    rect(x[1], m3, x[neig + 1], w[1], col = grey(1))
-    for (i in 1:neig) {
-        rect(x[i], m3, x[i + 1], w[i], col = col[i])
-    }
-}
 
 ############ scatterutil.chull #################
 "scatterutil.chull" <- function (x, y, fac, optchull = c(0.25, 0.5, 0.75, 1), col=rep(1,length(levels(fac)))) {
@@ -166,18 +137,19 @@
 }
 
 ############ scatterutil.eigen #################
-"scatterutil.eigen" <- function (w, xmax = length(w), ymin=0, ymax = max(w), wsel = 1, sub = "Eigenvalues",
-    csub = 2, possub = "topright") 
+"scatterutil.eigen" <- function (w, xmax = length(w), ymin=min(0,min(w)), ymax = max(w), wsel = 1, sub = "Eigenvalues",
+    csub = 2, possub = "topright",box=FALSE) 
 {
-    opar <- par(mar = par("mar"))
+    opar <- par(mar = par("mar"),plt=par("plt"))
     on.exit(par(opar))
-    par(mar = c(0.8, 2.8, 0.8, 0.8))
+    par(mar = c(0.8, 2.8, 0.8, 0.8),plt=par("plt"))
     if (length(w) < xmax) 
         w <- c(w, rep(0, xmax - length(w)))
     col.w <- rep(grey(0.8), length(w))
     col.w[wsel] <- grey(0)
-    barplot(w, col = col.w, ylim = c(ymin, ymax))
-    scatterutil.sub(cha = sub, csub = csub, possub = possub)
+    barplot(w, col = col.w, ylim = c(ymin, ymax)*1.1)
+    scatterutil.sub(cha = sub, csub = max(.8,csub), possub = possub)
+    if(box) box()
 }
 
 ############ scatterutil.ellipse #################

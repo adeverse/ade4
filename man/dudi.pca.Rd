@@ -20,16 +20,26 @@ dudi.pca(df, row.w = rep(1, nrow(df))/nrow(df),
     if a numeric vector, its length must be equal to the number of columns of the data frame df
     and gives the decentring}
   \item{scale}{a logical value indicating whether the column vectors should be normed for the row.w weighting}
-  \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
+  \item{scannf}{a logical value indicating whether the screeplot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
 }
 \value{
-Returns a list of classes \code{pca} and \code{dudi} (see \link{dudi}) containing also :
-\item{cent}{a vector with p components}
-\item{norm}{a vector with p components}
-if \eqn{x_{ij}}{x[i,j]} is the value of the table df and \eqn{y_{ij}}{y[i,j]} is the value of the table \code{$tab}, we have:
-    \deqn{y_{ij}=\frac{x_{ij}-cent_j}{norm_j}}{y[i,j] = (x[i,j] - cent[j]) / norm[j]}
-    \deqn{x_{ij}=y_{ij} \ast norm_j + cent_j}{x[i,j] = y[i,j]*norm[j] + cent[j]}
+Returns a list of classes \code{pca} and \code{dudi} (see \link{dudi}) containing the used information
+for computing the principal component analysis :
+    \item{tab}{the data frame to be analyzed depending of the transformation arguments (center and scale)}
+    \item{cw}{the column weights}
+    \item{lw}{the row weights}
+    \item{eig}{the eigenvalues}
+    \item{rank}{the rank of the analyzed matrice}
+    \item{nf}{the number of kept factors}
+    \item{c1}{the column normed scores  i.e. the principal axes}
+    \item{l1}{the row normed scores}
+    \item{co}{the column coordinates}
+    \item{li}{the row coordinates i.e. the principal components}
+    \item{call}{the call function}
+    \item{cent}{the \it{p} vector containing the means for variables}
+    \item{norm}{the \it{p} vector containing the standard deviations for variables i.e. the root
+    of the sum of squares deviations of the values from their means divided by \it{n}}
 }
 \seealso{
     \code{prcomp}, \code{princomp} in the \code{mva} library

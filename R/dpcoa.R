@@ -114,7 +114,7 @@ plot.dpcoa <- function(x, xax = 1, yax = 2, option = 1:4, csize = 2, ...) {
 			s.corcircle(x$c1[, c(xax, yax)], cgrid = 0, 
 				sub = "Base", csub = 1.5, possub = "topleft", full = TRUE)
 			l0 <- length(x$eig)
-			add.scatter.eig(x$eig, l0, xax, yax, posi = "bottom", ratio = 1/4)
+			add.scatter.eig(x$eig, xax, yax, posi = "bottomleft", ratio = 1/4)
 		}
 		if (j == 2) { #
 			X <- as.list(x$call)[[2]]

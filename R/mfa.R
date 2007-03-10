@@ -138,20 +138,20 @@
             s.class(coolig, fac = as.factor(x$TL[, 2]), 
                 label = row.names(x$li), cell = 0, sub = "Row projection", 
                 csub = 1.5)
-            add.scatter.eig(x$eig, x$nf, xax, yax, posi = "top", 
+            add.scatter.eig(x$eig, xax, yax, posi = "topleft", 
                 ratio = 1/5)
         }
         if (j == 2) {
             coocol <- x$co[, c(xax, yax)]
             s.arrow(coocol, sub = "Col projection", csub = 1.5)
-            add.scatter.eig(x$eig, x$nf, xax, yax, posi = "top", 
+            add.scatter.eig(x$eig, xax, yax, posi = "topleft", 
                 ratio = 1/5)
         }
         if (j == 3) {
             s.corcircle(x$T4comp[x$T4[, 2] == 1, ], 
                 full = FALSE, sub = "Component projection", possub = "topright", 
                 csub = 1.5)
-            add.scatter.eig(x$eig, x$nf, xax, yax, posi = "bottom", 
+            add.scatter.eig(x$eig, xax, yax, posi = "bottomleft", 
                 ratio = 1/5)
         }
         if (j == 4) {

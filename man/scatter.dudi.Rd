@@ -26,7 +26,7 @@ scatter.dudi(x, xax = 1, yax = 2, clab.row = 0.75, clab.col = 1,
 \examples{
 data(deug)
 scatter(dd1 <- dudi.pca(deug$tab, scannf = FALSE, nf = 4), 
-    posieig = "bottom")
+    posieig = "bottomright")
 
 data(rhone)
 dd1 <- dudi.pca(rhone$tab, nf = 4, scann = FALSE)

@@ -128,22 +128,22 @@
                 cgrid = 0, sub = "Interstructure", csub = 1.5, 
                 possub = "topleft", full = TRUE)
             l0 <- length(x$RV.eig)
-            add.scatter.eig(x$RV.eig, l0, 1, 2, posi = "bottom", 
+            add.scatter.eig(x$RV.eig, 1, 2, posi = "bottomleft", 
                 ratio = 1/4)
         }
         if (j == 2) {
             coolig <- x$C.li[, c(xax, yax)]
             s.label(coolig, sub = "Compromise", csub = 1.5, 
                 possub = "topleft", )
-            add.scatter.eig(x$C.eig, x$C.nf, xax, yax, 
-                posi = "bottom", ratio = 1/4)
+            add.scatter.eig(x$C.eig, xax, yax, 
+                posi = "bottomleft", ratio = 1/4)
         }
         if (j == 4) {
             cooax <- x$C.T4[x$T4[, 2] == 1, ]
             s.corcircle(cooax, xax, yax, full = TRUE, sub = "Component projection", 
                 possub = "topright", csub = 1.5)
-            add.scatter.eig(x$C.eig, x$C.nf, xax, yax, 
-                posi = "bottom", ratio = 1/5)
+            add.scatter.eig(x$C.eig, xax, yax, 
+                posi = "bottomleft", ratio = 1/5)
         }
         if (j == 3) {
             plot(x$RV.tabw, x$cos2, xlab = "Tables weights", 

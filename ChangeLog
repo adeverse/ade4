@@ -1,3 +1,22 @@
+2007-03-10  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
+
+	reviewed by: <delete if not using a buddy>
+
+	* R/add.graph.R: ajout de la fonction (contient add.graph et la nouvelle version de add.scatter.eig)
+	* man/add.graph.Rd: ajout de la doc (add.graph et add.scatter.eig)
+	* R/dpcoa.R: appel de add.scatter.eig: nf supprime
+	* R/dudi.pco.R: appel de add.scatter.eig: nf supprime
+	* R/kplot.sepan.R: appel de add.scatter.eig: nf supprime
+	* R/mfa.R: appel de add.scatter.eig: nf supprime
+	* R/pta.R: appel de add.scatter.eig: nf supprime
+	* R/scatter.R: add.scatter.eig supprime (migre vers add.graph.R)
+	* R/scatter.coa.R: appel de add.scatter.eig: nf supprime
+	* R/scatter.dudi.R: appel de add.scatter.eig: nf supprime
+	* R/statis.R: appel de add.scatter.eig: nf supprime
+	* man/dudi.pca.Rd: modifications faites par Anne
+	* man/scatter.Rd: enleve add.scatter.eig de la doc (migre vers add.graph.Rd)
+	* man/scatter.dudi.Rd: appel de add.scatter.eig: nf supprime
+
 2007-03-07  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
 
 	reviewed by: <delete if not using a buddy>

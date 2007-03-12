@@ -46,7 +46,7 @@ scatter(x, ...)
 }
 \seealso{\code{\link{s.arrow}}, \code{\link{s.chull}}, \code{\link{s.class}}, 
 \code{\link{s.corcircle}}, \code{\link{s.distri}}, \code{\link{s.label}}, 
-\code{\link{s.match}}, \code{\link{s.traject}}, \code{\link{s.value}}, \code{\link{scatter.add}}
+\code{\link{s.match}}, \code{\link{s.traject}}, \code{\link{s.value}}, \code{\link{add.scatter}}
 }
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{

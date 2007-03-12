@@ -137,7 +137,7 @@
 }
 
 ############ scatterutil.eigen #################
-"scatterutil.eigen" <- function (w, xmax = length(w), ymin=min(0,min(w)), ymax = max(w), wsel = 1, sub = "Eigenvalues",
+"scatterutil.eigen" <- function (w, nf = NULL, xmax = length(w), ymin=min(0,min(w)), ymax = max(w), wsel = 1, sub = "Eigenvalues",
     csub = 2, possub = "topright",box=FALSE) 
 {
     opar <- par(mar = par("mar"),plt=par("plt"))
@@ -145,8 +145,11 @@
     par(mar = c(0.8, 2.8, 0.8, 0.8),plt=par("plt"))
     if (length(w) < xmax) 
         w <- c(w, rep(0, xmax - length(w)))
-    col.w <- rep(grey(0.8), length(w))
-    col.w[wsel] <- grey(0)
+    # modif by TJ to handle 3 colors (respented/kept/others)
+    col.w <- rep("white", length(w))
+    if(!is.null(nf)) {col.w[1:nf] <- "grey"}
+    col.w[wsel] <- "black"
+    #
     barplot(w, col = col.w, ylim = c(ymin, ymax)*1.1)
     scatterutil.sub(cha = sub, csub = max(.8,csub), possub = possub)
     if(box) box()

@@ -195,14 +195,14 @@
                 cgrid = 0, sub = "Interstructure", csub = 1.5, 
                 possub = "topleft", full = TRUE)
             l0 <- length(x$RV.eig)
-            add.scatter.eig(x$RV.eig, 1, 2, posi = "bottomleft", 
+            add.scatter.eig(x$RV.eig, l0, 1, 2, posi = "bottomleft", 
                 ratio = 1/4)
         }
         if (j == 2) {
             coolig <- x$li[, c(xax, yax)]
             s.label(coolig, sub = "Compromise", csub = 1.5, 
                 possub = "topleft", )
-            add.scatter.eig(x$eig, xax, yax, posi = "bottomleft", 
+            add.scatter.eig(x$eig, x$nf, xax, yax, posi = "bottomleft", 
                 ratio = 1/4)
         }
         if (j == 3) {

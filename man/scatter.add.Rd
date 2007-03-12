@@ -1,18 +1,21 @@
-\name{add.graph}
-\alias{add.graph}
+\name{scatter.add}
+\alias{scatter.add}
 \alias{add.scatter.eig}
 \title{Add graphics to an existing plot}
 \description{
-  \code{add.graph} is a function which define a new plot area in a
+  \code{scatter.add} is a function which define a new plot area in a
   corner of an existing plot and display an additional graphic within
   this area. The additional graphic is determined by a function which is
-  the first argument taken by \code{add.graph}. It can be used in
+  the first argument taken by \code{scatter.add}. It can be used in
   various ways, for instance to add a screeplot to an ordination
   scatterplot (\code{add.scatter.eig}).
+  The function \code{add.scatter.eig} uses the following colors: black
+  (represented axes), grey(axes retained in the analysis) and white
+  (others).
 }
 \usage{
-add.graph(func,posi=c("bottomleft","bottomright","topleft","topright"),ratio=.2,inset=.01,bg.col='white')
-add.scatter.eig(w, xax, yax, posi = "bottomleft", ratio = .25, inset = .01, sub="Eigenvalues",csub=2*ratio)
+scatter.add(func,posi=c("bottomleft","bottomright","topleft","topright"),ratio=.2,inset=.01,bg.col='white')
+add.scatter.eig(w,nf=NULL, xax, yax, posi = "bottomleft", ratio = .25, inset = .01, sub="Eigenvalues",csub=2*ratio)
 }
 \arguments{
   \item{func}{an - evaluated - function producing a graphic}
@@ -27,6 +30,7 @@ add.scatter.eig(w, xax, yax, posi = "bottomleft", ratio = .25, inset = .01, sub=
     used in x and y}
   \item{bg.col}{the color of the background of the added graph}
   \item{w}{numeric vector of eigenvalues}
+  \item{nf}{the number of retained factors, NULL if not provided}
   \item{xax}{first represented axis}
   \item{yax}{second represented axis}
   \item{sub}{title of the screeplot}
@@ -36,7 +40,7 @@ add.scatter.eig(w, xax, yax, posi = "bottomleft", ratio = .25, inset = .01, sub=
 The matched call (invisible).
 }
 \details{
-  \code{add.graph} uses \code{par("plt")} to redefine the new plot region.
+  \code{scatter.add} uses \code{par("plt")} to redefine the new plot region.
   As stated in \code{par} documentation, this produces to (sometimes
   surprising) interactions with other parameters such as "mar".
   In particular, such interactions are likely to reset the plot region
@@ -62,26 +66,26 @@ f1 <- function(a){
 
 a <- rnorm(100)
 barplot(sort(a))
-add.graph(f1(a),posi="topleft",bg.col="grey")
+scatter.add(f1(a),posi="topleft",bg.col="grey")
 
 a <- rnorm(100)
 barplot(sort(a))
-add.graph(f1(a),posi="topleft",bg.col="grey",inset=c(.25,.01))
+scatter.add(f1(a),posi="topleft",bg.col="grey",inset=c(.25,.01))
 
 a <- rnorm(100)
 barplot(sort(a))
-add.graph(f1(a),posi="topleft",bg.col="grey",inset=.25,ratio=.1)
+scatter.add(f1(a),posi="topleft",bg.col="grey",inset=.25,ratio=.1)
 
 a <- rnorm(100)
 barplot(sort(a))
-add.graph(f1(a),posi="bottomright",bg.col="grey",ratio=.3)
+scatter.add(f1(a),posi="bottomright",bg.col="grey",ratio=.3)
 
 par(mfrow=c(1,1))
 
 data(microsatt)
-w <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE)
+w <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE,nf=3)
 s.label(w$co)
-add.scatter.eig(w$eig,posi="bottomright",1,2)
+add.scatter.eig(w$eig,w$nf,posi="bottomright",1,2)
 }
 \keyword{multivariate}
 \keyword{hplot}

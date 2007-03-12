@@ -21,5 +21,5 @@
     coocol <- 0.9 * coocol/max(k)
     s.arrow(coocol, clab = clab.col, add.p = TRUE, sub = sub, 
         possub = "bottomright")
-    add.scatter.eig(x$eig, xax, yax, posi = posieig, ratio = 1/4)
+    add.scatter.eig(x$eig, x$nf, xax, yax, posi = posieig, ratio = 1/4)
 }

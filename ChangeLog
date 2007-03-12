@@ -1,3 +1,21 @@
+2007-03-12  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
+
+	reviewed by: <delete if not using a buddy>
+
+	* R/dpcoa.R:
+	* R/dudi.pco.R:
+	* R/kplot.sepan.R:
+	* R/mfa.R:
+	* R/pta.R:
+	* R/scatter.R:
+	* R/scatter.add.R:
+	* R/scatter.coa.R:
+	* R/scatter.dudi.R:
+	* R/statis.R:
+	* man/add.graph.Rd:
+	* man/scatter.Rd:
+	* man/scatter.add.Rd:
+
 2007-03-10  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
 
 	reviewed by: <delete if not using a buddy>

@@ -1,7 +1,7 @@
 2007-03-12  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
 
 	reviewed by: <delete if not using a buddy>
-
+	* R/add.graph.R:
 	* R/dpcoa.R:
 	* R/dudi.pco.R:
 	* R/kplot.sepan.R:
@@ -12,7 +12,6 @@
 	* R/scatter.coa.R:
 	* R/scatter.dudi.R:
 	* R/statis.R:
-	* man/add.graph.Rd:
 	* man/scatter.Rd:
 	* man/scatter.add.Rd:
 

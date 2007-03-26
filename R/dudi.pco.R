@@ -107,6 +107,6 @@
     opar <- par(mar = par("mar"))
     on.exit(par(opar))
     coolig <- x$li[, c(xax, yax)]
-    s.label(coolig, clab = clab.row)
+    s.label(coolig, clab = clab.row, sub=sub, csub=csub)
     add.scatter.eig(x$eig, x$nf, xax, yax, posi = posieig, ratio = 1/4)
 }

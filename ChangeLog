@@ -1,3 +1,9 @@
+2007-03-26  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
+
+	reviewed by: <delete if not using a buddy>
+
+	* R/dudi.pco.R: sub and csub arguments are now actually passed to s.label 
+
 2007-03-12  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
 
 	* R/scatter.R: removed add.scatter.eig

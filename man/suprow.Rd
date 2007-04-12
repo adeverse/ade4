@@ -48,12 +48,12 @@ triangle.plot(w, clab = 0.75, label = row.names(w), scal = TRUE)
 data(rpjdl)
 rpjdl.coa <- dudi.coa(rpjdl$fau, scann = FALSE, nf = 4)
 rpjdl.coa$li[1:3,]
-suprow(rpjdl.coa,rpjdl$fau[1:3,]) # idem
+suprow(rpjdl.coa,rpjdl$fau[1:3,])$lisup # the same
 
 data(deug)
 deug.dudi <- dudi.pca(df = deug$tab, center = deug$cent, 
     scale = FALSE, scannf = FALSE)
-suprow(deug.dudi, deug$tab[1:3,]) # the supplementary individuals are centered
-deug.dudi$li[1:3,]  # idem
+suprow(deug.dudi, deug$tab[1:3,])$lisup # the supplementary individuals are centered
+deug.dudi$li[1:3,]  # the same
 }
 \keyword{multivariate}

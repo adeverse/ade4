@@ -1,27 +1,35 @@
-2007-03-26  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
+2007-04-12 14:58  dray
 
-	reviewed by: <delete if not using a buddy>
+	* data/atlas.rda, data/avijons.rda, data/aviurba.rda,
+	  data/baran95.rda, data/bf88.rda, data/chevaine.rda,
+	  data/cnc2003.rda, data/elec88.rda, data/monde84.rda,
+	  data/rankrock.rda, data/rpjdl.rda, data/sarcelles.rda,
+	  data/steppe.rda, data/t3012.rda, data/tarentaise.rda,
+	  data/veuvage.rda, data/westafrica.rda: remove non ASCII
+	  characters in data
 
-	* R/dudi.pco.R: sub and csub arguments are now actually passed to s.label 
+2007-03-26 18:47  jombart
 
-2007-03-12  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
+	* R/dudi.pco.R: sub and csub arguments are now actually passed to
+	  s.label
 
-	* R/scatter.R: removed add.scatter.eig
-	* man/scatter.Rd: removed add.scatter.eig
+2007-03-12 15:34  jombart
+
+	* R/scatter.R, man/scatter.Rd: removed add.scatter.eig
 	* R/add.scatter.R: new functions add.scatter and add.scatter.eig
 	* man/add.scatter.Rd: doc for add.scatter and add.scatter.eig
-	
-2007-03-07  Thibaut Jombart  <jombart@biomserv.univ-lyon1.fr>
+
+2007-03-07 19:46  jombart
 
 	* data/rpjdl.rda: removed accents
 
-2007-02-19  Jean Thioulouse  <jthioulo@biomserv.univ-lyon1.fr>
+2007-02-19 10:53  jthioulo
 
-	* R/s.arrow.R: added the "boxes" argument
-	* man/s.arrow.Rd: added the "boxes" argument
+	* R/s.arrow.R, man/s.arrow.Rd: added the "boxes"
+	  argument
 
-2007-02-16  Stéphane Dray  <dray@biomserv.univ-lyon1.fr>
+2007-02-16 10:13  dray
 
-
-	* man/orthogram.Rd: update the reference to Ollier et al.
+	* man/orthogram.Rd: update the reference to
+	  Ollier et al.
 

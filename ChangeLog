@@ -1,3 +1,11 @@
+2007-04-16 14:54  dray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-3 ----------
+
+2007-04-12 15:39  dray
+
+	* man/suprow.Rd: correct the example section
+
 2007-04-12 14:58  dray
 
 	* data/atlas.rda, data/avijons.rda, data/aviurba.rda,

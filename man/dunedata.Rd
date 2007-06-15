@@ -3,14 +3,14 @@
 \non_function{}
 \title{Dune Meadow Data}
 \description{
-\code{dunedata} is a data set containing for 30 sites, environmental variables and plant species. 
+\code{dunedata} is a data set containing for 20 sites, environmental variables and plant species. 
 }
 \usage{data(dunedata)}
 \format{
     \code{dunedata} is a list with 2 components.
     \describe{
-        \item{envir}{is a data frame with 30 rows (sites) 5 columns (environnemental variables).}
-        \item{veg}{is a data frame with 30 rows (sites) 20 columns (plant species).}
+        \item{envir}{is a data frame with 20 rows (sites) 5 columns (environnemental variables).}
+        \item{veg}{is a data frame with 20 rows (sites) 30 columns (plant species).}
     }
 }
 \source{

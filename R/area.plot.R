@@ -156,6 +156,7 @@
         a1 <- x1[fac == lev.poly[i]]
         a2 <- x2[fac == lev.poly[i]]
         res <- c(res, list(as.matrix(cbind(a1, a2))))
+        attr(res[[i]],"bbox") <- c(min(res[[i]][,1]),min(res[[i]][,2]),max(res[[i]][,1]),max(res[[i]][,2]))
     }
     r0 <- matrix(0, nlev, 4)
     r0[, 1] <- tapply(x1, fac, min)

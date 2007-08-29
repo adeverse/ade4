@@ -17,21 +17,23 @@
                   lty = 1)
         }
     }
-    scatterutil.circ <- function(cgrid, h) {
+    scatterutil.circ <- function(cgrid, h, grid) {
         cc <- seq(from = -1, to = 1, by = h)
         col <- "lightgray"
         lty <- 1
-        for (i in 1:(length(cc))) {
+        if(grid){
+          for (i in 1:(length(cc))) {
             x <- cc[i]
             a1 <- sqrt(1 - x * x)
             a2 <- (-a1)
             segments(x, a1, x, a2, col = col)
             segments(a1, x, a2, x, col = col)
+          }
         }
         symbols(0, 0, circles = 1, inches = FALSE, add = TRUE)
         segments(-1, 0, 1, 0)
         segments(0, -1, 0, 1)
-        if (cgrid <= 0) 
+        if (cgrid <= 0 | !grid) 
             return(invisible())
         cha <- paste("d = ", h, sep = "")
         cex0 <- par("cex") * cgrid
@@ -42,7 +44,7 @@
         x1 <- par("usr")[2]
         y1 <- par("usr")[4]
         rect(x1 - x0, y1 - y0, x1 - xh - x0, y1 - yh - y0, col = "white", 
-            border = 0)
+             border = 0)
         text(x1 - xh/2 - x0/2, y1 - yh/2 - y0/2, cha, cex = cex0)
     }
     origin <-c(0,0)
@@ -79,8 +81,7 @@
     y1 <- c(y1 - diff(range(y1)/20), y1 + diff(range(y1))/20)
     plot(x1, y1, type = "n", ylab = "", asp = 1, xaxt = "n", 
         yaxt = "n", frame.plot = FALSE)
-    if (grid) 
-        scatterutil.circ(cgrid = cgrid, h = 0.2)
+    scatterutil.circ(cgrid = cgrid, h = 0.2,grid=grid)
     for (i in 1:length(x)) arrow1(0, 0, x[i], y[i], len = 0.1, 
         ang = 15, edge = TRUE)
     if (clabel > 0) 

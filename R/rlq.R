@@ -335,6 +335,6 @@ testertracerlq<-function (npermut, pcR, pcQ, plL, pcL,tabR, tabQ, tabL,typQ, typ
     as.double(t(tabR)), as.double(t(tabQ)),as.double(t(tabL)),
     as.integer(assignR),as.integer(assignQ),
     as.integer(indexR),as.integer (length(indexR)),as.integer(indexQ), as.integer (length(indexQ)),
-    as.character(typQ), typR=as.character(typR), inersim = double(npermut), PACKAGE = "ade4")$inersim
+    as.character(typQ), typR=as.character(typR), inersim = double(npermut+1), PACKAGE = "ade4")$inersim
 }
 

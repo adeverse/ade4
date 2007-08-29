@@ -10,7 +10,7 @@ testdiscrimin <- function(npermut, rank, pl, moda, indica, tab, l1, c1)
         as.double(t(tab)),
         as.integer(l1),
         as.integer(c1),
-        inersim = double(npermut),
+        inersim = double(npermut+1),
         PACKAGE="ade4")$inersim
 
 testertrace <- function(npermut, pc1, pc2, tab1, tab2, l1, c1, c2)
@@ -26,7 +26,7 @@ testertrace <- function(npermut, pc1, pc2, tab1, tab2, l1, c1, c2)
         as.double(t(tab2)),
         as.integer(l1),
         as.integer(c2),
-        inersim = double(npermut),
+        inersim = double(npermut+1),
         PACKAGE="ade4")$inersim
 
 testertracenu <- function(npermut, pc1, pc2, pl, tab1, tab2, l1, c1, c2, Xinit, Yinit, typX, typY)
@@ -48,7 +48,7 @@ testertracenu <- function(npermut, pc1, pc2, pl, tab1, tab2, l1, c1, c2, Xinit, 
         as.double(t(Yinit)),
         as.character(typX),
         as.character(typY),
-        inersim = double(npermut),
+        inersim = double(npermut+1),
         PACKAGE="ade4")$inersim
 
 testertracenubis <- function(npermut, pc1, pc2, pl, tab1, tab2, l1, c1, c2, Xinit, Yinit, typX, typY, fixed)
@@ -71,7 +71,7 @@ testertracenubis <- function(npermut, pc1, pc2, pl, tab1, tab2, l1, c1, c2, Xini
         as.character(typX),
         as.character(typY),
         as.integer(fixed),
-        inersim = double(npermut),
+        inersim = double(npermut+1),
         PACKAGE="ade4")$inersim
 
 testinter <- function(npermut, pl, pc, moda, indica, tab, l1, c1)
@@ -87,7 +87,7 @@ testinter <- function(npermut, pl, pc, moda, indica, tab, l1, c1)
         as.double(t(tab)),
         as.integer(l1),
         as.integer(c1),
-        inersim = double(npermut),
+        inersim = double(npermut+1),
         PACKAGE="ade4")$inersim
 
 testprocuste <- function(npermut, lig, c1, c2, tab1, tab2)
@@ -98,7 +98,7 @@ testprocuste <- function(npermut, lig, c1, c2, tab1, tab2)
         as.integer(c2),
         as.double(t(tab1)),
         as.double(t(tab2)),
-        inersim = double(npermut),
+        inersim = double(npermut+1),
         PACKAGE="ade4")$inersim
 
 testmantel <- function(npermut, col, tab1, tab2)
@@ -107,7 +107,7 @@ testmantel <- function(npermut, col, tab1, tab2)
         as.integer(col),
         as.double(t(tab1)),
         as.double(t(tab2)),
-        inersim = double(npermut),
+        inersim = double(npermut+1),
         PACKAGE="ade4")$inersim
 
 testamova <- function(distab, l1, c1, samtab, l2, c2, strtab, l3, c3, indic, nbhapl, npermut, divtotal, df, r2)

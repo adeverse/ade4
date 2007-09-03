@@ -50,11 +50,14 @@
     y.distri <- (y.distri - min(y.distri))/(max(y.distri) - min(y.distri))
     y.distri <- ymin + ylabel + (ymax - ymin - 2 * ylabel) * 
         y.distri
+    res <- matrix(0,nvar,2)
     for (i in 1:nvar) {
         w <- df[, i]
         y0 <- y.distri[i]
         x.moy <- sum(w * score)
         x.et <- sqrt(sum(w * (score - x.moy)^2))
+        res[i,1] <- x.moy
+        res[i,2] <- x.et * x.et
         x1 <- x.moy - x.et * csize
         x2 <- x.moy + x.et * csize
         etiagauche <- TRUE
@@ -74,5 +77,8 @@
         }
         points(x.moy, y0, pch = 20, cex = par("cex") * 2)
     }
-    invisible()
+    res <- as.data.frame(res)
+    names(res) <- c("mean","var")
+    rownames(res) <- names(df)
+    invisible(res)
 }

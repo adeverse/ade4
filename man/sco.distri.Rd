@@ -24,6 +24,9 @@ sco.distri(score, df, y.rank = TRUE, csize = 1, labels = names(df),
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
 }
+\value{
+returns an invisible data.frame with means and variances
+}
 \author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
 \examples{
 w <-seq(-1, 1, le = 200)

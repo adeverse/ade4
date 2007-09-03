@@ -103,3 +103,58 @@
     print(sumry)
     cat("\n")
 }
+
+"niche.param" <- function(x) {
+  if (!inherits(x, "niche"))
+    stop("Object of class 'niche' expected")
+  appel <- as.list(x$call)
+  X <- eval(appel[[2]], sys.frame(0))$tab
+  Y <- eval(appel[[3]], sys.frame(0))
+  w1 <- apply(Y, 2, sum)
+  if (any(w1 <= 0))
+    stop(paste("Column sum <=0 in Y"))
+  Y <- sweep(Y, 2, w1, "/")
+  calcul.param <- function(freq,mil) {
+    inertia <- sum(freq * mil * mil)
+    m <- apply(freq * mil, 2, sum)
+    margi <- sum(m^2)
+    mil <- t(t(mil) - m)
+    tolt <- sum(freq * mil * mil)
+    u <- m/sqrt(sum(m^2))
+    z <- mil %*% u
+    tolm <- sum(freq * z * z)
+    tolr <- tolt - tolm
+    w <- c(inertia, margi, tolm, tolr)
+    names(w) <- c("inertia", "OMI", "Tol", "Rtol")
+    w1 <- round(w[2:4]/w[1], dig = 3) * 100
+    names(w1) <- c("omi", "tol", "rtol")
+    return(c(w, w1))
+  }
+  res <- apply(Y, 2, calcul.param,mil=X)
+  t(res)
+}
+
+
+rtest.niche <- function(x,nrepet=999){
+  nrepet <- nrepet + 1
+  if (!inherits(x, "dudi"))
+    stop("Object of class dudi expected")
+  if (!inherits(x, "niche"))
+    stop("Type 'niche' expected")
+  appel <- as.list(x$call)
+  X <- eval(appel$dudiX, sys.frame(0))$tab
+  Y <- eval(appel$Y, sys.frame(0))
+  w1 <- apply(Y, 2, sum)
+  if (any(w1 <= 0))
+    stop(paste("Column sum <=0 in Y"))
+  Y <- sweep(Y, 2, w1, "/")
+  calcul.margi <- function(freq,mil) {
+    m <- apply(freq * mil, 2, sum)
+    margi <- sum(m^2)
+  }
+  obs <- apply(Y,2,calcul.margi,mil=X)
+  sim <- sapply(1:nrepet,function(x) apply(apply(Y,2,sample),2,calcul.margi,mil=X))
+  res <- rbind.data.frame(obs,t(sim))
+  class(res) <- "krandtest"
+  return(res)
+}

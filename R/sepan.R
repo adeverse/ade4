@@ -123,7 +123,7 @@
     for (ianal in 1:nbloc) {
         w <- x$Eig[rank.fac == ianal]
         scatterutil.eigen(w, xmax = neig, ymax = maxeig, wsel = 1:nf, 
-            sub = x$tab.names[ianal], csub = csub, possub = "topright")
+            sub = x$tab.names[ianal], csub = csub, possub = "topright",yaxt="s")
     }
 }
 

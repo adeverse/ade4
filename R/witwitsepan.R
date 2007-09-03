@@ -50,7 +50,7 @@ witwitsepan <- function (ww, mfrow = NULL, csub = 2, plot = TRUE) {
         w <- result[[ianal]]
         su0 <- names(result)[ianal]
         scatterutil.eigen(w, xmax = neig, ymax = maxeig, wsel = 0, 
-            sub = su0, csub = csub, possub = "topright")
+            sub = su0, csub = csub, possub = "topright",yaxt="s")
     }
     return(invisible(result))
 

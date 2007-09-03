@@ -214,6 +214,6 @@ print.multispati <- function(x, ...)
     f1()
     s.arrow(x$c1, xax = xax, yax = yax, sub = "Canonical weights", 
         csub = 2, clab = 1.25)
-    s.match(x$li, x$ls, xax = xax, yax = yax, sub = "Classes", csub = 2, clab = 0.75) 
+    s.match(x$li, x$ls, xax = xax, yax = yax, sub = "Scores and lag scores", csub = 2, clab = 0.75) 
  
 }

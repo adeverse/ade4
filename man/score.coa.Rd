@@ -1,12 +1,14 @@
 \name{score.coa}
 \alias{score.coa}
-\title{Graphs to analyse a factor in a correspondence analysis}
+\alias{reciprocal.coa}
+\title{Reciprocal scaling after a correspondence analysis}
 \description{
 performs the canonical graph of a correspondence analysis. 
 }
 \usage{
 score.coa (x, xax = 1, dotchart = FALSE, clab.r = 1, clab.c = 1, 
     csub = 1, cpoi = 1.5, cet = 1.5, ...)
+reciprocal.coa(x)
 }
 \arguments{
   \item{x}{an object of class \code{coa}}
@@ -19,6 +21,8 @@ score.coa (x, xax = 1, dotchart = FALSE, clab.r = 1, clab.c = 1,
   \item{cet}{a coefficient for the size of segments in standard deviation}
   \item{\dots}{further arguments passed to or from other methods}
 }
+\value{return a data.frame with the scores, weights and factors of
+  correspondences (non zero cells)}
 \details{
 In a "reciprocal scaling", the reference score is a numeric code centred and normalized of the non zero cells of the array which both maximizes the variance of means by row and by column. The bars are drawn with half the length of this standard deviation.
 }
@@ -30,6 +34,8 @@ layout(matrix(c(1,1,2,3), 2, 2), resp = FALSE)
 data(aviurba)
 dd1 <- dudi.coa(aviurba$fau, scan = FALSE)
 score(dd1, clab.r = 0, clab.c = 0.75)
+recscal <- reciprocal.coa(dd1)
+head(recscal)
 abline(v = 1, lty = 2, lwd = 3)
 sco.distri(dd1$l1[,1], aviurba$fau)
 sco.distri(dd1$c1[,1], data.frame(t(aviurba$fau)))

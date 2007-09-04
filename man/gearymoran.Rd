@@ -5,12 +5,14 @@
 This function performs Moran's I test using phylogenetic and spatial link matrix (binary or general). It uses neighbouring weights so Moran's I and Geary's c randomization tests are equivalent.
 }
 \usage{
-gearymoran(bilis, X, nrepet = 999)
+gearymoran(bilis, X, nrepet = 999, alter=c("greater", "less", "two-sided"))
 }
 \arguments{
   \item{bilis}{: a \emph{n} by \emph{n} link matrix where \emph{n} is the row number of X}
   \item{X}{: a data frame with continuous variables}
   \item{nrepet}{: number of random vectors for the randomization test}
+  \item{alter}{a character string specifying the alternative hypothesis,
+  must be one of "greater" (default), "less" or "two-sided"}
 }
 \details{
 \code{bilis} is a squared symmetric matrix which terms are all positive or null. 

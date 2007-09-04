@@ -1,7 +1,7 @@
 "orthogram"<- function (x, orthobas = NULL, neig = NULL, phylog = NULL,
     nrepet = 999, posinega = 0, tol = 1e-07,
     na.action = c("fail", "mean"), 
-    cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0) 
+    cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0,alter=c("greater", "less", "two-sided")) 
 {
     "orthoneig" <- function (obj) {
         if (!inherits(obj, "neig")) 
@@ -169,13 +169,13 @@
     w$param <- w$observed <- w$vecpro <- NULL
     w$phylogram <- NULL
     w$phylo95 <- w$sig025 <- w$sig975 <- NULL
-    if (posinega==0) w$ratio <- NULL
-    attr(w,"call") <- match.call()
-    attr(w,"class") <- "krandtest"
+    if (posinega==0) {
+      w <- as.krandtest(obs=c(w$R2Max[1],w$SkR2k[1],w$Dmax[1],w$SCE[1]),sim=cbind(w$R2Max[-1],w$SkR2k[-1],w$Dmax[-1],w$SCE[-1]),names=c("R2Max","SkR2k","Dmax","SCE"),alter=alter,call=match.call())
+      } else {
+         w <- as.krandtest(obs=c(w$R2Max[1],w$SkR2k[1],w$Dmax[1],w$SCE[1],w$ratio[1]),sim=cbind(w$R2Max[-1],w$SkR2k[-1],w$Dmax[-1],w$SCE[-1],w$ratio[-1]),names=c("R2Max","SkR2k","Dmax","SCE","ratio"),alter=alter,call=match.call())
+      }
 
     if (high.scores != 0)
-        return(w, scores.order)
-    
-        else
-            return(w)
+        w$scores.order <- scores.order
+    return(w)
 }

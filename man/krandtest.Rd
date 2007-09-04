@@ -2,14 +2,15 @@
 \alias{krandtest}
 \alias{plot.krandtest}
 \alias{print.krandtest}
+\alias{as.krandtest}
 \title{Class of the Permutation Tests (in C).}
 \description{
-Plot and print many permutation tests. Objects of class \code{'krandtest'} are data frame with \emph{n+1} rows and \emph{p} columns. \cr
-Each column corresponds to a permutation test : the first value is the observed-value and the \emph{n} others are the simulated ones.
+Plot and print many permutation tests. Objects of class \code{'krandtest'} are lists.
 }
 \usage{
-plot.krandtest(x, mfrow = NULL, nclass = NULL, main.title = names(x), ...)
+plot.krandtest(x, mfrow = NULL, nclass = NULL, main.title = x$names, ...)
 print.krandtest(x, ...)
+as.krandtest(sim, obs, alter=c("greater", "less", "two-sided"), call = match.call(),names=colnames(sim))
 }
 \arguments{
   \item{x}{: an object of class \code{'krandtest'}}
@@ -17,19 +18,21 @@ print.krandtest(x, ...)
   \item{nclass}{: a number of intervals for the histogram}
   \item{main.title}{: a string of character for the main title}
   \item{\dots}{: further arguments passed to or from other methods}
+  \item{sim}{a matrix or data.frame of simulated values (repetitions as
+    rows, number of tests as columns}
+  \item{obs}{a numeric vector of observed values for each test}
+  \item{alter}{a character string specifying the alternative hypothesis,
+    must be one of "greater" (default), "less" or "two-sided"}
+  \item{call}{a call order}
+  \item{names}{a vector of names for tests}
 }
 \value{
 \code{plot.krandtest} draws the \emph{p} simulated values histograms and the position of the observed value.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }
+\author{Daniel Chessel and Stephane Dray \email{dray@biomserv.univ-lyon1.fr} }
 \seealso{\code{\link{randtest}}}
 \examples{
-wkrandtest <- data.frame(eg1=c(0, rnorm(200)))
-for (x0 in c(1.2,2.4,3.4,5.4,20.4)) {
-    wkrandtest <- cbind.data.frame(wkrandtest, c(x0, rnorm(200)))
-}
-names(wkrandtest) <- paste ("Test",1:6,sep="_")
-class(wkrandtest) <- "krandtest"
+wkrandtest <- as.krandtest(obs=c(0,1.2,2.4,3.4,5.4,20.4),sim=matrix(rnorm(6*200),200,6))
 wkrandtest
 plot(wkrandtest)
 }

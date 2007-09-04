@@ -135,13 +135,13 @@
 }
 
 
-rtest.niche <- function(x,nrepet=999){
+rtest.niche <- function(xtest,nrepet=99,...){
   nrepet <- nrepet + 1
-  if (!inherits(x, "dudi"))
+  if (!inherits(xtest, "dudi"))
     stop("Object of class dudi expected")
-  if (!inherits(x, "niche"))
+  if (!inherits(xtest, "niche"))
     stop("Type 'niche' expected")
-  appel <- as.list(x$call)
+  appel <- as.list(xtest$call)
   X <- eval(appel$dudiX, sys.frame(0))$tab
   Y <- eval(appel$Y, sys.frame(0))
   w1 <- apply(Y, 2, sum)
@@ -154,7 +154,6 @@ rtest.niche <- function(x,nrepet=999){
   }
   obs <- apply(Y,2,calcul.margi,mil=X)
   sim <- sapply(1:nrepet,function(x) apply(apply(Y,2,sample),2,calcul.margi,mil=X))
-  res <- rbind.data.frame(obs,t(sim))
-  class(res) <- "krandtest"
+  res <- as.krandtest(obs=obs,sim=t(sim))
   return(res)
 }

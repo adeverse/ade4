@@ -13,7 +13,7 @@ niche(dudiX, Y, scannf = TRUE, nf = 2)
 print.niche (x, \dots) 
 plot.niche (x, xax = 1, yax = 2, \dots)
 niche.param(x)
-rtest.niche(x,nrepet=999)
+rtest.niche(xtest,nrepet=99, \dots)
 }
 \arguments{
   \item{dudiX}{a duality diagram providing from a function \code{dudi.coa}, \code{dudi.pca}, ... using an array sites-variables}
@@ -23,6 +23,7 @@ rtest.niche(x,nrepet=999)
   \item{x}{an object of class \code{niche}}
   \item{\dots}{further arguments passed to or from other methods}
   \item{xax, yax}{the numbers of the x-axis and the y-axis}
+    \item{xtest}{an object of class \code{niche}}
   \item{nrepet}{the number of permutations for the testing procedure}
 }
 \value{

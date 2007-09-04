@@ -26,7 +26,7 @@
 if (require(spdep, quiet=TRUE)){
 data(vegtf)
 coa1 <- dudi.coa(vegtf$veg,scannf=FALSE)
-ms.coa1 <- multispati(coa1,listw=nb2listw(vegtf$nb),nfposi=2,nfnega=0,scannf=F)
+ms.coa1 <- multispati(coa1,listw=nb2listw(vegtf$nb),nfposi=2,nfnega=0,scannf=FALSE)
 summary(ms.coa1)
 plot(ms.coa1)
 par(mfrow=c(2,2))

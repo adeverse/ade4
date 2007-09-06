@@ -2,7 +2,7 @@
     if (!inherits(x, "acm")) 
         stop("For 'acm' object")
     if (x$nf == 1) {
-        score.(x, 1)
+        score.acm(x, 1)
         return(invisible())
     }
     def.par <- par(no.readonly = TRUE)

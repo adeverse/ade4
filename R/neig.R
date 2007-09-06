@@ -112,7 +112,6 @@
     deg <- attr(neig, "degrees")
     n <- length(deg)
     labels <- names(deg)
-    if (is.null(labels)) labels <- paste("P",1:nrow(mat),sep="")
     neig <- unclass(neig)
     G <- matrix(0, n, n)
     for (i in 1:n) {
@@ -121,6 +120,7 @@
     }
     G <- G + t(G)
     G <- 1 * (G > 0)
+    if (is.null(labels)) labels <- paste("P",1:n,sep="")
     dimnames(G) <- list(labels,labels)
     return(G)
 }

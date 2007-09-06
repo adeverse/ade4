@@ -130,7 +130,7 @@ return(res)
     J <- a    #nombre de niveau
     res <- matrix(0, nrow = n,ncol = n-1)
     filter.seq <- "H" #filtre correspondant au niveau 1
-    h <- wavelet.filter(wf.name = "haar", filter.seq = filter.seq)   #paramètre du filtre au niveau 1
+    h <- waveslim::wavelet.filter(wf.name = "haar", filter.seq = filter.seq)   #paramètre du filtre au niveau 1
     k <- 0
         for(i in 1:J){
         z <- rep(h,2**(J-i))
@@ -139,7 +139,7 @@ return(res)
         for(j in 1:n)   res[x[j],y[j]] <- z[j]
         k <- k+2**(J-i)
         filter.seq <- paste(filter.seq, "L", sep = "")
-        h <- wavelet.filter(wf.name = "haar", filter.seq = filter.seq)
+        h <- waveslim::wavelet.filter(wf.name = "haar", filter.seq = filter.seq)
         }
         res <- res*sqrt(n)
         res <- data.frame(res)

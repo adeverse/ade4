@@ -19,7 +19,7 @@
     tab<- dudi$tab
     nr<-nrow(tab)
     nc<-ncol(tab)
-    mat<-listw2mat(listw)
+    mat<-spdep::listw2mat(listw)
     lw<- dudi$lw
     cw<- dudi$cw
     if (!(identical(all.equal(lw,rep(1/nrow(tab), nrow(tab))),TRUE))) {

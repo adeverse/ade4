@@ -34,12 +34,12 @@ s.image <- function(dfxy, z, xax=1, yax=2, span=0.5,
     mod <- predict(lo,newdata=gr)
     if (is.null(area)) {
         polyin <- w[chull(xy),]
-        grin <- inpip(gr,polyin)
+        grin <- splancs::inpip(gr,polyin)
         mod[-grin] <- NA
     } else {
         grin <- rep(0,nrow(gr))
         larea <- split(area[,2:3],area[,1])
-        lapply(larea,function(x) grin<<- grin+inout(gr,x))
+        lapply(larea,function(x) grin<<- grin+splancs::inout(gr,x))
           mod[!grin] <- NA
     }
     mod <- matrix(mod,ngrid,ngrid)

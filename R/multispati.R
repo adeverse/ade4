@@ -6,7 +6,7 @@
     NEARZERO <- 1e-14
     
     dudi$cw <- dudi$cw
-    fun <- function (x) lag.listw(listw,x,TRUE)
+    fun <- function (x) spdep::lag.listw(listw,x,TRUE)
     tablag <- apply(dudi$tab,2,fun)
     covar <- t(tablag)%*%as.matrix((dudi$tab*dudi$lw))
     covar <- (covar+t(covar))/2
@@ -91,7 +91,7 @@
   eig <- dudi$eig[1:nf]
   cum <- cumsum (dudi$eig) [1:nf]
   ratio <- cum/sum(dudi$eig)
-  w <- apply(dudi$l1,2,lag.listw,x=listw)
+  w <- apply(dudi$l1,2,spdep::lag.listw,x=listw)
   moran <- apply(w*as.matrix(dudi$l1)*dudi$lw,2,sum)
   res <- data.frame(var=eig,cum=cum,ratio=ratio, moran=moran)
   cat("\nScores from the initial duality diagramm:\n")

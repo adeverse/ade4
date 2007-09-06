@@ -6,7 +6,8 @@
     csub = 1.25, possub = "bottomleft", pixmap = NULL, contour = NULL, 
     area = NULL, add.plot = FALSE) 
 {
-   dfxy <- data.frame(dfxy)
+  if(!require(pixmap,quietly=TRUE)) stop("the library pixmap is required; please install the package")
+  dfxy <- data.frame(dfxy)
     if (!is.list(listlogo)) stop (paste(deparse(substitute(listlogo)),' is not a list'))
     nlogo <- length(listlogo)
     if(is.null(klogo)) klogo <- 1:nlogo
@@ -66,7 +67,7 @@
         hpixe <- 96*(par("pin")[2])/clogo
         hlogo <- attr(pixmap,"size")[1]
         h <- hlogo*huser/hpixe/2
-        addlogo(pixmap, c(x-l,x+l),c(y-h,y+h))
+        pixmap::addlogo(pixmap, c(x-l,x+l),c(y-h,y+h))
         if (rectangle) rect(x-l,y-h,x+l,y+h)
     }
 
@@ -74,7 +75,7 @@
         x <- coox[k]
         y <- cooy[k]
         numico <- kico[k]
-        clogo=cico[numico]
+        clogo <- cico[numico]
         pixmap <- lico[[numico]]
         rec <- rico[numico]
         drawlogo(pixmap, x , y, clogo, rec)

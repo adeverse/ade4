@@ -39,7 +39,7 @@
     
     x <- as.numeric(dfxy[,xax])
     y <- as.numeric(dfxy[,yax])
-    xykde = kde2d(x, y, lims=par("usr"))
+    xykde = MASS::kde2d(x, y, lims=par("usr"))
     zlim = range(xykde$z, finite = TRUE)
     lev=seq(zlim[1],zlim[2],le=8)
     lev=lev[2:7]

@@ -9,7 +9,7 @@
     xy<-matrix(0,nrow,ncol)
     xy <- cbind(as.numeric(t(col(xy))),as.numeric(t(row(xy))))
     if (!is.null(cell.names)) {
-        if (length(cell.names)!=nrow*ncol) names <- NULL
+        if (length(cell.names)!=nrow*ncol) cell.names <- NULL
     }
     if (is.null (cell.names)) {
         cell.names <- paste("R",xy[,2],"C",xy[,1],sep="")

@@ -1,6 +1,6 @@
 "s.hist" <- function(dfxy, xax = 1, yax = 2, cgrid=1, cbreaks=2, adjust=1,...) {
     def.par <- par(no.readonly = TRUE)# save default, for resetting...
-    nf <- layout(matrix(c(2,4,1,3),2,2,byrow=TRUE), c(3,1), c(1,3), TRUE)
+    layout(matrix(c(2,4,1,3),2,2,byrow=TRUE), c(3,1), c(1,3), TRUE)
     ## pour avoir des quadrillages compatibles
     if (cbreaks>=1) cbreaks <- floor(cbreaks)
     else if (cbreaks<0.1) cbreaks <- 2

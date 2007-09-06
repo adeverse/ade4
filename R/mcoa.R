@@ -14,7 +14,6 @@
     nlig <- length(lw)
     cw <- X$cw
     ncol <- length(cw)
-    blo <- X$blo
     nbloc <- length(X$blo)
     indicablo <- X$TC[, 1]
     Xsepan <- sepan(X, nf = 4)
@@ -51,7 +50,6 @@
         for (k in 1:nbloc) {
             soustabk <- tab[, indicablo == k]
             uk <- scorcol[indicablo == k]
-            wk <- cw[indicablo == k]
             soustabk.hat <- t(apply(soustabk, 1, function(x) sum(x * 
                 uk) * uk))
             soustabk <- soustabk - soustabk.hat
@@ -299,15 +297,11 @@
     appel <- as.list(object$call)
     X <- eval(appel$X, sys.frame(0))
     lw <- sqrt(X$lw)
-    nlig <- length(lw)
     cw <- X$cw
     ncol <- length(cw)
-    blo <- X$blo
     nbloc <- length(X$blo)
-    indicablo <- X$TC[, 1]
     nf <- object$nf
     Xsepan <- sepan(X, nf)
-    rank.fac <- factor(rep(1:nbloc, Xsepan$rank))
     for (i in 1:nbloc) {
         cat("Array number", i, names(X)[[i]], "Rows", nrow(X[[i]]), 
             "Cols", ncol(X[[i]]), "\n")

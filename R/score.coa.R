@@ -34,7 +34,6 @@
     sco.distri.class.2g <- function(score, fac1, fac2, weight, 
         labels1 = as.character(levels(fac1)), labels2 = as.character(levels(fac2)), 
         clab1, clab2, cpoi, cet) {
-        n <- length(score)
         nvar1 <- nlevels(fac1)
         nvar2 <- nlevels(fac2)
         nvar <- nvar1 + nvar2

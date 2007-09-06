@@ -26,7 +26,6 @@
     fac <- x.area[, 1]
     lev.poly <- unique(fac)
     nlev <- nlevels(lev.poly)
-    label.poly <- as.character(unique(x.area[, 1]))
     x1 <- x.area[, 2]
     x2 <- x.area[, 3]
     r1 <- range(x1)
@@ -232,48 +231,46 @@
     w <- apply(lw,1,fun3)
     res[col(res) < row(res) ] <- w
     res <- res+t(res)
-    dimnames(res)=list(as.character(levpoly),as.character(levpoly))
-    res
+    dimnames(res) <- list(as.character(levpoly),as.character(levpoly))
+    return(res)
 }
 
 "area.util.class" <- function (area,fac) {
     if (nlevels(area[,1]!= length(fac))) stop ("non convenient matching")
     lreg <- split (as.character(unique(area[,1])),fac)
     "contour2poly" <- function(x) {
-        a = paste(x[,1],x[,2],sep="_")
-        b = paste(x[,3],x[,4],sep="_")
-        a = cbind(a,b)
-        points = a[1,1]
-        curr = a[1,1]
-        rowcur = 1
-        colcur = 1
-        npts = nrow(x)
+        a <- paste(x[,1],x[,2],sep="_")
+        b <- paste(x[,3],x[,4],sep="_")
+        a <- cbind(a,b)
+        points <- a[1,1]
+        rowcur <- 1
+        colcur <- 1
+        npts <- nrow(x)
         for (k in (1:(npts-2))) {
-            colnew = 3-colcur
-            curnew = a[rowcur,colnew]
-            points = c(points,curnew)
+            colnew <- 3-colcur
+            curnew <- a[rowcur,colnew]
+            points <- c(points,curnew)
             a <- a[-rowcur,]
-             coo = which(a==curnew,arr=TRUE)
-           rowcur=coo[1,1]
-            colcur=coo[1,2]
-            curr=a[rowcur,colcur]
-           }
-        colnew = 3-colcur
-        curnew = a[rowcur,colnew]
-        points = c(points,curnew)
+            coo <- which(a==curnew,arr=TRUE)
+            rowcur <- coo[1,1]
+            colcur <- coo[1,2]
+          }
+        colnew <- 3-colcur
+        curnew <- a[rowcur,colnew]
+        points <- c(points,curnew)
         return(matrix(as.numeric(unlist(strsplit(points,"_"))),ncol=2,byr=TRUE))
     }
     "souscontour" <- function(k) {
-        sel = unlist(lapply(lreg[[k]],function(x) which(area[,1]==x)))
-        area.sel = area[sel,]
-        area.sel[,1]=as.factor(as.character(area.sel[,1]))
-        w=area.util.contour(area.sel)
-        w=contour2poly(w)
-        w=cbind(rep(k,nrow(w)),w)
+        sel <- unlist(lapply(lreg[[k]],function(x) which(area[,1]==x)))
+        area.sel <- area[sel,]
+        area.sel[,1] <- as.factor(as.character(area.sel[,1]))
+        w <- area.util.contour(area.sel)
+        w <- contour2poly(w)
+        w <- cbind(rep(k,nrow(w)),w)
         return(w)
     }
     lcontour <- lapply(1:nlevels(fac),souscontour)
-    w = lcontour[[1]]
+    w <- lcontour[[1]]
     for (k in 2:length(lcontour)) w <- rbind.data.frame(w,lcontour[[k]])
     w[,1] <- as.factor(levels(fac)[w[,1]])
     return(w)

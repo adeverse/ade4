@@ -64,7 +64,6 @@
         yh <- max(c(strheight(cha, cex = cex0), sq0))
         h <- strheight(cha, cex = cex0)
         y0 <- par("usr")[3] + yh/2 + h
-        ltot <- strwidth(cha, cex = cex0) + sum(sq0) + h
         x0 <- par("usr")[1] + h/2
         for (i in (1:(length(sq0)))) {
             cha <- br0[i]

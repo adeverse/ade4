@@ -2,8 +2,8 @@
     if (!is.numeric(z)) stop("z is not numeric")
     n <- length(z)
     if (n<=2) stop ("length(z)<3")
-    if (is.null (labels)) clab <- 0
-    if (length(labels)!=length(z)) clab <- 0
+    if (is.null (labels)) clabel <- 0
+    if (length(labels)!=length(z)) clabel <- 0
     alpha <- alpha0-(1:n)*2*pi/n
     leg <- xlim
     leg0 <- (leg-min(leg))/(max(leg)-min(leg))*0.8+0.2

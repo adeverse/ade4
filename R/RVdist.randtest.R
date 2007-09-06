@@ -10,7 +10,6 @@
         stop("Non convenient dimension")
     m1 <- as.matrix(m1)
     m2 <- as.matrix(m2)
-    col <- ncol(m1)
     res <- .C("testdistRV", as.integer(nrepet), as.integer (n), as.double(m1),
         as.double(m2), RV=double(nrepet+1),PACKAGE="ade4")$RV
     obs=res[1]

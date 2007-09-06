@@ -19,7 +19,6 @@ if (!inherits(orthobas, "data.frame")) stop ("'orthobas' is not a data.frame")
     if (ncol(orthobas) != (nobs-1)) stop (paste("'orthobas' has",ncol(orthobas),"columns, expected:",nobs-1))
 
 vecpro <- as.matrix(orthobas)
-npro <- ncol(vecpro)
 
 w <- t(vecpro/nobs)%*%vecpro
     if (any(abs(diag(w)-1)>1e-07)) {

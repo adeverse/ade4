@@ -5,7 +5,6 @@
     res <- list()
 #### Parameters of first ktab
     lwX <- KTX$lw
-    nligX <- length(lwX)
     cwX <- KTX$cw
     ncolX <- length(cwX)
     bloX <- KTX$blo

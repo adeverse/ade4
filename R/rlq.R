@@ -13,7 +13,7 @@ function (x, xax = 1, yax = 2, ...)
         stop("Non convenient yax")
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
-    nf <- layout(matrix(c(1, 1, 3, 1, 1, 4, 2, 2,5,2,2,6,8,8,7), 3, 5), 
+    layout(matrix(c(1, 1, 3, 1, 1, 4, 2, 2,5,2,2,6,8,8,7), 3, 5), 
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.label(x$lR[, c(xax, yax)], sub = "R row scores",csub = 2,clab=1.25)
@@ -84,7 +84,6 @@ function( dudiR, dudiL, dudiQ , scannf = TRUE, nf = 2) {
     if (!inherits(dudiR, "dudi")) 
         stop("Object of class dudi expected")
     lig1 <- nrow(dudiR$tab)
-    col1 <- ncol(dudiR$tab)
     
     if (!inherits(dudiL, "dudi")) 
         stop("Object of class dudi expected")
@@ -95,7 +94,7 @@ function( dudiR, dudiL, dudiQ , scannf = TRUE, nf = 2) {
     if (!inherits(dudiQ, "dudi")) 
         stop("Object of class dudi expected")
     lig3 <- nrow(dudiQ$tab)
-    col3 <- ncol(dudiQ$tab)
+
     if (lig1 != lig2) 
         stop("Non equal row numbers")
     if (any((dudiR$lw - dudiL$lw)^2 > 1e-07)) 

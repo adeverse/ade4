@@ -41,7 +41,7 @@
         stry <- max( strwidth(labels.col,unit="inches",cex=cexcol))+0.1
     }
     par(mai = c(0.1, 0.1, stry, strx))
-    nc <- ncol(df)
+    #nc <- ncol(df)
     #x <- 1/2/nc+(0:(nc-1))/nc
     # modif du 06/01/2005 le oaramètre x avait été oublié
     intermin <- abs(min(diff(sort(x))))
@@ -103,7 +103,6 @@
     sig0 <- sign(br0)
     
     dis <- phylog$droot
-    dl <- phylog$droot[leave.names]
     dn <- phylog$droot[node.names]
     names(y) <- leave.names
     x <- dis

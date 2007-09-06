@@ -4,7 +4,6 @@
     if (!is.factor(fac)) 
         stop("factor expected")
     lig <- nrow(dudi$tab)
-    col <- ncol(dudi$tab)
     if (length(fac) != lig) 
         stop("Non convenient dimension")
     cla.w <- tapply(dudi$lw, fac, sum)
@@ -56,7 +55,7 @@
     fac <- eval(as.list(bet$call)$fac, sys.frame(0))
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
-    nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
+    layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
         respect = TRUE)
     par(mar = c(0.2, 0.2, 0.2, 0.2))
     s.arrow(bet$c1, xax = xax, yax = yax, sub = "Canonical weights", 

@@ -8,14 +8,11 @@
 
 # on prépare le terrain
 nodes.group <- as.factor(x[, 6])
-nodes.character <- as.character(x[,6])
 x <- x[, -c(1,6)]
 x[,c(3,4)] <-x[,c(3,4)] + 1
 x[x == -99] <- 0
 nleaves <- nrow(x) + 1 
 nnodes <- sum(nodes.group==0)+length(levels(nodes.group))-1
-leaves.names <- paste("Ext", 1:nleaves, sep="")
-nodes.names <- c("Root", paste("I", 2:nnodes-1, sep=""))
 
 # on récuupère les valeurs associées aux feuilles
 values <- as.vector(t(as.matrix(x[,c(1,2)])))
@@ -63,5 +60,5 @@ for (i in 2:nnodes){
             } 
     }
     
-return(res <- list(tre = tre, trait = values))
+return(list(tre = tre, trait = values))
 }

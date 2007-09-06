@@ -1,8 +1,6 @@
 "dudi.coa" <- function (df, scannf = TRUE, nf = 2) {
     if (!is.data.frame(df)) 
         stop("data.frame expected")
-    lig <- nrow(df)
-    col <- ncol(df)
     if (any(df < 0)) 
         stop("negative entries in table")
     if ((N <- sum(df)) == 0) 

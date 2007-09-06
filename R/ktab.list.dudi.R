@@ -6,7 +6,6 @@
     res <- list()
     lw <- obj[[1]]$lw
     cw <- NULL
-    nlig <- nrow(obj[[1]]$tab)
     blocks <- unlist(lapply(obj, function(x) ncol(x$tab)))
     for (i in 1:nblo) {
         if (any(obj[[i]]$lw != lw)) 

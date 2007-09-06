@@ -17,7 +17,6 @@
     cw <- unlist(cw[selection])
     res$cw <- cw
     res$lw <- object$lw
-    nr <- length(res$lw)
     blocks <- unlist(lapply(res, function(x) ncol(x)))
     nblo <- length(blocks)
     res$blo <- blocks
@@ -109,7 +108,6 @@
     res$lw <- lw
     res$cw <- cw
     res$blo <- blocks
-    nblo <- length(blocks)
     ktab.util.addfactor(res) <- list(blocks, length(lw))
     res$call <- match.call()
     class(res) <- "ktab"
@@ -137,7 +135,6 @@
         if (any(c.new != c.n)) 
             stop("non equal col.names among array")
     }
-    nr <- blocks[1]
     new.row.names <- names(x[[1]])
     indica <- as.factor(rep(1:nblo, blocks))
     w <- split(x$cw, indica)
@@ -267,7 +264,7 @@
     w <- row.names(x)
     w1 <- paste(w, as.character(x$TL[, 1]), sep = ".")
     w <- col.names(x)
-    if (any(dups <- duplicated(w))) 
+    if (any(duplicated(w))) 
         w <- paste(w, as.character(x$TC[, 1]), sep = ".")
     w2 <- w
     w <- tab.names(x)

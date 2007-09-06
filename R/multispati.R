@@ -6,7 +6,6 @@
     NEARZERO <- 1e-14
     
     dudi$cw <- dudi$cw
-    row.w <- dudi$lw
     fun <- function (x) lag.listw(listw,x,TRUE)
     tablag <- apply(dudi$tab,2,fun)
     covar <- t(tablag)%*%as.matrix((dudi$tab*dudi$lw))
@@ -69,60 +68,56 @@
 
 
 "summary.multispati" <- function (object, ...) {
-    util <- function(n) {
-        x <- "1"
-        for (i in 2:n) x[i] <- paste(x[i - 1], i, sep = "+")
-        return(x)
-    }
-    norm.w <- function(X, w) {
-        f2 <- function(v) sum(v * v * w)/sum(w)
-        norm <- apply(X, 2, f2)
-        return(norm)
-    }
-
-    if (!inherits(object, "multispati"))stop("to be used with 'multispati' object")
-    if(!require(spdep,quietly=TRUE)) stop("the library spdep is required; please install this package")
- 
-    cat("\nMultivariate Spatial Analysis\n")
-    cat("Call: ")
-    print(object$call)
-
-    appel <- as.list(object$call)
-    dudi <- eval(appel$dudi, sys.frame(0))
-    listw <- eval(appel$listw, sys.frame(0))
-    
-    # les scores de l'analyse de base
-    nf <- dudi$nf
-    eig <- dudi$eig[1:nf]
-    cum <- cumsum (dudi$eig) [1:nf]
-    ratio <- cum/sum(dudi$eig)
-    w <- apply(dudi$l1,2,lag.listw,x=listw)
-    moran <- apply(w*as.matrix(dudi$l1)*dudi$lw,2,sum)
-    res <- data.frame(var=eig,cum=cum,ratio=ratio, moran=moran)
-    cat("\nScores from the initial duality diagramm:\n")
-    print(res)
-    
-    # les scores de l'analyse spatiale
-    # on recalcule l'objet en gardant tous les axes
-    eig <- object$eig
-    nfposi <- object$nfposi
-    nfnega <- object$nfnega
-    nfposimax <- sum(eig > 0)
-    nfnegamax <- sum(eig < 0)
-    
-    ms <- multispati(dudi=dudi, listw=listw, scannf=FALSE,
-                     nfposi=nfposimax, nfnega=nfnegamax)
-
-    ndim <- dudi$rank
-    nf <- nfposi + nfnega
-    agarder <- c(1:nfposi,if (nfnega>0) (ndim-nfnega+1):ndim else NULL)
-    varspa <- norm.w(ms$li,dudi$lw)
-    moran <- apply(as.matrix(ms$li)*as.matrix(ms$ls)*dudi$lw,2,sum)
-    res <- data.frame(eig=eig,var=varspa,moran=moran/varspa)
-    
-    cat("\nMultispati eigenvalues decomposition:\n")
-    print(res[agarder,])
-    return(invisible(res))
+  
+  norm.w <- function(X, w) {
+    f2 <- function(v) sum(v * v * w)/sum(w)
+    norm <- apply(X, 2, f2)
+    return(norm)
+  }
+  
+  if (!inherits(object, "multispati"))stop("to be used with 'multispati' object")
+  if(!require(spdep,quietly=TRUE)) stop("the library spdep is required; please install this package")
+  
+  cat("\nMultivariate Spatial Analysis\n")
+  cat("Call: ")
+  print(object$call)
+  
+  appel <- as.list(object$call)
+  dudi <- eval(appel$dudi, sys.frame(0))
+  listw <- eval(appel$listw, sys.frame(0))
+  
+  ## les scores de l'analyse de base
+  nf <- dudi$nf
+  eig <- dudi$eig[1:nf]
+  cum <- cumsum (dudi$eig) [1:nf]
+  ratio <- cum/sum(dudi$eig)
+  w <- apply(dudi$l1,2,lag.listw,x=listw)
+  moran <- apply(w*as.matrix(dudi$l1)*dudi$lw,2,sum)
+  res <- data.frame(var=eig,cum=cum,ratio=ratio, moran=moran)
+  cat("\nScores from the initial duality diagramm:\n")
+  print(res)
+  
+  ## les scores de l'analyse spatiale
+  ## on recalcule l'objet en gardant tous les axes
+  eig <- object$eig
+  nfposi <- object$nfposi
+  nfnega <- object$nfnega
+  nfposimax <- sum(eig > 0)
+  nfnegamax <- sum(eig < 0)
+  
+  ms <- multispati(dudi=dudi, listw=listw, scannf=FALSE,
+                   nfposi=nfposimax, nfnega=nfnegamax)
+  
+  ndim <- dudi$rank
+  nf <- nfposi + nfnega
+  agarder <- c(1:nfposi,if (nfnega>0) (ndim-nfnega+1):ndim else NULL)
+  varspa <- norm.w(ms$li,dudi$lw)
+  moran <- apply(as.matrix(ms$li)*as.matrix(ms$ls)*dudi$lw,2,sum)
+  res <- data.frame(eig=eig,var=varspa,moran=moran/varspa)
+  
+  cat("\nMultispati eigenvalues decomposition:\n")
+  print(res[agarder,])
+  return(invisible(res))
 }
 
 
@@ -179,7 +174,6 @@ print.multispati <- function(x, ...)
     
     appel <- as.list(x$call)
     dudi <- eval(appel$dudi, sys.frame(0))
-    listw <- eval(appel$listw, sys.frame(0))
     nf <- x$nfposi + x$nfnega
     if ((nf == 1) || (xax == yax)) {
         sco.quant(x$li[, 1], dudi$tab)
@@ -209,7 +203,7 @@ print.multispati <- function(x, ...)
     
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
-    nf <- layout(matrix(c(3, 3, 1, 3, 3, 2), 3, 2))
+    layout(matrix(c(3, 3, 1, 3, 3, 2), 3, 2))
     par(mar = c(0.2, 0.2, 0.2, 0.2))
     f1()
     s.arrow(x$c1, xax = xax, yax = yax, sub = "Canonical weights", 

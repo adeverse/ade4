@@ -5,7 +5,6 @@
     nlig <- length(lw)
     cw <- X$cw
     ncol <- length(cw)
-    blo <- X$blo
     ntab <- length(X$blo)
     indicablo <- X$TC[, 1]
     tab.names <- tab.names(X)

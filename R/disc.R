@@ -18,9 +18,9 @@ disc <- function(samples, dis = NULL, structures=NULL){
         if(length(m[m == 1]) != ncol(structures)) stop ("Non convenient structures")
     }
     # Intern functions :
-    Diversity <- function(d2, nbhaplotypes, freq) {
-        div <- nbhaplotypes/2*(t(freq)%*%d2%*%freq)
-    }
+    ##Diversity <- function(d2, nbhaplotypes, freq) {
+    ##   div <- nbhaplotypes/2*(t(freq)%*%d2%*%freq)
+    ##}
     Structutil <- function(dp2, Np, unit){    
         if (!is.null(unit)) {
             modunit <- model.matrix(~ -1 + unit)

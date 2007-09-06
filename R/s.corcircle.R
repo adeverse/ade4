@@ -20,7 +20,6 @@
     scatterutil.circ <- function(cgrid, h, grid) {
         cc <- seq(from = -1, to = 1, by = h)
         col <- "lightgray"
-        lty <- 1
         if(grid){
           for (i in 1:(length(cc))) {
             x <- cc[i]
@@ -55,8 +54,6 @@
         stop("Non convenient selection for xax")
     if ((yax < 1) || (yax > ncol(df))) 
         stop("Non convenient selection for yax")
-    if (!is.null(label)) 
-        showpoint <- FALSE
     x <- df[, xax]
     y <- df[, yax]
     if (add.plot) {

@@ -106,7 +106,6 @@
     opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
     on.exit(par(opar))
     par(mfrow = c(2, 2))
-    nf <- ncol(x$li)
     cootot <- x$li[, c(xax, yax)]
     auxi <- x$li[, c(xax, yax)]
     names(auxi) <- names(cootot)

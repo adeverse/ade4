@@ -16,7 +16,6 @@
     col.blocks <- genet$loc.blocks
     nloci <- length(col.blocks)
     d.names <- genet$pop.names
-    nallel= sum(col.blocks)
     nlig <- nrow(df)
 
     if (is.null(names(col.blocks))) {
@@ -39,8 +38,6 @@
         X.marge <- apply(X, 1, sum)
         if (any(sum(X.marge)==0)) stop ("Null row found")
         X.marge <- X.marge/sum(X.marge)
-        X.mean <- apply(X * X.marge, 2, sum)
-        nr <- sum(X.marge == 0)
         df[, k1:k2] <- X
     }
     # df contient un tableau de fréquence

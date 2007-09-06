@@ -28,7 +28,6 @@
         Y <- X[sel, ]
         Y.lw <- X.lw[sel]
         cla.w <- tapply(Y.lw, fac, sum)
-        Y1 <- Y * Y.lw
         Y <- apply(Y * Y.lw, 2, function(x) tapply(x, fac, sum)/cla.w)
         inerb <- sum(apply(Y, 2, function(x) sum(x * x * cla.w)))
         return(inerb/inertot)

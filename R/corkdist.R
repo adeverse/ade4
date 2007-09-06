@@ -6,12 +6,10 @@
 
 "mantelkdist" <- function(kd, nrepet = 999) {
     if (!inherits(kd,"kdist")) stop ("Object of class 'kdist' expected")
-    res=list()
+    res <- list()
     ndist <- length(kd)
     nind <- attr(kd, "size")
     if (nrepet<=99) nrepet <- 99
-    n <- attr(kd,"size")
-    ncouple <- ndist*(ndist-1)/2
     w <- matrix(0,ndist,ndist)
     numrow <- row(w)[row(w)>col(w)]
     numcol <- col(w)[row(w)>col(w)]
@@ -54,8 +52,6 @@
     ndist <- length(kd)
     nind <- attr(kd, "size")
     if (nrepet<=99) nrepet <- 99
-    n <- attr(kd,"size")
-    ncouple <- ndist*(ndist-1)/2
     w <- matrix(0,ndist,ndist)
     numrow <- row(w)[row(w)>col(w)]
     numcol <- col(w)[row(w)>col(w)]
@@ -164,7 +160,6 @@ plot.corkdist <- function (x, whichinrow=NULL, whichincol=NULL, gap=4, nclass = 
     on.exit(par(old.par))
     oma <- c(2, 2, 1, 1)
     par(mfrow = c(length(whichinrow), length(whichincol)), mar = rep(gap/2, 4), oma = oma)
-    index <- 0
     for (i in whichinrow) {
         for (j in whichincol) {
             if (i==j) {

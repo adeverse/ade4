@@ -2,7 +2,7 @@
     if (!inherits(x, "mix")) 
         stop("For 'mix' object")
     if (x$nf == 1) 
-        xax <- yax <- 1
+        xax <- 1
     lm.pcaiv <- function(x, df, weights, use) {
         if (!inherits(df, "data.frame")) 
             stop("data.frame expected")

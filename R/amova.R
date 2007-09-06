@@ -2,7 +2,7 @@ amova <- function(samples, distances = NULL, structures = NULL) {
     # checking of user's data and initialization.
     if (!inherits(samples, "data.frame")) stop("Non convenient samples")
     if (any(samples < 0)) stop("Negative value in samples")
-    nhap <- nrow(samples) ; nsam <- ncol(samples)
+    nhap <- nrow(samples) ;
     if (!is.null(distances)) {
         if (!inherits(distances, "dist")) stop("Object of class 'dist' expected for distances")
         if (!is.euclid(distances)) stop("Euclidean property is expected for distances")
@@ -18,10 +18,11 @@ amova <- function(samples, distances = NULL, structures = NULL) {
         if (length(m[m == 1]) != ncol(structures)) stop("Non convenient structures")
     }        
     # intern functions (computations of the sums of squares and mean squares) :
-    Diversity <- function(d2, nbhaplotypes, freq) {
+    #Diversity <- function(d2, nbhaplotypes, freq) {
     # diversity index according to Rao s quadratic entropy
-        div <- nbhaplotypes / 2 * (t(freq) %*% d2 %*% freq)
-    }      
+    #    div <- nbhaplotypes / 2 * (t(freq) %*% d2 %*% freq)
+    #    return(div)
+    #}      
     Ssd.util <- function(dp2, Np, unit) {
     # Deductions of the distances between two groups.
     # Deductions of the weight and composition of a group.
@@ -172,7 +173,7 @@ amova <- function(samples, distances = NULL, structures = NULL) {
     ssd <- proc$ssd
     cm <- proc$cm
     sigma <- proc$sigma
-    n <- proc$n
+
     # Interface.
     if (!is.null(structures)) {
         lesnoms1 <- rep("Between", ncol(structures) + 1)

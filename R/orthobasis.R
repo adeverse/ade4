@@ -162,10 +162,9 @@ return(res)
 }
 
 "orthobasis.line" <- function (n) {
-    appel = match.call()
+    appel <- match.call()
     # solution de Cornillon p. 12
     res <- NULL
-    r2 <- sqrt(2)
     for (k in 1:(n-1)) {
         x <- cos(k*pi*(2*(1:n)-1)/2/n)
         x <- sqrt(n)*x/sqrt(sum(x*x))

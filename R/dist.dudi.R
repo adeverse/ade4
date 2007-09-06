@@ -1,10 +1,6 @@
 "dist.dudi" <- function (dudi, amongrow = TRUE) {
     if (!inherits(dudi, "dudi")) 
         stop("Object of class 'dudi' expected")
-    nr <- nrow(dudi$tab)
-    nc <- ncol(dudi$tab)
-    lw <- dudi$lw
-    cw <- dudi$cw
     if (amongrow) {
         x <- t(t(dudi$tab) * sqrt(dudi$cw))
         x <- x %*% t(x)

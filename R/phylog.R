@@ -137,7 +137,6 @@ phylog.extract<-function(phylog,node,distance=TRUE){
     tre<-phylog$tre
     nodes.names<- names(phylog$nodes)
     leaves.names<- names(phylog$leaves)
-    node.number<- grep(node, nodes.names)
 
     #on détermine la feuilles la plus à gauche associée au noeud
     leave<-node
@@ -264,12 +263,9 @@ phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
     }
     if(!inherits(phylog,"phylog")) stop ("Object with class 'phylog' expected")
     nodes.names<- names(phylog$nodes)
-    nodes.number<- length(nodes.names)
     leaves.names<- names(phylog$leaves)
-    droot <- phylog$droot
     new.names <- names(list.nodes)
     phylogparts <- phylog$parts
-    phylogleaves <- phylog$leaves
     if (any(!new.names%in%nodes.names)) stop ("Non convient name in 'list.nodes'")
     wverif <- unlist(lapply(new.names,verif))
     if (any(!wverif)) stop ("Non convient content in 'list.nodes'")

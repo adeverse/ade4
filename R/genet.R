@@ -237,7 +237,6 @@
     PopAllCount <- PopAllCount[sort(row.names(PopAllCount)),]
     PopAllCount <- PopAllCount[,sort(names(PopAllCount))]
     npop <- nrow(PopAllCount)
-    nall <- ncol(PopAllCount)
     w1 <- strsplit(names(PopAllCount),"[.]")
     loc.fac <- as.factor(unlist(lapply(w1, function(x) x[1])))
     loc.blocks <- as.numeric(table(loc.fac))
@@ -316,7 +315,6 @@
     PopAllFreq <- PopAllFreq[sort(row.names(PopAllFreq)),]
     PopAllFreq <- PopAllFreq[,sort(names(PopAllFreq))]
     npop <- nrow(PopAllFreq)
-    nall <- ncol(PopAllFreq)
     w1 <- strsplit(names(PopAllFreq),"[.]")
     loc.fac <- as.factor(unlist(lapply(w1, function(x) x[1])))
     loc.blocks <- as.numeric(table(loc.fac))

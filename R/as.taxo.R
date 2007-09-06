@@ -3,7 +3,6 @@ function (df)
 {
     if (!inherits(df, "data.frame")) 
         stop("df is not a data.frame")
-    nr <- nrow(df)
     nc <- ncol(df)
     for (i in 1:nc) {
         w <- df[, i]

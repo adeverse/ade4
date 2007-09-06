@@ -1,6 +1,5 @@
 "uniquewt.df" <- function (x) {
     x <- data.frame(x)
-    lig <- nrow(x)
     col <- ncol(x)
     w <- unlist(x[1])
     for (j in 2:col) {

@@ -8,8 +8,6 @@
         stop("Row numbers are different")
     if (any(row.names(df2) != row.names(df1))) 
         stop("row names are different")
-    c1 <- ncol(df1)
-    c2 <- ncol(df2)
     X <- scale(df1, scale = FALSE)
     Y <- scale(df2, scale = FALSE)
     X <- X/(sum(svd(X)$d^4)^0.25)

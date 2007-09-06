@@ -4,7 +4,7 @@
     if (!inherits(x, "acm")) 
         stop("Object of class 'acm' expected")
     if (x$nf == 1) 
-        xax <- yax <- 1
+        xax <- 1
     if ((xax < 1) || (xax > x$nf)) 
         stop("non convenient axe number")
     def.par <- par(no.readonly = TRUE)

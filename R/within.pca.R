@@ -6,7 +6,6 @@
     if (!is.factor(fac)) 
         stop("factor expected")
     lig <- nrow(df)
-    col <- ncol(df)
     if (length(fac) != lig) 
         stop("Non convenient dimension")
     cla.w <- tapply(rep(1, length(fac)), fac, sum)

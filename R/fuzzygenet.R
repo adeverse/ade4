@@ -112,7 +112,6 @@
     ind.all <- data.frame(t(ind.all))
     names(ind.all) <- all.names
     nind <- nrow(ind.all)
-    nallels <- length(all.codes)
     # ind.all contient un tableau individus - alleles codé 
     # ******* pour NA pour les manquants
     # 010010 pour les hétérozygotes

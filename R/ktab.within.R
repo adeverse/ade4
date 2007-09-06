@@ -18,7 +18,6 @@
         tabnames <- as.character(unique(fac))
     else if (length(tabnames) != length(as.character(unique(fac)))) 
         stop("Non convenient tabnames length")
-    nlig <- ncol(dudiwit$tab)
     cw <- NULL
     for (i in 1:nblo) {
         k <- unique(fac)[i]

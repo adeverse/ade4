@@ -11,7 +11,6 @@
     par(mfrow = mfrow)
     if (length(which.tab) > prod(mfrow)) 
         par(ask = TRUE)
-    nbloc <- length(object$RV.tabw)
     nf <- ncol(object$C.Co)
     if (xax > nf) 
         stop("Non convenient xax")

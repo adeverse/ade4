@@ -2,11 +2,9 @@
     if (!inherits(dudiX, "dudi")) 
         stop("Object of class dudi expected")
     lig1 <- nrow(dudiX$tab)
-    col1 <- ncol(dudiX$tab)
     if (!is.data.frame(Y)) 
         stop("Y is not a data.frame")
     lig2 <- nrow(Y)
-    col2 <- ncol(Y)
     if (lig1 != lig2) 
         stop("Non equal row numbers")
     w1 <- apply(Y, 2, sum)
@@ -48,7 +46,7 @@
         stop("Non convenient yax")
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
-    nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
+    layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.corcircle(x$as, xax, yax, sub = "Axis", csub = 2, 
@@ -150,7 +148,7 @@ rtest.niche <- function(xtest,nrepet=99,...){
   Y <- sweep(Y, 2, w1, "/")
   calcul.margi <- function(freq,mil) {
     m <- apply(freq * mil, 2, sum)
-    margi <- sum(m^2)
+    return(sum(m^2))
   }
   obs <- apply(Y,2,calcul.margi,mil=X)
   sim <- sapply(1:nrepet,function(x) apply(apply(Y,2,sample),2,calcul.margi,mil=X))

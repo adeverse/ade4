@@ -91,7 +91,7 @@
         stop("Non convenient yax")
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
-    nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
+    layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.arrow(x$load1, xax, yax, sub = "Loadings 1", csub = 2, 

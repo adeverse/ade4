@@ -12,8 +12,6 @@
     nbloc <- length(object$blo)
     if (length(which.tab) > prod(mfrow)) 
         par(ask = TRUE)
-    rank.fac <- factor(rep(1:nbloc, object$rank))
-    nf <- ncol(object$li)
     for (ianal in which.tab) {
         coolig <- object$lisup[object$TL[, 1] == ianal, c(xax, yax)]
         coocol <- object$co[object$TC[, 1] == ianal, c(xax, yax)]

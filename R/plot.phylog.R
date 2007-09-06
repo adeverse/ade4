@@ -69,7 +69,7 @@
         }
     }
     if (clabel.nodes > 0) {
-        scatterutil.eti(xx[names(x.nodes)], y[names(x.nodes)], labels.nodes, 
+        scatterutil.eti(xx[names(x.nodes)], y[names(x.nodes)], nodes.car, 
             clabel.nodes)
     }
     x <- (x.leaves - par("usr")[1])/(par("usr")[2]-par("usr")[1])
@@ -203,23 +203,23 @@ enum.phylog<-function (phylog, no.over=1000) {
     }
     
     "perm" <- function(cha=as.character(1:n),a=matrix(1,1,1)) {
-        n0 = ncol(a)
-        n = length(cha)
+        n0 <- ncol(a)
+        n <- length(cha)
         if (n0 == n) {
             a <- apply(a,c(1,2),function(x) cha[x])
             return(a)
         }
         fun1 <- function(x) {
-                xplus = length(x)+1
+                xplus <- length(x)+1
                 fun2 <- function (j) {
-                        if (j==1) w= c(xplus,x)
-                        else if (j==xplus) w = c(x,xplus)
-                        else w = c(x[1:j-1],xplus,x[j:length(x)])
+                        if (j==1) w <- c(xplus,x)
+                        else if (j==xplus) w <- c(x,xplus)
+                        else w <- c(x[1:j-1],xplus,x[j:length(x)])
                         return(w)
                 }
-                w = sapply(1:(length(x)+1) , fun2)
+                return(sapply(1:(length(x)+1) , fun2))
         }
-        a = matrix(unlist(apply(a,1,fun1)),ncol=n0+1,byr=TRUE)
+        a <- matrix(unlist(apply(a,1,fun1)),ncol=n0+1,byr=TRUE)
         Recall(cha,a)
     }
     
@@ -240,21 +240,6 @@ enum.phylog<-function (phylog, no.over=1000) {
     
     lapply(lw, permtot)
     
-     ##############################################
-    permut<-function(init, node){
-        # init est un vecteur des noms des feuilles compatibles avec la phylogénie
-        # on opère une permutation circulaire des blocs de feuilles associés
-        # aux descendants immédiats du noeud node
-        
-        num<- grep(node, nodes.names)[1]
-        w0 <- enfants(node,res)
-        if (min(w0)>1) a <- 1:(min(w0)-1) else a <- NULL
-        if (max(w0)<leaves.number) b <- (max(w0)+1):leaves.number else b <- NULL
-        agauche<-which(unlist(phylog$parts[node])%in%unlist(phylog$paths[init[w0[1]]]))
-        w1 <- unlist(lapply(phylog$parts[[num]][agauche],enfants, init=res))
-        w2 <- unlist(lapply(phylog$parts[[num]][-agauche],enfants, init=res))
-        return(init[c(a,w2,w1,b)])
-    }
     ##############################################
     fac <- factor(rep(1:nodes.number,nodes.dim))
     renum <- function (cha) {
@@ -269,7 +254,7 @@ enum.phylog<-function (phylog, no.over=1000) {
               else w <- c(w[1:(k-1)],wcha,w[(k+1):length(w)])
         }
         res <- 1:leaves.number
-        names(res)=w
+        names(res) <- w
         return(res[leaves.names])
     }
     return(t(apply(res,1,renum)))  

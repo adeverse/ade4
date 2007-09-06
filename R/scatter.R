@@ -35,9 +35,7 @@
         if (is.na(charmatch("pixmap", class(pixmap)))) 
             pixmap <- NULL
     }
-    if (!is.null(pixmap)) {
-        dimobj <- attr(pixmap, "dim")
-    }
+   
     if (!is.null(contour)) {
         if (!is.data.frame(contour)) 
             contour <- NULL

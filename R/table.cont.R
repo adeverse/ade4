@@ -7,7 +7,6 @@
     on.exit(par(opar))
     if (any(df < 0)) 
         stop("Non negative values expected")
-    N <- sum(df)
     df <- df/sum(df)
     table.prepare(x = x, y = y, row.labels = row.labels, col.labels = col.labels, 
         clabel.row = clabel.row, clabel.col = clabel.col, grid = grid, 
@@ -21,21 +20,21 @@
     sq <- csize * coeff * sq/w1
     for (i in 1:length(z)) symbols(xtot[i], ytot[i], squares = sq[i], 
         bg = "white", fg = 1, add = TRUE, inch = FALSE)
-    f1 <- function(x) {
-        w1 <- weighted.mean(val, x)
-        val <- (val - w1)^2
-        w2 <- sqrt(weighted.mean(val, x))
+    f1 <- function(x,xval) {
+        w1 <- weighted.mean(xval, x)
+        xval <- (xval - w1)^2
+        w2 <- sqrt(weighted.mean(xval, x))
         return(c(w1, w2))
     }
     if (abmean.x) {
         val <- y
-        w <- t(apply(df, 2, f1))
+        w <- t(apply(df, 2, f1,xval=val))
         points(x, w[, 1], pch = 20, cex = 2)
         segments(x, w[, 1] - w[, 2], x, w[, 1] + w[, 2])
     }
     if (abmean.y) {
         val <- x
-        w <- t(apply(df, 1, f1))
+        w <- t(apply(df, 1, f1,xval=val))
         points(w[, 1], y, pch = 20, cex = 2)
         segments(w[, 1] - w[, 2], y, w[, 1] + w[, 2], y)
     }

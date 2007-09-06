@@ -4,7 +4,6 @@
         return(distmat)
     }
     distmat <- as.matrix(distmat)
-    n <- ncol(distmat)
     delta <- -0.5 * bicenter.wt(distmat * distmat)
     lambda <- eigen(delta, sym = TRUE)$values
     lder <- lambda[ncol(distmat)]

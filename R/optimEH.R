@@ -18,7 +18,6 @@
         Orig <- (solve(phyl.D)%*%rep(1, nbesp) / sum(solve(phyl.D)))
         Orig <- as.data.frame(Orig)
         car1 <- split(Orig, cutree(phy.h, nbofsp))
-        val1 <- lapply(car1, function(x) x[abs(x - max(x)) < tol, ])
         name1 <- lapply(car1,function(x) rownames(x)[abs(x - max(x)) < tol])
         sauv.names <- lapply(name1, paste, collapse = " OR ")
         comp <- as.character(as.vector(lapply(name1, function(x) x[1])))

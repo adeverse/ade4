@@ -43,10 +43,8 @@
 
     if (!is.numeric(x)) stop("x is not numeric")
     nobs <- length(x)
-    if (!is.null(orthobas)) cas <- "orthobas"
-    else if (!is.null(neig)) {
-        cas <- "neig"
-        orthobas <- orthoneig(neig)
+    if (!is.null(neig)) {
+      orthobas <- orthoneig(neig)
     } else if (!is.null(phylog)) {
          if (!inherits(phylog, "phylog")) stop ("'phylog' expected with class 'phylog'")
          orthobas <- phylog$Bscores
@@ -85,9 +83,8 @@
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
     layout (matrix(c(1,1,2,2,1,1,2,2,3,4,5,6),4,3))
-    mar.old <- par("mar")
     par(mar = c(0.1, 0.1, 0.1, 0.1))
-    par("usr"=c(0,1,-0.05,1))
+    par(usr = c(0,1,-0.05,1))
     # layout.show(6)
     
     z <- x - mean(x)

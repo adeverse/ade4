@@ -69,7 +69,6 @@
             cex0 <- par("cex") * clabel
             xh <- strwidth(cha, cex = cex0)
             xh <- xh + strwidth("x", cex = cex0)
-            yh <- strheight(cha, cex = cex0) * 5/6
             if (etiagauche) 
                 x0 <- x1 - xh/2
             else x0 <- x2 + xh/2

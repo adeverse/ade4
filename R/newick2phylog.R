@@ -182,8 +182,6 @@
     names(res$leaves) <- nam[cat == "ext"]
     res$nodes <- poi[cat == "int"]
     names(res$nodes) <- nam[cat == "int"]
-    nleaves <- length(res$leaves)
-    nnodes <- length(res$nodes)
     listclass <- list()
     dnext <- c(names(res$leaves), names(res$nodes))
     listpath <- as.list(dnext)
@@ -222,7 +220,6 @@
     if (!inherits(hc, "hclust")) 
         stop("'hclust' object expected")
     labels.leaves <- make.names(hc$labels, TRUE)
-    nleaves <- length(labels.leaves)
     nnodes <- nrow(hc$merge)
     labels.nodes <- paste("Int", 1:nnodes, sep = "")
     l.bra <- matrix("$", nnodes, 2)
@@ -261,7 +258,6 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
 {
     if (!inherits(taxo, "taxo")) 
         stop("Object 'taxo' expected")
-    nr <- nrow(taxo)
     nc <- ncol(taxo)
     for (k in 1:nc) { 
         w <- as.character(k)
@@ -543,12 +539,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     # 4) orthonormalisation
     # on obtient toujours une base orthonormée de l'orthogonal de 1n
     #############################
-    floc <- function (x) {
-        x <- x-mean(x)
-        sum(t(res$Wmat*x)*x)
-    }
-    # chaque indicatrice donne une valeur
-    ### w.val <- unlist(apply(w,2, floc))
+
     w.val <- x1[nomuni]
     # trie par ordre descendant
     w.val <- rev(sort(w.val))

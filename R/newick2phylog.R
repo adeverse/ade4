@@ -367,7 +367,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     w[col(w) < row(w)] <- b[2,]
     w <- w + t(w)
     # On rajoute la diagonale pour que A soit bistochastique
-    floc1 <- function(x) {
+    floc2 <- function(x) {
         # cette fonction renvoie pour une feuille la fréquence des représentations
         # compatibles qui placent cette feuille tout en haut ou tout en bas
         c1 <- rev(res$paths[[x]])
@@ -376,7 +376,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
         resw <- 1/prod(unlist(resw))
         return(resw)
     }
-    diag(w) <- unlist(lapply(leave.names,floc1))
+    diag(w) <- unlist(lapply(leave.names,floc2))
     dimnames(w) <- list(leave.names,1:nleaves)
     res$Amat <- w
     #############################
@@ -427,7 +427,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
 
     # Complément : la valeur des noeuds #    
 
-    floc1 <- function(k) {
+    floc3 <- function(k) {
         # k est un numéro de noeud
         # x est un vecteur comportant un nom de noeud et des noms de descendants 
         # de ce noeud. 
@@ -443,7 +443,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
         return(NULL)
     }
     
-    lapply(1:length(res$parts),floc1)
+    lapply(1:length(res$parts),floc3)
     # typolo.value <- 1-exp(wnodes-lgamma(effnodes+1)) abandon
     
     ####res$Aparam <- data.frame(x1=I(dimnodes), x2=I(effnodes), x3=I(wnodes), x4=I(typolo.value))

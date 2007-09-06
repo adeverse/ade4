@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{rpjdl}
 \alias{rpjdl}
 \docType{data}

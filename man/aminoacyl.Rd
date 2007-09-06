@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{aminoacyl}
 \alias{aminoacyl}
 \docType{data}

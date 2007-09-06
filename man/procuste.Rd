@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{procuste}
 \alias{procuste}
 \alias{plot.procuste}
@@ -38,7 +39,7 @@ returns a list of the class \code{procuste} with 9 components
   \item{call}{a call order of the analysis}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \references{

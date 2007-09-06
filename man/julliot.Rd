@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{julliot}
 \alias{julliot}
 \docType{data}

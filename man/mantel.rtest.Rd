@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mantel.rtest}
 \alias{mantel.rtest}
 \title{Mantel test (correlation between two distance matrices (in R).)
@@ -19,7 +20,7 @@ an object of class \code{rtest} (randomization tests)
 \references{Mantel, N. (1967) The detection of disease clustering and a generalized regression approach. \emph{Cancer Research}, \bold{27}, 209--220.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

@@ -27,7 +27,7 @@ table.cont(df, x = 1:ncol(df), y = 1:nrow(df),
   \item{grid}{a logical value indicating whether a grid in the background of the plot should be drawn}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 data(chats)

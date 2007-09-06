@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{cca}
 \alias{cca}
 \title{Canonical Correspondence Analysis}
@@ -26,7 +27,7 @@ Chessel, D., Lebreton J. D. and Yoccoz N. (1987) Propriétés de l'analyse canoniq
 \seealso{\code{\link{cca}} in the package \code{vegan}}
 
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

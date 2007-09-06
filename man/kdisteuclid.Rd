@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{kdisteuclid}
 \alias{kdisteuclid}
 \title{ a way to obtain Euclidean distance matrices }
@@ -26,7 +27,7 @@ Legendre, P. and Anderson, M.J. (1999) Distance-based redundancy analysis: testi
 Legendre, P., and L. Legendre. (1998) Numerical ecology, 2nd English edition edition. Elsevier Science BV, Amsterdam. 
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \note{ according to the program DistPCoa of P. Legendre and M.J. Anderson\cr

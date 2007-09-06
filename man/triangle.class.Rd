@@ -36,7 +36,7 @@ triangle.class(ta, fac, col = rep(1, length(levels(fac))),
   \item{min3}{ if not NULL, a vector with 3 numbers between 0 and 1 }
   \item{max3}{ if not NULL, a vector with 3 numbers between 0 and 1. Let notice that \code{min3}+\code{max3} must equal c(1,1,1) }
 }
-\author{ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} 
+\author{ Daniel Chessel  
 }
 \examples{
 data(euro123)

@@ -42,7 +42,7 @@ s.distri(dfxy, dfdistri, xax = 1, yax = 2, cstar = 1,
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 xy <- cbind.data.frame(x = runif(200,-1,1), y = runif(200,-1,1))
 distri <- data.frame(w1 = rpois(200, xy$x * (xy$x > 0)))

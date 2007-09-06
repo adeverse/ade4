@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{rhone}
 \alias{rhone}
 \docType{data}

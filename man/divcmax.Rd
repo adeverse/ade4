@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{divcmax}
 \alias{divcmax}
 \title{Maximal value of Rao's diversity coefficient also called 

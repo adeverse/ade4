@@ -38,7 +38,7 @@ s.arrow(dfxy, xax = 1, yax = 2, label = row.names(dfxy),
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 s.arrow(cbind.data.frame(runif(55,-2,3), runif(55,-3,2)))
 }

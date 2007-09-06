@@ -14,7 +14,7 @@ mstree(xdist, ngmax = 1)
 \value{
 returns an object of class \code{neig}
 }
-\author{ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }
+\author{ Daniel Chessel  }
 \examples{
 data(mafragh)
 maf.coa = dudi.coa(mafragh$flo, scan = FALSE)

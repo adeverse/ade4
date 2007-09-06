@@ -41,7 +41,7 @@ s.label(dfxy, xax = 1, yax = 2, label = row.names(dfxy),
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 layout(matrix(c(1,2,3,2), 2, 2))
 data(atlas)

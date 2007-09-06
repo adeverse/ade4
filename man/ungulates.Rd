@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{ungulates}
 \alias{ungulates}
 \docType{data}

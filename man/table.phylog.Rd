@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{table.phylog}
 \alias{table.phylog}
 \title{Plot arrays in front of a phylogenetic tree}
@@ -28,7 +29,7 @@ table.phylog(df, phylog, x = 1:ncol(df), f.phylog = 0.5,
   \item{grid}{: a logical value indicating whether the grid should be plotted}
   \item{clegend}{: a character size for the legend (if 0, no legend)}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \details{The function verifies that \code{sort(row.names(df))==sort(names(phylog$leaves))}. 

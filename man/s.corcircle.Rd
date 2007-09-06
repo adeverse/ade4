@@ -27,7 +27,7 @@ s.corcircle(dfxy, xax = 1, yax = 2, label = row.names(df),
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 data (olympic)
 dudi1 <- dudi.pca(olympic$tab, scan = FALSE) # a normed PCA

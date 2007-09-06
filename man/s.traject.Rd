@@ -41,7 +41,7 @@ s.traject(dfxy, fac = factor(rep(1, nrow(dfxy))),
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 rw <- function(a){
     x <- 0

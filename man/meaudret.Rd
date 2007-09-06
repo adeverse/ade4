@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{meaudret}
 \alias{meaudret}
 \docType{data}

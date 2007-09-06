@@ -15,7 +15,7 @@ kdist2ktab(kd, scale = TRUE, tol = 1e-07)
 \value{
 returns a list of class \code{ktab} containing for each distance of \code{kd} the data frame of its Euclidean representation
 }
-\author{ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{ Daniel Chessel  \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}}
 \examples{
 data(friday87)

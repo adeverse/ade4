@@ -63,7 +63,7 @@ poly2area returns a data frame 'factor,x,y'. \cr
 area2poly returns a list of class \code{polylist}. \cr
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 data(elec88)

@@ -23,7 +23,7 @@ table.value(df, x = 1:ncol(df), y = nrow(df):1,
   \item{grid}{a logical value indicating whether the grid should be plotted}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 data(olympic)

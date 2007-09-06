@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mafragh}
 \alias{mafragh}
 \docType{data}

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{as.taxo}
 \alias{as.taxo}
 \alias{dist.taxo}
@@ -21,7 +22,7 @@ dist.taxo(taxo)
 \code{as.taxo} returns a data frame of class \code{taxo}.
 \code{dist.taxo} returns a numeric of class \code{dist}.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{taxo2phylog}} to transform an object of class \code{taxo} into an object of class \code{phylog}

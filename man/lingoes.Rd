@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{lingoes}
 \alias{lingoes}
 \title{Transformation of a Distance Matrix for becoming Euclidean}
@@ -21,7 +22,7 @@ returns an object of class \code{dist} with a Euclidean distance
  The function uses the smaller positive constant k which transforms the matrix of \eqn{\sqrt{d_{ij}^2 + 2 \ast k}}{sqrt(dij² + 2*k)} in an Euclidean one
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

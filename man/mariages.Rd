@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mariages}
 \alias{mariages}
 \docType{data}

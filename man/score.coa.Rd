@@ -28,7 +28,7 @@ In a "reciprocal scaling", the reference score is a numeric code centred and nor
 }
 \references{Thioulouse, J. and Chessel D. (1992) A method for reciprocal scaling of species tolerance and sample diversity. \emph{Ecology}, \bold{73}, 670--680.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 layout(matrix(c(1,1,2,3), 2, 2), resp = FALSE)
 data(aviurba)

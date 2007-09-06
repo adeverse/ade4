@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{cailliez}
 \alias{cailliez}
 \title{Transformation to make Euclidean a distance matrix}
@@ -26,7 +27,7 @@ From the DistPCoa program of P. Legendre et M.J. Anderson\cr
 \url{http://www.fas.umontreal.ca/BIOL/Casgrain/en/labo/distpcoa.html}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

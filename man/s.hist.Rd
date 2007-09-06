@@ -21,7 +21,7 @@ s.hist(dfxy, xax = 1, yax = 2, cgrid = 1, cbreaks = 2, adjust = 1, ...)
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 data(rpjdl)
 coa1 <- dudi.coa(rpjdl$fau, scannf = FALSE, nf = 4)

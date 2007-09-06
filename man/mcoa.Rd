@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mcoa}
 \alias{mcoa}
 \alias{print.mcoa}
@@ -52,7 +53,7 @@ mcoa returns a list of  class 'mcoa' containing :
 Chessel, D. and Hanafi, M. (1996) Analyses de la co-inertie de K nuages de points, \emph{Revue de Statistique Appliquée}, \bold{44}, 35--60.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

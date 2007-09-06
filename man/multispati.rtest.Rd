@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{multispati.rtest}
 \alias{multispati.rtest}
 \title{Multivariate spatial autocorrelation test}
@@ -26,7 +27,7 @@ Returns an object of class \code{randtest} (randomization tests).
 Smouse, P. E. and Peakall, R. (1999) Spatial autocorrelation analysis of individual multiallele and multilocus genetic structure. 
 \emph{Heredity}, \bold{82}, 561--573.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}

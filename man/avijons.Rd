@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{avijons}
 \alias{avijons}
 \docType{data}

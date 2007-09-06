@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{ours}
 \alias{ours}
 \docType{data}

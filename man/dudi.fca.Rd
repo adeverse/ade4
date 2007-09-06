@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dudi.fca}
 \alias{dudi.fca}
 \alias{dudi.fpca}
@@ -40,7 +41,7 @@ The function \code{dudi.fpca} returns a list of class \code{pca} and \code{dudi}
 \references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding 
 approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

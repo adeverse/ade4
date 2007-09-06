@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{symbols.phylog}
 \alias{symbols.phylog}
 \title{Representation of a quantitative variable in front of a phylogenetic tree}
@@ -22,7 +23,7 @@ symbols.phylog(phylog, circles, squares, csize = 1, clegend = 1,
   \item{possub}{ a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{table.phylog}} and \code{\link{dotchart.phylog}} for many variables}

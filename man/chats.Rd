@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{chats}
 \alias{chats}
 \docType{data}

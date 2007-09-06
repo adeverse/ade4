@@ -21,7 +21,7 @@ kplot.foucart(object, xax = 1, yax = 2, mfrow = NULL,
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 data(bf88)
 fou1 <- foucart(bf88, scann = FALSE, nf = 3)

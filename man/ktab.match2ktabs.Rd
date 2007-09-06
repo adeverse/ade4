@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{ktab.match2ktabs}
 \alias{ktab.match2ktabs}
 \title{STATIS and Co-Inertia : Analysis of a series of paired ecological tables}

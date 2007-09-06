@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{witwit.coa}
 \alias{witwit.coa}
 \alias{summary.witwit}
@@ -40,7 +41,7 @@ Cazes, P., Chessel, D. and Dolédec, S. (1988) L'analyse des correspondances inte
 son usage en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{36}, 39--54. 
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 Correction by Campo Elías PARDO \email{cepardot@cable.net.co}
 }

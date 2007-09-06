@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{phylog}
 \alias{phylog}
 \alias{print.phylog}
@@ -48,7 +49,7 @@ Returns a list of class \code{phylog} :
 Ollier, S., Couteron, P. and Chessel, D. (2005) Orthonormal transforms to detect and describe 
 phylogenetic autocorrelation. \emph{Biometrics} (in press).
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{newick2phylog}}, \code{\link{plot.phylog}}}

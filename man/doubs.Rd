@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{doubs}
 \alias{doubs}
 \docType{data}

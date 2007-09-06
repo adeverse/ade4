@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mfa}
 \alias{mfa}
 \alias{print.mfa}
@@ -48,7 +49,7 @@ summary.mfa (object, \dots)
 \references{Escofier, B. and Pagès, J. (1994) Multiple factor analysis (AFMULT package), \emph{Computational Statistics and Data Analysis}, \bold{18}, 121--140.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

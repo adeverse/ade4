@@ -45,7 +45,7 @@ s.class(dfxy, fac, wt = rep(1, length(fac)), xax = 1,
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 xy <- cbind.data.frame(x = runif(200,-1,1), y = runif(200,-1,1))
 posi <- factor(xy$x > 0) : factor(xy$y > 0)

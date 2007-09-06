@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{ichtyo}
 \alias{ichtyo}
 \docType{data}

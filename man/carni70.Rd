@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{carni70}
 \alias{carni70}
 \docType{data}

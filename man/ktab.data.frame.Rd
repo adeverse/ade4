@@ -22,7 +22,7 @@ ktab.data.frame(df, blocks, rownames = NULL, colnames = NULL,
 returns a list of class \code{ktab}. See \code{\link{ktab}}.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

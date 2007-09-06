@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{lascaux}
 \alias{lascaux}
 \docType{data}

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{casitas}
 \docType{data}
 \alias{casitas}

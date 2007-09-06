@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{is.euclid}
 \alias{is.euclid}
 \alias{summary.dist}
@@ -24,7 +25,7 @@ returns a logical value indicating if all the eigenvalues are positive or equal 
 \references{Gower, J.C. and Legendre, P. (1986) Metric and Euclidean properties of dissimilarity coefficients. \emph{Journal of Classification}, \bold{3}, 5--48.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

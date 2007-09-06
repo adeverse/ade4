@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{sarcelles}
 \alias{sarcelles}
 \docType{data}

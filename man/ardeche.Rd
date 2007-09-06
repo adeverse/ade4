@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{ardeche}
 \alias{ardeche}
 \docType{data}

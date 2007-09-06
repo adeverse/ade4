@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{westafrica}
 \alias{westafrica}
 \docType{data}

@@ -42,7 +42,7 @@ Lavit, C. (1988) \emph{Analyse conjointe de tableaux quantitatifs}, Masson, Pari
 Lavit, C., Escoufier, Y., Sabatier, R. and Traissac, P. (1994) The ACT (Statis method). \emph{Computational Statistics and Data Analysis}, \bold{18}, 97--119.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 data(jv73)

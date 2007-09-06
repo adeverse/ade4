@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{t3012}
 \alias{t3012}
 \docType{data}

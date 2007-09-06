@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{monde84}
 \alias{monde84}
 \docType{data}

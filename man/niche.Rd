@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{niche}
 \alias{niche}
 \alias{plot.niche}

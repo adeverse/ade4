@@ -25,7 +25,7 @@ Perriere, G. and Thioulouse, J. (2003) Use of Correspondence Discriminant Analys
 \emph{Computer Methods and Programs in Biomedicine}, \bold{70}, 2, 99--105.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

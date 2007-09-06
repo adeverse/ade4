@@ -27,7 +27,7 @@ sco.distri(score, df, y.rank = TRUE, csize = 1, labels = names(df),
 \value{
 returns an invisible data.frame with means and variances
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 w <-seq(-1, 1, le = 200)
 distri <- data.frame(lapply(1:50, 

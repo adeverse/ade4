@@ -55,7 +55,7 @@ Thioulouse, J., D. Chessel, and S. Champely. 1995.
 Multivariate analysis of spatial patterns: a unified approach to local and global structures.
 \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 data(mafragh)
 if (require(tripack, quietly=TRUE)) {

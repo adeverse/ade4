@@ -52,7 +52,7 @@ s.multinom(dfxy, dfrowprof, translate = FALSE, xax = 1, yax = 2,
     numerical codes (column of \code{dfxy})}
   \item{call}{the matched call}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+\author{Daniel Chessel 
 }
 \examples{
 par(mfrow = c(2,2))

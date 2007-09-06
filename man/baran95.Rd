@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{baran95}
 \alias{baran95}
 \docType{data}

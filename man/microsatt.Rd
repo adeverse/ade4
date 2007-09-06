@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{microsatt}
 \alias{microsatt}
 \docType{data}

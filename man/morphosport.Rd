@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{morphosport}
 \alias{morphosport}
 \docType{data}

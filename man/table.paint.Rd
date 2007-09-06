@@ -21,7 +21,7 @@ table.paint(df, x = 1:ncol(df), y = nrow(df):1,
   \item{clegend}{a character size for the legend, otherwise no legend}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 data(rpjdl)

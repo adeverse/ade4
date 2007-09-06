@@ -40,7 +40,7 @@ s.match(df1xy, df2xy, xax = 1, yax = 2, pch = 20, cpoint = 1,
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 X <- data.frame(x = runif(50,-1,2), y = runif(50,-1,2))
 Y <- X + rnorm(100, sd = 0.3)

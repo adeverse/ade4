@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dudi.coa}
 \alias{dudi.coa}
 \title{Correspondence Analysis}
@@ -22,7 +23,7 @@ Benzécri, J.P. and Coll. (1973) \emph{L'analyse des données. II L'analyse des co
 Greenacre, M. J. (1984) \emph{Theory and applications of correspondence analysis}, Academic Press, London.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dist.binary}
 \alias{dist.binary}
 \title{Computation of Distance Matrices for Binary Data}
@@ -35,7 +36,7 @@ returns a distance matrix of class \code{dist} between the rows of the data fram
 \emph{Journal of Classification}, \bold{3}, 5--48.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

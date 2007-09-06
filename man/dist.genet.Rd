@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dist.genet}
 \alias{dist.genet}
 \title{ Genetic distances from gene frequencies }
@@ -82,7 +83,7 @@ To find some useful explanations:\cr
 Sanchez-Mazas A. (2003) Cours de Génétique Moléculaire des Populations. Cours VIII Distances génétiques - Représentation des populations. \cr
 \url{http://anthro.unige.ch/GMDP/Alicia/GMDP_dist.htm}
 }
-\author{ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+\author{ Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr} 
 }
 \examples{

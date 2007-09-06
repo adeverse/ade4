@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{newick2phylog}
 \alias{newick2phylog}
 \alias{hclust2phylog}
@@ -29,7 +30,7 @@ newick2phylog.addtools(res, tol = 1e-07)
 \value{
 Return object of class \code{phylog}.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+\author{Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{phylog}}, \code{\link{plot.phylog}}, \code{\link{as.taxo}}}

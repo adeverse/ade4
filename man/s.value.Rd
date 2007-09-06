@@ -45,7 +45,7 @@ s.value(dfxy, z, xax = 1, yax = 2, method = c("squaresize", "greylevel"),
 \value{
 The matched call.
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 xy <- cbind.data.frame(x = runif(500), y = runif(500))
 z <- rnorm(500)

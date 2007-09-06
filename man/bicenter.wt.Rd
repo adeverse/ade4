@@ -16,7 +16,7 @@ bicenter.wt(X, row.wt = rep(1, nrow(X)), col.wt = rep(1, ncol(X)))
 returns a doubly centred matrix
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 w <- matrix(1:6, 3, 2)

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{jv73}
 \alias{jv73}
 \docType{data}

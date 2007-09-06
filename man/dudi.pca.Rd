@@ -45,7 +45,7 @@ for computing the principal component analysis :
     \code{prcomp}, \code{princomp} in the \code{mva} library
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{macon}
 \alias{macon}
 \docType{data}

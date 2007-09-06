@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mjrochet}
 \alias{mjrochet}
 \docType{data}

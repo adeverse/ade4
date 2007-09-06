@@ -30,7 +30,7 @@ fuzzygenet(X)
   \item{col.num }{a factor ranking the alleles by locus}
 }
 \references{ ~put references to the literature/web site here ~ }
-\author{ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} }
+\author{ Daniel Chessel  }
 \note{ In the exit data frame, the alleles are numbered 1, 2, 3, \dots by locus and the loci are called L01, L02, L03, \dots for the simplification of listing.
 The original names are kept. 
 }

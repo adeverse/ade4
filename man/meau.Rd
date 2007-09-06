@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{meau}
 \alias{meau}
 \docType{data}

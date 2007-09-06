@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{orthobasis}
 \alias{orthobasis}
 \alias{orthobasis.neig}
@@ -56,7 +57,7 @@ Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factoriell
 Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \note{the function \code{orthobasis.haar} uses function \code{\link[waveslim]{wavelet.filter}} from package waveslim.}
 \seealso{\code{\link{gridrowcol}} that defines an orthobasis for square grid, \code{\link{phylog}} that defines an orthobasis for phylogenetic tree, \code{\link{orthogram}} and \code{\link{mld}}}

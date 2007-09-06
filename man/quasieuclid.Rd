@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{quasieuclid}
 \alias{quasieuclid}
 \title{Transformation of a distance matrice to a Euclidean one}
@@ -18,7 +19,7 @@ quasieuclid(distmat)
 object of class \code{dist} containing a Euclidean distance matrice
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

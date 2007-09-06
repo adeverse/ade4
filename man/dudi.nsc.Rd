@@ -20,7 +20,7 @@ Returns a list of class \code{nsc} and \code{dudi} (see \code{\link{dudi}}) cont
 a tool for analysing contingency tables with a dependence structure. \emph{Multivariate Behavioral Research}, \bold{34}, 367--396.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

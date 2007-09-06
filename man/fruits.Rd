@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{fruits}
 \alias{fruits}
 \docType{data}

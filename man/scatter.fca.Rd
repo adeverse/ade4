@@ -18,7 +18,7 @@ scatter.fca(x, xax = 1, yax = 2, clab.moda = 1, labels = names(x$tab),
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
   \item{\dots}{further arguments passed to or from other methods}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+\author{Daniel Chessel 
 }
 \references{
 Chevenet, F., Dol\'{e}dec, S. and Chessel, D. (1994) 

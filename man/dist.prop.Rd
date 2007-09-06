@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dist.prop}
 \alias{dist.prop}
 \title{Computation of Distance Matrices of Percentage Data
@@ -33,7 +34,7 @@ Manly, B. F. (1994) \emph{Multivariate Statistical Methods. A primer.}, Second e
 Nei, M. (1972) Genetic distances between populations. \emph{The American Naturalist}, \bold{106}, 283--292. 
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

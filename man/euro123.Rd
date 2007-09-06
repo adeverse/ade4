@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{euro123}
 \alias{euro123}
 \docType{data}

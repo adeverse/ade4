@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{within.pca}
 \alias{within.pca}
 \title{Normed within Principal Component Analysis}
@@ -24,7 +25,7 @@ returns a list of the sub-class \code{within} of class \code{dudi'}. See \code{\
  Thèse de 3ème cycle, Université de Paris VI.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

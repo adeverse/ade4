@@ -25,7 +25,7 @@ returns a list of two components :
 \code{$cosup} {data frame containing the coordinates of the supplementary projections}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{pcaiv}
 \alias{pcaiv}
 \alias{plot.pcaiv}
@@ -51,7 +52,7 @@ In J. Devillers and W. Karcher, editors. \emph{Applied Multivariate Analysis in 
 Kluwer Academic Publishers, 85--114.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

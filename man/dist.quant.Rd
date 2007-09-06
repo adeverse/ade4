@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dist.quant}
 \alias{dist.quant}
 \title{Computation of Distance Matrices on Quantitative Variables}
@@ -25,7 +26,7 @@ All the distances are of type \eqn{d=\|x-y\|_A = \sqrt{(x-y)^{t}A(x-y)}}{d = ||x
 an object of class \code{dist}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

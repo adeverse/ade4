@@ -47,7 +47,7 @@ As a lot of formats for genetic data are published in literature, a list of clas
 In the component \code{comp}, each individual per locus of m alleles is re-coded by a vector of length m: for hererozygicy 0,\dots,1,\dots,1,\dots,0 and homozygocy 0,\dots,2,0.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 data(casitas)

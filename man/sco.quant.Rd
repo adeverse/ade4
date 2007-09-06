@@ -18,7 +18,7 @@ sco.quant (score, df, fac = NULL, clabel = 1, abline = FALSE,
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 w <- runif(100, -5, 10)
 fw <- cut (w, 5)

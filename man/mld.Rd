@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mld}
 \alias{mld}
 \alias{haar2level}

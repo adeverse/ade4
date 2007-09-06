@@ -18,7 +18,7 @@ dotcircle(z, alpha0 = pi/2, xlim = range(pretty(z)),
 }
 \seealso{\code{\link[CircStats]{circ.plot}}}
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 w <- scores.neig(neig(n.cir = 24))

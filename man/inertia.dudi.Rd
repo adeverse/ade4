@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{inertia.dudi}
 \alias{inertia.dudi}
 \title{Statistics of inertia in a one-table analysis}
@@ -34,7 +35,7 @@ Lebart, L., Morineau, A. and Piron, M. (1995) \emph{Statistique exploratoire mul
 \details{Contributions are printed in 1/10000 and the sign is the sign of the coordinate
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

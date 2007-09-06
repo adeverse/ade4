@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dotchart.phylog}
 \alias{dotchart.phylog}
 \title{Representation of many quantitative variables in front of a phylogenetic tree}
@@ -31,7 +32,7 @@ dotchart.phylog(phylog, values, y = NULL, scaling = TRUE, ranging = TRUE, yrangi
   \item{\dots}{ further arguments passed to or from other methods}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{symbols.phylog}} and \code{\link{table.phylog}}}

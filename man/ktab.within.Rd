@@ -18,7 +18,7 @@ ktab.within(dudiwit, rownames = NULL, colnames = NULL, tabnames = NULL)
 a list of class \code{ktab}. See \code{\link{ktab}}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{mollusc}
 \alias{mollusc}
 \docType{data}

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{PI2newick}
 \alias{PI2newick}
 \title{Import data files from Phylogenetic Independance Package}
@@ -19,7 +20,7 @@ Returns a list containing :
 Abouheif, E. (1999) A method for testing the assumption of phylogenetic independence in comparative data. \emph{Evolutionary Ecology Research}, \bold{1}, 895--909.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 x <- c(2.0266, 0.5832, 0.2460, 1.2963, 0.2460, 0.1565, -99.0000,

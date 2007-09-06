@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{gearymoran}
 \alias{gearymoran}
 \title{Moran's I and Geary'c randomization tests for spatial and phylogenetic autocorrelation}
@@ -32,7 +33,7 @@ Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spa
 \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \seealso{\code{\link[spdep]{moran.test}} and \code{\link[spdep]{geary.test}} for classical versions of Moran's test and Geary's one}
 \examples{

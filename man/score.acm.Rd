@@ -18,7 +18,7 @@ score.acm(x, xax = 1, which.var = NULL, mfrow = NULL,
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 data(banque)
 banque.acm <- dudi.acm(banque, scann = FALSE, nf = 3)

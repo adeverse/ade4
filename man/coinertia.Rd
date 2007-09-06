@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{coinertia}
 \alias{coinertia}
 \alias{print.coinertia}
@@ -55,7 +56,7 @@ Dray, S., Chessel, D. and J. Thioulouse (2003) Co-inertia analysis and the linki
 IMPORTANT : \code{dudi1} and \code{dudi2} must have identical row weights.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

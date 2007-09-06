@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{clementines}
 \alias{clementines}
 \docType{data}

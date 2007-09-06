@@ -36,7 +36,7 @@ returns a list of class 'discrimin' containing :
 \seealso{\code{lda} in package \code{MASS}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

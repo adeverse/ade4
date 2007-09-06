@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{palm}
 \alias{palm}
 \docType{data}

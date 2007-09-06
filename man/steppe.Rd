@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{steppe}
 \alias{steppe}
 \non_function{}

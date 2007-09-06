@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dudi.dec}
 \alias{dudi.dec}
 \title{Decentred Correspondence Analysis}
@@ -21,7 +22,7 @@ Returns a list of class \code{dec} and \code{dudi} (see \code{\link{dudi}}) cont
 application aux peuplements ichtyologiques du haut-Rhône. 
 \emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{336}, 29--40.}
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

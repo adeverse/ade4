@@ -49,7 +49,7 @@ s.kde2d(dfxy, xax = 1, yax = 2, pch = 20, cpoint = 1, neig = NULL, cneig = 2,
 \value{
 The matched call.
 }
-\author{ Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} 
+\author{ Daniel Chessel  
 }
 \examples{
 # To recognize groups of points

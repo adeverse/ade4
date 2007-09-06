@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{gridrowcol}
 \alias{gridrowcol}
 \title{Complete regular grid analysis}
@@ -26,7 +27,7 @@ Méot, A., Chessel, D. and Sabatier, D. (1993) Opérateurs de voisinage et analyse
 Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}. Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \seealso{\code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link{mld}}}
 \examples{

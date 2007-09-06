@@ -63,7 +63,7 @@ A 'ktab' object can be created with :\cr
 \code{ktab.util.names} is a useful function.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{

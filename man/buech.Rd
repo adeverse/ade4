@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{buech}
 \alias{buech}
 \docType{data}

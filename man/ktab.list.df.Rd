@@ -22,7 +22,7 @@ ktab.list.df(obj, rownames = NULL, colnames = NULL, tabnames = NULL,
 Each element of the initial list have to possess the same names and row numbers
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \value{

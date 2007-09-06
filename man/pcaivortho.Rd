@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{pcaivortho}
 \alias{pcaivortho}
 \title{Principal Component Analysis with respect to orthogonal instrumental variables}
@@ -32,7 +33,7 @@ an object of class 'pcaivortho' sub-class of class \code{dudi}
   \item{param}{a data frame containing a summary}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}\cr
+Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \references{

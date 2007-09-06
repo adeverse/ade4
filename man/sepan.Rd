@@ -41,7 +41,7 @@ The function plot on a \code{sepan} object allows to compare inertias and struct
 In black, the eigenvalues of kept axes in the object 'sepan'.
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}
+Daniel Chessel 
 }
 \examples{
 data(escopage)

@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{dist.dudi}
 \alias{dist.dudi}
 \title{Computation of the Distance Matrix from a Statistical Triplet
@@ -16,7 +17,7 @@ dist.dudi(dudi, amongrow = TRUE)
 an object of class \code{dist}
 }
 \author{
-Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr} \cr
+Daniel Chessel  \cr
 Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{

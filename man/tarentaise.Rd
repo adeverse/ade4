@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{tarentaise}
 \alias{tarentaise}
 \docType{data}

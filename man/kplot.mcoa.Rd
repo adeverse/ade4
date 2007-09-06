@@ -26,7 +26,7 @@ kplot.mcoa(object, xax = 1, yax = 2, which.tab = 1:nrow(object$cov2),
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
-\author{Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel }
 \examples{
 data(friday87)
 w1 <- data.frame(scale(friday87$fau, scal = FALSE))

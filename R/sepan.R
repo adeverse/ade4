@@ -114,7 +114,6 @@
     rank.fac <- factor(rep(1:nbloc, x$rank))
     nf <- ncol(x$Li)
     neig <- max(x$rank)
-    appel <- as.list(x$call)
     maxeig <- max(x$Eig)
     for (ianal in 1:nbloc) {
         w <- x$Eig[rank.fac == ianal]

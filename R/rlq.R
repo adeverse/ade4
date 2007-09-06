@@ -219,7 +219,6 @@ randtest.rlq<-function(xtest, nrepet=999,...)
     }
 
     R.cw<-dudiR$cw
-    R.lw<-dudiR$lw
     appelR<-as.list(dudiR$call)
     Rinit<-eval(appelR$df,sys.frame(0))
     if (appelR[[1]] == "dudi.pca") {
@@ -268,9 +267,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
 
 
     
-    Q<-dudiQ$tab
     Q.cw<-dudiQ$cw
-    Q.lw<-dudiQ$lw
     appelQ<-as.list(dudiQ$call)
     Qinit<-eval(appelQ$df,sys.frame(0))
     

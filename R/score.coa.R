@@ -36,7 +36,6 @@
         clab1, clab2, cpoi, cet) {
         nvar1 <- nlevels(fac1)
         nvar2 <- nlevels(fac2)
-        nvar <- nvar1 + nvar2
         ymin <- scoreutil.base(y = score, xlim = NULL, grid = TRUE, 
             cgrid = 0.75, include.origin = TRUE, origin = 0, 
             sub = NULL, csub = 0)
@@ -127,8 +126,6 @@
             points(x.moy, y0, pch = 20, cex = par("cex") * cpoi)
         }
     }
-    nl <- nrow(x$l1)
-    nc <- nrow(x$c1)
     if (inherits(x, "witwit")) {
         y <- eval(as.list(x$call)[[2]], sys.frame(0))
         oritab <- eval(as.list(y$call)[[2]], sys.frame(0))
@@ -159,8 +156,6 @@
 "reciprocal.coa" <- function (x) {
     if (!inherits(x, "coa")) 
         stop("Object of class 'coa' expected")
-    nl <- nrow(x$l1)
-    nc <- nrow(x$c1)
     if (inherits(x, "witwit")) {
         y <- eval(as.list(x$call)[[2]], sys.frame(0))
         oritab <- eval(as.list(y$call)[[2]], sys.frame(0))

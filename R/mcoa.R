@@ -301,7 +301,6 @@
     ncol <- length(cw)
     nbloc <- length(X$blo)
     nf <- object$nf
-    Xsepan <- sepan(X, nf)
     for (i in 1:nbloc) {
         cat("Array number", i, names(X)[[i]], "Rows", nrow(X[[i]]), 
             "Cols", ncol(X[[i]]), "\n")

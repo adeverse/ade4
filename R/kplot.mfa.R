@@ -9,7 +9,6 @@
     if (is.null(mfrow)) 
         mfrow <- n2mfrow(length(which.tab))
     par(mfrow = mfrow)
-    nbloc <- length(object$blo)
     if (length(which.tab) > prod(mfrow)) 
         par(ask = TRUE)
     for (ianal in which.tab) {

@@ -8,7 +8,6 @@
     if (is.null(mfrow)) 
         mfrow <- n2mfrow(length(which.tab))
     par(mfrow = mfrow)
-    nblo <- length(object$blo)
     if (length(which.tab) > prod(mfrow)) 
         par(ask = TRUE)
     coolig <- object$Tli[, c(xax, yax)]

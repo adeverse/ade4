@@ -32,7 +32,6 @@
         names(z) <- names(phylog$leaves)
     }
     z <- z[names(phylog$leaves)]
-    vecpro <- phylog$Ascores
     df <- cbind.data.frame(z, phylog$Ascores[, 1:phylog$Adim])
     begin <- paste(names(df)[1], "~", sep = "")
     fmla <- as.formula(paste(begin, paste(names(df)[-1], collapse = "+")))

@@ -48,7 +48,11 @@
     } else if (!is.null(phylog)) {
          if (!inherits(phylog, "phylog")) stop ("'phylog' expected with class 'phylog'")
          orthobas <- phylog$Bscores
-    } else stop ("'orthobas','neig','phylog' all NULL")
+    }
+
+    if (is.null(orthobas)){
+      stop ("'orthobas','neig','phylog' all NULL")
+    }
     
     if (!inherits(orthobas, "data.frame")) stop ("'orthobas' is not a data.frame")
     if (nrow(orthobas) != nobs) stop ("non convenient dimensions")

@@ -14,7 +14,7 @@ This data set gives the results of the presidential election in France in 1988 f
     \item{lab}{is a data frame with three variables: 
     \code{elec88$lab$dep} a vector containing the names of the 94 french departments,
     \code{elec88$lab$reg}  a vector containing the names of the 21 French
-    administraitve regions.} and,
+    administraitve regions. and,
   \code{elec88$lab$reg.fac} a factor with 21 levels defining the French administraitve regions.}
     \item{area}{is the data frame of 3 variables returning the boundary lines of each department. 
     The first variable is a factor. The levels of this one are the row.names of tab. 

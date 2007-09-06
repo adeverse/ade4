@@ -32,7 +32,7 @@ Returns a list of class \code{mix} and \code{dudi} (see \link{dudi}) containing 
     the correlation ratios if it is a factor
     }
 }
-}
+
 \references{ Hill, M. O., and A. J. E. Smith. 1976. Principal component analysis of taxonomic data with multi-state discrete characters. 
 \emph{Taxon}, \bold{25}, 249-255. }
 \author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}\cr
@@ -46,6 +46,6 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
    dd1 <- dudi.hillsmith(dunedata$envir, scann = FALSE)
    scatter.dudi(dd1, clab.r = 1, clab.c = 1.5)
   }
-}
+
 
 \keyword{multivariate}

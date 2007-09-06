@@ -17,7 +17,6 @@ The \code{seconde} data frame gives the marks of 22 students for 8 subjects.
 - ANGL: English language
 - ESPA: Spanish language
   }
-}
 \source{
 Personal communication
 }

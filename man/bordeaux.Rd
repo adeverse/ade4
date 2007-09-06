@@ -11,7 +11,6 @@ The \code{bordeaux} data frame gives the opinions of 200 judges in a blind tasti
   This data frame has 5 rows (the wines) and 4 columns (the judgements) divided in excellent,
   good, mediocre and boring.
   }
-}
 \source{
  van Rijckevorsel, J. (1987) \emph{The application of fuzzy coding and horseshoes in multiple correspondence analysis}.
  DSWO Press, Leiden (p. 32)

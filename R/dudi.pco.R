@@ -36,7 +36,7 @@
         warning("Non euclidean distance")
     r <- sum(lambda > (lambda[1] * tol))
     if (scannf) {
-        if (exists("ade4TkGUIFlag") && ade4TkGUIFlag) {
+        if (exists("ade4TkGUIFlag")) {
             nf <- chooseaxes(lambda, length(lambda))
         } else {
             barplot(lambda)

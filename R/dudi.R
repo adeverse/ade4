@@ -33,7 +33,7 @@
   eig <- eig1$values
   rank <- sum((eig/eig[1]) > tol)
   if (scannf) {
-    if (exists("ade4TkGUIFlag") && ade4TkGUIFlag) {
+    if (exists("ade4TkGUIFlag")) {
       nf <- chooseaxes(eig, rank)
     }
     else {

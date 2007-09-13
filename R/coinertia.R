@@ -40,7 +40,7 @@
         res <- list(tab = tabcoiner, cw = dudiX$cw, lw = dudiY$cw)
         rank <- sum((w1$values/w1$values[1]) > tol)
         if (scannf) {
-            if (exists("ade4TkGUIFlag") && ade4TkGUIFlag) {
+            if (exists("ade4TkGUIFlag")) {
                 nf <- chooseaxes(w1$values, rank)
             } else {
                 barplot(w1$values[1:rank])

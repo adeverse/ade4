@@ -5,8 +5,8 @@
     if (!inherits(xtest,"between"))
         stop ("Type 'between' expected")
     appel<-as.list(xtest$call)
-    dudi1<-eval(appel$dudi,sys.frame(0))
-    fac<-eval(appel$fac,sys.frame(0))
+    dudi1<-eval.parent(appel$dudi)
+    fac<-eval.parent(appel$fac)
     X<-dudi1$tab
     X.lw<-dudi1$lw
     if ((!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE)))) {

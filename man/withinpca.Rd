@@ -1,12 +1,12 @@
 \encoding{latin1}
-\name{within.pca}
-\alias{within.pca}
+\name{withinpca}
+\alias{withinpca}
 \title{Normed within Principal Component Analysis}
 \description{
 performs a normed within Principal Component Analysis. 
 }
 \usage{
-within.pca(df, fac, scaling = c("partial", "total"), 
+withinpca(df, fac, scaling = c("partial", "total"), 
     scannf = TRUE, nf = 2)
 }
 \arguments{
@@ -30,7 +30,7 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(meaudret)
-wit1 <- within.pca(meaudret$mil, meaudret$plan$dat, 
+wit1 <- withinpca(meaudret$mil, meaudret$plan$dat, 
     scan = FALSE, scal = "partial")
 kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5"), 4))
 unclass(kta1)

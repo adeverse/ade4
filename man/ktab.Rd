@@ -74,7 +74,7 @@ wfri[2:4]
 c(wfri[2:4], wfri[5])
 
 data(meaudret)
-wit1 <- within.pca(meaudret$mil, meaudret$plan$dat, scan = FALSE, 
+wit1 <- withinpca(meaudret$mil, meaudret$plan$dat, scan = FALSE, 
     scal = "partial")
 kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5"), 4))
 kta2 <- t(kta1)

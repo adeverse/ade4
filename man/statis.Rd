@@ -46,7 +46,7 @@ Daniel Chessel
 }
 \examples{
 data(jv73)
-kta1 <- ktab.within(within.pca(jv73$morpho, jv73$fac.riv, scann = FALSE))
+kta1 <- ktab.within(withinpca(jv73$morpho, jv73$fac.riv, scann = FALSE))
 statis1 <- statis(kta1, scann = FALSE)
 plot(statis1)
 

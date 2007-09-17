@@ -29,7 +29,7 @@ of columns, and the same column weights.
 }
 \examples{
 data(meau)
-wit1 <- within.pca(meau$mil, meau$plan$dat, scan = FALSE, scal = "total")
+wit1 <- withinpca(meau$mil, meau$plan$dat, scan = FALSE, scal = "total")
 pcafau <- dudi.pca(meau$fau, scale = FALSE, scan = FALSE, nf = 2)
 wit2 <- within(pcafau, meau$plan$dat, scan = FALSE, nf = 2)
 kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5","S6"), 4))

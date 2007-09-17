@@ -1,4 +1,4 @@
-"within.pca" <- function (df, fac, scaling = c("partial", "total"), scannf = TRUE,
+"withinpca" <- function (df, fac, scaling = c("partial", "total"), scannf = TRUE,
     nf = 2) 
 {
     if (!inherits(df, "data.frame")) 

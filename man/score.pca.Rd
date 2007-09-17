@@ -5,7 +5,7 @@
 performs the canonical graph of a Principal Component Analysis. 
 }
 \usage{
-score.pca(x, xax = 1, which.var = NULL, mfrow = NULL, csub = 2, 
+\method{score}{pca}(x, xax = 1, which.var = NULL, mfrow = NULL, csub = 2, 
     sub = names(x$tab), abline = TRUE, \dots)
 }
 \arguments{

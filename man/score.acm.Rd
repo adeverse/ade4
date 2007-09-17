@@ -5,7 +5,7 @@
 performs the canonical graph of a Multiple Correspondence Analysis. 
 }
 \usage{
-score.acm(x, xax = 1, which.var = NULL, mfrow = NULL, 
+\method{score}{acm}(x, xax = 1, which.var = NULL, mfrow = NULL, 
     sub = names(oritab), csub = 2, possub = "topleft", \dots)
 }
 \arguments{

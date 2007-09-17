@@ -5,7 +5,7 @@
 performs the scatter diagrams of a Multiple Correspondence Analysis. 
 }
 \usage{
-scatter.acm(x, xax = 1, yax = 2, mfrow=NULL, csub = 2, possub = "topleft", ...)
+\method{scatter}{acm}(x, xax = 1, yax = 2, mfrow=NULL, csub = 2, possub = "topleft", ...)
 }
 \arguments{
   \item{x}{an object of class \code{acm}}

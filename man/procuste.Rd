@@ -9,8 +9,8 @@ performs a simple procruste rotation between two sets of points.
 }
 \usage{
 procuste(df1, df2, scale = TRUE, nf = 4, tol = 1e-07) 
-plot.procuste (x, xax = 1, yax = 2, \dots)
-print.procuste (x, \dots)
+\method{plot}{procuste}(x, xax = 1, yax = 2, \dots)
+\method{print}{procuste}(x, \dots)
 }
 \arguments{
   \item{df1, df2}{two data frames with the same rows}

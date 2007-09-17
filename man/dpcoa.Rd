@@ -8,8 +8,8 @@ Performs a double principal coordinate analysis
 }
 \usage{
 dpcoa (df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e-07)
-plot.dpcoa (x, xax = 1, yax = 2, option = 1:4, csize = 2, \dots)
-print.dpcoa (x, \dots)
+\method{plot}{dpcoa}(x, xax = 1, yax = 2, option = 1:4, csize = 2, \dots)
+\method{print}{dpcoa} (x, \dots)
 }
 \arguments{
   \item{df}{a data frame with elements as rows, samples as columns and abundance or presence-absence as entries}

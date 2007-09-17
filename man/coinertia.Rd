@@ -10,9 +10,9 @@ The coinertia analysis performs a double inertia analysis of two arrays.
 }
 \usage{
 coinertia(dudiX, dudiY, scannf = TRUE, nf = 2)
-plot.coinertia (x, xax = 1, yax = 2, \dots) 
-print.coinertia (x, \dots) 
-summary.coinertia (object, \dots) 
+\method{plot}{coinertia} (x, xax = 1, yax = 2, \dots) 
+\method{print}{coinertia} (x, \dots) 
+\method{summary}{coinertia} (object, \dots) 
 }
 \arguments{
   \item{dudiX}{a duality diagram providing from one of the functions dudi.coa, dudi.pca, \dots}

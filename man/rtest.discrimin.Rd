@@ -7,7 +7,7 @@ Monte-Carlo Test on a Discriminant Analysis (in R).
 Test of the sum of a discriminant analysis eigenvalues (divided by the rank). Non parametric version of the Pillai's test. It authorizes any weighting.
 }
 \usage{
-rtest.discrimin(xtest, nrepet = 99, \dots)
+\method{rtest}{discrimin}(xtest, nrepet = 99, \dots)
 }
 \arguments{
   \item{xtest}{an object of class \code{discrimin}}

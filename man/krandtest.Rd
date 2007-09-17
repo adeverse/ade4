@@ -8,8 +8,8 @@
 Plot and print many permutation tests. Objects of class \code{'krandtest'} are lists.
 }
 \usage{
-plot.krandtest(x, mfrow = NULL, nclass = NULL, main.title = x$names, ...)
-print.krandtest(x, ...)
+\method{plot}{krandtest}(x, mfrow = NULL, nclass = NULL, main.title = x$names, ...)
+\method{print}{krandtest}(x, ...)
 as.krandtest(sim, obs, alter=c("greater", "less", "two-sided"), call = match.call(),names=colnames(sim))
 }
 \arguments{

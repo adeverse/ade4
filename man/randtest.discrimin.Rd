@@ -6,7 +6,7 @@ Monte-Carlo Test on a Discriminant Analysis (in C).}
 Test of the sum of a discriminant analysis eigenvalues (divided by the rank). Non parametric version of the Pillai's test. It authorizes any weighting.
 }
 \usage{
-randtest.discrimin(xtest, nrepet = 999, \dots)
+\method{randtest}{discrimin}(xtest, nrepet = 999, \dots)
 }
 \arguments{
   \item{xtest}{an object of class \code{discrimin}}

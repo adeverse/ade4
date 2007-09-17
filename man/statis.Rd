@@ -8,8 +8,8 @@ performs a STATIS analysis of a \code{ktab} object.
 }
 \usage{
 statis(X, scannf = TRUE, nf = 3, tol = 1e-07)
-plot.statis (x, xax = 1, yax = 2, option = 1:4, \dots) 
-print.statis (x, \dots) 
+\method{plot}{statis}(x, xax = 1, yax = 2, option = 1:4, \dots) 
+\method{print}{statis}(x, \dots) 
 }
 \arguments{
   \item{X}{an object of class 'ktab'}

@@ -6,7 +6,7 @@ performs high level plots of a Multiple Co-inertia Analysis,
 using an object of class \code{mcoa}. 
 }
 \usage{
-kplot.mcoa(object, xax = 1, yax = 2, which.tab = 1:nrow(object$cov2), 
+\method{kplot}{mcoa}(object, xax = 1, yax = 2, which.tab = 1:nrow(object$cov2), 
     mfrow = NULL, option = c("points", "axis", "columns"), 
     clab = 1, cpoint = 2, csub = 2, possub = "bottomright",\dots)
 }

@@ -9,8 +9,8 @@ performs within analyses on an object of class \code{dudi}.
 }
 \usage{
 within(dudi, fac, scannf = TRUE, nf = 2) 
-plot.within (x, xax = 1, yax = 2, \dots) 
-print.within (x, \dots)
+\method{plot}{within}(x, xax = 1, yax = 2, \dots) 
+\method{print}{within}(x, \dots)
 }
 \arguments{
  \item{dudi}{an object of class \code{dudi}}

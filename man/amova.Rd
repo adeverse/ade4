@@ -8,7 +8,7 @@ in a way similar to ANOVA. It includes evolutionary distances among alleles.
 }
 \usage{
 amova(samples, distances, structures)
-print.amova(x, full = FALSE, \dots)
+\method{print}{amova}(x, full = FALSE, \dots)
 }
 \arguments{
   \item{samples}{a data frame with haplotypes (or genotypes) as rows, populations as columns

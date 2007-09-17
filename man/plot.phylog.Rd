@@ -10,7 +10,7 @@
 \code{enum.phylog} enumerate all the possible representations for a phylogeny.
 }
 \usage{
-plot.phylog(x, y = NULL, f.phylog = 0.5, cleaves = 1, cnodes = 0,
+\method{plot}{phylog}(x, y = NULL, f.phylog = 0.5, cleaves = 1, cnodes = 0,
  labels.leaves = names(x$leaves), clabel.leaves = 1,
  labels.nodes = names(x$nodes), clabel.nodes = 0, sub = "",
  csub = 1.25, possub = "bottomleft", draw.box = FALSE, ...)

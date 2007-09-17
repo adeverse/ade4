@@ -10,9 +10,9 @@ containing K tables.
 }
 \usage{
 sepan(X, nf = 2)
-plot.sepan (x, mfrow = NULL, csub = 2, \dots)
-summary.sepan (object, \dots)
-print.sepan (x, \dots)
+\method{plot}{sepan}(x, mfrow = NULL, csub = 2, \dots)
+\method{summary}{sepan}(object, \dots)
+\method{print}{sepan}(x, \dots)
 }
 \arguments{
   \item{X}{an object of class \code{ktab}}

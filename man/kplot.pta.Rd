@@ -6,7 +6,7 @@ performs high level plots of a Partial Triadic Analysis,
 using an object of class \code{pta}. 
 }
 \usage{
-kplot.pta(object, xax = 1, yax = 2, which.tab = 1:nrow(object$RV), 
+\method{kplot}{pta}(object, xax = 1, yax = 2, which.tab = 1:nrow(object$RV), 
     mfrow = NULL, which.graph = 1:4, clab = 1, cpoint = 2, csub = 2, 
     possub = "bottomright", ask = par("ask"), ...)
 }

@@ -6,7 +6,7 @@
 performs the canonical graph of a correspondence analysis. 
 }
 \usage{
-score.coa (x, xax = 1, dotchart = FALSE, clab.r = 1, clab.c = 1, 
+\method{score}{coa}(x, xax = 1, dotchart = FALSE, clab.r = 1, clab.c = 1, 
     csub = 1, cpoi = 1.5, cet = 1.5, ...)
 reciprocal.coa(x)
 }

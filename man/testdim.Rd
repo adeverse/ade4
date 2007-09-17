@@ -9,7 +9,7 @@ correlation matrix. The procedure is based on the computation of the RV coeffici
 }
 \usage{
 testdim(dudi, ...)
-testdim.pca(dudi, nrepet = 99, nbax = dudi$rank, alpha = 0.05, ...)
+\method{testdim}{pca}(dudi, nrepet = 99, nbax = dudi$rank, alpha = 0.05, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

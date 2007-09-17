@@ -9,7 +9,7 @@ and returns the results as objects of class \code{pco} and \code{dudi}.
 \usage{
 dudi.pco(d, row.w = "uniform", scannf = TRUE, nf = 2, 
     full = FALSE, tol = 1e-07)
-scatter.pco (x, xax = 1, yax = 2, clab.row = 1, posieig = "top", 
+\method{scatter}{pco}(x, xax = 1, yax = 2, clab.row = 1, posieig = "top", 
     sub = NULL, csub = 2, \dots) 
 }
 \arguments{

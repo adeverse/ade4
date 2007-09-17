@@ -5,7 +5,7 @@
 Performs a Monte-Carlo test on a Co-inertia analysis. 
 }
 \usage{
-randtest.coinertia(xtest, nrepet = 999, fixed=0, \dots)
+\method{randtest}{coinertia}(xtest, nrepet = 999, fixed=0, \dots)
 }
 \arguments{
   \item{xtest}{an object of class \code{coinertia}}

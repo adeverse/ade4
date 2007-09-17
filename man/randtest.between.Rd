@@ -6,7 +6,7 @@
 Performs a Monte-Carlo test on the between-groups inertia percentage. 
 }
 \usage{
-randtest.between(xtest, nrepet = 999, \dots)
+\method{randtest}{between}(xtest, nrepet = 999, \dots)
 }
 \arguments{
   \item{xtest}{an object of class \code{between}}

@@ -13,7 +13,7 @@ The mantelkdist and RVkdist functions apply to blocks of distance matrices the m
 \usage{
 mantelkdist (kd, nrepet = 999)
 RVkdist (kd, nrepet = 999)
-plot.corkdist (x, whichinrow = NULL, whichincol = NULL, 
+\method{plot}{corkdist}(x, whichinrow = NULL, whichincol = NULL, 
    gap = 4, nclass = 10, coeff = 1,\dots)
 }
 \arguments{

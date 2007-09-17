@@ -11,10 +11,10 @@ The rows of L correspond to the rows of R and the columns of Q correspond to the
 }
 \usage{
 rlq(dudiR, dudiL, dudiQ, scannf = TRUE, nf = 2)
-print.rlq(x, ...)
-plot.rlq(x, xax = 1, yax = 2, ...)
-summary.rlq(object, ...)
-randtest.rlq(xtest,nrepet = 999, ...)
+\method{print}{rlq}(x, ...)
+\method{plot}{rlq}(x, xax = 1, yax = 2, ...)
+\method{summary}{rlq}(object, ...)
+\method{randtest}{rlq}(xtest,nrepet = 999, ...)
 }
 
 \arguments{

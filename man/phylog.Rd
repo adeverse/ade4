@@ -11,7 +11,7 @@ Create and use objects of class \code{phylog}. \cr
 \code{phylog.permut} returns objects of class \code{phylog}. It creates the different representations compatible with tree topology.
 }
 \usage{
-print.phylog(x, ...)
+\method{print}{phylog}(x, ...)
 phylog.extract(phylog, node, distance = TRUE)
 phylog.permut(phylog, list.nodes = NULL, distance = TRUE)
 }

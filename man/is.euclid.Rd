@@ -9,7 +9,7 @@ Confirmation of the Euclidean nature of a distance matrix by the Gower's theorem
 }
 \usage{
 is.euclid(distmat, plot = FALSE, print = FALSE, tol = 1e-07)
-summary.dist(object, \dots)
+\method{summary}{dist}(object, \dots)
 }
 \arguments{
   \item{distmat}{an object of class 'dist'}

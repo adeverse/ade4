@@ -8,9 +8,9 @@
 performs projections of supplementary rows. 
 }
 \usage{ 
-suprow.coa (x, Xsup, \dots) 
-suprow.default (x, Xsup, \dots) 
-suprow.pca (x, Xsup, \dots) 
+\method{suprow}{coa}(x, Xsup, \dots) 
+\method{suprow}{default}(x, Xsup, \dots) 
+\method{suprow}{pca}(x, Xsup, \dots) 
 }
 \arguments{
   \item{x}{an object of class \code{dudi}}

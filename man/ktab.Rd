@@ -29,12 +29,12 @@ a list of class 'ktab' contains moreover :
  \item{T4}{: a data frame of two components to manage the parameter positions of 4 components associated to an array}
 }
 \usage{
-c.ktab (...)
+\method{c}{ktab}(...)
 x[selection]
 is.ktab(x)
-t.ktab(x)
-row.names.ktab(x)
-col.names.ktab(x)
+\method{t}{ktab}(x)
+\method{row.names}{ktab}(x)
+\method{col.names}{ktab}(x)
 tab.names(x)
 col.names(x)
 ktab.util.names(x)

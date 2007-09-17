@@ -11,10 +11,10 @@ performs a special multivariate analysis for ecological data.
 }
 \usage{
 niche(dudiX, Y, scannf = TRUE, nf = 2)
-print.niche (x, \dots) 
-plot.niche (x, xax = 1, yax = 2, \dots)
+\method{print}{niche}(x, \dots) 
+\method{plot}{niche}(x, xax = 1, yax = 2, \dots)
 niche.param(x)
-rtest.niche(xtest,nrepet=99, \dots)
+\method{rtest}{niche}(xtest,nrepet=99, \dots)
 }
 \arguments{
   \item{dudiX}{a duality diagram providing from a function \code{dudi.coa}, \code{dudi.pca}, ... using an array sites-variables}

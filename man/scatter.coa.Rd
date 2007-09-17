@@ -5,7 +5,7 @@
 performs the scatter diagrams of a correspondence analysis. 
 }
 \usage{
-scatter.coa(x, xax = 1, yax = 2, method = 1:3, clab.row = 0.75, 
+\method{scatter}{coa}(x, xax = 1, yax = 2, method = 1:3, clab.row = 0.75, 
     clab.col = 1.25, posieig = "top", sub = NULL, csub = 2, \dots)
 }
 \arguments{

@@ -6,7 +6,7 @@ Permutation tests on an analysis of molecular variance (in C).}
 Tests the components of covariance with permutation processes described by Excoffier et al. (1992).
 }
 \usage{
-randtest.amova(xtest, nrepet = 99, \dots)
+\method{randtest}{amova}(xtest, nrepet = 99, \dots)
 }
 \arguments{
   \item{xtest}{an object of class \code{amova}}

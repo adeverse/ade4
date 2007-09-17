@@ -8,8 +8,8 @@ performs projections of supplementary columns.
 }
 \usage{
 supcol(x, \dots)
-supcol.default (x, Xsup, \dots) 
-supcol.coa (x, Xsup, \dots) 
+\method{supcol}{default}(x, Xsup, \dots) 
+\method{supcol}{coa}(x, Xsup, \dots) 
 }
 \arguments{
   \item{x}{an object used to select a method}

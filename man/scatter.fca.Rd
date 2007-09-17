@@ -5,7 +5,7 @@
 performs the scatter diagrams of a fuzzy correspondence analysis. 
 }
 \usage{
-scatter.fca(x, xax = 1, yax = 2, clab.moda = 1, labels = names(x$tab), 
+\method{scatter}{fca}(x, xax = 1, yax = 2, clab.moda = 1, labels = names(x$tab), 
     sub = NULL, csub = 2, \dots)
 }
 \arguments{

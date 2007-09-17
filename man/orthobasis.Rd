@@ -28,7 +28,7 @@ orthobasis.circ(n)
 orthobasis.mat(mat, cnw=TRUE)
 orthobasis.listw(listw)
 orthobasis.haar(n)
-print.orthobasis(x,...)
+\method{print}{orthobasis}(x,...)
 }
 \arguments{
   \item{neig}{is an object of class \code{neig}}

@@ -11,9 +11,9 @@
 }
 \usage{
 foucart(X, scannf = TRUE, nf = 2)
-plot.foucart(x, xax = 1, yax = 2, clab = 1, csub = 2, 
+\method{plot}{foucart}(x, xax = 1, yax = 2, clab = 1, csub = 2, 
     possub = "bottomright", \dots) 
-print.foucart(x, \dots) 
+\method{print}{foucart}(x, \dots) 
 }
 \arguments{
   \item{X}{a list of data frame where the row names and the column names are the same for each table}

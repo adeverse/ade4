@@ -9,9 +9,9 @@ randtest is a generic function. It proposes methods for the following objects \c
 }
 \usage{
     randtest(xtest, \dots)
-    plot.randtest(x, nclass = 10, coeff = 1, \dots)
+    \method{plot}{randtest}(x, nclass = 10, coeff = 1, \dots)
     as.randtest (sim, obs,alter=c("greater", "less", "two-sided"), call = match.call())
-    print.randtest (x, \dots)
+    \method{print}{randtest}(x, \dots)
 }
 \arguments{
 \item{xtest}{an object used to select a method}

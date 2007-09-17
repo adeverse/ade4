@@ -11,7 +11,7 @@ for each separated analysis in an Internal Correspondence Analysis.
 }
 \usage{
 witwit.coa(dudi, row.blocks, col.blocks, scannf = TRUE, nf = 2)
-summary.witwit(object, \dots)
+\method{summary}{witwit}(object, \dots)
 witwitsepan(ww, mfrow = NULL, csub = 2, plot = TRUE)
 }
 \arguments{

@@ -6,7 +6,7 @@ performs high level plots of a Multiple Factorial Analysis,
 using an object of class \code{mfa}. 
 }
 \usage{
-kplot.mfa(object, xax = 1, yax = 2, mfrow = NULL, 
+\method{kplot}{mfa}(object, xax = 1, yax = 2, mfrow = NULL, 
     which.tab = 1:length(object$blo), row.names = FALSE, col.names = TRUE, 
     traject = FALSE, permute.row.col = FALSE, 
     clab = 1, csub = 2, possub = "bottomright", \dots)

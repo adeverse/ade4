@@ -5,7 +5,7 @@
 performs the canonical graph of a mixed analysis. 
 }
 \usage{
-score.mix (x, xax = 1, csub = 2, mfrow = NULL, which.var = NULL, \dots)
+\method{score}{mix}(x, xax = 1, csub = 2, mfrow = NULL, which.var = NULL, \dots)
 }
 \arguments{
   \item{x}{an object of class \code{mix}}

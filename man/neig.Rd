@@ -33,8 +33,8 @@ neig(list = NULL, mat01 = NULL, edges = NULL,
     n.line = NULL, n.circle = NULL, area = NULL)
 
 scores.neig  (obj) 
-print.neig  (x, \dots) 
-summary.neig  (object, \dots)
+\method{print}{neig}(x, \dots) 
+\method{summary}{neig}(object, \dots)
 nb2neig (nb)
 neig2nb (neig)
 neig2mat (neig)

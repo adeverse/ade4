@@ -10,8 +10,8 @@ a correspondence analysis
 }
 \usage{
 reconst (dudi, ...)
-reconst.pca (dudi, nf = 1, ...) 
-reconst.coa (dudi, nf = 1, ...) 
+\method{reconst}{pca}(dudi, nf = 1, ...) 
+\method{reconst}{coa}(dudi, nf = 1, ...) 
 }
 \arguments{
   \item{dudi}{an object of class \code{dudi} used to select a method: pca or coa}

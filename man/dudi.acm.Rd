@@ -14,7 +14,7 @@
 dudi.acm (df, row.w = rep(1, nrow(df)), scannf = TRUE, nf = 2)
 acm.burt (df1, df2, counts = rep(1, nrow(df1))) 
 acm.disjonctif (df) 
-boxplot.acm (x, xax = 1, \dots) 
+\method{boxplot}{acm}(x, xax = 1, \dots) 
 }
 \arguments{
   \item{df, df1, df2}{data frames containing only factors}

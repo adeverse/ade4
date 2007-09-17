@@ -10,8 +10,8 @@ in which there is only one instrumental variable, and it is a factor.
 }
 \usage{
 between(dudi, fac, scannf = TRUE, nf = 2)
-plot.between(x, xax = 1, yax = 2, \dots) 
-print.between(x, \dots) 
+\method{plot}{between}(x, xax = 1, yax = 2, \dots) 
+\method{print}{between}(x, \dots) 
 }
 \arguments{
   \item{dudi}{a duality diagram, object of class \code{\link{dudi}} from one of the functions dudi.coa, dudi.pca, ...}

@@ -6,7 +6,7 @@ performs high level plots of a Foucart's Correspondence Analysis,
 using an object of class \code{foucart}.  
 }
 \usage{
-kplot.foucart(object, xax = 1, yax = 2, mfrow = NULL, 
+\method{kplot}{foucart}(object, xax = 1, yax = 2, mfrow = NULL, 
     which.tab = 1:length(object$blo), clab.r = 1, clab.c = 1.25, 
     csub = 2, possub = "bottomright", \dots)
 }

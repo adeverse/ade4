@@ -12,9 +12,9 @@ using an object of class \code{ktab}.
 \usage{
 mfa(X, option = c("lambda1", "inertia", "uniform", "internal"), 
     scannf = TRUE, nf = 3)
-plot.mfa (x, xax = 1, yax = 2, option.plot = 1:4, \dots) 
-print.mfa (x, \dots) 
-summary.mfa (object, \dots) 
+\method{plot}{mfa}(x, xax = 1, yax = 2, option.plot = 1:4, \dots) 
+\method{print}{mfa}(x, \dots) 
+\method{summary}{mfa}(object, \dots) 
 }
 \arguments{
   \item{X}{K-tables, an object of class \code{ktab}}

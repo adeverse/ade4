@@ -30,7 +30,7 @@ a list of class 'ktab' contains moreover :
 }
 \usage{
 \method{c}{ktab}(...)
-x[selection]
+\method{[}{ktab}(x,selection)
 is.ktab(x)
 \method{t}{ktab}(x)
 \method{row.names}{ktab}(x)

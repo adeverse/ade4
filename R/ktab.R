@@ -3,20 +3,20 @@
     inherits(x, "ktab")
 
 ########### [.ktab" ########### 
-"[.ktab" <- function (object, selection) {
-    blocks <- object$blo
+"[.ktab" <- function (x, selection) {
+    blocks <- x$blo
     nblo <- length(blocks)
     if (is.logical(selection)) 
         selection <- which(selection)
     if (any(selection > nblo)) 
         stop("Non convenient selection")
     indica <- as.factor(rep(1:nblo, blocks))
-    res <- unclass(object)[selection]
-    cw <- object$cw
+    res <- unclass(x)[selection]
+    cw <- x$cw
     cw <- split(cw, indica)
     cw <- unlist(cw[selection])
     res$cw <- cw
-    res$lw <- object$lw
+    res$lw <- x$lw
     blocks <- unlist(lapply(res, function(x) ncol(x)))
     nblo <- length(blocks)
     res$blo <- blocks

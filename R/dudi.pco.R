@@ -37,7 +37,7 @@
     r <- sum(lambda > (lambda[1] * tol))
     if (scannf) {
         if (exists("ade4TkGUIFlag")) {
-            nf <- chooseaxes(lambda, length(lambda))
+            nf <- ade4TkGUI::chooseaxes(lambda, length(lambda))
         } else {
             barplot(lambda)
             cat("Select the number of axes: ")

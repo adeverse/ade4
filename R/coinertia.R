@@ -41,7 +41,7 @@
         rank <- sum((w1$values/w1$values[1]) > tol)
         if (scannf) {
             if (exists("ade4TkGUIFlag")) {
-                nf <- chooseaxes(w1$values, rank)
+                nf <- ade4TkGUI::chooseaxes(w1$values, rank)
             } else {
                 barplot(w1$values[1:rank])
                 cat("Select the number of axes: ")

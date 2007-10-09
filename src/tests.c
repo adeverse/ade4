@@ -373,7 +373,7 @@ void testprocuste(  int *npermut1,
 {
 /* Declarations de variables C locales */
 
-    int         i, j, k, res, lig, c1, c2, npermut, rang, *numero;
+    int         i, j, k, lig, c1, c2, npermut, rang, *numero;
     double      **tabperm, **init1, **init2, tinit, tsim;
     double      **cov, **w, *valpro, *tvecsim;
 

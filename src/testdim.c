@@ -176,6 +176,9 @@ int svd(double **X, double **vecU, double **vecVt, double *vecD)
 {
     int i,j, k,error,nr,nc,lwork,nbax,rankX,ldvt;
     char jobu='S',jobvt='A';
+    double *A,*U, *D, *V;
+    double work1,*work;
+    
     nr=(int)X[0][0];
     nc=(int)X[1][0];
     nbax=nc;
@@ -190,11 +193,11 @@ int svd(double **X, double **vecU, double **vecVt, double *vecD)
 	
 	}
 	
-    double *A = (double *)calloc((size_t)nr*nc, sizeof(double));/*doubleArray(size*size);*/
-    double *D = (double *)calloc((size_t)nbax, sizeof(double));/*doubleArray(nbax*1);*/
-    double *U = (double *)calloc((size_t)nr*nbax, sizeof(double));
-    double *V = (double *)calloc((size_t)nbax*nc, sizeof(double));
-    double work1,*work;
+    A = (double *)calloc((size_t)nr*nc, sizeof(double));/*doubleArray(size*size);*/
+    D = (double *)calloc((size_t)nbax, sizeof(double));/*doubleArray(nbax*1);*/
+    U = (double *)calloc((size_t)nr*nbax, sizeof(double));
+    V = (double *)calloc((size_t)nbax*nc, sizeof(double));
+    
     
     
   
@@ -261,19 +264,21 @@ int svdd(double **X, double *vecD)
 {
     int i,j, k,error,nr,nc,lwork,nbax,rankX,ldvt;
     char jobu='N',jobvt='N';
+    double *A,*U,*D,*V;
+    double work1,*work;
+    
     nr=(int)X[0][0];
     nc=(int)X[1][0];
     nbax=nc;
     ldvt=nc;
     
 	
-    double *A = (double *)calloc((size_t)nr*nc, sizeof(double));/*doubleArray(size*size);*/
-    double *D = (double *)calloc((size_t)nbax, sizeof(double));/*doubleArray(nbax*1);*/
+    A = (double *)calloc((size_t)nr*nc, sizeof(double));/*doubleArray(size*size);*/
+    D = (double *)calloc((size_t)nbax, sizeof(double));/*doubleArray(nbax*1);*/
     /* double *U = (double *)calloc((size_t)nr*nbax, sizeof(double));
        double *V = (double *)calloc((size_t)nbax*nc, sizeof(double));*/
-    double *U = (double *)calloc((size_t)nbax, sizeof(double));
-    double *V = (double *)calloc((size_t)nbax, sizeof(double));
-    double work1,*work;
+    U = (double *)calloc((size_t)nbax, sizeof(double));
+    V = (double *)calloc((size_t)nbax, sizeof(double));
     
     
   

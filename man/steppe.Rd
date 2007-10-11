@@ -1,7 +1,7 @@
 \encoding{latin1}
 \name{steppe}
 \alias{steppe}
-\non_function{}
+\docType{data}
 \title{Transect in the Vegetation}
 \description{
 This data set gives the presence-absence of 37 species on 515 sites. 

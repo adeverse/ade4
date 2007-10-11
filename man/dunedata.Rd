@@ -1,6 +1,6 @@
 \name{dunedata}
 \alias{dunedata}
-\non_function{}
+\docType{data}
 \title{Dune Meadow Data}
 \description{
 \code{dunedata} is a data set containing for 20 sites, environmental variables and plant species. 

@@ -357,7 +357,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     w <- bicenter.wt(w)
     w <- eigen(w,sym=TRUE)
     res$Wvalues <- w$values[-nleaves]*nleaves
-    w <- as.data.frame(w$vectors[,-nleaves]*sqrt(nleaves))
+    w <- as.data.frame(qr.Q(qr(scale(w$vectors, scale = FALSE)))[,-nleaves]*sqrt(nleaves))
     row.names(w) <- leave.names
     names(w) = paste("W",1:(nleaves-1),sep="")
     res$Wscores <- w

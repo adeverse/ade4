@@ -271,6 +271,11 @@ int svdd(double **X, double *vecD)
     nc=(int)X[1][0];
     nbax=nc;
     ldvt=nc;
+    if (nr<nc) {
+      nbax=nr;
+      ldvt=nbax;
+      
+    }
     
 	
     A = (double *)calloc((size_t)nr*nc, sizeof(double));/*doubleArray(size*size);*/

@@ -1,18 +1,53 @@
-citHeader("To cite ade4 in publications use:")
+citHeader("To cite ade4 in publications use one these references:")
+
+citEntry(entry="Article",
+	title = "The ade4 package: implementing the duality diagram for ecologists",
+        author = personList(as.person("S. Dray"),as.person("A.B. Dufour")),
+	journal = "Journal of Statistical Software",
+  	year = "2007",
+	volume = "22",
+	pages = "1-20",
+	number = "4",         
+        textVersion = 
+        paste("Dray, S. and Dufour, A.B. ",
+	       "(2007): ", 
+               "The ade4 package: implementing the duality diagram for ecologists. ",
+               "Journal of Statistical Software. ",
+               "22(4): 1-20.",
+               sep="")
+         )
 
 citEntry(entry="Article",
 	title = "The ade4 package-{I}- {O}ne-table methods",
-        author = personList(as.person("D. Chessel"),as.person("A.-.B. Dufour"), as.person("J. Thioulouse")),
+        author = personList(as.person("D. Chessel"),as.person("A.B. Dufour"), as.person("J. Thioulouse")),
 	journal = "R News",
   	year = "2004",
 	volume = "4",
 	pages = "5-10",
 	         
         textVersion = 
-        paste("Chessel, D. and Dufour, A.-.B. and Thioulouse, J. ",
+        paste("Chessel, D. and Dufour, A.B. and Thioulouse, J. ",
 	       "(2004): ", 
                "The ade4 package-I- One-table methods. ",
                "R News. ",
                "4: 5-10.",
+               sep="")
+         )
+
+citEntry(entry="Article",
+	title = "The ade4 package-{II}: {T}wo-table and {K}-table methods.",
+        author = personList(as.person("S. Dray"),as.person("A.B. Dufour"), as.person("D. Chessel")),
+	journal = "R News",
+  	year = "2007",
+	volume = "7",
+	number = "2",  
+	pages = "47-52",
+	         
+        textVersion = 
+        paste("Dray, S. and Dufour, A.B. and Chessel, D. ",
+	       "(2007): ", 
+               "The ade4 package-II: Two-table and K-table methods. ",
+               "R News. ",
+               "7(2): 47-52.",
                sep="")
          )

@@ -1,25 +1,50 @@
-\name{scatter}
-\alias{scatter}
-\title{Scatter Plot}
+\name{scatterutil}
+\alias{scatterutil.base}
+\alias{scatterutil.sco}
+\alias{scatterutil.chull}
+\alias{scatterutil.eigen}
+\alias{scatterutil.ellipse}
+\alias{scatterutil.eti.circ}
+\alias{scatterutil.eti}
+\alias{scatterutil.grid}
+\alias{scatterutil.legend.bw.square}
+\alias{scatterutil.legend.square.grey}
+\alias{scatterutil.legendgris}
+\alias{scatterutil.scaling}
+\alias{scatterutil.star}
+\alias{scatterutil.sub}
+\alias{scatterutil.convrot90}
+\title{Graphical utility functions}
 \description{
-\code{scatter} is a generic function. It has methods for the classes \code{coa}, \code{dudi}, \code{fca}, \code{acm} and \code{pco}.\cr
-The scale of the grid is situated on the right-top of the graph.\cr
-The points are in the middle of the labels.\cr
-This process plots the graphs of the multivariate analyses.\cr
-The two axes have the same scale.\cr
+These are utilities used in graphical functions.
 }
 \usage{
-scatter(x, ...)
 }
-\arguments{
-  \item{x}{an object used to select a method}
-  \item{\dots}{further arguments passed to or from other methods}
+\details{
+  The functions scatter use some utilities functions :\cr
+  \item{scatterutil.base}{defines the layer of the plot for all
+    scatters}
+  \item{scatterutil.sco}{defines the layer of the plot for sco functions}
+  \item{scatterutil.chull}{plots the polygons of the external contour}
+  \item{scatterutil.eigen}{plots the eigenvalues bar plot}
+  \item{scatterutil.ellipse}{plots an inertia ellipse for a weighting distribution}
+  \item{scatterutil.eti.circ}{puts labels on a correlation circle}
+  \item{scatterutil.eti}{puts labels centred on the points}
+  \item{scatterutil.grid}{plots a grid and adds a legend}
+  \item{scatterutil.legend.bw.square}{puts a legend of values by square size}
+  \item{scatterutil.legend.square.grey}{puts a legend by squares and grey levels}
+  \item{scatterutil.legendgris}{adds a legend of grey levels for the areas}
+  \item{scatterutil.scaling}{to fit a plot on a background bipmap}
+  \item{scatterutil.star}{plots a star for a weighting distribution}
+  \item{scatterutil.sub}{adds a string of characters in sub-title of a
+    graph}
+  \item{scatterutil.convrot90}{is used to rotate labels}
 }
 \seealso{\code{\link{s.arrow}}, \code{\link{s.chull}}, \code{\link{s.class}}, 
 \code{\link{s.corcircle}}, \code{\link{s.distri}}, \code{\link{s.label}}, 
 \code{\link{s.match}}, \code{\link{s.traject}}, \code{\link{s.value}}, \code{\link{add.scatter}}
 }
-\author{Daniel Chessel }
+\author{Daniel Chessel, Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 \examples{
 par(mfrow = c(3,3))
 plot.new()

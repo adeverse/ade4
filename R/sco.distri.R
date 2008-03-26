@@ -35,8 +35,8 @@
     }
     rect(xmin, ymin, xmax, ymax)
     sum.col <- apply(df, 2, sum)
-    df <- df[, sum.col > 0]
     labels <- labels[sum.col > 0]
+    df <- df[, sum.col > 0]
     nvar <- ncol(df)
     sum.col <- apply(df, 2, sum)
     df <- sweep(df, 2, sum.col, "/")

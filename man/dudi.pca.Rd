@@ -37,9 +37,9 @@ for computing the principal component analysis :
     \item{co}{the column coordinates}
     \item{li}{the row coordinates i.e. the principal components}
     \item{call}{the call function}
-    \item{cent}{the \it{p} vector containing the means for variables (Note that if \code{center = F}, the vector contains \it{p} 0)}
-    \item{norm}{the \it{p} vector containing the standard deviations for variables i.e. the root
-    of the sum of squares deviations of the values from their means divided by \it{n} (Note that if \code{norm = F}, the vector contains \it{p} 1)}
+    \item{cent}{the \emph{p} vector containing the means for variables (Note that if \code{center = F}, the vector contains \emph{p} 0)}
+    \item{norm}{the \emph{p} vector containing the standard deviations for variables i.e. the root
+    of the sum of squares deviations of the values from their means divided by \emph{n} (Note that if \code{norm = F}, the vector contains \emph{p} 1)}
 }
 \seealso{
     \code{prcomp}, \code{princomp} in the \code{mva} library

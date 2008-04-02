@@ -52,8 +52,13 @@ Returns an object of class \code{multispati}, which contains the following eleme
 	\item{as}{principal axes of the dudi analysis (u) onto principal axes of multispati (t(u)Qv), data frame with dudi\$nf rows and (nfposi + nfnega) columns}
 }
 \references{
-Grunsky, E. C. and Agterberg, F. P. (1988) Spatial and multivariate analysis of geochemical data from metavolcanic rocks in the Ben Nevis area, Ontario. \emph{Mathematical Geology}, \bold{20}, 825--861.
+Dray, S., Said, S. and Debias, F. (2008) Spatial ordination of
+vegetation data using a generalization of Wartenberg's  multivariate
+spatial correlation. \emph{Journal of vegetation science}, \bold{19},
+45--56.
 
+  Grunsky, E. C. and Agterberg, F. P. (1988) Spatial and multivariate analysis of geochemical data from metavolcanic rocks in the Ben Nevis area, Ontario. \emph{Mathematical Geology}, \bold{20}, 825--861.
+  
 Switzer, P. and Green, A.A. (1984) Min/max autocorrelation factors for multivariate spatial imagery. Tech. rep. 6, Stanford University.
 
 Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.

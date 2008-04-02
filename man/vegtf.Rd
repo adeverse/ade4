@@ -19,7 +19,7 @@
    \item{nb}{is a neighborhood object (class nb defined in package spdep)} 
 }}
 \source{
-  Dray, S., Said, S. and Debias, F. (2007) Spatial ordination of vegetation data using a generalization of Wartenberg's  multivariate spatial correlation. \emph{Journal of vegetation science}. in press.
+  Dray, S., Said, S. and Debias, F. (2008) Spatial ordination of vegetation data using a generalization of Wartenberg's  multivariate spatial correlation. \emph{Journal of vegetation science}, \bold{19}, 45--56.
 }
 
 \examples{

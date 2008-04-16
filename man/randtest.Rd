@@ -29,6 +29,21 @@ randtest is a generic function. It proposes methods for the following objects \c
 \code{as.randtest} returns a list of class \code{randtest}\cr
 \code{plot.randtest} draws the simulated values histograms and the position of the observed value\cr
 }
+\details{
+If the alternative hypothesis is "greater", a p-value is estimated as:
+(number of random values equal to or greater than the observed one +
+1)/(number of permutations + 1). The null hypothesis is rejected if the
+p-value is less than the significance level. If the alternative
+hypothesis is "less", a p-value is estimated as: (number of random
+values equal to or less than the observed one + 1)/(number of
+permutations + 1). Again, the null hypothesis is rejected if the p-value
+is less than the significance level. Lastly, if the alternative
+hypothesis is "two-sided", the estimation of the p-value is equivalent
+to the one used for "greater" except that random and observed values are
+firstly centered (using the average of random values) and secondly
+transformed to their absolute values. Note that this is only suitable
+for symmetric random distribution.
+}
 \seealso{\link{mantel.randtest}, \link{procuste.randtest}, \link{rtest}}
 \examples{
 par(mfrow = c(2,2))

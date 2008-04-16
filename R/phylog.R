@@ -109,61 +109,64 @@
 }
 
 #######################################################################################
-phylog.extract<-function(phylog,node,distance=TRUE){
-    #extrait d'une phylogénie phylog le sous-arbre enraciné au noeud node
-    #il serait intéressant de traduire cett fonction en C
-    #en ne travaillant que sur les chaines de caractères newick
-    tre2tre<-function(res){
-        # cette fonction assure la conversion de l'objet res
-        # en son équivalent munie des distances
-        # on affecte les distances au noeud le plus proche pour chaque feuilles et noeuds
-        for(i in 1:length(leaves.names)) {
-            res<- sub(paste(leaves.names[i],",",sep=""),paste(leaves.names[i],":",phylog$leaves[i],",",sep=""),res)
+"phylog.extract" <- function (phylog, node, distance = TRUE){
+    local <- lapply(phylog$paths, function(x) sum(x == node))
+    tu.names <- names(which(local == 1))
+    tre <- phylog$tre
+    local1 <- paste(tu.names, ")", sep = "")
+    local2 <- paste(tu.names, ",", sep = "")
+    local3 <- paste(tu.names, ";", sep = "")
+    tu.pos1  <- unlist(lapply(local1, function(x) regexpr(x, tre)))
+    tu.pos2  <- unlist(lapply(local2, function(x) regexpr(x, tre)))
+    tu.pos3  <- unlist(lapply(local3, function(x) regexpr(x, tre)))
+    tu.pos <- cbind(tu.pos1, tu.pos2, tu.pos3)
+    tu.pos <- apply(tu.pos, 1, function(x) x[which(x != -1)])
+    leave.pos <- min(tu.pos)
+    node.pos <- tu.pos[which(tu.names == node)]
+    res <- substr(tre, leave.pos, node.pos - 1)
+    res <- paste(res, node, sep = "")
+    res <- paste(res, ";", sep = "")
+    n.fermante <- length(unlist(gregexpr(")", res)))
+    n.ouvrante <- length(unlist(gregexpr("(", res, fixed = TRUE)))
+    parentheses <- rep("(", n.fermante - n.ouvrante)
+    parentheses <- paste(parentheses, collapse = "")
+    res <- paste(parentheses, res, sep = "")
+
+    if (distance){
+        nodes.names <- names(phylog$nodes)
+        leaves.names <- names(phylog$leaves) 
+       
+        "tre2tre" <- function(res){
+        	for (i in 1:length(leaves.names)) {
+            	res <- sub(paste(leaves.names[i], ",", sep = ""), 
+                	 paste(leaves.names[i], ":", phylog$leaves[i], 
+                    ",", sep = ""), res)
+        	}
+        	for (i in 1:length(leaves.names)) {
+            	res <- sub(paste(leaves.names[i], ")", sep = ""), 
+                	 paste(leaves.names[i], ":", phylog$leaves[i], 
+                    ")", sep = ""), res)
+        	}
+        	for (i in 1:length(nodes.names)) {
+            	res <- sub(paste(nodes.names[i], ",", sep = ""), 
+                	 paste(nodes.names[i], ":", phylog$nodes[i], ",", 
+                    sep = ""), res)
+        	}
+        	for (i in 1:length(nodes.names)) {
+            	res <- sub(paste(nodes.names[i], ")", sep = ""), 
+                	 paste(nodes.names[i], ":", phylog$nodes[i], ")", 
+                   sep = ""), res)
+        	}
+        return(res)
         }
-        for(i in 1:length(leaves.names)) {
-            res<- sub(paste(leaves.names[i],")",sep=""),paste(leaves.names[i],":",phylog$leaves[i],")",sep=""),res)
-        }
-        for(i in 1:length(nodes.names)) {
-            res<- sub(paste(nodes.names[i],",",sep=""),paste(nodes.names[i],":",phylog$nodes[i],",",sep=""),res)
-        }
-        for(i in 1:length(nodes.names)) {
-            res<- sub(paste(nodes.names[i],")",sep=""),paste(nodes.names[i],":",phylog$nodes[i],")",sep=""),res)
-        }
-        res
+        
+        res <- tre2tre(res)
     }
 
-    #variables locales
     add.t <- !is.null(phylog$Wmat)
-    tre<-phylog$tre
-    nodes.names<- names(phylog$nodes)
-    leaves.names<- names(phylog$leaves)
+    res <- newick2phylog(res, add.tools = add.t, call = match.call())
 
-    #on détermine la feuilles la plus à gauche associée au noeud
-    leave<-node
-    k<-0
-    while(length(grep(leave,leaves.names))==0) {
-        k<-k+1
-        leave.number<-grep(leave, nodes.names)[1]
-        leave<-phylog$parts[[leave.number]][1]
-    }
-
-    #on construit la chaine de caractère associée à l'arbre enraciné au noeud
-    leave.pos<-regexpr(leave,tre)
-    node.pos<-regexpr(node,tre)
-    res<-substr(tre,leave.pos,node.pos-1) 
-    res<-paste(res,node,sep="")
-    if (k==0) parentheses<-"" else parentheses<-"("
-    if (k > 1) {
-        for(i in 2:k){
-            parentheses<-paste(parentheses,"(", sep="")
-        }
-    }
-    res<-(paste(parentheses, res, sep=""))
-    res <- paste(res,";",sep="")
-    if (distance) res<-tre2tre(res)
 return(res)
-   res <- newick2phylog(res, add.tools= add.t,call=match.call())
-   res
 }
 
 #######################################################################################

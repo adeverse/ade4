@@ -17,6 +17,7 @@ void freetab (double **tab);
 void freevec (double *vec);
 void getpermutation (int *numero, int repet);
 void matcentrage (double **A, double *poili, char *typ);
+void matcentragehi (double **tab, double *poili, int *index, int *assign);
 void matmodifcm (double **tab, double *poili);
 void matmodifcn (double **tab, double *poili);
 void matmodifcp (double **tab, double *poili);

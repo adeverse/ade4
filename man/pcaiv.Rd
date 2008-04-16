@@ -25,26 +25,28 @@ pcaiv(dudi, df, scannf = TRUE, nf = 2)
 }
 \value{
 returns an object of class \code{pcaiv}, sub-class of class \code{dudi}
+  \item{tab}{a data frame with the modified array (projected variables)}
+  \item{cw}{a numeric vector with the column weigths (from \code{dudi})}
+  \item{lw}{a numeric vector with the row weigths (from \code{dudi})}
+  \item{eig}{a vector with the all eigenvalues}
   \item{rank}{an integer indicating the rank of the studied matrix}
   \item{nf}{an integer indicating the number of kept axes}
-  \item{eig}{a vector with the all eigenvalues}
-  \item{lw}{a numeric vector with the row weigths (from \code{dudi})}
-  \item{cw}{a numeric vector with the column weigths (from \code{dudi})}
-  \item{Y}{a data frame with the dependant variables}
-  \item{X}{a data frame with the explanatory variables}
-  \item{tab}{a data frame with the modified array (projected variables)}
   \item{c1}{a data frame with the Pseudo Principal Axes (PPA)}
-  \item{as}{a data frame with the Principal axes of \code{dudi$tab} on PPA}
-  \item{ls}{a data frame with the projections of lines of \code{dudi$tab} on PPA}
   \item{li}{a data frame \code{dudi$ls} with the predicted values by X}
-  \item{fa}{a data frame with the loadings (Constraint Principal Components as linear combinations of X}
-  \item{l1}{data frame with the Constraint Principal Components (CPC)}
   \item{co}{a data frame with the inner products between the CPC and Y}
+  \item{l1}{data frame with the Constraint Principal Components (CPC)}
+  \item{call}{the matched call}
+  \item{X}{a data frame with the explanatory variables}
+  \item{Y}{a data frame with the dependant variables}
+  \item{ls}{a data frame with the projections of lines of \code{dudi$tab} on PPA}
+  \item{param}{a table containing information about contributions of the analyses : absolute (1) and cumulative (2) contributions of the decomposition of inertia of the dudi object, absolute (3) and cumulative (4) variances of the projections, the ration (5) between the cumulative variances of the projections (4) and the cumulative contributions (2), the square coefficient of correlation (6) and the eigenvalues of the pcaiv (7)}
+  \item{as}{a data frame with the Principal axes of \code{dudi$tab} on PPA}
+  \item{fa}{a data frame with the loadings (Constraint Principal Components as linear combinations of X}
   \item{cor}{a data frame with the correlations between the CPC and X }
 }
 \references{
 Rao, C. R. (1964) The use and interpretation of principal component analysis in applied research. \emph{Sankhya}, \bold{A 26}, 329--359.\cr\cr
-Obadia, J. (1978) L'analyse en composantes explicatives. \emph{Revue de Statistique Appliquée}, \bold{24}, 5--28.\cr\cr
+Obadia, J. (1978) L'analyse en composantes explicatives. \emph{Revue de Statistique Appliquee}, \bold{24}, 5--28.\cr\cr
 Lebreton, J. D., Sabatier, R., Banco G. and  Bacou A. M. (1991) 
 Principal component and correspondence analyses with respect to instrumental variables : 
 an overview of their role in studies of structure-activity and species- environment relationships. 
@@ -59,7 +61,7 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 data(rhone)
 pca1 <- dudi.pca(rhone$tab, scan = FALSE, nf = 3)
 iv1 <- pcaiv(pca1, rhone$disch, scan = FALSE)
-iv1
+iv1$param
 # iner inercum inerC inercumC ratio R2    lambda
 # 6.27 6.27    5.52  5.52     0.879 0.671 3.7   
 # 4.14 10.4    4.74  10.3     0.984 0.747 3.54  

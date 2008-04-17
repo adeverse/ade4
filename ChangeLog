@@ -1,3 +1,135 @@
+2008-04-17 13:02  dray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-6 ----------
+
+2008-04-16 19:02  dray
+
+	* R/phylog.R: Correct a bug in phylog.extract (mail of S. Ollier)
+
+2008-04-16 18:36  dray
+
+	* src/adesub.c, src/adesub.h, src/testrlq.c: matcentragehi in now
+	  in adesub
+
+2008-04-16 18:33  dray
+
+	* R/nipals.R, man/nipals.Rd: New function for NIPALS algorithm,
+	  i.e. PCA with (or without) NA
+
+2008-04-16 18:31  dray
+
+	* man/randtest.Rd: add some words about the computation of pvalues
+	  for two-sided test
+
+2008-04-16 15:18  dufour
+
+	* man/ade4.package.Rd: new documentation for the package by typing ?ade4
+
+2008-04-16 12:12  dufour
+
+	* man/pcaiv.Rd: add description of param in the values section
+
+2008-04-14 14:41  penel
+
+	* man/table.phylog.Rd: Example table.phylog set to dontrun
+
+2008-04-02 13:16  dray
+
+	* man/multispati.Rd, man/vegtf.Rd: Update the source reference:
+	  Dray et al. (2008)
+
+2008-03-27 15:28  dufour
+
+	* man/dudi.pca.Rd: Modifications : explanations about values (cent
+	  and norm) ;  it{} into emph{}.
+
+2008-03-27 14:47  dufour
+
+	* man/dudi.pca.Rd: Modification of explanations ($cent and $norm)
+
+2008-03-26 11:29  dray
+
+	* R/sco.distri.R: correct a bug (identified by S. Pavoine): default
+	  label argument was badly considered when one column contains only
+	  O's
+
+2008-03-20 16:10  dray
+
+	* R/scatter.R, R/scatterutil.R, man/scatter.Rd, man/scatterutil.Rd:
+	  New utility function scatterutil.sco and scatterutil.convrot90
+	  for 1D graphical representation
+
+2008-03-20 16:06  dray
+
+	* R/sco.gauss.R, man/sco.gauss.Rd: New function sco.gauss for 1D
+	  graphical representation
+
+2008-03-20 16:05  dray
+
+	* R/sco.match.R, man/sco.match.Rd: New function sco.match for 1D
+	  graphical representation
+
+2008-03-20 16:05  dray
+
+	* R/sco.class.R, man/sco.class.Rd: New function sco.class for 1D
+	  graphical representation
+
+2008-03-20 16:05  dray
+
+	* R/sco.label.R, man/sco.label.Rd: New function sco.label for 1D
+	  graphical representation
+
+2008-03-19 17:00  dray
+
+	* R/sco.qual.R: Functions of this file are now in sco.label.R and
+	  sco.gauss.R
+
+2008-03-18 15:18  dray
+
+	* inst/CITATION: Add two new references to the CITATION file
+
+2008-03-17 16:47  dray
+
+	* R/randtest.cca.R, R/randtest.pcaiv.R, R/randtest.pcaivortho.R,
+	  man/randtest.pcaiv.Rd: News functions for permutation tests in
+	  constrained analysis
+
+2008-02-05 14:26  dray
+
+	* src/testdim.c: Correct a bug in memory allocation of the function
+	  svdd
+
+2008-01-29 16:07  jthioulo
+
+	* man/sco.label.Rd: added function: Draws evenly spaced labels,
+	  each label linked to the corresponding value of a numeric score
+
+2008-01-29 16:07  jthioulo
+
+	* man/sco.gauss.Rd: added function: Draws Gauss curves with the
+	  same mean and variance as the scores of indivivuals belonging to
+	  categories of several factors
+
+2008-01-29 16:04  jthioulo
+
+	* man/veuvage.Rd: Correstion of illegal accented character in
+	  exemple code
+
+2008-01-29 16:04  jthioulo
+
+	* R/sco.qual.R: adds two functions: sco.gauss and sco.label (draw
+	  Gauss curves on a score by categories of several factors)
+
+2007-11-09 18:19  dray
+
+	* R/newick2phylog.R: Correct a bug. In newick2phylog.addtools,
+	  eigen does not return an orthogonal basis when there are null
+	  eigenvalues (Wscores). Vectors are now orthogonalized using qr
+
+2007-10-16 16:41  penel
+
+	* DESCRIPTION: Change License to GPL (>=2)
+
 2007-10-12 13:35  penel
 
 	* DESCRIPTION: ---------- release of ade4 1.4-5 ----------

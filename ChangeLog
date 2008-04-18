@@ -1,3 +1,11 @@
+2008-04-18 15:31  dray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-7 ----------
+
+2008-04-18 15:31  dray
+
+	* data/capitales.rda: pixmap S3 objects transformed into S4 class
+
 2008-04-17 13:02  dray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-6 ----------

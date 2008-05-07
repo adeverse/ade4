@@ -9,9 +9,9 @@
     stop("Non convenient col weights")
   if (length(row.w) != lig)
     stop("Non convenient row weights")
-  if (any(col.w) < 0)
+  if (any(col.w < 0))
     stop("col weight < 0")
-  if (any(row.w) < 0)
+  if (any(row.w < 0))
     stop("row weight < 0")
   if (full)
     scannf <- FALSE

@@ -7,11 +7,11 @@
     var <- ncol(df)
     if (length(row.w) != lig) 
         stop("Non convenient row weights")
-    if (any(row.w) < 0) 
+    if (any(row.w < 0)) 
         stop("row weight < 0")
     row.w <- row.w/sum(row.w)
     col.w <- apply(X, 2, function(x) sum(x*row.w))
-    if (any(col.w) == 0) 
+    if (any(col.w == 0)) 
         stop("One category with null weight")
     X <- t(t(X)/col.w) - 1
     col.w <- col.w/var

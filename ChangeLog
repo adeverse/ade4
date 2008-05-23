@@ -1,3 +1,30 @@
+2008-05-23 16:10  dray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-9 ----------
+
+2008-05-23 14:12  dray
+
+	* R/niche.R: Correct a syntax error
+
+2008-05-23 14:00  dray
+
+	* R/mantel.randtest.R, R/procuste.randtest.R: Correct a bug. The
+	  number of repetitions was not correct ((nrepet + 1) instead of
+	  nrepet)
+
+2008-05-23 13:53  dray
+
+	* R/niche.R, R/randtest.between.R, R/randtest.coinertia.R,
+	  R/randtest.discrimin.R: Correct a bug. The number of repetitions
+	  was not correct ((nrepet + 1) instead of nrepet)
+
+2008-05-23 13:46  dray
+
+	* R/krandtest.R, R/randtest.amova.R, man/krandtest.Rd: the class
+	  krandtest now accepts a vector of alternative hypotheses instead
+	  of a common alternative hypothesis for the k tests (email of Kim
+	  Milferstedt on RHelp)
+
 2008-05-16 15:50  dray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-8 ----------

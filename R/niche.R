@@ -130,7 +130,7 @@
   }
   res <- apply(Y, 2, calcul.param,mil=X)
   t(res)
-example(rte}
+}
 
 
 rtest.niche <- function(xtest,nrepet=99,...){

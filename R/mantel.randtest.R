@@ -1,5 +1,4 @@
 "mantel.randtest" <- function(m1, m2, nrepet=999) {
-    nrepet <- nrepet +1
     if (!inherits(m1, "dist")) 
         stop("Object of class 'dist' expected")
     if (!inherits(m2, "dist")) 

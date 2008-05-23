@@ -1,5 +1,4 @@
 "randtest.coinertia" <- function(xtest, nrepet=999, fixed=0, ...) {
-  nrepet<-nrepet+1
   if (!inherits(xtest,"dudi"))
     stop("Object of class dudi expected")
   if (!inherits(xtest,"coinertia"))

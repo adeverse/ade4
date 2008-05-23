@@ -1,6 +1,8 @@
-"as.krandtest" <- function (sim, obs, alter=c("greater", "less", "two-sided"), call = match.call(),names=colnames(sim)) {
+"as.krandtest" <- function (sim, obs, alter="greater", call = match.call(),names=colnames(sim)) {
     res <- list(sim = sim, obs = obs)
-    res$alter <- match.arg(alter)
+    if(length(obs)!=length(alter))
+      alter <- rep(alter,length = length(obs))
+    res$alter <- alter
     res$rep <- nrow(sim)
     res$ntest <- length(obs)
     res$expvar <- data.frame(matrix(0,res$ntest,3))
@@ -8,16 +10,17 @@
     names(res$expvar) <- c("Std.Obs","Expectation","Variance")
     res$pvalue <- rep(0,length(obs))
     for(i in 1:length(obs)){
+      res$alter[i] <- match.arg(res$alter[i],c("greater", "less", "two-sided"))
       res$expvar[i,1] <- (res$obs[i]-mean(sim[,i]))/sd(sim[,i])
       res$expvar[i,2] <- mean(sim[,i])
       res$expvar[i,3] <-sd(sim[,i])
-      if(res$alter=="greater"){
+      if(res$alter[i]=="greater"){
         res$pvalue[i] <- (sum(sim[,i] >= obs[i]) + 1)/(length(sim[,i]) + 1)
       }
-      else if(res$alter=="less"){
+      else if(res$alter[i]=="less"){
         res$pvalue[i] <- (sum(sim[,i] <= obs[i]) + 1)/(length(sim[,i]) + 1)
       }
-      else if(res$alter=="two-sided") {
+      else if(res$alter[i]=="two-sided") {
         sim0 <- abs(sim[,i]-mean(sim[,i]))
         obs0 <- abs(obs[i]-mean(sim[,i]))
         res$pvalue[i] <- (sum(sim0 >= obs0) + 1)/(length(sim[,i]) +1)
@@ -54,8 +57,7 @@
     print(x$call)
     cat("\nTest number:  ", x$ntest, "\n")
     cat("Permutation number:  ", x$rep, "\n")
-    cat("Alternative hypothesis:", x$alter, "\n\n")
-    sumry <- list(Test=x$names,Obs= x$obs, Std.Obs=x$expvar[,1],Pvalue=x$pvalue)
+    sumry <- list(Test=x$names,Obs= x$obs, Std.Obs=x$expvar[,1],Alter=x$alter,Pvalue=x$pvalue)
     sumry <- as.data.frame(sumry)
     row.names(sumry) <- 1:x$ntest
     print(sumry, ...)

@@ -10,7 +10,7 @@ Plot and print many permutation tests. Objects of class \code{'krandtest'} are l
 \usage{
 \method{plot}{krandtest}(x, mfrow = NULL, nclass = NULL, main.title = x$names, ...)
 \method{print}{krandtest}(x, ...)
-as.krandtest(sim, obs, alter=c("greater", "less", "two-sided"), call = match.call(),names=colnames(sim))
+as.krandtest(sim, obs, alter="greater", call = match.call(),names=colnames(sim))
 }
 \arguments{
   \item{x}{: an object of class \code{'krandtest'}}
@@ -21,8 +21,10 @@ as.krandtest(sim, obs, alter=c("greater", "less", "two-sided"), call = match.cal
   \item{sim}{a matrix or data.frame of simulated values (repetitions as
     rows, number of tests as columns}
   \item{obs}{a numeric vector of observed values for each test}
-  \item{alter}{a character string specifying the alternative hypothesis,
-    must be one of "greater" (default), "less" or "two-sided"}
+  \item{alter}{a vector of character specifying the
+    alternative hypothesis for each test. Each element must be one of
+    "greater" (default), "less" or "two-sided". The length must be equal
+    to the length of the vector obs, values are recycled if shorter.}
   \item{call}{a call order}
   \item{names}{a vector of names for tests}
 }

@@ -1,6 +1,6 @@
-"dudi.hillsmith" <-
-function (df, row.w=rep(1, nrow(df))/nrow(df), scannf = TRUE, nf = 2) 
+"dudi.hillsmith" <- function (df, row.w=rep(1, nrow(df))/nrow(df), scannf = TRUE, nf = 2) 
 {
+    df <- as.data.frame(df)
     if (!is.data.frame(df)) 
         stop("data.frame expected")
 

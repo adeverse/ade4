@@ -1,7 +1,7 @@
 "dudi.pca" <- function (df, row.w = rep(1, nrow(df))/nrow(df), col.w = rep(1,
     ncol(df)), center = TRUE, scale = TRUE, scannf = TRUE, nf = 2) 
 {
-    df <- data.frame(df)
+    df <- as.data.frame(df)
     nc <- ncol(df)
     if (any(is.na(df))) 
         stop("na entries in table")

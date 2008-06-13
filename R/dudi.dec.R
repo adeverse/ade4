@@ -1,4 +1,5 @@
 "dudi.dec" <- function (df, eff, scannf = TRUE, nf = 2) {
+    df <- as.data.frame(df)
     if (!is.data.frame(df)) 
         stop("data.frame expected")
     lig <- nrow(df)

@@ -1,6 +1,7 @@
 "dudi.acm" <- function (df, row.w = rep(1, nrow(df)), scannf = TRUE, nf = 2) {
     if (!all(unlist(lapply(df, is.factor)))) 
         stop("All variables must be factors")
+    df <- as.data.frame(df)
     X <- acm.disjonctif(df)
     lig <- nrow(X)
     col <- ncol(X)

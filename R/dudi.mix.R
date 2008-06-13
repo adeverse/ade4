@@ -1,4 +1,5 @@
 "dudi.mix" <- function (df, add.square = FALSE, scannf = TRUE, nf = 2) {
+    df <- as.data.frame(df)
     if (!is.data.frame(df)) 
         stop("data.frame expected")
     row.w <- rep(1, nrow(df))/nrow(df)

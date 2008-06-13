@@ -1,5 +1,5 @@
 "dudi.nsc" <- function (df, scannf = TRUE, nf = 2) {
-    df <- data.frame(df)
+    df <- as.data.frame(df)
     col <- ncol(df)
     if (any(df < 0)) 
         stop("negative entries in table")

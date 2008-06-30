@@ -150,7 +150,10 @@ rtest.niche <- function(xtest,nrepet=99,...){
     return(sum(m^2))
   }
   obs <- apply(Y,2,calcul.margi,mil=X)
+  ## we compute and test the average marginality for all species (OMI.mean)
+  obs <- c(obs, OMI.mean = mean(obs))
   sim <- sapply(1:nrepet,function(x) apply(apply(Y,2,sample),2,calcul.margi,mil=X))
+  sim <- rbind(sim, OMI.mean=apply(sim,2,mean))
   res <- as.krandtest(obs=obs,sim=t(sim))
   return(res)
 }

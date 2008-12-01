@@ -1,5 +1,6 @@
 "gearymoran" <- function (bilis, X, nrepet=999,alter=c("greater", "less", "two-sided")) {
-    # bilis doit être une matrice
+    alter <- match.arg(alert)
+    ## bilis doit être une matrice
     bilis <- as.matrix(bilis)
     nobs <- ncol(bilis)
     # bilis doit être carrée
@@ -23,5 +24,5 @@
         PACKAGE="ade4"
     )
     res <- as.krandtest(obs=res$obs,sim=matrix(res$result,ncol=nvar, byr=TRUE),names=test.names,alter=alter)
-    return(res)       
+    return(res)
 }

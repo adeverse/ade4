@@ -1,5 +1,5 @@
 "gearymoran" <- function (bilis, X, nrepet=999,alter=c("greater", "less", "two-sided")) {
-    alter <- match.arg(alert)
+    alter <- match.arg(alter)
     ## bilis doit être une matrice
     bilis <- as.matrix(bilis)
     nobs <- ncol(bilis)

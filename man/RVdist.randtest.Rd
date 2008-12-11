@@ -19,7 +19,5 @@ Heo, M. & Gabriel, K.R. (1997) A permutation test of association between configu
 Communications in Statistics - Simulation and Computation, \bold{27}, 843-856.
 }
 \author{Daniel Chessel }
-\examples{
-}
 \keyword{multivariate}
 \keyword{nonparametric}

@@ -12,8 +12,7 @@
 \description{
 Internal Permutation Tests functions (in C)
 }
-\usage{
-}
+
 \details{
 These are not to be called by the user.
 }

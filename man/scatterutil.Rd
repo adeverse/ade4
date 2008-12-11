@@ -18,8 +18,7 @@
 \description{
 These are utilities used in graphical functions.
 }
-\usage{
-}
+
 \details{
   The functions scatter use some utilities functions :\cr
   \item{scatterutil.base}{defines the layer of the plot for all

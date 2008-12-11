@@ -1191,8 +1191,8 @@ void vecpermut (double *A, int *num, double *B)
 /*---------------------------------------
 * A est un vecteur n elements
 * B est une vecteur n elements
-* num est une permutation alÂŽatoire des n premiers entiers
-* B contient en sortie les elements de A permutÂŽes
+* num est une permutation alŽatoire des n premiers entiers
+* B contient en sortie les elements de A permutŽes
 * ---------------------------------------*/
 
     int lig, lig1, lig2, i, k;
@@ -1211,4 +1211,198 @@ void vecpermut (double *A, int *num, double *B)
         k=num[i];
         B[i] = A[k];
     }
+}
+
+
+/***********************************************************************/
+
+/*=====================================================================*/
+/*                     MODELES DE PERMUTATION                          */
+/*=====================================================================*/
+
+
+void permutmodel1(double **X1,double **X1permute,int *ligL,int *colL)
+{
+
+/* permute each column independently */
+  
+  /* Declaration des variables locales */
+  double  *a;
+  int i,j,k,ligL1,colL1;
+  ligL1=*ligL;
+  colL1=*colL;
+  
+  /* Allocation memoire pour les variables C locales */
+  vecalloc(&a, ligL1);
+  
+  /* Permutation de la matrice */
+  for(j=1;j<=colL1;j++)
+    {
+      for(i=1;i<=ligL1;i++)
+        {
+	  a[i]=X1[i][j];
+	  
+        }
+      
+      aleapermutvec (a);
+      
+      /* Construction de la matrice X1permute*/
+      for(k=1;k<=ligL1;k++)
+        {   
+	  X1permute[k][j]=a[k];
+	  
+        }
+      
+    }
+  
+  freevec(a);
+}
+
+
+void permutmodel3(double **X1,double **X1permute,int *ligL,int *colL)
+{
+/*****************************************************************/
+/* Fonction qui permute selon le model 3 de la methode du 4e coin*/
+/*****************************************************************/
+/* permutation a l"interieur de chaque ligne (site) independamement */
+    /* Declaration des variables locales */
+    double  *a;
+    int i,j,k,ligL1,colL1;
+    ligL1=*ligL;
+    colL1=*colL;
+    /* Allocation memoire pour les variables C locales */
+    vecalloc(&a, colL1);
+    
+    /* Permutation de la matrice */
+    for(i=1;i<=ligL1;i++)
+    {
+        for(j=1;j<=colL1;j++)
+        {
+            a[j]=X1[i][j];
+        }
+        aleapermutvec (a);
+        
+    /* Construction de la matrice contenant les vecteurs permutÂŽs */
+        for (k=1; k<=colL1; k++)
+        {
+            X1permute[i][k]=a[k];       
+        }
+    }
+    freevec(a);
+}
+
+
+/*=====================================================================*/
+
+void permutmodel4(double **X1, double **X1permute, int *ligL, int *colL)
+{
+/*****************************************************************/
+/* Fonction qui permute selon le model 4 de la methode du 4e coin*/
+/*****************************************************************/
+/*  permute des colonnes */
+
+    /* Declaration des variables locales */
+    int i,j,ligL1,colL1;
+    ligL1=*ligL;
+    colL1=*colL;
+    double **X1transposee;
+    taballoc(&X1transposee,colL1,ligL1);
+    
+    /* Transposee de X1 */
+    
+    for (i=1; i<=ligL1; i++)
+    {
+        for (j=1; j<=colL1; j++)
+        {
+            X1transposee[j][i]=X1[i][j];
+        }
+    }
+    
+    aleapermutmat (X1transposee);
+        
+        
+    //Retransposons la matrice
+        
+        for (j=1; j<=colL1; j++)
+        {
+            for (i=1; i<=ligL1; i++)
+            {
+                X1permute[i][j]=X1transposee[j][i];
+            }
+        }
+    freetab(X1transposee);
+}
+
+/*=====================================================================*/
+
+void permutmodel2(double **X1, double **X1permute, int *ligL, int *colL)
+{
+/*****************************************************************/
+/* Fonction qui permute selon le model 2 de la methode du 4e coin*/
+/*****************************************************************/
+/* permute des lignes */
+    int i,j,ligL1,colL1;
+    ligL1=*ligL;
+    colL1=*colL;
+
+    for (j=1; j<=colL1; j++)
+        {
+            for (i=1; i<=ligL1; i++)
+            {
+                X1permute[i][j]=X1[i][j];
+            }
+        }
+
+    aleapermutmat (X1permute);
+}
+
+/*=====================================================================*/
+
+void permutmodel5(double **X1, double **X1permute, int *ligL, int *colL)
+{
+/*****************************************************************/
+/* Fonction qui permute selon le model 5 (new)*/
+/*****************************************************************/
+/* permute des lignes puis des colonnes*/
+
+    int i,j,ligL1,colL1;
+    double **X1transposee;
+    ligL1=*ligL;
+    colL1=*colL;
+    
+    taballoc(&X1transposee,colL1,ligL1);
+    for (j=1; j<=colL1; j++)
+        {
+            for (i=1; i<=ligL1; i++)
+            {
+                X1permute[i][j]=X1[i][j];
+            }
+        }
+
+    aleapermutmat (X1permute); /* perm lignes */
+    
+    /* Transposee de X1permute */
+    
+    for (i=1; i<=ligL1; i++)
+    {
+        for (j=1; j<=colL1; j++)
+        {
+            X1transposee[j][i]=X1permute[i][j];
+        }
+    }
+    
+    aleapermutmat (X1transposee); /* perm colonnes */
+        
+        
+    //Retransposons la matrice
+        
+        for (j=1; j<=colL1; j++)
+        {
+            for (i=1; i<=ligL1; i++)
+            {
+                X1permute[i][j]=X1transposee[j][i];
+            }
+        }
+    freetab(X1transposee);
+
 }

@@ -43,3 +43,9 @@ void trirapideintswap (int *v, int i, int j);
 void vecalloc (double **vec, int n);
 void vecintalloc (int **vec, int n);
 void vecpermut (double *A, int *num, double *B);
+void permutmodel1(double **X1,double **X1permute,int *ligL,int *colL);
+void permutmodel2(double **X1,double **X1permute,int *ligL,int *colL);
+void permutmodel3(double **X1,double **X1permute,int *ligL,int *colL);
+void permutmodel4(double **X1,double **X1permute,int *ligL,int *colL);
+void permutmodel5(double **X1,double **X1permute,int *ligL,int *colL);
+

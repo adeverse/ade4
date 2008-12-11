@@ -20,7 +20,6 @@
 int svd(double **X, double **vecU, double **vecVt, double *vecD);
 int svdd(double **X,double *vecD);
 void recX(double **Xi, double **XU, double **XVt, double *D, int i);
-void permutmodel1(double **X1,double **X1permute,int *ligL,int *colL);
 double denum(double *vec, int i, int ncol);
 void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxtest, double *sim1, double *obs1);
 
@@ -112,48 +111,6 @@ void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxte
   
 }
 
-
-
-
-
-/*================================================================= */
-
-void permutmodel1(double **X1,double **X1permute,int *ligL,int *colL)
-{
-
-/* permute each column independently */
-  
-  /* Declaration des variables locales */
-  double  *a;
-  int i,j,k,ligL1,colL1;
-  ligL1=*ligL;
-  colL1=*colL;
-  
-  /* Allocation memoire pour les variables C locales */
-  vecalloc(&a, ligL1);
-  
-  /* Permutation de la matrice */
-  for(j=1;j<=colL1;j++)
-    {
-      for(i=1;i<=ligL1;i++)
-        {
-	  a[i]=X1[i][j];
-	  
-        }
-      
-      aleapermutvec (a);
-      
-      /* Construction de la matrice X1permute*/
-      for(k=1;k<=ligL1;k++)
-        {   
-	  X1permute[k][j]=a[k];
-	  
-        }
-      
-    }
-  
-  freevec(a);
-}
 
 /*================================================================= */
 /* renvoie ui*di*t(vi) dans Xi*/

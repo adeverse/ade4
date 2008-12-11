@@ -25,9 +25,9 @@ witwitsepan(ww, mfrow = NULL, csub = 2, plot = TRUE)
   \item{\dots}{further arguments passed to or from other methods}
   \cr
   \item{ww}{an object of class \code{witwit}}
-  \item{mfrow} {a vector of the form "c(nr,nc)", otherwise computed by a special own function 'n2mfrow'}
-  \item{csub} {a character size for the sub-titles, used with \code{par("cex")*csub}}
-  \item{plot} {if FALSE, numeric results are returned}
+  \item{mfrow}{a vector of the form "c(nr,nc)", otherwise computed by a special own function 'n2mfrow'}
+  \item{csub}{a character size for the sub-titles, used with \code{par("cex")*csub}}
+  \item{plot}{if FALSE, numeric results are returned}
 }
 \value{
 returns a list of class \code{witwit}, \code{coa} and \code{dudi} (see \link{as.dudi}) containing

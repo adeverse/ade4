@@ -1,227 +1,384 @@
-2008-05-23 16:10  dray
+2008-12-12 14:03  sdray
 
-	* DESCRIPTION: ---------- release of ade4 1.4-9 ----------
+	* DESCRIPTION: ---------- release of ade4 1.4-10 ----------
+
+2008-12-11 14:45  sdray
+
+	* R/combine.4thcorner.R, R/fourthcorner.R, R/fourthcorner2.R,
+	  R/plot.4thcorner.R, R/print.4thcorner.R, R/summary.4thcorner.R,
+	  man/fourthcorner.Rd, src/fourthcorner.c: new functions
+	  implementing the fourthcorner method and extensions presented in
+	  Dray and Legendre (2008)
+
+2008-12-11 13:23  sdray
+
+	* src/adesub.c, src/adesub.h, src/testdim.c: new functions to
+	  permute matrices used in testdim and fourthcorner are now in
+	  adesub
+
+2008-12-11 13:14  sdray
+
+	* man/RVdist.randtest.Rd, man/randtest-internal.Rd,
+	  man/scatterutil.Rd: remove empty sections
+
+2008-12-11 13:05  sdray
+
+	* man/dudi.fca.Rd: add a second argument to the \item macro
+
+2008-12-11 13:04  sdray
+
+	* man/witwit.coa.Rd: remove invalid whitespaces
+
+2008-12-01 15:34  jombart
+
+	* R/gearymoran.R: small typo repared
+
+2008-12-01 15:19  jombart
+
+	* R/gearymoran.R: Added a match.arg to gearymoran (in multivariate
+	  case, was messed up.
+
+2008-06-30 10:55  sdray
+
+	* R/niche.R: Add a global test of the average marginality for all
+	  species
+
+2008-06-13 10:33  jombart
+
+	* R/dudi.acm.R, R/dudi.coa.R, R/dudi.dec.R, R/dudi.fca.R,
+	  R/dudi.hillsmith.R, R/dudi.mix.R, R/dudi.nsc.R, R/dudi.pca.R:
+	  Added a as.data.frame(df) to dudi methods.
+
+2008-06-11 11:04  sdray
+
+	* data/abouheif.eg.rda: new data files
+
+2008-06-11 10:59  sdray
+
+	* data/acacia.rda, data/aminoacyl.rda, data/apis108.rda,
+	  data/ardeche.rda, data/arrival.rda, data/atlas.rda,
+	  data/atya.rda, data/avijons.rda, data/avimedi.rda,
+	  data/aviurba.rda, data/bacteria.rda, data/banque.rda,
+	  data/baran95.rda, data/bf88.rda, data/bordeaux.rda,
+	  data/bsetal97.rda, data/buech.rda, data/butterfly.rda,
+	  data/capitales.rda, data/carni19.rda, data/carni70.rda,
+	  data/carniherbi49.rda, data/casitas.rda, data/chatcat.rda,
+	  data/chats.rda, data/chazeb.rda, data/chevaine.rda,
+	  data/clementines.rda, data/cnc2003.rda, data/coleo.rda,
+	  data/corvus.rda, data/deug.rda, data/doubs.rda,
+	  data/dunedata.rda, data/ecg.rda, data/ecomor.rda,
+	  data/elec88.rda, data/escopage.rda, data/euro123.rda,
+	  data/fission.rda, data/friday87.rda, data/fruits.rda,
+	  data/ggtortoises.rda, data/granulo.rda, data/hdpg.rda,
+	  data/housetasks.rda, data/humDNAm.rda, data/ichtyo.rda,
+	  data/irishdata.rda, data/julliot.rda, data/jv73.rda,
+	  data/kcponds.rda, data/lascaux.rda, data/lizards.rda,
+	  data/macaca.rda, data/macon.rda, data/mafragh.rda,
+	  data/maples.rda, data/mariages.rda, data/meau.rda,
+	  data/meaudret.rda, data/microsatt.rda, data/mjrochet.rda,
+	  data/mollusc.rda, data/monde84.rda, data/morphosport.rda,
+	  data/newick.eg.rda, data/njplot.rda, data/olympic.rda,
+	  data/oribatid.rda, data/ours.rda, data/palm.rda, data/pap.rda,
+	  data/perthi02.rda, data/presid2002.rda, data/procella.rda,
+	  data/rankrock.rda, data/rhone.rda, data/rpjdl.rda,
+	  data/santacatalina.rda, data/sarcelles.rda, data/seconde.rda,
+	  data/skulls.rda, data/steppe.rda, data/syndicats.rda,
+	  data/t3012.rda, data/tarentaise.rda, data/taxo.eg.rda,
+	  data/tintoodiel.rda, data/tithonia.rda, data/tortues.rda,
+	  data/toxicity.rda, data/trichometeo.rda, data/ungulates.rda,
+	  data/vegtf.rda, data/veuvage.rda, data/westafrica.rda,
+	  data/worksurv.rda, data/yanomama.rda, data/zealand.rda: new data
+	  files
+
+2008-06-11 10:58  sdray
+
+	* data/abouheif.eg.rda, data/acacia.rda, data/aminoacyl.rda,
+	  data/apis108.rda, data/ardeche.rda, data/arrival.rda,
+	  data/atlas.rda, data/atya.rda, data/avijons.rda,
+	  data/avimedi.rda, data/aviurba.rda, data/bacteria.rda,
+	  data/banque.rda, data/baran95.rda, data/bf88.rda,
+	  data/bordeaux.rda, data/bsetal97.rda, data/buech.rda,
+	  data/butterfly.rda, data/capitales.rda, data/carni19.rda,
+	  data/carni70.rda, data/carniherbi49.rda, data/casitas.rda,
+	  data/chatcat.rda, data/chats.rda, data/chazeb.rda,
+	  data/chevaine.rda, data/clementines.rda, data/cnc2003.rda,
+	  data/coleo.rda, data/corvus.rda, data/deug.rda, data/doubs.rda,
+	  data/dunedata.rda, data/ecg.rda, data/ecomor.rda,
+	  data/elec88.rda, data/escopage.rda, data/euro123.rda,
+	  data/fission.rda, data/friday87.rda, data/fruits.rda,
+	  data/ggtortoises.rda, data/granulo.rda, data/hdpg.rda,
+	  data/housetasks.rda, data/humDNAm.rda, data/ichtyo.rda,
+	  data/irishdata.rda, data/julliot.rda, data/jv73.rda,
+	  data/kcponds.rda, data/lascaux.rda, data/lizards.rda,
+	  data/macaca.rda, data/macon.rda, data/mafragh.rda,
+	  data/maples.rda, data/mariages.rda, data/meau.rda,
+	  data/meaudret.rda, data/microsatt.rda, data/mjrochet.rda,
+	  data/mollusc.rda, data/monde84.rda, data/morphosport.rda,
+	  data/newick.eg.rda, data/njplot.rda, data/olympic.rda,
+	  data/oribatid.rda, data/ours.rda, data/palm.rda, data/pap.rda,
+	  data/perthi02.rda, data/presid2002.rda, data/procella.rda,
+	  data/rankrock.rda, data/rhone.rda, data/rpjdl.rda,
+	  data/santacatalina.rda, data/sarcelles.rda, data/seconde.rda,
+	  data/skulls.rda, data/steppe.rda, data/syndicats.rda,
+	  data/t3012.rda, data/tarentaise.rda, data/taxo.eg.rda,
+	  data/tintoodiel.rda, data/tithonia.rda, data/tortues.rda,
+	  data/toxicity.rda, data/trichometeo.rda, data/ungulates.rda,
+	  data/vegtf.rda, data/veuvage.rda, data/westafrica.rda,
+	  data/worksurv.rda, data/yanomama.rda, data/zealand.rda: remove
+	  corrupted data files
+
+2008-06-10 14:12  sdray
+
+	* ChangeLog, DESCRIPTION, INDEX, R, TITLE, data, inst, man, src:
+	  move from trunk to pkg after initial import using cvs2svn
+
+2008-06-10 14:01  sdray
+
+	* man: remove man folder
+
+2008-06-10 14:01  sdray
+
+	* R: remove R folder
+
+2008-06-10 14:12  sdray
+
+	* ChangeLog, DESCRIPTION, INDEX, R, TITLE, data, inst, man, src:
+	  move from trunk to pkg after initial import using cvs2svn
 
 2008-05-23 14:12  dray
 
+	* ChangeLog, DESCRIPTION: ---------- release of ade4 1.4-9
+	  ----------
+
+2008-05-23 12:12  dray
+
 	* R/niche.R: Correct a syntax error
 
-2008-05-23 14:00  dray
+2008-05-23 12:00  dray
 
 	* R/mantel.randtest.R, R/procuste.randtest.R: Correct a bug. The
 	  number of repetitions was not correct ((nrepet + 1) instead of
 	  nrepet)
 
-2008-05-23 13:53  dray
+2008-05-23 11:53  dray
 
 	* R/niche.R, R/randtest.between.R, R/randtest.coinertia.R,
 	  R/randtest.discrimin.R: Correct a bug. The number of repetitions
 	  was not correct ((nrepet + 1) instead of nrepet)
 
-2008-05-23 13:46  dray
+2008-05-23 11:46  dray
 
 	* R/krandtest.R, R/randtest.amova.R, man/krandtest.Rd: the class
 	  krandtest now accepts a vector of alternative hypotheses instead
 	  of a common alternative hypothesis for the k tests (email of Kim
 	  Milferstedt on RHelp)
 
-2008-05-16 15:50  dray
+2008-05-16 13:54  dray
 
-	* DESCRIPTION: ---------- release of ade4 1.4-8 ----------
+	* ChangeLog, DESCRIPTION: ---------- release of ade4 1.4-8
+	  ----------
 
-2008-05-07 13:29  jthioulo
+2008-05-07 11:29  jthioulo
 
 	* R/dudi.acm.R: bug correction (mail of JR Lobry on adelist):
 	  (any(row.w) < 0) vs. (any(row.w < 0))
 
-2008-05-07 13:27  jthioulo
+2008-05-07 11:27  jthioulo
 
 	* R/dudi.R: bug correction (mail of JR Lobry on adelist):
 	  any(col.w) < 0 vs. any(col.w < 0)
 
-2008-04-18 16:37  penel
+2008-04-18 14:37  penel
 
 	* data/ggtortoises.rda: pixmap S3 objects transformed into S4 class
 
-2008-04-18 15:31  dray
+2008-04-18 13:33  dray
 
-	* DESCRIPTION: ---------- release of ade4 1.4-7 ----------
+	* ChangeLog, DESCRIPTION: ---------- release of ade4 1.4-7
+	  ----------
 
-2008-04-18 15:31  dray
-
-	* data/capitales.rda: pixmap S3 objects transformed into S4 class
-
-2008-04-18 15:31  dray
+2008-04-18 13:31  dray
 
 	* data/capitales.rda: pixmap S3 objects transformed into S4 class
 
-2008-04-17 13:02  dray
+2008-04-17 11:05  dray
 
-	* DESCRIPTION: ---------- release of ade4 1.4-6 ----------
+	* ChangeLog, DESCRIPTION: ---------- release of ade4 1.4-6
+	  ----------
 
-2008-04-16 19:02  dray
+2008-04-16 17:02  dray
 
 	* R/phylog.R: Correct a bug in phylog.extract (mail of S. Ollier)
 
-2008-04-16 18:36  dray
+2008-04-16 16:36  dray
 
 	* src/adesub.c, src/adesub.h, src/testrlq.c: matcentragehi in now
 	  in adesub
 
-2008-04-16 18:33  dray
+2008-04-16 16:33  dray
 
 	* R/nipals.R, man/nipals.Rd: New function for NIPALS algorithm,
 	  i.e. PCA with (or without) NA
 
-2008-04-16 18:31  dray
+2008-04-16 16:31  dray
 
 	* man/randtest.Rd: add some words about the computation of pvalues
 	  for two-sided test
 
-2008-04-16 15:18  dufour
+2008-04-16 13:18  dufour
 
-	* man/ade4.package.Rd: new documentation for the package by typing ?ade4
+	* man/ade4.package.Rd: *** empty log message ***
 
-2008-04-16 12:12  dufour
+2008-04-16 10:12  dufour
 
-	* man/pcaiv.Rd: add description of param in the values section
+	* man/pcaiv.Rd: *** empty log message ***
 
-2008-04-14 14:41  penel
+2008-04-14 12:41  penel
 
 	* man/table.phylog.Rd: Example table.phylog set to dontrun
 
-2008-04-02 13:16  dray
+2008-04-02 11:16  dray
 
 	* man/multispati.Rd, man/vegtf.Rd: Update the source reference:
 	  Dray et al. (2008)
 
-2008-03-27 15:28  dufour
+2008-03-27 14:28  dufour
 
 	* man/dudi.pca.Rd: Modifications : explanations about values (cent
-	  and norm) ;  it{} into emph{}.
+	  and norm) ; it{} into emph{}.
 
-2008-03-27 14:47  dufour
+2008-03-27 13:47  dufour
 
 	* man/dudi.pca.Rd: Modification of explanations ($cent and $norm)
 
-2008-03-26 11:29  dray
+2008-03-26 10:29  dray
 
 	* R/sco.distri.R: correct a bug (identified by S. Pavoine): default
 	  label argument was badly considered when one column contains only
 	  O's
 
-2008-03-20 16:10  dray
+2008-03-20 15:10  dray
 
 	* R/scatter.R, R/scatterutil.R, man/scatter.Rd, man/scatterutil.Rd:
 	  New utility function scatterutil.sco and scatterutil.convrot90
 	  for 1D graphical representation
 
-2008-03-20 16:06  dray
+2008-03-20 15:06  dray
 
 	* R/sco.gauss.R, man/sco.gauss.Rd: New function sco.gauss for 1D
 	  graphical representation
 
-2008-03-20 16:05  dray
+2008-03-20 15:05  dray
 
 	* R/sco.match.R, man/sco.match.Rd: New function sco.match for 1D
 	  graphical representation
 
-2008-03-20 16:05  dray
+2008-03-20 15:05  dray
 
 	* R/sco.class.R, man/sco.class.Rd: New function sco.class for 1D
 	  graphical representation
 
-2008-03-20 16:05  dray
+2008-03-20 15:05  dray
 
 	* R/sco.label.R, man/sco.label.Rd: New function sco.label for 1D
 	  graphical representation
 
-2008-03-19 17:00  dray
+2008-03-19 16:00  dray
 
 	* R/sco.qual.R: Functions of this file are now in sco.label.R and
 	  sco.gauss.R
 
-2008-03-18 15:18  dray
+2008-03-18 14:18  dray
 
 	* inst/CITATION: Add two new references to the CITATION file
 
-2008-03-17 16:47  dray
+2008-03-17 15:47  dray
 
 	* R/randtest.cca.R, R/randtest.pcaiv.R, R/randtest.pcaivortho.R,
 	  man/randtest.pcaiv.Rd: News functions for permutation tests in
 	  constrained analysis
 
-2008-02-05 14:26  dray
+2008-02-05 13:26  dray
 
 	* src/testdim.c: Correct a bug in memory allocation of the function
 	  svdd
 
-2008-01-29 16:07  jthioulo
+2008-01-29 15:07  jthioulo
 
 	* man/sco.label.Rd: added function: Draws evenly spaced labels,
 	  each label linked to the corresponding value of a numeric score
 
-2008-01-29 16:07  jthioulo
+2008-01-29 15:07  jthioulo
 
 	* man/sco.gauss.Rd: added function: Draws Gauss curves with the
 	  same mean and variance as the scores of indivivuals belonging to
 	  categories of several factors
 
-2008-01-29 16:04  jthioulo
+2008-01-29 15:04  jthioulo
 
 	* man/veuvage.Rd: Correstion of illegal accented character in
 	  exemple code
 
-2008-01-29 16:04  jthioulo
+2008-01-29 15:04  jthioulo
 
 	* R/sco.qual.R: adds two functions: sco.gauss and sco.label (draw
 	  Gauss curves on a score by categories of several factors)
 
-2007-11-09 18:19  dray
+2007-11-09 17:19  dray
 
 	* R/newick2phylog.R: Correct a bug. In newick2phylog.addtools,
 	  eigen does not return an orthogonal basis when there are null
 	  eigenvalues (Wscores). Vectors are now orthogonalized using qr
 
-2007-10-16 16:41  penel
+2007-10-16 14:41  penel
 
 	* DESCRIPTION: Change License to GPL (>=2)
 
-2007-10-12 13:35  penel
+2007-10-16 14:35  penel
 
-	* DESCRIPTION: ---------- release of ade4 1.4-5 ----------
+	* ChangeLog: *** empty log message ***
 
-2007-10-11 17:50  penel
+2007-10-12 11:37  penel
+
+	* ChangeLog, DESCRIPTION: ---------- release of ade4 1.4-5
+	  ----------
+
+2007-10-11 15:50  penel
 
 	* man/dunedata.Rd, man/steppe.Rd: Replace non_function by Doctype
 
-2007-10-09 12:54  penel
+2007-10-09 10:54  penel
 
 	* src/testdim.c, src/tests.c: Correction of a bug in the
 	  declaration of variables
 
-2007-09-25 13:10  dray
+2007-09-25 11:16  dray
+
+	* ChangeLog: ---------- release of ade4 1.4-4 ----------
+
+2007-09-25 11:10  dray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-4 ----------
 
-2007-09-20 17:48  dray
+2007-09-20 15:48  dray
 
 	* R/coinertia.R, R/dudi.R, R/dudi.pco.R: Modification of the call
 	  of the imported function chooseaxes for the use of the ade4TkGUI
 	  package
 
-2007-09-17 18:22  dray
+2007-09-17 16:23  dray
 
-	* man/ktab.Rd, man/ktab.match2ktabs.Rd, man/pta.Rd, man/statis.Rd,
-	  R/within.pca.R, man/within.pca.Rd, R/withinpca.R,
-	  man/withinpca.Rd: The function within.pca is renamed withinpca
+	* R/within.pca.R, R/withinpca.R, man/ktab.Rd,
+	  man/ktab.match2ktabs.Rd, man/pta.Rd, man/statis.Rd,
+	  man/within.pca.Rd, man/withinpca.Rd: The function within.pca is
+	  renamed withinpca
 
-2007-09-17 17:12  dray
+2007-09-17 15:12  dray
 
 	* R/ktab.R, man/ktab.Rd: Change the names of the arguments of the
 	  function '[.ktab'
 
-2007-09-17 15:05  dray
+2007-09-17 13:05  dray
 
 	* man/amova.Rd, man/between.Rd, man/coinertia.Rd, man/corkdist.Rd,
 	  man/discrimin.Rd, man/dpcoa.Rd, man/dudi.Rd, man/dudi.acm.Rd,
@@ -241,27 +398,28 @@
 	  man/supcol.Rd, man/suprow.Rd, man/testdim.Rd, man/within.Rd,
 	  man/witwit.coa.Rd: Correct usage entries for S3 methods
 
-2007-09-14 13:58  jthioulo
+2007-09-14 11:58  jthioulo
 
 	* DESCRIPTION: suggests ade4TkGUI
 
-2007-09-14 11:15  jthioulo
+2007-09-14 09:15  jthioulo
 
-	* R/randtest.between.R: modification of the eval call (now it does not search in the global
-	  environment)
+	* R/randtest.between.R: modif eval pour ne pas chercher dans
+	  l'environnement global directement
 
-2007-09-13 13:57  dray
+2007-09-13 11:57  dray
 
 	* src/Makevars: replace CRLF (DOS) by LF (Unix)
 
-2007-09-13 13:16  jthioulo
+2007-09-13 11:18  jthioulo
 
-	* R/dudi.R, R/dudi.pco.R, R/coinertia.R: modification for the global variable
-	  ade4TkGUIFlag
+	* R/coinertia.R, R/dudi.R, R/dudi.pco.R: modif pour variable
+	  globale ade4TkGUIFlag
 
-2007-09-06 19:08  dray
+2007-09-06 17:08  dray
 
-	* man/aminoacyl.Rd, man/ardeche.Rd, man/area.plot.Rd,
+	* man/PI2newick.Rd, man/RV.rtest.Rd, man/RVdist.randtest.Rd,
+	  man/aminoacyl.Rd, man/ardeche.Rd, man/area.plot.Rd,
 	  man/as.taxo.Rd, man/atlas.Rd, man/atya.Rd, man/avijons.Rd,
 	  man/aviurba.Rd, man/baran95.Rd, man/between.Rd,
 	  man/bicenter.wt.Rd, man/buech.Rd, man/cailliez.Rd,
@@ -280,8 +438,7 @@
 	  man/inertia.dudi.Rd, man/is.euclid.Rd, man/julliot.Rd,
 	  man/jv73.Rd, man/kdist.Rd, man/kdist2ktab.Rd, man/kdisteuclid.Rd,
 	  man/kplot.foucart.Rd, man/kplot.mcoa.Rd, man/kplot.mfa.Rd,
-	  man/kplot.pta.Rd, man/kplot.sepan.Rd, man/PI2newick.Rd,
-	  man/RV.rtest.Rd, man/RVdist.randtest.Rd, man/kplot.statis.Rd,
+	  man/kplot.pta.Rd, man/kplot.sepan.Rd, man/kplot.statis.Rd,
 	  man/ktab.Rd, man/ktab.data.frame.Rd, man/ktab.list.df.Rd,
 	  man/ktab.list.dudi.Rd, man/ktab.match2ktabs.Rd,
 	  man/ktab.within.Rd, man/lascaux.Rd, man/lingoes.Rd, man/macon.Rd,
@@ -297,13 +454,13 @@
 	  man/plot.phylog.Rd, man/procuste.Rd, man/procuste.rtest.Rd,
 	  man/pta.Rd, man/quasieuclid.Rd, man/reconst.Rd, man/rhone.Rd,
 	  man/rpjdl.Rd, man/rtest.Rd, man/rtest.between.Rd,
-	  man/rtest.discrimin.Rd, man/s.arrow.Rd, man/sarcelles.Rd,
-	  man/scalewt.Rd, man/scatter.acm.Rd, man/scatter.coa.Rd,
-	  man/scatter.dudi.Rd, man/s.chull.Rd, man/s.class.Rd,
-	  man/s.corcircle.Rd, man/s.distri.Rd, man/s.hist.Rd,
-	  man/s.image.Rd, man/s.kde2d.Rd, man/s.label.Rd, man/s.logo.Rd,
-	  man/s.match.Rd, man/s.multinom.Rd, man/s.traject.Rd,
-	  man/s.value.Rd, man/scatter.Rd, man/scatter.fca.Rd,
+	  man/rtest.discrimin.Rd, man/s.arrow.Rd, man/s.chull.Rd,
+	  man/s.class.Rd, man/s.corcircle.Rd, man/s.distri.Rd,
+	  man/s.hist.Rd, man/s.image.Rd, man/s.kde2d.Rd, man/s.label.Rd,
+	  man/s.logo.Rd, man/s.match.Rd, man/s.multinom.Rd,
+	  man/s.traject.Rd, man/s.value.Rd, man/sarcelles.Rd,
+	  man/scalewt.Rd, man/scatter.Rd, man/scatter.acm.Rd,
+	  man/scatter.coa.Rd, man/scatter.dudi.Rd, man/scatter.fca.Rd,
 	  man/sco.boxplot.Rd, man/sco.distri.Rd, man/sco.quant.Rd,
 	  man/score.Rd, man/score.acm.Rd, man/score.coa.Rd,
 	  man/score.mix.Rd, man/score.pca.Rd, man/sepan.Rd, man/statis.Rd,
@@ -313,44 +470,44 @@
 	  man/table.value.Rd, man/tarentaise.Rd, man/triangle.class.Rd,
 	  man/triangle.plot.Rd, man/trichometeo.Rd, man/ungulates.Rd,
 	  man/uniquewt.df.Rd, man/variance.phylog.Rd, man/veuvage.Rd,
-	  man/westafrica.Rd, man/within.pca.Rd, man/within.Rd,
+	  man/westafrica.Rd, man/within.Rd, man/within.pca.Rd,
 	  man/witwit.coa.Rd, man/worksurv.Rd: Added the encoding of Rd
 	  files and remove the email of Daniel Chessel (he is retired)
 
-2007-09-06 17:11  dray
+2007-09-06 15:11  dray
 
 	* R/scatter.acm.R: Clean R files: replace T by TRUE.
 
-2007-09-06 17:03  dray
+2007-09-06 15:03  dray
 
 	* R/newick2phylog.R: Clean R files: remove multiple function
 	  definitions (floc1(s) becomes floc1,floc2,floc3. Thanks to
 	  UsagePackageCheck of codetools
 
-2007-09-06 16:55  dray
+2007-09-06 14:55  dray
 
 	* R/multispati.R, R/multispati.randtest.R, R/multispati.rtest.R,
 	  R/neig.R, R/orthobasis.R, R/s.image.R, R/s.kde2d.R, R/s.logo.R:
 	  Clean R files: correct imported function definition. Thanks to
 	  UsagePackageCheck of codetools
 
-2007-09-06 15:53  dray
+2007-09-06 13:53  dray
 
 	* R/orthogram.R: Correct a bug: test for the choice between
 	  orthobas, neig or phylog
 
-2007-09-06 14:21  dray
+2007-09-06 12:21  dray
 
 	* R/scatter.acm.R: Correct a bug: replace score. by score.acm
 
-2007-09-06 14:19  dray
+2007-09-06 12:19  dray
 
 	* R/kplot.foucart.R, R/kplot.mfa.R, R/mcoa.R, R/rlq.R,
 	  R/score.coa.R, R/sepan.R, R/variance.phylog.R: Clean R files:
 	  remove local variables assigned but not used. Thanks to
 	  checkUsagePackage of codetools
 
-2007-09-06 13:58  dray
+2007-09-06 11:58  dray
 
 	* R/PI2newick.R, R/RV.rtest.R, R/RVdist.randtest.R, R/amova.R,
 	  R/area.plot.R, R/as.taxo.R, R/between.R, R/coinertia.R,
@@ -371,90 +528,95 @@
 	  remove local variables assigned but not used. Thanks to
 	  checkUsagePackage of codetools
 
-2007-09-06 10:08  dray
+2007-09-06 08:08  dray
 
 	* man/bordeaux.Rd, man/cca.Rd, man/dudi.hillsmith.Rd,
 	  man/elec88.Rd, man/seconde.Rd: Clean Rd files: remove unmatched
 	  right brace
 
-2007-09-04 18:12  dray
+2007-09-04 16:12  dray
 
 	* R/testdim.R, man/testdim.Rd, src/Makevars, src/testdim.c: New
 	  function testdim to estimate the number of axes in multivariate
 	  analysis
 
-2007-09-04 17:07  dray
+2007-09-04 15:07  dray
 
 	* R/gearymoran.R, R/krandtest.R, R/niche.R, R/orthogram.R,
 	  R/randtest.amova.R, man/gearymoran.Rd, man/krandtest.Rd,
 	  man/niche.Rd, man/orthogram.Rd: reimplementation of the class
 	  krandtest and new function as.krandtest
 
-2007-09-04 16:50  dray
+2007-09-04 14:50  dray
 
 	* man/vegtf.Rd: correction of a bug in the example section
 
-2007-09-03 18:53  dray
+2007-09-03 16:53  dray
 
 	* R/score.coa.R, man/score.coa.Rd: new function reciprocal.coa (see
 	  http://listes.univ-lyon1.fr/wws/arc/adelist/2007-07/msg00007.html)
 
-2007-09-03 18:26  dray
+2007-09-03 16:26  dray
 
 	* R/sco.distri.R, man/sco.distri.Rd: sco.distri returns a
 	  data.frame with means and variances (see
 	  http://listes.univ-lyon1.fr/wws/arc/adelist/2007-06/msg00018.html)
 
-2007-09-03 17:24  dray
+2007-09-03 15:24  dray
 
 	* R/scatter.R, R/sepan.R, R/witwitsepan.R: Add yaxt argument to
 	  scatterutil.eigen (see
 	  http://listes.univ-lyon1.fr/wws/arc/adelist/2007-07/msg00022.html)
 
-2007-09-03 17:04  dray
+2007-09-03 15:04  dray
 
 	* R/multispati.R: Correct legend in plot.multispati
 
-2007-09-03 16:58  dray
+2007-09-03 14:58  dray
 
-	* man/vegtf.Rd, data/vegtf.rda: New vegetation data set to
+	* data/vegtf.rda, man/vegtf.Rd: New vegetation data set to
 	  illustrate multispati analysis
 
-2007-09-03 16:51  dray
+2007-09-03 14:51  dray
 
 	* R/niche.R, man/niche.Rd: New functions niche.param and
 	  rtest.niche
 
-2007-08-29 18:20  dray
+2007-08-29 16:20  dray
 
 	* R/area.plot.R: the function area2poly is modified to export the
 	  bbox attribute for each polygon
 
-2007-08-29 18:00  dray
+2007-08-29 16:00  dray
 
 	* R/s.corcircle.R: correct bug of the grid argument. see
 	  http://listes.univ-lyon1.fr/wws/arc/adelist/2007-07/msg00001.html
 
-2007-08-29 17:47  dray
+2007-08-29 15:47  dray
 
-	* R/rlq.R, R/randtest-internal.R: correct bugs in memory allocation
-	  (C interface). These bugs have been identified using valgrind  by
+	* R/randtest-internal.R, R/rlq.R: correct bugs in memory allocation
+	  (C interface). These bugs have been identified using valgrind by
 	  B. Ripley (12/06/2007)
 
-2007-06-15 09:49  dray
+2007-06-15 07:49  dray
 
 	* man/dunedata.Rd: correct the number of rows and columns in the
 	  help file
 
-2007-04-16 14:54  dray
+2007-04-16 12:56  dray
 
-	* DESCRIPTION: ---------- release of ade4 1.4-3 ----------
+	* ChangeLog, DESCRIPTION: ---------- release of ade4 1.4-3
+	  ----------
 
-2007-04-12 15:39  dray
+2007-04-12 13:39  dray
 
 	* man/suprow.Rd: correct the example section
 
-2007-04-12 14:58  dray
+2007-04-12 13:08  dray
+
+	* ChangeLog: New ChangeLog
+
+2007-04-12 12:58  dray
 
 	* data/atlas.rda, data/avijons.rda, data/aviurba.rda,
 	  data/baran95.rda, data/bf88.rda, data/chevaine.rda,
@@ -464,28 +626,102 @@
 	  data/veuvage.rda, data/westafrica.rda: remove non ASCII
 	  characters in data
 
-2007-03-26 18:47  jombart
+2007-03-26 16:47  jombart
 
-	* R/dudi.pco.R: sub and csub arguments are now actually passed to
+	* ChangeLog, R/dudi.pco.R: reviewed by: <delete if not using a
+	  buddy>
+	  * R/dudi.pco.R: sub and csub arguments are now actually passed to
 	  s.label
 
-2007-03-12 15:34  jombart
+2007-03-12 14:34  jombart
 
-	* R/scatter.R, man/scatter.Rd: removed add.scatter.eig
-	* R/add.scatter.R: new functions add.scatter and add.scatter.eig
-	* man/add.scatter.Rd: doc for add.scatter and add.scatter.eig
+	* ChangeLog, R/add.scatter.R, man/add.scatter.Rd, man/scatter.Rd: *
+	  R/scatter.R: removed add.scatter.eig
+	  * man/scatter.Rd: removed add.scatter.eig
+	  * R/add.scatter.R: new functions add.scatter and add.scatter.eig
+	  * man/add.scatter.Rd: doc for add.scatter and add.scatter.eig
 
-2007-03-07 19:46  jombart
+2007-03-12 14:27  jombart
 
-	* data/rpjdl.rda: removed accents
+	* R/scatter.add.R, man/scatter.add.Rd: *** empty log message ***
 
-2007-02-19 10:53  jthioulo
+2007-03-12 14:06  jombart
 
-	* R/s.arrow.R, man/s.arrow.Rd: added the "boxes"
-	  argument
+	* ChangeLog, R/add.graph.R: reviewed by: <delete if not using a
+	  buddy>
+	  * R/add.graph.R:
+	  * R/dpcoa.R:
+	  * R/dudi.pco.R:
+	  * R/kplot.sepan.R:
+	  * R/mfa.R:
+	  * R/pta.R:
+	  * R/scatter.R:
+	  * R/scatter.add.R:
+	  * R/scatter.coa.R:
+	  * R/scatter.dudi.R:
+	  * R/statis.R:
+	  * man/scatter.Rd:
+	  * man/scatter.add.Rd:
 
-2007-02-16 10:13  dray
+2007-03-12 14:04  jombart
 
-	* man/orthogram.Rd: update the reference to
-	  Ollier et al.
+	* ChangeLog, R/dpcoa.R, R/dudi.pco.R, R/kplot.sepan.R, R/mfa.R,
+	  R/pta.R, R/scatter.R, R/scatter.add.R, R/scatter.coa.R,
+	  R/scatter.dudi.R, R/statis.R, man/add.graph.Rd, man/scatter.Rd,
+	  man/scatter.add.Rd: reviewed by: <delete if not using a buddy>
+	  * R/dpcoa.R:
+	  * R/dudi.pco.R:
+	  * R/kplot.sepan.R:
+	  * R/mfa.R:
+	  * R/pta.R:
+	  * R/scatter.R:
+	  * R/scatter.add.R:
+	  * R/scatter.coa.R:
+	  * R/scatter.dudi.R:
+	  * R/statis.R:
+	  * man/add.graph.Rd:
+	  * man/scatter.Rd:
+	  * man/scatter.add.Rd:
+
+2007-03-10 10:38  jombart
+
+	* ChangeLog, R/add.graph.R, R/dpcoa.R, R/dudi.pco.R,
+	  R/kplot.sepan.R, R/mfa.R, R/pta.R, R/scatter.R, R/scatter.coa.R,
+	  R/scatter.dudi.R, R/statis.R, man/add.graph.Rd, man/dudi.pca.Rd,
+	  man/scatter.Rd, man/scatter.dudi.Rd: reviewed by: <delete if not
+	  using a buddy>
+	  * R/add.graph.R: ajout de la fonction (contient add.graph et la
+	  nouvelle version de add.scatter.eig)
+	  * man/add.graph.Rd: ajout de la doc (add.graph et
+	  add.scatter.eig)
+	  * R/dpcoa.R: appel de add.scatter.eig: nf supprime
+	  * R/dudi.pco.R: appel de add.scatter.eig: nf supprime
+	  * R/kplot.sepan.R: appel de add.scatter.eig: nf supprime
+	  * R/mfa.R: appel de add.scatter.eig: nf supprime
+	  * R/pta.R: appel de add.scatter.eig: nf supprime
+	  * R/scatter.R: add.scatter.eig supprime (migre vers add.graph.R)
+	  * R/scatter.coa.R: appel de add.scatter.eig: nf supprime
+	  * R/scatter.dudi.R: appel de add.scatter.eig: nf supprime
+	  * R/statis.R: appel de add.scatter.eig: nf supprime
+	  * man/dudi.pca.Rd: modifications faites par Anne
+	  * man/scatter.Rd: enleve add.scatter.eig de la doc (migre vers
+	  add.graph.Rd)
+	  * man/scatter.dudi.Rd: appel de add.scatter.eig: nf supprime
+
+2007-03-07 18:46  jombart
+
+	* ChangeLog, data/rpjdl.rda: reviewed by: <delete if not using a
+	  buddy>
+	  * data/rpjdl.rda: removed accents
+
+2007-02-19 09:53  jthioulo
+
+	* ChangeLog, R/s.arrow.R, man/s.arrow.Rd: * R/s.arrow.R: added the
+	  "boxes" argument
+	  * man/s.arrow.Rd: added the "boxes" argument
+
+2007-02-16 09:13  dray
+
+	* ChangeLog, man/orthogram.Rd: * man/orthogram.Rd: update the
+	  reference to Ollier et al.
 

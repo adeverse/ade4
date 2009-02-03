@@ -20,8 +20,8 @@ optimEH(phyl, nbofsp, tol = 1e-8, give.list = TRUE)
   \item{nbofsp}{an integer indicating the number of species saved (k).}
   \item{tol}{a tolerance threshold for null values (a value less than \code{tol} in absolute terms is considered as NULL). }
   \item{give.list}{logical value indicating whether a list of optimizing species should be provided. If \code{give.list = TRUE}, 
-  \code{optimPD} provides the list of the k species which optimize the amount of evolutionary history preserved 
-  and are the most original species in their clades. If \code{give.list = FALSE}, \code{optimPD} returns directly the real 
+  \code{optimEH} provides the list of the k species which optimize the amount of evolutionary history preserved 
+  and are the most original species in their clades. If \code{give.list = FALSE}, \code{optimEH} returns directly the real 
   value giving the amount of evolutionary history preserved.}
 }
 \value{

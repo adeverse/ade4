@@ -17,10 +17,13 @@ dist.quant(df, method = NULL, diag = FALSE, upper = FALSE,
   \item{tol}{used in case 3 of \code{method} as a tolerance threshold for null eigenvalues}
 }
 \details{
-All the distances are of type \eqn{d=\|x-y\|_A = \sqrt{(x-y)^{t}A(x-y)}}{d = ||x-y||_A = sqrt((x-y)^t A (x-y))}
+All the distances are of type \eqn{d=\|x-y\|_A =
+  \sqrt{(x-y)^{t}A(x-y)}}{d = ||x-y||_A = sqrt((x-y)^t A (x-y))}
+\describe{
   \item{1 = Canonical}{A = Identity}
   \item{2 = Joreskog}{\eqn{A=\frac{1}{diag(cov)}}{A = 1 / diag(cov)}}
   \item{3 = Mahalanobis}{A = inv(cov)} 
+}
 }
 \value{
 an object of class \code{dist}

@@ -21,12 +21,14 @@
 \description{
 an object of class \code{ktab} is a list of data frames with the same row.names in common.\cr
 a list of class 'ktab' contains moreover :
+\describe{
  \item{blo}{: the vector of the numbers of columns for each table}
  \item{lw}{: the vector of the row weightings in common for all tables}
  \item{cw}{: the vector of the column weightings}
  \item{TL}{: a data frame of two components to manage the parameter positions associated with the rows of tables}
  \item{TC}{: a data frame of two components to manage the parameter positions associated with the columns of tables}
  \item{T4}{: a data frame of two components to manage the parameter positions of 4 components associated to an array}
+}
 }
 \usage{
 \method{c}{ktab}(...)

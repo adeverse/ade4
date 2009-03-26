@@ -7,9 +7,11 @@ This data set describes the phylogeny of 17 flowers as reported by Ackerly and D
 }
 \usage{data(maples)}
 \format{
-\code{tithonia} is a list containing the 2 following objects :  
+  \code{tithonia} is a list containing the 2 following objects :
+  \describe{
             \item{tre}{is a character string giving the phylogenetic tree in Newick format.} 
-            \item{tab}{is a data frame with 17 species and 31 traits}    
+            \item{tab}{is a data frame with 17 species and 31 traits}
+	    }
 }
 \source{
 Data were obtained from the URL \url{http://www.stanford.edu/~dackerly/acerdata.html}.

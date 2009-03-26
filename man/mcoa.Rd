@@ -18,12 +18,15 @@ mcoa(X, option = c("inertia", "lambda1", "uniform", "internal"),
 }
 \arguments{
   \item{X}{an object of class \code{ktab}}
-  \item{option}{a string of characters for the weightings of the arrays options :
+  \item{option}{a string of characters for the weightings of the arrays
+    options :
+    \describe{
      \item{"inertia"}{weighting of group k by the inverse of the total inertia of the array k}
      \item{"lambda1"}{weighting of group k by the inverse of the first eigenvalue of the k analysis}
      \item{"uniform"}{uniform weighting of groups}
      \item{"internal"}{weighting included in \code{X$tabw}}
-  }
+   }
+   }
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
   \item{tol}{a tolerance threshold, an eigenvalue is considered positive if it is larger than \code{-tol*lambda1} where \code{lambda1} is the largest eigenvalue.}

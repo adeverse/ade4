@@ -32,7 +32,7 @@ Returns a list of class \code{phylog} :
     \item{droot}{: a vector which names corresponds to taxonomic units and values gives distance between taxonomic units and the root}
     \item{call}{: call} 
     \item{Wmat}{: a phylogenetic link matrix, generally called the covariance matrix. Matrix values \eqn{Wmat_{ij}}{Wmat_ij} correspond to path length that lead from root to the first common ancestor of the two leaves i and j}
-    \item{Wdist}{: a phylogenetic distance matrix of class \code{'dist'}. Matrix values \eqn{Wdist_{ij}}{Wdist_ij} correspond to $\sqrt{d_{ij}}$ where \eqn{d_{ij}}{d_ij} is the classical distance between two leaves i and j}
+    \item{Wdist}{: a phylogenetic distance matrix of class \code{'dist'}. Matrix values \eqn{Wdist_{ij}}{Wdist_ij} correspond to \eqn{\sqrt{d_{ij}}} where \eqn{d_{ij}}{d_ij} is the classical distance between two leaves i and j}
     \item{Wvalues}{: a vector with the eigen values of Wmat}
     \item{Wscores}{: a data frame with eigen vectors of Wmat. This data frame defines an orthobasis that could be used to calculate the orthonormal decomposition of a biological trait on a tree.}
     \item{Amat}{: a phylogenetic link matrix stemed from Abouheif's test and defined in Ollier et al. (submited)}

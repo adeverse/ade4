@@ -19,10 +19,9 @@ supcol(x, \dots)
 \details{
 If \code{supcol.default} is used, the column vectors of \code{Xsup} are projected without prior modification onto the principal components of dudi with the scalar product associated to the row weightings of dudi.
 }
-\value{
-returns a list of two components :
-\code{$tabsup} {data frame containing the array with the supplementary columns transformed or not}
-\code{$cosup} {data frame containing the coordinates of the supplementary projections}
+\value{A list of two components:
+    \item{\code{tabsup}}{data frame containing the array with the supplementary columns transformed or not}
+    \item{\code{cosup}}{data frame containing the coordinates of the supplementary projections}
 }
 \author{
 Daniel Chessel \cr

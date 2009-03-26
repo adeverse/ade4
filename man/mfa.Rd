@@ -18,11 +18,14 @@ mfa(X, option = c("lambda1", "inertia", "uniform", "internal"),
 }
 \arguments{
   \item{X}{K-tables, an object of class \code{ktab}}
-  \item{option}{a string of characters for the weighting of arrays options :
+  \item{option}{a string of characters for the weighting of arrays
+    options :
+    \describe{
     \item{\code{lambda1}}{weighting of group k by the inverse of the first eigenvalue of the k analysis}
     \item{\code{inertia}}{weighting of group k by the inverse of the total inertia of the array k}
     \item{\code{uniform}}{uniform weighting of groups}
     \item{\code{internal}}{weighting included in \code{X$tabw}}
+  }
   }
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}

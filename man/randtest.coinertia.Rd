@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{randtest.coinertia}
 \alias{randtest.coinertia}
 \title{Monte-Carlo test on a Co-inertia analysis (in C).}
@@ -18,7 +19,7 @@ this parameter must be the number of the table that should be kept fixed in the 
 a list of the class \code{randtest}
 }
 \references{
-Dol\'{e}dec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for
+Dolédec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for
 studying species-environment relationships. \emph{Freshwater Biology}, \bold{31}, 277--294.
 }
 \author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr} modified by Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}

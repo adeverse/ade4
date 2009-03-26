@@ -19,7 +19,7 @@ withinpca(df, fac, scaling = c("partial", "total"),
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
 }
 \value{
-returns a list of the sub-class \code{within} of class \code{dudi'}. See \code{\link{within}}
+returns a list of the sub-class \code{within} of class \code{dudi}. See \code{\link{within}}
 }
 \references{Bouroche, J. M. (1975) \emph{Analyse des données ternaires: la double analyse en composantes principales}. 
  Thèse de 3ème cycle, Université de Paris VI.

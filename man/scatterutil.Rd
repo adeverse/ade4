@@ -20,7 +20,8 @@ These are utilities used in graphical functions.
 }
 
 \details{
-  The functions scatter use some utilities functions :\cr
+  The functions scatter use some utilities functions :
+  \describe{
   \item{scatterutil.base}{defines the layer of the plot for all
     scatters}
   \item{scatterutil.sco}{defines the layer of the plot for sco functions}
@@ -38,6 +39,7 @@ These are utilities used in graphical functions.
   \item{scatterutil.sub}{adds a string of characters in sub-title of a
     graph}
   \item{scatterutil.convrot90}{is used to rotate labels}
+  }
 }
 \seealso{\code{\link{s.arrow}}, \code{\link{s.chull}}, \code{\link{s.class}}, 
 \code{\link{s.corcircle}}, \code{\link{s.distri}}, \code{\link{s.label}}, 

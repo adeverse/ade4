@@ -15,11 +15,15 @@ using an object of class \code{pta}.
   \item{xax, yax}{the numbers of the x-axis and the y-axis}
   \item{which.tab}{a numeric vector containing the numbers of the tables to analyse}
   \item{mfrow}{parameter of the array of figures to be drawn, otherwise the graphs associated to a table are drawn on the same row}
- \item{which.graph}{an option for drawing, an integer between 1 and 4. For each table of which.tab, are drawn :
+ \item{which.graph}{an option for drawing, an integer between 1 and
+   4. For each table of which.tab, are drawn :
+   \describe{
       \item{1}{the projections of the principal axes}
       \item{2}{the projections of the rows}
       \item{3}{the projections of the columns}
-      \item{4}{the projections of the principal components onto the planes of the compromise}
+      \item{4}{the projections of the principal components onto the
+	planes of the compromise}
+      }
   }
   \item{clab}{a character size for the labels}
   \item{cpoint}{a character size for plotting the points, used with \code{par("cex")}*cpoint. If zero, no points are drawn.}

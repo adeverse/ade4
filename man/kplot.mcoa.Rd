@@ -16,9 +16,11 @@ using an object of class \code{mcoa}.
   \item{which.tab}{a numeric vector containing the numbers of the tables to analyse}
   \item{mfrow}{a vector of the form 'c(nr,nc)', otherwise computed by as special own function \code{n2mfrow}}
   \item{option}{a string of characters for the drawing option
+    \describe{
       \item{"points"}{plot of the projected scattergram onto the co-inertia axes}
       \item{"axis"}{projections of inertia axes onto the co-inertia axes.}
       \item{"columns"}{projections of variables onto the synthetic variables planes.}
+    }
   }
   \item{clab}{a character size for the labels}
   \item{cpoint}{a character size for plotting the points, used with \code{par("cex")}*cpoint. If zero, no points are drawn.}

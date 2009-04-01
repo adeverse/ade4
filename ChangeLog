@@ -1,3 +1,29 @@
+2009-04-01 11:07  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-11 ----------
+
+2009-03-26 14:14  sdray
+
+	* man/buech.Rd, man/corvus.Rd, man/dist.binary.Rd,
+	  man/dist.prop.Rd, man/dist.quant.Rd, man/kplot.mcoa.Rd,
+	  man/kplot.pta.Rd, man/ktab.Rd, man/maples.Rd, man/mcoa.Rd,
+	  man/mfa.Rd, man/njplot.Rd, man/orthogram.Rd, man/phylog.Rd,
+	  man/randtest.coinertia.Rd, man/scatter.fca.Rd,
+	  man/scatterutil.Rd, man/supcol.Rd, man/withinpca.Rd: Make Rd
+	  files pass R-2.9.0 (devel) parser 2 checks
+
+2009-02-03 12:39  abdufour
+
+	* man/randEH.Rd: replace PD in EH
+
+2009-02-03 12:32  abdufour
+
+	* man/optimEH.Rd: replace PD in EH
+
+2008-12-12 14:04  sdray
+
+	* ChangeLog: ---------- release of ade4 1.4-10 ----------
+
 2008-12-12 14:03  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-10 ----------

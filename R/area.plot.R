@@ -37,7 +37,7 @@
             values <- as.vector(values)
         if (length(values) != nlev) 
             values <- rep(values, le = nlev)
-        br0 <- pretty(values, 6)
+        br0 <- pretty(values, nclasslegend - 1)
         nborn <- length(br0)
         h <- diff(range(x1))/20
         numclass <- cut.default(values, br0, include = TRUE, 

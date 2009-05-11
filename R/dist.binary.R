@@ -2,11 +2,17 @@
     METHODS <- c("JACCARD S3", "SOCKAL & MICHENER S4", "SOCKAL & SNEATH S5", 
         "ROGERS & TANIMOTO S6", "CZEKANOWSKI S7", "GOWER & LEGENDRE S9", "OCHIAI S12", "SOKAL & SNEATH S13", 
         "Phi of PEARSON S14", "GOWER & LEGENDRE S2")
-    if (!inherits(df, "data.frame")) 
-        stop("df is not a data.frame")
+    if (!(inherits(df, "data.frame") | inherits(df, "matrix"))) 
+        stop("df is not a data.frame or a matrix")
+    df <- as.matrix(df)
+    if(!is.numeric(df))
+      stop("df must contain  numeric values")
     if (any(df < 0)) 
         stop("non negative value expected in df")
+    nlig <- nrow(df)
     d.names <- row.names(df)
+    if(is.null(d.names))
+      d.names <- 1:nlig
     nlig <- nrow(df)
     df <- as.matrix(1 * (df > 0))
     if (is.null(method)) {
@@ -33,7 +39,7 @@
         cat("Select an integer (1-10): ")
         method <- as.integer(readLines(n = 1))
     }
-    df <- as.matrix(df)
+    
     a <- df %*% t(df)
     b <- df %*% (1 - t(df))
     c <- (1 - df) %*% t(df)

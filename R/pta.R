@@ -147,7 +147,7 @@
     class(atp) <- c("pta", "dudi")
     if (!inherits (X,"kcoinertia")) return(atp) 
     # Modifs pour prendre en compte STATICO
-    # on a affaire à une pta de type STATICO
+    # on a affaire a une pta de type STATICO
     # nblo nombre de tableau
     blocks <- X$supblo
     nblo <- length(blocks)
@@ -163,12 +163,16 @@
     # les lignes d'origine en supplémentaires X
     w <- X$supX%*%as.matrix(atp$l1*atp$lw)
     w <- scalewt(w, lw, center = FALSE, scale = TRUE)
+# Correction des row names - JT 24 Juil 2009
+    row.names(w) <- make.names(row.names(w), unique = TRUE)
     w <- as.data.frame(w)
     names(w) <- gsub("RS","sco",names(atp$l1))
     atp$supIX <- w
     # les lignes d'origine en supplémentaires Y
     w <- X$supY%*%as.matrix(atp$c1*atp$cw)
     w <- scalewt(w, lw, center = FALSE, scale = TRUE)
+# Correction des row names - JT 24 Juil 2009
+    row.names(w) <- make.names(row.names(w), unique = TRUE)
     w <- as.data.frame(w)
     names(w) <- gsub("RS","sco",names(atp$l1))
     atp$supIY <- w

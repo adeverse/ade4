@@ -21,6 +21,9 @@ performs the scatter diagrams of objects of class \code{dudi}.
 }
 \details{
 \code{scatter.dudi} is a factorial map of individuals and the projection of the vectors of the canonical basis multiplied by a constante of rescaling. In the eigenvalues bar plot,the used axes for the plot are in black, the other kept axes in grey and the other in white.
+
+The \code{permute} argument can be used to choose between the distance biplot (default) and the correlation biplot (permute = TRUE).
+
 }
 \author{Daniel Chessel }
 \examples{

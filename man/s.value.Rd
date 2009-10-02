@@ -26,7 +26,7 @@ s.value(dfxy, z, xax = 1, yax = 2, method = c("squaresize", "greylevel"),
   \item{pch}{if \code{cpoint} > 0, an integer specifying the symbol or the single character to be used in plotting points}
   \item{clegend}{a character size for the legend used by \code{par("cex")*clegend}}
   \item{neig}{a neighbouring graph}
-  \item{cneig}{a size for the neighbouring graph lines used with \code{par("lwd")*\code{cneig}}}
+  \item{cneig}{a size for the neighbouring graph lines used with \code{par("lwd")*cneig}}
   \item{xlim}{the ranges to be encompassed by the x, if NULL they are computed}
   \item{ylim}{the ranges to be encompassed by the y, if NULL they are computed}
   \item{grid}{a logical value indicating whether a grid in the background of the plot should be drawn}

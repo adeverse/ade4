@@ -20,11 +20,11 @@
         kext <- 0
         arret <- FALSE
         if (regexpr("\\[", x.tre) != -1) {
-            x.tre <- gsub("\\[[^\\[]*\\]", "", x.tre, ext = FALSE)
+            x.tre <- gsub("\\[[^\\[]*\\]", "", x.tre, fixed = TRUE)
         }
-        x.tre <- gsub(" ", "", x.tre, ext = FALSE)
+        x.tre <- gsub(" ", "", x.tre, fixed = TRUE)
         # On ne peut supprimer les . qui sont dans les distances !
-        # x.tre <- gsub("[.]","_", x.tre, ext = FALSE)
+        # x.tre <- gsub("[.]","_", x.tre, fixed = TRUE)
         while (!arret) {
             i <- i + 1
             # examen de la chaîne par couple de charactères
@@ -125,17 +125,17 @@
         w <- strsplit(x.tre, "[(),;]")[[1]]
         w <- w[w != ""]
         leurre <- make.names(w, unique = TRUE)
-        leurre <- gsub("[.]","_", leurre, ext = FALSE)
+        leurre <- gsub("[.]","_", leurre, fixed = TRUE)
         for (i in 1:length(w)) {
             old <- paste(w[i])
-            x.tre <- sub(old, leurre[i], x.tre, ext = FALSE)
+            x.tre <- sub(old, leurre[i], x.tre, fixed = TRUE)
         }
         # extraction des labels et des longueurs
         w <- strsplit(lab.points, ":")
         label <- function(x) {
             # ici on peut travailler sur les labels
             lab <- x[1]
-            lab <- gsub("[.]","_", lab, ext = FALSE)
+            lab <- gsub("[.]","_", lab, fixed = TRUE)
             return (lab)
         }
         
@@ -148,24 +148,24 @@
         longueurs <- unlist(lapply(w, longueur))
         # ici on peut travailler sur les labels
         labels <- make.names(labels, TRUE)
-        labels <- gsub("[.]","_", labels, ext = FALSE)
+        labels <- gsub("[.]","_", labels, fixed = TRUE)
         w <- labels
         for (i in 1:length(w)) {
             new <- w[i]
-            x.tre <- sub(leurre[i], new, x.tre, ext = FALSE)
+            x.tre <- sub(leurre[i], new, x.tre, fixed = TRUE)
         }
         # on les a remis à leur place
         cat <- rep("", length(w))
         for (i in 1:length(w)) {
             new <- w[i]
-            if (regexpr(paste(")", new, sep = ""), x.tre, ext = FALSE) != 
+            if (regexpr(paste(")", new, sep = ""), x.tre, fixed = TRUE) != 
                 -1) 
                 cat[i] <- "int"
             else if (regexpr(paste(",", new, sep = ""), x.tre, 
-                ext = FALSE) != -1) 
+                fixed = TRUE) != -1) 
                 cat[i] <- "ext"
             else if (regexpr(paste("(", new, sep = ""), x.tre, 
-                ext = FALSE) != -1) 
+                fixed = TRUE) != -1) 
                 cat[i] <- "ext"
             else cat[i] <- "unknown"
         }
@@ -188,16 +188,16 @@
     names(listpath) <- dnext
     x.tre <- res$tre
     while (regexpr("[(]", x.tre) != -1) {
-        a <- regexpr("([^()]*)", x.tre, ext = FALSE)
+        a <- regexpr("([^()]*)", x.tre, fixed = TRUE)
         n1 <- a[1] + 1
         n2 <- n1 - 3 + attr(a, "match.length")
         chasans <- substring(x.tre, n1, n2)
         chaavec <- paste("(", chasans, ")", sep = "")
         nam <- unlist(strsplit(chasans, ","))
-        w1 <- strsplit(x.tre, chaavec, ext = FALSE)[[1]][2]
-        parent <- unlist(strsplit(w1, "[,);]", ext = FALSE))[1]
+        w1 <- strsplit(x.tre, chaavec, fixed = TRUE)[[1]][2]
+        parent <- unlist(strsplit(w1, "[,);]", fixed = TRUE))[1]
         listclass[[parent]] <- nam
-        x.tre <- gsub(chaavec, "", x.tre, ext = FALSE)
+        x.tre <- gsub(chaavec, "", x.tre, fixed = TRUE)
         w2 <- which(unlist(lapply(listpath, function(x) any(x[1] == 
             nam))))
         for (i in w2) {
@@ -247,7 +247,7 @@
             2], ":", l.bra[j, 2], ")", labels.nodes[j], ":", 
             sep = "")
         tre <- gsub(paste(labels.nodes[j], ":", sep = ""), w, 
-            tre, ext = FALSE)
+            tre, fixed = TRUE)
     }
     res <- newick2phylog(tre, add.tools, call=match.call())
     return(res)
@@ -273,7 +273,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     w <- "("
     for (i in xred) w <- paste(w, i, ",", sep = "")
     res <- paste(w, ")", res, sep = "")
-    res <- sub(",)", ")", res, ext = FALSE)
+    res <- sub(",)", ")", res, fixed = TRUE)
     for (j in nc:1) {
         x <- taxo[, j]
         if (j>1) y <- taxo[, j - 1] else y <- as.factor(leaves.names)
@@ -284,8 +284,8 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
             yred <- as.character(yred)
             for (i in yred) w <- paste(w, i, ",", sep = "")
             w <- paste(w, ")", old, sep = "")
-            w <- sub(",)", ")", w, ext = FALSE)
-        res <- gsub(old, w, res, ext = FALSE)
+            w <- sub(",)", ")", w, fixed = TRUE)
+        res <- gsub(old, w, res, fixed = TRUE)
         }
     }
     return(newick2phylog(res, add.tools, call = match.call()))

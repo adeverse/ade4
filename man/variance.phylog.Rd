@@ -35,7 +35,7 @@ Diniz-Filho, J. A. F., Sant'Ana, C.E.R. and Bini, L.M. (1998) An eigenvector met
 \author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
 Daniel Chessel 
 }
-\seealso{\code{\link{phylog}}, \code{\link[base]{lm}}}
+\seealso{\code{\link{phylog}}, \code{\link{lm}}}
 \examples{
 data(njplot)
 njplot.phy <- newick2phylog(njplot$tre)

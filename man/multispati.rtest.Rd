@@ -30,7 +30,7 @@ Smouse, P. E. and Peakall, R. (1999) Spatial autocorrelation analysis of individ
 \author{Daniel Chessel  \cr
 Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 }
-\seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
+\seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(mafragh)

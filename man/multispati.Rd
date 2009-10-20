@@ -76,7 +76,7 @@ Sebastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
 Thibaut Jombart \email{jombart@biomserv.univ-lyon1.fr}
 
 }
-\seealso{\code{\link{dudi}},\code{\link[spdep]{listw}}}
+\seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{
 \dontrun{
 if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {

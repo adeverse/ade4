@@ -62,7 +62,7 @@
     auxi <- data.frame(auxi)
     
     names(auxi) <- paste("CS", (1:nf), sep = "")
-    row.names(auxi) <- names(res$tab)
+    row.names(auxi) <- make.names(names(res$tab),unique=TRUE)
     res$c1 <- auxi
 
     names(auxi2) <- paste("Axis", (1:nf), sep = "")
@@ -88,7 +88,7 @@
     res$l1 <- auxi
     
     names(auxi2) <- paste("Comp", (1:nf), sep = "")
-    row.names(auxi2) <- names(res$tab)
+    row.names(auxi2) <- make.names(names(res$tab), unique=TRUE)
     res$co <- auxi2
 
     res$li <- sweep(res$l1,2,dval,"*")

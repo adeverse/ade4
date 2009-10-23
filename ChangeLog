@@ -1,3 +1,55 @@
+2009-10-23 12:19  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-12 ----------
+
+2009-10-21 14:18  sdray
+
+	* data/toxicity.rda, man/toxicity.Rd: Correct species names and
+	  table dimensions (thanks to Jean Lobry)
+
+2009-10-21 13:34  thioulouse
+
+	* R/dudi.R: bug on row.names in as.dudi (thanks to Jean Lobry)
+
+2009-10-20 14:18  sdray
+
+	* R/newick2phylog.R: Correct bug in the use of basic regular
+	  expressions
+
+2009-10-20 14:15  sdray
+
+	* man/multispati.Rd, man/multispati.randtest.Rd,
+	  man/multispati.rtest.Rd: update links to spdep functions in the
+	  documentation
+
+2009-10-02 09:07  simonpenel
+
+	* R/newick2phylog.R, man/s.value.Rd, man/variance.phylog.Rd: Minor
+	  bugs have been fixes. Replace extended = FALSE by fixed : TRUE
+
+2009-09-22 08:10  thioulouse
+
+	* man/scatter.dudi.Rd: added some precision about biplots in
+	  scatter.dudi.Rd
+
+2009-07-24 14:53  thioulouse
+
+	* R/pta.R: corrected a small bug in row names of supIX and supIY df
+
+2009-05-11 09:19  sdray
+
+	* R/dist.binary.R, man/dist.binary.Rd: Numeric matrix can be used
+	  for the 'df' argument (request of E. Paradis)
+
+2009-04-20 15:53  sdray
+
+	* R/area.plot.R: argument nclasslegend is now active. bug
+	  identified by C. Calenge
+
+2009-04-01 11:11  sdray
+
+	* ChangeLog: ---------- release of ade4 1.4-11 ----------
+
 2009-04-01 11:07  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-11 ----------

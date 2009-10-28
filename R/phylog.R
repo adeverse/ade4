@@ -177,16 +177,16 @@ phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
         # cette fonction assure la conversion de tre
         # en son équivalent muni des distances
         for(i in 1:length(leaves.names)) {
-             tre<<- sub(paste(leaves.names[i],",",sep=""),paste(leaves.names[i],":",phylog$leaves[i],",",sep=""),tre,extended=FALSE)
+             tre<<- sub(paste(leaves.names[i],",",sep=""),paste(leaves.names[i],":",phylog$leaves[i],",",sep=""),tre,fixed=TRUE)
         }
         for(i in 1:length(leaves.names)) {
-            tre<<- sub(paste(leaves.names[i],")",sep=""),paste(leaves.names[i],":",phylog$leaves[i],")",sep=""),tre,extended=FALSE)
+            tre<<- sub(paste(leaves.names[i],")",sep=""),paste(leaves.names[i],":",phylog$leaves[i],")",sep=""),tre,fixed=TRUE)
         }
       for(i in 1:length(nodes.names)) {
-            tre<<- sub(paste(nodes.names[i],",",sep=""),paste(nodes.names[i],":",phylog$nodes[i],",",sep=""),tre,extended=FALSE)
+            tre<<- sub(paste(nodes.names[i],",",sep=""),paste(nodes.names[i],":",phylog$nodes[i],",",sep=""),tre,fixed=TRUE)
         }
         for(i in 1:length(nodes.names)) {
-            tre<<- sub(paste(nodes.names[i],")",sep=""),paste(nodes.names[i],":",phylog$nodes[i],")",sep=""),tre,extended=FALSE)
+            tre<<- sub(paste(nodes.names[i],")",sep=""),paste(nodes.names[i],":",phylog$nodes[i],")",sep=""),tre,fixed=TRUE)
         }
     }
     #############################
@@ -240,16 +240,16 @@ phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
                 n1 <- old.part[k]
                 n2 <- new.part[k]
                 u1 <- extract(n1)
-                u1.pos <- regexpr(paste(u1,"[,);]",sep=""),tre,ext=FALSE)
+                u1.pos <- regexpr(paste(u1,"[,\\);]",sep=""),tre)
                 u1.fin <- u1.pos+attr(u1.pos,"match.length")-1
                 lastcar1 <- substring(tre, u1.fin, u1.fin)
                 u2 <- extract(n2)
-                u2.pos<-regexpr(paste(u2,"[,);]",sep=""),tre,ext=FALSE)
+                u2.pos<-regexpr(paste(u2,"[,\\);]",sep=""),tre)
                 u2.fin <- u2.pos+attr(u2.pos,"match.length")-1
                 lastcar2 <- substring(tre, u2.fin, u2.fin)
-                tre <<- sub(paste(u1,lastcar1,sep=""),"Restunlogicielformidable",tre,extended=FALSE)
-                tre <<- sub(paste(u2,lastcar2,sep=""), paste(u1,lastcar2,sep=""),tre,extended=FALSE)
-                tre <<- sub("Restunlogicielformidable",paste(u2,lastcar1,sep=""), tre,extended=FALSE)
+                tre <<- sub(paste(u1,lastcar1,sep=""),"Restunlogicielformidable",tre,fixed = TRUE)
+                tre <<- sub(paste(u2,lastcar2,sep=""), paste(u1,lastcar2,sep=""),tre,fixed=TRUE)
+                tre <<- sub("Restunlogicielformidable",paste(u2,lastcar1,sep=""), tre,fixed=TRUE)
                 old.part[old.part==n1] <- "1234564789"
                 old.part[old.part==n2] <- n1
                 old.part[old.part=="1234564789"] <- n2

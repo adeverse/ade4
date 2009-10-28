@@ -12,8 +12,8 @@
     nodes.names <- names(x$nodes)
     if (length(labels.leaves) != leaves.number) labels.leaves <- names(x$leaves)
     if (length(labels.nodes) != nodes.number) labels.nodes <- names(x$nodes)
-    leaves.car <- gsub("[_]"," ",labels.leaves, ext = FALSE)
-    nodes.car <- gsub("[_]"," ",labels.nodes, ext = FALSE)
+    leaves.car <- gsub("[_]"," ",labels.leaves)
+    nodes.car <- gsub("[_]"," ",labels.nodes)
     mar.old <- par("mar")
     on.exit(par(mar=mar.old))
 
@@ -99,8 +99,8 @@
     if (length(labels.leaves) != leaves.number) labels.leaves <- names(phylog$leaves)
     if (length(labels.nodes) != nodes.number) labels.nodes <- names(phylog$nodes)
     if (circle<0) stop("'circle': non convenient value")
-    leaves.car <- gsub("[_]"," ",labels.leaves, ext = FALSE)
-    nodes.car <- gsub("[_]"," ",labels.nodes, ext = FALSE)
+    leaves.car <- gsub("[_]"," ",labels.leaves)
+    nodes.car <- gsub("[_]"," ",labels.nodes)
     
     opar <- par(mar = par("mar"), srt = par("srt"))
     on.exit(par(opar))

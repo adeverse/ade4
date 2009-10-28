@@ -5,27 +5,33 @@
 \title{Ecological Data : sites-variables, sites-species, where and when}
 \description{
 This data set contains information about sites, environmental variables
-and species (Trichopters). 
+and Ephemeroptera Species. 
 }
 \usage{data(meau)}
 \format{
 \code{meau} is a list of 3 components.
 \describe{
-   \item{mil}{is a data frame with 24 sites and 10 variables.}
-   \item{fau}{is a data frame with 24 sites and 13 species (Trichopters).}
+   \item{mil}{is a data frame with 24 sites and 10 physicochemical variables.}
+   \item{fau}{is a data frame with 24 sites and 13 Ephemeroptera Species.}
    \item{plan}{is a data frame with 24 sites and 2 factors.
             \enumerate{
-                \item{dat}{is a factor with 4 levels.}
-                \item{sta}{is a factor with 6 levels.}
+                \item{dat}{is a factor with 4 levels-seasons.}
+                \item{sta}{is a factor with 6 levels-sites.}
             }
         }
     }
 }
+\details{Data set equivalents to \code{\link{meaudret}}: one site (6) along the Bourne, a Meaudret affluent and
+one physico chemical variable - the oxygen concentration were added.
+}
 \source{
 Pegaz-Maucet, D. (1980)
-\emph{Impact d'une perturbation d'origine organique sur la dérive des macro-invertébérés benthiques d'un cours d'eau.
+\emph{Impact d'une perturbation d'origine organique sur la dérive des macro-invertébrés benthiques d'un cours d'eau.
 Comparaison avec le benthos}.
 Thèse de troisième cycle, Université Lyon 1, 130 p.
+
+Thioulouse, J., Simier, M. and Chessel, D. (2004) Simultaneous analysis of a sequence of paired ecological
+tables. \emph{Ecology}, \bold{85}, 1, 272--283.
 }
 \examples{
 data(meau)

@@ -1,3 +1,48 @@
+2009-10-29 08:56  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-13 ----------
+
+2009-10-28 15:29  abdufour
+
+	* data/meaudret.rda: addition of the species names in the dataset
+
+2009-10-28 15:08  abdufour
+
+	* man/meau.Rd, man/meaudret.Rd: information about the link between
+	  the two datasets meau and meaudret has been added
+
+2009-10-28 14:13  sdray
+
+	* R/phylog.R, R/plot.phylog.R: Correct bug in the use of basic
+	  regular expressions (argument 'extended' is deprecated R 2.11.0)
+
+2009-10-27 14:50  spavoine
+
+	* R/originality.R, man/originality.Rd: new methods have been added
+	  in the originality function
+
+2009-10-27 14:08  spavoine
+
+	* data/woangers.rda, man/woangers.Rd, man/rhizobium.Rd, data/rhizobium.rda,
+	  data/macroloire.rda, man/macroloire.Rd: three new data sets added
+
+2009-10-27 14:05  spavoine
+
+	* R/dist.ktab.R, man/dist.ktab.Rd: new functions of distance for
+	  multiple types of variables
+
+2009-10-27 14:01  spavoine
+
+	* R/apqe.R, man/apqe.Rd: new functions for diversity partitioning
+
+2009-10-27 13:59  spavoine
+
+	* R/mdpcoa.R, man/mdpcoa.Rd: new functions for multiple dpcoa
+
+2009-10-23 12:21  sdray
+
+	* ChangeLog: ---------- release of ade4 1.4-12 ----------
+
 2009-10-23 12:19  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-12 ----------
@@ -25,7 +70,7 @@
 2009-10-02 09:07  simonpenel
 
 	* R/newick2phylog.R, man/s.value.Rd, man/variance.phylog.Rd: Minor
-	  bugs have been fixes. Replace extended = FALSE by fixed : TRUE
+	  bugs have been fixes. Replace extended = FALSE by fixed = TRUE
 
 2009-09-22 08:10  thioulouse
 

@@ -2,15 +2,9 @@ kdisteuclid <- function(obj,method=c("lingoes","cailliez","quasi")) {
 
     if (is.null(class(obj))) stop ("Object of class 'kdist' expected")
     if (class(obj)!="kdist") stop ("Object of class 'kdist' expected")
-    selectinlist.util <- function(w, ref) {
-        # warning CRAN DAILY 18/11/2004
-        choi <- regexpr(w, ref,ext=FALSE)
-        if (all(is.na(choi))) stop(paste("invalid selection for",w,"in",ref))
-        return(ref[choi!=-1])
-    }
-    choice <- selectinlist.util(method, c("lingoes","cailliez","quasi"))
-    if (length(choice)==0) stop ("unknown method")
-
+    
+    choice <- match.arg(method)
+    
     lingo.1 <- function(x,size) {
         mat <- matrix(0, size, size)
         mat[row(mat) > col(mat)] <- x

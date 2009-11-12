@@ -7,7 +7,7 @@
 #### and does a coinertia analysis on the compromises of the PTAs.
 ####
     normalise.w <- function(X, w) {
-        # Correction d'un bug siganlé par Sandrine Pavoine le 21/10/2006
+        # Correction d'un bug signale par Sandrine Pavoine le 21/10/2006
         f2 <- function(v) sqrt(sum(v * v * w))
         norm <- apply(X, 2, f2)
         X <- sweep(X, 2, norm, "/")
@@ -34,15 +34,15 @@
     if (ntabX != ntabY) stop("The two ktabs must have the same number of tables")
     if (!all(bloX == bloY)) stop("The two tables of one pair must have the same number of columns")
 #### pta on KTX
-	cat("PTA of first KTab - ")
+	if (scannf) cat("PTA of first KTab\n")
 	ptaX <- pta(KTX, scannf = scannf)
 #### pta on KTY
-	cat("PTA of second KTab - ")
+	if (scannf) cat("PTA of second KTab\n")
 	ptaY <- pta(KTY, scannf = scannf)
 #### coinertia analysis of compromises
 	acpX=dudi.pca(t(ptaX$tab), center=FALSE, scan=FALSE, nf=ptaX$nf)
 	acpY=dudi.pca(t(ptaY$tab), center=FALSE, scan=FALSE, nf=ptaY$nf)
-	cat("Coinertia analysis of the two compromises\n")
+	if (scannf) cat("Coinertia analysis of the two compromises\n")
 	res <- coinertia(acpX, acpY, scannf = scannf)
 #### projection of the rows of the two original ktables
 	U <- as.matrix(res$c1) * unlist(res$cw)

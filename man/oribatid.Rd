@@ -41,9 +41,9 @@ ori.xy <- oribatid$xy[,c(2,1)]
 names(ori.xy) <- c("x","y")
 plot(ori.xy,pch = 20, cex = 2, asp = 1)
 
-if (require(tripack, quiet = TRUE)) {
+if (require(deldir, quiet = TRUE)) {
   if (require(spdep, quiet = TRUE)) {
-    plot(voronoi.mosaic(ori.xy), add = TRUE)
+    plot(deldir(ori.xy), add = TRUE)
     s.label(ori.xy, add.p = TRUE,
      neig = nb2neig(knn2nb(knearneigh(as.matrix(ori.xy), 3))),
      clab = 0)

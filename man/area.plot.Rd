@@ -15,8 +15,7 @@ polygon vertices in the order where they are found.
 
 area.plot : grey levels areas mapping
 
-poly2area takes an object of class 'polylist' (spdep package, that contains the
-older package 'spweights') and returns a data frame of type area.\cr
+poly2area takes an object of class 'polylist' (maptools package) and returns a data frame of type area.\cr
 area2poly takes an object of type 'area' and returns a list of class 'polylist'\cr
 area2link takes an object of type 'area' and returns a proximity matrix which terms are given by 
 the length of the frontier between two polygons. \cr
@@ -110,7 +109,7 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     col.gal.neig <- nb2neig(col.gal.nb)
     s.label(data.frame(coords), neig = col.gal.neig,
     inc = FALSE, addax = FALSE, clab = 0, cneig = 1, cpo = 2)
-     plot.polylist(polys,bbs)
+     maptools:::plot.polylist(polys,bbs)
     area.plot(poly2area(polys))
 
     # 1
@@ -146,7 +145,7 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     # 4
     fr.poly <- area2poly(fr.area)
     fr.nb <- neig2nb(fr.neig)
-    plot.polylist(fr.poly, attr(fr.poly, "region.rect"), border = "grey")
+    maptools:::plot.polylist(fr.poly, attr(fr.poly, "region.rect"), border = "grey")
     plot(fr.nb, fr.xy, add = TRUE)
     s.label(fr.xy, clab = 0, area = fr.area, neig = fr.neig, 
     cneig = 1, cpo = 2, inc = FALSE, addax = FALSE)

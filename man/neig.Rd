@@ -58,10 +58,10 @@ Multivariate analysis of spatial patterns: a unified approach to local and globa
 \author{Daniel Chessel }
 \examples{
 data(mafragh)
-if (require(tripack, quietly=TRUE)) {
+if (require(deldir, quietly=TRUE)) {
     par(mfrow = c(2,1))
-    provi <- neighbours(tri.mesh(mafragh$xy))
-    provi.neig <- neig(list = provi)
+    provi <- deldir(mafragh$xy)
+    provi.neig <- neig(edges = provi$delsgs[,5:6])
     
     s.label(mafragh$xy, neig = provi.neig, inc = FALSE, 
         addax = FALSE, clab = 0, cnei = 2)

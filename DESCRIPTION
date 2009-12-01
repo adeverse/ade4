@@ -5,7 +5,7 @@ Title: Analysis of Ecological Data : Exploratory and Euclidean methods in Enviro
 Author: Daniel Chessel,  Anne-Beatrice Dufour <dufour@biomserv.univ-lyon1.fr> and Stephane Dray <dray@biomserv.univ-lyon1.fr>, with
  contributions from Thibaut Jombart, Jean R. Lobry, Sebastien Ollier, Sandrine Pavoine and Jean Thioulouse.
 Maintainer: Simon Penel <penel@biomserv.univ-lyon1.fr>
-Suggests: waveslim, splancs, MASS, maptools, spdep, pixmap, ape, tripack, ade4TkGUI
+Suggests: waveslim, splancs, MASS, maptools, spdep, pixmap, ape, deldir, ade4TkGUI
 Description: Multivariate data analysis and graphical display.
 License: GPL (>= 2)
 URL: http://pbil.univ-lyon1.fr/ADE-4, Mailing list: http://listes.univ-lyon1.fr/wws/info/adelist

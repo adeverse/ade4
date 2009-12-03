@@ -1,3 +1,42 @@
+2009-12-03 13:22  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.4-14 ----------
+
+2009-12-01 10:01  sdray
+
+	* DESCRIPTION, man/area.plot.Rd, man/neig.Rd, man/oribatid.Rd: Use
+	  the package 'deldir' instead of 'tripack' which has serious
+	  license issues. Correct the use of the class polylist which is
+	  not exported in the new version of maptools (0.7-27)
+
+2009-11-12 12:08  thioulouse
+
+	* R/costatis.R: changes to the costatis function to remove cat
+	  outputs in non-interactive mode (i.e., when scannf = FALSE)
+
+2009-11-12 08:40  sdray
+
+	* R/s.match.class.R, man/s.match.class.Rd: Add new function
+	  's.match.class' to represent two systems of coordinates and a
+	  partitioning
+
+2009-11-12 08:38  sdray
+
+	* R/betweencoinertia.R, R/withincoinertia.R, man/betweencoinertia.Rd,
+	  man/withincoinertia.Rd: Add new functions
+	  'betweencoinertia' and 'withincoinertia' for between- and
+	  within-coinertia analysis
+
+2009-11-09 12:06  thioulouse
+
+	* R/costatis.R, R/statico.R, man/costatis.Rd, man/statico.Rd,
+	  man/wgcoia.Rd: New functions to perform STATICO and CO-STATIS
+
+2009-10-30 08:49  sdray
+
+	* R/kdisteuclid.R: Use 'match.arg' to evaluate the value of the
+	  'method' argument
+
 2009-10-29 08:56  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-13 ----------

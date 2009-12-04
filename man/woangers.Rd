@@ -64,7 +64,6 @@ Application for improving the measurement of functional diversity. \emph{Oikos},
 \examples{
 # Loading the data
 data(woangers)
-?woangers # for help and description
 
 # Preparating of the traits
 traits <- woangers$traits
@@ -86,7 +85,7 @@ tabQ <- traits[, 20:21]
 
 # Combining the traits
 ktab1 <- ktab.list.df(list(tabN, tabCp, tabO, tabFp, tabQ))
-
+\dontrun{
 # Calculating the distances for all traits combined
 distrait <- dist.ktab(ktab1, c("N", "C", "O", "F", "Q"))
 is.euclid(distrait)
@@ -95,6 +94,6 @@ is.euclid(distrait)
 contrib <- kdist.cor(ktab1, type = c("N", "C", "O", "F", "Q"))
 contrib
 dotchart(sort(contrib$glocor), labels = rownames(contrib$glocor)[order(contrib$glocor[, 1])])
-
+}
 }
 \keyword{datasets}

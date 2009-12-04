@@ -77,16 +77,17 @@ and \code{\link{woangers}} for an application.
 \examples{
 # With fuzzy variables
 data(bsetal97)
-?bsetal97 # for help and description
+
 w <- prep.fuzzy(bsetal97$biol, bsetal97$biol.blo)
 w[1:6, 1:10]
 ktab1 <- ktab.list.df(list(w))
 dis <- dist.ktab(ktab1, type = "F")
 as.matrix(dis)[1:5, 1:5]
 
+\dontrun{
 # With ratio-scale and multichoice variables
 data(ecomor)
-?ecomor # for help and description
+
 wM <- log(ecomor$morpho + 1) # Quantitative variables
 wD <- ecomor$diet
 # wD is a data frame containing a multichoice nominal variable
@@ -120,7 +121,7 @@ contrib3
 
 # With a range of variables
 data(woangers)
-?woangers # for help and description
+
 traits <- woangers$traits
 # Nominal variables 'li', 'pr', 'lp' and 'le'
 # (see table 1 in the main text for the codes of the variables)
@@ -143,6 +144,6 @@ is.euclid(distrait)
 contrib <- kdist.cor(ktab1, type = c("N", "C", "O", "F", "Q"))
 contrib
 dotchart(sort(contrib$glocor), labels = rownames(contrib$glocor)[order(contrib$glocor[, 1])])
-
+}
 }
 \keyword{multivariate}

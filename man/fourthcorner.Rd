@@ -14,7 +14,7 @@ fourthcorner(tabR, tabL, tabQ, modeltype = 1, nrepet = 999, tr01 = FALSE)
 fourthcorner2(tabR, tabL, tabQ, modeltype = 1, nrepet = 999, tr01 = FALSE)
 \method{print}{4thcorner}(x, varQ = 1:nrow(x$tabG), varR = 1:ncol(x$tabG),...)
 \method{summary}{4thcorner}(object,...)
-\method{plot}{4thcorner}(x, type=c("D","G"), alpha=0.05,...)
+\method{plot}{4thcorner}(x, type=c("D","D2","G"), alpha=0.05,...)
 combine.4thcorner(four1,four2)
 }
 %- maybe also 'usage' for other objects documented here.
@@ -30,7 +30,7 @@ combine.4thcorner(four1,four2)
   \item{varR}{ a vector with indices for variables in \code{tabR}}
   \item{varQ}{ a vector with indices for variables in \code{tabQ}}
   \item{type}{ a character to specify if results should be plotted for
-    cells or variables}
+    cells (D and D2) or variables (G)}
   \item{alpha}{ a value of significance level}
   \item{four1}{ an object of the class 4thcorner}
   \item{four2}{ an object of the class 4thcorner}
@@ -50,7 +50,10 @@ Note that the last model is strictly equivalent to permuting simultaneously the 
 
 The function \code{plot} produces a graphical representation of the
 results (white for non siginficant, light grey for negative sgnificant
-and dark grey for positive suignficant relationships).
+and dark grey for positive suignficant relationships). Results can be
+plotted for variables (G) or for cells (D and D2). In the case of
+qualitative / quantitative association, homogeneity (D) or correlation
+(D2) are plotted.
 
 The function \code{combine.4thcorner} combines the outputs of two
 fourth-corner objects as described in Dray and Legendre (2008). It

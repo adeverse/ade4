@@ -213,6 +213,7 @@ for (i=1;i<=vQ;i++){
             
             XG[i][j]=calculcorr(XL,varx,vary);
             XD[(nvQ[i])][(nvR[j])]=XG[i][j];
+	    
             freevec(varx);
             freevec(vary);
         } 
@@ -254,6 +255,7 @@ for (i=1;i<=vQ;i++){
             for (k=1;k<=dimx;k++){
                 for (l=1;l<=dimy;l++){
                     XD[(nvQ[i])+l-1][(nvR[j])+k-1]=contingxy[l][k]; /*on remplit D avec les valeurs observes*/
+		    
                     
                 }
             }
@@ -473,6 +475,7 @@ for (i=1;i<=vQ;i++){
             
             XGsim[i][j]=calculcorr(XLpermute,varx,vary);
             XDsim[(nvQ[i])][(nvR[j])]=XGsim[i][j];
+	    
             freevec(varx);
             freevec(vary);
             
@@ -515,6 +518,7 @@ for (i=1;i<=vQ;i++){
             for (k=1;k<=dimx;k++){
                 for (l=1;l<=dimy;l++){
                     XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]=contingxy[l][k]; /*on remplit D avec les valeurs observes*/
+		    
             
                 }
             }
@@ -636,12 +640,29 @@ for (i=1;i<=vQ;i++){
 
         /* quantitatif/quantitatif */
         if ((typQ[i]==1)&(typR[j]==1)) {
-            if (DMin[(nvQ[i])][(nvR[j])]>XDsim[(nvQ[i])][(nvR[j])]) DMin[(nvQ[i])][(nvR[j])]=XDsim[(nvQ[i])][(nvR[j])];
-            if (DMax[(nvQ[i])][(nvR[j])]<XDsim[(nvQ[i])][(nvR[j])]) DMax[(nvQ[i])][(nvR[j])]=XDsim[(nvQ[i])][(nvR[j])];
-            DMoy[(nvQ[i])][(nvR[j])]=DMoy[(nvQ[i])][(nvR[j])]+XDsim[(nvQ[i])][(nvR[j])];
-            if (XDsim[(nvQ[i])][(nvR[j])]<XD[(nvQ[i])][(nvR[j])]) DNLT[(nvQ[i])][(nvR[j])]=DNLT[(nvQ[i])][(nvR[j])]+1;
-            if (XDsim[(nvQ[i])][(nvR[j])]==XD[(nvQ[i])][(nvR[j])]) DNEQ[(nvQ[i])][(nvR[j])]=DNEQ[(nvQ[i])][(nvR[j])]+1;
-            }
+	  if (DMin[(nvQ[i])][(nvR[j])]>XDsim[(nvQ[i])][(nvR[j])]){
+	    DMin[(nvQ[i])][(nvR[j])]=XDsim[(nvQ[i])][(nvR[j])];
+	    
+	  }
+	  
+	  if (DMax[(nvQ[i])][(nvR[j])]<XDsim[(nvQ[i])][(nvR[j])]){
+	    DMax[(nvQ[i])][(nvR[j])]=XDsim[(nvQ[i])][(nvR[j])];
+	    
+	  }
+
+	  DMoy[(nvQ[i])][(nvR[j])]=DMoy[(nvQ[i])][(nvR[j])]+XDsim[(nvQ[i])][(nvR[j])];
+	  
+
+	  if (XDsim[(nvQ[i])][(nvR[j])]<XD[(nvQ[i])][(nvR[j])]){
+	    DNLT[(nvQ[i])][(nvR[j])]=DNLT[(nvQ[i])][(nvR[j])]+1;
+	    
+	  }
+
+	  if (XDsim[(nvQ[i])][(nvR[j])]==XD[(nvQ[i])][(nvR[j])]) {
+	    DNEQ[(nvQ[i])][(nvR[j])]=DNEQ[(nvQ[i])][(nvR[j])]+1;
+	    
+	  }
+	}
 
         /* qualitatif/qualitatif */
         if ((typQ[i]==2)&(typR[j]==2)) {
@@ -653,31 +674,60 @@ for (i=1;i<=vQ;i++){
             
             for (k=1;k<=dimx;k++){
                 for (l=1;l<=dimy;l++){
-                    if (DMin[(nvQ[i])+l-1][(nvR[j])+k-1]>XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]) DMin[(nvQ[i])+l-1][(nvR[j])+k-1]=XDsim[(nvQ[i])+l-1][(nvR[j])+k-1];
-                    if (DMax[(nvQ[i])+l-1][(nvR[j])+k-1]<XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]) DMax[(nvQ[i])+l-1][(nvR[j])+k-1]=XDsim[(nvQ[i])+l-1][(nvR[j])+k-1];
-                    DMoy[(nvQ[i])+l-1][(nvR[j])+k-1]=DMoy[(nvQ[i])+l-1][(nvR[j])+k-1]+XDsim[(nvQ[i])+l-1][(nvR[j])+k-1];
-                    if (XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]<XD[(nvQ[i])+l-1][(nvR[j])+k-1]) DNLT[(nvQ[i])+l-1][(nvR[j])+k-1]=DNLT[(nvQ[i])+l-1][(nvR[j])+k-1]+1;
-                    if (XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]==XD[(nvQ[i])+l-1][(nvR[j])+k-1]) DNEQ[(nvQ[i])+l-1][(nvR[j])+k-1]=DNEQ[(nvQ[i])+l-1][(nvR[j])+k-1]+1;
-                    }
-                }
-            }
+		  if (DMin[(nvQ[i])+l-1][(nvR[j])+k-1]>XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]) {
+		    DMin[(nvQ[i])+l-1][(nvR[j])+k-1]=XDsim[(nvQ[i])+l-1][(nvR[j])+k-1];
+		    
+		  }
+		  
+		  if (DMax[(nvQ[i])+l-1][(nvR[j])+k-1]<XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]){
+		    DMax[(nvQ[i])+l-1][(nvR[j])+k-1]=XDsim[(nvQ[i])+l-1][(nvR[j])+k-1];
+		    
+		  }
+
+		  DMoy[(nvQ[i])+l-1][(nvR[j])+k-1]=DMoy[(nvQ[i])+l-1][(nvR[j])+k-1]+XDsim[(nvQ[i])+l-1][(nvR[j])+k-1];
+		  
+
+		  if (XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]<XD[(nvQ[i])+l-1][(nvR[j])+k-1]){
+		    DNLT[(nvQ[i])+l-1][(nvR[j])+k-1]=DNLT[(nvQ[i])+l-1][(nvR[j])+k-1]+1;
+		    
+		  }
+		  
+		  if (XDsim[(nvQ[i])+l-1][(nvR[j])+k-1]==XD[(nvQ[i])+l-1][(nvR[j])+k-1]){
+		    DNEQ[(nvQ[i])+l-1][(nvR[j])+k-1]=DNEQ[(nvQ[i])+l-1][(nvR[j])+k-1]+1;
+		    
+		  }
+		}
+	    }
+	}
         
         /*  Q quantitatif et R qualitatif */   
         /*--------------------------------*/
         if ((typQ[i]==1)&(typR[j]==2)) {
             for (k=1;k<=dimx;k++){
                 if(XDsim[(nvQ[i])][(nvR[j])+k-1]>(-1)){
-                    if (DMin[(nvQ[i])][(nvR[j])+k-1]>XDsim[(nvQ[i])][(nvR[j])+k-1]) DMin[(nvQ[i])][(nvR[j])+k-1]=XDsim[(nvQ[i])][(nvR[j])+k-1];
-                    if (DMax[(nvQ[i])][(nvR[j])+k-1]<XDsim[(nvQ[i])][(nvR[j])+k-1]) DMax[(nvQ[i])][(nvR[j])+k-1]=XDsim[(nvQ[i])][(nvR[j])+k-1];
+                    if (DMin[(nvQ[i])][(nvR[j])+k-1]>XDsim[(nvQ[i])][(nvR[j])+k-1])
+		      DMin[(nvQ[i])][(nvR[j])+k-1]=XDsim[(nvQ[i])][(nvR[j])+k-1];
+                    if (DMax[(nvQ[i])][(nvR[j])+k-1]<XDsim[(nvQ[i])][(nvR[j])+k-1])
+		      DMax[(nvQ[i])][(nvR[j])+k-1]=XDsim[(nvQ[i])][(nvR[j])+k-1];
+		    
                     DMoy[(nvQ[i])][(nvR[j])+k-1]=DMoy[(nvQ[i])][(nvR[j])+k-1]+XDsim[(nvQ[i])][(nvR[j])+k-1];
-                    if (XDsim[(nvQ[i])][(nvR[j])+k-1]<XD[(nvQ[i])][(nvR[j])+k-1]) DNLT[(nvQ[i])][(nvR[j])+k-1]=DNLT[(nvQ[i])][(nvR[j])+k-1]+1;
-                    if (XDsim[(nvQ[i])][(nvR[j])+k-1]==XD[(nvQ[i])][(nvR[j])+k-1]) DNEQ[(nvQ[i])][(nvR[j])+k-1]=DNEQ[(nvQ[i])][(nvR[j])+k-1]+1;
+
+                    if (XDsim[(nvQ[i])][(nvR[j])+k-1]<XD[(nvQ[i])][(nvR[j])+k-1])
+		      DNLT[(nvQ[i])][(nvR[j])+k-1]=DNLT[(nvQ[i])][(nvR[j])+k-1]+1;
+                    if (XDsim[(nvQ[i])][(nvR[j])+k-1]==XD[(nvQ[i])][(nvR[j])+k-1])
+		      DNEQ[(nvQ[i])][(nvR[j])+k-1]=DNEQ[(nvQ[i])][(nvR[j])+k-1]+1;
                 }    
-                if (D2Min[(nvQ[i])][(nvR[j])+k-1]>XD2sim[(nvQ[i])][(nvR[j])+k-1]) D2Min[(nvQ[i])][(nvR[j])+k-1]=XD2sim[(nvQ[i])][(nvR[j])+k-1];
-                if (D2Max[(nvQ[i])][(nvR[j])+k-1]<XD2sim[(nvQ[i])][(nvR[j])+k-1]) D2Max[(nvQ[i])][(nvR[j])+k-1]=XD2sim[(nvQ[i])][(nvR[j])+k-1];
+                if (D2Min[(nvQ[i])][(nvR[j])+k-1]>XD2sim[(nvQ[i])][(nvR[j])+k-1])
+		  D2Min[(nvQ[i])][(nvR[j])+k-1]=XD2sim[(nvQ[i])][(nvR[j])+k-1];
+                if (D2Max[(nvQ[i])][(nvR[j])+k-1]<XD2sim[(nvQ[i])][(nvR[j])+k-1])
+		  D2Max[(nvQ[i])][(nvR[j])+k-1]=XD2sim[(nvQ[i])][(nvR[j])+k-1];
+
                 D2Moy[(nvQ[i])][(nvR[j])+k-1]=D2Moy[(nvQ[i])][(nvR[j])+k-1]+XD2sim[(nvQ[i])][(nvR[j])+k-1];
-                if (XD2sim[(nvQ[i])][(nvR[j])+k-1]<XD2[(nvQ[i])][(nvR[j])+k-1]) D2NLT[(nvQ[i])][(nvR[j])+k-1]=D2NLT[(nvQ[i])][(nvR[j])+k-1]+1;
-                if (XD2sim[(nvQ[i])][(nvR[j])+k-1]==XD2[(nvQ[i])][(nvR[j])+k-1]) D2NEQ[(nvQ[i])][(nvR[j])+k-1]=D2NEQ[(nvQ[i])][(nvR[j])+k-1]+1;
+
+                if (XD2sim[(nvQ[i])][(nvR[j])+k-1]<XD2[(nvQ[i])][(nvR[j])+k-1])
+		  D2NLT[(nvQ[i])][(nvR[j])+k-1]=D2NLT[(nvQ[i])][(nvR[j])+k-1]+1;
+                if (XD2sim[(nvQ[i])][(nvR[j])+k-1]==XD2[(nvQ[i])][(nvR[j])+k-1])
+		  D2NEQ[(nvQ[i])][(nvR[j])+k-1]=D2NEQ[(nvQ[i])][(nvR[j])+k-1]+1;
                 
             }
          }   
@@ -686,17 +736,29 @@ for (i=1;i<=vQ;i++){
         if ((typQ[i]==2)&(typR[j]==1)) {
             for (l=1;l<=dimy;l++){
                     if(XDsim[(nvQ[i])+l-1][(nvR[j])]>(-1)) {/* elimination des cas non valides nb ind <1*/
-                    if (DMin[(nvQ[i])+l-1][(nvR[j])]>XDsim[(nvQ[i])+l-1][(nvR[j])]) DMin[(nvQ[i])+l-1][(nvR[j])]=XDsim[(nvQ[i])+l-1][(nvR[j])];
-                    if (DMax[(nvQ[i])+l-1][(nvR[j])]<XDsim[(nvQ[i])+l-1][(nvR[j])]) DMax[(nvQ[i])+l-1][(nvR[j])]=XDsim[(nvQ[i])+l-1][(nvR[j])];
+                    if (DMin[(nvQ[i])+l-1][(nvR[j])]>XDsim[(nvQ[i])+l-1][(nvR[j])])
+		      DMin[(nvQ[i])+l-1][(nvR[j])]=XDsim[(nvQ[i])+l-1][(nvR[j])];
+                    if (DMax[(nvQ[i])+l-1][(nvR[j])]<XDsim[(nvQ[i])+l-1][(nvR[j])])
+		      DMax[(nvQ[i])+l-1][(nvR[j])]=XDsim[(nvQ[i])+l-1][(nvR[j])];
+
                     DMoy[(nvQ[i])+l-1][(nvR[j])]=DMoy[(nvQ[i])+l-1][(nvR[j])]+XDsim[(nvQ[i])+l-1][(nvR[j])];
-                    if (XDsim[(nvQ[i])+l-1][(nvR[j])]<XD[(nvQ[i])+l-1][(nvR[j])]) DNLT[(nvQ[i])+l-1][(nvR[j])]=DNLT[(nvQ[i])+l-1][(nvR[j])]+1;
-                    if (XDsim[(nvQ[i])+l-1][(nvR[j])]==XD[(nvQ[i])+l-1][(nvR[j])]) DNEQ[(nvQ[i])+l-1][(nvR[j])]=DNEQ[(nvQ[i])+l-1][(nvR[j])]+1;
+
+                    if (XDsim[(nvQ[i])+l-1][(nvR[j])]<XD[(nvQ[i])+l-1][(nvR[j])])
+		      DNLT[(nvQ[i])+l-1][(nvR[j])]=DNLT[(nvQ[i])+l-1][(nvR[j])]+1;
+                    if (XDsim[(nvQ[i])+l-1][(nvR[j])]==XD[(nvQ[i])+l-1][(nvR[j])])
+		      DNEQ[(nvQ[i])+l-1][(nvR[j])]=DNEQ[(nvQ[i])+l-1][(nvR[j])]+1;
                 }
-                if (D2Min[(nvQ[i])+l-1][(nvR[j])]>XD2sim[(nvQ[i])+l-1][(nvR[j])]) D2Min[(nvQ[i])+l-1][(nvR[j])]=XD2sim[(nvQ[i])+l-1][(nvR[j])];
-                if (D2Max[(nvQ[i])+l-1][(nvR[j])]<XD2sim[(nvQ[i])+l-1][(nvR[j])]) D2Max[(nvQ[i])+l-1][(nvR[j])]=XD2sim[(nvQ[i])+l-1][(nvR[j])];
+                if (D2Min[(nvQ[i])+l-1][(nvR[j])]>XD2sim[(nvQ[i])+l-1][(nvR[j])])
+		  D2Min[(nvQ[i])+l-1][(nvR[j])]=XD2sim[(nvQ[i])+l-1][(nvR[j])];
+                if (D2Max[(nvQ[i])+l-1][(nvR[j])]<XD2sim[(nvQ[i])+l-1][(nvR[j])])
+		  D2Max[(nvQ[i])+l-1][(nvR[j])]=XD2sim[(nvQ[i])+l-1][(nvR[j])];
+
                 D2Moy[(nvQ[i])+l-1][(nvR[j])]=D2Moy[(nvQ[i])+l-1][(nvR[j])]+XD2sim[(nvQ[i])+l-1][(nvR[j])];
-                if (XD2sim[(nvQ[i])+l-1][(nvR[j])]<XD2[(nvQ[i])+l-1][(nvR[j])]) D2NLT[(nvQ[i])+l-1][(nvR[j])]=D2NLT[(nvQ[i])+l-1][(nvR[j])]+1;
-                if (XD2sim[(nvQ[i])+l-1][(nvR[j])]==XD2[(nvQ[i])+l-1][(nvR[j])]) D2NEQ[(nvQ[i])+l-1][(nvR[j])]=D2NEQ[(nvQ[i])+l-1][(nvR[j])]+1;
+
+                if (XD2sim[(nvQ[i])+l-1][(nvR[j])]<XD2[(nvQ[i])+l-1][(nvR[j])])
+		  D2NLT[(nvQ[i])+l-1][(nvR[j])]=D2NLT[(nvQ[i])+l-1][(nvR[j])]+1;
+                if (XD2sim[(nvQ[i])+l-1][(nvR[j])]==XD2[(nvQ[i])+l-1][(nvR[j])])
+		  D2NEQ[(nvQ[i])+l-1][(nvR[j])]=D2NEQ[(nvQ[i])+l-1][(nvR[j])]+1;
             }
         }
     } /* fin boucle sur les colonnes*/
@@ -711,40 +773,62 @@ for (i=1; i<=cQ; i++) {
     for (j=1; j<=cR; j++) {
         if ((typQ[assignQ[i]]==1)&(typR[assignR[j]]==1)) {
             DMoy[i][j]=DMoy[i][j]/(double)(*nrepet+1);
-            D2Moy[i][j]=D2Moy[i][j]/(double)(*nrepet+1);
+            D2Moy[i][j]=DMoy[i][j];
+	    XD2[i][j]=XD[i][j]; /* D2 are equal to D in this case */
+	    D2Max[i][j]=DMax[i][j];
+	    D2Min[i][j]=DMin[i][j];
+	    D2NLT[i][j]=DNLT[i][j];
+	    D2NEQ[i][j]=DNEQ[i][j];
                 
             /* test unilateral en fonction du signe de r */
-            if (XD[i][j]<0) DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(*nrepet+1);
-            else DProb[i][j]=1-(double)(DNLT[i][j]/(double)(*nrepet+1));
-            }
+            if (XD[i][j]<0) {
+	      DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(*nrepet+1);
+	    }
+            else {
+	      DProb[i][j]=1-(double)(DNLT[i][j]/(double)(*nrepet+1));
+	    }
+	    D2Prob[i][j]=DProb[i][j];
+	}
         if ((typQ[assignQ[i]]==2)&(typR[assignR[j]]==2)) {
             DMoy[i][j]=DMoy[i][j]/(double)(*nrepet+1);
-            D2Moy[i][j]=D2Moy[i][j]/(double)(*nrepet+1);    
+            D2Moy[i][j]=DMoy[i][j];  
+	    XD2[i][j]=XD[i][j]; /* D2 are equal to D in this case */
+	    D2Max[i][j]=DMax[i][j];
+	    D2Min[i][j]=DMin[i][j];
+	    D2NLT[i][j]=DNLT[i][j];
+	    D2NEQ[i][j]=DNEQ[i][j];
+  
             /* test unilateral en fonction de la de moyenne sur simulations */
-            if (XD[i][j]<DMoy[i][j]) DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(*nrepet+1);
-            else DProb[i][j]=1-(double)(DNLT[i][j]/(double)(*nrepet+1));
-            }
+            if (XD[i][j]<DMoy[i][j]) {
+	      DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(*nrepet+1);
+	    }
+	    
+            else {
+	      DProb[i][j]=1-(double)(DNLT[i][j]/(double)(*nrepet+1));
+	    }
+	    D2Prob[i][j]=DProb[i][j];
+	}
         if ((typQ[assignQ[i]]==2)&(typR[assignR[j]]==1)) {
-            DMoy[i][j]=DMoy[i][j]/(double)(DNperm[i][j]);
-            D2Moy[i][j]=D2Moy[i][j]/(double)(*nrepet+1);    
-            /* test unilateral a gauche */
-            DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(DNperm[i][j]);
-            if (XD2[i][j]<0) D2Prob[i][j]=(double)(D2NLT[i][j]+D2NEQ[i][j])/(double)(*nrepet+1);
-            else D2Prob[i][j]=1-(double)(D2NLT[i][j]/(double)(*nrepet+1));
-            
-            }
+	  DMoy[i][j]=DMoy[i][j]/(double)(DNperm[i][j]);
+	  D2Moy[i][j]=D2Moy[i][j]/(double)(*nrepet+1);    
+	  /* test unilateral a gauche */
+	  DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(DNperm[i][j]);
+	  if (XD2[i][j]<0) D2Prob[i][j]=(double)(D2NLT[i][j]+D2NEQ[i][j])/(double)(*nrepet+1);
+	  else D2Prob[i][j]=1-(double)(D2NLT[i][j]/(double)(*nrepet+1));
+          
+	}
         if ((typQ[assignQ[i]]==1)&(typR[assignR[j]]==2)) {
-            DMoy[i][j]=DMoy[i][j]/(double)(DNperm[i][j]);
-            D2Moy[i][j]=D2Moy[i][j]/(double)(*nrepet+1);    
-            /* test unilateral a gauche */
-            DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(DNperm[i][j]);
-            if (XD2[i][j]<0) D2Prob[i][j]=(double)(D2NLT[i][j]+D2NEQ[i][j])/(double)(*nrepet+1);
-            else D2Prob[i][j]=1-(double)(D2NLT[i][j]/(double)(*nrepet+1));
-            }
-
-        }
+	  DMoy[i][j]=DMoy[i][j]/(double)(DNperm[i][j]);
+	  D2Moy[i][j]=D2Moy[i][j]/(double)(*nrepet+1);    
+	  /* test unilateral a gauche */
+	  DProb[i][j]=(double)(DNLT[i][j]+DNEQ[i][j])/(double)(DNperm[i][j]);
+	  if (XD2[i][j]<0) D2Prob[i][j]=(double)(D2NLT[i][j]+D2NEQ[i][j])/(double)(*nrepet+1);
+	  else D2Prob[i][j]=1-(double)(D2NLT[i][j]/(double)(*nrepet+1));
+	}
+	
     }
-
+ }
+ 
 /* calcul des probas pour G statistique globale*/
 for (i=1; i<=vQ; i++) 
     {

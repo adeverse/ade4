@@ -1,27 +1,42 @@
-plot.4thcorner <- function(x, type=c("D","G"), alpha=0.05, ...) {
+plot.4thcorner <- function(x, type=c("D","D2","G"), alpha=0.05, ...) {
   type <- match.arg(type)
   if(!inherits(x, "4thcorner") & !inherits(x, "4thcorner.rlq"))
     stop("x must be of class '4thcorner' or '4thcorner.rlq'")
-  if(type=="D" & !inherits(x, "4thcorner.rlq")){
-    res <- data.frame(matrix(1, nrow(x$tabD),ncol(x$tabD)))
-    names(res) <- names(x$tabD)
-    row.names(res) <- row.names(x$tabD)
+  if((type == "D2" | type=="D") & !inherits(x, "4thcorner.rlq")){
+     if(type == "D2") {
+       res <- data.frame(matrix(1, nrow(x$tabD2),ncol(x$tabD2)))
+       names(res) <- names(x$tabD2)
+       row.names(res) <- row.names(x$tabD2)
+       adjProb <- x$tabD2Prob
+       tabProb <- x$tabD2Prob
+       tabmoy <- x$tabD2moy
+       tabD <- x$tabD2
+
+     } else {
+       ## type =="D"
+       res <- data.frame(matrix(1, nrow(x$tabD),ncol(x$tabD)))
+       names(res) <- names(x$tabD)
+       row.names(res) <- row.names(x$tabD)
+       adjProb <- x$tabDProb
+       tabProb <- x$tabDProb
+       tabmoy <- x$tabDmoy
+       tabD <- x$tabD
+ 
+     }
     
-    adjProb <- x$tabDProb
     for(i in 1:nrow(res)){
       for(j in 1:ncol(res)){
         if ((x$indexR[x$assignR[j]]==1)&(x$indexQ[x$assignQ[i]]==1)){
-          if(x$tabDProb[i,j]<alpha){
-            res[i,j] <- ifelse(x$tabD[i,j]>x$tabDmoy[i,j], 2, 3)
+          if(tabProb[i,j]<alpha){
+            res[i,j] <- ifelse(tabD[i,j]>tabmoy[i,j], 2, 3)
           }
         } else {
           whichR <- which(x$assignR==x$assignR[j])
-          
           whichQ <- which(x$assignQ==x$assignQ[i])
           ## compute adjusted pvalue for multiple comparisons
-          adjProb[whichQ,whichR] <- p.adjust(as.matrix(x$tabDProb[whichQ,whichR]),"holm")
+          adjProb[whichQ,whichR] <- p.adjust(as.matrix(tabProb[whichQ,whichR]),"holm")
           if(adjProb[i,j]<alpha){
-            res[i,j] <- ifelse(x$tabD[i,j]>x$tabDmoy[i,j], 2, 3)
+            res[i,j] <- ifelse(tabD[i,j]>tabmoy[i,j], 2, 3)
           }
         }        
       }
@@ -61,7 +76,7 @@ plot.4thcorner <- function(x, type=c("D","G"), alpha=0.05, ...) {
       rect(xtot - xdelta, ytot - ydelta, xtot + xdelta, ytot + 
            ydelta, col = valgris[z], border = "grey90")
       
-      if(type == "D"){
+      if((type == "D") | (type == "D2")){
         
         idR <- which(diff(assignR)==1)
         idQ <- which(diff(assignQ)==1)

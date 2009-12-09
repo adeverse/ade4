@@ -30,12 +30,12 @@ The function \code{dudi.fca} returns a list of class \code{fca} and \code{dudi} 
 \item{cr}{a data frame which rows are the blocs, columns are the kept axes, and values are the correlation ratios.}
 The function \code{dudi.fpca} returns a list of class \code{pca} and \code{dudi} (see \link{dudi}) containing also
 \enumerate{
-\item{cent}{}
-\item{norm}{}
-\item{blo}{}
-\item{indica}{}
-\item{FST}{}
-\item{inertia}{}
+\item cent
+\item norm
+\item blo
+\item indica
+\item FST
+\item inertia
 }
 }
 \references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding 

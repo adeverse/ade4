@@ -14,9 +14,9 @@ and Ephemeroptera Species.
    \item{mil}{is a data frame with 24 sites and 10 physicochemical variables.}
    \item{fau}{is a data frame with 24 sites and 13 Ephemeroptera Species.}
    \item{plan}{is a data frame with 24 sites and 2 factors.
-            \enumerate{
-                \item{dat}{is a factor with 4 levels-seasons.}
-                \item{sta}{is a factor with 6 levels-sites.}
+            \itemize{
+                \item \code{dat}: is a factor with 4 levels-seasons.
+                \item \code{sta}: is a factor with 6 levels-sites.
             }
         }
     }

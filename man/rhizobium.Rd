@@ -38,10 +38,10 @@ strains to interact with either M. laciniata or M. truncatula.
 \usage{data(rhizobium)}
 \format{
     \code{rhizobium} is a list of 2 components.
-\enumerate{
-    \item{dnaobj}{list of dna lists. Each dna list corresponds to a locus. For a given locus, the dna list provides the
-    dna sequences The ith sequences of all loci corresponds to the ith individual of the data set.}
-    \item{pop}{The list of the populations which each individual sequence belongs to.}
+\itemize{
+    \item dnaobj: list of dna lists. Each dna list corresponds to a locus. For a given locus, the dna list provides the
+    dna sequences The ith sequences of all loci corresponds to the ith individual of the data set.
+    \item pop: The list of the populations which each individual sequence belongs to.
 }}
 \source{
   Pavoine, S. and Bailly, X. (2007) New analysis for consistency among markers in the study of genetic diversity: 

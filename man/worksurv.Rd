@@ -11,42 +11,51 @@ providing from a French Worker Survey.
 \format{
   This data frame contains the following columns:
   \enumerate{
-    \item{pro}{Professional elections. In professional elections in your firm, would you rather vote for a list supported by?
-   \code{CGT}
-      \code{CFDT}
-      \code{FO}
-      \code{CFTC}
-      \code{Auton} Autonomous
-      \code{Abst}
-      \code{Nonaffi} Not affiliated
-      \code{NR} No response}
-    \item{una}{Union affiliation. At the present time, are you affiliated to a Union, and in the affirmative, which one?
-      \code{CGT}
-      \code{CFDT}
-      \code{FO}
-      \code{CFTC}
-      \code{Auton} Autonomous
-      \code{CGC}
-      \code{Notaffi} Not affiliated
-      \code{NR} No response}
-    \item{pre}{Presidential election. On the last presidential election (1969), can you tell me the candidate for whom you have voted?
-      \code{Duclos}
-      \code{Deferre}
-      \code{Krivine}
-      \code{Rocard}
-      \code{Poher}
-      \code{Ducatel}
-      \code{Pompidou}
-      \code{NRAbs} No response, abstention}
-    \item{pol}{political sympathy. Which political party do you feel closest to, as a rule ?
-      \code{Communist} (PCF)
-      \code{Socialist} (SFIO+PSU+FGDS)
-      \code{Left} (Party of workers",\dots)
-      \code{Center} MRP+RAD.
-      \code{RI}
-      \code{Right} INDEP.+CNI
-      \code{Gaullist} UNR
-      \code{NR} No response}
+    \item pro: Professional elections. In professional elections in your firm, would you rather vote for a list supported by?
+      \itemize{
+	\item \code{CGT}
+      \item \code{CFDT}
+      \item \code{FO}
+      \item \code{CFTC}
+      \item \code{Auton} Autonomous
+      \item \code{Abst}
+      \item \code{Nonaffi} Not affiliated
+      \item \code{NR} No response}
+ 
+    \item una: Union affiliation. At the present time, are you affiliated to a Union, and in the affirmative, which one?
+      \itemize{
+	\item \code{CGT}
+      \item \code{CFDT}
+      \item \code{FO}
+      \item \code{CFTC}
+      \item \code{Auton} Autonomous
+      \item \code{CGC}
+      \item \code{Notaffi} Not affiliated
+      \item \code{NR} No response}
+
+    \item pre: Presidential election. On the last presidential election
+      (1969), can you tell me the candidate for whom you havevoted?
+      \itemize{
+      \item \code{Duclos}
+      \item \code{Deferre}
+      \item \code{Krivine}
+      \item \code{Rocard}
+      \item \code{Poher}
+      \item \code{Ducatel}
+      \item \code{Pompidou}
+      \item \code{NRAbs} No response, abstention}
+    
+    \item pol: political sympathy. Which political party do you feel closest to, as a rule ?
+      \itemize{
+	\item \code{Communist} (PCF)
+      \item \code{Socialist} (SFIO+PSU+FGDS)
+      \item \code{Left} (Party of workers,\dots)
+      \item \code{Center} MRP+RAD.
+      \item \code{RI}
+      \item \code{Right} INDEP.+CNI
+      \item \code{Gaullist} UNR
+      \item \code{NR} No response}
+    
   }
 }
 \details{

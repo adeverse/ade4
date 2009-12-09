@@ -11,11 +11,11 @@ for 48 countries in the world.
 \format{
   This data frame contains the following columns:
   \enumerate{
-    \item{pib}{: Gross Domestic Product}
-    \item{croipop}{: Growth of the population}
-    \item{morta}{: Infant Mortality}
-    \item{anal}{: Literacy Rate}
-    \item{scol}{: Percentage of children in full-time education}
+    \item pib: Gross Domestic Product
+    \item croipop: Growth of the population
+    \item morta: Infant Mortality
+    \item anal: Literacy Rate
+    \item scol: Percentage of children in full-time education
   }
 }
 \source{

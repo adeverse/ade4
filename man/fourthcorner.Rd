@@ -46,7 +46,13 @@ For the \code{fourthcorner} function, the link is measured by a Pearson correlat
 \item model 4 (\code{modeltype}=4): Permute values of species (i.e., permute entire columns of table L)
 \item model 5 (\code{modeltype}=5): Permute values of species and after (or before) permute values of sites (i.e., permute entire columns and after (or before) entire rows of table L)
 }
-Note that the last model is strictly equivalent to permuting simultaneously the rows of tables R and Q, as proposed by Doledec et al. (1996).
+Note that the last model is strictly equivalent to permuting
+simultaneously the rows of tables R and Q, as proposed by Doledec et
+al. (1996).
+
+The function \code{summary} returns results for variables (G). The
+function \code{print} returns results for cells (D and D2). In the case
+of qualitative variables, Holm's corrected pvalues are also provided.
 
 The function \code{plot} produces a graphical representation of the
 results (white for non siginficant, light grey for negative sgnificant

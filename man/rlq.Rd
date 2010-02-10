@@ -14,7 +14,7 @@ rlq(dudiR, dudiL, dudiQ, scannf = TRUE, nf = 2)
 \method{print}{rlq}(x, ...)
 \method{plot}{rlq}(x, xax = 1, yax = 2, ...)
 \method{summary}{rlq}(object, ...)
-\method{randtest}{rlq}(xtest,nrepet = 999, modeltype = 5, ...)
+\method{randtest}{rlq}(xtest,nrepet = 999, ...)
 }
 
 \arguments{
@@ -29,28 +29,8 @@ rlq(dudiR, dudiL, dudiQ, scannf = TRUE, nf = 2)
   \item{object}{ an rlq object }
   \item{xtest}{ an rlq object }
   \item{nrepet}{ the number of permutations }
-  \item{modeltype}{ an integer (2, 4 or 5) indicating the permutation model used in the testing procedure (see details). }
   \item{\dots}{further arguments passed to or from other methods}
 }
-
-\details{
-The significance is tested by a permutation procedure. Different models are available:
-\itemize{
-\item model 2 (\code{modeltype}=2): Permute values of sites (i.e.,
-permute entire rows of table L or R)
-\item model 4 (\code{modeltype}=4): Permute values of species (i.e.,
-permute entire columns of table L or Q)
-\item model 5 (\code{modeltype}=5): Permute values of species and after (or before) permute values of sites (i.e., permute entire columns and after (or before) entire rows of table L)
-}
-Note that the last model is strictly equivalent to permuting
-simultaneously the rows of tables R and Q, as proposed in the original
-paper by Doledec et
-al. (1996). Dray and Legendre (2008) showed that this model is not
-correct and combinations of models
-2 and 4 provided the correct testing procedure.
-
-}
-
 \value{
   Returns a list of class 'dudi', sub-class 'rlq' containing:
   \item{call}{call}
@@ -79,11 +59,7 @@ Matching species traits to environmental variables: a new three-table ordination
 
 Dray, S., Pettorelli, N., Chessel, D. (2002) Matching data sets from two different spatial samplings. 
 \emph{Journal of Vegetation Science}, \bold{13}, 867--874.
-
-Dray, S. and Legendre, P. (2008) 
-Testing the species traits-environment relationships: the fourth-corner
-problem revisited. \emph{Ecology},
-\bold{89}, 3400--3412.}
+}
 \author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 
 \section{WARNING }{
@@ -106,7 +82,6 @@ data(aviurba)
    plot(rlq1)
    summary(rlq1)
    randtest.rlq(rlq1)
-   fourthcorner.rlq(rlq1,type="R.axes")
 }
 \keyword{ multivariate }
 \keyword{ spatial }

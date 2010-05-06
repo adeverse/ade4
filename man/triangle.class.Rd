@@ -2,7 +2,8 @@
 \alias{triangle.class}
 \title{ Triangular Representation and Groups of points }
 \description{
-  ~~ A concise (1-5 lines) description of what the function does. ~~
+  Function to plot triangular data (i.e. dataframe with 3 columns of
+  positive or null values) and a partition \cr
 }
 \usage{
 triangle.class(ta, fac, col = rep(1, length(levels(fac))), 

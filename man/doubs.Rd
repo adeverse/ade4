@@ -19,17 +19,17 @@ This data set gives environmental variables, fish species and spatial coordinate
 The rows of \code{doubs$mil}, \code{doubs$poi} and \code{doubs$xy} are 30 sites along the Doubs, a French and Switzerland river.
 
 \code{doubs$mil} contains the following variables:
-das - distance to the source (km * 10), 
+dfs - distance from the source (km * 10), 
 alt - altitude (m), 
-pen (\eqn{\ln(x + 1)}{log(x + 1)} where \emph{x} is the slope (per mil * 100), 
-deb - minimum average debit (m3/s * 100), 
+slo (\eqn{\ln(x + 1)}{log(x + 1)} where \emph{x} is the slope (per mil * 100), 
+flo - minimum average stream flow (m3/s * 100), 
 pH (* 10), 
-dur - total hardness of water (mg/l of Calcium), 
- pho - phosphates (mg/l * 100), 
- nit - nitrates (mg/l * 100), 
+har - total hardness of water (mg/l of Calcium), 
+pho - phosphates (mg/l * 100), 
+nit - nitrates (mg/l * 100), 
 amm - ammonia nitrogen (mg/l * 100), 
 oxy - dissolved oxygen (mg/l * 10), 
-dbo - biological demand for oxygen (mg/l * 10).
+bdo - biological demand for oxygen (mg/l * 10).
 
 \code{doubs$poi} contains the abundance of the following fish species: \emph{Cottus gobio} (CHA), \emph{Salmo trutta fario} (TRU), 
 \emph{Phoxinus phoxinus} (VAI), \emph{Nemacheilus barbatulus} (LOC), \emph{Thymallus thymallus} (OMB), \emph{Telestes soufia agassizi} (BLA), 

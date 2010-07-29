@@ -4,21 +4,22 @@
 \docType{data}
 \title{Pair of Ecological Tables}
 \description{
-This data set gives environmental variables, fish species and spatial coordinates for 30 sites. 
+This data set gives environmental variables, fish species and spatial coordinates for 30 sites. This is the same as data set "doubs", but with all the names in English.
 }
 \usage{data(doubs)}
 \format{
-    \code{doubs} is a list with 3 components.
+    \code{doubs} is a list with 4 components.
     \describe{
-        \item{mil}{is a data frame with 30 rows (sites) and 11 environmental variables.}
-        \item{poi}{is a data frame with 30 rows (sites) and 27 fish species.}
+        \item{env}{is a data frame with 30 rows (sites) and 11 environmental variables.}
+        \item{fish}{is a data frame with 30 rows (sites) and 27 fish species.}
         \item{xy}{is a data frame with 30 rows (sites)  and 2 spatial coordinates.}
+        \item{species}{is a data frame with 27 rows (species)  and 4 columns (names).}
     }
 }
 \details{
-The rows of \code{doubs$mil}, \code{doubs$poi} and \code{doubs$xy} are 30 sites along the Doubs, a French and Switzerland river.
+The rows of \code{doubs$env}, \code{doubs$fish} and \code{doubs$xy} are 30 sites along the Doubs, a French and Switzerland river.
 
-\code{doubs$mil} contains the following variables:
+\code{doubs$env} contains the following variables:
 dfs - distance from the source (km * 10), 
 alt - altitude (m), 
 slo (\eqn{\ln(x + 1)}{log(x + 1)} where \emph{x} is the slope (per mil * 100), 
@@ -31,14 +32,17 @@ amm - ammonia nitrogen (mg/l * 100),
 oxy - dissolved oxygen (mg/l * 10), 
 bdo - biological demand for oxygen (mg/l * 10).
 
-\code{doubs$poi} contains the abundance of the following fish species: \emph{Cottus gobio} (CHA), \emph{Salmo trutta fario} (TRU), 
-\emph{Phoxinus phoxinus} (VAI), \emph{Nemacheilus barbatulus} (LOC), \emph{Thymallus thymallus} (OMB), \emph{Telestes soufia agassizi} (BLA), 
-\emph{Chondrostoma nasus} (HOT), \emph{Chondostroma toxostoma} (TOX), \emph{Leuciscus leuciscus} (VAN), \emph{Leuciscus cephalus cephalus} (CHE), 
-\emph{Barbus barbus} (BAR), \emph{Spirlinus bipunctatus} (SPI), \emph{Gobio gobio} (GOU), \emph{Esox lucius} (BRO), 
-\emph{Perca fluviatilis} (PER), \emph{Rhodeus amarus} (BOU), \emph{Lepomis gibbosus} (PSO), \emph{Scardinius erythrophtalmus} (ROT), 
-\emph{Cyprinus carpio} (CAR), \emph{Tinca tinca} (TAN), \emph{Abramis brama} (BCO), \emph{Ictalurus melas} (PCH), 
-\emph{Acerina cernua} (GRE), \emph{Rutilus rutilus} (GAR), \emph{Blicca bjoerkna} (BBO), \emph{Alburnus alburnus} (ABL), 
-\emph{Anguilla anguilla} (ANG). 
+\code{doubs$fish} contains the abundance of the following fish species: \emph{Cottus gobio} (Cogo), \emph{Salmo trutta fario} (Satr), 
+\emph{Phoxinus phoxinus} (Phph), \emph{Nemacheilus barbatulus} (Neba), \emph{Thymallus thymallus} (Thth), \emph{Telestes soufia agassizi} (Teso), 
+\emph{Chondrostoma nasus} (Chna), \emph{Chondostroma toxostoma} (Chto), \emph{Leuciscus leuciscus} (Lele), \emph{Leuciscus cephalus cephalus} (Lece), 
+\emph{Barbus barbus} (Baba), \emph{Spirlinus bipunctatus} (Spbi), \emph{Gobio gobio} (Gogo), \emph{Esox lucius} (Eslu), 
+\emph{Perca fluviatilis} (Pefl), \emph{Rhodeus amarus} (Rham), \emph{Lepomis gibbosus} (Legi), \emph{Scardinius erythrophtalmus} (Scer), 
+\emph{Cyprinus carpio} (Cyca), \emph{Tinca tinca} (Titi), \emph{Abramis brama} (Abbr), \emph{Ictalurus melas} (Icme), 
+\emph{Acerina cernua} (Acce), \emph{Rutilus rutilus} (Ruru), \emph{Blicca bjoerkna} (Blbj), \emph{Alburnus alburnus} (Alal), 
+\emph{Anguilla anguilla} (Anan).
+
+\code{doubs$species} contains the names of the 27 fish species. The four columns correspond to: 1 = scientific name (Genus species), 2 = French common name, 3 = English common name, 4 = Four character code.
+
 }
 \source{
  Verneaux, J. (1973) 
@@ -53,8 +57,8 @@ en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{35}, 4, 55--72.
 }
 \examples{
 data(doubs)
-pca1 <- dudi.pca(doubs$mil, scan = FALSE)
-pca2 <- dudi.pca(doubs$poi, scale = FALSE, scan = FALSE)
+pca1 <- dudi.pca(doubs$env, scan = FALSE)
+pca2 <- dudi.pca(doubs$fish, scale = FALSE, scan = FALSE)
 coiner1 <- coinertia(pca1, pca2, scan = FALSE)
 par(mfrow = c(3,3))
 s.corcircle(coiner1$aX)

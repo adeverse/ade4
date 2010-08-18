@@ -1,12 +1,6 @@
-2010-08-17 16:22  sdray
+2010-08-18 15:10  sdray
 
-	* DESCRIPTION: ---------- release of ade4 1.4-15 ----------
-
-
-2010-07-08 13:00  thioulouse
-
-	* man/doubs.Rd, data/doubs.rda: Translation of variable and species
-	  names into english
+	* DESCRIPTION: ---------- release of ade4 1.4-16 ----------
 
 2010-05-08 05:41  thioulouse
 

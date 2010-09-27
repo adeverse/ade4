@@ -9,8 +9,8 @@ This data set gives a morphological description of 28 species of the genus Corvu
 \format{
 \code{corvus} is data frame with 28 observations (the species) and 4 variables : 
 \describe{
-  \item{wing}{: wing length (cm)}
-   \item{bill}{: bill length (cm)}
+  \item{wing}{: wing length (mm)}
+   \item{bill}{: bill length (mm)}
    \item{habitat}{: habitat with two levels \code{clos} and \code{open}}
    \item{phylog}{: phylogeographic stock with three levels \code{amer}(America), \code{orien}(Oriental-Australian),
      \code{pale}(Paleoarctic-African)}

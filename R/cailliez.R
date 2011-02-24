@@ -1,4 +1,4 @@
-"cailliez" <- function (distmat, print = FALSE) {
+"cailliez" <- function (distmat, print = FALSE, tol = 1e-07, cor.zero = TRUE) {
     if (is.euclid(distmat)) {
         warning("Euclidean distance found : no correction need")
         return(distmat)
@@ -11,10 +11,15 @@
     m2 <- rbind(m2, 2 * bicenter.wt(distmat))
     m1 <- cbind(m1, m2)
     lambda <- eigen(m1, only = TRUE)$values
-    c <- max(Re(lambda)[Im(lambda) < 1e-08])
+    c <- max(Re(lambda)[Im(lambda) < tol])
     if (print) 
         cat(paste("Cailliez constant =", round(c, dig = 5), "\n"))
-    distmat <- as.dist(distmat + c)
+    if(cor.zero){
+      distmat[distmat > tol] <- distmat[distmat > tol] + c
+      distmat <- as.dist(distmat)
+    } else {      
+      distmat <- as.dist(distmat + c)
+    }
     attr(distmat, "call") <- match.call()
     attr(distmat, "method") <- "Cailliez"
     return(distmat)

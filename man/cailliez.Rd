@@ -7,11 +7,13 @@ This function computes the smallest positive constant that makes Euclidean a dis
 and applies it. 
 }
 \usage{
-cailliez(distmat, print = FALSE)
+cailliez(distmat, print = FALSE, tol = 1e-07, cor.zero = TRUE)
 }
 \arguments{
   \item{distmat}{an object of class \code{dist}}
   \item{print}{if TRUE, prints the eigenvalues of the matrix}
+  \item{tol}{a tolerance threshold for zero}
+  \item{cor.zero}{if TRUE, zero distances are not modified}
 }
 \value{
 an object of class \code{dist} containing a Euclidean distance matrix.

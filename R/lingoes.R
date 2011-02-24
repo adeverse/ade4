@@ -1,4 +1,4 @@
-"lingoes" <- function (distmat, print = FALSE) {
+"lingoes" <- function (distmat, print = FALSE, tol = 1e-07, cor.zero = TRUE) {
     if (is.euclid(distmat)) {
         warning("Euclidean distance found : no correction need")
         return(distmat)
@@ -7,7 +7,13 @@
     delta <- -0.5 * bicenter.wt(distmat * distmat)
     lambda <- eigen(delta, sym = TRUE)$values
     lder <- lambda[ncol(distmat)]
-    distmat <- sqrt(distmat * distmat + 2 * abs(lder))
+    if(cor.zero){
+      distmat <- distmat * distmat
+      distmat[distmat > tol] <- sqrt(distmat[distmat > tol] + 2 * abs(lder))
+    } else {      
+      distmat <- sqrt(distmat * distmat + 2 * abs(lder))
+    }
+    
     if (print) 
         cat("Lingoes constant =", round(abs(lder), dig = 6), 
             "\n")

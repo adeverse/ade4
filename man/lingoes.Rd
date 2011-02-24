@@ -6,11 +6,13 @@
 transforms a distance matrix in a Euclidean one. 
 }
 \usage{
-lingoes(distmat, print = FALSE)
+lingoes(distmat, print = FALSE, tol = 1e-07, cor.zero = TRUE)
 }
 \arguments{
   \item{distmat}{an object of class \code{dist}}
   \item{print}{if TRUE, prints the eigenvalues of the matrix}
+  \item{tol}{a tolerance threshold for zero}
+  \item{cor.zero}{if TRUE, zero distances are not modified}
 }
 \value{
 returns an object of class \code{dist} with a Euclidean distance

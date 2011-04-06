@@ -183,3 +183,24 @@
     eval(as.call(appel), sys.frame(0))
 }
 
+
+
+screeplot.dudi <- function (x, npcs = length(x$eig), type = c("barplot","lines"), main = deparse(substitute(x)), col = c(rep("black",x$nf),rep("grey",npcs-x$nf)), ...){  
+  type <- match.arg(type)
+  pcs <- x$eig
+  xp <- seq_len(npcs)
+  if (type == "barplot") 
+    barplot(pcs[xp], names.arg = 1:npcs, main = main, ylab = "Inertia", xlab = "Axis", col = col, ...)
+  else {
+    plot(xp, pcs[xp], type = "b", axes = FALSE, main = main, xlab = "Axis", ylab = "Inertia", col = col, ...)
+    axis(2)
+    axis(1, at = xp, labels = 1:npcs)
+  }
+  invisible()
+  
+}
+
+biplot.dudi <- function (x, ...){  
+  scatter(x, ...)
+  
+}

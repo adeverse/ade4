@@ -24,7 +24,7 @@ scatter(x, \dots)
     a multivariate analysis}
   \item{npcs}{the number of components to be plotted}
   \item{type}{the type of plot}
-  \item{col}{the title of the plot}
+  \item{main}{the title of the plot}
   \item{col}{a vector of colors}
   \item{\dots}{further arguments passed to or from other methods}
 }

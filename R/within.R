@@ -1,40 +1,49 @@
-"within" <- function (dudi, fac, scannf = TRUE, nf = 2) {
-    if (!inherits(dudi, "dudi")) 
+wca <- function (x, ...) UseMethod("wca")
+
+"wca.dudi" <- function (x, fac, scannf = TRUE, nf = 2, ...) {
+    if (!inherits(x, "dudi")) 
         stop("Object of class dudi expected")
     if (!is.factor(fac)) 
         stop("factor expected")
-    lig <- nrow(dudi$tab)
+    lig <- nrow(x$tab)
     if (length(fac) != lig) 
         stop("Non convenient dimension")
-    cla.w <- tapply(dudi$lw, fac, sum)
+    cla.w <- tapply(x$lw, fac, sum)
     mean.w <- function(x, w, fac, cla.w) {
         z <- x * w
         z <- tapply(z, fac, sum)/cla.w
         return(z)
     }
-    tabmoy <- apply(dudi$tab, 2, mean.w, w = dudi$lw, fac = fac, 
+    tabmoy <- apply(x$tab, 2, mean.w, w = x$lw, fac = fac, 
         cla.w = cla.w)
-    tabw <- unlist(tapply(dudi$lw, fac, sum))
+    tabw <- unlist(tapply(x$lw, fac, sum))
     tabw <- tabw/sum(tabw)
-    tabwit <- dudi$tab - tabmoy[fac, ]
-    X <- as.dudi(tabwit, dudi$cw, dudi$lw, scannf = scannf, nf = nf, 
+    tabwit <- x$tab - tabmoy[fac, ]
+    res <- as.dudi(tabwit, x$cw, x$lw, scannf = scannf, nf = nf, 
         call = match.call(), type = "wit")
-    X$ratio <- sum(X$eig)/sum(dudi$eig)
-    U <- as.matrix(X$c1) * unlist(X$cw)
-    U <- data.frame(as.matrix(dudi$tab) %*% U)
-    row.names(U) <- row.names(dudi$tab)
-    names(U) <- names(X$li)
-    X$ls <- U
-    U <- as.matrix(X$c1) * unlist(X$cw)
-    U <- data.frame(t(as.matrix(dudi$c1)) %*% U)
-    row.names(U) <- names(dudi$li)
-    names(U) <- names(X$li)
-    X$as <- U
-    X$tabw <- tabw
-    X$fac <- fac
-    class(X) <- c("within", "dudi")
-    return(X)
-} 
+    res$ratio <- sum(res$eig)/sum(x$eig)
+    U <- as.matrix(res$c1) * unlist(res$cw)
+    U <- data.frame(as.matrix(x$tab) %*% U)
+    row.names(U) <- row.names(x$tab)
+    names(U) <- names(res$li)
+    res$ls <- U
+    U <- as.matrix(res$c1) * unlist(res$cw)
+    U <- data.frame(t(as.matrix(x$c1)) %*% U)
+    row.names(U) <- names(x$li)
+    names(U) <- names(res$li)
+    res$as <- U
+    res$tabw <- tabw
+    res$fac <- fac
+    class(res) <- c("within", "dudi")
+    return(res)
+}
+
+"within" <- function (dudi, fac, scannf = TRUE, nf = 2) {
+  .Deprecated("wca", "ade4", "To avoid some name conflicts, the 'within' function is now deprecated. Please use 'wca' instead")
+  res <- wca(x=dudi, fac=fac, scannf = scannf, nf = nf)
+  res$call <- match.call()
+  return(res)
+}
 
 "plot.within" <- function (x, xax = 1, yax = 2, ...) {
     if (!inherits(x, "within")) 
@@ -87,7 +96,7 @@
     sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
     sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths")
     sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths")
-    sumry[4, ] <- c("$tabw", length(x$tabw), mode(x$tabw), "table weigths")
+    sumry[4, ] <- c("$tabw", length(x$tabw), mode(x$tabw), "class weigths")
     sumry[5, ] <- c("$fac", length(x$fac), mode(x$fac), "factor for grouping")
     class(sumry) <- "table"
     print(sumry)

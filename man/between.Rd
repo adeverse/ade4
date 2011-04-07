@@ -1,41 +1,42 @@
 \encoding{latin1}
-\name{between}
+\name{bca}
 \alias{between}
-\alias{print.between}
-\alias{plot.between}
+\alias{bca}
+\alias{bca.dudi}
 \title{Between-Class Analysis}
 \description{
-Performs a particular case of a Principal Component Analysis with respect to Instrumental Variables,
-in which there is only one instrumental variable, and it is a factor.
+Performs a particular case of a Principal Component Analysis with
+respect to Instrumental Variables (pcaiv), in which there is only a
+single factor as explanatory variable.
 }
 \usage{
 between(dudi, fac, scannf = TRUE, nf = 2)
-\method{plot}{between}(x, xax = 1, yax = 2, \dots) 
-\method{print}{between}(x, \dots) 
+\method{bca}{dudi}(x, fac, scannf = TRUE, nf = 2, \dots) 
 }
 \arguments{
-  \item{dudi}{a duality diagram, object of class \code{\link{dudi}} from one of the functions dudi.coa, dudi.pca, ...}
+  \item{dudi}{a duality diagram, object of class \code{\link{dudi}}
+    obtained from the functions \code{dudi.coa}, \code{dudi.pca},...}
+  \item{x}{a duality diagram, object of class \code{\link{dudi}} from
+    one of the functions \code{dudi.coa}, \code{dudi.pca},...}
   \item{fac}{a factor partitioning the rows of \code{dudi$tab} in classes}
-  \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
+  \item{scannf}{a logical value indicating whether the eigenvalues barplot should be displayed}
   \item{nf}{if scannf FALSE, a numeric value indicating the number of kept axes}
-  \cr
-  \item{x}{an object of class 'between'}
-  \item{xax, yax}{the numbers of the x-axis and the y-axis}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
-Returns a list of subclass 'between' of class 'dudi' (see \code{\link{dudi}})
-  \item{tab}{a data frame class-variables, array of variables means in each class}
+Returns a list of class \code{\link{dudi}}, subclass 'between' containing
+  \item{tab}{a data frame class-variables containing the means per class
+  for each variable}
   \item{cw}{a numeric vector of the column weigths}
-  \item{lw}{a numeric vector of the group weigths}
+  \item{lw}{a numeric vector of the class weigths}
   \item{eig}{a numeric vector with all the eigenvalues}
-  \item{rank}{an integer}
+  \item{rank}{the rank of the analysis}
   \item{nf}{an integer value indicating the number of kept axes}
   \item{c1}{a data frame with the column normed scores}
   \item{l1}{a data frame with the class normed scores}
   \item{co}{a data frame  with the column coordinates}
   \item{li}{a data frame with the class coordinates}
-  \item{call}{the origin}
+  \item{call}{the matching call}
   \item{ratio}{the bewteen-class inertia percentage}
   \item{ls}{a data frame with the row coordinates}
   \item{as}{a data frame containing the projection of inertia axes onto between axes}
@@ -44,6 +45,14 @@ Returns a list of subclass 'between' of class 'dudi' (see \code{\link{dudi}})
 Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique
 I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
+
+\note{
+To avoid conflict names with the \code{base:::within} function, the
+function \code{within} is now deprecated and will be removed. To be
+consistent, the \code{between} function is also deprecated and
+is replaced by the method \code{bca.dudi} of the new generic \code{bca} function. 
+}
+
 \author{
 Daniel Chessel \cr
 Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
@@ -57,8 +66,8 @@ s.class(pca1$li, meaudret$plan$sta,
 pca2 <- dudi.pca(meaudret$fau, scal = FALSE, scan = FALSE, nf = 4)
 s.class(pca2$li, meaudret$pla$sta,
     sub = "Principal Component Analysis (fau)", csub = 1.75)
-bet1 <- between(pca1, meaudret$plan$sta, scan = FALSE, nf = 2)
-bet2 <- between(pca2, meaudret$plan$sta, scan = FALSE, nf = 2)
+bet1 <- bca(pca1, meaudret$plan$sta, scan = FALSE, nf = 2)
+bet2 <- bca(pca2, meaudret$plan$sta, scan = FALSE, nf = 2)
 s.class(bet1$ls, meaudret$plan$sta,
     sub = "Between sites PCA (mil)", csub = 1.75)
 s.class(bet2$ls, meaudret$plan$sta,

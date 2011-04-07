@@ -1,13 +1,9 @@
-withincoinertia <-
-function (obj, fac, scannf = TRUE, nf = 2) 
-{
-  
-
-  if (!inherits(obj, "coinertia")) 
+wca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...){
+  if (!inherits(x, "coinertia")) 
     stop("Object of class coinertia expected")
   if (!is.factor(fac)) 
     stop("factor expected")
-  appel <- as.list(obj$call)    
+  appel <- as.list(x$call)    
   dudiX <- eval(appel$dudiX, sys.frame(0))
   dudiY <- eval(appel$dudiY, sys.frame(0))
   ligX <- nrow(dudiX$tab)
@@ -22,7 +18,7 @@ function (obj, fac, scannf = TRUE, nf = 2)
   cla.w <- tapply(dudiX$lw, fac, sum)
   tabmoyX <- apply(dudiX$tab, 2, mean.w, w = dudiX$lw, fac = fac, 
                    cla.w = cla.w)
-
+  
   tabmoyY <- apply(dudiY$tab, 2, mean.w, w = dudiY$lw, fac = fac, 
                    cla.w = cla.w)
   tabwitX <- dudiX$tab - tabmoyX[fac, ]
@@ -37,52 +33,59 @@ function (obj, fac, scannf = TRUE, nf = 2)
   dudiwitY <- as.dudi(tabwitY, dudiY$cw, dudiY$lw, scannf = FALSE, 
                       nf = nf, call = match.call(), type = "wit")
   
-  X <- coinertia(dudiwitX, dudiwitY, scannf = scannf, 
-                 nf = nf)
-  X$call <- match.call()
+  res <- coinertia(dudiwitX, dudiwitY, scannf = scannf, 
+                   nf = nf)
+  res$call <- match.call()
   ## cov=covB+covW, donc ce n'est pas vrai pour les carres et donc la coinertie
-  ##X$ratio <- sum(X$eig)/sum(obj$eig)
-  U <- as.matrix(X$l1) * unlist(X$lw)
+  ##res$ratio <- sum(res$eig)/sum(x$eig)
+  U <- as.matrix(res$l1) * unlist(res$lw)
   U <- data.frame(as.matrix(dudiY$tab) %*% U)
   row.names(U) <- row.names(dudiY$tab)
-  names(U) <- names(X$l1)
-  X$lsY <- U
+  names(U) <- names(res$l1)
+  res$lsY <- U
   
-  U <- as.matrix(X$c1) * unlist(X$cw)
+  U <- as.matrix(res$c1) * unlist(res$cw)
   U <- data.frame(as.matrix(dudiX$tab) %*% U)
   row.names(U) <- row.names(dudiX$tab)
-  names(U) <- names(X$c1)
-  X$lsX <- U
-
-  ratioX<-unlist(X$mX[1,]/X$lX[1,])
-  X$msX<-data.frame(t(t(X$lsX)*ratioX))
-  row.names(X$msX) <- row.names(X$lsX)
-  names(X$msX) <- names(X$mX)
-
-  ratioY<-unlist(X$mY[1,]/X$lY[1,])
-  X$msY<-data.frame(t(t(X$lsY)*ratioY))
-  row.names(X$msY) <- row.names(X$lsY)
-  names(X$msY) <- names(X$mY)
-
-  U <- as.matrix(X$l1) * unlist(X$lw)
-  U <- data.frame(t(as.matrix(obj$l1)) %*% U)
-  row.names(U) <- paste("AxcY", (1:obj$nf), sep = "")
-  names(U) <- paste("AxwcY", (1:X$nf), sep = "")
-  X$acY <- U
-  names(X$aY)<-names(X$lY)<-names(X$lsY)<-names(X$acY)
+  names(U) <- names(res$c1)
+  res$lsX <- U
   
-  U <- as.matrix(X$c1) * unlist(X$cw)
-  U <- data.frame(t(as.matrix(obj$c1)) %*% U)
-  row.names(U) <- paste("AxcX", (1:obj$nf), sep = "")
-  names(U) <- paste("AxwcX", (1:X$nf), sep = "")
-  X$acX <- U
-  names(X$aX)<-names(X$lX)<-names(X$lsX)<-names(X$acX)
+  ratioX<-unlist(res$mX[1,]/res$lX[1,])
+  res$msX<-data.frame(t(t(res$lsX)*ratioX))
+  row.names(res$msX) <- row.names(res$lsX)
+  names(res$msX) <- names(res$mX)
   
+  ratioY<-unlist(res$mY[1,]/res$lY[1,])
+  res$msY<-data.frame(t(t(res$lsY)*ratioY))
+  row.names(res$msY) <- row.names(res$lsY)
+  names(res$msY) <- names(res$mY)
   
+  U <- as.matrix(res$l1) * unlist(res$lw)
+  U <- data.frame(t(as.matrix(x$l1)) %*% U)
+  row.names(U) <- paste("AxcY", (1:x$nf), sep = "")
+  names(U) <- paste("AxwcY", (1:res$nf), sep = "")
+  res$acY <- U
+  names(res$aY)<-names(res$lY)<-names(res$lsY)<-names(res$acY)
   
-  class(X) <- c("witcoi","dudi")
-  return(X)
+  U <- as.matrix(res$c1) * unlist(res$cw)
+  U <- data.frame(t(as.matrix(x$c1)) %*% U)
+  row.names(U) <- paste("AxcX", (1:x$nf), sep = "")
+  names(U) <- paste("AxwcX", (1:res$nf), sep = "")
+  res$acX <- U
+  names(res$aX)<-names(res$lX)<-names(res$lsX)<-names(res$acX)
+  
+  class(res) <- c("witcoi","dudi")
+  return(res)
 }
+
+
+withincoinertia <-  function (obj, fac, scannf = TRUE, nf = 2){
+  .Deprecated("wca", "ade4", "To avoid some name conflicts, the 'withincoinertia' function is now deprecated. Please use 'wca.coinertia' instead")
+  res <- wca(x=obj, fac=fac, scannf = scannf, nf = nf)
+  res$call <- match.call()
+  return(res)
+}
+
 
 plot.witcoi <-
 function(x, xax = 1, yax = 2, ...) {

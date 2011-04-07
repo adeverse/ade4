@@ -1,38 +1,48 @@
-"between" <- function (dudi, fac, scannf = TRUE, nf = 2) {
-    if (!inherits(dudi, "dudi")) 
+"bca" <- function (x, ...) UseMethod("bca")
+
+"bca.dudi" <- function (x, fac, scannf = TRUE, nf = 2, ...) {
+    if (!inherits(x, "dudi")) 
         stop("Object of class dudi expected")
     if (!is.factor(fac)) 
         stop("factor expected")
-    lig <- nrow(dudi$tab)
+    lig <- nrow(x$tab)
     if (length(fac) != lig) 
         stop("Non convenient dimension")
-    cla.w <- tapply(dudi$lw, fac, sum)
+    cla.w <- tapply(x$lw, fac, sum)
     mean.w <- function(x, w, fac, cla.w) {
         z <- x * w
         z <- tapply(z, fac, sum)/cla.w
         return(z)
     }
-    tabmoy <- apply(dudi$tab, 2, mean.w, w = dudi$lw, fac = fac, 
+    tabmoy <- apply(x$tab, 2, mean.w, w = x$lw, fac = fac, 
         cla.w = cla.w)
     tabmoy <- data.frame(tabmoy)
     row.names(tabmoy) <- levels(fac)
-    names(tabmoy) <- names(dudi$tab)
-    X <- as.dudi(tabmoy, dudi$cw, as.vector(cla.w), scannf = scannf, 
+    names(tabmoy) <- names(x$tab)
+    res <- as.dudi(tabmoy, x$cw, as.vector(cla.w), scannf = scannf, 
         nf = nf, call = match.call(), type = "bet")
-    X$ratio <- sum(X$eig)/sum(dudi$eig)
-    U <- as.matrix(X$c1) * unlist(X$cw)
-    U <- data.frame(as.matrix(dudi$tab) %*% U)
-    row.names(U) <- row.names(dudi$tab)
-    names(U) <- names(X$c1)
-    X$ls <- U
-    U <- as.matrix(X$c1) * unlist(X$cw)
-    U <- data.frame(t(as.matrix(dudi$c1)) %*% U)
-    row.names(U) <- names(dudi$li)
-    names(U) <- names(X$li)
-    X$as <- U
-    class(X) <- c("between", "dudi")
-    return(X)
+    res$ratio <- sum(res$eig)/sum(x$eig)
+    U <- as.matrix(res$c1) * unlist(res$cw)
+    U <- data.frame(as.matrix(x$tab) %*% U)
+    row.names(U) <- row.names(x$tab)
+    names(U) <- names(res$c1)
+    res$ls <- U
+    U <- as.matrix(res$c1) * unlist(res$cw)
+    U <- data.frame(t(as.matrix(x$c1)) %*% U)
+    row.names(U) <- names(x$li)
+    names(U) <- names(res$li)
+    res$as <- U
+    class(res) <- c("between", "dudi")
+    return(res)
 }
+
+"between" <- function (dudi, fac, scannf = TRUE, nf = 2) {
+  .Deprecated("bca", "ade4", "To avoid some name conflicts, the 'between' function is now deprecated. Please use 'bca' instead")
+  res <- bca(x=dudi, fac=fac, scannf = scannf, nf = nf)
+  res$call <- match.call()
+  return(res)
+}
+
 
 "plot.between" <- function (x, xax = 1, yax = 2, ...) {
     bet <- x

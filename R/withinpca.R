@@ -16,7 +16,7 @@
     tabw <- tabw/sum(tabw)
     tabwit <- df
     tabwit <- tabwit - tabmoy[fac, ]
-    scaling <- scaling[1]
+    scaling <- match.arg(scaling)
     if (scaling == "total") {
         tabwit <- scalewt(tabwit, center = FALSE, scale = TRUE)
     }
@@ -27,11 +27,11 @@
             tabwit[fac == j, ] <- w
         }
     }
-    else stop("unknown scaling value")
+    
     tabwit <- data.frame(tabwit)
-    for (i in 1:nrow(df)) {
-        df[i, ] <- tabwit[i, ] + tabmoy[fac[i], ]
-    }
+    
+    df <- tabwit + tabmoy[fac, ]
+    
     dudi <- as.dudi(df, row.w = rep(1, nrow(df))/nrow(df), col.w = rep(1, 
         ncol(df)), scannf = FALSE, nf = 4, call = match.call(), 
         type = "tmp")

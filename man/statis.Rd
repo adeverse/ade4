@@ -23,13 +23,13 @@ statis(X, scannf = TRUE, nf = 3, tol = 1e-07)
 }
 \value{
 \code{statis} returns a list of class 'statis' containing :
-  \item{$RV}{a matrix with the all RV coefficients}
+  \item{RV}{a matrix with the all RV coefficients}
   \item{RV.eig}{a numeric vector with all the eigenvalues}
   \item{RV.coo}{a data frame with the array scores}
   \item{tab.names}{a vector of characters with the names of the arrays}
-  \item{$RV.tabw}{a numeric vector with the array weigths}
-  \item{nf}{an integer indicating the number of kept axes}
-  \item{rank}{an integer indicating the rank of the studied matrix}
+  \item{RV.tabw}{a numeric vector with the array weigths}
+  \item{C.nf}{an integer indicating the number of kept axes}
+  \item{C.rank}{an integer indicating the rank of the analysis}
   \item{C.li}{a data frame with the row coordinates}
   \item{C.Co}{a data frame with the column coordinates}
   \item{C.T4}{a data frame with the principal vectors (for each table)}

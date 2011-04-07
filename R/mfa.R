@@ -18,23 +18,24 @@
     ncw <- NULL
     tab.names <- names(X)[1:nbloc]
     auxinames <- ktab.util.names(X)
-    if (option[1] == "lambda1") {
+    option <- match.arg(option)
+    if (option == "lambda1") {
         for (i in 1:nbloc) {
             ncw <- c(ncw, rep(1/sepan$Eig[rank.fac == i][1], 
                 sepan$blo[i]))
         }
     }
-    else if (option[1] == "inertia") {
+    else if (option == "inertia") {
         for (i in 1:nbloc) {
             ncw <- c(ncw, rep(1/sum(sepan$Eig[rank.fac == i]), 
                 sepan$blo[i]))
         }
     }
-    else if (option[1] == "uniform") 
+    else if (option == "uniform") 
         ncw <- rep(1, sum(sepan$blo))
-    else if (option[1] == "internal") 
+    else if (option == "internal") 
         ncw <- rep(X$tabw, sepan$blo)
-    else stop("unknown option")
+  
     ncw <- cw * ncw
     tab <- X[[1]]
     for (i in 2:nbloc) {

@@ -45,9 +45,7 @@ mfa(X, option = c("lambda1", "inertia", "uniform", "internal"),
   \item{TC}{a data frame with the factors associated to the columns (indicators of table)}
   \item{blo}{a vector indicating the number of variables for each table}
   \item{lisup}{a data frame with the projections of normalized scores of rows for each table}
-  \item{cg}{a data frame with the gravity center for the lisup}
   \item{link}{a data frame containing the projected inertia and the links between the arrays and the reference array}
-  \item{corli}{a data frame giving the correlations between the \$lisup and the \$li}
 }
 \references{Escofier, B. and Pagès, J. (1994) Multiple factor analysis (AFMULT package), \emph{Computational Statistics and Data Analysis}, \bold{18}, 121--140.
 }

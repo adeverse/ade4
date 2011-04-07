@@ -64,7 +64,7 @@
     names(w) <- names(X$l1)
     X$fa <- w
     fmla <- as.formula(paste("~ ", paste(names(df), collapse = "+")))
-    w <- scalewt(model.matrix(fmla, data = df), weights) * weights
+    w <- scalewt(model.matrix(fmla, data = df)[,-1], weights) * weights
     w <- t(w) %*% as.matrix(X$l1)
     w <- data.frame(w)
     X$cor <- w

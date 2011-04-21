@@ -60,9 +60,9 @@ fou1
 plot(fou1)
 
 data(meaudret)
-l1 <- split(meaudret$fau, meaudret$plan$dat)
+l1 <- split(meaudret$spe, meaudret$design$season)
 l1 <- lapply(l1, function(x) 
-    {row.names(x) <- paste("Sta",1:5,sep="");x})
+    {row.names(x) <- paste("Sit",1:5,sep="");x})
 fou2 <- foucart(l1, scan = FALSE)
 kplot(fou2, clab.r = 2)
 }

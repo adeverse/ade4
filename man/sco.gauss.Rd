@@ -44,9 +44,9 @@ The matched call.
 \author{Jean Thioulouse, Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 \examples{
 data(meau)
-acpmil <- dudi.pca(meau$mil, scannf=FALSE)
-dffac <- cbind.data.frame(meau$plan$dat, meau$plan$sta)
-sco.gauss(acpmil$li[,1], dffac, clabel = 2, csub = 2)
+envpca <- dudi.pca(meau$env, scannf=FALSE)
+dffac <- cbind.data.frame(meau$design$season, meau$design$site)
+sco.gauss(envpca$li[,1], dffac, clabel = 2, csub = 2)
 }
 \keyword{multivariate}
 \keyword{hplot}

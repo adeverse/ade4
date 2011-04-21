@@ -44,10 +44,10 @@ The matched call.
 \author{Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 \examples{
 data(meau)
-acpmil <- dudi.pca(meau$mil, scannf=FALSE)
+envpca <- dudi.pca(meau$env, scannf=FALSE)
 par(mfrow=c(2,1))
-sco.class(acpmil$li[,1],meau$plan$sta, col = 1:6)
-sco.class(acpmil$li[,1],meau$plan$dat, col = 1:4, reverse = TRUE)
+sco.class(envpca$li[,1],meau$design$season, col = 1:6)
+sco.class(envpca$li[,1],meau$design$season, col = 1:4, reverse = TRUE)
 }
 \keyword{multivariate}
 \keyword{hplot}

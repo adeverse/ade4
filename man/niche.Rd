@@ -52,8 +52,8 @@ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(doubs)
-dudi1 <- dudi.pca(doubs$mil, scale = TRUE, scan = FALSE, nf = 3)
-nic1 <- niche(dudi1, doubs$poi, scann = FALSE)
+dudi1 <- dudi.pca(doubs$env, scale = TRUE, scan = FALSE, nf = 3)
+nic1 <- niche(dudi1, doubs$fish, scann = FALSE)
 
 par(mfrow = c(2,2))
 s.traject(dudi1$li, clab = 0)
@@ -62,8 +62,8 @@ s.corcircle(nic1$as)
 s.arrow(nic1$c1)
 
 par(mfrow = c(5,6))
-for (i in 1:27) s.distri(nic1$ls, as.data.frame(doubs$poi[,i]),
-    csub = 2, sub = names(doubs$poi)[i])
+for (i in 1:27) s.distri(nic1$ls, as.data.frame(doubs$fish[,i]),
+    csub = 2, sub = names(doubs$fish)[i])
 
 par(mfrow = c(1,1))
 s.arrow(nic1$li, clab = 0.7)

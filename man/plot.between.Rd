@@ -32,18 +32,18 @@ Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 \examples{
 data(meaudret)
 par(mfrow = c(2,2))
-pca1 <- dudi.pca(meaudret$mil, scan = FALSE, nf = 4)
-s.class(pca1$li, meaudret$plan$sta,
-    sub = "Principal Component Analysis (mil)", csub = 1.75)
-pca2 <- dudi.pca(meaudret$fau, scal = FALSE, scan = FALSE, nf = 4)
-s.class(pca2$li, meaudret$pla$sta,
-    sub = "Principal Component Analysis (fau)", csub = 1.75)
-bet1 <- bca(pca1, meaudret$plan$sta, scan = FALSE, nf = 2)
-bet2 <- bca(pca2, meaudret$plan$sta, scan = FALSE, nf = 2)
-s.class(bet1$ls, meaudret$plan$sta,
-    sub = "Between sites PCA (mil)", csub = 1.75)
-s.class(bet2$ls, meaudret$plan$sta,
-    sub = "Between sites PCA (fau)", csub = 1.75)
+pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 4)
+s.class(pca1$li, meaudret$design$site,
+    sub = "Principal Component Analysis (env)", csub = 1.75)
+pca2 <- dudi.pca(meaudret$spe, scal = FALSE, scan = FALSE, nf = 4)
+s.class(pca2$li, meaudret$design$site,
+    sub = "Principal Component Analysis (spe)", csub = 1.75)
+bet1 <- bca(pca1, meaudret$design$site, scan = FALSE, nf = 2)
+bet2 <- bca(pca2, meaudret$design$site, scan = FALSE, nf = 2)
+s.class(bet1$ls, meaudret$design$site,
+    sub = "Between sites PCA (env)", csub = 1.75)
+s.class(bet2$ls, meaudret$design$site,
+    sub = "Between sites PCA (spe)", csub = 1.75)
 
 par(mfrow = c(1,1))
 coib <- coinertia(bet1, bet2, scann = FALSE)

@@ -34,11 +34,11 @@ Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 \examples{
 data(meaudret)
 par(mfrow = c(2,2))
-pca1 <- dudi.pca(meaudret$mil, scan = FALSE, nf = 4)
-s.traject(pca1$li, meaudret$plan$sta, 
+pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 4)
+s.traject(pca1$li, meaudret$design$site, 
     sub = "Principal Component Analysis", csub = 1.5)
-wit1 <- wca(pca1, meaudret$plan$sta, scan = FALSE, nf = 2)
-s.traject(wit1$li, meaudret$plan$sta, 
+wit1 <- wca(pca1, meaudret$design$site, scan = FALSE, nf = 2)
+s.traject(wit1$li, meaudret$design$site, 
     sub = "Within site Principal Component Analysis", csub = 1.5)
 s.corcircle (wit1$as)
 par(mfrow = c(1,1))

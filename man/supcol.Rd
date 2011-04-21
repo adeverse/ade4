@@ -34,9 +34,9 @@ rpjdl.coa$co[1:3,]
 supcol (rpjdl.coa,rpjdl$fau[,1:3])$cosup # the same
 
 data(doubs)
-dudi1 <- dudi.pca(doubs$poi, scal = FALSE, scan = FALSE)
+dudi1 <- dudi.pca(doubs$fish, scal = FALSE, scan = FALSE)
 s.arrow(dudi1$co)
-s.arrow(supcol.default(dudi1,data.frame(scalewt(doubs$mil)))$cosup,
+s.arrow(supcol.default(dudi1,data.frame(scalewt(doubs$env)))$cosup,
     add.p = TRUE, clab = 2)
 symbols(0, 0, circles = 1, inches = FALSE, add = TRUE)
 }

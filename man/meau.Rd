@@ -11,17 +11,17 @@ and Ephemeroptera Species.
 \format{
 \code{meau} is a list of 3 components.
 \describe{
-   \item{mil}{is a data frame with 24 sites and 10 physicochemical variables.}
+   \item{env}{is a data frame with 24 sites and 10 physicochemical variables.}
    \item{fau}{is a data frame with 24 sites and 13 Ephemeroptera Species.}
-   \item{plan}{is a data frame with 24 sites and 2 factors.
+   \item{design}{is a data frame with 24 sites and 2 factors.
             \itemize{
-                \item \code{dat}: is a factor with 4 levels-seasons.
-                \item \code{sta}: is a factor with 6 levels-sites.
+                \item \code{season}: is a factor with 4 levels = seasons.
+                \item \code{site}: is a factor with 6 levels = sites.
             }
         }
     }
 }
-\details{Data set equivalents to \code{\link{meaudret}}: one site (6) along the Bourne, a Meaudret affluent and
+\details{Data set equivalents to \code{\link{meaudret}}, except that one site (6) along the Bourne (a Meaudret affluent) and
 one physico chemical variable - the oxygen concentration were added.
 }
 \source{
@@ -36,11 +36,11 @@ tables. \emph{Ecology}, \bold{85}, 1, 272--283.
 \examples{
 data(meau)
 par(mfrow = c(2,2))
-pca1 <- dudi.pca(meau$mil, scan = FALSE, nf = 4)
-s.class(pca1$li, meau$plan$dat, 
+pca1 <- dudi.pca(meau$env, scan = FALSE, nf = 4)
+s.class(pca1$li, meau$design$season, 
     sub = "Principal Component Analysis")
-pca2 <- between(pca1, meau$plan$dat, scan = FALSE, nf = 2)
-s.class(pca2$ls, meau$plan$dat, sub = "Between dates Principal Component Analysis")
+pca2 <- between(pca1, meau$design$season, scan = FALSE, nf = 2)
+s.class(pca2$ls, meau$design$season, sub = "Between seasons Principal Component Analysis")
 s.corcircle(pca1$co)
 s.corcircle(pca2$as)
 }

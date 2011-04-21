@@ -30,9 +30,9 @@ ktabeuro <- ktab.list.dudi(list(pca1, pca2, pca3),
 kplot(sepan(ktabeuro), mfr = c(2,2), clab.c = 1.5)
 
 data(meaudret)
-w1 <- split(meaudret$mil,meaudret$plan$dat)
+w1 <- split(meaudret$env,meaudret$design$season)
 ll <- lapply(w1, dudi.pca, scann = FALSE)
-kta <- ktab.list.dudi(ll, rownames <- paste("Station", 1:5, sep=""))
+kta <- ktab.list.dudi(ll, rownames <- paste("Site", 1:5, sep=""))
 kplot(sepan(kta), clab.r = 1.5, clab.c = 0.75)
 
 data(jv73)

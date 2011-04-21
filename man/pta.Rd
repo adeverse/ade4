@@ -59,7 +59,7 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(meaudret)
-wit1 <- withinpca(meaudret$mil, meaudret$plan$dat, scan = FALSE, 
+wit1 <- withinpca(meaudret$env, meaudret$design$season, scan = FALSE, 
     scal = "partial")
 kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5"), 4))
 kta2 <- t(kta1)

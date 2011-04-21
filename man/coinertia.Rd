@@ -61,8 +61,8 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(doubs)
-dudi1 <- dudi.pca(doubs$mil, scale = TRUE, scan = FALSE, nf = 3)
-dudi2 <- dudi.pca(doubs$poi, scale = FALSE, scan = FALSE, nf = 2)
+dudi1 <- dudi.pca(doubs$env, scale = TRUE, scan = FALSE, nf = 3)
+dudi2 <- dudi.pca(doubs$fish, scale = FALSE, scan = FALSE, nf = 2)
 coin1 <- coinertia(dudi1,dudi2, scan = FALSE, nf = 2)
 s.arrow(coin1$l1, clab = 0.7)
 

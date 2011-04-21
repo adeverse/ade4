@@ -11,19 +11,19 @@ and Ephemeroptera Species.
 \format{
     \code{meaudret} is a list of 4 components.
 \describe{
-        \item{mil}{is a data frame with 20 sites and 9 variables.}
+        \item{env}{is a data frame with 20 sites and 9 variables.}
         \item{fau}{is a data frame with 20 sites and 13 Ephemeroptera Species.}
-        \item{plan}{is a data frame with 20 sites and 2 factors.
+        \item{design}{is a data frame with 20 sites and 2 factors.
             \itemize{
-                \item \code{dat} is a factor with 4 levels-seasons.
-                \item \code{sta} is a factor with 5 levels-sites along the Meaudret river.
+                \item \code{season} is a factor with 4 levels = seasons.
+                \item \code{site} is a factor with 5 levels = sites along the Meaudret river.
             }
         }
-       \item{fau.names}{is a character vector containing the names of the 13 species.}
+       \item{spe.names}{is a character vector containing the names of the 13 species.}
     }
 }
-\details{Data set equivalents to \code{\link{meau}}: the site (6) along the Bourne, a Meaudret affluent, was removed ; 
-the oxygen concentration were removed from the physico-chemical data frame.
+\details{Data set equivalents to \code{\link{meau}}: site (6) on the Bourne (a Meaudret affluent) and
+oxygen concentration were removed.
 }
 \source{
 Pegaz-Maucet, D. (1980) 
@@ -37,11 +37,11 @@ tables. \emph{Ecology}, \bold{85}, 1, 272--283.
 \examples{
 data(meaudret)
 par(mfrow = c(2,2))
-pca1 <- dudi.pca(meaudret$mil, scan = FALSE, nf = 4)
-s.class(pca1$li, meaudret$plan$dat, 
+pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 4)
+s.class(pca1$li, meaudret$design$season, 
     sub = "Principal Component Analysis")
-pca2 <- between(pca1, meaudret$plan$dat, scan = FALSE, nf = 2)
-s.class(pca2$ls, meaudret$plan$dat, sub = "Between dates Principal Component Analysis")
+pca2 <- between(pca1, meaudret$design$season, scan = FALSE, nf = 2)
+s.class(pca2$ls, meaudret$design$season, sub = "Between dates Principal Component Analysis")
 s.corcircle(pca1$co)
 s.corcircle(pca2$as)
 }

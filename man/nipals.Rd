@@ -64,8 +64,8 @@ Returns a list of classes \code{nipals}:
 \examples{
 data(doubs)
 ## nipals is equivalent to dudi.pca when there are no NA
-acp1 <- dudi.pca(doubs$mil, scannf = FALSE, nf = 2)
-nip1 <- nipals(doubs$mil)
+acp1 <- dudi.pca(doubs$env, scannf = FALSE, nf = 2)
+nip1 <- nipals(doubs$env)
 par(mfrow=c(2,2))
 barplot(acp1$eig, main ="dudi.pca")
 barplot(nip1$eig, main = "nipals")
@@ -75,8 +75,8 @@ ylab="nipals")
 
 \dontrun{
 ## with NAs:
-doubs$mil[1,1] <- NA
-nip2 <- nipals(doubs$mil)
+doubs$env[1,1] <- NA
+nip2 <- nipals(doubs$env)
 cor(nip1$li, nip2$li)
 nip1$eig
 nip2$eig

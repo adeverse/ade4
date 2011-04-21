@@ -23,8 +23,8 @@ Jackson, D.A. (1995) PROTEST: a PROcustean randomization TEST of community envir
 \author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr}}
 \examples{
 data(doubs)
-pca1 <- dudi.pca(doubs$mil, scal = TRUE, scann = FALSE)
-pca2 <- dudi.pca(doubs$poi, scal = FALSE, scann = FALSE)
+pca1 <- dudi.pca(doubs$env, scal = TRUE, scann = FALSE)
+pca2 <- dudi.pca(doubs$fish, scal = FALSE, scann = FALSE)
 protest1 <- procuste.randtest(pca1$tab, pca2$tab, 999)
 protest1
 plot(protest1,main="PROTEST")

@@ -22,8 +22,8 @@ Romesburg, H. C. (1985) Exploring, confirming and randomization tests. \emph{Com
 }
 \examples{
 data(meaudret)
-pca1 <- dudi.pca(meaudret$mil, scan = FALSE, nf = 3)
-rand1 <- rtest(between(pca1, meaudret$plan$dat, scan = FALSE), 99)
+pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 3)
+rand1 <- rtest(between(pca1, meaudret$design$season, scan = FALSE), 99)
 rand1
 plot(rand1, main = "Monte-Carlo test")
 }

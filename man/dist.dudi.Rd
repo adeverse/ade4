@@ -22,8 +22,8 @@ Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{
 data (meaudret)
-pca1 <- dudi.pca(meaudret$mil, scan = FALSE)
-sum((dist(scalewt(meaudret$mil)) - dist.dudi(pca1))^2)
+pca1 <- dudi.pca(meaudret$env, scan = FALSE)
+sum((dist(scalewt(meaudret$env)) - dist.dudi(pca1))^2)
 #[1] 4.045e-29 the same thing
 }
 \keyword{array}

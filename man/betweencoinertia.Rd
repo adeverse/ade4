@@ -44,15 +44,15 @@ Stephane Dray \email{dray@biomserv.univ-lyon1.fr} and Jean Thioulouse \email{jea
 \seealso{\code{\link{coinertia}}, \code{\link{between}}}
 \examples{
 data(meaudret)
-pca1 <- dudi.pca(meaudret$mil, scan = FALSE, nf = 4)
-pca2 <- dudi.pca(meaudret$fau, scal = FALSE, scan = FALSE, nf = 4)
+pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 4)
+pca2 <- dudi.pca(meaudret$spe, scal = FALSE, scan = FALSE, nf = 4)
    
-bet1 <- between(pca1, meaudret$plan$sta, scan = FALSE, nf = 2)
-bet2 <- between(pca2, meaudret$plan$sta, scan = FALSE, nf = 2)
+bet1 <- bca(pca1, meaudret$design$site, scan = FALSE, nf = 2)
+bet2 <- bca(pca2, meaudret$design$site, scan = FALSE, nf = 2)
 coib <- coinertia(bet1, bet2, scannf = FALSE)
 
 coi <- coinertia(pca1,pca2,scannf = FALSE,nf = 3)
-coi.b <- betweencoinertia(coi,meaudret$plan$sta, scannf = FALSE)
+coi.b <- bca(coi,meaudret$design$site, scannf = FALSE)
 ## coib and coi.b are equivalent
 
 plot(coi.b)

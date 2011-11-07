@@ -6,16 +6,13 @@
     n <- attr(m1, "Size")
     if (n != attr(m2, "Size")) 
         stop("Non convenient dimension")
+
     permutedist <- function(m) {
-        permutevec <- function(v, perm) return(v[perm])
-        m <- as.matrix(m)
-        n <- ncol(m)
-        w0 <- sample(n)
-        mperm <- apply(m, 1, permutevec, perm = w0)
-        mperm <- t(mperm)
-        mperm <- apply(mperm, 2, permutevec, perm = w0)
-        return(as.dist(t(mperm)))
+      w0 <- sample.int(attr(m, "Size"))
+      m <- as.matrix(m)
+      return(as.dist(m[w0, w0]))
     }
+    
     mantelnoneuclid <- function(m1, m2, nrepet) {
         obs <- cor(unclass(m1), unclass(m2))
         if (nrepet == 0) 

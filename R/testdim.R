@@ -23,7 +23,13 @@
       stop("Incorrect number of axes")
     nbax <- ifelse(nbax>min(nrow(X),ncol(X)),min(nrow(X),ncol(X)),nbax)
     res <- list()
-    res <- .C("testdimRVpca", as.double(t(X)), as.integer(nrow(X)), as.integer(ncol(X)), as.integer(nrepet),nbax=as.integer(nbax),sim=as.double(rep(0,nbax*nrepet)),obs=as.double(rep(0,nbax)),PACKAGE="ade4")[c("obs","sim")]
+    res <- .C("testdimRVpca", ok = as.integer(0), as.double(t(X)), as.integer(nrow(X)), as.integer(ncol(X)), as.integer(nrepet),nbax=as.integer(nbax),sim=as.double(rep(0,nbax*nrepet)),obs=as.double(rep(0,nbax)),PACKAGE="ade4")[c("ok","obs","sim")]
+    if(res$ok < -0.5){
+      stop("Error in the svd decomposition")
+    } else {
+      res <- res[-1]
+    }
+
     res$sim <- matrix(res$sim[1:(nbax*nrepet)],nrepet,nbax,byrow=TRUE)
     res$obs <- res$obs[1:nbax]
     res <- as.krandtest(sim=res$sim,obs=res$obs,names=paste("Axis", 1:length(res$obs)),call=match.call())

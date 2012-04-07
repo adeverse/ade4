@@ -21,7 +21,7 @@ int svd(double **X, double **vecU, double **vecVt, double *vecD);
 int svdd(double **X,double *vecD);
 void recX(double **Xi, double **XU, double **XVt, double *D, int i);
 double denum(double *vec, int i, int ncol);
-void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxtest, double *sim1, double *obs1);
+void testdimRVpca (int *ok, double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxtest, double *sim1, double *obs1);
 
 
 
@@ -29,7 +29,7 @@ void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxte
 
 
 /*================================================================= */
-void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxtest, double *sim1,  double *obs1) {
+void testdimRVpca (int *ok, double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxtest, double *sim1,  double *obs1) {
   /* RV */
   /* one test for each axis (RVDIM2) */
   double **X, **result1,  **XU, **XV, *D, **Xperm;
@@ -60,6 +60,7 @@ void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxte
     }
   }
   rankX=svd(X,XU,XV,D);
+  if(rankX < 0) return(-1);
   if(*nbaxtest>rankX) nbaxtest[0]=rankX;
   taballoc (&result1, *nrepet, *nbaxtest);
   
@@ -73,6 +74,7 @@ void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxte
       for(j=1;j<=nb;j++) Dperm[j]=0;
       permutmodel1(Ri,Riperm,&nr,&nc);
       toto=svdd(Riperm,Dperm);
+      if(toto < 0) ok[0] = -1;
       result1[k][i]=pow(Dperm[1],2)/denum(Dperm,1,toto);
       
     }
@@ -108,7 +110,6 @@ void testdimRVpca (double *tabXR, int *nrow, int *ncol, int *nrepet, int *nbaxte
   freetab(Ri);
   freevec(Dperm);
     
-  
 }
 
 
@@ -176,7 +177,7 @@ int svd(double **X, double **vecU, double **vecVt, double *vecD)
   
     if (error) {
         Rprintf("error in svd: %d\n", error);
-        exit(-1);
+        return(-1);
         }
     i = 0;
     rankX=0;
@@ -262,7 +263,7 @@ int svdd(double **X, double *vecD)
   
     if (error) {
         Rprintf("error in svd: %d\n", error);
-        exit(-1);
+        return(-1);
         }
 
     rankX=0;

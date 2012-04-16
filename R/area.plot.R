@@ -40,8 +40,8 @@
         br0 <- pretty(values, nclasslegend - 1)
         nborn <- length(br0)
         h <- diff(range(x1))/20
-        numclass <- cut.default(values, br0, include = TRUE, 
-            lab = FALSE, right = TRUE)
+        numclass <- cut.default(values, br0, include.lowest = TRUE, 
+            labels = FALSE, right = TRUE)
         valgris <- seq(1, 0, le = (nborn - 1))
     }
     if (!is.null(graph)) {
@@ -119,7 +119,7 @@
     res <- res[table(res)[res] < 2]
     res <- unlist(lapply(res, function(x) as.numeric(unlist(strsplit(x, 
         "A")))))
-    res <- matrix(res, ncol = 4, byr = TRUE)
+    res <- matrix(res, ncol = 4, byrow = TRUE)
     res <- data.frame(res)
     names(res) <- c("x1", "y1", "x2", "y2")
     return(res)
@@ -251,14 +251,14 @@
             curnew <- a[rowcur,colnew]
             points <- c(points,curnew)
             a <- a[-rowcur,]
-            coo <- which(a==curnew,arr=TRUE)
+            coo <- which(a==curnew, arr.ind=TRUE)
             rowcur <- coo[1,1]
             colcur <- coo[1,2]
           }
         colnew <- 3-colcur
         curnew <- a[rowcur,colnew]
         points <- c(points,curnew)
-        return(matrix(as.numeric(unlist(strsplit(points,"_"))),ncol=2,byr=TRUE))
+        return(matrix(as.numeric(unlist(strsplit(points,"_"))), ncol=2, byrow=TRUE))
     }
     "souscontour" <- function(k) {
         sel <- unlist(lapply(lreg[[k]],function(x) which(area[,1]==x)))

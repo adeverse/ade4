@@ -24,7 +24,7 @@
         cgrid = cgrid, include.origin = include.origin, origin = origin, 
         sub = sub, csub = csub, possub = possub, pixmap = pixmap, 
         contour = contour, area = area, add.plot = add.plot)
-    arrow1 <- function(x0, y0, x1, y1, len = 0.15, ang = 15, 
+    arrow1 <- function(x0, y0, x1, y1, length = 0.15, angle = 15, 
         lty = 1, edge) {
         d0 <- sqrt((x0 - x1)^2 + (y0 - y1)^2)
         if (d0 < 1e-07) 
@@ -34,7 +34,7 @@
         x0 <- x1 - h * (x1 - x0)/d0
         y0 <- y1 - h * (y1 - y0)/d0
         if (edge) 
-            arrows(x0, y0, x1, y1, ang = 15, len = 0.1, lty = 1)
+            arrows(x0, y0, x1, y1, angle = 15, length = 0.1, lty = 1)
     }
     trajec <- function(X, cpoint, clabel, label) {
         if (nrow(X) == 1) 

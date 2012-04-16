@@ -37,7 +37,7 @@ mdpcoa <- function(msamples, mdistances = NULL, method = c("mcoa", "statis", "mf
         }
         else
             nf1 <- 2
-        dpcoasep <- dpcoa(msamples[[i]], mdistances[[i]], scan = scansep, full = full, nf = nf1, tol = tol)
+        dpcoasep <- dpcoa(msamples[[i]], mdistances[[i]], scannf = scansep, full = full, nf = nf1, tol = tol)
         YesY[[i]] <- dpcoasep$l2
         YesX[[i]] <- dpcoasep$l1
         
@@ -73,7 +73,7 @@ mdpcoa <- function(msamples, mdistances = NULL, method = c("mcoa", "statis", "mf
 
     if(method == "mcoa")
     {
-        mdpcoa1 <- mcoa(YesY, option[1], scan = scannf, nf = nf)
+        mdpcoa1 <- mcoa(YesY, option[1], scannf = scannf, nf = nf)
         nf <- mdpcoa1$nf
         increm <- lapply(YesY, ncol)
         increm <- c(0, cumsum(as.vector(unlist(increm))))
@@ -93,7 +93,7 @@ mdpcoa <- function(msamples, mdistances = NULL, method = c("mcoa", "statis", "mf
 
     if(method == "statis")
     {
-        mdpcoa1 <- statis(YesY, scan = scannf, nf = nf)
+        mdpcoa1 <- statis(YesY, scannf = scannf, nf = nf)
         nf <- mdpcoa1$C.nf
         coY <- list()
         coX <- list()
@@ -114,7 +114,7 @@ mdpcoa <- function(msamples, mdistances = NULL, method = c("mcoa", "statis", "mf
 
     if(method == "mfa")
     {
-        mdpcoa1 <- mfa(YesY, option[1], scan = scannf, nf = nf)
+        mdpcoa1 <- mfa(YesY, option[1], scannf = scannf, nf = nf)
         nf <- mdpcoa1$nf
         for(i in 1:nbloci)
         {
@@ -168,23 +168,23 @@ kplotX.mdpcoa <- function(object, xax = 1, yax = 2, mfrow = NULL,
     for (ianal in which.tab) {
         coocol <- cootot[increm == ianal, ]
         if (unique.scale) 
-            s.label(cootot, clab = 0, cpoi = 0, sub = namloci[ianal], 
+            s.label(cootot, clabel = 0, cpoint = 0, sub = namloci[ianal], 
                 possub = possub, csub = csub)
-        else s.label(coocol, clab = 0, cpoi = 0, sub = namloci[ianal], 
+        else s.label(coocol, clabel = 0, cpoint = 0, sub = namloci[ianal], 
             possub = possub, csub = csub)
         if (label) 
-            s.label(coocol, clab = ifelse(includepop, 0, clab), cpoi = cpoi, add.p = TRUE)
+            s.label(coocol, clabel = ifelse(includepop, 0, clab), cpoint = cpoi, add.plot = TRUE)
         if (includepop)
         {
             if(inherits(object, "mcoa"))
-                s.label(object$Tl1[object$TL[, 1] == ianal, c(xax, yax)], clab = clab, cpoi = 0, add.plot = TRUE)
+                s.label(object$Tl1[object$TL[, 1] == ianal, c(xax, yax)], clabel = clab, cpoint = 0, add.plot = TRUE)
             else if (inherits(object, "statis")){
                 npop <- nrow(object$C.li)
-                s.label(object$cosupY[(1:npop) + npop * (ianal - 1), c(xax, yax)], clab = clab, cpoi = 0, add.plot = TRUE)
+                s.label(object$cosupY[(1:npop) + npop * (ianal - 1), c(xax, yax)], clabel = clab, cpoint = 0, add.plot = TRUE)
                 }
             else if (inherits(object, "mfa")){
                 npop <- nrow(object$li)
-                s.label(object$lisup[(1:npop) + npop * (ianal - 1), c(xax, yax)], clab = clab, cpoi = 0, add.plot = TRUE)
+                s.label(object$lisup[(1:npop) + npop * (ianal - 1), c(xax, yax)], clabel = clab, cpoint = 0, add.plot = TRUE)
                 }
         }
     }

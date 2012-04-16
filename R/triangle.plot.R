@@ -61,7 +61,7 @@
     if (clabel > 0) 
         scatterutil.eti(xy[, 1], xy[, 2], label, clabel)
     if (addaxes) {
-        pr0 <- dudi.pca(ta, scale = FALSE, scann = FALSE)$c1
+        pr0 <- dudi.pca(ta, scale = FALSE, scannf = FALSE)$c1
         w1 <- triangle.posipoint(apply(ta, 2, mean), mini, maxi)
         points(w1[1], w1[2], pch = 16, cex = 2)
         a1 <- pr0[, 1]
@@ -88,11 +88,11 @@
         seg(w1, w3)
         seg(w1, w4)
         text(w2[1], w2[2], labels = as.character(round(m[1], 
-            dig = 3)), cex = 1.5, pos = 2)
+            digits = 3)), cex = 1.5, pos = 2)
         text(w3[1], w3[2], labels = as.character(round(m[2], 
-            dig = 3)), cex = 1.5, pos = 1)
+            digits = 3)), cex = 1.5, pos = 1)
         text(w4[1], w4[2], labels = as.character(round(m[3], 
-            dig = 3)), cex = 1.5, pos = 4)
+            digits = 3)), cex = 1.5, pos = 4)
     }
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
@@ -194,7 +194,7 @@
     nl <- nrow(ta1)
     for (i in (1:nl)) {
         arrows(xy[i, 1], xy[i, 2], xy[i + nl, 1], xy[i + nl, 
-            2], le = 0.1, ang = 15)
+            2], length = 0.1, angle = 15)
     }
     points(xy[1:nrow(ta1), ])
     text(xy[1:nrow(ta1), ], label, pos = 4)
@@ -266,9 +266,9 @@
     cal[9, 3] <- mini[3]
     cal[9, 1] <- 1 - cal[9, 2] - cal[9, 3]
     mini <- apply(cal, 2, min)
-    mini <- round(mini, dig = 4)
+    mini <- round(mini, digits = 4)
     maxi <- apply(cal, 2, max)
-    maxi <- round(maxi, dig = 4)
+    maxi <- round(maxi, digits = 4)
     ampli <- maxi - mini
     if (!scale) {
         mini <- c(0, 0, 0)

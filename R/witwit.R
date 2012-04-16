@@ -88,9 +88,9 @@
     aa <- as.matrix(object$lbvar)
     sumry <- array("", c(nrb + 1, nf + 1), list(c(row.names(object$lbvar), 
         "mean"), c(names(object$lbvar), "weights")))
-    sumry[(1:nrb), (1:nf)] <- round(aa, dig = 4)
-    sumry[(1:nrb), (nf + 1)] <- round(object$lbw, dig = 4)
-    sumry[(nrb + 1), (1:nf)] <- round(object$eig[1:nf], dig = 4)
+    sumry[(1:nrb), (1:nf)] <- round(aa, digits = 4)
+    sumry[(1:nrb), (nf + 1)] <- round(object$lbw, digits = 4)
+    sumry[(nrb + 1), (1:nf)] <- round(object$eig[1:nf], digits = 4)
     class(sumry) <- "table"
     print(sumry)
     cat("\n")
@@ -98,7 +98,7 @@
         "sum"), names(object$lbvar)))
     aa <- object$lbvar * object$lbw
     aa <- 1000 * t(t(aa)/object$eig[1:nf])
-    sumry[(1:nrb), (1:nf)] <- round(aa, dig = 0)
+    sumry[(1:nrb), (1:nf)] <- round(aa, digits = 0)
     sumry[(nrb + 1), (1:nf)] <- rep(1000, nf)
     class(sumry) <- "table"
     print(sumry)
@@ -108,9 +108,9 @@
     aa <- as.matrix(object$cbvar)
     sumry <- array("", c(nrb + 1, nf + 1), list(c(row.names(object$cbvar), 
         "mean"), c(names(object$cbvar), "weights")))
-    sumry[(1:nrb), (1:nf)] <- round(aa, dig = 4)
-    sumry[(1:nrb), (nf + 1)] <- round(object$cbw, dig = 4)
-    sumry[(nrb + 1), (1:nf)] <- round(object$eig[1:nf], dig = 4)
+    sumry[(1:nrb), (1:nf)] <- round(aa, digits = 4)
+    sumry[(1:nrb), (nf + 1)] <- round(object$cbw, digits = 4)
+    sumry[(nrb + 1), (1:nf)] <- round(object$eig[1:nf], digits = 4)
     class(sumry) <- "table"
     print(sumry)
     cat("\n")
@@ -118,7 +118,7 @@
         "sum"), names(object$cbvar)))
     aa <- object$cbvar * object$cbw
     aa <- 1000 * t(t(aa)/object$eig[1:nf])
-    sumry[(1:nrb), (1:nf)] <- round(aa, dig = 0)
+    sumry[(1:nrb), (1:nf)] <- round(aa, digits = 0)
     sumry[(nrb + 1), (1:nf)] <- rep(1000, nf)
     class(sumry) <- "table"
     print(sumry)

@@ -28,7 +28,7 @@
         segments(score, moy[y] - h, score, moy[y] + h)
         abline(0, 1)
         scatterutil.eti(moy, moy, label = as.character(levels(y)), 
-            clab = 1.5)
+            clabel = 1.5)
         scatterutil.sub(sub[i], csub = csub, possub = possub)
     }
 }

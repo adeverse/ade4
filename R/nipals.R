@@ -118,7 +118,7 @@ scatter.nipals<-function (x, xax = 1, yax = 2, clab.row = 0.75, clab.col = 1, po
     on.exit(par(opar))
     coolig <- x$li[, c(xax, yax)]
     coocol <- x$c1[, c(xax, yax)]
-    s.label(coolig, clab = clab.row)
+    s.label(coolig, clabel = clab.row)
     born <- par("usr")
     k1 <- min(coocol[, 1])/born[1]
     k2 <- max(coocol[, 1])/born[2]
@@ -126,7 +126,7 @@ scatter.nipals<-function (x, xax = 1, yax = 2, clab.row = 0.75, clab.col = 1, po
     k4 <- max(coocol[, 2])/born[4]
     k <- c(k1, k2, k3, k4)
     coocol <- 0.9 * coocol/max(k)
-    s.arrow(coocol, clab = clab.col, add.p = TRUE, sub = sub,
+    s.arrow(coocol, clabel = clab.col, add.plot = TRUE, sub = sub,
         possub = "bottomright")
     add.scatter.eig(x$eig, x$nf, xax, yax, posi = posieig, ratio = 1/4)
 }

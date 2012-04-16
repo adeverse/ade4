@@ -23,9 +23,9 @@
         if (cl > 0) 
             cpoi <- 0
         else cpoi <- 2
-        s.label(coolig, clab = cl, cpoi = cpoi)
+        s.label(coolig, clabel = cl, cpoint = cpoi)
         if (traject) 
-            s.traject(coolig, clab = 0, add.p = TRUE)
+            s.traject(coolig, clabel = 0, add.plot = TRUE)
         born <- par("usr")
         k1 <- min(coocol[, 1])/born[1]
         k2 <- max(coocol[, 1])/born[2]
@@ -33,7 +33,7 @@
         k4 <- max(coocol[, 2])/born[4]
         k <- c(k1, k2, k3, k4)
         coocol <- 0.7 * coocol/max(k)
-        s.arrow(coocol, clab = clab * col.names, add.p = TRUE, 
+        s.arrow(coocol, clabel = clab * col.names, add.plot = TRUE, 
             sub = object$tab.names[ianal], possub = possub, csub = csub)
     }
 }

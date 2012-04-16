@@ -197,7 +197,7 @@
             coolig <- x$RV.coo[, c(1, 2)]
             s.corcircle(coolig, label = x$tab.names, 
                 cgrid = 0, sub = "Interstructure", csub = 1.5, 
-                possub = "topleft", full = TRUE)
+                possub = "topleft", fullcircle = TRUE)
             l0 <- length(x$RV.eig)
             add.scatter.eig(x$RV.eig, l0, 1, 2, posi = "bottomleft", 
                 ratio = 1/4)

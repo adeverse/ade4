@@ -23,7 +23,7 @@
         plot(score, df[, i], type = "n")
         if (!is.null(fac)) {
             s.class(cbind.data.frame(score, df[, i]), fac, 
-                axesell = FALSE, add.plot = TRUE, clab = clabel)
+                axesell = FALSE, add.plot = TRUE, clabel = clabel)
         }
         else points(score, df[, i])
         if (abline) {

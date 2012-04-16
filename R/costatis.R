@@ -40,8 +40,8 @@
 	if (scannf) cat("PTA of second KTab\n")
 	ptaY <- pta(KTY, scannf = scannf)
 #### coinertia analysis of compromises
-	acpX=dudi.pca(t(ptaX$tab), center=FALSE, scan=FALSE, nf=ptaX$nf)
-	acpY=dudi.pca(t(ptaY$tab), center=FALSE, scan=FALSE, nf=ptaY$nf)
+	acpX=dudi.pca(t(ptaX$tab), center=FALSE, scannf=FALSE, nf=ptaX$nf)
+	acpY=dudi.pca(t(ptaY$tab), center=FALSE, scannf=FALSE, nf=ptaY$nf)
 	if (scannf) cat("Coinertia analysis of the two compromises\n")
 	res <- coinertia(acpX, acpY, scannf = scannf)
 #### projection of the rows of the two original ktables

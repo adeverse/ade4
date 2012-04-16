@@ -6,7 +6,7 @@
   distmat <- as.matrix(distmat)
   n <- ncol(distmat)
   delta <- -0.5 * bicenter.wt(distmat * distmat)
-  lambda <- eigen(delta, symmetric = TRUE, only = TRUE)$values
+  lambda <- eigen(delta, symmetric = TRUE, only.values = TRUE)$values
   w0 <- lambda[n]/lambda[1]
   if (plot) 
     barplot(lambda)

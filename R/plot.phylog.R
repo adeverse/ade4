@@ -171,7 +171,7 @@
             par(srt = (ang[i] * 360/2/pi + 90))
             x1 <- dis[i] * cos(ang[i])
             y1 <- dis[i] * sin(ang[i])
-            symbols(x1, y1, delta, bg = "white", add = TRUE, inch = FALSE)
+            symbols(x1, y1, delta, bg = "white", add = TRUE, inches = FALSE)
             text(x1, y1, nodes.car[j], adj = 0.5, cex = par("cex") * 
                 clabel.nodes)
         }
@@ -219,7 +219,7 @@ enum.phylog<-function (phylog, no.over=1000) {
                 }
                 return(sapply(1:(length(x)+1) , fun2))
         }
-        a <- matrix(unlist(apply(a,1,fun1)),ncol=n0+1,byr=TRUE)
+        a <- matrix(unlist(apply(a,1,fun1)),ncol=n0+1,byrow=TRUE)
         Recall(cha,a)
     }
     
@@ -235,7 +235,7 @@ enum.phylog<-function (phylog, no.over=1000) {
         n1 <- nrow(res) ; n2 <- nrow(matcar)
         p1 <- ncol(res) ; p2 <- ncol(matcar)
         f1 <- function(x) unlist(apply(res,1,function(y) c(y,x)))
-        res <<- matrix(unlist(apply(matcar,1,f1)),n1*n2, p1+p2,byr=TRUE)
+        res <<- matrix(unlist(apply(matcar,1,f1)),n1*n2, p1+p2,byrow=TRUE)
     }
     
     lapply(lw, permtot)

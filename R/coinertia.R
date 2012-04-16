@@ -161,15 +161,15 @@
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.corcircle(x$aX, xax, yax, sub = "X axes", csub = 2, 
-        clab = 1.25)
+        clabel = 1.25)
     s.corcircle(x$aY, xax, yax, sub = "Y axes", csub = 2, 
-        clab = 1.25)
+        clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
-    s.match(x$mX, x$mY, xax, yax, clab = 1.5)
+    s.match(x$mX, x$mY, xax, yax, clabel = 1.5)
     s.arrow(x$l1, xax = xax, yax = yax, sub = "Y Canonical weights", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
     s.arrow(x$c1, xax = xax, yax = yax, sub = "X Canonical weights", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
 }
 
 "print.coinertia" <- function (x, ...) {

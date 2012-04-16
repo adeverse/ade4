@@ -5,7 +5,7 @@
     }
     distmat <- as.matrix(distmat)
     delta <- -0.5 * bicenter.wt(distmat * distmat)
-    lambda <- eigen(delta, sym = TRUE)$values
+    lambda <- eigen(delta, symmetric = TRUE, only.values = TRUE)$values
     lder <- lambda[ncol(distmat)]
     if(cor.zero){
       distmat <- distmat * distmat
@@ -15,7 +15,7 @@
     }
     
     if (print) 
-        cat("Lingoes constant =", round(abs(lder), dig = 6), 
+        cat("Lingoes constant =", round(abs(lder), digits = 6), 
             "\n")
     distmat <- as.dist(distmat)
     attr(distmat, "call") <- match.call()

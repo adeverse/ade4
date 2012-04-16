@@ -19,7 +19,7 @@
     w1 <- max(sq)
     sq <- csize * coeff * sq/w1
     for (i in 1:length(z)) symbols(xtot[i], ytot[i], squares = sq[i], 
-        bg = "white", fg = 1, add = TRUE, inch = FALSE)
+        bg = "white", fg = 1, add = TRUE, inches = FALSE)
     f1 <- function(x,xval) {
         w1 <- weighted.mean(xval, x)
         xval <- (xval - w1)^2
@@ -43,10 +43,10 @@
     y <- y[row(df)]
     df <- as.vector(df)
     if (abline.x) {
-        abline(lm(y ~ x, wei = df))
+        abline(lm(y ~ x, weights = df))
     }
     if (abline.y) {
-        w <- coefficients(lm(x ~ y, wei = df))
+        w <- coefficients(lm(x ~ y, weights = df))
         if (w[2] == 0) 
             abline(h = w[1])
         else abline(c(-w[1]/w[2], 1/w[2]))

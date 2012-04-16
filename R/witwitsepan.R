@@ -27,7 +27,7 @@ witwitsepan <- function (ww, mfrow = NULL, csub = 2, plot = TRUE) {
         if (sum(sumlig>0)<2) return (NULL)
         sumcol <- apply(x,2,sum)
         if (sum(sumcol>0)<2) return (NULL)
-        return(dudi.coa(x,scann=FALSE)$eig)
+        return(dudi.coa(x, scannf = FALSE)$eig)
     }
     
     names(listbloc) <- t(outer(names(rowblo),names(colblo),function(x,y) paste(x,y,sep="/")))

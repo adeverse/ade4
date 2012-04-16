@@ -34,7 +34,7 @@
     abline(v = v0[v0!=0], col = col, lty = lty)
     abline(h = h0[h0!=0], col = col, lty = lty)
     if (cgrid > 0) {
-        a1 = round(a,dig=3)
+        a1 = round(a, digits = 3)
         cha <- paste(" d = ", a1, " ", sep = "")
         cex0 <- par("cex") * cgrid
         xh <- strwidth(cha, cex = cex0)
@@ -79,7 +79,7 @@
     plot.default(0, 0, type = "n", xlab = "", ylab = "", xaxt = "n", yaxt = "n", xaxs = "i", yaxs = "i", frame.plot = FALSE)
     par(usr=c(c(0,top),c(0,top)))
     print(leg)
-    symbols(rep(0,length(leg)),rep(0,length(leg)),circ=leg,lty=2,inch=FALSE, add=TRUE)
+    symbols(rep(0,length(leg)),rep(0,length(leg)),circles = leg,lty=2, inches = FALSE, add=TRUE)
     scatterutil.eti (sqrt(0.5)*leg, sqrt(0.5)*leg, as.character(leg), clabel=1)
     ## restauration des paramètres
     par(def.par)#- reset to default

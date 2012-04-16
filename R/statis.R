@@ -28,7 +28,7 @@
     dimnames(RV) <- list(tab.names, tab.names)
     statis$RV <- RV
     ############## diagonalisation de la matrice des RV ###########
-    eig1 <- eigen(RV, sym = TRUE)
+    eig1 <- eigen(RV, symmetric = TRUE)
     statis$RV.eig <- eig1$values
     if (any(eig1$vectors[, 1] < 0)) 
         eig1$vectors[, 1] <- -eig1$vectors[, 1]
@@ -44,7 +44,7 @@
     C.ro <- apply(t(sep) * tabw, 2, sum)
     C.ro <- matrix(unlist(C.ro), nlig, nlig)
     ############## diagonalisation du compromis ###########
-    eig1 <- eigen(C.ro, sym = TRUE)
+    eig1 <- eigen(C.ro, symmetric = TRUE)
     eig <- eig1$values
     rank <- sum((eig/eig[1]) > tol)
     if (scannf) {
@@ -125,7 +125,7 @@
             coolig <- x$RV.coo[, c(1, 2)]
             s.corcircle(coolig, label = x$tab.names, 
                 cgrid = 0, sub = "Interstructure", csub = 1.5, 
-                possub = "topleft", full = TRUE)
+                possub = "topleft", fullcircle = TRUE)
             l0 <- length(x$RV.eig)
             add.scatter.eig(x$RV.eig, l0, 1, 2, posi = "bottomleft", 
                 ratio = 1/4)
@@ -139,7 +139,7 @@
         }
         if (j == 4) {
             cooax <- x$C.T4[x$T4[, 2] == 1, ]
-            s.corcircle(cooax, xax, yax, full = TRUE, sub = "Component projection", 
+            s.corcircle(cooax, xax, yax, fullcircle = TRUE, sub = "Component projection", 
                 possub = "topright", csub = 1.5)
             add.scatter.eig(x$C.eig, x$C.nf, xax, yax, 
                 posi = "bottomleft", ratio = 1/5)

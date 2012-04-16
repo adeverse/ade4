@@ -39,7 +39,7 @@
         if (vx < 0) vx <- 0 ; if (vy < 0) vy <- 0
         if (vx == 0 && vy == 0) return(NULL)
         covmat <- matrix(c(vx,cxy,cxy,vy),2,2)
-        cov.eig <- eigen(covmat,sym=TRUE)
+        cov.eig <- eigen(covmat, symmetric =TRUE)
         l1 = sqrt(max(0,cov.eig$values[1]))
         l2 = sqrt(max(0,cov.eig$values[2]))
         c11 <- coeftai * cov.eig$vectors[1,1] * l1
@@ -97,9 +97,9 @@
     row.names(res) <- labelrowprof
 
     row.names(res) <- labelrowprof
-    s.label(dfxy, 1, 2, clab=0, cpoi=cpointcat, ...)
-    s.arrow(dfxy,add.p=TRUE,origin=-mgene,clab=clabelcat, label = labelcat)
-    s.chull(dfxy,add.p=TRUE, fac = factor(rep(1,ncat)),opt=1,clab=0)
+    s.label(dfxy, 1, 2, clabel = 0, cpoint = cpointcat, ...)
+    s.arrow(dfxy, add.plot = TRUE,origin = -mgene,clabel = clabelcat, label = labelcat)
+    s.chull(dfxy, add.plot = TRUE, fac = factor(rep(1,ncat)), optchull = 1, clabel = 0)
     for (k in 1:nrowprof) draw.rowprof(k)           
     if (clabelrowprof > 0) 
         scatterutil.eti(as.numeric(res$mx), as.numeric(res$my),labelrowprof, clabelrowprof, coul = coulrowprof)

@@ -85,11 +85,11 @@ function (x) {
         stop(paste("file", ficrownames, "not found"))
     if (!is.null(ficcolnames) && !file.exists(ficcolnames)) 
         stop(paste("file", ficcolnames, "not found"))
-    w <- read.table(fictab, h = FALSE)
+    w <- read.table(fictab, header = FALSE)
     nl <- nrow(w)
     nc <- ncol(w)
     if (!is.null(ficcolnames)) 
-        provicol <- as.character((read.table(ficcolnames, h = FALSE))$V1)
+        provicol <- as.character((read.table(ficcolnames, header = FALSE))$V1)
     else provicol <- as.character(1:nc)
     if ((length(provicol)) != nc) {
         stop(paste("Non convenient row number in file", ficcolnames, 
@@ -99,7 +99,7 @@ function (x) {
         names(w) <- paste("v", provicol, sep = "")
     else names(w) <- provicol
     if (!is.null(ficrownames)) 
-        provirow <- as.character((read.table(ficrownames, h = FALSE))$V1)
+        provirow <- as.character((read.table(ficrownames, header = FALSE))$V1)
     else provirow <- as.character(1:nl)
     if ((length(provirow)) != nl) {
         stop(paste("Non convenient row number in file", ficrownames, 

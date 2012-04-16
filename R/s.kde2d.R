@@ -30,7 +30,7 @@
     # } 
 
     par(mar=c(0.1,0.1,0.1,0.1))
-    s.label(dfxy, xax = xax, yax = yax, clab=0,
+    s.label(dfxy, xax = xax, yax = yax, clabel = 0,
     pch = pch, cpoint = cpoint, neig = neig, 
     cneig = cneig, xlim = xlim, ylim = ylim, grid = grid, addaxes = addaxes, 
     cgrid = cgrid, include.origin = include.origin, origin = origin, 

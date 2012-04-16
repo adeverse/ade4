@@ -18,7 +18,7 @@
     br0 <- pretty(z, 6)
     nborn <- length(br0)
     coeff <- diff(range(x))/15
-    numclass <- cut.default(z, br0, include = TRUE, lab = FALSE)
+    numclass <- cut.default(z, br0, include.lowest = TRUE, labels = FALSE)
     valgris <- seq(1, 0, le = (nborn - 1))
     h <- csize * coeff
     rect(xtot - xdelta, ytot - ydelta, xtot + xdelta, ytot + 

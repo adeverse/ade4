@@ -16,12 +16,12 @@ function (x, xax = 1, yax = 2, ...)
     layout(matrix(c(1, 1, 3, 1, 1, 4, 2, 2,5,2,2,6,8,8,7), 3, 5), 
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
-    s.label(x$lR[, c(xax, yax)], sub = "R row scores",csub = 2,clab=1.25)
-    s.label(x$lQ[, c(xax, yax)], sub = "Q row scores",csub = 2,clab=1.25)
-    s.corcircle(x$aR, xax, yax, sub = "R axes", csub = 2, clab = 1.25)
-    s.arrow(x$l1, xax = xax, yax = yax, sub = "R Canonical weights", csub = 2, clab = 1.25)
-    s.corcircle(x$aQ, xax, yax, sub = "Q axes", csub = 2, clab = 1.25)
-    s.arrow(x$c1, xax = xax, yax = yax, sub = "Q Canonical weights", csub = 2, clab = 1.25)
+    s.label(x$lR[, c(xax, yax)], sub = "R row scores",csub = 2,clabel = 1.25)
+    s.label(x$lQ[, c(xax, yax)], sub = "Q row scores",csub = 2,clabel = 1.25)
+    s.corcircle(x$aR, xax, yax, sub = "R axes", csub = 2, clabel = 1.25)
+    s.arrow(x$l1, xax = xax, yax = yax, sub = "R Canonical weights", csub = 2, clabel = 1.25)
+    s.corcircle(x$aQ, xax, yax, sub = "Q axes", csub = 2, clabel = 1.25)
+    s.arrow(x$c1, xax = xax, yax = yax, sub = "Q Canonical weights", csub = 2, clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
     
     

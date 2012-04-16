@@ -10,6 +10,6 @@
     indica <- factor(rep(names(x$blo), x$blo))
     for (j in levels(indica)) 
         s.distri(x$l1, oritab[, which(indica == j)], 
-        clab = clab.moda, sub = as.character(j), cell = 0, 
-        csta = 0.5, csub = csub, label = labels[which(indica == j)])
+        clabel = clab.moda, sub = as.character(j), cellipse = 0, 
+        cstar = 0.5, csub = csub, label = labels[which(indica == j)])
 }

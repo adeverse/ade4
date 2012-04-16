@@ -10,10 +10,10 @@
     m2 <- -bicenter.wt(distmat * distmat)
     m2 <- rbind(m2, 2 * bicenter.wt(distmat))
     m1 <- cbind(m1, m2)
-    lambda <- eigen(m1, only = TRUE)$values
+    lambda <- eigen(m1, only.values = TRUE)$values
     c <- max(Re(lambda)[Im(lambda) < tol])
     if (print) 
-        cat(paste("Cailliez constant =", round(c, dig = 5), "\n"))
+        cat(paste("Cailliez constant =", round(c, digits = 5), "\n"))
     if(cor.zero){
       distmat[distmat > tol] <- distmat[distmat > tol] + c
       distmat <- as.dist(distmat)

@@ -12,7 +12,7 @@
         n <- length(deg)
         b0 <- -b0/m + diag(deg)/m
         # b0 est la matrice D-P
-        eig <- eigen (b0, sym = TRUE)
+        eig <- eigen (b0, symmetric = TRUE)
         w0 <- abs(eig$values)/max(abs(eig$values))
         w0 <- which(w0<tol)
         if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
@@ -151,7 +151,7 @@
     segments(mp[1], 1/npro, mp[npro], 1, lty = 1)
     fun(w$sig975)
     fun(w$sig025)
-    arrows(mp[x0], sig50[x0], mp[x0], phylocum[x0], ang = 15, le = 0.15, 
+    arrows(mp[x0], sig50[x0], mp[x0], phylocum[x0], angle = 15, length = 0.15, 
             lwd = 2)
     box()
     if (missing(nclass)) {

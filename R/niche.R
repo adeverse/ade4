@@ -50,17 +50,17 @@
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.corcircle(x$as, xax, yax, sub = "Axis", csub = 2, 
-        clab = 1.25)
+        clabel = 1.25)
     s.arrow(x$c1, xax, yax, sub = "Variables", csub = 2, 
-        clab = 1.25)
+        clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
-    s.label(x$ls, xax, yax, clab = 0, cpo = 2, sub = "Samples and Species", 
+    s.label(x$ls, xax, yax, clabel = 0, cpoint = 2, sub = "Samples and Species", 
         csub = 2)
-    s.label(x$li, xax, yax, clab = 1.5, add.p = TRUE)
-    s.label(x$ls, xax, yax, clab = 1.25, sub = "Samples", 
+    s.label(x$li, xax, yax, clabel = 1.5, add.plot = TRUE)
+    s.label(x$ls, xax, yax, clabel = 1.25, sub = "Samples", 
         csub = 2)
     s.distri(x$ls, eval(as.list(x$call)[[3]], sys.frame(0)), 
-        cstar = 0, axesell = FALSE, cell = 1, sub = "Niches", csub = 2)
+        cstar = 0, axesell = FALSE, cellipse = 1, sub = "Niches", csub = 2)
 }
 
 "print.niche" <- function (x, ...) {
@@ -124,7 +124,7 @@
     tolr <- tolt - tolm
     w <- c(inertia, margi, tolm, tolr)
     names(w) <- c("inertia", "OMI", "Tol", "Rtol")
-    w1 <- round(w[2:4]/w[1], dig = 3) * 100
+    w1 <- round(w[2:4]/w[1], digits = 3) * 100
     names(w1) <- c("omi", "tol", "rtol")
     return(c(w, w1))
   }

@@ -32,8 +32,8 @@
             cpoi <- 0
         else cpoi <- 2
         if (!traject.row) 
-            s.label(coolig, clab = clab.row, cpoi = cpoi)
-        else s.traject(coolig, clab = 0, cpoi = 2)
+            s.label(coolig, clabel = clab.row, cpoint = cpoi)
+        else s.traject(coolig, clabel = 0, cpoint = 2)
         born <- par("usr")
         k1 <- min(coocol[, 1])/born[1]
         k2 <- max(coocol[, 1])/born[2]
@@ -41,7 +41,7 @@
         k4 <- max(coocol[, 2])/born[4]
         k <- c(k1, k2, k3, k4)
         coocol <- 0.7 * coocol/max(k)
-        s.arrow(coocol, clab = clab.col, add.p = TRUE, sub = object$tab.names[ianal], 
+        s.arrow(coocol, clabel = clab.col, add.plot = TRUE, sub = object$tab.names[ianal], 
             csub = csub, possub = possub)
         w <- object$Eig[rank.fac == ianal]
         if (length(w) < neig) 
@@ -86,10 +86,10 @@
         if (clab.col > 0) 
             cpoi <- 0
         else cpoi <- 3
-        s.label(coocol, clab = 0, cpoi = 0, sub = object$tab.names[ianal], 
+        s.label(coocol, clabel = 0, cpoint = 0, sub = object$tab.names[ianal], 
             csub = csub, possub = possub)
-        s.label(coocol, clab = clab.col, cpoi = cpoi, add.p = TRUE)
-        s.label(coolig, clab = clab.row, add.p = TRUE)
+        s.label(coocol, clabel = clab.col, cpoint = cpoi, add.plot = TRUE)
+        s.label(coolig, clabel = clab.row, add.plot = TRUE)
         if (permute.row.col) {
             auxi <- coolig
             coolig <- coocol

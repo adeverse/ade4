@@ -114,7 +114,7 @@ summary.corkdist <- function (object, ...) {
     cat(attr (object,"test"),"for 'kdist' object\n")  
     cat ("Call: ") ; print(attr (object,"call"))
     ndig0 <- nchar(as.character(as.integer(object[[1]]$rep)))
-    pval <- round(unlist(lapply(object, function(x) x$pvalue)),dig=ndig0)
+    pval <- round(unlist(lapply(object, function(x) x$pvalue)), digits = ndig0)
     ndist <- max(design$I)
     res=matrix(0,ndist,ndist)
     res[row(res) <= col(res)] <- NA

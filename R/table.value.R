@@ -184,11 +184,11 @@
     for (i in 1:length(z)) {
         if (sign(z[i]) >= 0) {
             symbols(xtot[i], ytot[i], squares = sq[i], bg = 1, 
-                fg = 0, add = TRUE, inch = FALSE)
+                fg = 0, add = TRUE, inches = FALSE)
         }
         else {
             symbols(xtot[i], ytot[i], squares = sq[i], bg = "white", 
-                fg = 1, add = TRUE, inch = FALSE)
+                fg = 1, add = TRUE, inches = FALSE)
         }
     }
     br0 <- pretty(z, 4)

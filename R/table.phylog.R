@@ -33,12 +33,12 @@
     cexrow <- par("cex") * clabel.row
     strx <- 0.1
     if (cexrow > 0) {
-        strx <- max( strwidth(labels.row,unit="inches",cex=cexrow))+0.1
+        strx <- max( strwidth(labels.row, units = "inches", cex = cexrow))+0.1
     }
     cexcol <- par("cex") * clabel.col
     stry <- 0.1
     if (cexcol > 0) {
-        stry <- max( strwidth(labels.col,unit="inches",cex=cexcol))+0.1
+        stry <- max( strwidth(labels.col, units = "inches", cex = cexcol))+0.1
     }
     par(mai = c(0.1, 0.1, stry, strx))
     #nc <- ncol(df)
@@ -88,11 +88,11 @@
     for (i in 1:length(z)) {
         if (sign(z[i]) >= 0) {
             symbols(xtot[i], ytot[i], squares = sq[i], bg = "black", 
-                fg = "white", add = TRUE, inch = FALSE)
+                fg = "white", add = TRUE, inches = FALSE)
         }
         else {
             symbols(xtot[i], ytot[i], squares = sq[i], bg = "white", 
-                fg = "black", add = TRUE, inch = FALSE)
+                fg = "black", add = TRUE, inches = FALSE)
         }
     }
     br0 <- pretty(z, 4)

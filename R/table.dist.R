@@ -17,5 +17,5 @@
     w1 <- max(sq)
     sq <- csize * coeff * sq/w1
     symbols(xtot, ytot, circles = sq, fg = 1, bg = grey(0.8), 
-        add = TRUE, inch = FALSE)
+        add = TRUE, inches = FALSE)
 }

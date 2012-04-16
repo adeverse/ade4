@@ -214,7 +214,7 @@
     }
     names(coolig) <- names(x$Tl1)[c(xax, yax)]
     row.names(coolig) <- row.names(x$Tl1)
-    s.match(x$Tl1[, c(xax, yax)], coolig, clab = 0, 
+    s.match(x$Tl1[, c(xax, yax)], coolig, clabel = 0, 
         sub = "Row projection", csub = 1.5, edge = FALSE)
     s.label(x$SynVar[, c(xax, yax)], add.plot = TRUE)
     coocol <- x$Tco[, c(xax, yax)]
@@ -240,7 +240,7 @@
         rect(xx[1], m3, xx[l0 + 1], w[1], col = grey(1))
         for (i in 1:l0) rect(xx[i], m3, xx[i + 1], w[i], col = col[i])
     }
-    s.corcircle(x$Tax[x$T4[, 2] == 1, ], full = FALSE, 
+    s.corcircle(x$Tax[x$T4[, 2] == 1, ], fullcircle = FALSE, 
         sub = "First axis projection", possub = "topright", csub = 1.5)
     valpr(x)
     plot(x$cov2[, c(xax, yax)])
@@ -319,12 +319,12 @@
         cos2 <- zapsmall(cos2)
         sumry <- array("", c(nf, 6), list(1:nf, c("Iner", "Iner+", 
             "Var", "Var+", "cos2", "cov2")))
-        sumry[, 1] <- round(eigval, dig = 3)
-        sumry[, 2] <- round(eigvalplus, dig = 3)
-        sumry[, 3] <- round(varproj, dig = 3)
-        sumry[, 4] <- round(varprojplus, dig = 3)
-        sumry[, 5] <- round(cos2, dig = 3)
-        sumry[, 6] <- round(object$cov2[i, ], dig = 3)
+        sumry[, 1] <- round(eigval, digits = 3)
+        sumry[, 2] <- round(eigvalplus, digits = 3)
+        sumry[, 3] <- round(varproj, digits = 3)
+        sumry[, 4] <- round(varprojplus, digits = 3)
+        sumry[, 5] <- round(cos2, digits = 3)
+        sumry[, 6] <- round(object$cov2[i, ], digits = 3)
         class(sumry) <- "table"
         print(sumry)
         cat("\n")

@@ -20,9 +20,9 @@
     for (ianal in which.tab) {
         coolig <- object$Tli[object$TL[, 1] == ianal, c(xax, yax)]
         coocol <- object$Tco[object$TC[, 1] == ianal, c(xax, yax)]
-        s.label(cootot, clab = 0, cpoi = 0, sub = object$tab.names[ianal], 
+        s.label(cootot, clabel = 0, cpoint = 0, sub = object$tab.names[ianal], 
             csub = csub, possub = possub)
-        s.label(coolig, clab = clab.r, cpoi = cpoi, add.p = TRUE)
-        s.label(coocol, clab = clab.c, add.p = TRUE)
+        s.label(coolig, clabel = clab.r, cpoint = cpoi, add.plot = TRUE)
+        s.label(coocol, clabel = clab.c, add.plot = TRUE)
     }
 }

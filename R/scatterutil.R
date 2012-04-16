@@ -510,7 +510,7 @@
 
 ############ scatterutil.legend.bw.square #################
 "scatterutil.legend.bw.square" <- function (br0, sq0, sig0, clegend) {
-    br0 <- round(br0, dig = 6)
+    br0 <- round(br0, digits = 6)
     cha <- as.character(br0[1])
     for (i in (2:(length(br0)))) cha <- paste(cha, br0[i], sep = " ")
     cex0 <- par("cex") * clegend
@@ -530,9 +530,9 @@
         x0 <- x0 + xh + z0/2
         if (sig0[i] >= 0) 
             symbols(x0, y0, squares = z0, bg = "black", fg = "white", 
-                add = TRUE, inch = FALSE)
+                add = TRUE, inches = FALSE)
         else symbols(x0, y0, squares = z0, bg = "white", fg = "black", 
-            add = TRUE, inch = FALSE)
+            add = TRUE, inches = FALSE)
         x0 <- x0 + z0/2
     }
     invisible()
@@ -542,7 +542,7 @@
 "scatterutil.legend.square.grey" <- function (br0, valgris, h, clegend) {
     if (clegend <= 0) 
         return(invisible())
-    br0 <- round(br0, dig = 6)
+    br0 <- round(br0, digits = 6)
     nborn <- length(br0)
     cex0 <- par("cex") * clegend
     x0 <- par("usr")[1] + h
@@ -563,11 +563,11 @@
     x0 <- par("usr")[1] + h
     for (i in (2:(nborn))) {
         symbols(x0, y0, squares = h, bg = gray(valgris[i - 1]), 
-            add = TRUE, inch = FALSE)
+            add = TRUE, inches = FALSE)
         x0 <- x0 + h
         cha <- br0[i]
         if (cha < 1e-05) 
-            cha <- round(cha, dig = 3)
+            cha <- round(cha, digits = 3)
         cha <- paste(cha, "]", sep = "")
         xh <- strwidth(cha, cex = cex0)
         if (i == (nborn)) 
@@ -601,7 +601,7 @@
     rect(rep(0, l0), seq(h0/2, by = h0, le = l0), rep(h0, l0), 
         seq(3 * h0/2, by = h0, le = l0), col = gray(seq(1, 0, 
             le = l0)))
-    text(rep(h0, 9), mid0, as.character(signif(qq, dig = 2)), 
+    text(rep(h0, 9), mid0, as.character(signif(qq, digits = 2)), 
         pos = 4, cex = par("cex") * clegend)
     box(col = "white")
 }

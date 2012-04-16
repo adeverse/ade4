@@ -85,9 +85,9 @@
         "ncol", "rank", "lambda1", "lambda2", "lambda3", "lambda4", 
         "")))
     for (k in 1:ntab) {
-        eig <- zapsmall(object$Eig[indica == k], dig = 4)
+        eig <- zapsmall(object$Eig[indica == k], digits = 4)
         l0 <- min(length(eig), 4)
-        sumry[k, 4 + (1:l0)] <- round(eig[1:l0], dig = 3)
+        sumry[k, 4 + (1:l0)] <- round(eig[1:l0], digits = 3)
         if (length(eig) > 4) 
             sumry[k, 9] <- "..."
     }

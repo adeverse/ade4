@@ -35,7 +35,7 @@
     }
     else if (method == 3) {
         dfcov <- cov(df) * (nlig - 1)/nlig
-        maha <- eigen(dfcov, sym = TRUE)
+        maha <- eigen(dfcov, symmetric = TRUE)
         maha.r <- sum(maha$values > (maha$values[1] * tol))
         maha.e <- 1/sqrt(maha$values[1:maha.r])
         maha.v <- maha$vectors[, 1:maha.r]

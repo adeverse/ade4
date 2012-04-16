@@ -106,15 +106,15 @@ function(x, xax = 1, yax = 2, ...) {
   nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3),
                respect = TRUE)
   par(mar = c(0.1, 0.1, 0.1, 0.1))
-  s.arrow(x$aX, xax, yax, sub = "X axes", csub = 2, clab = 1.25)
-  s.arrow(x$aY, xax, yax, sub = "Y axes", csub = 2, clab = 1.25)
+  s.arrow(x$aX, xax, yax, sub = "X axes", csub = 2, clabel = 1.25)
+  s.arrow(x$aY, xax, yax, sub = "Y axes", csub = 2, clabel = 1.25)
   scatterutil.eigen(x$eig, wsel = c(xax, yax))
-  s.match.class(df1xy=x$msX,df2xy=x$msY,fac=fac,clab=1.5) # wt?
+  s.match.class(df1xy = x$msX, df2xy = x$msY, fac = fac, clabel = 1.5) # wt?
   
   s.arrow(x$l1, xax = xax, yax = yax, sub = "Y Canonical weights",
-          csub = 2, clab = 1.25)
+          csub = 2, clabel = 1.25)
   s.arrow(x$c1, xax = xax, yax = yax, sub = "X Canonical weights",
-          csub = 2, clab = 1.25)
+          csub = 2, clabel = 1.25)
 
 }
 

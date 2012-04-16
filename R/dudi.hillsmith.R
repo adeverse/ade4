@@ -35,7 +35,7 @@
     for (j in 1:nc) {
         if (index[j] == "q") {
             
-                res <- cbind(res, scalewt(df[, j],w=row.w))
+                res <- cbind(res, scalewt(df[, j],wt=row.w))
                 provinames <- c(provinames, names(df)[j])
                 col.w <- c(col.w, 1)
                 k <- k + 1

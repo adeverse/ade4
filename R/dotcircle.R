@@ -20,9 +20,9 @@
    # if (csub > 0) scatter.util.sub(sub, csub, possub)
    # if (box) box()
     
-    symbols(0, 0, cir=0.2,inc=FALSE,add=TRUE)
+    symbols(0, 0, circles=0.2,inches=FALSE,add=TRUE)
     for (i in 1:2) {
-        symbols(0, 0, cir=leg0[i],inc=FALSE,add=TRUE,fg=grey(0.5))
+        symbols(0, 0, circles=leg0[i],inches=FALSE,add=TRUE,fg=grey(0.5))
     }
     points(x,y,type="o",pch=20,cex=2)
     segments(x[n],y[n],x[1],y[1])
@@ -37,8 +37,8 @@
     par(srt=0)
     if (cleg>0) {
         s.label(cbind.data.frame(c(0.2,0,-0.2,0),c(0,-0.2,0,0.2)),
-            lab=as.character(rep(leg[1],4)),add.p=TRUE,clab=cleg)
+            label=as.character(rep(leg[1],4)),add.plot=TRUE,clabel=cleg)
         s.label(cbind.data.frame(c(1,0,-1,0),c(0,-1,0,1)),
-            lab=as.character(rep(leg[2],4)),clab=cleg, add.p=TRUE)
+            label=as.character(rep(leg[2],4)),clabel=cleg, add.plot=TRUE)
     }
 }

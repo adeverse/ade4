@@ -112,23 +112,23 @@ plot.dpcoa <- function(x, xax = 1, yax = 2, option = 1:4, csize = 2, ...) {
 	for (j in option) {
 		if (j == 1) { #
 			s.corcircle(x$c1[, c(xax, yax)], cgrid = 0, 
-				sub = "Base", csub = 1.5, possub = "topleft", full = TRUE)
+				sub = "Base", csub = 1.5, possub = "topleft", fullcircle = TRUE)
 			l0 <- length(x$eig)
 			add.scatter.eig(x$eig, l0, xax, yax, posi = "bottomleft", ratio = 1/4)
 		}
 		if (j == 2) { #
 			X <- as.list(x$call)[[2]]
 			X <- eval(X, sys.frame(0))
-			s.label(x$l1[, c(xax, yax)], clab = 0, cpoi = 2)
-			s.distri(x$l1[, c(xax, yax)], X, add.plot = TRUE, cell = 1, cstar = 0, 
-				axesell = 0, lab = names(X), cpo = 0, clab = 1)
+			s.label(x$l1[, c(xax, yax)], clabel = 0, cpoint = 2)
+			s.distri(x$l1[, c(xax, yax)], X, add.plot = TRUE, cellipse = 1, cstar = 0, 
+				axesell = 0, label = names(X), cpoint = 0, clabel = 1)
 			#add.scatter.eig(x$eig, l0, xax, yax, posi = "bottom", ratio = 1 / 5)
 		}
 		if (j == 3) { #
-			s.label(x$l2[, c(xax, yax)], clab = 1, cpoi = 0)
+			s.label(x$l2[, c(xax, yax)], clabel = 1, cpoint = 0)
 		}
 		if (j == 4) { #
-			s.value(x$l2[, c(xax, yax)], x$RaoDiv, csi = csize, 
+			s.value(x$l2[, c(xax, yax)], x$RaoDiv, csize = csize, 
 				sub = "Rao Divcs", possub = "topright", csub = 1.5)
 		}
 	}		

@@ -48,22 +48,22 @@
     oritab <- eval(as.list(x$call)[[2]], sys.frame(0))
     nvar <- ncol(oritab)
     if (nvar <= 7) 
-        sco.boxplot(x$l1[, xax], oritab[, 1:nvar], clab = 1)
+        sco.boxplot(x$l1[, xax], oritab[, 1:nvar], clabel = 1)
     else if (nvar <= 14) {
         par(mfrow = c(1, 2))
-        sco.boxplot(x$l1[, xax], oritab[, 1:(nvar%/%2)], clab = 1.3)
+        sco.boxplot(x$l1[, xax], oritab[, 1:(nvar%/%2)], clabel = 1.3)
         sco.boxplot(x$l1[, xax], oritab[, (nvar%/%2 + 1):nvar], 
-            clab = 1.3)
+            clabel = 1.3)
     }
     else {
         par(mfrow = c(1, 3))
         if ((a0 <- nvar%/%3) < nvar/3) 
             a0 <- a0 + 1
-        sco.boxplot(x$l1[, xax], oritab[, 1:a0], clab = 1.6)
+        sco.boxplot(x$l1[, xax], oritab[, 1:a0], clabel = 1.6)
         sco.boxplot(x$l1[, xax], oritab[, (a0 + 1):(2 * a0)], 
-            clab = 1.6)
+            clabel = 1.6)
         sco.boxplot(x$l1[, xax], oritab[, (2 * a0 + 1):nvar], 
-            clab = 1.6)
+            clabel = 1.6)
     }
 }
 

@@ -62,7 +62,7 @@
             segments(score, moy[y] - h, score, moy[y] + h)
             abline(0, 1)
             scatterutil.eti(moy, moy, label = as.character(levels(y)), 
-                clab = 1)
+                clabel = 1)
         }
         else if (type.var == "o") {
             y <- x$tab[, col.var]

@@ -53,7 +53,7 @@ orthobasis.mat <- function(mat, cnw=TRUE) {
     wt <- sqrt(wt)
     mat <- t(t(mat)/wt)
     mat <- mat/wt
-    eig <- eigen(mat,sym=TRUE)
+    eig <- eigen(mat,symmetric = TRUE)
     w0 <- abs(eig$values)/max(abs(eig$values))
     tol <- 1e-07
     w0 <- which(w0<tol)
@@ -287,7 +287,7 @@ return(res)
     b0 <- matrix(unlist(lapply(1:n,fun)),n,n)
     b0=(t(b0)+b0)/2 
     b0=bicenter.wt(b0)
-    a0 <- eigen(b0, sym = TRUE)
+    a0 <- eigen(b0, symmetric = TRUE)
     #barplot(a0$values)
     a0 <- a0$vectors
     a0 <- cbind(rep(1,n),a0)
@@ -313,7 +313,7 @@ return(res)
     if (is.null(names(poivoisi))) names(poivoisi) <- as.character(1:n)
     d0 = neig2mat(neig)
     d0 = diag(poivoisi)-d0/m
-    eig <- eigen(d0, sym = TRUE)
+    eig <- eigen(d0, symmetric = TRUE)
     ########
     tol <- 1e-07
     w0 <- abs(eig$values)/max(abs(eig$values))

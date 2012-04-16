@@ -62,16 +62,16 @@ wca <- function (x, ...) UseMethod("wca")
         respect = TRUE)
     par(mar = c(0.2, 0.2, 0.2, 0.2))
     s.arrow(x$c1, xax = xax, yax = yax, sub = "Canonical weights", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
     s.arrow(x$co, xax = xax, yax = yax, sub = "Variables", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
     s.class(x$ls, fac, xax = xax, yax = yax, sub = "Scores and classes", 
-        csub = 2, clab = 1.5, cpoi = 2)
+        csub = 2, clabel = 1.5, cpoint = 2)
     s.corcircle(x$as, xax = xax, yax = yax, sub = "Inertia axes", 
-        csub = 2, cgrid = 0, clab = 1.25)
+        csub = 2, cgrid = 0, clabel = 1.25)
     s.class(x$li, fac, xax = xax, yax = yax, axesell = FALSE, 
-        clab = 0, cstar = 0, sub = "Common centring", csub = 2)
+        clabel = 0, cstar = 0, sub = "Common centring", csub = 2)
 }
 
 "print.within" <- function (x, ...) {

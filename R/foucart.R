@@ -116,20 +116,20 @@
     auxi <- x$Tco[, c(xax, yax)]
     names(auxi) <- names(cootot)
     cootot <- rbind.data.frame(cootot, auxi)
-    s.label(cootot, clab = 0, cpoi = 0, sub = "Rows (Base)", 
+    s.label(cootot, clabel = 0, cpoint = 0, sub = "Rows (Base)", 
         csub = csub, possub = possub)
-    s.label(x$li, xax, yax, clab = clab, add.p = TRUE)
-    s.label(cootot, clab = 0, cpoi = 0, sub = "Columns (Base)", 
+    s.label(x$li, xax, yax, clabel = clab, add.plot = TRUE)
+    s.label(cootot, clabel = 0, cpoint = 0, sub = "Columns (Base)", 
         csub = csub, possub = possub)
-    s.label(x$co, xax, yax, clab = clab, add.p = TRUE)
-    s.label(cootot, clab = 0, cpoi = 0, sub = "Rows", csub = csub, 
+    s.label(x$co, xax, yax, clabel = clab, add.plot = TRUE)
+    s.label(cootot, clabel = 0, cpoint = 0, sub = "Rows", csub = csub, 
         possub = possub)
     s.class(x$Tli, x$TL[, 2], xax = xax, yax = yax, 
-        axesell = FALSE, clab = clab, add.p = TRUE)
-    s.label(cootot, clab = 0, cpoi = 0, sub = "Columns", 
+        axesell = FALSE, clabel = clab, add.plot = TRUE)
+    s.label(cootot, clabel = 0, cpoint = 0, sub = "Columns", 
         csub = csub, possub = possub)
     s.class(x$Tco, x$TC[, 2], xax = xax, yax = yax, 
-        axesell = FALSE, clab = clab, add.p = TRUE)
+        axesell = FALSE, clabel = clab, add.plot = TRUE)
 }
 
 "print.foucart" <- function (x, ...) {

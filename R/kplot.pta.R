@@ -21,7 +21,7 @@
         for (ianal in which.tab) {
             coo2 <- object$Tax[object$T4[, 1] == ianal, c(xax, yax)]
             row.names(coo2) <- as.character(1:4)
-            s.corcircle(coo2, clab = clab, cgrid = 0, sub = row.names(object$RV)[ianal], 
+            s.corcircle(coo2, clabel = clab, cgrid = 0, sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub)
         }
     }
@@ -40,7 +40,7 @@
                 csub = csub, possub = possub, pixmap = NULL, 
                 contour = NULL, area = NULL, add.plot = FALSE)
             coo2 <- cootot[object$TL[, 1] == ianal, 1:2]
-            s.label(coo2, add.p = TRUE, clab = clab, label = row.names(object$Tli)[object$TL[, 
+            s.label(coo2, add.plot = TRUE, clabel = clab, label = row.names(object$Tli)[object$TL[, 
                 1] == ianal])
         }
     }
@@ -59,7 +59,7 @@
                 csub = csub, possub = possub, pixmap = NULL, 
                 contour = NULL, area = NULL, add.plot = FALSE)
             coo2 <- object$Tco[object$TC[, 1] == ianal, c(xax, yax)]
-            s.arrow(coo2, add.p = TRUE, clab = clab, sub = row.names(object$RV)[ianal], 
+            s.arrow(coo2, add.plot = TRUE, clabel = clab, sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub)
         }
     }
@@ -67,7 +67,7 @@
         for (ianal in which.tab) {
             coo2 <- object$Tcomp[object$T4[, 1] == ianal, c(xax, yax)]
             row.names(coo2) <- as.character(1:4)
-            s.corcircle(coo2, clab = clab, cgrid = 0, sub = row.names(object$RV)[ianal], 
+            s.corcircle(coo2, clabel = clab, cgrid = 0, sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub)
         }
     }

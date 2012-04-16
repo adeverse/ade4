@@ -23,6 +23,6 @@
         restot = double (nrepet),
         PACKAGE="ade4"
     )
-    res <- as.krandtest(obs=res$obs,sim=matrix(res$result,ncol=nvar, byr=TRUE),names=test.names,alter=alter)
+    res <- as.krandtest(obs=res$obs,sim=matrix(res$result,ncol=nvar, byrow=TRUE),names=test.names,alter=alter)
     return(res)
 }

@@ -14,23 +14,23 @@
         coolig <- x$li[, c(xax, yax)]
         coocol <- x$co[, c(xax, yax)]
         names(coocol) <- names(coolig)
-        s.label(rbind.data.frame(coolig, coocol), clab = 0, 
-            cpoi = 0, sub = sub, csub = csub)
+        s.label(rbind.data.frame(coolig, coocol), clabel = 0, 
+            cpoint = 0, sub = sub, csub = csub)
         # samedi, mars 29, 2003 at 15:35 correction SD pour ZAN
-        s.label(coolig, clab = clab.row, add.p = TRUE)
-        s.label(coocol, clab = clab.col, add.p = TRUE)
+        s.label(coolig, clabel = clab.row, add.plot = TRUE)
+        s.label(coocol, clabel = clab.col, add.plot = TRUE)
     }
     else if (method == 2) {
         coocol <- x$c1[, c(xax, yax)]
         coolig <- x$li[, c(xax, yax)]
-        s.label(coocol, clab = clab.col, sub = sub, csub = csub)
-        s.label(coolig, clab = clab.row, add.plot = TRUE)
+        s.label(coocol, clabel = clab.col, sub = sub, csub = csub)
+        s.label(coolig, clabel = clab.row, add.plot = TRUE)
     }
     else if (method == 3) {
         coolig <- x$l1[, c(xax, yax)]
         coocol <- x$co[, c(xax, yax)]
-        s.label(coolig, clab = clab.col, sub = sub, csub = csub)
-        s.label(coocol, clab = clab.row, add.plot = TRUE)
+        s.label(coolig, clabel = clab.col, sub = sub, csub = csub)
+        s.label(coocol, clabel = clab.row, add.plot = TRUE)
     }
     else stop("Unknown method")
     add.scatter.eig(x$eig, x$nf, xax, yax, posi = posieig, ratio = 1/4)

@@ -354,7 +354,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     w <- res$Wmat
     w <- w / sum(w)
     w <- bicenter.wt(w)
-    w <- eigen(w,sym=TRUE)
+    w <- eigen(w,symmetric = TRUE)
     res$Wvalues <- w$values[-nleaves]*nleaves
     w <- as.data.frame(qr.Q(qr(scale(w$vectors, scale = FALSE)))[,-nleaves]*sqrt(nleaves))
     row.names(w) <- leave.names
@@ -386,7 +386,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     # double centrage
     w <- bicenter.wt(w)
     # diagonalisation
-    eig <- eigen (w, sym = TRUE)
+    eig <- eigen (w, symmetric = TRUE)
     w0 <- abs(eig$values)/max(abs(eig$values))
     w0 <- which(w0<tol)
     if (length(w0)==0) stop ("abnormal output : no null eigenvalue")

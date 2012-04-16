@@ -12,7 +12,7 @@
     covar <- (covar+t(covar))/2
     covar <- covar * sqrt(dudi$cw)
     covar <- t(t(covar) * sqrt(dudi$cw))
-    covar <- eigen(covar, sym=TRUE)
+    covar <- eigen(covar, symmetric = TRUE)
     res <- list()
     res$eig <- covar$values[abs(covar$values)>NEARZERO]
     ndim <- length(res$eig)
@@ -207,7 +207,7 @@ print.multispati <- function(x, ...)
     par(mar = c(0.2, 0.2, 0.2, 0.2))
     f1()
     s.arrow(x$c1, xax = xax, yax = yax, sub = "Canonical weights", 
-        csub = 2, clab = 1.25)
-    s.match(x$li, x$ls, xax = xax, yax = yax, sub = "Scores and lag scores", csub = 2, clab = 0.75) 
+        csub = 2, clabel = 1.25)
+    s.match(x$li, x$ls, xax = xax, yax = yax, sub = "Scores and lag scores", csub = 2, clabel = 0.75) 
  
 }

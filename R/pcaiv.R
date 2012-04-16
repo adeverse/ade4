@@ -42,15 +42,15 @@
     X$ls <- U
     sumry <- array("", c(X$nf, 7), list(rep("", X$nf), c("iner", 
         "inercum", "inerC", "inercumC", "ratio", "R2", "lambda")))
-    sumry[, 1] <- signif(dudi$eig[1:X$nf], dig = 3)
-    sumry[, 2] <- signif(cumsum(dudi$eig[1:X$nf]), dig = 3)
+    sumry[, 1] <- signif(dudi$eig[1:X$nf], digits = 3)
+    sumry[, 2] <- signif(cumsum(dudi$eig[1:X$nf]), digits = 3)
     varpro <- apply(U, 2, function(x) sum(x * x * dudi$lw))
-    sumry[, 3] <- signif(varpro, dig = 3)
-    sumry[, 4] <- signif(cumsum(varpro), dig = 3)
+    sumry[, 3] <- signif(varpro, digits = 3)
+    sumry[, 4] <- signif(cumsum(varpro), digits = 3)
     sumry[, 5] <- signif(cumsum(varpro)/cumsum(dudi$eig[1:X$nf]), 
-        dig = 3)
-    sumry[, 6] <- signif(X$eig[1:X$nf]/varpro, dig = 3)
-    sumry[, 7] <- signif(X$eig[1:X$nf], dig = 3)
+        digits = 3)
+    sumry[, 6] <- signif(X$eig[1:X$nf]/varpro, digits = 3)
+    sumry[, 7] <- signif(X$eig[1:X$nf], digits = 3)
     class(sumry) <- "table"
     X$param <- sumry
     U <- as.matrix(X$c1) * unlist(X$cw)
@@ -89,19 +89,19 @@
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     # modif mail P. Giraudoux 25/10/2004
     s.arrow(na.omit(x$fa), xax, yax, sub = "Loadings", csub = 2, 
-        clab = 1.25)
+        clabel = 1.25)
     s.arrow(na.omit(x$cor), xax = xax, yax = yax, sub = "Correlation", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
     s.corcircle(x$as, xax, yax, sub = "Inertia axes", csub = 2)
-    s.match(x$li, x$ls, xax, yax, clab = 1.5, sub = "Scores and predictions", 
+    s.match(x$li, x$ls, xax, yax, clabel = 1.5, sub = "Scores and predictions", 
         csub = 2)
     if (inherits(x, "cca")) 
-        s.label(x$co, xax, yax, clab = 0, cpoi = 3, add.p = TRUE)
+        s.label(x$co, xax, yax, clabel = 0, cpoint = 3, add.plot = TRUE)
     if (inherits(x, "cca")) 
-        s.label(x$co, xax, yax, clab = 1.25, sub = "Species", 
+        s.label(x$co, xax, yax, clabel = 1.25, sub = "Species", 
             csub = 2)
     else s.arrow(x$c1, xax = xax, yax = yax, sub = "Variables", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
 }
 

@@ -94,16 +94,16 @@
         respect = TRUE)
     par(mar = c(0.2, 0.2, 0.2, 0.2))
     s.arrow(x$fa, xax = xax, yax = yax, sub = "Canonical weights", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
     s.corcircle(x$va, xax = xax, yax = yax, sub = "Cos(variates,canonical variates)", 
-        csub = 2, cgrid = 0, clab = 1.25)
+        csub = 2, cgrid = 0, clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
     s.class(x$li, fac, xax = xax, yax = yax, sub = "Scores and classes", 
-        csub = 2, clab = 1.5)
+        csub = 2, clabel = 1.5)
     s.corcircle(x$cp, xax = xax, yax = yax, sub = "Cos(components,canonical variates)", 
-        csub = 2, cgrid = 0, clab = 1.25)
+        csub = 2, cgrid = 0, clabel = 1.25)
     s.label(x$gc, xax = xax, yax = yax, sub = "Class scores", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
 }
 
 "print.discrimin" <- function (x, ...) {

@@ -56,7 +56,7 @@
     names(yn) <- names(dn)
     y <- c(yinit, yn)
     legender <- function(br0, sq0, sig0, clegend, type) {
-        br0 <- round(br0, dig = 6)
+        br0 <- round(br0, digits = 6)
         cha <- as.character(br0[1])
         for (i in (2:(length(br0)))) cha <- paste(cha, br0[i], 
             sep = " ")
@@ -75,18 +75,18 @@
             if (sig0[i] >= 0) {
                 if (type == 1) 
                   symbols(x0, y0, squares = z0, bg = "black", 
-                    fg = "white", add = TRUE, inch = FALSE)
+                    fg = "white", add = TRUE, inches = FALSE)
                 else if (type == 2) 
                   symbols(x0, y0, circles = z0/2, bg = "black", 
-                    fg = "white", add = TRUE, inch = FALSE)
+                    fg = "white", add = TRUE, inches = FALSE)
             }
             else {
                 if (type == 1) 
                   symbols(x0, y0, squares = z0, bg = "white", 
-                    fg = "black", add = TRUE, inch = FALSE)
+                    fg = "black", add = TRUE, inches = FALSE)
                 else if (type == 2) 
                   symbols(x0, y0, circles = z0/2, bg = "white", 
-                    fg = "black", add = TRUE, inch = FALSE)
+                    fg = "black", add = TRUE, inches = FALSE)
             }
             x0 <- x0 + z0/2
         }
@@ -111,11 +111,11 @@
             for (i in 1:n) {
                 if (sign(data[i]) >= 0) {
                   symbols(yinit[i], xinit[i], squares = sq[i], 
-                    bg = "black", fg = "white", add = TRUE, inch = FALSE)
+                    bg = "black", fg = "white", add = TRUE, inches = FALSE)
                 }
                 else {
                   symbols(yinit[i], xinit[i], squares = sq[i], 
-                    bg = "white", fg = "black", add = TRUE, inch = FALSE)
+                    bg = "white", fg = "black", add = TRUE, inches = FALSE)
                 }
             }
         }
@@ -123,11 +123,11 @@
             for (i in 1:n) {
                 if (sign(data[i]) >= 0) {
                   symbols(yinit[i], xinit[i], circles = sq[i]/2, 
-                    bg = "black", fg = "white", add = TRUE, inch = FALSE)
+                    bg = "black", fg = "white", add = TRUE, inches = FALSE)
                 }
                 else {
                   symbols(yinit[i], xinit[i], circles = sq[i]/2, 
-                    bg = "white", fg = "black", add = TRUE, inch = FALSE)
+                    bg = "white", fg = "black", add = TRUE, inches = FALSE)
                 }
             }
         }

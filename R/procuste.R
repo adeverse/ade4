@@ -95,16 +95,16 @@
         respect = TRUE)
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.arrow(x$load1, xax, yax, sub = "Loadings 1", csub = 2, 
-        clab = 1.25)
+        clabel = 1.25)
     s.arrow(x$load2, xax, yax, sub = "Loadings 2", csub = 2, 
-        clab = 1.25)
+        clabel = 1.25)
     scatterutil.eigen(x$d^2, wsel = c(xax, yax))
-    s.match(x$scor1, x$scor2, xax, yax, clab = 1.5, sub = "Common projection", 
+    s.match(x$scor1, x$scor2, xax, yax, clabel = 1.5, sub = "Common projection", 
         csub = 2)
     s.label(x$scor1, xax = xax, yax = yax, sub = "Array 1", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
     s.label(x$scor2, xax = xax, yax = yax, sub = "Array 2", 
-        csub = 2, clab = 1.25)
+        csub = 2, clabel = 1.25)
 }
 
 "print.procuste" <- function (x, ...) {

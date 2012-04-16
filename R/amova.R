@@ -164,9 +164,9 @@ amova <- function(samples, distances = NULL, structures = NULL) {
     # main procedure.
     nbhaplotypes <- sum(samples)
     if (!is.null(structures)) {
-        structures2 <- cbind.data.frame(structures[length(structures):1], as.factor(colnames(samples, do = FALSE)))
+        structures2 <- cbind.data.frame(structures[length(structures):1], as.factor(colnames(samples, do.NULL = FALSE)))
     }
-    else structures2 <- as.data.frame(as.factor(colnames(samples, do = FALSE)))
+    else structures2 <- as.data.frame(as.factor(colnames(samples, do.NULL = FALSE)))
     nbunits <- Nbunits(structures2)
     ddl <- Ddl(nbunits, nbhaplotypes)
     proc <- Procedure(distances, nbhaplotypes, samples, structures, ddl)

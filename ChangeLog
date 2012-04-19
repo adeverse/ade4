@@ -1,3 +1,36 @@
+2012-04-19 11:11  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.5-0 ----------
+
+2012-04-17 15:23  sdray
+
+	* R/bca.rlq.R, R/wca.rlq.R, data/piosphere.rda, man/bca.rlq.Rd,
+	  man/piosphere.Rd, man/wca.rlq.Rd: Add functions/data for partial
+	  RLQ analysis proposed by Wesuls et al (2012)
+
+2012-04-16 13:06  sdray
+
+	* R/ade4toR.R, R/amova.R, R/area.plot.R, R/between.R,
+	  R/betweencoinertia.R, R/cailliez.R, R/coinertia.R, R/corkdist.R,
+	  R/costatis.R, R/discrimin.R, R/dist.quant.R, R/dotcircle.R,
+	  R/dpcoa.R, R/dudi.acm.R, R/dudi.hillsmith.R, R/dudi.pco.R,
+	  R/foucart.R, R/gearymoran.R, R/is.euclid.R, R/kdisteuclid.R,
+	  R/kplot.foucart.R, R/kplot.mcoa.R, R/kplot.mfa.R, R/kplot.pta.R,
+	  R/kplot.sepan.R, R/kplot.statis.R, R/lingoes.R, R/mcoa.R,
+	  R/mdpcoa.R, R/mfa.R, R/multispati.R, R/neig.R, R/newick2phylog.R,
+	  R/niche.R, R/nipals.R, R/orthobasis.R, R/orthogram.R, R/pcaiv.R,
+	  R/pcaivortho.R, R/plot.phylog.R, R/procuste.R, R/pta.R,
+	  R/quasieuclid.R, R/rlq.R, R/s.arrow.R, R/s.corcircle.R,
+	  R/s.hist.R, R/s.kde2d.R, R/s.match.R, R/s.multinom.R,
+	  R/s.traject.R, R/s.value.R, R/scatter.acm.R, R/scatter.coa.R,
+	  R/scatter.dudi.R, R/scatter.fca.R, R/scatterutil.R,
+	  R/sco.quant.R, R/score.acm.R, R/score.mix.R, R/sepan.R,
+	  R/statis.R, R/symbols.phylog.R, R/table.cont.R, R/table.dist.R,
+	  R/table.paint.R, R/table.phylog.R, R/table.value.R,
+	  R/triangle.plot.R, R/within.R, R/withincoinertia.R, R/witwit.R,
+	  R/witwitsepan.R: Use full argument names to avoid partial
+	  matching
+
 2012-04-07 21:29  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.4-18 ----------

@@ -61,7 +61,7 @@ data(mafragh)
 if (require(deldir, quietly=TRUE)) {
     par(mfrow = c(2,1))
     provi <- deldir(mafragh$xy)
-    provi.neig <- neig(edges = provi$delsgs[,5:6])
+    provi.neig <- neig(edges = as.matrix(provi$delsgs[,5:6]))
     
     s.label(mafragh$xy, neig = provi.neig, inc = FALSE, 
         addax = FALSE, clab = 0, cnei = 2)

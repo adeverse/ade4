@@ -60,7 +60,7 @@ void testdimRVpca (int *ok, double *tabXR, int *nrow, int *ncol, int *nrepet, in
     }
   }
   rankX=svd(X,XU,XV,D);
-  if(rankX < 0) return(-1);
+  if(rankX < 0) ok[0] = -1;
   if(*nbaxtest>rankX) nbaxtest[0]=rankX;
   taballoc (&result1, *nrepet, *nbaxtest);
   

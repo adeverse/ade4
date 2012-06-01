@@ -1,8 +1,11 @@
 \encoding{latin1}
 \name{orthogram}
 \alias{orthogram}
+\alias{orthogram-deprecated}
 \title{Orthonormal decomposition of variance}
 \description{
+  This function is deprecated. See \code{orthogram} in adephylo.
+  
 This function performs the orthonormal decomposition of variance of a quantitative variable on an orthonormal basis. It also returns the results of five non parametric tests associated to the variance decomposition. 
 It thus provides tools (graphical displays and test) for analysing phylogenetic, spatial and temporal pattern of one quantitative variable.
 }

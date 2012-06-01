@@ -1,10 +1,11 @@
 "orthogram"<- function (x, orthobas = NULL, neig = NULL, phylog = NULL,
     nrepet = 999, posinega = 0, tol = 1e-07,
-    na.action = c("fail", "mean"), 
-    cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0,alter=c("greater", "less", "two-sided")) 
+    na.action = c("fail", "mean"),
+    cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0,alter=c("greater", "less", "two-sided"))
 {
+    .Deprecated("orthogram", "ade4", msg="This function is now deprecated. Please use the fuction 'orthogram' in adephylo.")
     "orthoneig" <- function (obj) {
-        if (!inherits(obj, "neig")) 
+        if (!inherits(obj, "neig"))
             stop("Object of class 'neig' expected")
         b0 <- neig.util.LtoG(obj)
         deg <- attr(obj, "degrees")
@@ -18,13 +19,13 @@
         if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
         if (length(w0)==1) w0 <- (1:n)[-w0]
         else if (length(w0)>1) {
-            # on ajoute le vecteur dérivé de 1n 
+            # on ajoute le vecteur dérivé de 1n
             w <- cbind(rep(1,n),eig$vectors[,w0])
             # on orthonormalise l'ensemble
             w <- qr.Q(qr(w))
             # on met les valeurs propres à 0
             eig$values[w0] <- 0
-            # on remplace les vecteurs du noyau par une base orthonormée contenant 
+            # on remplace les vecteurs du noyau par une base orthonormée contenant
             # en première position le parasite
             eig$vectors[,w0] <- w[,-ncol(w)]
             # on enlève la position du parasite
@@ -53,16 +54,16 @@
     if (is.null(orthobas)){
       stop ("'orthobas','neig','phylog' all NULL")
     }
-    
+
     if (!inherits(orthobas, "data.frame")) stop ("'orthobas' is not a data.frame")
     if (nrow(orthobas) != nobs) stop ("non convenient dimensions")
     if (ncol(orthobas) != (nobs-1)) stop (paste("'orthobas' has",ncol(orthobas),"columns, expected:",nobs-1))
     vecpro <- as.matrix(orthobas)
-    npro <- ncol(vecpro) 
+    npro <- ncol(vecpro)
     if (any(is.na(x))) {
-        if (na.action == "fail") 
+        if (na.action == "fail")
             stop("missing value in 'x'")
-        else if (na.action == "mean") 
+        else if (na.action == "mean")
             x[is.na(x)] <- mean(na.omit(x))
         else stop("unknown method for 'na.action'")
     }
@@ -79,7 +80,7 @@
         if (posinega >= nobs-1) stop ("Non convenient value in 'posinega'")
         if (posinega <0) stop ("Non convenient value in 'posinega'")
     }
-    
+
     # préparation d'un graphique à 6 fenêtres
     # 1 pgram
     # 2 pgram cumulé
@@ -90,7 +91,7 @@
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     par(usr = c(0,1,-0.05,1))
     # layout.show(6)
-    
+
     z <- x - mean(x)
     et <- sqrt(mean(z * z))
     if ( et <= tol*(max(z)-min(z))) stop ("No variance")
@@ -105,9 +106,9 @@
         sig025 = double(npro),
         sig975 = double(npro),
         R2Max = double(nrepet+1),
-        SkR2k = double(nrepet+1), 
-        Dmax = double(nrepet+1), 
-        SCE = double(nrepet+1), 
+        SkR2k = double(nrepet+1),
+        Dmax = double(nrepet+1),
+        SCE = double(nrepet+1),
         ratio = double(nrepet+1),
         PACKAGE="ade4"
     )
@@ -126,7 +127,7 @@
     h.obs <- max(y0)
     x0 <- min(which(y0 == h.obs))
     par(mar = c(3.1, 2.5, 2.1, 2.1))
-    mp <- barplot(w$phylogram, col = grey(1 - 0.3 * (sign(z0) > 0)), 
+    mp <- barplot(w$phylogram, col = grey(1 - 0.3 * (sign(z0) > 0)),
             ylim = c(0, ylim * 1.05))
     scores.order <- (1:length(w$phylogram))[order(w$phylogram, decreasing=TRUE)[1:high.scores]]
     fun(w$phylo95,TRUE)
@@ -151,7 +152,7 @@
     segments(mp[1], 1/npro, mp[npro], 1, lty = 1)
     fun(w$sig975)
     fun(w$sig025)
-    arrows(mp[x0], sig50[x0], mp[x0], phylocum[x0], angle = 15, length = 0.15, 
+    arrows(mp[x0], sig50[x0], mp[x0], phylocum[x0], angle = 15, length = 0.15,
             lwd = 2)
     box()
     if (missing(nclass)) {
@@ -166,7 +167,7 @@
     }
     plot.randtest (as.randtest (w$Dmax[-1],w$Dmax[1],call=match.call()),main = "DMax",nclass=nclass)
     plot.randtest (as.randtest (w$SCE[-1],w$SCE[1],call=match.call()),main = "SCE",nclass=nclass)
-    
+
     w$param <- w$observed <- w$vecpro <- NULL
     w$phylogram <- NULL
     w$phylo95 <- w$sig025 <- w$sig975 <- NULL

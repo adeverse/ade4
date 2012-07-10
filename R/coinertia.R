@@ -1,6 +1,6 @@
 "coinertia" <- function (dudiX, dudiY, scannf = TRUE, nf = 2) {
     normalise.w <- function(X, w) {
-        # Correction d'un bug siganlé par Sandrine Pavoine le 21/10/2006
+        # Correction d'un bug siganle par Sandrine Pavoine le 21/10/2006
         f2 <- function(v) sqrt(sum(v * v * w))
         norm <- apply(X, 2, f2)
         X <- sweep(X, 2, norm, "/")
@@ -37,6 +37,12 @@
         w2 <- dudiY$lw*w2
         w1 <- w1%*%w2
         w1 <- eigen(w1)
+        # correction d'un bug signale par E. Prestat - juillet 2012
+        # Dans le cas d'une matrice non symetrique, eigen renvoie
+        # parfois des elements propres complexes possedant une partie
+        # imaginaire tres petite ou nulle.
+        w1$values <- Re(w1$values)
+        w1$vectors <- Re(w1$vectors)
         res <- list(tab = tabcoiner, cw = dudiX$cw, lw = dudiY$cw)
         rank <- sum((w1$values/w1$values[1]) > tol)
         if (scannf) {

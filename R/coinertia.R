@@ -224,6 +224,12 @@
 "summary.coinertia" <- function (object, ...) {
     if (!inherits(object, "coinertia")) 
         stop("to be used with 'coinertia' object")
+
+    thetitle <- "Coinertia analysis" 
+    cat(thetitle)
+    cat("\n\n")
+    NextMethod()
+
     appel <- as.list(object$call)
     dudiX <- eval(appel$dudiX, sys.frame(0))
     dudiY <- eval(appel$dudiY, sys.frame(0))
@@ -244,22 +250,27 @@
     corr <- covar/sdX/sdY
     U <- cbind.data.frame(eig, covar, sdX, sdY, corr)
     row.names(U) <- as.character(1:object$nf)
-    cat("\nEigenvalues decomposition:\n")
+    res <- list(EigDec = U)
+    cat("Eigenvalues decomposition:\n")
     print(U)
-    cat("\nInertia & coinertia X:\n")
+    cat(paste("\nInertia & coinertia X (", deparse(appel$dudiX),"):\n", sep=""))
     inertia <- cumsum(sdX^2)
     max <- cumsum(dudiX$eig[1:object$nf])
     ratio <- inertia/max
     U <- cbind.data.frame(inertia, max, ratio)
     row.names(U) <- util(object$nf)
+    res$InerX <- U
     print(U)
-    cat("\nInertia & coinertia Y:\n")
+    cat(paste("\nInertia & coinertia Y (", deparse(appel$dudiY),"):\n", sep=""))
     inertia <- cumsum(sdY^2)
     max <- cumsum(dudiY$eig[1:object$nf])
     ratio <- inertia/max
     U <- cbind.data.frame(inertia, max, ratio)
     row.names(U) <- util(object$nf)
+    res$InerY <- U
     print(U)
     RV <- sum(object$eig)/sqrt(sum(dudiX$eig^2))/sqrt(sum(dudiY$eig^2))
     cat("\nRV:\n", RV, "\n")
+    res$RV <- RV
+    invisible(res)
 }

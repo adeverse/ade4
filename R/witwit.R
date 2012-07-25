@@ -91,8 +91,8 @@
     sumry[(1:nrb), (1:nf)] <- round(aa, digits = 4)
     sumry[(1:nrb), (nf + 1)] <- round(object$lbw, digits = 4)
     sumry[(nrb + 1), (1:nf)] <- round(object$eig[1:nf], digits = 4)
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(nrb + 1, nf), list(c(row.names(object$lbvar), 
         "sum"), names(object$lbvar)))
@@ -100,8 +100,8 @@
     aa <- 1000 * t(t(aa)/object$eig[1:nf])
     sumry[(1:nrb), (1:nf)] <- round(aa, digits = 0)
     sumry[(nrb + 1), (1:nf)] <- rep(1000, nf)
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     cat("Eigen value decomposition among column blocks\n")
     nrb <- nrow(object$cbvar)
@@ -111,8 +111,8 @@
     sumry[(1:nrb), (1:nf)] <- round(aa, digits = 4)
     sumry[(1:nrb), (nf + 1)] <- round(object$cbw, digits = 4)
     sumry[(nrb + 1), (1:nf)] <- round(object$eig[1:nf], digits = 4)
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(nrb + 1, nf), list(c(row.names(object$cbvar), 
         "sum"), names(object$cbvar)))
@@ -120,7 +120,7 @@
     aa <- 1000 * t(t(aa)/object$eig[1:nf])
     sumry[(1:nrb), (1:nf)] <- round(aa, digits = 0)
     sumry[(nrb + 1), (1:nf)] <- rep(1000, nf)
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }

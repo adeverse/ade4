@@ -149,8 +149,8 @@ print.multispati <- function(x, ...)
     sumry <- array("", c(1, 4), list(1, c("vector", "length", 
         "mode", "content")))
     sumry[1, ] <- c('$eig', length(x$eig), mode(x$eig), 'eigen values')
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(4, 4), list(1:4, c("data.frame", "nrow", "ncol", "content")))
     sumry[1, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
@@ -158,8 +158,8 @@ print.multispati <- function(x, ...)
     sumry[3, ] <- c("$ls", nrow(x$ls), ncol(x$ls), 'lag vector coordinates')
     sumry[4, ] <- c("$as", nrow(x$as), ncol(x$as), 'inertia axes onto multispati axes')
     
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("other elements: ")
     if (length(names(x)) > 8) 
         cat(names(x)[9:(length(names(x)))], "\n")

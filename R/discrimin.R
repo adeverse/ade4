@@ -128,7 +128,7 @@
     sumry[3, ] <- c("$va", nrow(x$va), ncol(x$va), "cos(variables, canonical scores)")
     sumry[4, ] <- c("$cp", nrow(x$cp), ncol(x$cp), "cos(components, canonical scores)")
     sumry[5, ] <- c("$gc", nrow(x$gc), ncol(x$gc), "class scores")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }

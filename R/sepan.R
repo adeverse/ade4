@@ -95,8 +95,8 @@
     sumry[, 2] <- rep(nrow, ntab)
     sumry[, 3] <- object$blo
     sumry[, 4] <- object$rank
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
 }
 
 "plot.sepan" <- function (x, mfrow = NULL, csub = 2, ...) {
@@ -135,8 +135,8 @@
     sumry[2, ] <- c("$blo", length(x$blo), mode(x$blo), "column number")
     sumry[3, ] <- c("$rank", length(x$rank), mode(x$rank), "tab rank")
     sumry[4, ] <- c("$Eig", length(x$Eig), mode(x$Eig), "All the eigen values")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     sumry <- array("", c(6, 4), list(1:6, c("data.frame", "nrow", 
         "ncol", "content")))
     sumry[1, ] <- c("$Li", nrow(x$Li), ncol(x$Li), "row coordinates")
@@ -145,6 +145,6 @@
     sumry[4, ] <- c("$C1", nrow(x$C1), ncol(x$C1), "column normed coordinates")
     sumry[5, ] <- c("$TL", nrow(x$TL), ncol(x$TL), "factors for Li L1")
     sumry[6, ] <- c("$TC", nrow(x$TC), ncol(x$TC), "factors for Co C1")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
 }

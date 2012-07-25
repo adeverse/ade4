@@ -190,8 +190,8 @@
     sumry[5, ] <- c("$lw", length(x$lw), mode(x$lw), "row weights")
     sumry[6, ] <- c("$tabw", length(x$tabw), mode(x$tabw), 
         "array weights")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(11, 4), list(1:11, c("data.frame", "nrow", 
         "ncol", "content")))
@@ -209,8 +209,8 @@
         "component projection")
     sumry[11, ] <- c("$link", nrow(x$link), ncol(x$link), 
         "link array-total")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("other elements: ")
     if (length(names(x)) > 19) 
         cat(names(x)[20:(length(mfa))], "\n")

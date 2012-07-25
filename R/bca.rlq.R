@@ -80,8 +80,7 @@
     sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
     sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths (crossed array)")
     sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths (crossed array)")
-    class(sumry) <- "table"
-    print(sumry)
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(14, 4), list(1:14, c("data.frame", "nrow", 
         "ncol", "content")))
@@ -99,8 +98,7 @@
     sumry[12, ] <- c("$aQ", nrow(x$aQ), ncol(x$aQ), "axes onto between-RLQ axes (Q)")
     sumry[13, ] <- c("$acR", nrow(x$acR), ncol(x$acR), "RLQ axes onto between-RLQ axes (R)")
     sumry[14, ] <- c("$acQ", nrow(x$acQ), ncol(x$acQ), "RLQ axes onto between-RLQ axes (Q)")
-    class(sumry) <- "table"
-    print(sumry)
+    print(sumry, quote = FALSE)
     cat("\n")
 }
 

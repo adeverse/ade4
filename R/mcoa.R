@@ -282,8 +282,8 @@
         "eigen values (separate analysis)")
     sumry[11, ] <- c("$cov2", nrow(x$cov2), ncol(x$cov2), 
         "pseudo eigen values (synthetic analysis)")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("other elements: ")
     if (length(names(x)) > 14) 
         cat(names(x)[15:(length(x))], "\n")
@@ -325,8 +325,8 @@
         sumry[, 4] <- round(varprojplus, digits = 3)
         sumry[, 5] <- round(cos2, digits = 3)
         sumry[, 6] <- round(object$cov2[i, ], digits = 3)
-        class(sumry) <- "table"
-        print(sumry)
+        
+        print(sumry, quote = FALSE)
         cat("\n")
     }
 }

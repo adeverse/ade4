@@ -98,8 +98,8 @@ wca <- function (x, ...) UseMethod("wca")
     sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths")
     sumry[4, ] <- c("$tabw", length(x$tabw), mode(x$tabw), "class weigths")
     sumry[5, ] <- c("$fac", length(x$fac), mode(x$fac), "factor for grouping")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(7, 4), list(1:7, c("data.frame", "nrow", 
         "ncol", "content")))
@@ -110,7 +110,7 @@ wca <- function (x, ...) UseMethod("wca")
     sumry[5, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
     sumry[6, ] <- c("$ls", nrow(x$ls), ncol(x$ls), "supplementary row coordinates")
     sumry[7, ] <- c("$as", nrow(x$as), ncol(x$as), "inertia axis onto within axis")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }

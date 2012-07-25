@@ -40,19 +40,7 @@
     row.names(U) <- row.names(dudi$tab)
     names(U) <- names(X$li)
     X$ls <- U
-    sumry <- array("", c(X$nf, 7), list(rep("", X$nf), c("iner", 
-        "inercum", "inerC", "inercumC", "ratio", "R2", "lambda")))
-    sumry[, 1] <- signif(dudi$eig[1:X$nf], digits = 3)
-    sumry[, 2] <- signif(cumsum(dudi$eig[1:X$nf]), digits = 3)
-    varpro <- apply(U, 2, function(x) sum(x * x * dudi$lw))
-    sumry[, 3] <- signif(varpro, digits = 3)
-    sumry[, 4] <- signif(cumsum(varpro), digits = 3)
-    sumry[, 5] <- signif(cumsum(varpro)/cumsum(dudi$eig[1:X$nf]), 
-        digits = 3)
-    sumry[, 6] <- signif(X$eig[1:X$nf]/varpro, digits = 3)
-    sumry[, 7] <- signif(X$eig[1:X$nf], digits = 3)
-    class(sumry) <- "table"
-    X$param <- sumry
+    
     U <- as.matrix(X$c1) * unlist(X$cw)
     U <- data.frame(t(as.matrix(dudi$c1)) %*% U)
     row.names(U) <- names(dudi$li)
@@ -126,16 +114,16 @@
     sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
     sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths (from dudi)")
     sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths (from dudi)")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(3, 4), list(rep("", 3), c("data.frame", 
         "nrow", "ncol", "content")))
     sumry[1, ] <- c("$Y", nrow(x$Y), ncol(x$Y), "Dependant variables")
     sumry[2, ] <- c("$X", nrow(x$X), ncol(x$X), "Explanatory variables")
     sumry[3, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "modified array (projected variables)")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(4, 4), list(rep("", 4), c("data.frame", 
         "nrow", "ncol", "content")))
@@ -143,8 +131,8 @@
     sumry[2, ] <- c("$as", nrow(x$as), ncol(x$as), "Principal axis of dudi$tab on PAP")
     sumry[3, ] <- c("$ls", nrow(x$ls), ncol(x$ls), "projection of lines of dudi$tab on PPA")
     sumry[4, ] <- c("$li", nrow(x$li), ncol(x$li), "$ls predicted by X")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(4, 4), list(rep("", 4), c("data.frame", 
         "nrow", "ncol", "content")))
@@ -152,9 +140,8 @@
     sumry[2, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "CPC Constraint Principal Components")
     sumry[3, ] <- c("$co", nrow(x$co), ncol(x$co), "inner product CPC - Y")
     sumry[4, ] <- c("$cor", nrow(x$cor), ncol(x$cor), "correlation CPC - X")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
-    print(x$param)
-    cat("\n")
+   
 }

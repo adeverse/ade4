@@ -142,8 +142,8 @@ function (x, ...)
   sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
   sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths (crossed array)")
   sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths (crossed array)")
-  class(sumry) <- "table"
-  print(sumry)
+  
+  print(sumry, quote = FALSE)
   cat("\n")
   sumry <- array("", c(17, 4), list(1:17, c("data.frame", "nrow", 
                                             "ncol", "content")))
@@ -170,8 +170,8 @@ function (x, ...)
   sumry[17, ] <- c("$acY", nrow(x$acY), ncol(x$acY),
                    "co-inertia axis onto within co-inertia axis (Y)")
   
-  class(sumry) <- "table"
-  print(sumry)
+  
+  print(sumry, quote = FALSE)
   cat("\n")
 }
 

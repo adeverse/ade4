@@ -47,11 +47,11 @@
     Fvalue <- r1/r2
     proba <- 1 - pf(Fvalue, df1, df2)
     dig1 <- max(getOption("digits") - 2, 3)
-    sumry <- array("", c(2, 5), list(c("Phylogenetic", "Residuals"), 
+    sumry <- array(0, c(2, 5), list(c("Phylogenetic", "Residuals"), 
         c("Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)")))
-    sumry[1, ] <- round(c(df1, a1, r1, Fvalue, proba), digits = dig1)
-    sumry[2, 1:3] <- round(c(df2, a2, r2), digits = dig1)
-    class(sumry) <- "table"
+    sumry[1, ] <- c(df1, a1, r1, Fvalue, proba)
+    sumry[2, 1:3] <- c(df2, a2, r2)
+    
     res$sumry <- sumry
     return(res)
 }

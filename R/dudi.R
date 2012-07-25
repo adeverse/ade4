@@ -129,8 +129,8 @@
     sumry[1, ] <- c("$cw", length(x$cw), mode(x$cw), "column weights")
     sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weights")
     sumry[3, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(5, 4), list(1:5, c("data.frame", "nrow", 
         "ncol", "content")))
@@ -139,8 +139,8 @@
     sumry[3, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "row normed scores")
     sumry[4, ] <- c("$co", nrow(x$co), ncol(x$co), "column coordinates")
     sumry[5, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("other elements: ")
     if (length(names(x)) > 11) 
         cat(names(x)[12:(length(x))], "\n")

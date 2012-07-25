@@ -93,8 +93,8 @@ print.nipals<-function (x, ...)
         "mode", "content")))
     sumry[1, ] <- c("$nb", length(x$nb), mode(x$nb), "number of iterations")
     sumry[2, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(4, 4), list(1:4, c("data.frame", "nrow",
         "ncol", "content")))
@@ -102,8 +102,8 @@ print.nipals<-function (x, ...)
     sumry[2, ] <- c("$li", nrow(x$li), ncol(x$li), "row coordinates")
     sumry[3, ] <- c("$co", nrow(x$co), ncol(x$co), "column coordinates")
     sumry[4, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("other elements: ")
     if (length(names(x))==8)
         cat("NULL\n")

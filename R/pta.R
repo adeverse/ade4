@@ -263,8 +263,8 @@
     sumry[3, ] <- c("$lw", length(x$lw), mode(x$lw), "row weights")
     sumry[4, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
     sumry[5, ] <- c("$cos2", length(x$cos2), mode(x$cos2), "cosine^2 between compromise and arrays")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(5, 4), list(rep("", 5), c("data.frame", 
         "nrow", "ncol", "content")))
@@ -273,8 +273,8 @@
     sumry[3, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "row normed scores")
     sumry[4, ] <- c("$co", nrow(x$co), ncol(x$co), "column coordinates")
     sumry[5, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n     **** Intrastructure ****\n\n")
     sumry <- array("", c(7, 4), list(rep("", 7), c("data.frame", 
         "nrow", "ncol", "content")))
@@ -285,8 +285,8 @@
     sumry[5, ] <- c("$TL", nrow(x$TL), ncol(x$TL), "factors for Tli")
     sumry[6, ] <- c("$TC", nrow(x$TC), ncol(x$TC), "factors for Tco")
     sumry[7, ] <- c("$T4", nrow(x$T4), ncol(x$T4), "factors for Tax Tcomp")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }
 

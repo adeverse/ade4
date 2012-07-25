@@ -200,8 +200,8 @@
     sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
     sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths (crossed array)")
     sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths (crossed array)")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(11, 4), list(1:11, c("data.frame", "nrow", 
         "ncol", "content")))
@@ -216,8 +216,8 @@
     sumry[9, ] <- c("$mY", nrow(x$mY), ncol(x$mY), "normed row scores (Y)")
     sumry[10, ] <- c("$aX", nrow(x$aX), ncol(x$aX), "axis onto co-inertia axis (X)")
     sumry[11, ] <- c("$aY", nrow(x$aY), ncol(x$aY), "axis onto co-inertia axis (Y)")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }
 

@@ -39,8 +39,8 @@
     for (i in 1:ntab) {
         sumry[i, ] <- c(names(x)[i], nrow(x[[i]]), ncol(x[[i]]))
     }
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(4, 4), list((ntab + 1):(ntab + 4), c("vector", 
         "length", "mode", "content")))
@@ -48,16 +48,16 @@
     sumry[2, ] <- c("$cw", length(x$cw), mode(x$cw), "column weights")
     sumry[3, ] <- c("$blo", length(x$blo), mode(x$blo), "column numbers")
     sumry[4, ] <- c("$tabw", length(x$tabw), mode(x$tabw), "array weights")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(3, 4), list((ntab + 5):(ntab + 7), c("data.frame", 
         "nrow", "ncol", "content")))
     sumry[1, ] <- c("$TL", nrow(x$TL), ncol(x$TL), "Factors Table number Line number")
     sumry[2, ] <- c("$TC", nrow(x$TC), ncol(x$TC), "Factors Table number Col number")
     sumry[3, ] <- c("$T4", nrow(x$T4), ncol(x$T4), "Factors Table number 1234")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     cat((ntab + 8), "$call: ")
     print(x$call)

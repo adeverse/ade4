@@ -198,7 +198,7 @@
     sumry[4, ] <- c("$TL", nrow(x$TL), ncol(x$TL), "factors (not used)")
     sumry[5, ] <- c("$TC", nrow(x$TC), ncol(x$TC), "factors for Co")
     sumry[6, ] <- c("$T4", nrow(x$T4), ncol(x$T4), "factors for T4")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }

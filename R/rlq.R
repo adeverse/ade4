@@ -50,8 +50,8 @@ function (x, ...)
     sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
     sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths (crossed array)")
     sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths (crossed array)")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(11, 4), list(1:11, c("data.frame", "nrow", 
         "ncol", "content")))
@@ -66,8 +66,8 @@ function (x, ...)
     sumry[9, ] <- c("$mQ", nrow(x$mQ), ncol(x$mQ), "normed row scores (Q)")
     sumry[10, ] <- c("$aR", nrow(x$aR), ncol(x$aR), "axis onto rlq axis (R)")
     sumry[11, ] <- c("$aQ", nrow(x$aQ), ncol(x$aQ), "axis onto rlq (Q)")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }
 "rlq" <-

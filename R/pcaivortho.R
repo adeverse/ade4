@@ -40,19 +40,7 @@
     row.names(U) <- row.names(dudi$tab)
     names(U) <- names(X$li)
     X$ls <- U
-    sumry <- array("", c(X$nf, 7), list(rep("", X$nf), c("iner", 
-        "inercum", "inerC", "inercumC", "ratio", "R2", "lambda")))
-    sumry[, 1] <- signif(dudi$eig[1:X$nf], digits = 3)
-    sumry[, 2] <- signif(cumsum(dudi$eig[1:X$nf]), digits = 3)
-    varpro <- apply(U, 2, function(x) sum(x * x * dudi$lw))
-    sumry[, 3] <- signif(varpro, digits = 3)
-    sumry[, 4] <- signif(cumsum(varpro), digits = 3)
-    sumry[, 5] <- signif(cumsum(varpro)/cumsum(dudi$eig[1:X$nf]), 
-        digits = 3)
-    sumry[, 6] <- signif(X$eig[1:X$nf]/varpro, digits = 3)
-    sumry[, 7] <- signif(X$eig[1:X$nf], digits = 3)
-    class(sumry) <- "table"
-    X$param <- sumry
+   
     U <- as.matrix(X$c1) * unlist(X$cw)
     U <- data.frame(t(as.matrix(dudi$c1)) %*% U)
     row.names(U) <- names(dudi$li)

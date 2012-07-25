@@ -103,8 +103,8 @@
     sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
     sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "group weigths")
     sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(7, 4), list(1:7, c("data.frame", "nrow", 
         "ncol", "content")))
@@ -115,7 +115,7 @@
     sumry[5, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "column normed scores")
     sumry[6, ] <- c("$ls", nrow(x$ls), ncol(x$ls), "row coordinates")
     sumry[7, ] <- c("$as", nrow(x$as), ncol(x$as), "inertia axis onto between axis")
-    class(sumry) <- "table"
-    print(sumry)
+    
+    print(sumry, quote = FALSE)
     cat("\n")
 }

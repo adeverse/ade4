@@ -5,6 +5,7 @@
 \alias{t.dudi}
 \alias{is.dudi}
 \alias{redo.dudi}
+\alias{summary.dudi}
 \title{Duality Diagram}
 \description{
 \code{as.dudi} is called by many functions (\code{dudi.pca}, \code{dudi.coa}, \code{dudi.acm}, ...) 
@@ -23,7 +24,8 @@ as.dudi(df, col.w, row.w, scannf, nf, call, type, tol = 1e-07,
 \method{print}{dudi}(x, \dots) 
 is.dudi(x) 
 redo.dudi(dudi, newnf = 2) 
-\method{t}{dudi}(x) 
+\method{t}{dudi}(x)
+\method{summary}{dudi}(object, \dots) 
 }
 \arguments{
   \item{df}{a data frame with \emph{n} rows and \emph{p} columns}
@@ -35,7 +37,7 @@ redo.dudi(dudi, newnf = 2)
   \item{type}{a string of characters : the returned list will be of class \code{c(type, "dudi")}}
   \item{tol}{a tolerance threshold for null eigenvalues (a value less than tol times the first one is considered as null)}
   \item{full}{a logical value indicating whether all non null eigenvalues should be kept}
-  \item{x, dudi}{objects of class \code{dudi}}
+  \item{x, dudi, object}{objects of class \code{dudi}}
   \item{\dots}{further arguments passed to or from other methods}
   \item{newnf}{an integer indicating the number of kept axes}
 }
@@ -59,7 +61,8 @@ NATO advanced Institute,  Serie G. Springer Verlag, Berlin,  139--156.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}\cr
+Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(deug)
@@ -68,5 +71,6 @@ dd1
 t(dd1)
 is.dudi(dd1)
 redo.dudi(dd1,3)
+summary(dd1)
 }
 \keyword{multivariate}

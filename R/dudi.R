@@ -204,3 +204,39 @@ biplot.dudi <- function (x, ...){
   scatter(x, ...)
   
 }
+
+summary.dudi <- function(object, ...){
+  cat("Class: ")
+  cat(class(object))
+  cat("\nCall: ")
+  print(object$call)
+  cat("\nTotal inertia: ")
+  cat(signif(sum(object$eig), 4))
+  cat("\n")
+  l0 <- length(object$eig)
+  
+  cat("\nEigenvalues:\n")
+  vec <- object$eig[1:(min(5, l0))]
+  names(vec) <- paste("Ax",1:length(vec), sep = "")
+  print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
+ 
+  cat("\nExplained inertia (%):\n")
+  vec <- (object$eig / sum(object$eig) * 100)[1:(min(5, l0))]
+  names(vec) <- paste("Ax",1:length(vec), sep = "")
+  print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
+  
+  cat("\nCumulative explained inertia (%):\n")
+  vec <- (cumsum(object$eig) / sum(object$eig) * 100)[1:(min(5, l0))]
+  names(vec)[1] <- "Ax1"
+
+  if(l0>1)
+    names(vec)[2:length(vec)] <- paste("Ax1:",2:length(vec),sep="")
+  print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
+  
+
+  if (l0 > 5) {
+    cat("\n")
+    cat(paste("(Only 5 dimensions (out of ",l0, ") are shown)\n", sep="",collapse=""))
+  }
+  cat("\n")
+}

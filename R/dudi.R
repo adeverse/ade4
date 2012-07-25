@@ -220,12 +220,12 @@ summary.dudi <- function(object, ...){
   names(vec) <- paste("Ax",1:length(vec), sep = "")
   print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
  
-  cat("\nExplained inertia (%):\n")
+  cat("\nProjected inertia (%):\n")
   vec <- (object$eig / sum(object$eig) * 100)[1:(min(5, l0))]
   names(vec) <- paste("Ax",1:length(vec), sep = "")
   print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
   
-  cat("\nCumulative explained inertia (%):\n")
+  cat("\nCumulative projected inertia (%):\n")
   vec <- (cumsum(object$eig) / sum(object$eig) * 100)[1:(min(5, l0))]
   names(vec)[1] <- "Ax1"
 

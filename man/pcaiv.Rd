@@ -3,6 +3,7 @@
 \alias{pcaiv}
 \alias{plot.pcaiv}
 \alias{print.pcaiv}
+\alias{summary.pcaiv}
 \title{Principal component analysis with respect to instrumental variables}
 \description{
 performs a principal component analysis with respect to instrumental variables. 
@@ -10,7 +11,8 @@ performs a principal component analysis with respect to instrumental variables.
 \usage{
 pcaiv(dudi, df, scannf = TRUE, nf = 2)
 \method{plot}{pcaiv}(x, xax = 1, yax = 2, \dots) 
-\method{print}{pcaiv}(x, \dots) 
+\method{print}{pcaiv}(x, \dots)
+\method{summary}{pcaiv}(object, \dots) 
 }
 \arguments{
   \item{dudi}{a duality diagram, object of class \code{dudi}}
@@ -18,7 +20,7 @@ pcaiv(dudi, df, scannf = TRUE, nf = 2)
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
   \cr
-  \item{x}{an object of class \code{pcaiv}}
+  \item{x, object}{an object of class \code{pcaiv}}
   \item{xax}{the column number for the x-axis}
   \item{yax}{the column number for the y-axis}
   \item{\dots}{further arguments passed to or from other methods}
@@ -55,16 +57,14 @@ Kluwer Academic Publishers, 85--114.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}\cr
+Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(rhone)
 pca1 <- dudi.pca(rhone$tab, scan = FALSE, nf = 3)
 iv1 <- pcaiv(pca1, rhone$disch, scan = FALSE)
-iv1$param
-# iner inercum inerC inercumC ratio R2    lambda
-# 6.27 6.27    5.52  5.52     0.879 0.671 3.7   
-# 4.14 10.4    4.74  10.3     0.984 0.747 3.54  
+summary(iv1)
 plot(iv1)
 }
 \keyword{multivariate}

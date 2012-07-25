@@ -1,18 +1,22 @@
 \encoding{latin1}
 \name{pcaivortho}
 \alias{pcaivortho}
+\alias{summary.pcaivortho}
 \title{Principal Component Analysis with respect to orthogonal instrumental variables}
 \description{
 performs a Principal Component Analysis with respect to orthogonal instrumental variables. 
 }
 \usage{
 pcaivortho(dudi, df, scannf = TRUE, nf = 2)
+\method{summary}{pcaivortho}(object, \dots) 
 }
 \arguments{
   \item{dudi}{a duality diagram, object of class \code{dudi}}
   \item{df}{a data frame with the same rows}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
+  \item{object}{an object of class \code{pcaiv}}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 an object of class 'pcaivortho' sub-class of class \code{dudi}
@@ -34,7 +38,8 @@ an object of class 'pcaivortho' sub-class of class \code{dudi}
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}\cr
+Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \references{
 Rao, C. R. (1964) The use and interpretation of principal component analysis in applied research. \emph{Sankhya}, \bold{A 26}, 329--359.\cr\cr
@@ -57,6 +62,8 @@ s.class(w1$li, cla, add.plot = TRUE)
 
 # no region the same result
 pcaivnonA <- pcaivortho(coa1, avimedi$plan$reg, scan = FALSE)
+summary(pcaivnonA)
+
 s.match(pcaivnonA$li, pcaivnonA$ls, clab = 0, 
     sub = "Contrainte Non A")
 s.class(pcaivnonA$li, cla, add.plot = TRUE)

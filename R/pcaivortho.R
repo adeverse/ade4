@@ -48,3 +48,35 @@
     X$as <- U
     return(X)
 }
+
+
+summary.pcaivortho <- function(object, ...){
+  thetitle <- "Orthogonal principal component analysis with instrumental variables" 
+  cat(thetitle)
+  cat("\n\n")
+  NextMethod()
+
+  appel <- as.list(object$call)
+  dudi <- eval.parent(appel$dudi)
+
+  cat(paste("Total unconstrained inertia (",deparse(appel$dudi),"): ", sep = ""))
+  cat(signif(sum(dudi$eig), 4))
+  cat("\n\n")
+
+  cat(paste("Inertia of" ,deparse(appel$dudi),"not explained by", deparse(appel$df), "(%): "))
+  cat(signif(sum(object$eig) / sum(dudi$eig) * 100, 4))
+  cat("\n\n")
+
+  cat("Decomposition per axis:\n")
+  sumry <- array(0, c(object$nf, 7), list(1:object$nf, c("iner", "inercum", "inerC", "inercumC", "ratio", "R2", "lambda")))
+  sumry[, 1] <- dudi$eig[1:object$nf]
+  sumry[, 2] <- cumsum(dudi$eig[1:object$nf])
+  varpro <- apply(object$ls, 2, function(x) sum(x * x * object$lw))
+  sumry[, 3] <- varpro
+  sumry[, 4] <- cumsum(varpro)
+  sumry[, 5] <- cumsum(varpro)/cumsum(dudi$eig[1:object$nf])
+  sumry[, 6] <- object$eig[1:object$nf]/varpro
+  sumry[, 7] <- object$eig[1:object$nf]
+  print(sumry, digits = 3)
+  invisible(sumry)
+ }

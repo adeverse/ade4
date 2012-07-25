@@ -51,7 +51,8 @@
         c("Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)")))
     sumry[1, ] <- c(df1, a1, r1, Fvalue, proba)
     sumry[2, 1:3] <- c(df2, a2, r2)
-    
-    res$sumry <- sumry
+    sumry[2, 4:5] <- NA
+    res$sumry <- data.frame(sumry, check.names = FALSE)
+    class(res$sumry) <- c("anova", "data.frame")
     return(res)
 }

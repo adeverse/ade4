@@ -25,7 +25,7 @@ the first \code{phylog$Adim} vectors of \code{phylog$Amat} that corresponds to p
 Returns a list containing
   \item{lm}{: an object of class \code{lm} that corresponds to the linear regression of \code{z} on \bold{A}.}
   \item{anova}{: an object of class \code{anova} that corresponds to the anova of the precedent model.}
-  \item{smry}{: an object of class \code{table} that is a summary of the precedent object.}
+  \item{smry}{: an object of class \code{anova} that is a summary of the precedent object.}
 }
 \references{
 Grafen, A. (1989) The phylogenetic regression. \emph{Philosophical Transactions of the Royal Society London B}, \bold{326}, 119--156.

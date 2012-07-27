@@ -171,16 +171,16 @@
         stop("Object of class 'dudi' expected")
     appel <- as.list(dudi$call)
     if (appel[[1]] == "t.dudi") {
-        dudiold <- eval(appel[[2]], sys.frame(0))
+        dudiold <- eval.parent(appel[[2]])
         appel <- as.list(dudiold$call)
         appel$nf <- newnf
         appel$scannf <- FALSE
-        dudinew <- eval(as.call(appel), sys.frame(0))
+        dudinew <- eval.parent(as.call(appel))
         return(t.dudi(dudinew))
     }
     appel$nf <- newnf
     appel$scannf <- FALSE
-    eval(as.call(appel), sys.frame(0))
+    eval.parent(as.call(appel))
 }
 
 

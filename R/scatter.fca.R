@@ -6,7 +6,7 @@
     if ((xax == yax) || (x$nf == 1)) 
         stop("Unidimensional plot (xax=yax) not yet implemented")
     par(mfrow = n2mfrow(length(x$blo)))
-    oritab <- eval(as.list(x$call)[[2]], sys.frame(0))
+    oritab <- eval.parent(as.list(x$call)[[2]])
     indica <- factor(rep(names(x$blo), x$blo))
     for (j in levels(indica)) 
         s.distri(x$l1, oritab[, which(indica == j)], 

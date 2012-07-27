@@ -2,8 +2,8 @@
   if (!inherits(xtest, "discrimin"))
         stop("'discrimin' object expected")
     appel<-as.list(xtest$call)
-    dudi<-eval(appel$dudi,sys.frame(0))
-    fac<-eval(appel$fac,sys.frame(0))
+    dudi<-eval.parent(appel$dudi)
+    fac<-eval.parent(appel$fac)
     lig<-nrow(dudi$tab)
     if (length(fac)!=lig) stop ("Non convenient dimension")
     rank<-dudi$rank

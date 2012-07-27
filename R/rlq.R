@@ -152,9 +152,9 @@ function (object, ...)
     if (!inherits(object, "rlq")) 
         stop("to be used with 'rlq' object")
     appel <- as.list(object$call)
-    dudiL <- eval(appel$dudiL, sys.frame(0))
-    dudiR <- eval(appel$dudiR, sys.frame(0))
-    dudiQ <- eval(appel$dudiQ, sys.frame(0))
+    dudiL <- eval.parent(appel$dudiL)
+    dudiR <- eval.parent(appel$dudiR)
+    dudiQ <- eval.parent(appel$dudiQ)
     norm.w <- function(X, w) {
         f2 <- function(v) sqrt(sum(v * v * w)/sum(w))
         norm <- apply(X, 2, f2)
@@ -206,9 +206,9 @@ randtest.rlq<-function(xtest, nrepet=999,...)
     if (!inherits(xtest,"rlq"))
         stop("Object of class 'rlq' expected")
     appel<-as.list(xtest$call)
-    dudiR<-eval(appel$dudiR,sys.frame(0))
-    dudiQ<-eval(appel$dudiQ,sys.frame(0))
-    dudiL<-eval(appel$dudiL,sys.frame(0))
+    dudiR<-eval.parent(appel$dudiR)
+    dudiQ<-eval.parent(appel$dudiQ)
+    dudiL<-eval.parent(appel$dudiL)
     acm.util <- function(cl) {
         n <- length(cl)
         cl <- as.factor(cl)
@@ -220,10 +220,10 @@ randtest.rlq<-function(xtest, nrepet=999,...)
 
     R.cw<-dudiR$cw
     appelR<-as.list(dudiR$call)
-    Rinit<-eval(appelR$df,sys.frame(0))
+    Rinit<-eval.parent(appelR$df)
     if (appelR[[1]] == "dudi.pca") {
-      appelR$scale<-eval(appelR$scale,sys.frame(0))
-      appelR$center<-eval(appelR$center,sys.frame(0))
+      appelR$scale<-eval.parent(appelR$scale)
+      appelR$center<-eval.parent(appelR$center)
       if (is.null(appelR$scale)) appelR$scale<-TRUE
       if (is.null(appelR$center)) appelR$center<-TRUE
       if(!(is.logical(appelR$center))) stop("Not implemented for decentred PCA: read the documentation file.")      
@@ -269,11 +269,11 @@ randtest.rlq<-function(xtest, nrepet=999,...)
     
     Q.cw<-dudiQ$cw
     appelQ<-as.list(dudiQ$call)
-    Qinit<-eval(appelQ$df,sys.frame(0))
+    Qinit<-eval.parent(appelQ$df)
     
     if (appelQ[[1]] == "dudi.pca") {        
-      appelQ$scale<-eval(appelQ$scale,sys.frame(0))
-      appelQ$center<-eval(appelQ$center,sys.frame(0))
+      appelQ$scale<-eval.parent(appelQ$scale)
+      appelQ$center<-eval.parent(appelQ$center)
       if (is.null(appelQ$scale)) appelQ$scale<-TRUE
       if (is.null(appelQ$center)) appelQ$center<-TRUE
       if(!(is.logical(appelR$center))) stop("Not implemented for decentred PCA: read the documentation file.")      

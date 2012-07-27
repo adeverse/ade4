@@ -118,7 +118,7 @@ plot.dpcoa <- function(x, xax = 1, yax = 2, option = 1:4, csize = 2, ...) {
 		}
 		if (j == 2) { #
 			X <- as.list(x$call)[[2]]
-			X <- eval(X, sys.frame(0))
+			X <- eval.parent(X)
 			s.label(x$l1[, c(xax, yax)], clabel = 0, cpoint = 2)
 			s.distri(x$l1[, c(xax, yax)], X, add.plot = TRUE, cellipse = 1, cstar = 0, 
 				axesell = 0, label = names(X), cpoint = 0, clabel = 1)

@@ -45,7 +45,7 @@
         stop("non convenient axe number")
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
-    oritab <- eval(as.list(x$call)[[2]], sys.frame(0))
+    oritab <- eval.parent(as.list(x$call)[[2]])
     nvar <- ncol(oritab)
     if (nvar <= 7) 
         sco.boxplot(x$l1[, xax], oritab[, 1:nvar], clabel = 1)

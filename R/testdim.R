@@ -7,8 +7,8 @@
     if (!inherits(dudi, "pca"))
       stop("Object of class 'pca' expected")
     appel <- as.list(dudi$call)
-    appel$scale <- eval(appel$scale,sys.frame(0))
-    appel$center <- eval(appel$center,sys.frame(0))
+    appel$scale <- eval.parent(appel$scale)
+    appel$center <- eval.parent(appel$center)
     if (is.null(appel$scale)) appel$scale <- TRUE
     if (is.null(appel$center)) appel$center <- TRUE
     if (!(is.logical(appel$center))) stop("Not implemented for decentred PCA")

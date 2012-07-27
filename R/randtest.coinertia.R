@@ -4,17 +4,17 @@
   if (!inherits(xtest,"coinertia"))
     stop("Object of class 'coinertia' expected")
   appel<-as.list(xtest$call)
-  dudiX<-eval(appel$dudiX,sys.frame(0))
-  dudiY<-eval(appel$dudiY,sys.frame(0))
+  dudiX<-eval.parent(appel$dudiX)
+  dudiY<-eval.parent(appel$dudiY)
   X<-dudiX$tab
   X.cw<-dudiX$cw
   X.lw<-dudiX$lw
   appelX<-as.list(dudiX$call)
   apx<-appelX$df
-  Xinit<-eval(appelX$df,sys.frame(0))
+  Xinit<-eval.parent(appelX$df)
   if (appelX[[1]] == "dudi.pca") {        
-    appelX$scale<-eval(appelX$scale,sys.frame(0))
-    appelX$center<-eval(appelX$center,sys.frame(0))
+    appelX$scale<-eval.parent(appelX$scale)
+    appelX$center<-eval.parent(appelX$center)
     if (is.null(appelX$scale)) appelX$scale<-TRUE
     if (is.null(appelX$center)) appelX$center<-TRUE
     if(!(is.logical(appelX$center))) stop("Not implemented for decentred PCA: read the documentation file.")
@@ -35,10 +35,10 @@
   Y.lw<-dudiY$lw
   appelY<-as.list(dudiY$call)
   apy<-appelY$df
-  Yinit<-eval(appelY$df,sys.frame(0))
+  Yinit<-eval.parent(appelY$df)
   if (appelY[[1]] == "dudi.pca") {        
-    appelY$scale<-eval(appelY$scale,sys.frame(0))
-    appelY$center<-eval(appelY$center,sys.frame(0))
+    appelY$scale<-eval.parent(appelY$scale)
+    appelY$center<-eval.parent(appelY$center)
     if (is.null(appelY$scale)) appelY$scale<-TRUE
     if (is.null(appelY$center)) appelY$center<-TRUE
     if(!(is.logical(appelY$center))) stop("Not implemented for decentred PCA: read the documentation file.")
@@ -62,15 +62,15 @@
         cat("Warning: non uniform weight. The results from simulations\n")
         cat("are not valid if weights are computed from analysed data.\n")
         isim<-testertracenu(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY)
-	if(typX=="cm") {isim[-1]=isim[-1]/ncol(eval(appelX$df,sys.frame(0)))}
-	if(typY=="cm") {isim[-1]=isim[-1]/ncol(eval(appelY$df,sys.frame(0)))}
+	if(typX=="cm") {isim[-1]=isim[-1]/ncol(eval.parent(appelX$df))}
+	if(typY=="cm") {isim[-1]=isim[-1]/ncol(eval.parent(appelY$df))}
       } else if (fixed==1) {
         cat("Warning: non uniform weight. The results from permutations\n")
         cat("are valid only if the row weights come from the fixed table.\n")
         cat("The fixed table is table X : ")
         print(apx)
         isim<-testertracenubis(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY, fixed)
-	if(typY=="cm") {isim[-1]=isim[-1]/ncol(eval(appelY$df,sys.frame(0)))
+	if(typY=="cm") {isim[-1]=isim[-1]/ncol(eval.parent(appelY$df))
 	}
       } else if (fixed==2) {
         cat("Warning: non uniform weight. The results from permutations\n")
@@ -78,7 +78,7 @@
         cat("The fixed table is table Y : ")
         print(apy)
         isim<-testertracenubis(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY, fixed)
-	if(typX=="cm") {isim[-1]=isim[-1]/ncol(eval(appelX$df,sys.frame(0)))}
+	if(typX=="cm") {isim[-1]=isim[-1]/ncol(eval.parent(appelX$df))}
 	
       }
       else if (fixed>2) {stop ("Error : fixed must be =< 2")}

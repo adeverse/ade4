@@ -2,8 +2,8 @@
     if (!inherits(xtest, "discrimin")) 
         stop("'discrimin' object expected")
     appel <- as.list(xtest$call)
-    dudi <- eval(appel$dudi, sys.frame(0))
-    fac <- eval(appel$fac, sys.frame(0))
+    dudi <- eval.parent(appel$dudi)
+    fac <- eval.parent(appel$fac)
     lig <- nrow(dudi$tab)
     if (length(fac) != lig) 
         stop("Non convenient dimension")
@@ -13,11 +13,11 @@
 
     dudi <- dudi$l1
     if ((!(identical(all.equal(dudi.lw,rep(1/nrow(dudi), nrow(dudi))),TRUE)))) {
-      if(as.list(eval(appel$dudi, sys.frame(0))$call)[[1]] == "dudi.acm" )
+      if(as.list(eval.parent(appel$dudi)$call)[[1]] == "dudi.acm" )
     	stop ("Not implemented for non-uniform weights in the case of dudi.acm")
-      else if(as.list(eval(appel$dudi, sys.frame(0))$call)[[1]] == "dudi.hillsmith" )
+      else if(as.list(eval.parent(appel$dudi)$call)[[1]] == "dudi.hillsmith" )
         stop ("Not implemented for non-uniform weights in the case of dudi.hillsmith")
-      else if(as.list(eval(appel$dudi, sys.frame(0))$call)[[1]] == "dudi.mix" )
+      else if(as.list(eval.parent(appel$dudi)$call)[[1]] == "dudi.mix" )
         stop ("Not implemented for non-uniform weights in the case of dudi.mix")
     }
     

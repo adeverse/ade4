@@ -1,10 +1,10 @@
 witwitsepan <- function (ww, mfrow = NULL, csub = 2, plot = TRUE) {
     if (!inherits(ww, "witwit")) stop ("witwit object expected")
     appel <- as.list(ww$call)
-    rowblo <- eval(appel[[3]], sys.frame(0))
-    colblo <- eval(appel[[4]], sys.frame(0))
-    anal <- eval(appel[[2]], sys.frame(0))
-    tab <- eval(as.list(anal$call)[[2]], sys.frame(0))
+    rowblo <- eval.parent(appel[[3]])
+    colblo <- eval.parent(appel[[4]])
+    anal <- eval.parent(appel[[2]])
+    tab <- eval.parent(as.list(anal$call)[[2]])
 
     rowfac=as.factor(rep(1:length(rowblo),rowblo))
     if (is.null(names(rowblo))) names(rowblo) <- as.character(1:length(rowblo))

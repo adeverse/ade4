@@ -7,7 +7,7 @@
     col.fac <- rep(1:length(col.blocks),col.blocks)
     if (length(col.fac)!=col) stop ("Non convenient col.fac")
     if (length(row.fac)!=lig) stop ("Non convenient row.fac")
-    tabinit <- as.matrix(eval(as.list(dudi$call)$df, sys.frame(0)))
+    tabinit <- as.matrix(eval.parent(as.list(dudi$call)$df))
     
     tabinit <- tabinit/sum(tabinit)
     # tabinit contient les pij

@@ -118,7 +118,7 @@ summary.corkdist <- function (object, ...) {
     ndist <- max(design$I)
     res=matrix(0,ndist,ndist)
     res[row(res) <= col(res)] <- NA
-    dist.names <- names(eval(as.list(attr(object,"call"))$kd, sys.frame(0)))
+    dist.names <- names(eval.parent(as.list(attr(object,"call"))$kd))
     dimnames(res) <- list(dist.names, as.character(1:length(dist.names)))
     res[row(res) > col(res)] <- pval
     cat("Simulated p-values:\n")
@@ -149,7 +149,7 @@ plot.corkdist <- function (x, whichinrow=NULL, whichincol=NULL, gap=4, nclass = 
     }
 
     if (!inherits(x,"corkdist")) stop ("Object of class 'corkdist' expected")
-    kd <- eval(as.list(attr(x,"call"))$kd, sys.frame(0))
+    kd <- eval.parent(as.list(attr(x,"call"))$kd)
     design <- attr(x, "design")
     ndist <- length (kd)
     if (is.null(whichinrow)) whichinrow <- 1:ndist

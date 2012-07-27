@@ -50,8 +50,8 @@
         stop("Use only with 'between' objects")
     if ((bet$nf == 1) || (xax == yax)) {
         appel <- as.list(bet$call)
-        dudi <- eval(appel$dudi, sys.frame(0))
-        fac <- eval(appel$fac, sys.frame(0))
+        dudi <- eval.parent(appel$dudi)
+        fac <- eval.parent(appel$fac)
         lig <- nrow(dudi$tab)
         if (length(fac) != lig) 
             stop("Non convenient dimension")
@@ -62,7 +62,7 @@
         stop("Non convenient xax")
     if (yax > bet$nf) 
         stop("Non convenient yax")
-    fac <- eval(as.list(bet$call)$fac, sys.frame(0))
+    fac <- eval.parent(as.list(bet$call)$fac)
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
     layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 

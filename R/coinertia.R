@@ -231,8 +231,8 @@
     NextMethod()
 
     appel <- as.list(object$call)
-    dudiX <- eval(appel$dudiX, sys.frame(0))
-    dudiY <- eval(appel$dudiY, sys.frame(0))
+    dudiX <- eval.parent(appel$dudiX)
+    dudiY <- eval.parent(appel$dudiY)
     norm.w <- function(X, w) {
         f2 <- function(v) sqrt(sum(v * v * w)/sum(w))
         norm <- apply(X, 2, f2)

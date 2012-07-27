@@ -127,10 +127,10 @@
         }
     }
     if (inherits(x, "witwit")) {
-        y <- eval(as.list(x$call)[[2]], sys.frame(0))
-        oritab <- eval(as.list(y$call)[[2]], sys.frame(0))
+        y <- eval.parent(as.list(x$call)[[2]])
+        oritab <- eval.parent(as.list(y$call)[[2]])
     }
-    else oritab <- eval(as.list(x$call)[[2]], sys.frame(0))
+    else oritab <- eval.parent(as.list(x$call)[[2]])
     l.names <- row.names(oritab)
     c.names <- names(oritab)
     oritab <- as.matrix(oritab)
@@ -157,10 +157,10 @@
     if (!inherits(x, "coa")) 
         stop("Object of class 'coa' expected")
     if (inherits(x, "witwit")) {
-        y <- eval(as.list(x$call)[[2]], sys.frame(0))
-        oritab <- eval(as.list(y$call)[[2]], sys.frame(0))
+        y <- eval.parent(as.list(x$call)[[2]])
+        oritab <- eval.parent(as.list(y$call)[[2]])
     }
-    else oritab <- eval(as.list(x$call)[[2]], sys.frame(0))
+    else oritab <- eval.parent(as.list(x$call)[[2]])
     l.names <- row.names(oritab)
     c.names <- names(oritab)
     oritab <- as.matrix(oritab)

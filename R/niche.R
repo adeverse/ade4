@@ -59,7 +59,7 @@
     s.label(x$li, xax, yax, clabel = 1.5, add.plot = TRUE)
     s.label(x$ls, xax, yax, clabel = 1.25, sub = "Samples", 
         csub = 2)
-    s.distri(x$ls, eval(as.list(x$call)[[3]], sys.frame(0)), 
+    s.distri(x$ls, eval.parent(as.list(x$call)[[3]]), 
         cstar = 0, axesell = FALSE, cellipse = 1, sub = "Niches", csub = 2)
 }
 
@@ -106,8 +106,8 @@
   if (!inherits(x, "niche"))
     stop("Object of class 'niche' expected")
   appel <- as.list(x$call)
-  X <- eval(appel[[2]], sys.frame(0))$tab
-  Y <- eval(appel[[3]], sys.frame(0))
+  X <- eval.parent(appel[[2]])$tab
+  Y <- eval.parent(appel[[3]])
   w1 <- apply(Y, 2, sum)
   if (any(w1 <= 0))
     stop(paste("Column sum <=0 in Y"))
@@ -139,8 +139,8 @@ rtest.niche <- function(xtest,nrepet=99,...){
   if (!inherits(xtest, "niche"))
     stop("Type 'niche' expected")
   appel <- as.list(xtest$call)
-  X <- eval(appel$dudiX, sys.frame(0))$tab
-  Y <- eval(appel$Y, sys.frame(0))
+  X <- eval.parent(appel$dudiX)$tab
+  Y <- eval.parent(appel$Y)
   w1 <- apply(Y, 2, sum)
   if (any(w1 <= 0))
     stop(paste("Column sum <=0 in Y"))

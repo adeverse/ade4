@@ -54,8 +54,8 @@
     if ((x$nf == 1) || (xax == yax)) {
         if (inherits(x, "coadisc")) {
             appel <- as.list(x$call)
-            df <- eval(appel$df, sys.frame(0))
-            fac <- eval(appel$fac, sys.frame(0))
+            df <- eval.parent(appel$df)
+            fac <- eval.parent(appel$fac)
             lig <- nrow(df)
             if (length(fac) != lig) 
                 stop("Non convenient dimension")
@@ -75,8 +75,8 @@
             return(invisible())
         }
         appel <- as.list(x$call)
-        dudi <- eval(appel$dudi, sys.frame(0))
-        fac <- eval(appel$fac, sys.frame(0))
+        dudi <- eval.parent(appel$dudi)
+        fac <- eval.parent(appel$fac)
         lig <- nrow(dudi$tab)
         if (length(fac) != lig) 
             stop("Non convenient dimension")
@@ -87,7 +87,7 @@
         stop("Non convenient xax")
     if (yax > x$nf) 
         stop("Non convenient yax")
-    fac <- eval(as.list(x$call)$fac, sys.frame(0))
+    fac <- eval.parent(as.list(x$call)$fac)
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
     layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 

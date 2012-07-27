@@ -83,8 +83,8 @@
   print(object$call)
   
   appel <- as.list(object$call)
-  dudi <- eval(appel$dudi, sys.frame(0))
-  listw <- eval(appel$listw, sys.frame(0))
+  dudi <- eval.parent(appel$dudi)
+  listw <- eval.parent(appel$listw)
   
   ## les scores de l'analyse de base
   nf <- dudi$nf
@@ -173,7 +173,7 @@ print.multispati <- function(x, ...)
         stop("Use only with 'multispati' objects")
     
     appel <- as.list(x$call)
-    dudi <- eval(appel$dudi, sys.frame(0))
+    dudi <- eval.parent(appel$dudi)
     nf <- x$nfposi + x$nfnega
     if ((nf == 1) || (xax == yax)) {
         sco.quant(x$li[, 1], dudi$tab)

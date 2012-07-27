@@ -16,7 +16,7 @@
     nf <- ncol(object$Li)
     neig <- max(object$rank)
     appel <- as.list(object$call)
-    X <- eval(appel$X, sys.frame(0))
+    X <- eval.parent(appel$X)
     names.li <- row.names(X[[1]])
     for (ianal in which.tab) {
         coolig <- object$Li[object$TL[, 1] == ianal, c(xax, yax)]
@@ -71,7 +71,7 @@
     nf <- ncol(object$Li)
     neig <- max(object$rank)
     appel <- as.list(object$call)
-    X <- eval(appel$X, sys.frame(0))
+    X <- eval.parent(appel$X)
     names.li <- row.names(X[[1]])
     for (ianal in which.tab) {
         coocol <- object$C1[object$TC[, 1] == ianal, c(xax, yax)]

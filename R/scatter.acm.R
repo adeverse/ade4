@@ -7,7 +7,7 @@
     }
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))
-    oritab <- eval(as.list(x$call)[[2]], sys.frame(0))
+    oritab <- eval.parent(as.list(x$call)[[2]])
     nvar <- ncol(oritab)
     # modif samedi, juin 11, 2005 at 15:38 
     # message de Ivailo Stoyanov istoyanov@ecolab.bas.bg

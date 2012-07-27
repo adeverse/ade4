@@ -295,7 +295,7 @@
         stop("non convenient data")
     cat("Multiple Co-inertia Analysis\n")
     appel <- as.list(object$call)
-    X <- eval(appel$X, sys.frame(0))
+    X <- eval.parent(appel$X)
     lw <- sqrt(X$lw)
     cw <- X$cw
     ncol <- length(cw)

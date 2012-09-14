@@ -1,3 +1,79 @@
+2012-09-14 11:21  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.5-1 ----------
+
+2012-09-14 11:19  sdray
+
+	* R/randtest.cca.R, R/randtest.pcaiv.R, R/randtest.pcaivortho.R:
+	  Calls to Fortran routine 'dqrls' are replaced by public 'lm.wfit'
+
+2012-07-27 14:49  sdray
+
+	* R/bca.rlq.R, R/between.R, R/betweencoinertia.R, R/coinertia.R,
+	  R/corkdist.R, R/discrimin.R, R/dpcoa.R, R/dudi.R, R/dudi.acm.R,
+	  R/kplot.sepan.R, R/mcoa.R, R/multispati.R, R/niche.R,
+	  R/randtest.coinertia.R, R/randtest.discrimin.R, R/rlq.R,
+	  R/rtest.between.R, R/rtest.discrimin.R, R/scatter.acm.R,
+	  R/scatter.fca.R, R/score.acm.R, R/score.coa.R, R/score.mix.R,
+	  R/score.pca.R, R/testdim.R, R/wca.rlq.R, R/withincoinertia.R,
+	  R/witwit.R, R/witwitsepan.R: Use eval.parent(..) instead of
+	  eval(.., sys.frame(0)) to allow the call of ade4 functions inside
+	  other functions
+
+2012-07-25 13:30  sdray
+
+	* R/coinertia.R: Update the summary.coinertia function that now
+	  returns invisible results
+
+2012-07-25 13:28  sdray
+
+	* R/dudi.R: To avoid confusion, the term 'Explained' is replaced by
+	  'Projected' in the summary.dudi function
+
+2012-07-25 12:47  sdray
+
+	* R/pcaiv.R, R/pcaivortho.R, man/pcaiv.Rd, man/pcaivortho.Rd: New
+	  functions 'summary.pcaiv' and 'summary.pcaivortho'
+
+2012-07-25 12:46  sdray
+
+	* R/dudi.R, man/dudi.Rd: New function 'summary.dudi'
+
+2012-07-25 10:53  sdray
+
+	* R/variance.phylog.R, man/variance.phylog.Rd: Returned is now an
+	  'anova' object (was 'table')
+
+2012-07-25 09:23  sdray
+
+	* R/bca.rlq.R, R/between.R, R/betweencoinertia.R, R/coinertia.R,
+	  R/discrimin.R, R/dpcoa.R, R/dudi.R, R/foucart.R, R/ktab.R,
+	  R/mcoa.R, R/mfa.R, R/multispati.R, R/niche.R, R/nipals.R,
+	  R/pcaiv.R, R/pcaivortho.R, R/pta.R, R/rlq.R, R/sepan.R,
+	  R/statis.R, R/variance.phylog.R, R/wca.rlq.R, R/within.R,
+	  R/withincoinertia.R, R/witwit.R: Outputs produced by print.*
+	  functions are now matrices (were table)
+
+2012-07-10 12:03  thioulouse
+
+	* R/coinertia.R: Fix the problem of complex eigenvalues sometimes
+	  returned by eigen in the case n < (p, q)
+
+2012-06-01 07:23  jombart
+
+	* R/orthogram.R, man/ade4-deprecated.Rd, man/orthogram.Rd:
+	  Orthogram function is now deprecated.
+
+2012-04-23 12:29  sdray
+
+	* src/testdim.c: Correct a small bug (void function cannot return
+	  values)
+
+2012-04-23 07:59  sdray
+
+	* man/neig.Rd: Modify an example due to a change in the deldir
+	  package
+
 2012-04-19 11:11  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.5-0 ----------

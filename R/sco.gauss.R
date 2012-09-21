@@ -35,9 +35,9 @@
     res <- scatterutil.sco(score = score, lim = xlim, grid = grid, cgrid = cgrid, include.origin = include.origin, origin = origin, sub = sub[i], csub = csub, horizontal = TRUE, reverse = FALSE)
     nlevs <- nlevels(df[,i])
     means <- by(score, df[,i], mean)
-    vars <- by(score, df[,i], var)
+    sds <- by(score, df[,i], sd)
     xi <- seq(res[1], res[2], by=(res[2]-res[1])/steps)
-    yi <- lapply(1:nlevs,function(x) dnorm(xi, means[[x]], vars[[x]]))
+    yi <- lapply(1:nlevs,function(x) dnorm(xi, means[[x]], sds[[x]]))
     if(is.null(ymax)){
       maxy <- (max(unlist(yi))) * 1.15
     } else {

@@ -9,7 +9,7 @@
     oritab <- eval.parent(as.list(x$call)[[2]])
     indica <- factor(rep(names(x$blo), x$blo))
     for (j in levels(indica)) 
-        s.distri(x$l1, oritab[, which(indica == j)], 
+        s.distri(x$l1, xax= xax, yax=yax, oritab[, which(indica == j)], 
         clabel = clab.moda, sub = as.character(j), cellipse = 0, 
         cstar = 0.5, csub = csub, label = labels[which(indica == j)])
 }

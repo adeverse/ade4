@@ -117,8 +117,7 @@ function(x, xax = 1, yax = 2, ...) {
 }
 
 print.betcoi <-
-function (x, ...) 
-{
+function (x, ...) {
   if (!inherits(x, "betcoi")) 
     stop("to be used with 'betcoi' object")
   cat("Between coinertia analysis\n")
@@ -129,7 +128,7 @@ function (x, ...)
   cat("\n$rank (rank)     :", x$rank)
   cat("\n$nf (axis saved) :", x$nf)
   cat("\n$RV (RV coeff)   :", x$RV)
-  cat("\n\neigen values: ")
+  cat("\n\neigenvalues: ")
   l0 <- length(x$eig)
   cat(signif(x$eig, 4)[1:(min(5, l0))])
   if (l0 > 5) 
@@ -137,36 +136,35 @@ function (x, ...)
   else cat("\n\n")
   sumry <- array("", c(3, 4), list(1:3, c("vector", "length", 
                                           "mode", "content")))
-  sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
-  sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths (crossed array)")
-  sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths (crossed array)")
+  sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "Eigenvalues")
+  sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), paste("Row weigths (for ", eval(coi.b$call[[2]])$call[[3]], " cols)", sep=""))
+  sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), paste("Col weigths (for ", eval(coi.b$call[[2]])$call[[2]], " cols)", sep=""))
   
   print(sumry, quote = FALSE)
   cat("\n")
   sumry <- array("", c(17, 4), list(1:17, c("data.frame", "nrow", 
                                             "ncol", "content")))
-  sumry[1, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "crossed array (CA)")
-  sumry[2, ] <- c("$li", nrow(x$li), ncol(x$li), "Y col = CA row: coordinates")
-  sumry[3, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "Y col = CA row: normed scores")
-  sumry[4, ] <- c("$co", nrow(x$co), ncol(x$co), "X col = CA column: coordinates")
-  sumry[5, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "X col = CA column: normed scores")
-  sumry[6, ] <- c("$lX", nrow(x$lX), ncol(x$lX), "class coordinates (X)")
-  sumry[7, ] <- c("$mX", nrow(x$mX), ncol(x$mX), "normed class scores (X)")
-  sumry[8, ] <- c("$lY", nrow(x$lY), ncol(x$lY), "class coordinates (Y)")
-  sumry[9, ] <- c("$mY", nrow(x$mY), ncol(x$mY), "normed class scores (Y)")
-
-  sumry[10, ] <- c("$lsX", nrow(x$lsX), ncol(x$lsX), "row coordinates (X)")
-  sumry[11, ] <- c("$msX", nrow(x$msX), ncol(x$msX), "normed row scores (X)")
-  sumry[12, ] <- c("$lsY", nrow(x$lsY), ncol(x$lsY), "row coordinates (Y)")
-  sumry[13, ] <- c("$msY", nrow(x$msY), ncol(x$msY), "normed row scores (Y)")
+  sumry[1, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "Crossed Table (CT)")
+  sumry[2, ] <- c("$li", nrow(x$li), ncol(x$li), paste("CT row scores (cols of ", eval(coi.b$call[[2]])$call[[3]], ")", sep=""))
+  sumry[3, ] <- c("$l1", nrow(x$l1), ncol(x$l1), paste("CT normed row scores (cols of ", eval(coi.b$call[[2]])$call[[3]], ")", sep=""))
+  sumry[4, ] <- c("$co", nrow(x$co), ncol(x$co), paste("CT col scores (cols of ", eval(coi.b$call[[2]])$call[[2]], ")", sep=""))
+  sumry[5, ] <- c("$c1", nrow(x$c1), ncol(x$c1), paste("CT normed col scores (cols of ", eval(coi.b$call[[2]])$call[[2]], ")", sep=""))
+  sumry[6, ] <- c("$lX", nrow(x$lX), ncol(x$lX), paste("Class scores (for ", eval(coi.b$call[[2]])$call[[2]], ")", sep=""))
+  sumry[7, ] <- c("$mX", nrow(x$mX), ncol(x$mX), paste("Normed class scores (for ", eval(coi.b$call[[2]])$call[[2]], ")", sep=""))
+  sumry[8, ] <- c("$lY", nrow(x$lY), ncol(x$lY), paste("Class scores (for ", eval(coi.b$call[[2]])$call[[3]], ")", sep=""))
+  sumry[9, ] <- c("$mY", nrow(x$mY), ncol(x$mY), paste("Normed class scores (for ", eval(coi.b$call[[2]])$call[[3]], ")", sep=""))
+  sumry[10, ] <- c("$lsX", nrow(x$lsX), ncol(x$lsX), paste("Row scores (rows of ", eval(coi.b$call[[2]])$call[[2]], ")", sep=""))
+  sumry[11, ] <- c("$msX", nrow(x$msX), ncol(x$msX), paste("Normed row scores (rows of ", eval(coi.b$call[[2]])$call[[2]], ")", sep=""))
+  sumry[12, ] <- c("$lsY", nrow(x$lsY), ncol(x$lsY), paste("Row scores (rows of ", eval(coi.b$call[[2]])$call[[3]], ")", sep=""))
+  sumry[13, ] <- c("$msY", nrow(x$msY), ncol(x$msY), paste("Normed row scores (rows of ", eval(coi.b$call[[2]])$call[[3]], ")", sep=""))
   sumry[14, ] <- c("$aX", nrow(x$aX), ncol(x$aX),
-                   "between axis onto between co-inertia axis (X)")
+                   paste("Corr ", eval(coi.b$call[[2]])$call[[2]], " axes / betcoi axes", sep=""))
   sumry[15, ] <- c("$aY", nrow(x$aY), ncol(x$aY),
-                   "between axis onto between co-inertia axis (Y)")
+                   paste("Corr ", eval(coi.b$call[[2]])$call[[3]], " axes / betcoi axes", sep=""))
   sumry[16, ] <- c("$acX", nrow(x$acX), ncol(x$acX),
-                   "co-inertia axis onto between co-inertia axis (X)")
+                   paste("Corr ", eval(coi.b$call[[2]])$call[[2]], " coinertia axes / betcoi axes", sep=""))
   sumry[17, ] <- c("$acY", nrow(x$acY), ncol(x$acY),
-                   "co-inertia axis onto between co-inertia axis (Y)")
+                   paste("Corr ", eval(coi.b$call[[2]])$call[[3]], " coinertia axes / betcoi axes", sep=""))
   
   
   print(sumry, quote = FALSE)

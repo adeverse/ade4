@@ -6,7 +6,7 @@
 \alias{summary.coinertia}
 \title{Coinertia Analysis}
 \description{
-The coinertia analysis performs a double inertia analysis of two arrays. 
+The coinertia analysis performs a double inertia analysis of two tables. 
 }
 \usage{
 coinertia(dudiX, dudiY, scannf = TRUE, nf = 2)
@@ -31,19 +31,19 @@ Returns a list of class 'coinertia', sub-class 'dudi' containing:
   \item{nf}{a numeric value indicating the number of kept axes}
   \item{RV}{a numeric value, the RV coefficient}
   \item{eig}{a numeric vector with all the eigenvalues}
-  \item{lw}{a numeric vector with the rows weigths (crossed array)}
-  \item{cw}{a numeric vector with the columns weigths (crossed array)}
-  \item{tab}{a crossed array (CA)} 
-  \item{li}{Y col = CA row: coordinates}
-  \item{l1}{Y col = CA row: normed scores}
-  \item{co}{X col = CA column: coordinates}
-  \item{c1}{X col = CA column: normed scores}
-  \item{lX}{the row coordinates (X)}
-  \item{mX}{the normed row scores (X)}
-  \item{lY}{the row coordinates (Y)}
-  \item{mY}{the normed row scores (Y)}
-  \item{aX}{the axis onto co-inertia axis (X)}
-  \item{aY}{the axis onto co-inertia axis (Y)}
+  \item{lw}{a numeric vector with the rows weigths (crossed table)}
+  \item{cw}{a numeric vector with the columns weigths (crossed table)}
+  \item{tab}{a crossed table (CT)} 
+  \item{li}{Y CT row scores (cols of dudiY)}
+  \item{l1}{Principal components (loadings for cols of dudiY)}
+  \item{co}{CT col scores (cols of dudiX)}
+  \item{c1}{Principal axes (cols of dudiX)}
+  \item{lX}{Row scores (rows of dudiX)}
+  \item{mX}{Normed row scores (rows of dudiX)}
+  \item{lY}{Row scores (rows of dudiY)}
+  \item{mY}{Normed row scores (rows of dudiY)}
+  \item{aX}{Correlations between dudiX axes and coinertia axes}
+  \item{aY}{Correlations between dudiY axes and coinertia axes}
 }
 \references{
 Dolédec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for studying species-environment relationships. 

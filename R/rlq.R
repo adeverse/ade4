@@ -200,7 +200,6 @@ function (object, ...)
 
 randtest.rlq<-function(xtest, nrepet=999,...)
 {
-    nrepet<-nrepet+1
     if (!inherits(xtest,"dudi"))
         stop("Object of class dudi expected")
     if (!inherits(xtest,"rlq"))

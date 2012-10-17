@@ -7,9 +7,9 @@
 double betweenvar (double **tab, double *pl, double *indica);
 double inerbetween (double *pl, double *pc, int moda, double *indica, double **tab);
 void testdiscrimin(int *npermut,double *rank,double *pl1,int *npl,int *moda1,double *indica1,int *nindica,double *tab1, int *il1, int *ic1,double *inersim);
-void testertrace (int *npermut,double *pc1r, int *npc1,double *pc2r, int *npc2,double *tab1r, int *l1r, int *c1r,double *tab2r, int *l1r1, int *c2r,double *inersimul);
-void testertracenu (int *npermut,double *pc1r, int *npc1,double *pc2r, int *npc2,double *plr, int *npl,double *tab1r, int *l1r, int *c1r,double *tab2r, int *l1r1, int *c2r,double *tabinit1r,double *tabinit2r,int *typ1r,int *typ2r,double *inersimul);
-void testertracenubis ( int *npermut,double *pc1r, int *npc1,double *pc2r, int *npc2,double *plr, int *npl,double *tab1r, int *l1r, int *c1r,double *tab2r, int *l1r1, int *c2r,double *tabinit1r,double *tabinit2r,int *typ1r,int *typ2r,int *ntabr,double *inersimul);
+void testertrace (int *npermut,double *pc1r, double *pc2r, double *tab1r, int *l1r, int *c1r,double *tab2r, int *c2r,double *inersimul);
+void testertracenu (int *npermut,double *pc1r, double *pc2r, double *plr, double *tab1r, int *l1r, int *c1r,double *tab2r, int *c2r,double *tabinit1r,double *tabinit2r,char **ptyp1r,char **ptyp2r,double *inersimul);
+void testertracenubis ( int *npermut,double *pc1r, double *pc2r, double *plr, double *tab1r, int *l1r, int *c1r,double *tab2r, int *c2r,double *tabinit1r,double *tabinit2r,char **ptyp1r,char **typ2r,int *ntabr,double *inersimul);
 void testinter( int *npermut,double *pl1,int *npl,double *pc1,int *npc,int *moda1,double *indica1,int *nindica,double *tab1, int *l1, int *c1,double *inersim);
 void testmantel(int *npermut1,int *lig1,double *init11,double *init21,double *inersim);
 void testprocuste(int *npermut1,int *lig1,int *c11,int *c21,double *init11,double *init21,double *inersim);
@@ -703,10 +703,10 @@ double inerbetween (double *pl, double *pc, int moda, double *indica, double **t
 
 /*****************/
 void testertrace (  int *npermut,
-                double *pc1r, int *npc1,
-                double *pc2r, int *npc2,
+                double *pc1r,
+                double *pc2r, 
                 double *tab1r, int *l1r, int *c1r,
-                double *tab2r, int *l1r1, int *c2r,
+                double *tab2r, int *c2r,
                 double *inersimul)
 {
 
@@ -725,8 +725,8 @@ void testertrace (  int *npermut,
         
 /* Allocation memoire pour les variables C locales */
 
-    vecalloc (&pc1, *npc1);
-    vecalloc (&pc2, *npc2);
+    vecalloc (&pc1, c1);
+    vecalloc (&pc2, c2);
     vecintalloc(&numero, l1);
     taballoc (&X1, l1, c1);
     taballoc (&X2, l1, c2);
@@ -748,10 +748,10 @@ void testertrace (  int *npermut,
             k = k + 1;
         }
     }
-    for (i=1; i<=*npc1; i++) {
+    for (i=1; i<=c1; i++) {
         pc1[i] = pc1r[i-1];
     }
-    for (i=1; i<=*npc2; i++) {
+    for (i=1; i<=c2; i++) {
         pc2[i] = pc2r[i-1];
     }
 
@@ -806,15 +806,15 @@ void testertrace (  int *npermut,
 
 /*****************/
 void testertracenu (    int *npermut,
-                double *pc1r, int *npc1,
-                double *pc2r, int *npc2,
-                double *plr, int *npl,
+                double *pc1r,
+                double *pc2r,
+                double *plr, 
                 double *tab1r, int *l1r, int *c1r,
-                double *tab2r, int *l1r1, int *c2r,
+                double *tab2r, int *c2r,
                 double *tabinit1r,
                 double *tabinit2r,
-                int *typ1r,
-                int *typ2r,
+                char **ptyp1r,
+                char **ptyp2r,
                 double *inersimul)
 {
 /* Declarations des variables C locales */
@@ -823,22 +823,26 @@ void testertracenu (    int *npermut,
     int     i, j, k, l1, c1, c2;
     double  poi, inertot, s1, inersim, a1;
     int     *numero1, *numero2;
-    char    typ1[3], typ2[3];
+    char    typ1[3], typ2[3], *typ1r, *typ2r;
     
 /* On recopie les objets R dans les variables C locales */
 
     l1 = *l1r;
     c1 = *c1r;
     c2 = *c2r;
-    strncpy(typ1, (char const *) *typ1r, 2);
-    strncpy(typ2, (char const *) *typ2r, 2);
-    typ1[2] = 0;
-    typ2[2] = 0;
 
+    typ1r=*ptyp1r; /* R returns **char for characters strings cf http://www.stat.lsa.umich.edu/~yizwang/software/maxLinear/AlanRPackageTutorial.pdf */
+    typ2r=*ptyp2r;
+
+    strncpy(typ1, typ1r, 2); 
+    strncpy(typ2, typ2r, 2);
+    typ1[2] = '\0';
+    typ2[2] = '\0';
+    
 /* Allocation memoire pour les variables C locales */
 
-    vecalloc (&pc1, *npc1);
-    vecalloc (&pc2, *npc2);
+    vecalloc (&pc1, c1);
+    vecalloc (&pc2, c2);
     vecalloc (&pl, l1);
     vecintalloc (&numero1, l1);
     vecintalloc (&numero2, l1);
@@ -864,13 +868,13 @@ void testertracenu (    int *npermut,
             k = k + 1;
         }
     }
-    for (i=1; i<=*npc1; i++) {
+    for (i=1; i<=c1; i++) {
         pc1[i] = pc1r[i-1];
     }
-    for (i=1; i<=*npc2; i++) {
+    for (i=1; i<=c2; i++) {
         pc2[i] = pc2r[i-1];
     }
-    for (i=1; i<=*npl; i++) {
+    for (i=1; i<=l1; i++) {
         pl[i] = plr[i-1];
     }
     
@@ -982,15 +986,15 @@ void testertracenu (    int *npermut,
 
 /*****************/
 void testertracenubis ( int *npermut,
-                double *pc1r, int *npc1,
-                double *pc2r, int *npc2,
-                double *plr, int *npl,
+                double *pc1r, 
+                double *pc2r, 
+                double *plr,
                 double *tab1r, int *l1r, int *c1r,
-                double *tab2r, int *l1r1, int *c2r,
+                double *tab2r, int *c2r,
                 double *tabinit1r,
                 double *tabinit2r,
-                int *typ1r,
-                int *typ2r,
+                char **ptyp1r,
+                char **ptyp2r,
                 int *ntabr,
                 double *inersimul)
 
@@ -1001,7 +1005,7 @@ void testertracenubis ( int *npermut,
     int     i, j, k, l1, c1, c2;
     double  poi, inertot, s1, inersim, a1;
     int     *numero1, *numero2, ntab;
-    char    typ1[3], typ2[3];
+    char    typ1[3], typ2[3], *typ1r, *typ2r;
 
 /* On recopie les objets R dans les variables C locales */
 
@@ -1009,15 +1013,20 @@ void testertracenubis ( int *npermut,
     c1 = *c1r;
     c2 = *c2r;
     ntab = *ntabr;
-    strncpy(typ1, (char const *) *typ1r, 2);
-    strncpy(typ2, (char const *) *typ2r, 2);
-    typ1[2] = 0;
-    typ2[2] = 0;
+
+    typ1r=*ptyp1r; /* R returns **char for characters strings cf http://www.stat.lsa.umich.edu/~yizwang/software/maxLinear/AlanRPackageTutorial.pdf */
+    typ2r=*ptyp2r;
+
+    strncpy(typ1, typ1r, 2); 
+    strncpy(typ2, typ2r, 2);
+    typ1[2] = '\0';
+    typ2[2] = '\0';
+
             
 /* Allocation memoire pour les variables C locales */
 
-    vecalloc (&pc1, *npc1);
-    vecalloc (&pc2, *npc2);
+    vecalloc (&pc1, c1);
+    vecalloc (&pc2, c2);
     vecalloc (&pl, l1);
     vecintalloc (&numero1, l1);
     vecintalloc (&numero2, l1);
@@ -1043,13 +1052,13 @@ void testertracenubis ( int *npermut,
             k = k + 1;
         }
     }
-    for (i=1; i<=*npc1; i++) {
+    for (i=1; i<=c1; i++) {
         pc1[i] = pc1r[i-1];
     }
-    for (i=1; i<=*npc2; i++) {
+    for (i=1; i<=c2; i++) {
         pc2[i] = pc2r[i-1];
     }
-    for (i=1; i<=*npl; i++) {
+    for (i=1; i<=l1; i++) {
         pl[i] = plr[i-1];
     }
     

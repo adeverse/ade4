@@ -16,8 +16,8 @@ void testertracerlq ( int *npermut,
                 int *assignRr, int *assignQr,
                 int *indexRr, int *nindexR,
                 int *indexQr, int *nindexQ,
-                int *typQr,
-                int *typRr,
+                char **ptypQr,
+                char **ptypRr,
                 double *inersimul);
               
                 
@@ -34,8 +34,8 @@ void testertracerlq ( int *npermut,
                 int *assignRr, int *assignQr,
                 int *indexRr, int *nindexR,
                 int *indexQr, int *nindexQ,
-                int *typQr,
-                int *typRr,
+                char **ptypQr,
+                char **ptypRr,
                 double *inersimul)
 
 
@@ -48,7 +48,7 @@ void testertracerlq ( int *npermut,
     int     i, j, k, lL,cL, cR, cQ;
     double  inertot, s1, inersim, a1;
     int     *numero1, *numero2,*assignR,*assignQ, *indexR, *indexQ;
-    char    typR[3], typQ[3];
+    char    typR[3], typQ[3], *typRr, *typQr;
     
 /* On recopie les objets R dans les variables C locales */
 
@@ -56,10 +56,15 @@ void testertracerlq ( int *npermut,
     cL = *npcL;
     cQ = *npcQ;
     cR = *npcR;
-    strncpy(typR, (char const *) *typRr, 2);
-    strncpy(typQ, (char const *) *typQr, 2);
-    typR[2] = 0;
-    typQ[2] = 0;
+
+    typRr=*ptypRr; /* R returns **char for characters strings cf http://www.stat.lsa.umich.edu/~yizwang/software/maxLinear/AlanRPackageTutorial.pdf */
+    typQr=*ptypQr;
+
+    strncpy(typR, typRr, 2); 
+    strncpy(typQ, typQr, 2);
+    typR[2] = '\0';
+    typQ[2] = '\0';
+
 /* Allocation memoire pour les variables C locales */
 
     vecalloc (&pcR, cR);

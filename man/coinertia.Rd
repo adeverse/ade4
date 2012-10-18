@@ -34,7 +34,7 @@ Returns a list of class 'coinertia', sub-class 'dudi' containing:
   \item{lw}{a numeric vector with the rows weigths (crossed table)}
   \item{cw}{a numeric vector with the columns weigths (crossed table)}
   \item{tab}{a crossed table (CT)} 
-  \item{li}{Y CT row scores (cols of dudiY)}
+  \item{li}{CT row scores (cols of dudiY)}
   \item{l1}{Principal components (loadings for cols of dudiY)}
   \item{co}{CT col scores (cols of dudiX)}
   \item{c1}{Principal axes (cols of dudiX)}

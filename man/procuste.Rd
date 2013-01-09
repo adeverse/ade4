@@ -27,7 +27,7 @@ procuste(df1, df2, scale = TRUE, nf = 4, tol = 1e-07)
 returns a list of the class \code{procuste} with 9 components 
   \item{d}{a numeric vector of the singular values}
   \item{rank}{an integer indicating the rank of the crossed matrix}
-  \item{nfact}{an integer indicating the number of kept axes}
+  \item{nf}{an integer indicating the number of kept axes}
   \item{tab1}{a data frame with the array 1, possibly scaled}
   \item{tab2}{a data frame with the array 2, possibly scaled}
   \item{rot1}{a data frame with the result of the rotation from array 1 to array 2}

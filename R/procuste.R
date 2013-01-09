@@ -44,7 +44,7 @@
     names(Y) <- names(df2)
     res$d <- svd1$d
     res$rank <- rank
-    res$nfact <- nf
+    res$nf <- nf
     u <- data.frame(u)
     row.names(u) <- names(df1)
     names(u) <- paste("ax", 1:nf, sep = "")
@@ -113,7 +113,7 @@
     print(x$call)
     cat(paste("class:", class(x)))
     cat(paste("\nrank:", x$rank))
-    cat(paste("\naxis number:", x$nfact))
+    cat(paste("\naxis number:", x$nf))
     cat("\nSingular value decomposition: ")
     l0 <- length(x$d)
     cat(signif(x$d, 4)[1:(min(5, l0))])

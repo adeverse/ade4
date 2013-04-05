@@ -1,3 +1,51 @@
+2013-04-05 12:31  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.5-2 ----------
+
+2013-01-09 14:42  sdray
+
+	* R/procuste.R, man/procuste.Rd: value 'nfact' is renamed 'nf'
+
+2012-10-18 10:27  thioulouse
+
+	* man/coinertia.Rd: Small typo fix
+
+2012-10-18 10:26  thioulouse
+
+	* R/betweencoinertia.R: Fixed a bug introduced in print.betcoi
+	  function
+
+2012-10-17 16:29  sdray
+
+	* src/tests.c: Correct a small bug in loops for the acm case
+
+2012-10-17 15:49  sdray
+
+	* R/randtest-internal.R, src/testrlq.c, src/tests.c: Clean the C
+	  code and correct a small bug (R strings were transformed in
+	  integers in C) that provokes problems on Mac OS X (thanks to
+	  Vincent Miele for his help)
+
+2012-10-17 15:47  sdray
+
+	* R/rlq.R: Correct the number of repetitions in randtest.rlq (was
+	  nrepet+1 instead of nrepet)
+
+2012-10-16 13:32  thioulouse
+
+	* R/betweencoinertia.R, R/coinertia.R, man/coinertia.Rd: Edited
+	  print functions for coinertia and betweencoinertia analyses
+
+2012-10-16 13:30  thioulouse
+
+	* R/scatter.fca.R: Bug correction in the call to s.distri: needed
+	  to be pass the xax and yax params
+
+2012-09-21 16:02  sdray
+
+	* R/sco.gauss.R: Correct a bug: dnorm has 'sd' as arguments and not
+	  'var' (Thanks to Alice Julien-Laferriere)
+
 2012-09-14 11:21  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.5-1 ----------

@@ -88,6 +88,7 @@ dpcoa <- function(df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e-
     result$w1 <- w.esp
     result$w2 <- w.rel
     result$eig <- dudi1$eig
+    result$rank <- dudi1$rank
     result$nf <- dudi1$nf
     result$l2 <- dudi1$li
     w <- wesp %*% as.matrix(dudi1$c1)

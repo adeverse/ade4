@@ -1,4 +1,4 @@
-\name{randtest-internal}
+\name{ade4-internal}
 \alias{testdiscrimin}
 \alias{testertrace}
 \alias{testertracenu}
@@ -8,9 +8,11 @@
 \alias{testmantel}
 \alias{testertracerlq}
 \alias{testamova}
-\title{Internal Permutation Tests functions (in C).}
+\alias{dudi.type}
+\alias{acm.util}
+\title{Internal ade4 functions}
 \description{
-Internal Permutation Tests functions (in C)
+Internal ade4 functions
 }
 
 \details{

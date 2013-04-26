@@ -87,7 +87,7 @@
 } 
 
 "acm.disjonctif" <- function (df) {
-    acm.util <- function(i) {
+    acm.util.df <- function(i) {
         cl <- df[,i]
         cha <- names(df)[i] 
         n <- length(cl)
@@ -97,7 +97,20 @@
         dimnames(x) <- list(row.names(df), paste(cha,levels(cl),sep="."))
         return(x)
     }
-    G <- lapply(1:ncol(df), acm.util)
+    G <- lapply(1:ncol(df), acm.util.df)
     G <- data.frame (G, check.names = FALSE)
     return(G)
+}
+
+
+acm.util <- function(fac, drop = FALSE) {
+  ## Returns the disjunctive table corrseponding to a factor
+  n <- length(fac)
+  fac <- as.factor(fac)
+  if(drop)
+    fac <- factor(fac)
+  x <- matrix(0, n, length(levels(fac)))
+  x[(1:n) + n * (unclass(fac) - 1)] <- 1
+  dimnames(x) <- list(names(fac), as.character(levels(fac)))
+  return(data.frame(x, check.names = FALSE))
 }

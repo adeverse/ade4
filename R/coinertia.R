@@ -23,10 +23,10 @@
     tabcoiner <- data.frame(tabcoiner)
     names(tabcoiner) <- names(dudiX$tab)
     row.names(tabcoiner) <- names(dudiY$tab)
-    if (nf > dudiX$nf) 
-        nf <- dudiX$nf
-    if (nf > dudiY$nf) 
-        nf <- dudiY$nf
+    if (nf > dudiX$rank) 
+        nf <- dudiX$rank
+    if (nf > dudiY$rank) 
+        nf <- dudiY$rank
     if ((lig1<col1) & (lig1<col2)) {
         tol <- 1e-07
         w1 <- t(dudiX$tab)*dudiX$cw

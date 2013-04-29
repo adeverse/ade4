@@ -37,6 +37,7 @@
   }
   p.adjust.method <- match.arg(p.adjust.method, p.adjust.methods)
   res$adj.pvalue <- p.adjust(res$pvalue, method = p.adjust.method)
+  res$adj.method <- p.adjust.method
   res$call <- call
   class(res) <- "krandtest"
   return(res)

@@ -10,7 +10,8 @@ Plot and print many permutation tests. Objects of class \code{'krandtest'} are l
 \usage{
 \method{plot}{krandtest}(x, mfrow = NULL, nclass = NULL, main.title = x$names, ...)
 \method{print}{krandtest}(x, ...)
-as.krandtest(sim, obs, alter="greater", call = match.call(),names=colnames(sim))
+as.krandtest(sim, obs, alter = "greater", call =
+match.call(), names = colnames(sim), p.adjust.method = "none")
 }
 \arguments{
   \item{x}{: an object of class \code{'krandtest'}}
@@ -27,6 +28,8 @@ as.krandtest(sim, obs, alter="greater", call = match.call(),names=colnames(sim))
     to the length of the vector obs, values are recycled if shorter.}
   \item{call}{a call order}
   \item{names}{a vector of names for tests}
+  \item{p.adjust.method}{a string indicating a method for multiple
+    adjustment, see \code{p.adjust.methods} for possible choices.}
 }
 \value{
 \code{plot.krandtest} draws the \emph{p} simulated values histograms and the position of the observed value.

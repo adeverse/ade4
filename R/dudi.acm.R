@@ -109,7 +109,7 @@ fac2disj<- function(fac, drop = FALSE) {
   fac <- as.factor(fac)
   if(drop)
     fac <- factor(fac)
-  x <- matrix(0, n, length(levels(fac)))
+  x <- matrix(0, n, nlevels(fac))
   x[(1:n) + n * (unclass(fac) - 1)] <- 1
   dimnames(x) <- list(names(fac), as.character(levels(fac)))
   return(data.frame(x, check.names = FALSE))

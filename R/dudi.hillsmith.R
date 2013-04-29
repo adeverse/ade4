@@ -4,14 +4,6 @@
     if (!is.data.frame(df)) 
         stop("data.frame expected")
 
-    acm.util <- function(cl) {
-        n <- length(cl)
-        cl <- as.factor(cl)
-        x <- matrix(0, n, length(levels(cl)))
-        x[(1:n) + n * (unclass(cl) - 1)] <- 1
-        dimnames(x) <- list(names(cl), as.character(levels(cl)))
-        data.frame(x)
-    }
     df <- data.frame(df)
     nc <- ncol(df)
     nl <- nrow(df)
@@ -43,7 +35,7 @@
             
         }
         else if (index[j] == "f") {
-            w <- acm.util(factor(df[, j]))
+            w <- fac2disj(df[, j], drop = TRUE)
             cha <- paste(substr(names(df)[j], 1, 5), ".", names(w), 
                 sep = "")
             col.w.provi <- drop(row.w %*% as.matrix(w))

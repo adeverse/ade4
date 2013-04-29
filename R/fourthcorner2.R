@@ -104,18 +104,6 @@ function(tabR,tabL,tabQ,modeltype=1,nrepet=999,tr01=FALSE) {
 #        }  
 #--------fin f1 --------  
 
-
-# disjonctif transforme un facteur en tableau disjonctif  
-    disjonctif <- function(cl) {  
-        n <- length(cl)  
-        cl <- as.factor(cl)  
-        x <- matrix(0, n, length(levels(cl)))  
-        x[(1:n) + n * (unclass(cl) - 1)] <- 1  
-        dimnames(x) <- list(names(cl), as.character(levels(cl)))  
-        as.data.frame(x)  
-        }  
-#------- fin disjonctif ---------  
-  
   
     matR <- matrix(0, ligR, 1)  
     matQ <- matrix(0, ligQ, 1)  
@@ -135,7 +123,7 @@ function(tabR,tabL,tabQ,modeltype=1,nrepet=999,tr01=FALSE) {
   
         }  
         else if ((indexR[j] == 2)) {  
-            w <- disjonctif(factor(tabR[, j]))  
+            w <- fac2disj(tabR[, j], drop = TRUE)  
             cha <- paste(substr(names(tabR)[j], 1, 5), ".", names(w), sep = "")  
             matR <- cbind(matR, w)  
             provinames <- c(provinames, cha)  
@@ -165,7 +153,7 @@ function(tabR,tabL,tabQ,modeltype=1,nrepet=999,tr01=FALSE) {
   
         }  
         else if ((indexQ[j] == 2)) {  
-            w <- disjonctif(factor(tabQ[, j]))  
+            w <- fac2disj(tabQ[, j], drop = TRUE)  
             cha <- paste(substr(names(tabQ)[j], 1, 5), ".", names(w), sep = "")  
             matQ <- cbind(matQ, w)  
             provinames <- c(provinames, cha)  

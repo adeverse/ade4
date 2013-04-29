@@ -5,14 +5,7 @@
                        sub = "", csub = 1, possub = "bottomleft", cgrid = 1, pixmap = NULL, 
                        contour = NULL, area = NULL, add.plot = FALSE) 
 {
-  f1 <- function(cl) {
-    n <- length(cl)
-    cl <- as.factor(cl)
-    x <- matrix(0, n, length(levels(cl)))
-    x[(1:n) + n * (unclass(cl) - 1)] <- 1
-    dimnames(x) <- list(names(cl), levels(cl))
-    data.frame(x)
-  }
+  
   opar <- par(mar = par("mar"))
   par(mar = c(0.1, 0.1, 0.1, 0.1))
   on.exit(par(opar))
@@ -23,8 +16,8 @@
     stop("NA non implemented")
   if (!is.factor(fac)) 
     stop("factor expected for fac")
-  dfdistri <- f1(fac) * wt
-  coul=col
+  dfdistri <- fac2disj(fac) * wt
+  coul <- col
   w1 <- unlist(lapply(dfdistri, sum))
   dfdistri <- t(t(dfdistri)/w1)
   coox <- as.matrix(t(dfdistri)) %*% dfxy[, xax]

@@ -8,15 +8,6 @@ function(df1xy, df2xy, fac, wt = rep(1/nrow(df1xy),nrow(df1xy)), xax = 1, yax = 
                         pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE) {
   
   
-  f1 <- function(cl) {
-    n <- length(cl)
-    cl <- as.factor(cl)
-    x <- matrix(0, n, length(levels(cl)))
-    x[(1:n) + n * (unclass(cl) - 1)] <- 1
-    dimnames(x) <- list(names(cl), levels(cl))
-    data.frame(x)
-  }
-  
   df1xy <- data.frame(df1xy)
   df2xy <- data.frame(df2xy)
   if (!is.data.frame(df1xy)) 
@@ -33,7 +24,7 @@ function(df1xy, df2xy, fac, wt = rep(1/nrow(df1xy),nrow(df1xy)), xax = 1, yax = 
   if (!is.factor(fac)) 
     stop("factor expected for fac")
   
-  dfdistri <- f1(fac) * wt
+  dfdistri <- fac2disj(fac) * wt
   w1 <- unlist(lapply(dfdistri, sum))
   dfdistri <- t(t(dfdistri)/w1)
   coox1 <- as.matrix(t(dfdistri)) %*% df1xy[, xax]

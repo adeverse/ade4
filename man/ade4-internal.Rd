@@ -9,7 +9,7 @@
 \alias{testertracerlq}
 \alias{testamova}
 \alias{dudi.type}
-\alias{acm.util}
+\alias{fac2disj}
 \title{Internal ade4 functions}
 \description{
 Internal ade4 functions

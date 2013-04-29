@@ -103,7 +103,7 @@
 }
 
 
-acm.util <- function(fac, drop = FALSE) {
+fac2disj<- function(fac, drop = FALSE) {
   ## Returns the disjunctive table corrseponding to a factor
   n <- length(fac)
   fac <- as.factor(fac)

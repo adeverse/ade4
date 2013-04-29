@@ -3,14 +3,7 @@
     if (!is.data.frame(df)) 
         stop("data.frame expected")
     row.w <- rep(1, nrow(df))/nrow(df)
-    acm.util <- function(cl) {
-        n <- length(cl)
-        cl <- as.factor(cl)
-        x <- matrix(0, n, length(levels(cl)))
-        x[(1:n) + n * (unclass(cl) - 1)] <- 1
-        dimnames(x) <- list(names(cl), as.character(levels(cl)))
-        data.frame(x)
-    }
+    
     f1 <- function(v) {
         moy <- sum(v)/length(v)
         v <- v - moy
@@ -71,7 +64,7 @@
             col.assign <- c(col.assign, rep(k, deg.poly))
         }
         else if (index[j] == "f") {
-            w <- acm.util(factor(df[, j]))
+            w <- fac2disj(df[, j], drop = TRUE)
             cha <- paste(substr(names(df)[j], 1, 5), ".", names(w), 
                 sep = "")
             col.w.provi <- apply(w, 2, function(x) sum(x*row.w))

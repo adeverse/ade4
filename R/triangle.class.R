@@ -8,14 +8,7 @@
     scale = TRUE, min3 = NULL, max3 = NULL) 
 { 
     # modifiée le 18/11/2004 par cohérence avec triangle.param
-    f1 <- function(cl) {
-        n <- length(cl)
-        cl <- as.factor(cl)
-        x <- matrix(0, n, length(levels(cl)))
-        x[(1:n) + n * (unclass(cl) - 1)] <- 1
-        dimnames(x) <- list(names(cl), levels(cl))
-        data.frame(x)
-    }
+   
     seg <- function(a, b, col = par("col")) {
         segments(a[1], a[2], b[1], b[2], col = col)
     }
@@ -26,8 +19,8 @@
     if (!is.factor(fac)) stop("factor expected for fac")
     if (ncol(ta)!=3) stop("3 columns expected for ta")
     if (nrow(ta)!=length(fac)) stop ("Non convenient dimension")
-    dfdistri <- f1(fac) * wt
-    coul=col
+    dfdistri <- fac2disj(fac) * wt
+    coul <- col
     w1 <- unlist(lapply(dfdistri, sum))
     dfdistri <- t(t(dfdistri)/w1)
      

@@ -204,22 +204,14 @@ randtest.rlq<-function(xtest, nrepet=999,...)
         stop("Object of class dudi expected")
     if (!inherits(xtest,"rlq"))
         stop("Object of class 'rlq' expected")
-    appel<-as.list(xtest$call)
-    dudiR<-eval.parent(appel$dudiR)
-    dudiQ<-eval.parent(appel$dudiQ)
-    dudiL<-eval.parent(appel$dudiL)
-    acm.util <- function(cl) {
-        n <- length(cl)
-        cl <- as.factor(cl)
-        x <- matrix(0, n, length(levels(cl)))
-        x[(1:n) + n * (unclass(cl) - 1)] <- 1
-        dimnames(x) <- list(names(cl), as.character(levels(cl)))
-        data.frame(x)
-    }
-
-    R.cw<-dudiR$cw
-    appelR<-as.list(dudiR$call)
-    Rinit<-eval.parent(appelR$df)
+    appel <- as.list(xtest$call)
+    dudiR <- eval.parent(appel$dudiR)
+    dudiQ <- eval.parent(appel$dudiQ)
+    dudiL <- eval.parent(appel$dudiL)
+   
+    R.cw <- dudiR$cw
+    appelR <- as.list(dudiR$call)
+    Rinit <- eval.parent(appelR$df)
     if (appelR[[1]] == "dudi.pca") {
       appelR$scale<-eval.parent(appelR$scale)
       appelR$center<-eval.parent(appelR$center)
@@ -256,7 +248,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
                     res <- cbind(res, Rinit[, j])
                 }
                 else if (indexR[j] == "f") {
-                    w <- acm.util(factor(Rinit[, j]))
+                    w <- fac2disj(Rinit[, j], drop = TRUE)
                     res <- cbind(res, w)
                 }
             }
@@ -306,7 +298,7 @@ randtest.rlq<-function(xtest, nrepet=999,...)
                     res <- cbind(res, Qinit[, j])
                 }
                 else if (indexQ[j] == "f") {
-                    w <- acm.util(factor(Qinit[, j]))
+                    w <- fac2disj(Qinit[, j], drop = TRUE)
                     res <- cbind(res, w)
                 }
             }

@@ -14,7 +14,7 @@ rlq(dudiR, dudiL, dudiQ, scannf = TRUE, nf = 2)
 \method{print}{rlq}(x, ...)
 \method{plot}{rlq}(x, xax = 1, yax = 2, ...)
 \method{summary}{rlq}(object, ...)
-\method{randtest}{rlq}(xtest,nrepet = 999, ...)
+\method{randtest}{rlq}(xtest,nrepet = 999, modeltype = 6,...)
 }
 
 \arguments{
@@ -29,6 +29,9 @@ rlq(dudiR, dudiL, dudiQ, scannf = TRUE, nf = 2)
   \item{object}{ an rlq object }
   \item{xtest}{ an rlq object }
   \item{nrepet}{ the number of permutations }
+  \item{modeltype}{the model used to permute data(2: permute rows of R,
+    4: permute rows of Q, 5: permute both, 6: sequential approach, see
+    ter Braak et al. 2012)}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
@@ -59,6 +62,16 @@ Matching species traits to environmental variables: a new three-table ordination
 
 Dray, S., Pettorelli, N., Chessel, D. (2002) Matching data sets from two different spatial samplings. 
 \emph{Journal of Vegetation Science}, \bold{13}, 867--874.
+
+Dray, S. and Legendre, P. (2008) 
+Testing the species traits-environment relationships: the fourth-corner
+problem revisited. \emph{Ecology},
+\bold{89}, 3400--3412.}
+
+ter Braak, C., Cormont, A., Dray, S. (2012) Improved testing of species
+traits-environment relationships in the fourth corner problem.
+\emph{Ecology}, \bold{93}, 1525--1526.
+
 }
 \author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
 

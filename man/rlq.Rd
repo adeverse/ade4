@@ -66,7 +66,7 @@ Dray, S., Pettorelli, N., Chessel, D. (2002) Matching data sets from two differe
 Dray, S. and Legendre, P. (2008) 
 Testing the species traits-environment relationships: the fourth-corner
 problem revisited. \emph{Ecology},
-\bold{89}, 3400--3412.}
+\bold{89}, 3400--3412.
 
 ter Braak, C., Cormont, A., Dray, S. (2012) Improved testing of species
 traits-environment relationships in the fourth corner problem.
@@ -85,9 +85,9 @@ IMPORTANT : row weights for \code{dudiR} and \code{dudiQ} must be taken from \co
   case of decentred PCA (PCA where centers are entered by the user) for
   R or Q is not yet implemented. If you want to use the testing
   procedure for this case, you must firstly center the table and then perform a non-centered PCA on the modified table.} 
-\seealso{ \code{\link{coinertia}} }
+\seealso{ \code{\link{coinertia}},   \code{\link{fourthcorner}}}
 \examples{
-data(aviurba)
+   data(aviurba)
    coa1 <- dudi.coa(aviurba$fau, scannf = FALSE, nf = 2)
    dudimil <- dudi.hillsmith(aviurba$mil, scannf = FALSE, nf = 2, row.w = coa1$lw)
    duditrait <- dudi.hillsmith(aviurba$traits, scannf = FALSE, nf = 2, row.w = coa1$cw)
@@ -95,6 +95,9 @@ data(aviurba)
    plot(rlq1)
    summary(rlq1)
    randtest.rlq(rlq1)
+   fourthcorner.rlq(rlq1,type="Q.axes")
+   fourthcorner.rlq(rlq1,type="R.axes")
+
 }
 \keyword{ multivariate }
 \keyword{ spatial }

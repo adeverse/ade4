@@ -1,33 +1,38 @@
-"summary.4thcorner" <-
-function(object,...){
-
-cat("Fourth-corner Statistics\n")
-cat("Permutation method ",object$model," (",object$npermut," permutations)\n")
-cat("---\n\n")
-    res=matrix(0,nrow(object$tabG)*ncol(object$tabG),7)
-    res[,1]=format(colnames(object$tabG)[col(as.matrix(object$tabG))],justify="right")
-    res[,2]=format(rep("/",nrow(object$tabG)*ncol(object$tabG)),justify="none")
-    res[,3]=format(rownames(object$tabG)[row(as.matrix(object$tabG))])
-    res[,4]=as.vector(outer(object$indexQ,object$indexR))
-    if (!inherits(object, "4thcorner.rlq")){
-    res[res[,4]=="1",4]="r"
-    res[res[,4]=="2",4]="F"
-    res[res[,4]=="4",4]="Chi2"
+"summary.4thcorner" <-  function(object,...){
+  
+  cat("Fourth-corner Statistics\n")
+  cat("------------------------\n")
+  cat("Permutation method ",object$model," (",object$npermut," permutations)\n")
+  if(inherits(object, "4thcorner.rlq")){
+    cat("trRLQ statistic","\n\n")
+    cat("---\n\n")
+    print(object$trRLQ)
+  } else {
+    cat("\nAdjustment method for multiple comparisons:  ", object$tabG$adj.method, "\n")
+    
+    
+    xrand <- object$tabG
+    sumry <- list(Test = xrand$names, Stat= xrand$statnames, Obs = xrand$obs, Std.Obs = xrand$expvar[, 1], Alter = xrand$alter)
+    sumry <- as.matrix(as.data.frame(sumry))
+    if (any(xrand$rep[1] != xrand$rep)) {
+      sumry <- cbind(sumry[, 1:4], N.perm = xrand$rep)
     }
-    else{
-    res[res[,4]=="1",4]="r^2"
-    res[res[,4]=="2",4]="Eta^2"
-    res[res[,4]=="4",4]="Chi2/sum(L)"   
+    
+    sumry <- cbind(sumry, Pvalue = format.pval(xrand$pvalue))
+    
+    if (xrand$adj.method != "none") {
+      sumry <- cbind(sumry, Pvalue.adj = format.pval(xrand$adj.pvalue))
     }
-    res[,5]=as.vector(signif(as.matrix(object$tabG)))
-    res[,6]=format.pval(as.vector(as.matrix(object$tabGProb)))
-    signifpval <- symnum(as.numeric(res[,6]), corr = FALSE, na = FALSE, cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1), symbols = c("***", "**", "*", ".", " "))
-    res[,7]=signifpval
-    rownames(res)=rep(" ",nrow(object$tabG)*ncol(object$tabG))
-    colnames(res)=c("Var. R", " ","Var. Q", "Stat.","Value","Prob."," ")
-    print(res,quote=FALSE)
+    signifpval <- symnum(xrand$adj.pvalue, corr = FALSE, na = FALSE, cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1), symbols = c("***", "**", "*", ".", " "))
+    sumry <- cbind(sumry,signifpval)
+    colnames(sumry)[ncol(sumry)] <- " "
+    rownames(sumry) <- 1:nrow(sumry)
+    
+    print(sumry, quote = FALSE, right = TRUE)
+    
     cat("\n---\nSignif. codes: ", attr(signifpval, "legend"), "\n")
-
-
+    invisible(sumry)
+  }
+  
 }
 

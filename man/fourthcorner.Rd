@@ -19,7 +19,8 @@ fourthcorner2(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 = FALSE, p.adj
 \method{print}{4thcorner}(x, varQ = 1:length(x$varnames.Q), varR = 1:length(x$varnames.R), stat = c("D", "D2"), ...)
 \method{summary}{4thcorner}(object,...)
 \method{plot}{4thcorner}(x, stat = c("D", "D2", "G"), type = c("table",
-"biplot"), xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, ...)
+"biplot"), xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, col =
+c("lightgrey", "red", "deepskyblue", "purple"), ...)
 p.adjust.4thcorner(x, p.adjust.method.G = p.adjust.methods,
 p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
 "levels"))
@@ -53,6 +54,13 @@ fourthcorner.rlq(xtest, nrepet = 999, modeltype = 6, typetest = c("axes", "Q.axe
   \item{x.rlq}{an object created by the \code{rlq} function. Used to
   represent results on a biplot (type should be "biplot" and object
   created by the \code{fourthcorner} functions)}
+  \item{col}{a vector of length 4 containing four colors used for the
+  graphical representations. The first is used to represent non-significant
+  associations, the second positive significant, the third negative
+  significant. For the 'biplot' method and objects created by the
+  \code{fourthcorner.rlq} function, the second corresponds to variables
+  significantly linked
+  to the x-axis, the third for the y-axis and the fourth for both axes}
   \item{xtest}{an object created by the \code{rlq} function}
   \item{typetest}{a string indicating which tests should be performed}
   \item{\dots}{further arguments passed to or from other methods}

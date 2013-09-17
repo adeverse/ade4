@@ -28,17 +28,15 @@ covwt <- function(x, wt, na.rm = FALSE) {
 scalewt <- function (df, wt = rep(1/nrow(df), nrow(df)), center = TRUE, scale = TRUE) {
     df <- data.frame(df)
     mean.df <- apply(df, 2, weighted.mean, w = wt)
+    var.df <- FALSE
     if(scale){
         var.df <- apply(df, 2, varwt, wt = wt)
         temp <- var.df < 1e-14
-    } else {
-        var.df <- FALSE
-        temp <- FALSE
-    }
-    if (any(temp)) {
-        warning("Variables with null variance not standardized.")
-        var.df[temp] <- 1
-        var.df <-  sqrt(var.df)
+        if (any(temp)) {
+            warning("Variables with null variance not standardized.")
+            var.df[temp] <- 1
+        }
+        var.df <- sqrt(var.df)
     }
     
     res <- scale(df, scale = var.df, center = mean.df)

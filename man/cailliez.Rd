@@ -34,7 +34,7 @@ Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \examples{
 data(capitales)
-d0 <- as.dist(capitales$df)
+d0 <- capitales$dist
 is.euclid(d0) # FALSE
 d1 <- cailliez(d0, TRUE)
 # Cailliez constant = 2429.87867 

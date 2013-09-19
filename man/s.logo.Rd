@@ -53,7 +53,7 @@ if(require(pixmap, quiet=TRUE)){
 	s.logo(ggtortoises$pop,listico,add.p=TRUE)
 
 	data(capitales)
-	index <- unlist(lapply(1:15,function(i) which(names(capitales$logo)==tolower(rownames(capitales$df)[i])) ))
+	index <- pmatch(tolower(attr(capitales$dist, "Labels")), names(capitales$logo))
 	w1 <- capitales$area
 	area.plot(w1)
 	rect(min(w1$x), min(w1$y), max(w1$x), max(w1$y), col = "lightblue")

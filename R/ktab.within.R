@@ -2,7 +2,6 @@
     if (!inherits(dudiwit, "within")) 
         stop("Result from within expected for dudiwit")
     fac <- dudiwit$fac
-    res <- list()
     nblo <- nlevels(fac)
     res <- list()
     blocks <- rep(0, nblo)
@@ -11,16 +10,16 @@
     else if (length(rownames) != length(names(dudiwit$tab))) 
         stop("Non convenient rownames length")
     if (is.null(colnames)) 
-        colnames <- row.names(dudiwit$tab)
+        colnames <-  unlist(split(row.names(dudiwit$tab), fac))
     else if (length(colnames) != length(row.names(dudiwit$tab))) 
         stop("Non convenient colnames length")
     if (is.null(tabnames)) 
-        tabnames <- as.character(unique(fac))
-    else if (length(tabnames) != length(as.character(unique(fac)))) 
+        tabnames <- levels(fac)
+    else if (length(tabnames) != nblo)
         stop("Non convenient tabnames length")
     cw <- NULL
     for (i in 1:nblo) {
-        k <- unique(fac)[i]
+        k <- levels(fac)[i]
         w1 <- dudiwit$lw[fac == k]
         w1 <- w1/sum(w1)
         cw <- c(cw, w1)

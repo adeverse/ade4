@@ -144,7 +144,7 @@
         i1 <- i2 + 1
         i2 <- i2 + nlig
         tab <- acom$Tli[i1:i2, ]
-        tab <- scalewt(tab, wt = lw, center = FALSE, scale = TRUE)
+        tab <- as.matrix(sweep(tab, 2, sqrt(colSums((tab*sqrt(lw))^2)), "/"))
         w[i1:i2, ] <- tab
     }
     w <- data.frame(w, row.names = auxinames$row)

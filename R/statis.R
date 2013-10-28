@@ -39,12 +39,13 @@
     row.names(w) <- tab.names
     names(w) <- paste("S", 1:ncol(w), sep = "")
     statis$RV.coo <- w[, 1:min(4, ncol(w))]
-    ############## combinaison des opérateurs d'inertie normés ###########
+    ############## combinaison des operateurs d'inertie normes ###########
     sep <- t(t(sep)/ak)
-    C.ro <- apply(t(sep) * tabw, 2, sum)
+    C.ro <- rowSums(sweep(sep,2,tabw,"*"))
     C.ro <- matrix(unlist(C.ro), nlig, nlig)
     ############## diagonalisation du compromis ###########
     eig1 <- eigen(C.ro, symmetric = TRUE)
+    rm(C.ro)
     eig <- eig1$values
     rank <- sum((eig/eig[1]) > tol)
     if (scannf) {
@@ -60,6 +61,7 @@
     statis$C.nf <- nf
     statis$C.rank <- rank
     wref <- eig1$vectors[, 1:nf]
+    rm(eig1)
     wref <- wref/lwsqrt
     w <- data.frame(t(t(wref) * sqrt(eig[1:nf])))
     row.names(w) <- row.names(X)

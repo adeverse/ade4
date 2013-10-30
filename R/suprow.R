@@ -28,7 +28,7 @@
     return(list(tabsup=Xsup, lisup=coosup))
 }
 
-"suprow.default" <- function (x, Xsup, ...) {
+"suprow.dudi" <- function (x, Xsup, ...) {
     # modif pour Culhane, Aedin" <a.culhane@ucc.ie> 
     # suprow renvoie une liste à deux éléments tabsup et lisup
     Xsup <- data.frame(Xsup)

@@ -21,7 +21,7 @@
     return(list(tabsup=Xsup, cosup=coosup))
 }
 
-"supcol.default" <- function (x, Xsup, ...) {
+"supcol.dudi" <- function (x, Xsup, ...) {
     Xsup <- data.frame(Xsup)
     if (!inherits(x, "dudi")) 
         stop("Object of class 'dudi' expected")

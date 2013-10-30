@@ -53,7 +53,7 @@ kplot(sepan(w), clab.r = 1.25, clab.c = 0, csub = 3)
 data(microsatt)
 w <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE)
 loci.fac <- factor(rep(microsatt$loci.names, microsatt$loci.eff))
-wit <- within(w, loci.fac, scann = FALSE)
+wit <- wca(w, loci.fac, scann = FALSE)
 microsatt.ktab <- ktab.within(wit)
 kplot.sepan.coa(sepan(microsatt.ktab), show = FALSE, clab.c = 0, 
     mfrow = c(3,3), clab.r = 1.5)

@@ -29,7 +29,7 @@ See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps027.pdf} (in F
 data(baran95)
 w <- dudi.pca(log(baran95$fau+1), scal = FALSE, scann = FALSE, 
     nf = 3)
-w1 <- within(w, baran95$plan$date, scann = FALSE)
+w1 <- wca(w, baran95$plan$date, scann = FALSE)
 fatala <- ktab.within(w1)
 stat1 <- statis(fatala, scan = FALSE, nf = 3)
 w1 <- split(stat1$C.Co, baran95$plan$date)

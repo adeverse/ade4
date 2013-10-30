@@ -27,7 +27,7 @@ class(taxo.eg[[1]])
 class(as.taxo(taxo.eg[[1]]))
 
 tax.phy <- taxo2phylog(as.taxo(taxo.eg[[1]]),  add.tools = TRUE)
-plot.phylog(tax.phy,clabel.l=1)
+plot(tax.phy,clabel.l=1)
 
 par(mfrow = c(1,2))
 table.phylog(tax.phy$Bindica,tax.phy)

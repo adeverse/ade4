@@ -38,7 +38,7 @@ for (i in 1:15) {
     plot(rhone$date, rhone$tab[,i])
     lines(rhone$date, rh1[,i], lty = 2)
     lines(rhone$date, rh2[,i], lty = 1)
-    scatterutil.sub(names(rhone$tab)[i], 2, "topright")}
+    ade4:::scatterutil.sub(names(rhone$tab)[i], 2, "topright")}
 
 data(chats)
 chatsw <- data.frame(t(chats))

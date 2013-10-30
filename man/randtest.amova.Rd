@@ -27,7 +27,7 @@ returns an object of class \code{krandtest} or \code{randtest}
 data(humDNAm)
 amovahum <- amova(humDNAm$samples, sqrt(humDNAm$distances), humDNAm$structures)
 amovahum
-randtesthum <- randtest.amova(amovahum, 49)
+randtesthum <- randtest(amovahum, 49)
 plot(randtesthum)
 }
 \keyword{multivariate}

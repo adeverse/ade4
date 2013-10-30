@@ -29,10 +29,10 @@ par(mfrow = c(2,2))
 coa1 <- dudi.coa(avimedi$fau, scan = FALSE, nf = 3)
 s.class(coa1$li,avimedi$plan$str:avimedi$plan$reg,
     sub = "Correspondences Analysis")
-bet1 <- between(coa1, avimedi$plan$str, scan = FALSE)
+bet1 <- bca(coa1, avimedi$plan$str, scan = FALSE)
 s.class(bet1$ls, avimedi$plan$str,
     sub = "Between Analysis")
-wit1 <- within(coa1, avimedi$plan$reg, scan=FALSE)
+wit1 <- wca(coa1, avimedi$plan$reg, scan=FALSE)
 s.class(wit1$li, avimedi$plan$str,
     sub = "Within Analysis")
 pcaiv1 <- pcaiv(coa1, avimedi$plan, scan = FALSE)

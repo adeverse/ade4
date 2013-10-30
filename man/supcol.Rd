@@ -1,14 +1,14 @@
 \name{supcol}
 \alias{supcol}
 \alias{supcol.coa}
-\alias{supcol.default}
+\alias{supcol.dudi}
 \title{Projections of Supplementary Columns}
 \description{
 performs projections of supplementary columns. 
 }
 \usage{
 supcol(x, \dots)
-\method{supcol}{default}(x, Xsup, \dots) 
+\method{supcol}{dudi}(x, Xsup, \dots) 
 \method{supcol}{coa}(x, Xsup, \dots) 
 }
 \arguments{
@@ -17,7 +17,7 @@ supcol(x, \dots)
   \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
-If \code{supcol.default} is used, the column vectors of \code{Xsup} are projected without prior modification onto the principal components of dudi with the scalar product associated to the row weightings of dudi.
+If \code{supcol.dudi} is used, the column vectors of \code{Xsup} are projected without prior modification onto the principal components of dudi with the scalar product associated to the row weightings of dudi.
 }
 \value{A list of two components:
     \item{\code{tabsup}}{data frame containing the array with the supplementary columns transformed or not}
@@ -36,7 +36,7 @@ supcol (rpjdl.coa,rpjdl$fau[,1:3])$cosup # the same
 data(doubs)
 dudi1 <- dudi.pca(doubs$fish, scal = FALSE, scan = FALSE)
 s.arrow(dudi1$co)
-s.arrow(supcol.default(dudi1,data.frame(scalewt(doubs$env)))$cosup,
+s.arrow(supcol(dudi1,data.frame(scalewt(doubs$env)))$cosup,
     add.p = TRUE, clab = 2)
 symbols(0, 0, circles = 1, inches = FALSE, add = TRUE)
 }

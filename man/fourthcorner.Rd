@@ -4,7 +4,6 @@
 \alias{print.4thcorner}
 \alias{summary.4thcorner}
 \alias{plot.4thcorner}
-\alias{p.adjust.4thcorner}
 \alias{fourthcorner.rlq}
 
 \title{ Functions to compute the fourth-corner statistic  }
@@ -21,9 +20,6 @@ fourthcorner2(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 = FALSE, p.adj
 \method{plot}{4thcorner}(x, stat = c("D", "D2", "G"), type = c("table",
 "biplot"), xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, col =
 c("lightgrey", "red", "deepskyblue", "purple"), ...)
-p.adjust.4thcorner(x, p.adjust.method.G = p.adjust.methods,
-p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
-"levels"))
 fourthcorner.rlq(xtest, nrepet = 999, modeltype = 6, typetest = c("axes", "Q.axes", "R.axes"), p.adjust.method.G = p.adjust.methods, p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global", "levels"), ...)
 }
 
@@ -41,7 +37,7 @@ fourthcorner.rlq(xtest, nrepet = 999, modeltype = 6, typetest = c("axes", "Q.axe
   \item{type}{ results are represented by a table or on a biplot (see x.rlq)}
   \item{alpha}{ a value of significance level}
   \item{p.adjust.method.G}{a string indicating a method for multiple
-    adjustment used for output tabG, see \code{p.adjust.methods} for possible choices}
+    adjustment used for output tabG, see \code{\link[stats]{p.adjust.methods}} for possible choices}
   \item{p.adjust.method.D}{a string indicating a method for multiple
     adjustment used for output tabD/tabD2, see \code{p.adjust.methods} for possible choices}
   \item{p.adjust.D}{a string indicating if multiple adjustment for
@@ -97,20 +93,20 @@ qualitative / quantitative association, homogeneity (D) or correlation
 }
 \value{
   The \code{fourthcorner} function returns a a list where:
-   
-   \code{tabD} is a \code{krandtest} object giving the results of tests
-   for cells of the fourth-corner (homogeneity for quant./qual.).
-   \code{tabD2} is a \code{krandtest} object giving the results of tests
-   for cells of the fourth-corner (Pearson r for quant./qual.).
-   \code{tabG} is a \code{krandtest} object giving the results of tests
-   for variables (Pearson's Chi2 for qual./qual.).
-
-The \code{fourthcorner2} function returns a list where:
-
-   \code{tabG} is a \code{krandtest} object giving the results of tests for
-variables.
-   \code{trRLQ} is a \code{krandtest} object giving the results of tests for
-the multivariate statistic (i.e. equivalent to \code{randtest.rlq} function).
+  
+  \code{tabD} is a \code{krandtest} object giving the results of tests
+  for cells of the fourth-corner (homogeneity for quant./qual.).
+  \code{tabD2} is a \code{krandtest} object giving the results of tests
+  for cells of the fourth-corner (Pearson r for quant./qual.).
+  \code{tabG} is a \code{krandtest} object giving the results of tests
+  for variables (Pearson's Chi2 for qual./qual.).
+  
+  The \code{fourthcorner2} function returns a list where:
+  
+  \code{tabG} is a \code{krandtest} object giving the results of tests for
+  variables.
+  \code{trRLQ} is a \code{krandtest} object giving the results of tests for
+  the multivariate statistic (i.e. equivalent to \code{randtest.rlq} function).
 }
 
 \references{ 
@@ -131,20 +127,37 @@ ter Braak, C., Cormont, A., and Dray, S. (2012)
 Improved testing of species traits-environment relationships in the
 fourth corner problem. \emph{Ecology}, \bold{93}, 1525--1526.
 
+Dray, S., Choler, P., Doledec, S., Peres-Neto, P.R., Thuiller, W.,
+Pavoine, S. and ter Braak, C.J.F (2013)
+Combining the fourth-corner and the RLQ methods for assessing trait
+responses to environmental variation. \emph{Ecology}, in press.
  }
-\author{ Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
-\seealso{ \code{rlq}, \code{combine.4thcorner}}
+ 
+ \author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+\seealso{ \code{\link{rlq}}, \code{\link{combine.4thcorner}}, \code{\link[stats]{p.adjust.methods}}}
 \examples{
 data(aviurba)
 
-## Procedure to combine the results of two models proposed in Dray and Legendre (2008)
+## Version using the sequential test (ter Braak et al 2012)
+## as recommended in Dray et al (2013), 
+## using Holm correction of P-values (only 99 permutations here)
+four.comb.default <- fourthcorner(aviurba$mil,aviurba$fau,aviurba$traits,nrepet=99)
+summary(four.comb.default)
+plot(four.comb.default, stat = "G")
+
+## using fdr correction of P-values
+four.comb.fdr <- fourthcorner(aviurba$mil,aviurba$fau,aviurba$traits,nrepet=99,p.adjust.method.G ='fdr', p.adjust.method.D='fdr')  
+summary(four.comb.fdr)
+plot(four.comb.fdr, stat = "G")
+
+## Explicit procedure to combine the results of two models
+## proposed in Dray and Legendre (2008);the above does this implicitly
 four2 <- fourthcorner(aviurba$mil,aviurba$fau,aviurba$traits,nrepet=99,modeltype=2)
 four4 <- fourthcorner(aviurba$mil,aviurba$fau,aviurba$traits,nrepet=99,modeltype=4)
-four.comb <- combine.4thcorner(four2,four4)
-## or directly :
-## four.comb <- fourthcorner(aviurba$mil,aviurba$fau,aviurba$traits,nrepet=99,modeltype=6)
+four.comb <- combine.4thcorner(four2, four4)
 summary(four.comb)
 plot(four.comb, stat = "G")
+
 
 }
 \keyword{ multivariate }

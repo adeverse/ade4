@@ -28,7 +28,7 @@ par(mfcol = c(5,3))
 par(mar = c(2,2,2,2))
 for(k in 1:15) {
     barplot(acacia[,k], ylim = c(0,20), col = grey(0.8))
-    scatterutil.sub(names(acacia)[k], 1.5, "topleft")
+    ade4:::scatterutil.sub(names(acacia)[k], 1.5, "topleft")
 }
 par(mfcol = c(1,1))}
 \keyword{datasets}

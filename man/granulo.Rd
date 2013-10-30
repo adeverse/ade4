@@ -26,7 +26,7 @@ w <- data.frame(w)
 wtr <- data.frame(t(w))
 wmoy <- data.frame(matrix(apply(wtr, 1, mean), 1))
 d1 <- dudi.pca(w, scal = FALSE, scan = FALSE)
-wmoy <- suprow.default(d1, wmoy)$lisup
+wmoy <- suprow(d1, wmoy)$lisup
 s.arrow(d1$c1, clab = 1.5)
 s.distri(d1$c1, wtr, cstar = 0.33, cell = 0, 
     axesell = FALSE, add.p = TRUE, clab = 0.75)

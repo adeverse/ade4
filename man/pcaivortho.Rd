@@ -56,7 +56,7 @@ coa1 <- dudi.coa(avimedi$fau, scan = FALSE, nf = 3)
 s.class(coa1$li, cla, sub = "Sans contrainte")
 
 # within region
-w1 <- within(coa1, avimedi$plan$reg, scan = FALSE)
+w1 <- wca(coa1, avimedi$plan$reg, scan = FALSE)
 s.match(w1$li, w1$ls, clab = 0, sub = "Intra Région")
 s.class(w1$li, cla, add.plot = TRUE)
 

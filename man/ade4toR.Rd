@@ -39,9 +39,9 @@ creates a file "xxx\_moda\_lab.txt" with categories names\cr
 Files are created in the current working directory.
 }
 \examples{
-data(tarentaise)
+\dontrun{data(tarentaise)
 traits <- tarentaise$traits
-Rtoade4(traits)
+ade4:::Rtoade4(traits)
 # File creation traits.txt 
 # File creation traits_col_lab.txt 
 # File creation traits_row_lab.txt 
@@ -49,9 +49,10 @@ Rtoade4(traits)
 # File creation traits_col_bloc_lab.txt  
 
 mil <- tarentaise$envir
-Rtoade4(mil)
+ade4:::Rtoade4(mil)
 #File creation mil.txt 
 #File creation mil_var_lab.txt 
-#File creation mil_moda_lab.txt 
+#File creation mil_moda_lab.txt
+}
 }
 \keyword{utilities}

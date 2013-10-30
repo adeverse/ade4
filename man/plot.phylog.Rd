@@ -52,22 +52,22 @@ Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
 \examples{
 data(newick.eg)
 par(mfrow = c(3,2))
-for(i in 1:6) plot.phylog(newick2phylog(newick.eg[[i]], FALSE),
+for(i in 1:6) plot(newick2phylog(newick.eg[[i]], FALSE),
  clea = 2, clabel.l = 3, cnod = 2.5)
 par(mfrow = c(1,1))
 
 \dontrun{
 par(mfrow = c(1,2))
-plot.phylog(newick2phylog(newick.eg[[11]], FALSE), clea = 1.5,
+plot(newick2phylog(newick.eg[[11]], FALSE), clea = 1.5,
  clabel.l = 1.5, clabel.nod = 0.75, f = 0.8)
-plot.phylog(newick2phylog(newick.eg[[10]], FALSE), clabel.l = 0,
+plot(newick2phylog(newick.eg[[10]], FALSE), clabel.l = 0,
  clea = 0, cn = 0, f = 1)
 par(mfrow = c(1,1))
 }
 
 par(mfrow = c(2,2))
 w7 <- newick2phylog("(((((1,2,3)b),(6)c),(4,5)d,7)f);")
-plot.phylog(w7,clabel.l = 1.5, clabel.n = 1.5, f = 0.8, cle = 2,
+plot(w7,clabel.l = 1.5, clabel.n = 1.5, f = 0.8, cle = 2,
  cnod = 3, sub = "(((((1,2,3)b),(6)c),(4,5)d,7)f);", csub = 2)
 w <- NULL
 w[1] <- "((((e1:4,e2:4)a:5,(e3:7,e4:7)b:2)c:2,e5:11)d:2,"
@@ -81,7 +81,7 @@ plot(w, clabel.lea = 1.25, clabel.n = 1.25, sub = "Taxonomy",
 
 provi.tre <- "(((a,b,c,d,e)A,(f,g,h)B)C)D;"
 provi.phy <- newick2phylog(provi.tre)
-plot.phylog(provi.phy, clabel.l = 2, clabel.n = 2, f = 0.8)
+plot(provi.phy, clabel.l = 2, clabel.n = 2, f = 0.8)
 par(mfrow = c(1,1))
 
 \dontrun{

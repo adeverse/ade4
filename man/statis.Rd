@@ -51,7 +51,7 @@ statis1 <- statis(kta1, scann = FALSE)
 plot(statis1)
 
 dudi1 <- dudi.pca(jv73$poi, scann = FALSE, scal = FALSE)
-wit1 <- within(dudi1, jv73$fac.riv, scann = FALSE)
+wit1 <- wca(dudi1, jv73$fac.riv, scann = FALSE)
 kta3 <- ktab.within(wit1)
 data(jv73)
 statis3 <- statis(kta3, scann = FALSE)

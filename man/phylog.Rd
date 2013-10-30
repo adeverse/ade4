@@ -65,8 +65,8 @@ marthans.phylo <- read.tree(text = marthans.tre)
 marthans.phylo
 
 par(mfrow =c (1,2))
-plot.phylog(marthans.phylog, cnode = 3, f = 0.8, cle = 3)
-plot.phylo(marthans.phylo)
+plot(marthans.phylog, cnode = 3, f = 0.8, cle = 3)
+plot(marthans.phylo)
 par(mfrow = c(1,1))
 }
 }

@@ -25,7 +25,7 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 data(bacteria)
 w1 <- data.frame(t(bacteria$espcodon))
 dudi1 <- dudi.coa(w1, scann = FALSE, nf = 4)
-wit1 <- within(dudi1, bacteria$code, scannf = FALSE)
+wit1 <- wca(dudi1, bacteria$code, scannf = FALSE)
 kta1 <- ktab.within(wit1)
 plot(statis(kta1, scann = FALSE))
 

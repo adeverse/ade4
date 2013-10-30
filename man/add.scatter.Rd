@@ -78,7 +78,7 @@ par(mfrow=c(1,1))
 data(microsatt)
 w <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE,nf=3)
 s.label(w$co)
-add.scatter.eig(w$eig,w$nf,posi="bottomright",1,2)
+ade4:::add.scatter.eig(w$eig,w$nf,posi="bottomright",1,2)
 }
 \keyword{multivariate}
 \keyword{hplot}

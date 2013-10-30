@@ -2,14 +2,14 @@
 \alias{suprow}
 \alias{suprow.coa}
 \alias{suprow.pca}
-\alias{suprow.default}
+\alias{suprow.dudi}
 \title{Projections of Supplementary Rows}
 \description{
 performs projections of supplementary rows. 
 }
 \usage{ 
 \method{suprow}{coa}(x, Xsup, \dots) 
-\method{suprow}{default}(x, Xsup, \dots) 
+\method{suprow}{dudi}(x, Xsup, \dots) 
 \method{suprow}{pca}(x, Xsup, \dots) 
 }
 \arguments{
@@ -18,7 +18,7 @@ performs projections of supplementary rows.
   \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
-If \code{suprow.default} is used, the column vectors of Xsup are projected without prior modifications onto the principal components of dudi with the scalar product associated to the row weightings of dudi.
+If \code{suprow.dudi} is used, the column vectors of Xsup are projected without prior modifications onto the principal components of dudi with the scalar product associated to the row weightings of dudi.
 }
 \value{
 returns a data frame containing the coordinates of the supplementary projections
@@ -40,7 +40,7 @@ s.label(suprow(dudi1,w), add.plot = TRUE, clab = 0.75)
 
 s.arrow(dudi1$c1,
     sub = "Without centring", possub = "bottomright", csub = 2.5)
-s.label(suprow.default(dudi1,w), clab = 0.75, add.plot = TRUE)
+s.label(suprow(dudi1,w), clab = 0.75, add.plot = TRUE)
 
 triangle.plot(w, clab = 0.75, label = row.names(w), scal = FALSE)
 triangle.plot(w, clab = 0.75, label = row.names(w), scal = TRUE)

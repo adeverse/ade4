@@ -94,7 +94,7 @@ IMPORTANT : row weights for \code{dudiR} and \code{dudiQ} must be taken from \co
    rlq1 <- rlq(dudimil, coa1, duditrait, scannf = FALSE, nf = 2)
    plot(rlq1)
    summary(rlq1)
-   randtest.rlq(rlq1)
+   randtest(rlq1)
    fourthcorner.rlq(rlq1,type="Q.axes")
    fourthcorner.rlq(rlq1,type="R.axes")
 

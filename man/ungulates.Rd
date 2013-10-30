@@ -28,7 +28,7 @@ Is sex-biased maternal care limited by total maternal expenditure in polygynous 
 \examples{
 data(ungulates)
 ung.phy <- newick2phylog(ungulates$tre)
-plot.phylog(ung.phy,clabel.l=1.25,clabel.n=0.75)
+plot(ung.phy,clabel.l=1.25,clabel.n=0.75)
 ung.x <- log(ungulates$tab[,1])
 ung.y <- log((ungulates$tab[,2]+ungulates$tab[,3])/2)
 names(ung.x) <- names(ung.phy$leaves)

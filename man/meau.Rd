@@ -39,7 +39,7 @@ par(mfrow = c(2,2))
 pca1 <- dudi.pca(meau$env, scan = FALSE, nf = 4)
 s.class(pca1$li, meau$design$season, 
     sub = "Principal Component Analysis")
-pca2 <- between(pca1, meau$design$season, scan = FALSE, nf = 2)
+pca2 <- bca(pca1, meau$design$season, scan = FALSE, nf = 2)
 s.class(pca2$ls, meau$design$season, sub = "Between seasons Principal Component Analysis")
 s.corcircle(pca1$co)
 s.corcircle(pca2$as)

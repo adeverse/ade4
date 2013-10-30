@@ -4,7 +4,7 @@
     if (!inherits(xtest, "between")) 
         stop("Type 'between' expected")
     appel <- as.list(xtest$call)
-    dudi1 <- eval.parent(appel$dudi)
+    dudi1 <- eval.parent(appel[[2]]) ## could work with bca (appel$x) or between (appel$dudi)
     fac <- eval.parent(appel$fac)
     X <- dudi1$tab
     X.lw <- dudi1$lw

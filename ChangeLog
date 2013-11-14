@@ -1,3 +1,153 @@
+2013-11-14 12:47  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.6-0 ----------
+
+2013-10-30 12:23  sdray
+
+	* NAMESPACE, man/acacia.Rd, man/add.scatter.Rd, man/ade4toR.Rd,
+	  man/as.taxo.Rd, man/avimedi.Rd, man/baran95.Rd,
+	  man/combine.4thcorner.Rd, man/costatis.Rd, man/fourthcorner.Rd,
+	  man/granulo.Rd, man/kplot.pta.Rd, man/kplot.sepan.Rd,
+	  man/kplot.statis.Rd, man/ktab.match2ktabs.Rd, man/ktab.within.Rd,
+	  man/meau.Rd, man/meaudret.Rd, man/pcaivortho.Rd, man/phylog.Rd,
+	  man/plot.phylog.Rd, man/randtest.amova.Rd, man/reconst.Rd,
+	  man/rhone.Rd, man/rlq.Rd, man/rtest.between.Rd,
+	  man/scatterutil.Rd, man/statico.Rd, man/statis.Rd, man/supcol.Rd,
+	  man/suprow.Rd, man/taxo.eg.Rd, man/ungulates.Rd: The NAMESPACE
+	  file (which exported all functions) has be completely rewritten.
+	  Utilities and deprecated functions are not exported. S3 methods
+	  are declared. Several help pages have been modified to manage
+	  these changes.
+
+2013-10-30 12:20  sdray
+
+	* R/rtest.between.R: Now the rtest.between can handle objects
+	  created with between and bca functions
+
+2013-10-30 12:19  sdray
+
+	* R/supcol.R, R/suprow.R: suprow.default and supcol.default become
+	  suprow.dudi and supcol.dudi
+
+2013-10-28 13:55  sdray
+
+	* R/statis.R: Improve the speed of statis function. Thanks to
+	  Benoit Thieurmel (email sent 11/01/2013
+
+2013-10-28 12:53  sdray
+
+	* R/mcoa.R: Correct a bug in the scaling of Tl1. Thanks to P. Bady,
+	  adelist 3/10/2013
+
+2013-10-03 11:26  sdray
+
+	* R/ktab.within.R: Correct a bug in ktab.within: column names were
+	  not handle correctly in some cases (Thanks to Pierre Bady,
+	  message on adelist 3/10/2013). Moreover, the order of bloc is
+	  given by levels and nor unique
+
+2013-09-19 15:58  sdray
+
+	* data/atlas.rda, data/atya.rda, data/avijons.rda, data/buech.rda,
+	  data/butterfly.rda, data/capitales.rda, data/elec88.rda,
+	  data/ggtortoises.rda, data/irishdata.rda, data/julliot.rda,
+	  data/jv73.rda, data/kcponds.rda, data/mafragh.rda,
+	  data/sarcelles.rda, data/t3012.rda, data/tintoodiel.rda,
+	  data/vegtf.rda, data/zealand.rda, man/cailliez.Rd,
+	  man/capitales.Rd, man/lingoes.Rd, man/s.logo.Rd: Correct a small
+	  bug in data files and update the help files to pass R CMD check
+
+2013-09-19 11:39  sdray
+
+	* data/atlas.rda, data/atya.rda, data/avijons.rda, data/buech.rda,
+	  data/butterfly.rda, data/capitales.rda, data/elec88.rda,
+	  data/ggtortoises.rda, data/irishdata.rda, data/julliot.rda,
+	  data/jv73.rda, data/kcponds.rda, data/mafragh.rda,
+	  data/sarcelles.rda, data/t3012.rda, data/tintoodiel.rda,
+	  data/vegtf.rda, data/zealand.rda: Add Spatial/nb objects in data
+	  files to prepare the future deprecation of area/neig/contour
+	  objects. Moreover, spatial information in data sets 't3012',
+	  'elec88' and 'capitales' has been updated (coordinate system,
+	  city names, etc).
+
+2013-09-17 15:08  sdray
+
+	* R/scalewt.R: Correct a small bug in scalewt
+
+2013-07-23 22:24  sdray
+
+	* R/plot.4thcorner.R, man/fourthcorner.Rd: Add colors in
+	  fourthcorner plots
+
+2013-05-28 08:10  sdray
+
+	* R/scalewt.R: correct a small bug in scalewt when scale = FALSE
+
+2013-05-07 21:45  sdray
+
+	* R/combine.4thcorner.R, R/fourthcorner.R, R/fourthcorner.rlq.R,
+	  R/fourthcorner2.R, R/p.adjust.4thcorner.R, R/plot.4thcorner.R,
+	  R/print.4thcorner.R, R/summary.4thcorner.R, R/table.value.R,
+	  man/combine.4thcorner.Rd, man/fourthcorner.Rd, man/rlq.Rd,
+	  src/fourthcorner.c: Complete reimplementation of the outputs of
+	  fourthcorner functions. Now they return krandtest/randtest
+	  objects and adjustments for multiple tests can be used.
+	  Experimental fourthcorner.rlq
+
+2013-05-07 19:51  sdray
+
+	* data/aravo.rda, man/aravo.Rd: New dataset: aravo
+
+2013-05-03 16:01  sdray
+
+	* R/scatterutil.R: New argument 'bg' for scatterutil.base function
+
+2013-04-30 21:07  sdray
+
+	* R/randtest-internal.R, R/randtest.coinertia.R, R/randtest.rlq.R,
+	  R/rlq.R, man/rlq.Rd, src/adesub.c, src/adesub.h, src/testrlq.c,
+	  src/tests.c: Use the new 'dudi.type' function. New 'modeltype'
+	  argument for randtest.rlq. New function 'combine.randtest.rlq'.
+
+2013-04-29 15:55  sdray
+
+	* R/krandtest.R, man/krandtest.Rd: Update the doc of krandtest
+
+2013-04-29 15:29  sdray
+
+	* R/dudi.acm.R: Use the new fac2disj utility function
+
+2013-04-29 15:28  sdray
+
+	* R/dudi.acm.R, R/dudi.hillsmith.R, R/dudi.mix.R, R/fourthcorner.R,
+	  R/fourthcorner2.R, R/rlq.R, R/s.class.R, R/s.match.class.R,
+	  R/triangle.class.R, man/ade4-internal.Rd: Use the new fac2disj
+	  utility function
+
+2013-04-29 13:14  sdray
+
+	* R/krandtest.R: krandtest can now handle adjustments for multiple
+	  testing
+
+2013-04-26 15:31  sdray
+
+	* R/coinertia.R: Correct a small bug in the choice of the number of
+	  kept axes
+
+2013-04-26 15:26  sdray
+
+	* R/dudi.acm.R, R/utilities.R, man/ade4-internal.Rd,
+	  man/randtest-internal.Rd: New utilities functions
+
+2013-04-26 15:03  sdray
+
+	* R/scalewt.R, man/scalewt.Rd: New functions to compute weighted
+	  mean/var/cov for the levels of a factor
+
+2013-04-26 11:38  sdray
+
+	* R/dpcoa.R: dpcoa now returns
+
 2013-04-05 12:31  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.5-2 ----------

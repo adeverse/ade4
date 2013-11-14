@@ -302,7 +302,9 @@
         # base est une chaîne de charactères, n le nombre qu'on veut
         w <- as.character(1:n)
         max0 <- max(nchar(w))
-        "fun1" <- function(x) while ( nchar(w[x]) < max0) w[x] <<- paste("0",x,sep="")
+        nformat <- paste("%0",max0,"i",sep="")
+        "fun1" <- function(x) w[x] <<- sprintf(nformat,x)
+        # "fun1" <- function(x) while ( nchar(w[x]) < max0) w[x] <<- paste("0",x,sep="")
         lapply(1:n, fun1)
         return(paste(base,w,sep="")) 
     }

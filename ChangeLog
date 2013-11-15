@@ -1,3 +1,13 @@
+2013-11-15 22:41  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.6-1 ----------
+
+2013-11-15 22:43  sdray
+
+	* man/add.scatter.Rd, man/capitales.Rd, man/dist.ktab.Rd,
+	  man/dotchart.phylog.Rd, man/fourthcorner.Rd, man/nipals.Rd,
+	  man/s.match.class.Rd, man/scatter.Rd: Reduce line widths
+
 2013-11-14 12:47  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.6-0 ----------

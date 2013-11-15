@@ -183,11 +183,11 @@
 #######################################################################################
 enum.phylog<-function (phylog, no.over=1000) {
 
-    # Pour chaque phylogénie phylog, il existe un grand nombre de représentations
-    # toutes équivalentes ssociées à la même topologie
-    # Il y en a exactement 2^k pour une phylogénie résolue 
-    # (que des dichotomies), ou k représente le nombre de noeuds
-    # Cette fonction énumère tous les possibles
+    # Pour chaque phylogÃ©nie phylog, il existe un grand nombre de reprÃ©sentations
+    # toutes Ã©quivalentes ssociÃ©es Ã  la mÃªme topologie
+    # Il y en a exactement 2^k pour une phylogÃ©nie rÃ©solue 
+    # (que des dichotomies), ou k reprÃ©sente le nombre de noeuds
+    # Cette fonction Ã©numÃ¨re tous les possibles
     if (!inherits(phylog, "phylog")) stop("Object 'phylog' expected")
     leaves.number<- length(phylog$leaves)
     leaves.names<- names(phylog$leaves)

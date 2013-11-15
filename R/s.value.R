@@ -6,8 +6,8 @@
     pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE) 
 {
     # modif samedi, novembre 29, 2003 at 08:43 le coefficient de taille
-    # est rapporté aux bornes utilisateurs pour reproduire les mêmes
-    # valeurs sur plusieurs fenêtres
+    # est rapportÃ© aux bornes utilisateurs pour reproduire les mÃªmes
+    # valeurs sur plusieurs fenÃªtres
     dfxy <- data.frame(dfxy)
     if (length(z) != nrow(dfxy)) 
         stop(paste("Non equal row numbers", nrow(dfxy), length(z)))

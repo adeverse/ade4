@@ -4,8 +4,8 @@
     nblo <- length(X)
     if (!all(unlist(lapply(X, is.data.frame)))) 
         stop("a component of X is not a data.frame")
-    # vérification que chaque tableau de la liste a les 
-    # mêmes dimensions
+    # vÃ©rification que chaque tableau de la liste a les 
+    # mÃªmes dimensions
     blocks <- unlist(lapply(X, ncol))
     if (length(unique(blocks)) != 1) 
         stop("non equal col numbers among array")
@@ -18,8 +18,8 @@
         if (any(r.new != r.n)) 
             stop("non equal row.names among array")
     }
-    # vérification que chaque tableau de la liste a les 
-    # mêmes noms
+    # vÃ©rification que chaque tableau de la liste a les 
+    # mÃªmes noms
     unique.col.names <- names(X[[1]])
     for (i in 1:nblo) {
         c.new <- names(X[[i]])
@@ -27,7 +27,7 @@
             stop
         ("non equal col.names among array")
     }
-    # vérification que chaque tableau de la liste supporte 
+    # vÃ©rification que chaque tableau de la liste supporte 
     # une analyse des correspondances
     for (i in 1:nblo) {
         if (any(X[[i]] < 0)) 

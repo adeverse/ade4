@@ -1,5 +1,5 @@
 "pta" <- function (X, scannf = TRUE, nf = 2) {
-    # 21/08/02 Correction d'un bug suite à message de G. BALENT balent@toulouse.inra.fr
+    # 21/08/02 Correction d'un bug suite Ã  message de G. BALENT balent@toulouse.inra.fr
     if (!inherits(X, "ktab")) 
         stop("object 'ktab' expected")
     auxinames <- ktab.util.names(X)
@@ -160,7 +160,7 @@
     lw <- split(lw, factor(rep(1:length(blocks),blocks)))
     lw <- lapply(lw, function(x) x/sum(x))
     lw <- unlist(lw)    
-    # les lignes d'origine en supplémentaires X
+    # les lignes d'origine en supplÃ©mentaires X
     w <- X$supX%*%as.matrix(atp$l1*atp$lw)
     w <- scalewt(w, lw, center = FALSE, scale = TRUE)
 # Correction des row names - JT 24 Juil 2009
@@ -168,7 +168,7 @@
     w <- as.data.frame(w)
     names(w) <- gsub("RS","sco",names(atp$l1))
     atp$supIX <- w
-    # les lignes d'origine en supplémentaires Y
+    # les lignes d'origine en supplÃ©mentaires Y
     w <- X$supY%*%as.matrix(atp$c1*atp$cw)
     w <- scalewt(w, lw, center = FALSE, scale = TRUE)
 # Correction des row names - JT 24 Juil 2009

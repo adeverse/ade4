@@ -36,7 +36,7 @@
     blo <- rep(nligY,ntab)
     res$blo <- blo
     ktab.util.addfactor(res) <- list(blo, length(res$lw))
-#### Enregistrement des tableaux de départ
+#### Enregistrement des tableaux de dÃ©part
     res$supX <- KTX[[1]]
     res$supY <- KTY[[1]]
     for (i in 2:ntab) {

@@ -245,7 +245,7 @@
     if (any(label == ""))
         return(invisible())
     # modif mercredi, juillet 2, 2003 at 17:26
-    # pour les cas où le centre n'est pas l'origine
+    # pour les cas oÃ¹ le centre n'est pas l'origine
     xref <- x - origin[1]
     yref <- y - origin[2]
     for (i in 1:(length(x))) {

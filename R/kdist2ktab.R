@@ -20,7 +20,7 @@
         d <- eig$vectors[, 1:ncomp]
         variances <- eig$values[1:ncomp]
         d <- t(apply(d, 1, "*", sqrt(variances)))
-        # d est une représentation euclidienne
+        # d est une reprÃ©sentation euclidienne
         if (scale) {
             inertot <- sum(variances)
             d <- d/sqrt(inertot)

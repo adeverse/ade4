@@ -1,5 +1,5 @@
 "gridrowcol" <- function (nrow,ncol, cell.names=NULL) { 
-    # Résultats utilisés dans le thèse de Cornillon p. 15 
+    # RÃ©sultats utilisÃ©s dans le thÃ¨se de Cornillon p. 15 
     # corrections de 2 coquilles bas de p. 15
     nrow <- as.integer(nrow)
     if (nrow < 1) stop("nrow nonpositive")
@@ -55,8 +55,8 @@
     orthobasis <- glin(nrow)%x%glin(ncol)
     
     # ce paragrahe calcule les valeurs de xtEx pour les vecteurs de orthobasis
-    # et permet de vérifier qu'il s'agit bien des vecteurs propres
-    # et que les valeurs propres sont bien celles qui sont calculées
+    # et permet de vÃ©rifier qu'il s'agit bien des vecteurs propres
+    # et que les valeurs propres sont bien celles qui sont calculÃ©es
     # d0=neig2mat(d0)
     # d1=apply(d0,1,sum)
     # d0=diag(d1)-d0
@@ -85,7 +85,7 @@
     val <- val[ord]
     names(orthobasis) = paste("S",1:(ncell-1),sep="")
     row.names(orthobasis) = row.names(res$xy)
-    # Les valeurs sont calculées à partir des valeurs propres de l'opérateur de lissage
+    # Les valeurs sont calculÃ©es Ã  partir des valeurs propres de l'opÃ©rateur de lissage
     # Ce sont des valeurs de l'indice de Moran xtFx/v(x) v en 1/n
     # print(unlist(lapply(orthobasis,function(x) sum(x*x*pvoisi))))
     attr(orthobasis,"values") <- val
@@ -93,7 +93,7 @@
     attr(orthobasis,"call") <- match.call()
     attr(orthobasis,"class") <- c("orthobasis","data.frame")
     res$orthobasis <- orthobasis
-    # ces ordres vérifient qu'on a bien trouvé les indices de Moran
+    # ces ordres vÃ©rifient qu'on a bien trouvÃ© les indices de Moran
     # d0 = neig2mat(d0)
     # d0 = d0/sum(d0) # Moran type W
     # moran <- unlist(lapply(orthobasis,function(x) sum(t(d0*x)*x)))

@@ -19,16 +19,16 @@
         if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
         if (length(w0)==1) w0 <- (1:n)[-w0]
         else if (length(w0)>1) {
-            # on ajoute le vecteur dérivé de 1n
+            # on ajoute le vecteur dÃ©rivÃ© de 1n
             w <- cbind(rep(1,n),eig$vectors[,w0])
             # on orthonormalise l'ensemble
             w <- qr.Q(qr(w))
-            # on met les valeurs propres à 0
+            # on met les valeurs propres Ã  0
             eig$values[w0] <- 0
-            # on remplace les vecteurs du noyau par une base orthonormée contenant
-            # en première position le parasite
+            # on remplace les vecteurs du noyau par une base orthonormÃ©e contenant
+            # en premiÃ¨re position le parasite
             eig$vectors[,w0] <- w[,-ncol(w)]
-            # on enlève la position du parasite
+            # on enlÃ¨ve la position du parasite
             w0 <- (1:n)[-w0[1]]
         }
         w0=rev(w0)
@@ -81,9 +81,9 @@
         if (posinega <0) stop ("Non convenient value in 'posinega'")
     }
 
-    # préparation d'un graphique à 6 fenêtres
+    # prÃ©paration d'un graphique Ã  6 fenÃªtres
     # 1 pgram
-    # 2 pgram cumulé
+    # 2 pgram cumulÃ©
     # 3-6 Tests de randomisation
     def.par <- par(no.readonly = TRUE)
     on.exit(par(def.par))

@@ -1,8 +1,8 @@
-# kdist #                création jeudi, avril 3, 2003 at 13:57
-# as.data.frame.kdist #  création jeudi, avril 3, 2003 at 13:57
-# print.kdist #          création jeudi, avril 3, 2003 at 13:57
-# [.kdist #              création jeudi, avril 3, 2003 at 13:57
-# c.kdist #              création jeudi, avril 3, 2003 at 13:57
+# kdist #                crÃ©ation jeudi, avril 3, 2003 at 13:57
+# as.data.frame.kdist #  crÃ©ation jeudi, avril 3, 2003 at 13:57
+# print.kdist #          crÃ©ation jeudi, avril 3, 2003 at 13:57
+# [.kdist #              crÃ©ation jeudi, avril 3, 2003 at 13:57
+# c.kdist #              crÃ©ation jeudi, avril 3, 2003 at 13:57
 #################### kdist #################################
 "kdist" <- function (..., epsi = 1e-07, upper=FALSE) {
     is.dist <- function(x) {

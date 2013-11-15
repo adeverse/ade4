@@ -16,7 +16,7 @@
     coosup <- as.matrix(Xsup) %*% as.matrix(x$c1)
     coosup <- data.frame(coosup, row.names = row.names(Xsup))
     names(coosup) <- names(x$li)
-    # bug 25/11/2004 On reproduisait bien les coordonnées supplémentaires
+    # bug 25/11/2004 On reproduisait bien les coordonnÃ©es supplÃ©mentaires
     # mais pas les valeurs du tableau, donc pas de transferts possibles en inter-intra
     # voir fiche QR8
     cwsup <- x$cw
@@ -30,7 +30,7 @@
 
 "suprow.dudi" <- function (x, Xsup, ...) {
     # modif pour Culhane, Aedin" <a.culhane@ucc.ie> 
-    # suprow renvoie une liste à deux éléments tabsup et lisup
+    # suprow renvoie une liste Ã  deux Ã©lÃ©ments tabsup et lisup
     Xsup <- data.frame(Xsup)
     if (!inherits(x, "dudi")) 
         stop("Object of class 'dudi' expected")

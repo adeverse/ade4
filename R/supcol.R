@@ -2,7 +2,7 @@
 
 "supcol.coa" <- function (x, Xsup, ...) {
     # modif pour Culhane, Aedin" <a.culhane@ucc.ie> 
-    # supcol renvoie une liste à deux éléments tabsup et cosup
+    # supcol renvoie une liste Ã  deux Ã©lÃ©ments tabsup et cosup
     Xsup <- data.frame(Xsup)
     if (!inherits(x, "dudi")) 
         stop("Object of class 'dudi' expected")

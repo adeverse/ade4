@@ -16,8 +16,8 @@
     on.exit(par(old.par))
     par(mfrow = mfrow)
     if (prod(mfrow)<nvar) par(ask=TRUE)
-    # modif lundi, décembre 16, 2002 at 16:48 
-    # suite à message d'Alain Guerreau  
+    # modif lundi, dÃ©cembre 16, 2002 at 16:48 
+    # suite Ã  message d'Alain Guerreau  
     for (i in 1:(nvar)) s.class(x$li, oritab[, i], xax=xax, yax=yax, clabel = 1.5, 
         sub = names(oritab)[i], csub = csub, possub = possub, 
         cgrid = 0, cstar = 0, ...)

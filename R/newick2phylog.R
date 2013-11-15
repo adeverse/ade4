@@ -1,20 +1,20 @@
 "newick2phylog" <- function (x.tre, add.tools = TRUE, call =match.call()) {
     complete <- function(x.tre) {
-        # Si la chaîne est en plusieurs morceaux elle est rassemblée
+        # Si la chaÃ®ne est en plusieurs morceaux elle est rassemblÃ©e
         if (length(x.tre) > 1) {
             w <- ""
             for (i in 1:length(x.tre)) w <- paste(w, x.tre[i], 
                 sep = "")
             x.tre <- w
         }
-        # Si les parenthèses gauches et droites ont des effectifs différents -> out
+        # Si les parenthÃ¨ses gauches et droites ont des effectifs diffÃ©rents -> out
         ndroite <- nchar(gsub("[^)]","",x.tre))
         ngauche <- nchar(gsub("[^(]","",x.tre))
         if (ndroite !=ngauche) stop (paste (ngauche,"( versus",ndroite,")"))
         # on doit trouver un ;
         if (regexpr(";", x.tre) == -1) 
             stop("';' not found")
-        # Tous les commentaires entre [] sont supprimés
+        # Tous les commentaires entre [] sont supprimÃ©s
         i <- 0
         kint <- 0
         kext <- 0
@@ -28,7 +28,7 @@
         while (!arret) {
             i <- i + 1
                         
-            # examen de la chaîne par couple de charactères
+            # examen de la chaÃ®ne par couple de charactÃ¨res
             if (substr(x.tre, i, i) == ";") 
                 arret <- TRUE
             # (, c'est une feuille sans label
@@ -106,14 +106,14 @@
         # extraction de l'information non structurelle
         lab.points <- strsplit(x.tre, "[(),;]")[[1]]
         lab.points <- lab.points[lab.points != ""]
-        # recherche de la présence des longueurs
+        # recherche de la prÃ©sence des longueurs
         no.long <- (regexpr(":", lab.points) == -1)
         # si il n'y avait aucune longueur
         if (all(no.long)) {
             lab.points <- paste(lab.points, ":", c(rep("1", length(no.long) - 
                 1), "0.0"), sep = "")
         }
-        # si il y en vait partout sauf à la racine
+        # si il y en vait partout sauf Ã  la racine
         else if (no.long[length(no.long)]) {
             lab.points[length(lab.points)] <- paste(lab.points[length(lab.points)], 
                 ":0.0", sep = "")
@@ -155,7 +155,7 @@
             new <- w[i]
             x.tre <- sub(leurre[i], new, x.tre)
         }
-        # on les a remis à leur place
+        # on les a remis Ã  leur place
         cat <- rep("", length(w))
         for (i in 1:length(w)) {
             new <- w[i]
@@ -296,26 +296,26 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     nnodes <- length(res$nodes)    # nombre de noeuds
     node.names <- names(res$nodes) # noms des feuilles
     leave.names <- names(res$leaves) # noms des noeuds    
-    dimnodes<-unlist(lapply(res$parts,length)) # nombres de descendants immédiats de chaque noeud
+    dimnodes<-unlist(lapply(res$parts,length)) # nombres de descendants immÃ©diats de chaque noeud
     effnodes <- dimnodes # recevra le nombre de descendants total de chaque noeud
     wnodes <- lgamma(dimnodes+1) 
     # recevra le logarithme du nombre de permuations compatibles
-    # avec la sous-arborescence associée à chaque noeud
+    # avec la sous-arborescence associÃ©e Ã  chaque noeud
     
 
 
-    # les matrices de proximité #
+    # les matrices de proximitÃ© #
     a <- matrix(0, nleaves, nleaves)
     ia <- as.numeric(col(a))
     ja <- as.numeric(row(a))
     a <- cbind(ia, ja)[ia < ja, ]
     # a contient la liste des couples de feuilles
     floc1 <- function(x) {
-        # x est un couple de numéros de deux feuilles i, avec i<j
+        # x est un couple de numÃ©ros de deux feuilles i, avec i<j
         # Cette fonction renvoie 
-        # resw - la distance à la racine du premier ancêtre commun de deux feuilles
+        # resw - la distance Ã  la racine du premier ancÃªtre commun de deux feuilles
         # resa - l'inverse des produits des nombres de descendants des noeuds 
-        # rencontrés sur le plus court chemin entre les deux feuilles
+        # rencontrÃ©s sur le plus court chemin entre les deux feuilles
         c1 <- rev(res$paths[[x[1]]])
         c2 <- rev(res$paths[[x[2]]])
         commonnodes <- c1[c1 %in% c2]
@@ -337,7 +337,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     res$Wmat <- w
     
     #############################
-    # la composante Wmat contient la matrice W des distances racine-premier ancêtre commun
+    # la composante Wmat contient la matrice W des distances racine-premier ancÃªtre commun
     #############################
     
     w <- diag(res$Wmat)
@@ -367,7 +367,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     w <- w + t(w)
     # On rajoute la diagonale pour que A soit bistochastique
     floc2 <- function(x) {
-        # cette fonction renvoie pour une feuille la fréquence des représentations
+        # cette fonction renvoie pour une feuille la frÃ©quence des reprÃ©sentations
         # compatibles qui placent cette feuille tout en haut ou tout en bas
         c1 <- rev(res$paths[[x]])
         c1 <- c1[-1] # premier ancetre, second ancetre, ..., racine
@@ -379,8 +379,8 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     dimnames(w) <- list(leave.names,1:nleaves)
     res$Amat <- w
     #############################
-    # la composante Amat contient la matrice des probabilités
-    # pour une feuille d'être juste au dessus d'une autre
+    # la composante Amat contient la matrice des probabilitÃ©s
+    # pour une feuille d'Ãªtre juste au dessus d'une autre
     # dans l'ensemble des permutations compatibles
     #############################
     # double centrage
@@ -392,16 +392,16 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
     if (length(w0)==1) w0 <- (1:nleaves)[-w0]
     else if (length(w0)>1) {
-        # on ajoute le vecteur dérivé de 1n 
+        # on ajoute le vecteur dÃ©rivÃ© de 1n 
         w <- cbind(rep(1,nleaves),eig$vectors[,w0])
         # on orthonormalise l'ensemble
         w <- qr.Q(qr(w))
-        # on met les valeurs propres à 0
+        # on met les valeurs propres Ã  0
         eig$values[w0] <- 0
-        # on remplace les vecteurs du noyau par une base orthonormée contenant 
-        # en première position le parasite
+        # on remplace les vecteurs du noyau par une base orthonormÃ©e contenant 
+        # en premiÃ¨re position le parasite
         eig$vectors[,w0] <- w[,-ncol(w)]
-        # on enlève la position du parasite
+        # on enlÃ¨ve la position du parasite
         w0 <- (1:nleaves)[-w0[1]]
     }
     rank <- length(w0)
@@ -412,7 +412,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     res$Adim <- sum(res$Avalues>tol)
     #############################
     # la composante Adim contient le nombre de valeurs propres positives
-    # associées à la composante positive de la variance
+    # associÃ©es Ã  la composante positive de la variance
     #############################
     w <- eig$vectors[,w0]*sqrt(nleaves)
     w <- data.frame(w)
@@ -420,14 +420,14 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     names(w) <- paste("A",1:rank,sep="")
     res$Ascores <- w
     #############################
-    # la composante Ascores contient une base orthobormée de l'orthogonal de n
-    # pour la pondération uniforme. Elle définit un phylogramme
+    # la composante Ascores contient une base orthobormÃ©e de l'orthogonal de n
+    # pour la pondÃ©ration uniforme. Elle dÃ©finit un phylogramme
     #############################
 
-    # Complément : la valeur des noeuds #    
+    # ComplÃ©ment : la valeur des noeuds #    
 
     floc3 <- function(k) {
-        # k est un numéro de noeud
+        # k est un numÃ©ro de noeud
         # x est un vecteur comportant un nom de noeud et des noms de descendants 
         # de ce noeud. 
         # A la fin parts wnodes contient le logarithme
@@ -448,17 +448,17 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     ####res$Aparam <- data.frame(x1=I(dimnodes), x2=I(effnodes), x3=I(wnodes), x4=I(typolo.value))
     res$Aparam <- data.frame(ndir=dimnodes, nlea=effnodes, lnperm=I(wnodes))
     #############################
-    # la composante Aparam est un data.frame de paramètre sur l'ensemble des noeuds
+    # la composante Aparam est un data.frame de paramÃ¨tre sur l'ensemble des noeuds
     # x1 = nombre de descendants directs
     # x2 = nombre de feuilles descendantes 
-    # x3 = log du nombre de permutations compatibles avec la phylogénie extraite
+    # x3 = log du nombre de permutations compatibles avec la phylogÃ©nie extraite
     # x4 = 1-rapport du nombre de permutations compatibles sur le nombre de permutations totales
-    # pour la phylogénie extraite dans ce noeud
-    # cet indice vaut 0 si le noeud est final et est maximal à la racine
-    # attention il ne vaut pas 1 mais 1-epsilon quand il est affiché 1
+    # pour la phylogÃ©nie extraite dans ce noeud
+    # cet indice vaut 0 si le noeud est final et est maximal Ã  la racine
+    # attention il ne vaut pas 1 mais 1-epsilon quand il est affichÃ© 1
     #############################
 
-    # Complément : la base B #
+    # ComplÃ©ment : la base B #
     w1 <- matrix(0, nleaves, nnodes)
     ####x1 <- res$Aparam$x2 #le nombre de feuilles descendantes
     x1 <- res$Aparam$lnperm #on trie sur le log des permutations
@@ -478,27 +478,27 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
 
     ######################################
     # on construit une famille d'indicatrices de classes
-    # Une arête de l'arborescence est un lien de descendance
-    # Chaque noeud et chaque feuille (à l'expection de la racine) a un seul ascendant
-    # Il y a n+f-1 arêtes. Le noeud j a m(j) descendants
+    # Une arÃªte de l'arborescence est un lien de descendance
+    # Chaque noeud et chaque feuille (Ã  l'expection de la racine) a un seul ascendant
+    # Il y a n+f-1 arÃªtes. Le noeud j a m(j) descendants
     # Les feuilles n'en n'ont pas. Donc m(1)+m(2)+ ... + m(n) = n+f-1
-    # Il y a n+f-1 arêtes réparties en n blocs.
-    # Il y a donc n+f-1-n=f-1 descendants indicateurs DI quand on enlève une arête descendante par noeud
-    # Rien n'est conservé pour un noeud avec un seul descendant
+    # Il y a n+f-1 arÃªtes rÃ©parties en n blocs.
+    # Il y a donc n+f-1-n=f-1 descendants indicateurs DI quand on enlÃ¨ve une arÃªte descendante par noeud
+    # Rien n'est conservÃ© pour un noeud avec un seul descendant
     # Pour chaque DI on utilise l'indicatrice de la classe des feuilles descendant de cet noeud
     # la composante Bindica contient f-1 indicatrices de classes de feuilles
     # names (w) contient des noms de descendants
-    # nomuni contient les noms de DI pour l'étiquetage final
+    # nomuni contient les noms de DI pour l'Ã©tiquetage final
     ####################################
     funnoe <- function (noeud) {
-        # renvoie pour un noeud une liste dont chaque composante est un descendant immédiat du noeud
-        # caractérisé par la liste des feuilles qui en descendent sous forme de matrice 
-        # d'indicatrices. Le dernier descendant immédiat du noeud est éliminé.
-        x <- res$parts[[noeud]] # les descendants immédiats
+        # renvoie pour un noeud une liste dont chaque composante est un descendant immÃ©diat du noeud
+        # caractÃ©risÃ© par la liste des feuilles qui en descendent sous forme de matrice 
+        # d'indicatrices. Le dernier descendant immÃ©diat du noeud est Ã©liminÃ©.
+        x <- res$parts[[noeud]] # les descendants immÃ©diats
         xval <- x1[x] # le nombre de feuilles descendantes des descendants
-        xval <- rev(sort(xval)) # triée
-        x <- names(xval) # on récupère lesquels
-        x <- x[-length(x)] # on enlève le dernier
+        xval <- rev(sort(xval)) # triÃ©e
+        x <- names(xval) # on rÃ©cupÃ¨re lesquels
+        x <- x[-length(x)] # on enlÃ¨ve le dernier
         if (length(x) ==0) return(NULL)
         if (length(x) ==1) xmat <- matrix(w1[,x],ncol=1,dimnames=list(leave.names,noeud))
         else {
@@ -506,7 +506,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
            dimnames(xmat)[[2]] <- rep(noeud, ncol(xmat))
         }
         return (list(xmat, x))
-        # les noms des colonnes de xmat repète le nom du noeud
+        # les noms des colonnes de xmat repÃ¨te le nom du noeud
         # dans y on a le nom des descendants retenus
     }
 
@@ -526,17 +526,17 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     dimnames(w)[[2]] <- nomuni
     names(nomuni) <- nomuni
     #############################
-    # Les indicatrices sont classées par ordre décroissant
-    # de xtQWQx la variance phylogénétique formelle de l'indicatrice centrée
-    # Bindica n'a qu'une valeur pédagogique et ne sert pas explicitement
-    # mais la procédure est simple
-    # 1) définition des indicatrices, il y en a toujours f-1
-    # 2) rangement par valeur décroissante de la forme quadratique
-    # Ce rangement est conservé dans res$Bindica
-    # les valeurs du critère de rangement dans Bvalues
+    # Les indicatrices sont classÃ©es par ordre dÃ©croissant
+    # de xtQWQx la variance phylogÃ©nÃ©tique formelle de l'indicatrice centrÃ©e
+    # Bindica n'a qu'une valeur pÃ©dagogique et ne sert pas explicitement
+    # mais la procÃ©dure est simple
+    # 1) dÃ©finition des indicatrices, il y en a toujours f-1
+    # 2) rangement par valeur dÃ©croissante de la forme quadratique
+    # Ce rangement est conservÃ© dans res$Bindica
+    # les valeurs du critÃ¨re de rangement dans Bvalues
     # 3) rajout de 1n devant
     # 4) orthonormalisation
-    # on obtient toujours une base orthonormée de l'orthogonal de 1n
+    # on obtient toujours une base orthonormÃ©e de l'orthogonal de 1n
     #############################
 
     w.val <- x1[nomuni]
@@ -544,7 +544,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     w.val <- rev(sort(w.val))
     # lesquels
     w <- w[,names(w.val)]
-    # nomrepet / w sont triés
+    # nomrepet / w sont triÃ©s
     nomrepet <- nomrepet[names(w.val)]    
     res$Bindica <- as.data.frame(w)
     w <- cbind(rep(1,nleaves),w)

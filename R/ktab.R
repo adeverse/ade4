@@ -222,10 +222,10 @@
 
 
 ########### tab.names ########### 
-# fonction générique
+# fonction gÃ©nÃ©rique
 "tab.names" <- function (x) UseMethod("tab.names")
 ########### tab.names.ktab ########### 
-# méthode pour ktab
+# mÃ©thode pour ktab
 "tab.names.ktab" <- function (x) {
     if (!inherits(x, "ktab")) 
         stop("to be used with 'ktab' object")
@@ -234,11 +234,11 @@
     return(cha)
 }
 ########### tab.names<- ########### 
-# fonction générique
+# fonction gÃ©nÃ©rique
 "tab.names<-" <- function (x, value) UseMethod("tab.names<-")
 ########### tab.names<-.ktab ########### 
-# méthode pour ktab
-# les tab.names d'un ktab est le vecteur des noms des k premières composantes
+# mÃ©thode pour ktab
+# les tab.names d'un ktab est le vecteur des noms des k premiÃ¨res composantes
 # ce nombre de tableaux est la longueur de la composante blo
 "tab.names<-.ktab" <- function (x, value) {
     if (!inherits(x, "ktab")) 
@@ -254,12 +254,12 @@
     x
 }
 ########### ktab.util.names ###########
-# utilitaire qui récupère dans un ktab
-# une liste de 3 éléments
+# utilitaire qui rÃ©cupÃ¨re dans un ktab
+# une liste de 3 Ã©lÃ©ments
 # les noms des lignes "." les noms des tableaux
 # les noms des colonnes sans duplicats
 # les noms des tableaux "." 1234
-# pour donner des étiquettes aux TL, TC et T4 dans les graphiques
+# pour donner des Ã©tiquettes aux TL, TC et T4 dans les graphiques
 "ktab.util.names" <- function (x) {
     w <- row.names(x)
     w1 <- paste(w, as.character(x$TL[, 1]), sep = ".")
@@ -274,12 +274,12 @@
 }
 
 ########### ktab.util.addfactor<- ########### 
-# utilitaire utilisé dans les ktab
+# utilitaire utilisÃ© dans les ktab
 # ajoute les composantes TL TC et T4
-# x est un ktab presque achevé
+# x est un ktab presque achevÃ©
 # value est une liste contenant le vecteur des blocs de colonnes
 # et le nombre de lignes
-# on récupère avec le nombre de tableaux, le nombre de variables par tableaux
+# on rÃ©cupÃ¨re avec le nombre de tableaux, le nombre de variables par tableaux
 # et le nombre de lignes en commun
 "ktab.util.addfactor<-" <- function (x, value) {
     blocks <- value[[1]]

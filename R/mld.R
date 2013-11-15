@@ -1,7 +1,7 @@
 "mld"<- function (x, orthobas, level, na.action = c("fail", "mean"), plot=TRUE, dfxy = NULL, phylog = NULL,  ...) 
 {
 
-# on fait les vérifications sur x
+# on fait les vÃ©rifications sur x
 if (!is.numeric(x)) 
         stop("x is not numeric")
 nobs <- length(x)
@@ -13,7 +13,7 @@ if (any(is.na(x))) {
         else stop("unknown method for 'na.action'")
     }
 
-# on fait les vérifications sur orthobas (class, dimension, orthogonalité, orthonormalité)
+# on fait les vÃ©rifications sur orthobas (class, dimension, orthogonalitÃ©, orthonormalitÃ©)
 if (!inherits(orthobas, "data.frame")) stop ("'orthobas' is not a data.frame")
     if (nrow(orthobas) != nobs) stop ("non convenient dimensions")
     if (ncol(orthobas) != (nobs-1)) stop (paste("'orthobas' has",ncol(orthobas),"columns, expected:",nobs-1))
@@ -28,16 +28,16 @@ w <- t(vecpro/nobs)%*%vecpro
 diag(w) <- 0
     if ( any( abs(as.numeric(w))>1e-07) ) stop("'orthobas' is not orthogonal for uniform weighting")
 
-# on calcule les différents vecteurs associés à la décomposition orthonormale de la variable
+# on calcule les diffÃ©rents vecteurs associÃ©s Ã  la dÃ©composition orthonormale de la variable
 
-    # si x n'est pas centrée, on la centre pour la pondération uniforme
+    # si x n'est pas centrÃ©e, on la centre pour la pondÃ©ration uniforme
     if (mean(x)!=0)
             x <- x-mean(x)
     
-    # on calcul les coefficients de corrélation entre la variable et les vecteurs de la base
+    # on calcul les coefficients de corrÃ©lation entre la variable et les vecteurs de la base
     coeff <- t(vecpro/nobs)%*%as.matrix(x)
     
-    # on calcul les vecteurs associés à la décomposition et au facteur level
+    # on calcul les vecteurs associÃ©s Ã  la dÃ©composition et au facteur level
     if (!is.factor(level))
             stop("'level' is not a factor")
             if (length(level) != (nobs-1)) 
@@ -52,11 +52,11 @@ diag(w) <- 0
     names(res) <- paste("level", levels(level), sep=" ")
 
  
-# on fait les sorties graphiques si elles sont demandées: c'est pas parfait mais c'est pour donner une idée
+# on fait les sorties graphiques si elles sont demandÃ©es: c'est pas parfait mais c'est pour donner une idÃ©e
 if (plot==TRUE){
-    # rajouter les données circulaires
+    # rajouter les donnÃ©es circulaires
     if (is.ts(x)){
-        # pour les séries temporelles
+        # pour les sÃ©ries temporelles
         u <- attributes(x)$tsp
         tab <- ts(res, start = u[1], end = u[2], frequency = u[3])
         tab <- ts.union(x, tab)
@@ -73,7 +73,7 @@ if (plot==TRUE){
         
     if (is.vector(x)){
         if (!is.null(dfxy)){
-            # pour les données 2 D
+            # pour les donnÃ©es 2 D
             opar <- par(mfrow = par("mfrow"), mar = par("mar"))
             on.exit(par(opar))
             mfrow <- n2mfrow(nlevels(level)+1)
@@ -90,7 +90,7 @@ if (plot==TRUE){
             }
         else {
             if (!is.null(phylog)){
-                # pour les données associées à une phylogénie
+                # pour les donnÃ©es associÃ©es Ã  une phylogÃ©nie
                 tab <- cbind.data.frame(x, res)
                 row.names(tab) <- names(phylog$leaves)
                 table.phylog(tab, phylog, ...)                
@@ -120,14 +120,14 @@ return(res)
 #############################################################################
 haar2level <- function(x){
 # cette fonction calcul le facteur level pour lequel l'analyse mld correspond
-# à l'analyse mra de la library(waveslim)
+# Ã  l'analyse mra de la library(waveslim)
 
-# on vérifie que x=2**a
+# on vÃ©rifie que x=2**a
 a <- log(length(x))/log(2)
 b <- floor(a)
 if ((a-b)^2>1e-10) stop ("Haar is not a power of 2")
 
-#on construit les J niveaux de décomposition
+#on construit les J niveaux de dÃ©composition
 u <- LETTERS[1:a]
 v <- rep(2,a)**(0:(a-1))
 level <- rep(u, v)

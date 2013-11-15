@@ -85,7 +85,7 @@
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     on.exit(par(opar))
     
-    # calcul des paramètres de position et dispersion
+    # calcul des paramÃ¨tres de position et dispersion
     res <- t( matrix(unlist(lapply(1:nrowprof,calcul.rowprof)),nrow=5))
     res <- as.data.frame(res)
     names(res) <- c("mx","my","vx","cxy","vy")

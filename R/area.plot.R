@@ -11,11 +11,11 @@
     label = NULL, clabel = 0, ...) 
 {
     # modif vendredi, mars 28, 2003 at 07:35 ajout de l'argument center
-    # doit contenir les centres des polygones (autant de coordonnées que de classes dans area[,1])
-    # si il est nul et utilisé il est calculé comme centre de gravité des sommets du polygones
+    # doit contenir les centres des polygones (autant de coordonnÃ©es que de classes dans area[,1])
+    # si il est nul et utilisÃ© il est calculÃ© comme centre de gravitÃ© des sommets du polygones
     # avec area.util.xy(x)
-    # si il est non nul, doit être de dimensions (nombre de niveaux de x[,1] , 2) et
-    # contenir les coordonnées dans l'ordre de unique(x[,1])
+    # si il est non nul, doit Ãªtre de dimensions (nombre de niveaux de x[,1] , 2) et
+    # contenir les coordonnÃ©es dans l'ordre de unique(x[,1])
     x.area <- x
     if(dev.cur() == 1) plot.new()
     opar <- par(mar = par("mar")) #, new = par("new")
@@ -165,7 +165,7 @@
     class(res) <- "polylist"
     attr(res, "region.id") <- label.poly
     attr(res, "region.rect") <- r0
-    # message de Stéphane Dray du 06/02/2004
+    # message de StÃ©phane Dray du 06/02/2004
     attr(res,"maplim") <- list(x=range(x1),y=range(x2))
     return(res)
 } 
@@ -190,7 +190,7 @@
 }
 
 "area2link" <- function(area) {
-    # création vendredi, mars 28, 2003 at 14:49
+    # crÃ©ation vendredi, mars 28, 2003 at 14:49
     if (!is.factor(area[, 1])) 
         stop("Factor expected in area[,1]")
     fac <- area[, 1]
@@ -199,8 +199,8 @@
     res <- matrix(0,npoly,npoly)
     dimnames(res) <- list(as.character(levpoly),as.character(levpoly))
     fun1 <- function(niv) {
-        # X est un n-2 système de coordonnées xy
-        # On vérifie que c'est une boucle (sommaire)
+        # X est un n-2 systÃ¨me de coordonnÃ©es xy
+        # On vÃ©rifie que c'est une boucle (sommaire)
         X <- area[fac == niv, 2:3]
         n <- nrow(X)
         if (any(X[1,]!=X[n,])) X <- rbind(X,X[1,])
@@ -209,7 +209,7 @@
         w <- c(w,paste(X[2:(n),1],X[2:(n),2],X[1:(n-1),1],X[1:(n-1),2],sep="/"))
     }
     w <- lapply(levpoly,fun1)
-    # w est une liste de vecteurs qui donnent les arêtes des polygones en charactères
+    # w est une liste de vecteurs qui donnent les arÃªtes des polygones en charactÃ¨res
     # du type x1/y1/x2/y2
     fun2 <- function (cha) {
         w <- as.numeric(strsplit(cha,"/")[[1]])

@@ -26,7 +26,7 @@
     }
 
     df <- df[names(phylog$leaves), ]
-    # df données phylog structure
+    # df donnÃ©es phylog structure
     frame()
     labels.row <- paste(" ", labels.row, " ", sep = "")
     labels.col <- paste(" ", labels.col, " ", sep = "")
@@ -43,7 +43,7 @@
     par(mai = c(0.1, 0.1, stry, strx))
     #nc <- ncol(df)
     #x <- 1/2/nc+(0:(nc-1))/nc
-    # modif du 06/01/2005 le oaramètre x avait été oublié
+    # modif du 06/01/2005 le oaramÃ¨tre x avait Ã©tÃ© oubliÃ©
     intermin <- abs(min(diff(sort(x))))
     intertot <- abs(max(x)-min(x))
     x <- (x-min(x)+intermin)/(intertot+2*intermin)

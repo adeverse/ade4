@@ -1,13 +1,13 @@
 "gearymoran" <- function (bilis, X, nrepet=999,alter=c("greater", "less", "two-sided")) {
     alter <- match.arg(alter)
-    ## bilis doit être une matrice
+    ## bilis doit Ãªtre une matrice
     bilis <- as.matrix(bilis)
     nobs <- ncol(bilis)
-    # bilis doit être carrée
+    # bilis doit Ãªtre carrÃ©e
     if (nrow(bilis) != nobs) stop ("'bilis' is not squared")
-    # bilis doit être symétrique
+    # bilis doit Ãªtre symÃ©trique
     bilis <- (bilis + t(bilis))/2
-    # bilis doit être à termes positifs (voisinages)
+    # bilis doit Ãªtre Ã  termes positifs (voisinages)
     if (any(bilis<0)) stop ("term <0 found in 'bilis'")
     test.names <- names(X)
     X <- data.matrix(X)

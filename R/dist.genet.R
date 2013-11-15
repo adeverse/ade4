@@ -40,7 +40,7 @@
         X.marge <- X.marge/sum(X.marge)
         df[, k1:k2] <- X
     }
-    # df contient un tableau de fréquence
+    # df contient un tableau de frÃ©quence
     df <- as.matrix(df)    
     if (method == 1) {
         d <- df%*%t(df)

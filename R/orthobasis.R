@@ -40,13 +40,13 @@ orthobasis.mat <- function(mat, cnw=TRUE) {
     }
     mat <- mat/sum(mat)
     wt <- rep ((1/nlig),nlig) 
-    # calculs extensibles à une pondération quelconque
+    # calculs extensibles Ã  une pondÃ©ration quelconque
     wt <- wt/sum(wt)
-    # si mat wt est la pondération marginale associée à mat 
+    # si mat wt est la pondÃ©ration marginale associÃ©e Ã  mat 
     # tot = sum(mat)
     # mat = mat-matrix(wt,nlig,nlig,byrow=TRUE)*wt*tot
     # encore plus particulier mat = mat-1/nlig/nlig
-    # en général les précédents sont des cas particuliers    
+    # en gÃ©nÃ©ral les prÃ©cÃ©dents sont des cas particuliers    
     U <- matrix(1,nlig,nlig)
     U  <- diag(1,nlig)-U*wt
     mat <- U%*%mat%*%t(U)
@@ -60,16 +60,16 @@ orthobasis.mat <- function(mat, cnw=TRUE) {
     if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
     else if (length(w0)==1) w0 <- (1:nlig)[-w0]
     else if (length(w0)>1) {
-        # on ajoute le vecteur dérivé de 1n 
+        # on ajoute le vecteur dÃ©rivÃ© de 1n 
         w <- cbind(wt,eig$vectors[,w0])
         # on orthonormalise l'ensemble
         w <- qr.Q(qr(w))
-        # on met les valeurs propres à 0
+        # on met les valeurs propres Ã  0
         eig$values[w0] <- 0
-        # on remplace les vecteurs du noyau par une base orthonormée contenant 
-        # en première position le parasite
+        # on remplace les vecteurs du noyau par une base orthonormÃ©e contenant 
+        # en premiÃ¨re position le parasite
         eig$vectors[,w0] <- w[,-ncol(w)]
-        # on enlève la position du parasite
+        # on enlÃ¨ve la position du parasite
         w0 <- (1:nlig)[-w0[1]]
     }
     mat <- eig$vectors[,w0]/wt
@@ -84,13 +84,13 @@ orthobasis.mat <- function(mat, cnw=TRUE) {
 }
 
 "orthobasis.haar" <- function(n) {
-# on définit deux fonctions :
+# on dÃ©finit deux fonctions :
     appel = match.call()
     a <- log(n)/log(2)
     b <- floor(a)
     if ((a-b)^2>1e-10) stop ("Haar is not a power of 2")
-# la première est écrite par Daniel et elle donne la démonstration (par analogie avec la fonction qui construit la base Bscores)
-# que la base Bscores est exactement la base de Haar quand on prend une phylogénie régulière résolue.
+# la premiÃ¨re est Ã©crite par Daniel et elle donne la dÃ©monstration (par analogie avec la fonction qui construit la base Bscores)
+# que la base Bscores est exactement la base de Haar quand on prend une phylogÃ©nie rÃ©guliÃ¨re rÃ©solue.
 "haar.basis.1" <- function (n) {
     pari <- matrix(c(1,n),1)
     "div2" <- function (mat) {
@@ -123,14 +123,14 @@ orthobasis.mat <- function(mat, cnw=TRUE) {
 return(res)
 }
 
-# la seconde exploite les potentialités de la librairie waveslim, en remarquant qu'il existe un lien étroit entre la définition des filtres et la définition
-# des bases. Cette stratégie permettra à l'avenir de définir les bases associées à d'autres famille de fonctions.
+# la seconde exploite les potentialitÃ©s de la librairie waveslim, en remarquant qu'il existe un lien Ã©troit entre la dÃ©finition des filtres et la dÃ©finition
+# des bases. Cette stratÃ©gie permettra Ã  l'avenir de dÃ©finir les bases associÃ©es Ã  d'autres famille de fonctions.
 "haar.basis.2" <-  function (n) {
     if (!require(waveslim)) stop ("Please install waveslim")
     J <- a    #nombre de niveau
     res <- matrix(0, nrow = n,ncol = n-1)
     filter.seq <- "H" #filtre correspondant au niveau 1
-    h <- waveslim::wavelet.filter(wf.name = "haar", filter.seq = filter.seq)   #paramètre du filtre au niveau 1
+    h <- waveslim::wavelet.filter(wf.name = "haar", filter.seq = filter.seq)   #paramÃ¨tre du filtre au niveau 1
     k <- 0
         for(i in 1:J){
         z <- rep(h,2**(J-i))
@@ -148,7 +148,7 @@ return(res)
 return(res)
 }
     
-# suivant que n est grand (n > 257) ou non, on choisit l'une des deux stratégies :
+# suivant que n est grand (n > 257) ou non, on choisit l'une des deux stratÃ©gies :
     if (n < 257)
         res <- haar.basis.1(n)
         else
@@ -186,10 +186,10 @@ return(res)
     attr(res,"call") <- appel
     attr(res,"class") <- c("orthobasis","data.frame")
     
-    # vérification locale. Ce paragraphe vérifie que les vecteurs et les valeurs
-    # proposée par Cornillon p. 12 sont bien les vecteurs propres de l'opérateur de voisinage
-    # rangée dans la solution analytique par variance locale croissante
-    # l'article de Méot est erroné et a donné le graphe circulaire pour le graphe linéaire
+    # vÃ©rification locale. Ce paragraphe vÃ©rifie que les vecteurs et les valeurs
+    # proposÃ©e par Cornillon p. 12 sont bien les vecteurs propres de l'opÃ©rateur de voisinage
+    # rangÃ©e dans la solution analytique par variance locale croissante
+    # l'article de MÃ©ot est erronÃ© et a donnÃ© le graphe circulaire pour le graphe linÃ©aire
     # d0=neig2mat(neig(n.lin=n))
     # d0 = d0/n
     # d1=apply(d0,1,sum)
@@ -206,7 +206,7 @@ return(res)
     # abline(lm(attr(res,"values")~lambda))
     # print(coefficients(lm(attr(res,"values")~lambda)))
     
-    # vérification que les valeurs dérivées des valeurs propres sont exactement des indices de Moran
+    # vÃ©rification que les valeurs dÃ©rivÃ©es des valeurs propres sont exactement des indices de Moran
     # d = neig2mat(neig(n.lin=n))
     # d = d/sum(d) # Moran type W
     # moran <- unlist(lapply(res,function(x) sum(t(d*x)*x)))
@@ -261,7 +261,7 @@ return(res)
     attr(res,"weights") <- rep(1/n,n)
     attr(res,"call") <- appel
     attr(res,"class") <- c("orthobasis","data.frame")        
-    # vérification qu'on a exactement des indices de Moran à partie des valeurs propres
+    # vÃ©rification qu'on a exactement des indices de Moran Ã  partie des valeurs propres
     # d = neig2mat(neig(n.cir=n))
     # d = d/sum(d) # Moran type W
     # moran <- unlist(lapply(res,function(x) sum(t(d*x)*x)))
@@ -321,17 +321,17 @@ return(res)
     if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
     else if (length(w0)==1) w0 <- (1:n)[-w0]
     else if (length(w0)>1) {
-        # on ajoute le vecteur dérivé de 1n 
+        # on ajoute le vecteur dÃ©rivÃ© de 1n 
         wt <- rep(1,n)
         w <- cbind(wt,eig$vectors[,w0])
         # on orthonormalise l'ensemble
         w <- qr.Q(qr(w))
-        # on met les valeurs propres à 0
+        # on met les valeurs propres Ã  0
         eig$values[w0] <- 0
-        # on remplace les vecteurs du noyau par une base orthonormée contenant 
-        # en première position le parasite
+        # on remplace les vecteurs du noyau par une base orthonormÃ©e contenant 
+        # en premiÃ¨re position le parasite
         eig$vectors[,w0] <- w[,-ncol(w)]
-        # on enlève la position du parasite
+        # on enlÃ¨ve la position du parasite
         w0 <- (1:n)[-w0[1]]
     }
     w0 <- rev(w0)

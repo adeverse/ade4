@@ -3,9 +3,9 @@
     nind <- nrow(X)
     ####################################################################################
     "codred" <- function(base, n) {
-        # fonction qui fait des codes de noms ordonnés par ordre
-        # alphabétique de longueur constante le plus simples possibles
-        # base est une chaîne de charactères, n le nombre qu'on veut
+        # fonction qui fait des codes de noms ordonnÃ©s par ordre
+        # alphabÃ©tique de longueur constante le plus simples possibles
+        # base est une chaÃ®ne de charactÃ¨res, n le nombre qu'on veut
         w <- as.character(1:n)
         max0 <- max(nchar(w))
         "fun1" <- function(x) while ( nchar(w[x]) < max0) w[x] <<- paste("0",w[x],sep="")
@@ -20,7 +20,7 @@
     names(loc.names) <- loc.codes
     names(X) <- loc.codes
     "cha6car" <- function(cha) {
-        # pour compléter les chaînes de caratères par des zéros devant
+        # pour complÃ©ter les chaÃ®nes de caratÃ¨res par des zÃ©ros devant
         n0 <- nchar(cha)
         if (n0 == 6) return (cha)
         if (n0 >6) stop ("More than 6 characters")
@@ -29,8 +29,8 @@
      }
      X <- apply(X,c(1,2),cha6car)
      
-     # Toutes les chaînes sont de 6 charactères suppose que le codage est complet
-     # ou qu'il ne manque des zéros qu'au début
+     # Toutes les chaÃ®nes sont de 6 charactÃ¨res suppose que le codage est complet
+     # ou qu'il ne manque des zÃ©ros qu'au dÃ©but
      "enumallel" <- function (x) {
         w <- as.character(x)
         w1 <- substr(w,1,3)
@@ -39,18 +39,18 @@
         return(w3)
     }
     all.util <- apply(X,2,enumallel)
-    # all.util est une liste dont les composantes sont les noms des allèles ordonnés
-    # peut comprendre 000 pour un non typé
-    # on conserve le nombre d'individus typés par locus dans vec1
+    # all.util est une liste dont les composantes sont les noms des allÃ¨les ordonnÃ©s
+    # peut comprendre 000 pour un non typÃ©
+    # on conserve le nombre d'individus typÃ©s par locus dans vec1
     "compter" <- function(x) {
-    # compte le nombre d'individus typés par locus
+    # compte le nombre d'individus typÃ©s par locus
         num0 <- x!="000000"
         num0 <- sum(num0)
         return(num0)
     }
     vec1 <- unlist(apply(X,2, compter))
     names(vec1) <- loc.codes
-    # vec1 est le vecteur des effectifs d'individus typés par locus
+    # vec1 est le vecteur des effectifs d'individus typÃ©s par locus
     "polymor" <- function(x) {
         if (any(x=="000")) return(x[x!="000"])
         return(x)
@@ -62,7 +62,7 @@
     }
     vec2  <-  unlist(lapply(all.util, nallel))
     names(vec2) <- names(all.util)
-    # vec2 est le vecteur du nombre d'allèles observés par locus
+    # vec2 est le vecteur du nombre d'allÃ¨les observÃ©s par locus
     
     all.names  <-  unlist(lapply(all.util, polymor))
     # all.names contient les nomds des alleles sans "000"
@@ -74,7 +74,7 @@
     all.codes <- paste(w1,w2,sep="")
     all.names <- paste(rep(loc.names, loc.blocks),all.names,sep=".")
     names(all.names) <- all.codes
-    # all.names est le nouveau nom des allèles
+    # all.names est le nouveau nom des allÃ¨les
     w1 <- as.factor(w1)
     names(w1) <- all.codes
     loc.fac <- w1
@@ -93,16 +93,16 @@
             names(w0) <- all.util[[k]]
             w0[w1[k]] <- w0[w1[k]]+1
             w0[w2[k]] <- w0[w2[k]]+1
-            # ce locus n'a pas de données manquantes
+            # ce locus n'a pas de donnÃ©es manquantes
             if (!missingdata[k]) return(w0)
-            # ce locus a des données manquantes mais pas cet individu
+            # ce locus a des donnÃ©es manquantes mais pas cet individu
             if (w0["000"]==0) return(w0[names(w0)!="000"])
-            #cet individus a deux données manquantes
+            #cet individus a deux donnÃ©es manquantes
             if (w0["000"]==2) {
                 w0 <- rep(NA, length(w0)-1)
                 return(w0)
             }
-            # il doit y avoir une seule donnée manquante
+            # il doit y avoir une seule donnÃ©e manquante
             stop( paste("a1 =",w1[k],"a2 =",w2[k], "Non implemented case"))
         }
         w  <-  as.numeric(unlist(lapply(1:n, funloc1)))
@@ -112,12 +112,12 @@
     ind.all <- data.frame(t(ind.all))
     names(ind.all) <- all.names
     nind <- nrow(ind.all)
-    # ind.all contient un tableau individus - alleles codé 
+    # ind.all contient un tableau individus - alleles codÃ© 
     # ******* pour NA pour les manquants
-    # 010010 pour les hétérozygotes
+    # 010010 pour les hÃ©tÃ©rozygotes
     # 000200 pour les homozygotes
     all.som <- apply(ind.all,2,function(x) sum(na.omit(x)))
-    #all.som contient le nombre d'allèles présents par forme allélique
+    #all.som contient le nombre d'allÃ¨les prÃ©sents par forme allÃ©lique
     names(all.som) = all.names
 
     center <- split(all.som, loc.fac)

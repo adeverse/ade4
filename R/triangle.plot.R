@@ -222,7 +222,7 @@
         maxi <- min3
     ampli <- maxi - mini
     amplim <- max(ampli)
-    # correction d'un bug trouvé par J. Lobry 15/11/2004
+    # correction d'un bug trouvÃ© par J. Lobry 15/11/2004
     if (!all(ampli==amplim)) {
         for (j in 1:3) {
             k <- amplim - ampli[j]
@@ -279,7 +279,7 @@
     C <- c(0, 2/sqrt(6))
     xy <- t(apply(tb, 1, FUN = triangle.posipoint, mini = mini, 
         maxi = maxi))
-    # pour avoir en sortie une matrice des coordonnées
+    # pour avoir en sortie une matrice des coordonnÃ©es
     dimnames(xy) <- list(row.names(ta),c("x","y"))
     return(list(A = A, B = B, C = C, xy = xy, mini = mini, maxi = maxi))
 }

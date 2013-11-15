@@ -3,16 +3,16 @@
     if (!is.factor(pop)) stop("pop is not a factor")
     nind <- length(pop)
     if (nrow(X) != nind) stop ("pop & X have non convenient dimension")
-    # tri des lignes par ordre alphabétique des noms de population
-    # tri par ordre alphabétique des noms de loci
+    # tri des lignes par ordre alphabÃ©tique des noms de population
+    # tri par ordre alphabÃ©tique des noms de loci
     X <- X[order(pop),]
     X <- X[,sort(names(X))]
     pop <- sort(pop) # comme pop[order(pop)]
     ####################################################################################
     "codred" <- function(base, n) {
-        # fonction qui fait des codes de noms ordonnés par ordre
-        # alphabétique de longueur constante le plus simples possibles
-        # base est une chaîne de charactères, n le nombre qu'on veut
+        # fonction qui fait des codes de noms ordonnÃ©s par ordre
+        # alphabÃ©tique de longueur constante le plus simples possibles
+        # base est une chaÃ®ne de charactÃ¨res, n le nombre qu'on veut
         w <- as.character(1:n)
         max0 <- max(nchar(w))
         "fun1" <- function(x) while ( nchar(w[x]) < max0) w[x] <<- paste("0",w[x],sep="")
@@ -40,7 +40,7 @@
     names(loc.names) <- loc.codes
     names(X) <- loc.codes
     "cha6car" <- function(cha) {
-        # pour compléter les chaînes de caratères par des zéros devant
+        # pour complÃ©ter les chaÃ®nes de caratÃ¨res par des zÃ©ros devant
         n0 <- nchar(cha)
         if (n0 == 6) return (cha)
         if (n0 >6) stop ("More than 6 characters")
@@ -49,8 +49,8 @@
      }
      X <- as.data.frame(apply(X,c(1,2),cha6car))
      
-     # Toutes les chaînes sont de 6 charactères suppose que le codage est complet
-     # ou qu'il ne manque des zéros qu'au début
+     # Toutes les chaÃ®nes sont de 6 charactÃ¨res suppose que le codage est complet
+     # ou qu'il ne manque des zÃ©ros qu'au dÃ©but
      "enumallel" <- function (x) {
         w <- as.character(x)
         w1 <- substr(w,1,3)
@@ -59,12 +59,12 @@
         return(w3)
     }
     all.util <- lapply(X,enumallel)
-    # all.util est une liste dont les composantes sont les noms des allèles ordonnés
+    # all.util est une liste dont les composantes sont les noms des allÃ¨les ordonnÃ©s
     # Correction d'un bug mis en evidence par Amalia
     # amalia@mail.imsdd.meb.uni-bonn.de 
     # La liste etait automatiquement une matrice quand le nombre d'allele par locus est constant
-    # peut comprendre 000 pour un non typé
-    # on conserve le nombre d'individus typés par locus et par populations
+    # peut comprendre 000 pour un non typÃ©
+    # on conserve le nombre d'individus typÃ©s par locus et par populations
     "compter" <- function(x) {
         num0 <- x!="000000"
         num0 <- split(num0,pop)
@@ -112,16 +112,16 @@
             names(w0) <- all.util[[k]]
             w0[w1[k]] <- w0[w1[k]]+1
             w0[w2[k]] <- w0[w2[k]]+1
-            # ce locus n'a pas de données manquantes
+            # ce locus n'a pas de donnÃ©es manquantes
             if (!missingdata[k]) return(w0)
-            # ce locus a des données manquantes mais pas cet individu
+            # ce locus a des donnÃ©es manquantes mais pas cet individu
             if (w0["000"]==0) return(w0[names(w0)!="000"])
-            #cet individus a deux données manquantes
+            #cet individus a deux donnÃ©es manquantes
             if (w0["000"]==2) {
                 w0 <- rep(NA, length(w0)-1)
                 return(w0)
             }
-            # il doit y avoir une seule donnée manquante
+            # il doit y avoir une seule donnÃ©e manquante
             stop( paste("a1 =",w1[k],"a2 =",w2[k], "Non implemented case"))
         }
         w  <-  as.numeric(unlist(lapply(1:n, funloc1)))
@@ -132,9 +132,9 @@
     names(ind.all) <- all.codes
     nallels <- length(all.codes)
     
-    # ind.all contient un tableau individus - alleles codé 
+    # ind.all contient un tableau individus - alleles codÃ© 
     # ******* pour NA pour les manquants
-    # 010010 pour les hétérozygotes
+    # 010010 pour les hÃ©tÃ©rozygotes
     # 000200 pour les homozygotes
     ind.all <- split(ind.all, pop)
      "remplacer" <- function (a,b) {
@@ -168,28 +168,28 @@
     pop.all <- data.frame(pop.all)
     names(pop.all) <- all.codes
     row.names(pop.all) <- pop.codes
-    # 1) tableau de fréquences alléliques popualations-lignes
-    # allèles-colonnes indispensable pour la classe genet
+    # 1) tableau de frÃ©quences allÃ©liques popualations-lignes
+    # allÃ¨les-colonnes indispensable pour la classe genet
     res$tab <- pop.all
-    # 2) marge du précédent calculé sur l'ensemble des individus typés par locus
+    # 2) marge du prÃ©cÃ©dent calculÃ© sur l'ensemble des individus typÃ©s par locus
     res$center <- center
-    # 3) noms des populations renumérotées P001 ... P999
+    # 3) noms des populations renumÃ©rotÃ©es P001 ... P999
     # le vecteur contient les noms d'origine
     res$pop.names <- pop.names
-    # 4) noms des allèles recodé L01.1, L01.2, ...
+    # 4) noms des allÃ¨les recodÃ© L01.1, L01.2, ...
     # le vecteurs contient les noms d'origine.
     res$all.names <- all.names
-    # 5) le vecteur du nombre d'allèles par loci
+    # 5) le vecteur du nombre d'allÃ¨les par loci
     res$loc.blocks <- loc.blocks
-    # 6) le facteur répartissant les allèles par loci
+    # 6) le facteur rÃ©partissant les allÃ¨les par loci
     res$loc.fac <- loc.fac
-    # 7) noms des loci renumérotées L01 ... L99
+    # 7) noms des loci renumÃ©rotÃ©es L01 ... L99
     # le vecteur contient les noms d'origine
     res$loc.names <- loc.names
-    # 8) le nombre de gènes qui ont permis les calculs de fréquences
+    # 8) le nombre de gÃ¨nes qui ont permis les calculs de frÃ©quences
     res$pop.loc <- Z
-    # 9) le nombre d'occurences de chaque forme allélique dans chaque population
-    # allèles eln lignes, populations en colonnes
+    # 9) le nombre d'occurences de chaque forme allÃ©lique dans chaque population
+    # allÃ¨les eln lignes, populations en colonnes
     res$all.pop <- all.pop
     #######################################################
     if (complete) {
@@ -205,8 +205,8 @@
         # ind.all <- split(ind.all,pop.red)
         # ind.all <- lapply(ind.all,t)
         # 10) les typages d'individus complets
-        # ind.all est une liste de matrices allèles-individus
-        # ne contenant que les individus complètement typés
+        # ind.all est une liste de matrices allÃ¨les-individus
+        # ne contenant que les individus complÃ¨tement typÃ©s
         # avec le codage 02000 ou 01001
         
         res$comp <- ind.all
@@ -218,12 +218,12 @@
 
 
 "count2genet" <- function (PopAllCount) {
-    # PopAllCount est un data.frame qui contient des dénombrements
+    # PopAllCount est un data.frame qui contient des dÃ©nombrements
      ####################################################################################
     "codred" <- function(base, n) {
-        # fonction qui fait des codes de noms ordonnés par ordre
-        # alphabétique de longueur constante le plus simples possibles
-        # base est une chaîne de charactères, n le nombre qu'on veut
+        # fonction qui fait des codes de noms ordonnÃ©s par ordre
+        # alphabÃ©tique de longueur constante le plus simples possibles
+        # base est une chaÃ®ne de charactÃ¨res, n le nombre qu'on veut
         w <- as.character(1:n)
         max0 <- max(nchar(w))
         "fun1" <- function(x) while ( nchar(w[x]) < max0) w[x] <<- paste("0",x,sep="")
@@ -270,7 +270,7 @@
         w[w==0] <- 1
         x <- x/w
         return(x)
-        # retourne un tableau populations-allèles
+        # retourne un tableau populations-allÃ¨les
     }
     PopAllCount <- lapply(PopAllCount,pourcent)
     tab <- data.frame(provi=rep(1,npop))
@@ -294,12 +294,12 @@
 }
 
 "freq2genet" <- function (PopAllFreq) {
-    # PopAllFreq est un data.frame qui contient des fréquences alléliques
+    # PopAllFreq est un data.frame qui contient des frÃ©quences allÃ©liques
      ####################################################################################
     "codred" <- function(base, n) {
-        # fonction qui fait des codes de noms ordonnés par ordre
-        # alphabétique de longueur constante le plus simples possibles
-        # base est une chaîne de charactères, n le nombre qu'on veut
+        # fonction qui fait des codes de noms ordonnÃ©s par ordre
+        # alphabÃ©tique de longueur constante le plus simples possibles
+        # base est une chaÃ®ne de charactÃ¨res, n le nombre qu'on veut
         w <- as.character(1:n)
         max0 <- max(nchar(w))
         nformat <- paste("%0",max0,"i",sep="")
@@ -350,7 +350,7 @@
         w[w==0] <- 1
         x <- x/w
         return(x)
-        # retourne un tableau populations-allèles
+        # retourne un tableau populations-allÃ¨les
     }
     PopAllFreq <- lapply(PopAllFreq,pourcent)
     tab <- data.frame(provi=rep(1,npop))

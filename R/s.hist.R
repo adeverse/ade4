@@ -5,7 +5,7 @@
     if (cbreaks>=1) cbreaks <- floor(cbreaks)
     else if (cbreaks<0.1) cbreaks <- 2
     else cbreaks <-  1/floor(1/cbreaks)
-    ## tracé du nuage 
+    ## tracÃ© du nuage 
     s.label(dfxy,xax,yax,cgrid=cgrid,...)
     par(mar=c(0.1,0.1,0.1,0.1))
     ## quadrillage du plan
@@ -75,13 +75,13 @@
     abline(v=leg,lty=2)
     rect(rep(0,length(yhist$mids)),yhist$mids-a/2,yhist$counts,yhist$mids+a/2,col=grey(0.8))
     lines(ydensx,ydensy)
-    ## la légende dans le petit carré
+    ## la lÃ©gende dans le petit carrÃ©
     plot.default(0, 0, type = "n", xlab = "", ylab = "", xaxt = "n", yaxt = "n", xaxs = "i", yaxs = "i", frame.plot = FALSE)
     par(usr=c(c(0,top),c(0,top)))
     print(leg)
     symbols(rep(0,length(leg)),rep(0,length(leg)),circles = leg,lty=2, inches = FALSE, add=TRUE)
     scatterutil.eti (sqrt(0.5)*leg, sqrt(0.5)*leg, as.character(leg), clabel=1)
-    ## restauration des paramètres
+    ## restauration des paramÃ¨tres
     par(def.par)#- reset to default
     invisible(match.call())
 }

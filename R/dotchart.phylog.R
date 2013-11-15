@@ -2,17 +2,17 @@
  joining = TRUE, yjoining = NULL, ceti = 1, cdot = 1, csub = 1, f.phylog = 1/(1 + ncol(values)), ...) 
 {
 
-# l'argument scaling décide si l'on normalise les données ou non
-# l'argument ranging décide si l'on adopte une échelle commune pour toutes les séries ou non
-# l'argument yranging permet de fixer l'échelle commune à toutes les séries lorsque ranging = TRUE. Par défaut, l'échelle
-# commune est choisit en prenant les valeurs extrêmes de l'ensemble des valeurs
-# l'argument joining décide si'lon rajoute ou non des traits verticaux qui relie chaque point à un axe horizontal
-# l'argument yjoining définit le niveau de l'axe horizontal. Par défaut, il s'agit de la moyenne de chaque série.
+# l'argument scaling dÃ©cide si l'on normalise les donnÃ©es ou non
+# l'argument ranging dÃ©cide si l'on adopte une Ã©chelle commune pour toutes les sÃ©ries ou non
+# l'argument yranging permet de fixer l'Ã©chelle commune Ã  toutes les sÃ©ries lorsque ranging = TRUE. Par dÃ©faut, l'Ã©chelle
+# commune est choisit en prenant les valeurs extrÃªmes de l'ensemble des valeurs
+# l'argument joining dÃ©cide si'lon rajoute ou non des traits verticaux qui relie chaque point Ã  un axe horizontal
+# l'argument yjoining dÃ©finit le niveau de l'axe horizontal. Par dÃ©faut, il s'agit de la moyenne de chaque sÃ©rie.
 # les autres arguments sont des arguments graphiques:
 # ceti pour la taille des absisses
-# cdot pour la taille des carrés
-# csub pour la taille du titre de chaque série
-# f.phylog pour la taille relative de la phylogénie
+# cdot pour la taille des carrÃ©s
+# csub pour la taille du titre de chaque sÃ©rie
+# f.phylog pour la taille relative de la phylogÃ©nie
     
     if (!inherits(phylog, "phylog")) 
         stop("Non convenient data")

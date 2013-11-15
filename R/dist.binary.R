@@ -57,7 +57,7 @@
     else if (method == 4) {
         d <- (a + d)/(a + 2 * (b + c) + d)
     }
-    # correction d'un bug signalÈ par Christian D¸ring <c.duering@web.de>
+    # correction d'un bug signal√© par Christian D√ºring <c.duering@web.de>
     else if (method == 5) {
         d <- 2*a/(2 * a + b + c)
     }

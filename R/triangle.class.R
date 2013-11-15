@@ -7,7 +7,7 @@
     sub = "", csub = 1, possub = "bottomright", show.position = TRUE, 
     scale = TRUE, min3 = NULL, max3 = NULL) 
 { 
-    # modifiée le 18/11/2004 par cohérence avec triangle.param
+    # modifiÃ©e le 18/11/2004 par cohÃ©rence avec triangle.param
    
     seg <- function(a, b, col = par("col")) {
         segments(a[1], a[2], b[1], b[2], col = col)

@@ -175,7 +175,7 @@ phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
     #############################
     adddistances<-function(){
         # cette fonction assure la conversion de tre
-        # en son équivalent muni des distances
+        # en son Ã©quivalent muni des distances
         for(i in 1:length(leaves.names)) {
              tre<<- sub(paste(leaves.names[i],",",sep=""),paste(leaves.names[i],":",phylog$leaves[i],",",sep=""),tre,fixed=TRUE)
         }
@@ -191,11 +191,11 @@ phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
     }
     #############################
     extract<-function(node) {
-        # extrait de tre le sous-arbre enraciné au noeud node
-        # il serait intéressant de traduire cett fonction en C,
-        # en ne travaillant que sur les chaines de caractères newick
+        # extrait de tre le sous-arbre enracinÃ© au noeud node
+        # il serait intÃ©ressant de traduire cett fonction en C,
+        # en ne travaillant que sur les chaines de caractÃ¨res newick
         # node.number<- grep(node, nodes.names)
-        # on détermine la feuilles la plus à gauche associée au noeud
+        # on dÃ©termine la feuilles la plus Ã  gauche associÃ©e au noeud
         # utilise la liste phylogparts contenant les descendants
         leave <- node
         k <- 0
@@ -203,7 +203,7 @@ phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
             k <- k+1
             leave <- phylogparts[[leave]][1]
         }
-        #on construit la chaine de caractère associée à l'arbre enraciné au noeud
+        #on construit la chaine de caractÃ¨re associÃ©e Ã  l'arbre enracinÃ© au noeud
         if (regexpr(paste(leave,")",sep=""),tre) == -1) {
             leave.pos <- regexpr(paste(leave,",",sep=""),tre)
         } else { 
@@ -228,9 +228,9 @@ phylog.permut <- function(phylog,list.nodes = NULL, distance = TRUE){
     #############################
     permute <- function (node) {
         # cette fonction assure la permutation dans tre des branches descendantes du noeud node
-        # on remplace l'ordre initial conservé dans phylogparts[[node]]
-        # par l'ordre final conservé dans list.nodes[[node]]
-        # phylogparts[[node]] est mis à jour à la sortie
+        # on remplace l'ordre initial conservÃ© dans phylogparts[[node]]
+        # par l'ordre final conservÃ© dans list.nodes[[node]]
+        # phylogparts[[node]] est mis Ã  jour Ã  la sortie
         new.part <- list.nodes[[node]]
         if (length(new.part)==1) return(invisible())
         old.part <- phylogparts[[node]]

@@ -34,7 +34,7 @@
     # wrmat contient les pi.*p.j*pd(i)m(j)/pd(i)+/p+m(j)
     
     tabinit <- tabinit-wcmat+wrmat
-    # le tableau est doublement centré par classe de lignes et de colonnes
+    # le tableau est doublement centrÃ© par classe de lignes et de colonnes
     tabinit <- tabinit/dudi$lw
     tabinit <- t(t(tabinit)/dudi$cw)
     tabinit <- data.frame(tabinit)

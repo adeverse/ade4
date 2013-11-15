@@ -106,7 +106,7 @@
 }
 
 "neig2mat" <- function (neig) {
-    # synonyme de neig.util.GtoL plus simple de mémorisation
+    # synonyme de neig.util.GtoL plus simple de mÃ©morisation
     # donne la matrice d'incidence sommet-sommet en 0-1
     if (!inherits(neig,"neig")) stop ("Object 'neig' expected")
     deg <- attr(neig, "degrees")
@@ -203,16 +203,16 @@
     if (length(w0)==0) stop ("abnormal output : no null eigenvalue")
     if (length(w0)==1) w0 <- (1:n)[-w0]
     else if (length(w0)>1) {
-        # on ajoute le vecteur dérivé de 1n 
+        # on ajoute le vecteur dÃ©rivÃ© de 1n 
         w <- cbind(rep(1,n),eig$vectors[,w0])
         # on orthonormalise l'ensemble
         w <- qr.Q(qr(w))
-        # on met les valeurs propres à 0
+        # on met les valeurs propres Ã  0
         eig$values[w0] <- 0
-        # on remplace les vecteurs du noyau par une base orthonormée contenant 
-        # en première position le parasite
+        # on remplace les vecteurs du noyau par une base orthonormÃ©e contenant 
+        # en premiÃ¨re position le parasite
         eig$vectors[,w0] <- w[,-ncol(w)]
-        # on enlève la position du parasite
+        # on enlÃ¨ve la position du parasite
         w0 <- (1:n)[-w0[1]]
     }
     w0=rev(w0)

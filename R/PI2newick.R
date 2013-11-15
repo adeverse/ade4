@@ -1,12 +1,12 @@
 "PI2newick" <- function(x){
-# cette fonction permet de convertir les fichiers d'entrée du logiciel PI 
-# d'Abouheif au format newick (on récupère également les valeurs associées
+# cette fonction permet de convertir les fichiers d'entrÃ©e du logiciel PI 
+# d'Abouheif au format newick (on rÃ©cupÃ¨re Ã©galement les valeurs associÃ©es
 # aux feuilles)
 # x est une matrice qui vient de la lecture des fichiers .txt: x <- read.table("PI1.txt", h = FALSE)
-# il a autant de lignes qu'il y a de feuilles-1; dans le cas d'une phylogénie résolue, c'est le nombre de noeuds
+# il a autant de lignes qu'il y a de feuilles-1; dans le cas d'une phylogÃ©nie rÃ©solue, c'est le nombre de noeuds
 # il y a 6 colonnes: Contrast value/ Left tip value/ Right tip value/ Left node name/ Right node name/ Unresolved nodes group
 
-# on prépare le terrain
+# on prÃ©pare le terrain
 nodes.group <- as.factor(x[, 6])
 x <- x[, -c(1,6)]
 x[,c(3,4)] <-x[,c(3,4)] + 1
@@ -14,14 +14,14 @@ x[x == -99] <- 0
 nleaves <- nrow(x) + 1 
 nnodes <- sum(nodes.group==0)+length(levels(nodes.group))-1
 
-# on récuupère les valeurs associées aux feuilles
+# on rÃ©cuupÃ¨re les valeurs associÃ©es aux feuilles
 values <- as.vector(t(as.matrix(x[,c(1,2)])))
 values <- values[values!=0]
 for (i in 1:nleaves) 
     x[x==values[i]] <- i
 #print(x)
 
-# on construit la chaine de charactère au format newick
+# on construit la chaine de charactÃ¨re au format newick
 names(x) <- c("Ext", "Ext", "I", "I")
 tre <- NULL
 if (nodes.group[1]==0){
@@ -32,7 +32,7 @@ if (nodes.group[1]==0){
     tre <- paste("(", u[1], ",", u[2], ")Root;", sep="")
     }
     else 
-        stop("the Root must be resolved: will be programmed later")  # le cas ou il y a plusieurs feuilles et un noeud reste à faire  
+        stop("the Root must be resolved: will be programmed later")  # le cas ou il y a plusieurs feuilles et un noeud reste Ã  faire  
 j <- 2   
 for (i in 2:nnodes){
     if (nodes.group[j]==0){

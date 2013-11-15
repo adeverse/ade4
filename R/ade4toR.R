@@ -40,7 +40,7 @@ function (x) {
         return(invisible())
     }
 
-    # Le cas général
+    # Le cas gÃ©nÃ©ral
     nomfic <- paste(nombase, ".txt", sep = "")
     write.table(x, file = nomfic, quote = FALSE, sep = "    ", eol = "\n", 
         na = "-999", row.names = FALSE, col.names = FALSE, qmethod = c("escape", 

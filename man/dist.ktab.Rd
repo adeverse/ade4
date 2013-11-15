@@ -15,12 +15,17 @@ measure functional diversity depend on variables (traits) that have various stat
 fuzzy, ordinal) and that go through a matrix of distances among species.
 }
 \usage{
-dist.ktab(x, type, option = c("scaledBYrange", "scaledBYsd", "noscale"), scann = FALSE, tol = 1e-8)
-ldist.ktab(x, type, option = c("scaledBYrange", "scaledBYsd", "noscale"), scann = FALSE, tol = 1e-8)
-kdist.cor(x, type, option = c("scaledBYrange", "scaledBYsd", "noscale"), scann = FALSE, tol = 1e-8, squared = TRUE)
-prep.fuzzy(df, col.blocks, row.w = rep(1, nrow(df)), labels = paste("F", 1:length(col.blocks), sep = ""))
+dist.ktab(x, type, option = c("scaledBYrange", "scaledBYsd", "noscale"),
+scann = FALSE, tol = 1e-8)
+ldist.ktab(x, type, option = c("scaledBYrange", "scaledBYsd",
+"noscale"), scann = FALSE, tol = 1e-8)
+kdist.cor(x, type, option = c("scaledBYrange", "scaledBYsd", "noscale"),
+scann = FALSE, tol = 1e-8, squared = TRUE)
+prep.fuzzy(df, col.blocks, row.w = rep(1, nrow(df)), labels = paste("F",
+1:length(col.blocks), sep = ""))
 prep.binary(df, col.blocks, labels = paste("B", 1:length(col.blocks), sep = "")) 
-prep.circular(df, rangemin = apply(df, 2, min, na.rm = TRUE), rangemax = apply(df, 2, max, na.rm = TRUE))
+prep.circular(df, rangemin = apply(df, 2, min, na.rm = TRUE), rangemax =
+apply(df, 2, max, na.rm = TRUE))
 }
 \arguments{
   \item{x}{Object of class \code{ktab} (see details)}

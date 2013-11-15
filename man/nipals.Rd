@@ -10,7 +10,8 @@
 }
 \usage{
 nipals(df, nf = 2, rec = FALSE, niter = 100, tol = 1e-09)
-\method{scatter}{nipals}(x, xax = 1, yax = 2, clab.row = 0.75, clab.col = 1, posieig = "top", sub = NULL, ...)
+\method{scatter}{nipals}(x, xax = 1, yax = 2, clab.row = 0.75, clab.col
+= 1, posieig = "top", sub = NULL, ...)
 \method{print}{nipals}(x, ...)
 }
 

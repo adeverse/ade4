@@ -7,9 +7,9 @@
  plot of each variable.
 }
 \usage{
-dotchart.phylog(phylog, values, y = NULL, scaling = TRUE, ranging = TRUE, yranging = NULL, 
-    joining = TRUE, yjoining = NULL, ceti = 1, cdot = 1, csub = 1, 
-    f.phylog = 1/(1 + ncol(values)), ...)
+dotchart.phylog(phylog, values, y = NULL, scaling = TRUE, ranging =
+TRUE, yranging = NULL, joining = TRUE, yjoining = NULL, ceti = 1, cdot =
+1, csub = 1, f.phylog = 1/(1 + ncol(values)), ...)
 }
 \arguments{
   \item{phylog}{ an object of class \code{phylog}}

@@ -29,9 +29,11 @@ This list contains the following objects:
          area.plot(w1)
 	 rect(min(w1$x), min(w1$y), max(w1$x), max(w1$y), col = "lightblue")
 	 invisible(lapply(split(w1, w1$id), function(x) polygon(x[, -1],col = "white")))
-	 s.logo(capitales$xy, capitales$logo, klogo = index, add.plot = TRUE,clogo=.5) # depends on pixmap
+	 s.logo(capitales$xy, capitales$logo, klogo = index, add.plot =
+TRUE, clogo = 0.5) # depends on pixmap
          table.dist(capitales$dist, lab = attr(capitales$dist, "Labels")) # depends on mva
-    	 s.logo(pcoscaled(lingoes(capitales$dist)),capitales$logo,klogo=index,clogo=.5) #depends on pixmap
+    	 s.logo(pcoscaled(lingoes(capitales$dist)), capitales$logo,
+klogo = index, clogo = 0.5) # depends on pixmap
 }	
 }
 \keyword{datasets}

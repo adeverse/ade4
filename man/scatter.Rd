@@ -17,7 +17,8 @@ variance) associated to each dimension.
 scatter(x, \dots)
 \method{biplot}{dudi}(x, \dots)
 \method{screeplot}{dudi}(x, npcs = length(x$eig), type = c("barplot", "lines"), 
-    main = deparse(substitute(x)), col = c(rep("black", x$nf), rep("grey", npcs - x$nf)), \dots)
+    main = deparse(substitute(x)), col = c(rep("black", x$nf),
+rep("grey", npcs - x$nf)), \dots)
 }
 \arguments{
   \item{x}{an object of the class \code{dudi} containing the outputs of

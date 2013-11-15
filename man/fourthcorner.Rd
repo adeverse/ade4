@@ -14,13 +14,18 @@
 fourthcorner(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 =
 FALSE, p.adjust.method.G = p.adjust.methods, p.adjust.method.D =
 p.adjust.methods, p.adjust.D = c("global", "levels"))
-fourthcorner2(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 = FALSE, p.adjust.method.G = p.adjust.methods)
-\method{print}{4thcorner}(x, varQ = 1:length(x$varnames.Q), varR = 1:length(x$varnames.R), stat = c("D", "D2"), ...)
+fourthcorner2(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 =
+FALSE, p.adjust.method.G = p.adjust.methods)
+\method{print}{4thcorner}(x, varQ = 1:length(x$varnames.Q), varR =
+1:length(x$varnames.R), stat = c("D", "D2"), ...)
 \method{summary}{4thcorner}(object,...)
 \method{plot}{4thcorner}(x, stat = c("D", "D2", "G"), type = c("table",
 "biplot"), xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, col =
 c("lightgrey", "red", "deepskyblue", "purple"), ...)
-fourthcorner.rlq(xtest, nrepet = 999, modeltype = 6, typetest = c("axes", "Q.axes", "R.axes"), p.adjust.method.G = p.adjust.methods, p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global", "levels"), ...)
+fourthcorner.rlq(xtest, nrepet = 999, modeltype = 6, typetest =
+c("axes", "Q.axes", "R.axes"), p.adjust.method.G = p.adjust.methods,
+p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
+"levels"), ...)
 }
 
 \arguments{
@@ -146,7 +151,8 @@ summary(four.comb.default)
 plot(four.comb.default, stat = "G")
 
 ## using fdr correction of P-values
-four.comb.fdr <- fourthcorner(aviurba$mil,aviurba$fau,aviurba$traits,nrepet=99,p.adjust.method.G ='fdr', p.adjust.method.D='fdr')  
+four.comb.fdr <- fourthcorner(aviurba$mil, aviurba$fau, aviurba$traits,
+nrepet = 99, p.adjust.method.G = 'fdr', p.adjust.method.D = 'fdr')  
 summary(four.comb.fdr)
 plot(four.comb.fdr, stat = "G")
 

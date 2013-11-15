@@ -6,7 +6,13 @@ Performs a graphical representation of two sets of coordinates
 (different colors and symbols) and a partitionning  into classes
 }
 \usage{
-s.match.class(df1xy, df2xy, fac, wt = rep(1/nrow(df1xy), nrow(df1xy)), xax = 1, yax = 2, pch1 = 16, pch2 = 15, col1 = rep("lightgrey", nlevels(fac)), col2 = rep("darkgrey", nlevels(fac)), cpoint = 1, label = levels(fac), clabel = 1, cstar = 1, cellipse = 0, axesell = TRUE, xlim = NULL, ylim = NULL, grid = TRUE, addaxes = TRUE, cgrid = 1, include.origin = TRUE, origin = c(0, 0), sub = "", csub = 1.25, possub = "bottomleft", pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE)
+s.match.class(df1xy, df2xy, fac, wt = rep(1/nrow(df1xy), nrow(df1xy)),
+xax = 1, yax = 2, pch1 = 16, pch2 = 15, col1 = rep("lightgrey",
+nlevels(fac)), col2 = rep("darkgrey", nlevels(fac)), cpoint = 1, label =
+levels(fac), clabel = 1, cstar = 1, cellipse = 0, axesell = TRUE, xlim =
+NULL, ylim = NULL, grid = TRUE, addaxes = TRUE, cgrid = 1,
+include.origin = TRUE, origin = c(0, 0), sub = "", csub = 1.25, possub =
+"bottomleft", pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE)
 }
 
 \arguments{

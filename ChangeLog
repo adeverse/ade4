@@ -1,3 +1,16 @@
+2013-11-19 15:58  sdray
+
+	* DESCRIPTION: ---------- release of ade4 1.6-2 ----------
+
+2013-11-19 15:56  sdray
+
+	* NAMESPACE: Re-export some internal/utility functions that are
+	  used by other packages
+
+2013-11-19 15:55  sdray
+
+	* TITLE: Remove the TITLE file which is no more used
+
 2013-11-15 22:41  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.6-1 ----------

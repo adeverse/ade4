@@ -215,6 +215,10 @@ export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multis
 ## "withincoinertia"
 
 ## ******* internal utilities *******
+
+## Re-export the following functions to avoid the breaking of several other packages (19/11/2013)
+export("add.scatter.eig", "scatterutil.base", "scatterutil.chull", "scatterutil.convrot90", "scatterutil.eigen", "scatterutil.ellipse", "scatterutil.eti", "scatterutil.eti.circ", "scatterutil.grid", "scatterutil.legend.bw.square" , "scatterutil.legendgris", "scatterutil.legend.square.grey", "scatterutil.logo", "scatterutil.scaling", "scatterutil.sco", "scatterutil.star", "scatterutil.sub")
+
 ## "add.position.triangle"
 ## "add.scatter.eig" 
 ## "area.util.contour"

@@ -270,7 +270,10 @@
     w <- tab.names(x)
     l0 <- length(w)
     w3 <- paste(rep(w, rep(4, l0)), as.character(1:4), sep = ".")
-    return(list(row = w1, col = w2, tab = w3))
+    # Cas d'un ktab de type kcoinertie
+    if (!inherits (x,"kcoinertia")) return(list(row = w1, col = w2, tab = w3)) 
+    w4 <- paste(row.names(x$supX), rep(tab.names(x), each=nrow(x$supX)/length(tab.names(x))), sep=".")
+    return(list(row = w1, col = w2, tab = w3, Trow=w4))
 }
 
 ########### ktab.util.addfactor<- ########### 

@@ -19,7 +19,7 @@
         names(cootot) <- names(coo1)
         coofull <- coo1
         for (i in which.tab) coofull <- rbind.data.frame(coofull, 
-            cootot[object$TL[, 1] == i, ])
+            cootot[object$TL[, 1] == levels(object$TL[,1])[i], ])
         s.label(coo1, clabel = clab, sub = "Reference", possub = "bottomright", 
             csub = csub)
         for (ianal in which.tab) {
@@ -28,7 +28,7 @@
                 origin = c(0, 0), sub = row.names(object$cov2)[ianal], 
                 csub = csub, possub = possub, pixmap = NULL, 
                 contour = NULL, area = NULL, add.plot = FALSE)
-            coo2 <- cootot[object$TL[, 1] == ianal, 1:2]
+            coo2 <- cootot[object$TL[, 1] == levels(object$TL[,1])[ianal], 1:2]
             s.match(coo1, coo2, clabel = 0, add.plot = TRUE)
             s.label(coo1, clabel = 0, cpoint = cpoint, add.plot = TRUE)
         }
@@ -41,7 +41,7 @@
         if (length(which.tab) > prod(mfrow)) 
             par(ask = TRUE)
         for (ianal in which.tab) {
-            coo2 <- object$Tax[object$T4[, 1] == ianal, c(xax, yax)]
+            coo2 <- object$Tax[object$T4[, 1] == levels(object$T4[,1])[ianal], c(xax, yax)]
             row.names(coo2) <- as.character(1:4)
             s.corcircle(coo2, clabel = clab, sub = row.names(object$cov2)[ianal], 
                 csub = csub, possub = possub)
@@ -52,7 +52,7 @@
         if (length(which.tab) > prod(mfrow)) 
             par(ask = TRUE)
         for (ianal in which.tab) {
-            coo2 <- object$Tco[object$TC[, 1] == ianal, c(xax, yax)]
+            coo2 <- object$Tco[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
             s.arrow(coo2, clabel = clab, sub = row.names(object$cov2)[ianal], 
                 csub = csub, possub = possub)
         }

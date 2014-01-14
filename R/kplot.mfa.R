@@ -12,8 +12,8 @@
     if (length(which.tab) > prod(mfrow)) 
         par(ask = TRUE)
     for (ianal in which.tab) {
-        coolig <- object$lisup[object$TL[, 1] == ianal, c(xax, yax)]
-        coocol <- object$co[object$TC[, 1] == ianal, c(xax, yax)]
+        coolig <- object$lisup[object$TL[, 1] == levels(object$TL[,1])[ianal], c(xax, yax)]
+        coocol <- object$co[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
         if (permute.row.col) {
             auxi <- coolig
             coolig <- coocol

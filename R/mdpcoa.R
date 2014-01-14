@@ -177,7 +177,7 @@ kplotX.mdpcoa <- function(object, xax = 1, yax = 2, mfrow = NULL,
         if (includepop)
         {
             if(inherits(object, "mcoa"))
-                s.label(object$Tl1[object$TL[, 1] == ianal, c(xax, yax)], clabel = clab, cpoint = 0, add.plot = TRUE)
+                s.label(object$Tl1[object$TL[, 1] == levels(object$TL[,1])[ianal], c(xax, yax)], clabel = clab, cpoint = 0, add.plot = TRUE)
             else if (inherits(object, "statis")){
                 npop <- nrow(object$C.li)
                 s.label(object$cosupY[(1:npop) + npop * (ianal - 1), c(xax, yax)], clabel = clab, cpoint = 0, add.plot = TRUE)

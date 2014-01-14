@@ -19,9 +19,9 @@
     X <- eval.parent(appel$X)
     names.li <- row.names(X[[1]])
     for (ianal in which.tab) {
-        coolig <- object$Li[object$TL[, 1] == ianal, c(xax, yax)]
+        coolig <- object$Li[object$TL[, 1] == levels(object$TL[,1])[ianal], c(xax, yax)]
         row.names(coolig) <- names.li
-        coocol <- object$Co[object$TC[, 1] == ianal, c(xax, yax)]
+        coocol <- object$Co[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
         row.names(coocol) <- names(X[[ianal]])
         if (permute.row.col) {
             auxi <- coolig
@@ -74,9 +74,9 @@
     X <- eval.parent(appel$X)
     names.li <- row.names(X[[1]])
     for (ianal in which.tab) {
-        coocol <- object$C1[object$TC[, 1] == ianal, c(xax, yax)]
+        coocol <- object$C1[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
         row.names(coocol) <- names(X[[ianal]])
-        coolig <- object$Li[object$TL[, 1] == ianal, c(xax, yax)]
+        coolig <- object$Li[object$TL[, 1] == levels(object$TL[,1])[ianal], c(xax, yax)]
         row.names(coolig) <- names.li
         if (permute.row.col) {
             auxi <- coolig

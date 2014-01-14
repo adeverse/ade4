@@ -25,7 +25,7 @@
         else label <- FALSE
     }
     for (ianal in which.tab) {
-        coocol <- cootot[object$TC[, 1] == ianal, ]
+        coocol <- cootot[object$TC[, 1] == levels(object$TC[,1])[ianal], ]
         if (unique.scale) 
             s.label(cootot, clabel = 0, cpoint = 0, sub = object$tab.names[ianal], 
                 possub = possub, csub = csub)
@@ -40,7 +40,7 @@
         if (traject) 
             s.traject(coocol, clabel = 0, add.plot = TRUE)
         if (!is.null(class)) {
-            f1 <- as.factor(class[object$TC[, 1] == ianal])
+            f1 <- as.factor(class[object$TC[, 1] == levels(object$TC[,1])[ianal]])
             s.class(coocol, f1, clabel = clab, cpoint = 2, 
                 pch = 20, axesell = FALSE, cellipse = 0, add.plot = TRUE)
         }

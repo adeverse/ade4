@@ -13,7 +13,7 @@
     sep <- list()
     lwsqrt <- sqrt(lw)
     for (k in 1:ntab) {
-        ak <- sqrt(cw[indicablo == k])
+        ak <- sqrt(cw[indicablo == levels(X$TC[,1])[k]])
         wk <- as.matrix(X[[k]]) * lwsqrt
         wk <- t(t(wk) * ak)
         wk <- wk %*% t(wk)
@@ -83,7 +83,7 @@
     for (k in 1:ntab) {
         i1 <- i2 + 1
         i2 <- i2 + 4
-        tab <- as.matrix(sepanL1[X$TL[, 1] == k, ])
+        tab <- as.matrix(sepanL1[X$TL[, 1] == levels(X$TL[,1])[k], ])
         tab <- t(tab * lw) %*% wref
         for (i in 1:min(nf, 4)) {
             if (tab[i, i] < 0) {

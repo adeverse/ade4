@@ -16,17 +16,16 @@
     ncol <- length(cw)
     nbloc <- length(X$blo)
     indicablo <- X$TC[, 1]
+    veclev <- levels(X$TC[,1])
     Xsepan <- sepan(X, nf = 4)
     rank.fac <- factor(rep(1:nbloc, Xsepan$rank))
     tabw <- NULL
     auxinames <- ktab.util.names(X)
     if (option == "lambda1") {
-        for (i in 1:nbloc) tabw <- c(tabw, 1/Xsepan$Eig[rank.fac == 
-            i][1])
+        for (i in 1:nbloc) tabw <- c(tabw, 1/Xsepan$Eig[rank.fac == i][1])
     }
     else if (option == "inertia") {
-        for (i in 1:nbloc) tabw <- c(tabw, 1/sum(Xsepan$Eig[rank.fac == 
-            i]))
+        for (i in 1:nbloc) tabw <- c(tabw, 1/sum(Xsepan$Eig[rank.fac == i]))
     }
     else if (option == "uniform") {
         tabw <- rep(1, nbloc)
@@ -38,22 +37,22 @@
     Xsepan <- sepan(X, nf = 4)
     normaliserparbloc <- function(scorcol) {
         for (i in 1:nbloc) {
-            w1 <- scorcol[indicablo == i]
+            w1 <- scorcol[indicablo == veclev[i]]
             w2 <- sqrt(sum(w1 * w1))
             if (w2 > tol) 
                 w1 <- w1/w2
-            scorcol[indicablo == i] <- w1
+            scorcol[indicablo == veclev[i]] <- w1
         }
         return(scorcol)
     }
     recalculer <- function(tab, scorcol) {
         for (k in 1:nbloc) {
-            soustabk <- tab[, indicablo == k]
-            uk <- scorcol[indicablo == k]
+            soustabk <- tab[, indicablo == veclev[k]]
+            uk <- scorcol[indicablo == veclev[k]]
             soustabk.hat <- t(apply(soustabk, 1, function(x) sum(x * 
                 uk) * uk))
             soustabk <- soustabk - soustabk.hat
-            tab[, indicablo == k] <- soustabk
+            tab[, indicablo == veclev[k]] <- soustabk
         }
         return(tab)
     }
@@ -122,9 +121,9 @@
     for (k in 1:nbloc) {
         i1 <- i2 + 1
         i2 <- i2 + nlig
-        urk <- as.matrix(acom$axis[indicablo == k, ])
+        urk <- as.matrix(acom$axis[indicablo == veclev[k], ])
         tab <- as.matrix(X[[k]])
-        urk <- urk * cw[indicablo == k]
+        urk <- urk * cw[indicablo == veclev[k]]
         urk <- tab %*% urk
         w[i1:i2, ] <- urk
         urk <- urk * acom$SynVar * lw
@@ -171,9 +170,9 @@
     for (k in 1:nbloc) {
         i1 <- i2 + 1
         i2 <- i2 + 4
-        urk <- as.matrix(acom$axis[indicablo == k, ])
-        tab <- as.matrix(Xsepan$C1[indicablo == k, ])
-        urk <- urk * cw[indicablo == k]
+        urk <- as.matrix(acom$axis[indicablo == veclev[k], ])
+        tab <- as.matrix(Xsepan$C1[indicablo == veclev[k], ])
+        urk <- urk * cw[indicablo == veclev[k]]
         tab <- t(tab) %*% urk
         for (i in 1:min(nf, 4)) {
             if (tab[i, i] < 0) {
@@ -307,7 +306,7 @@
         eigval <- unlist(object$lambda[i, ])
         eigval <- zapsmall(eigval)
         eigvalplus <- zapsmall(cumsum(eigval))
-        w <- object$Tli[object$TL[, 1] == i, ]
+        w <- object$Tli[object$TL[, 1] == levels(object$TL[,1])[i], ]
         w <- w * lw
         varproj <- zapsmall(apply(w * w, 2, sum))
         varprojplus <- zapsmall(cumsum(varproj))

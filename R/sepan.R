@@ -65,6 +65,7 @@
     res$Eig <- Eig
     res$TL <- X$TL
     res$TC <- X$TC
+    res$T4 <- X$T4
     res$blo <- blo
     res$rank <- rank
     res$tab.names <- names(X)[1:ntab]

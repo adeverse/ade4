@@ -19,7 +19,7 @@
     par(ask = ask)
     if (show[1]) {
         for (ianal in which.tab) {
-            coo2 <- object$Tax[object$T4[, 1] == ianal, c(xax, yax)]
+            coo2 <- object$Tax[object$T4[, 1] == levels(object$T4[,1])[ianal], c(xax, yax)]
             row.names(coo2) <- as.character(1:4)
             s.corcircle(coo2, clabel = clab, cgrid = 0, sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub)
@@ -31,17 +31,15 @@
         cootot <- object$Tli[, c(xax, yax)]
         names(cootot) <- names(coo1)
         coofull <- coo1
-        for (i in which.tab) coofull <- rbind.data.frame(coofull, 
-            cootot[object$TL[, 1] == i, ])
+        for (i in which.tab) coofull <- rbind.data.frame(coofull, cootot[object$TL[, 1] == levels(object$TL[,1])[i], ])
         for (ianal in which.tab) {
             scatterutil.base(coofull, 1, 2, xlim = NULL, ylim = NULL, 
                 grid = TRUE, addaxes = TRUE, cgrid = 1, include.origin = TRUE, 
                 origin = c(0, 0), sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub, pixmap = NULL, 
                 contour = NULL, area = NULL, add.plot = FALSE)
-            coo2 <- cootot[object$TL[, 1] == ianal, 1:2]
-            s.label(coo2, add.plot = TRUE, clabel = clab, label = row.names(object$Tli)[object$TL[, 
-                1] == ianal])
+            coo2 <- cootot[object$TL[, 1] == levels(object$TL[,1])[ianal], 1:2]
+            s.label(coo2, add.plot = TRUE, clabel = clab, label = row.names(object$Tli)[object$TL[, 1] == levels(object$TL[,1])[ianal]])
         }
     }
     if (show[3]) {
@@ -51,21 +49,21 @@
         names(cootot) <- names(coo1)
         coofull <- coo1
         for (i in which.tab) coofull <- rbind.data.frame(coofull, 
-            cootot[object$TC[, 1] == i, ])
+            cootot[object$TC[, 1] == levels(object$TC[,1])[i], ])
         for (ianal in which.tab) {
             scatterutil.base(coofull, 1, 2, xlim = NULL, ylim = NULL, 
                 grid = TRUE, addaxes = TRUE, cgrid = 1, include.origin = TRUE, 
                 origin = c(0, 0), sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub, pixmap = NULL, 
                 contour = NULL, area = NULL, add.plot = FALSE)
-            coo2 <- object$Tco[object$TC[, 1] == ianal, c(xax, yax)]
+            coo2 <- object$Tco[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
             s.arrow(coo2, add.plot = TRUE, clabel = clab, sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub)
         }
     }
     if (show[4]) {
         for (ianal in which.tab) {
-            coo2 <- object$Tcomp[object$T4[, 1] == ianal, c(xax, yax)]
+            coo2 <- object$Tcomp[object$T4[, 1] == levels(object$T4[,1])[ianal], c(xax, yax)]
             row.names(coo2) <- as.character(1:4)
             s.corcircle(coo2, clabel = clab, cgrid = 0, sub = row.names(object$RV)[ianal], 
                 csub = csub, possub = possub)

@@ -18,8 +18,8 @@
         cpoi <- 0
     else cpoi <- 2
     for (ianal in which.tab) {
-        coolig <- object$Tli[object$TL[, 1] == ianal, c(xax, yax)]
-        coocol <- object$Tco[object$TC[, 1] == ianal, c(xax, yax)]
+        coolig <- object$Tli[object$TL[, 1] == levels(object$TL[,1])[ianal], c(xax, yax)]
+        coocol <- object$Tco[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
         s.label(cootot, clabel = 0, cpoint = 0, sub = object$tab.names[ianal], 
             csub = csub, possub = possub)
         s.label(coolig, clabel = clab.r, cpoint = cpoi, add.plot = TRUE)

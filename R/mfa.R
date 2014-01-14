@@ -83,7 +83,7 @@
     for (k in 1:nbloc) {
         i1 <- i2 + 1
         i2 <- i2 + 4
-        tab <- as.matrix(sepan$L1[sepan$TL[, 1] == k, ])
+        tab <- as.matrix(sepan$L1[sepan$TL[, 1] == levels(sepan$TL[,1])[k], ])
         if (ncol(tab) > 4) 
             tab <- tab[, 1:4]
         if (ncol(tab) < 4) 
@@ -149,7 +149,7 @@
                 ratio = 1/5)
         }
         if (j == 3) {
-            s.corcircle(x$T4comp[x$T4[, 2] == 1, ], 
+            s.corcircle(x$T4comp[x$T4[, 2] == levels(x$T4[,2])[1], ], 
                 fullcircle = FALSE, sub = "Component projection", possub = "topright", 
                 csub = 1.5)
             add.scatter.eig(x$eig, x$nf, xax, yax, posi = "bottomleft", 

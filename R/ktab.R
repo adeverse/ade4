@@ -155,6 +155,9 @@
     res$cw <- rep(x$lw, nblo)
     res$blo <- blocks
     ktab.util.addfactor(res) <- list(blocks, length(res$lw))
+    levels(res$TL[,1]) <- levels(res$TC[,1]) <- levels(res$T4[,1]) <- tab.names(x)
+    levels(res$TL[,2]) <- col.names(x)
+    levels(res$TC[,2]) <- row.names(x)
     res$call <- match.call()
     class(res) <- "ktab"
     return(res)

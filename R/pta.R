@@ -85,9 +85,9 @@
     for (k in 1:nblo) {
         i1 <- i2 + 1
         i2 <- i2 + 4
-        tab1 <- as.matrix(sepa$L1[X$TL[, 1] == k, ])
+        tab1 <- as.matrix(sepa$L1[X$TL[, 1] == levels(X$TL[,1])[k], ])
         tab1 <- t(tab1 * lw) %*% as.matrix(comp$l1)
-        tab2 <- as.matrix(sepa$C1[X$TC[, 1] == k, ])
+        tab2 <- as.matrix(sepa$C1[X$TC[, 1] == levels(X$TC[, 1])[k], ])
         tab2 <- (t(tab2) * cw) %*% as.matrix(comp$c1)
         for (i in 1:min(nf, 4)) {
             if (tab2[i, i] < 0) {

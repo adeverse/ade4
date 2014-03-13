@@ -924,8 +924,8 @@ void testertracenu (    int *npermut,
       for(j=1;j<=c1;j++){
 	pc1[j]=0;
       }
-      for(i=1;i<=l1;j++){
-	for(j=1;j<=c1;i++){
+      for(i=1;i<=l1;i++){
+	for(j=1;j<=c1;j++){
 	  pc1[j]=pc1[j]+X1[i][j]*pl[i];
 	}
       }

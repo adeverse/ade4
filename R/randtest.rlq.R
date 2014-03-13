@@ -68,7 +68,7 @@ randtest.rlq <- function(xtest, nrepet = 999, modeltype = 6, ...) {
     indexQ <- rep(2,ncol(Qinit))
     assignQ <- rep(1:ncol(Qinit), apply(Qinit, 2, function(x) nlevels(as.factor(x))))
     Qinit <- acm.disjonctif(Qinit)
-  } else if (typR == 8) {
+  } else if (typQ == 8) {
     indexQ <- ifelse(dudiQ$index == 'q',1,2)
     assignQ <- dudiQ$assign
     

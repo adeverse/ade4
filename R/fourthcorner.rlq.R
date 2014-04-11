@@ -87,7 +87,7 @@ fourthcorner.rlq <- function(xtest, nrepet = 999, modeltype = 6, typetest = c("a
   indexQ <- rep(2, ncol(Qinit))
   assignQ <- rep(1:ncol(Qinit),apply(Qinit, 2, function(x) nlevels(as.factor(x))))
   Qinit <- acm.disjonctif(Qinit)
-} else if (typR == 8) {
+} else if (typQ == 8) {
   provinames <- "tmp"
   indexQ <- ifelse(dudiQ$index=="q",1,2)
   assignQ <- as.numeric(dudiQ$assign)

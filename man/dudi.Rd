@@ -6,6 +6,7 @@
 \alias{is.dudi}
 \alias{redo.dudi}
 \alias{summary.dudi}
+\alias{[.dudi}
 \title{Duality Diagram}
 \description{
 \code{as.dudi} is called by many functions (\code{dudi.pca}, \code{dudi.coa}, \code{dudi.acm}, ...) 
@@ -26,6 +27,7 @@ is.dudi(x)
 redo.dudi(dudi, newnf = 2) 
 \method{t}{dudi}(x)
 \method{summary}{dudi}(object, \dots) 
+\method{[}{dudi}(x,i,j)
 }
 \arguments{
   \item{df}{a data frame with \emph{n} rows and \emph{p} columns}
@@ -40,6 +42,7 @@ redo.dudi(dudi, newnf = 2)
   \item{x, dudi, object}{objects of class \code{dudi}}
   \item{\dots}{further arguments passed to or from other methods}
   \item{newnf}{an integer indicating the number of kept axes}
+  \item{i,j}{elements to extract (integer or empty): index of rows (i) and columns (j)}
 }
 \value{
 as.dudi and all the functions that use it return a list with the following components :

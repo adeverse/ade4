@@ -8,6 +8,7 @@ useDynLib(ade4)
 #####################################
 ##            S3 methods           ##
 #####################################
+S3method("[","dudi")
 S3method("[","kdist")
 S3method("[","ktab")
 S3method("as.data.frame","kdist")

@@ -240,3 +240,30 @@ summary.dudi <- function(object, ...){
   }
   cat("\n")
 }
+
+
+########### [.dudi ########### 
+
+"[.dudi" <- function (x, i, j) {
+    
+    ## i: index of rows
+    ## j: index of columns
+    res <- unclass(x)
+    if(!missing(i)){
+        res$tab <- res$tab[i, , drop = FALSE]
+        res$li <- res$li[i, , drop = FALSE]
+        res$l1 <- res$l1[i, , drop = FALSE]
+        res$lw <- res$lw[i, drop = FALSE]
+        res$lw <- res$lw / sum(res$lw)
+        
+    }
+    if(!missing(j)){
+        res$tab <- res$tab[, j, drop = FALSE]
+        res$co <- res$co[j, , drop = FALSE]
+        res$c1 <- res$c1[j, , drop = FALSE]
+        res$cw <- res$lw[j, drop = FALSE]
+    }
+    class(res) <- class(x)
+    res$call <- match.call()
+    return(res)
+}

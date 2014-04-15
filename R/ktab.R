@@ -2,30 +2,55 @@
 "is.ktab" <- function (x)
     inherits(x, "ktab")
 
-########### [.ktab" ########### 
-"[.ktab" <- function (x, selection) {
+########### [.ktab ########### 
+"[.ktab" <- function (x, i, j, k) {
+    ## i: index of blocks
+    ## j: index of rows
+    ## k: index of columns
+
+    ## select blocks
     blocks <- x$blo
     nblo <- length(blocks)
-    if (is.logical(selection)) 
-        selection <- which(selection)
-    if (any(selection > nblo)) 
+    if(missing(i))
+        i <- 1:nblo
+    if (is.logical(i)) 
+        i <- which(i)
+    if (any(i > nblo)) 
         stop("Non convenient selection")
     indica <- as.factor(rep(1:nblo, blocks))
-    res <- unclass(x)[selection]
+    res <- unclass(x)[i]
+   
+    tabw <- x$tabw[i]
     cw <- x$cw
     cw <- split(cw, indica)
-    cw <- unlist(cw[selection])
+    cw <- cw[i]
+   
+    ## select columns
+    if(!missing(k)){
+        res <- lapply(res, function(z) z[, k, drop = FALSE])
+        cw <- lapply(cw, function(z) z[k, drop = FALSE])
+    }
+    cw <- unlist(cw)
+    blocks <- unlist(lapply(res, function(z) ncol(z)))
+    
+    ## select rows
+    lw <-  x$lw
+    if(!missing(j)){
+        res <- lapply(res, function(z) z[j,, drop = FALSE])
+        lw <- lw[j, drop = FALSE]
+    }
+    res$lw <- lw / sum(lw)
     res$cw <- cw
-    res$lw <- x$lw
-    blocks <- unlist(lapply(res, function(x) ncol(x)))
+    res$tabw <- tabw
+   
     nblo <- length(blocks)
     res$blo <- blocks
     class(res) <- "ktab"
     res <- ktab.util.addfactor(res)
     res$call <- match.call()
+    
     return(res)
 }
-
 
 ########### print.ktab ########### 
 "print.ktab" <- function (x, ...) {

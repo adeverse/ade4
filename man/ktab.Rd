@@ -16,7 +16,7 @@
 \alias{tab.names<-}
 \alias{tab.names<-.ktab}
 \alias{ktab.util.names}
-\alias{ktab.util.addfactor<-}
+\alias{ktab.util.addfactor}
 \title{the class of objects 'ktab' (K-tables)}
 \description{
 an object of class \code{ktab} is a list of data frames with the same row.names in common.\cr

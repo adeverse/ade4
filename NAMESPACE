@@ -227,7 +227,7 @@ export("add.scatter.eig", "scatterutil.base", "scatterutil.chull", "scatterutil.
 ## "fac2disj"
 ## "neig.util.GtoL"                
 ## "neig.util.LtoG"
-## "ktab.util.addfactor<-"
+## "ktab.util.addfactor"
 ## "ktab.util.names"
 ## "newick2phylog.addtools"
 ## "scatterutil.base"              

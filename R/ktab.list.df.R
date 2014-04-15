@@ -41,14 +41,11 @@
     res$blo <- blocks
     res$lw <- lw
     res$cw <- cw
-    ktab.util.addfactor(res) <- list(blocks, length(lw))
-    res$call <- match.call()
     class(res) <- "ktab"
     row.names(res) <- rownames
     col.names(res) <- colnames
     tab.names(res) <- tabnames
-    levels(res$TL[,1]) <- levels(res$TC[,1]) <- levels(res$T4[,1]) <- tab.names(res)
-    levels(res$TL[,2]) <- row.names(res)
-    levels(res$TC[,2]) <- col.names(res)
+    res <- ktab.util.addfactor(res)
+    res$call <- match.call()
     return(res)
 }

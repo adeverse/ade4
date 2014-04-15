@@ -35,7 +35,7 @@
     res$cw <- rep(lwY,ntab)
     blo <- rep(nligY,ntab)
     res$blo <- blo
-    ktab.util.addfactor(res) <- list(blo, length(res$lw))
+    
 #### Enregistrement des tableaux de départ
     res$supX <- KTX[[1]]
     res$supY <- KTY[[1]]
@@ -52,8 +52,7 @@
     col.names(res) <- rep(row.names(KTY),ntab)
     row.names(res) <- row.names(KTX)
     tab.names(res) <- tab.names(KTX)
-    levels(res$TL[,1]) <- levels(res$TC[,1]) <- levels(res$T4[,1]) <- tab.names(res)
-    levels(res$TL[,2]) <- row.names(res)
-    levels(res$TC[,2]) <- col.names(res)
+    res <- ktab.util.addfactor(res)
+    
     return(res)
 }

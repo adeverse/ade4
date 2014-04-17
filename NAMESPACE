@@ -159,7 +159,7 @@ importFrom(graphics, "plot", "boxplot")
 export("amova", "apqe", "disc", "divc", "divcmax", "dpcoa" )
 
 ## ******* utilities and misc *******
-export("acm.burt", "acm.disjonctif", "as.krandtest", "as.randtest", "as.rtest", "uniquewt.df")
+export("acm.burt", "acm.disjonctif", "adegraphicsLoaded", "as.krandtest", "as.randtest", "as.rtest", "uniquewt.df")
 export("bicenter.wt", "covfacwt", "covwt", "meanfacwt", "scalefacwt", "scalewt", "varfacwt", "varwt")
 
 ## ******* dist *******

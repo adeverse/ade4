@@ -170,9 +170,9 @@ export("bca", "col.names", "col.names<-", "kplot", "reconst", "randtest", "rtest
 
 ## ******* graphics *******
 export("s.arrow", "s.class", "s.chull", "s.corcircle", "s.distri", "s.hist", "s.image", "s.kde2d", "s.label", "s.logo", "s.match", "s.match.class", "s.multinom", "s.traject", "s.value")
-export("scatter.acm", "scatter.coa", "scatter.dudi", "scatter.fca", "scatter.nipals", "scatter.pco")
+## export("scatter.acm", "scatter.coa", "scatter.dudi", "scatter.fca", "scatter.nipals", "scatter.pco")
 export("sco.boxplot", "sco.class", "sco.distri", "sco.gauss", "sco.label", "sco.match", "sco.quant")
-export("score.acm", "score.coa", "score.mix", "score.pca")
+## export("score.acm", "score.coa", "score.mix", "score.pca")
 export("add.scatter", "dotcircle")
 export("table.cont", "table.dist", "table.paint", "table.value")
 export("triangle.biplot", "triangle.class", "triangle.plot")

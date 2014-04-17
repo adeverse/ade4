@@ -44,9 +44,9 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
 \examples{
 data(dunedata)
 dd1 <- dudi.mix(dunedata$envir, scann = FALSE)
-scatter.dudi(dd1, clab.r = 1, clab.c = 1.5)
+scatter(dd1, clab.r = 1, clab.c = 1.5)
 
 dd2 <- dudi.mix(dunedata$envir, scann = FALSE, add = TRUE)
-scatter.dudi(dd2, clab.r = 1, clab.c = 1.5)
+scatter(dd2, clab.r = 1, clab.c = 1.5)
 }
 \keyword{multivariate}

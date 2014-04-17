@@ -51,7 +51,7 @@ boxplot(dudi.acm(ours, scan = FALSE))
 \dontrun{
 data(banque)
 banque.acm <- dudi.acm(banque, scann = FALSE, nf = 3)
-scatter.dudi(banque.acm)
+scatter(banque.acm)
 
 apply(banque.acm$cr, 2, mean)
 banque.acm$eig[1:banque.acm$nf] # the same thing

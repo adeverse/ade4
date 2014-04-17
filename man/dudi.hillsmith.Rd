@@ -44,7 +44,7 @@ Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
    data(dunedata)
    attributes(dunedata$envir$use)$class <- "factor"   # use dudi.mix for ordered data
    dd1 <- dudi.hillsmith(dunedata$envir, scann = FALSE)
-   scatter.dudi(dd1, clab.r = 1, clab.c = 1.5)
+   scatter(dd1, clab.r = 1, clab.c = 1.5)
   }
 
 

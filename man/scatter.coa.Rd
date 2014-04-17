@@ -30,11 +30,11 @@ performs the scatter diagrams of a correspondence analysis.
 data(housetasks)
 par(mfrow = c(2,2))
 w <- dudi.coa(housetasks, scan = FALSE)
-scatter.dudi(w, sub = "0 / To be avoided")
-scatter.coa(w, method = 1, sub = "1 / Standard", posieig = "none")
-scatter.coa(w, method = 2, 
+
+scatter(w, method = 1, sub = "1 / Standard", posieig = "none")
+scatter(w, method = 2, 
     sub = "2 / Columns -> averaging -> Rows", posieig = "none")
-scatter.coa(w, method = 3, 
+scatter(w, method = 3, 
     sub = "3 / Rows -> averaging -> Columns ", posieig = "none")
 }
 \keyword{multivariate}

@@ -26,7 +26,7 @@ names(bacteria$espcodon)
 names(bacteria$espaa)
 names(bacteria$espbase)
 sum(bacteria$espcodon) # 22,619,749 codons
-scatter.coa(dudi.coa(bacteria$espcodon, scann = FALSE), 
+scatter(dudi.coa(bacteria$espcodon, scann = FALSE), 
     posi = "bottom")
 }
 \keyword{datasets}

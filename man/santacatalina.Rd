@@ -23,6 +23,6 @@ table.value(log(santacatalina + 1)[,sample(10)], grid = TRUE)
 coa1 <- dudi.coa(log(santacatalina + 1), scan = FALSE) # 2 factors
 table.value(log(santacatalina + 1)[order(coa1$li[,1]), 
     order(coa1$co[,1])], grid = TRUE) 
-scatter(coa1, posi = "bottom")
+scatter(coa1, posi = "bottomright")
 }
 \keyword{datasets}

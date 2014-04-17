@@ -66,10 +66,13 @@ S3method("print","dpcoa")
 S3method("print","dudi")
 S3method("print","foucart")
 S3method("print","kdist")
+S3method("print","krandboot")
 S3method("print","krandtest")
+S3method("print","krandxval")
 S3method("print","ktab")
 S3method("print","mcoa")
 S3method("print","mfa")
+S3method("print","multiblock")
 S3method("print","multispati")
 S3method("print","neig")
 S3method("print","niche")
@@ -79,7 +82,9 @@ S3method("print","pcaiv")
 S3method("print","phylog")
 S3method("print","procuste")
 S3method("print","pta")
+S3method("print","randboot")
 S3method("print","randtest")
+S3method("print","randxval")
 S3method("print","rlq")
 S3method("print","rtest")
 S3method("print","sepan")
@@ -87,6 +92,7 @@ S3method("print","statis")
 S3method("print","witcoi")
 S3method("print","within")
 S3method("print","witrlq")
+S3method("randboot","multiblock")
 S3method("randtest","amova")
 S3method("randtest","between")
 S3method("randtest","cca")
@@ -120,6 +126,7 @@ S3method("summary","dist")
 S3method("summary","dudi")
 S3method("summary","mcoa")
 S3method("summary","mfa")
+S3method("summary","multiblock")
 S3method("summary","multispati")
 S3method("summary","neig")
 S3method("summary","pcaiv")
@@ -136,6 +143,7 @@ S3method("t","dudi")
 S3method("t","ktab")
 S3method("tab.names<-","ktab")
 S3method("tab.names","ktab")
+S3method("testdim","multiblock")
 S3method("testdim","pca")
 S3method("wca","coinertia")
 S3method("wca","dudi")
@@ -159,14 +167,14 @@ importFrom(graphics, "plot", "boxplot")
 export("amova", "apqe", "disc", "divc", "divcmax", "dpcoa" )
 
 ## ******* utilities and misc *******
-export("acm.burt", "acm.disjonctif", "adegraphicsLoaded", "as.krandtest", "as.randtest", "as.rtest", "uniquewt.df")
+export("acm.burt", "acm.disjonctif", "adegraphicsLoaded", "as.krandboot", "as.krandtest", "as.krandxval", "as.randboot", "as.randtest", "as.randxval", "as.rtest", "uniquewt.df")
 export("bicenter.wt", "covfacwt", "covwt", "meanfacwt", "scalefacwt", "scalewt", "varfacwt", "varwt")
 
 ## ******* dist *******
 export("cailliez", "dist.binary", "dist.ktab", "dist.prop", "dist.quant", "is.euclid", "lingoes", "quasieuclid")
 
 ## ******* generic *******
-export("bca", "col.names", "col.names<-", "kplot", "reconst", "randtest", "rtest", "scatter", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )
+export("bca", "col.names", "col.names<-", "kplot", "reconst", "randboot", "randtest", "rtest", "scatter", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )
 
 ## ******* graphics *******
 export("s.arrow", "s.class", "s.chull", "s.corcircle", "s.distri", "s.hist", "s.image", "s.kde2d", "s.label", "s.logo", "s.match", "s.match.class", "s.multinom", "s.traject", "s.value")
@@ -186,7 +194,7 @@ export("cca", "coinertia", "discrimin", "discrimin.coa", "fourthcorner", "fourth
 export("combine.4thcorner", "combine.randtest.rlq", "mantel.randtest", "mantel.rtest", "niche.param", "p.adjust.4thcorner", "procuste.randtest", "procuste.rtest", "RVdist.randtest")
 
 ## ******* K-table methods *******
-export("costatis",  "foucart", "mcoa", "mdpcoa", "mfa", "pta", "sepan", "statico", "statis")
+export("costatis",  "foucart", "mcoa", "mbpcaiv", "mbpls", "mdpcoa", "mfa", "pta", "sepan", "statico", "statis")
 export("is.ktab", "kdist", "kdist2ktab", "kdist.cor", "kdisteuclid", "kplotX.mdpcoa", "kplot.sepan.coa", "ktab.data.frame", "ktab.list.df", "ktab.list.dudi", "ktab.match2ktabs",  "ktab.within", "ldist.ktab", "mantelkdist", "prep.binary", "prep.circular", "prep.fuzzy", "prep.mdpcoa", "RVkdist", "RV.rtest")
 
 ## ******* genet *******
@@ -221,7 +229,7 @@ export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multis
 export("add.scatter.eig", "scatterutil.base", "scatterutil.chull", "scatterutil.convrot90", "scatterutil.eigen", "scatterutil.ellipse", "scatterutil.eti", "scatterutil.eti.circ", "scatterutil.grid", "scatterutil.legend.bw.square" , "scatterutil.legendgris", "scatterutil.legend.square.grey", "scatterutil.logo", "scatterutil.scaling", "scatterutil.sco", "scatterutil.star", "scatterutil.sub")
 
 ## "add.position.triangle"
-## "add.scatter.eig" 
+## "add.scatter.eig"
 ## "area.util.contour"
 ## "area.util.xy"                                         
 ## "area.util.class"

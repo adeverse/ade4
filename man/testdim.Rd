@@ -4,16 +4,16 @@
 \title{ Function to perform a test of dimensionality}
 \description{
 This functions allow to test for the number of axes in multivariate analysis. The
-procedure is only implemented for principal component analysis on
+procedure \code{testdim.pca} implements a method for principal component analysis on
 correlation matrix. The procedure is based on the computation of the RV coefficient.
 }
 \usage{
-testdim(dudi, ...)
-\method{testdim}{pca}(dudi, nrepet = 99, nbax = dudi$rank, alpha = 0.05, ...)
+testdim(object, ...)
+\method{testdim}{pca}(object, nrepet = 99, nbax = object$rank, alpha = 0.05, ...)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{dudi}{ a duality diagram (an object of class \code{dudi})}
+  \item{object}{ an object corresponding to an analysis (e.g. duality diagram, an object of class \code{dudi})}
   \item{nrepet}{ the number of repetitions for the permutation procedure}
   \item{nbax}{ the number of axes to be tested, by default all axes}
   \item{alpha}{ the significance level}
@@ -33,7 +33,7 @@ testdim(dudi, ...)
   matrices. \emph{Computational Statistics and Data Analysis}, in press.
 }
 \author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
-\seealso{\code{\link{dudi.pca}}, \code{\link{RV.rtest}} }
+\seealso{\code{\link{dudi.pca}}, \code{\link{RV.rtest}},\code{\link{testdim.multiblock}}}
 \examples{
 tab <- data.frame(matrix(rnorm(200),20,10))
 pca1 <- dudi.pca(tab,scannf=FALSE)

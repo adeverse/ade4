@@ -1,12 +1,12 @@
-"testdim" <- function (dudi, ...) UseMethod("testdim")
+"testdim" <- function (object, ...) UseMethod("testdim")
 
 "testdim.pca" <-
-  function(dudi,nrepet=99,nbax=dudi$rank,alpha=0.05,...){
-    if (!inherits(dudi, "dudi"))
+  function(object, nrepet = 99, nbax = object$rank, alpha = 0.05, ...){
+    if (!inherits(object, "dudi"))
       stop("Object of class 'dudi' expected")
-    if (!inherits(dudi, "pca"))
+    if (!inherits(object, "pca"))
       stop("Object of class 'pca' expected")
-    appel <- as.list(dudi$call)
+    appel <- as.list(object$call)
     appel$scale <- eval.parent(appel$scale)
     appel$center <- eval.parent(appel$center)
     if (is.null(appel$scale)) appel$scale <- TRUE
@@ -14,10 +14,10 @@
     if (!(is.logical(appel$center))) stop("Not implemented for decentred PCA")
     if (!(appel$center == TRUE  && appel$scale == TRUE))
       stop("Only implemented for PCA on correlation matrix (center=TRUE and scale=TRUE)")
-    X <- as.matrix(dudi$tab)
-    if (!(identical(all.equal(dudi$lw,rep(1/nrow(X), nrow(X))),TRUE)))
+    X <- as.matrix(object$tab)
+    if (!(identical(all.equal(object$lw,rep(1/nrow(X), nrow(X))),TRUE)))
       stop("Not implemented for non-uniform row weights")
-    if (!(identical(all.equal(dudi$cw,rep(1, ncol(X))),TRUE)))
+    if (!(identical(all.equal(object$cw,rep(1, ncol(X))),TRUE)))
       stop("Not implemented for non-uniform column weights")
     if (nbax<1)
       stop("Incorrect number of axes")

@@ -39,3 +39,8 @@ dudi.type <- function(x){
 }
 
 
+adegraphicsLoaded <- function() {
+    ## check if adegraphics is loaded
+    "package:adegraphics"%in%search()
+}
+    

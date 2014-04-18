@@ -31,28 +31,28 @@ all((presid2002$tour2$Chirac + presid2002$tour2$Le_Pen) == presid2002$tour2$expr
 \dontrun{
 data(elec88)
 data(cnc2003)
-w1 = area.util.class(elec88$area, cnc2003$reg)
+w1 <- ade4:::area.util.class(elec88$area, cnc2003$reg)
 
 par(mfrow = c(2,2))
 par(mar = c(0.1,0.1,0.1,0.1))
 
 area.plot(w1)
-w = scale(elec88$tab$Chirac)
+w <- scale(elec88$tab$Chirac)
 s.value(elec88$xy, w, add.plot = TRUE)
 scatterutil.sub("Chirac 1988 T1", csub = 2, "topleft")
 
 area.plot(w1)
-w = scale(presid2002$tour1$Chirac/ presid2002$tour1$exprimes)
+w <- scale(presid2002$tour1$Chirac / presid2002$tour1$exprimes)
 s.value(elec88$xy, w, add.plot = TRUE)
 scatterutil.sub("Chirac 2002 T1", csub = 2, "topleft")
 
 area.plot(w1)
-w = scale(elec88$tab$Mitterand)
+w <- scale(elec88$tab$Mitterand)
 s.value(elec88$xy, w, add.plot = TRUE)
 scatterutil.sub("Mitterand 1988 T1", csub = 2, "topleft")
 
 area.plot(w1)
-w = scale(presid2002$tour2$Chirac/ presid2002$tour2$exprimes)
+w <- scale(presid2002$tour2$Chirac / presid2002$tour2$exprimes)
 s.value(elec88$xy, w, add.plot = TRUE)
 scatterutil.sub("Chirac 2002 T2", csub = 2, "topleft")
 }

@@ -67,7 +67,7 @@ procuste.randtest(pcoscaled(dmorpho), pcoscaled(dhabitat))
 ecophy <- taxo2phylog(ecomor$taxo, add.tools=TRUE)
 table.phylog(ecomor$habitat, ecophy, clabel.n = 0.5, f = 0.6,
      clabel.c = 0.75, clabel.r = 0.5, csi = 0.75, cleg = 0)
-plot.phylog(ecophy, clabel.n = 0.75, clabel.l = 0.75,
+plot(ecophy, clabel.n = 0.75, clabel.l = 0.75,
      labels.l = ecomor$labels[,"latin"])
 mantel.randtest(dmorpho, dtaxo)
 mantel.randtest(dhabitat, dtaxo)

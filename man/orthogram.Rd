@@ -78,7 +78,7 @@ dotchart.phylog(ung.phy,val = z, clabel.n = 1,
 table.phylog(ung.phy$Bscores, ung.phy,clabel.n = 1,
      labels.n = ung.phy$Blabels)
 orthogram(z, ung.phy$Bscores)
-orthogram(z, phyl=ung.phy) # the same thing
+orthogram(z, phylog=ung.phy) # the same thing
 
 # a spatial example
 data(irishdata)

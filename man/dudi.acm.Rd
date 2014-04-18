@@ -55,7 +55,7 @@ scatter(banque.acm)
 
 apply(banque.acm$cr, 2, mean)
 banque.acm$eig[1:banque.acm$nf] # the same thing
-boxplot.acm(banque.acm)
+boxplot(banque.acm)
 
 scatter(banque.acm)
 

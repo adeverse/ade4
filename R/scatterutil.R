@@ -52,7 +52,7 @@
         yaxs = "i", frame.plot = FALSE)
 
     if (!is.null(pixmap)) {
-        plot(pixmap, add = TRUE)
+        pixmap::plot(pixmap, add = TRUE)
     }
 
     if (!is.null(contour)) {

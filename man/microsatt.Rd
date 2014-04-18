@@ -39,7 +39,7 @@ See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps055.pdf} (in F
 data(microsatt)
 fac <- factor(rep(microsatt$loci.names, microsatt$loci.eff))
 w <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE)
-wit <- within(w, fac, scann = FALSE)
+wit <- wca(w, fac, scann = FALSE)
 microsatt.ktab <- ktab.within(wit)
 
 plot(sepan(microsatt.ktab)) # 9 separated correspondence analyses

@@ -60,7 +60,7 @@ neig0 <- nb2neig(dnearneigh(as.matrix(julliot$xy), 1, 1.8))
 s.label(julliot$xy, neig = neig0, clab = 0.75, incl = FALSE,
  addax = FALSE, grid = FALSE)
 
-gearymoran(neig.util.LtoG(neig0), log(julliot$tab+1))
+gearymoran(ade4:::neig.util.LtoG(neig0), log(julliot$tab+1))
 orthogram(log(julliot$tab[,3]+1), ortho = scores.neig(neig0),
  nrepet = 9999)}
 }}

@@ -93,8 +93,8 @@ for (i in 1:9) {
 
 data(irishdata)
 par(mfrow = c(2,2))
-w <- area.util.contour(irishdata$area)
-xy <- area.util.xy(irishdata$area)
+w <- ade4:::area.util.contour(irishdata$area)
+xy <- ade4:::area.util.xy(irishdata$area)
 area.plot(irishdata$area, cpoint = 1)
 apply(w, 1, function(x) segments(x[1],x[2],x[3],x[4], lwd = 3))
 area.plot(irishdata$area, clabel = 1)
@@ -129,8 +129,8 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     
     # 2
     area1 <- poly2area(polys)
-    w <- area.util.contour(area1)
-    wxy <- area.util.xy(area1)
+    w <- ade4:::area.util.contour(area1)
+    wxy <- ade4:::area.util.xy(area1)
     area.plot(area1, values = columbus$CRIME, sub = paste("Columbus ",
     "OH: residential burglaries and vehicle\nthefts",
     "per thousand households, 1980"))
@@ -139,7 +139,7 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     # 3
     data(elec88)
     fr.area <- elec88$area
-    fr.xy <- area.util.xy(fr.area)
+    fr.xy <- ade4:::area.util.xy(fr.area)
     fr.neig <- elec88$neig # neig(area = fr.area)
 
     # 4

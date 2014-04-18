@@ -22,7 +22,7 @@ geographic range size-body size relationship in new world terrestrial carnivora.
 \dontrun{
 data(carni70)
 carni70.phy <- newick2phylog(carni70$tre)
-plot.phylog(carni70.phy)
+plot(carni70.phy)
 
 size <- scalewt(log(carni70$tab))[,1]
 names(size) <- row.names(carni70$tab)

@@ -90,7 +90,7 @@ data(microsatt)
 mic.genet <- count2genet(microsatt$tab)
 mic.dist <- dist.genet(mic.genet, 1)
 mic.phylog <- hclust2phylog(hclust(mic.dist))
-plot.phylog(mic.phylog)
+plot(mic.phylog)
 mic.maxpond <- divcmax(mic.phylog$Wdist)$vectors$num
 dotchart.phylog(mic.phylog, mic.maxpond)
 }

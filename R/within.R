@@ -114,3 +114,21 @@ wca <- function (x, ...) UseMethod("wca")
     print(sumry, quote = FALSE)
     cat("\n")
 }
+
+
+summary.within <- function(object, ...){
+    thetitle <- "Within-class analysis"
+    cat(thetitle)
+    cat("\n\n")
+    NextMethod()
+    appel <- as.list(object$call)
+    dudi <- eval.parent(appel$x)
+    cat(paste("Total unconstrained inertia (", deparse(appel$x), 
+              "): ", sep = ""))
+    cat(signif(sum(dudi$eig), 4))
+    cat("\n\n")
+    cat(paste("Inertia of", deparse(appel$x), "independent of", 
+              deparse(appel$fac), "(%): "))
+    cat(signif(object$ratio * 100, 4))
+    cat("\n\n")
+}

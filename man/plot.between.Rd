@@ -1,5 +1,6 @@
 \encoding{latin1}
 \name{between}
+\alias{summary.between}
 \alias{print.between}
 \alias{plot.between}
 \alias{print.betcoi}
@@ -12,9 +13,10 @@ Outputs and graphical representations of the results of a between-class analysis
 \method{print}{between}(x, \dots)
 \method{plot}{betcoi}(x, xax = 1, yax = 2, \dots)
 \method{print}{betcoi}(x, \dots)
+\method{summary}{between}(object, \dots)
 }
 \arguments{
-  \item{x}{an object of class \code{between} or \code{betcoi}}
+  \item{x,object}{an object of class \code{between} or \code{betcoi}}
   \item{xax, yax}{the column index of the x-axis and the y-axis}
   \item{\dots}{further arguments passed to or from other methods}
 }

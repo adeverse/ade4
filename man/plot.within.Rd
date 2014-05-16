@@ -1,6 +1,7 @@
 \encoding{latin1}
 \name{within}
 \alias{print.within}
+\alias{summary.within}
 \alias{plot.within}
 \alias{plot.witcoi}
 \alias{print.witcoi}
@@ -13,17 +14,18 @@ Outputs and graphical representations of the results of a within-class analysis.
 \method{print}{within}(x, \dots)
 \method{plot}{witcoi}(x, xax = 1, yax = 2, \dots)
 \method{print}{witcoi}(x, \dots)
+\method{summary}{within}(object, \dots)
 }
 \arguments{
-  \item{x}{an object of class \code{within} or \code{witcoi}}
+  \item{x,object}{an object of class \code{within} or \code{witcoi}}
   \item{xax}{the column index for the x-axis}
   \item{yax}{the column index for the y-axis}
   \item{\dots}{further arguments passed to or from other methods}
 }
 
 \references{
-Benzécri, J. P. (1983) Analyse de l'inertie intra-classe par l'analyse d'un tableau de correspondances. \emph{Les Cahiers de l'Analyse des données}, \bold{8}, 351--358.\cr\cr
-Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
+Benz?cri, J. P. (1983) Analyse de l'inertie intra-classe par l'analyse d'un tableau de correspondances. \emph{Les Cahiers de l'Analyse des donn?es}, \bold{8}, 351--358.\cr\cr
+Dol?dec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
 \author{
 Daniel Chessel \cr

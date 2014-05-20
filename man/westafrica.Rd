@@ -20,7 +20,7 @@ This data set contains informations about faunal similarities between river basi
    \item{cadre}{: a data frame with the coordinates of points used to make the representation (see example)}   
 }}
 \source{
-Data provided by B. Hugueny \email{hugueny@biomserv.univ-lyon1.fr}.
+Data provided by B. Hugueny \email{hugueny@mnhn.fr}.
 
 Paugy, D., Traoré, K. and Diouf, P.F. (1994) Faune ichtyologique des eaux douces d'Afrique de l'Ouest. 
 In \emph{Diversité biologique des poissons des eaux douces et saumâtres d'Afrique. Synthèses géographiques}, 

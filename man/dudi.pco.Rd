@@ -40,7 +40,7 @@ dudi.pco(d, row.w = "uniform", scannf = TRUE, nf = 2,
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(yanomama)

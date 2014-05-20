@@ -38,7 +38,7 @@ returns a distance matrix of class \code{dist} between the rows of the data fram
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(aviurba)

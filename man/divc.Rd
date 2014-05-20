@@ -30,7 +30,7 @@ Champely, S. and Chessel, D. (2002) Measuring biological diversity using Euclide
 \emph{Environmental and Ecological Statistics}, \bold{9}, 167--177.
 
 }
-\author{Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
+\author{Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \examples{
 data(ecomor)

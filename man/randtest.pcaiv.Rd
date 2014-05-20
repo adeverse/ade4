@@ -25,7 +25,7 @@ Performs a Monte-Carlo test on on the percentage of explained (i.e.
 \value{
   a list of the class \code{randtest}
 }
-\author{Stephane Dray \email{dray@biomserv.univ-lyon1.fr}, original code
+\author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}, original code
   by Raphael Pelissier}
 \examples{
 data(rpjdl)

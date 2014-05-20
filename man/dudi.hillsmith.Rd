@@ -35,8 +35,8 @@ Returns a list of class \code{mix} and \code{dudi} (see \link{dudi}) containing 
 
 \references{ Hill, M. O., and A. J. E. Smith. 1976. Principal component analysis of taxonomic data with multi-state discrete characters. 
 \emph{Taxon}, \bold{25}, 249-255. }
-\author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}\cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+\author{ Stephane Dray \email{stephane.dray@univ-lyon1.fr}\cr
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 
 \seealso{ \code{dudi.mix}}

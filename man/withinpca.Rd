@@ -37,7 +37,7 @@ returns a list of the sub-class \code{within} of class \code{dudi}. See \code{\l
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

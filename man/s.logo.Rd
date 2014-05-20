@@ -40,7 +40,7 @@ s.logo(dfxy, listlogo, klogo=NULL, clogo=1, rectlogo=TRUE,
 \value{
 The matched call.
 }
-\author{Daniel Chessel  and Thibaut Jombart \email{jombart@biomserv.univ-lyon1.fr}}
+\author{Daniel Chessel  and Thibaut Jombart \email{t.jombart@imperial.ac.uk}}
 \examples{
 if(require(pixmap, quiet=TRUE)){
 	data(ggtortoises)

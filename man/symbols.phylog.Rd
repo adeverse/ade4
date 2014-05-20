@@ -24,7 +24,7 @@ symbols.phylog(phylog, circles, squares, csize = 1, clegend = 1,
 }
 \author{
 Daniel Chessel  \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{table.phylog}} and \code{\link{dotchart.phylog}} for many variables}
 \examples{

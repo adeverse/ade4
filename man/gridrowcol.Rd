@@ -26,7 +26,7 @@ Méot, A., Chessel, D. and Sabatier, D. (1993) Opérateurs de voisinage et analyse
 
 Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}. Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \seealso{\code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link{mld}}}

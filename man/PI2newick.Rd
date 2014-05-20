@@ -19,7 +19,7 @@ Returns a list containing :
 \references{
 Abouheif, E. (1999) A method for testing the assumption of phylogenetic independence in comparative data. \emph{Evolutionary Ecology Research}, \bold{1}, 895--909.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \examples{

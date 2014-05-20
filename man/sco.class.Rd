@@ -41,7 +41,7 @@ sco.class(score, fac, label = levels(fac), clabel = 1, horizontal = TRUE,
 \value{
 The matched call.
 }
-\author{Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
+\author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
 \examples{
 data(meau)
 envpca <- dudi.pca(meau$env, scannf=FALSE)

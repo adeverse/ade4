@@ -22,7 +22,7 @@ Nee, S. and May, R.M. (1997) Extinction and the loss of evolutionary history. \e
 \bold{278}, 692--694.
 }
 \author{
-Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
+Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \examples{
 data(carni70)

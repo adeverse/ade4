@@ -34,7 +34,7 @@ match.call(), names = colnames(sim), p.adjust.method = "none")
 \value{
 \code{plot.krandtest} draws the \emph{p} simulated values histograms and the position of the observed value.
 }
-\author{Daniel Chessel and Stephane Dray \email{dray@biomserv.univ-lyon1.fr} }
+\author{Daniel Chessel and Stephane Dray \email{stephane.dray@univ-lyon1.fr} }
 \seealso{\code{\link{randtest}}}
 \examples{
 wkrandtest <- as.krandtest(obs=c(0,1.2,2.4,3.4,5.4,20.4),sim=matrix(rnorm(6*200),200,6))

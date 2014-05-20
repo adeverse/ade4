@@ -30,7 +30,7 @@ an object of class \code{dist}
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(ecomor)

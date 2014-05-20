@@ -21,7 +21,7 @@ returns an object of class \code{krandtest} or \code{randtest}
   metric distances among DNA haplotypes: application to human mitochondrial DNA restriction data.
   \emph{Genetics}, \bold{131}, 479--491.
 }
-\author{Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
+\author{Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \examples{
 data(humDNAm)

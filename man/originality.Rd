@@ -45,7 +45,7 @@ Nixon, K.C. and Wheeler, Q.D. (1992). Measures of phylogenetic diversity. In: \e
 Phylogeny} (eds. Novacek, M.J. and Wheeler, Q.D.), 216--234, Columbia University Press, New York.
 }
 \author{
-Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
+Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \examples{
 data(carni70)

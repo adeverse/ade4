@@ -32,7 +32,7 @@ Cliff, A. D. and Ord, J. K. (1973) \emph{Spatial autocorrelation}, Pion, London.
 Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. 
 \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \seealso{\code{\link[spdep]{moran.test}} and \code{\link[spdep]{geary.test}} for classical versions of Moran's test and Geary's one}

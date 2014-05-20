@@ -51,7 +51,7 @@ mfa(X, option = c("lambda1", "inertia", "uniform", "internal"),
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(friday87)

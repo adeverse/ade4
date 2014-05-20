@@ -55,7 +55,7 @@ Thioulouse, J., and D. Chessel. 1987. Les analyses multi-tableaux en écologie fa
 }
 \author{
 Pierre Bady \email{pierre.bady@univ-lyon1.fr}\cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

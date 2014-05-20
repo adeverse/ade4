@@ -42,7 +42,7 @@ The function \code{dudi.fpca} returns a list of class \code{pca} and \code{dudi}
 approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 w1 <- matrix(c(1,0,0,2,1,1,0,2,2,0,1,0,1,1,1,0,1,3,1,0), 4, 5)

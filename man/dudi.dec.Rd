@@ -23,7 +23,7 @@ application aux peuplements ichtyologiques du haut-Rhône.
 \emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{336}, 29--40.}
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(ichtyo)

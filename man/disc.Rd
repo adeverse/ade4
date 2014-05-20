@@ -22,7 +22,7 @@ Returns a list of objects of class \code{dist}
 Rao, C.R. (1982) Diversity and dissimilarity coefficients: a unified approach.
 \emph{Theoretical Population Biology}, \bold{21}, 24--43.
 }
-\author{Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
+\author{Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \examples{
 data(humDNAm)

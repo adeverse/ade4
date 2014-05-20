@@ -51,7 +51,7 @@ foucart(X, scannf = TRUE, nf = 2)
 \references{Foucart, T. (1984) \emph{Analyse factorielle de tableaux multiples}, Masson, Paris.
 }
 \author{P. Bady \email{pierre.bady@univ-lyon1.fr}\cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(bf88)

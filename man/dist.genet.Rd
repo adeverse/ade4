@@ -84,7 +84,7 @@ Sanchez-Mazas A. (2003) Cours de Génétique Moléculaire des Populations. Cours VI
 \url{http://anthro.unige.ch/GMDP/Alicia/GMDP_dist.htm}
 }
 \author{ Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr} 
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr} 
 }
 \examples{
 data(casitas)

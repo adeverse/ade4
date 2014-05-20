@@ -16,7 +16,7 @@ Test of the sum of a discriminant analysis eigenvalues (divided by the rank). No
 \value{
 returns a list of class \code{randtest}
 }
-\author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr}
+\author{Jean Thioulouse \email{Jean.Thioulouse@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

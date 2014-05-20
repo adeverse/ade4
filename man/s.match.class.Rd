@@ -54,7 +54,7 @@ The matched call.
 }
 
 \author{
-Stephane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 
 \seealso{

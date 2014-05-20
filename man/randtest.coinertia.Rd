@@ -22,7 +22,7 @@ a list of the class \code{randtest}
 Dolédec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for
 studying species-environment relationships. \emph{Freshwater Biology}, \bold{31}, 277--294.
 }
-\author{Jean Thioulouse \email{ade4-jt@biomserv.univ-lyon1.fr} modified by Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
+\author{Jean Thioulouse \email{Jean.Thioulouse@univ-lyon1.fr} modified by Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
 \note{A testing procedure based on the total coinertia of the analysis
   is available by the function \code{randtest.coinertia}. The function
   allows to deal with various analyses for the two tables. The test is

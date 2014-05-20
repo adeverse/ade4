@@ -60,7 +60,7 @@ Returns a list of classes \code{nipals}:
   \bold{2}, 37--52.
   }
 
-\author{Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
+\author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
 \seealso{\code{\link{dudi.pca}}}
 \examples{
 data(doubs)

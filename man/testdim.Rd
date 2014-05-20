@@ -32,7 +32,7 @@ testdim(object, ...)
   dimensionality based on measurements of similarity between
   matrices. \emph{Computational Statistics and Data Analysis}, in press.
 }
-\author{ Stephane Dray \email{dray@biomserv.univ-lyon1.fr}}
+\author{ Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
 \seealso{\code{\link{dudi.pca}}, \code{\link{RV.rtest}},\code{\link{testdim.multiblock}}}
 \examples{
 tab <- data.frame(matrix(rnorm(200),20,10))

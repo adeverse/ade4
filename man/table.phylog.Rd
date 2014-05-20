@@ -30,7 +30,7 @@ table.phylog(df, phylog, x = 1:ncol(df), f.phylog = 0.5,
   \item{clegend}{: a character size for the legend (if 0, no legend)}
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \details{The function verifies that \code{sort(row.names(df))==sort(names(phylog$leaves))}. 
 If \code{df} is a matrix the function uses \code{as.data.frame(df)}. }

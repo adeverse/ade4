@@ -25,7 +25,7 @@ returns an object of class \code{dist} with a Euclidean distance
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(capitales)

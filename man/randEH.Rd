@@ -28,7 +28,7 @@ Is the originality of a species measurable?
 \emph{Ecology Letters}, \bold{8}, 579--586.
 }
 \author{
-Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
+Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \seealso{\code{\link{optimEH}}
 }

@@ -33,7 +33,7 @@ TRUE, yranging = NULL, joining = TRUE, yjoining = NULL, ceti = 1, cdot =
 }
 \author{
 Daniel Chessel  \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{symbols.phylog}} and \code{\link{table.phylog}}}
 \examples{

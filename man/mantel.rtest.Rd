@@ -21,7 +21,7 @@ an object of class \code{rtest} (randomization tests)
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
     data(yanomama)

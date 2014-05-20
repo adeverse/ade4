@@ -44,8 +44,8 @@ Returns a list of class \code{dpcoa} containing:
   a double principal coordinate analysis. \emph{Journal of Theoretical Biology}, \bold{228}, 523--537.
 }
 \author{Daniel Chessel  \cr
-Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr} \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Sandrine Pavoine \email{pavoine@mnhn.fr} \cr
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(humDNAm)

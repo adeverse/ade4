@@ -50,7 +50,7 @@ Ollier, S., Couteron, P. and Chessel, D. (2005) Orthonormal transforms to detect
 phylogenetic autocorrelation. \emph{Biometrics} (in press).
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{newick2phylog}}, \code{\link{plot.phylog}}}
 \examples{

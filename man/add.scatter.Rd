@@ -46,7 +46,7 @@ The matched call (invisible).
 }
 \seealso{\code{\link{scatter}}
 }
-\author{Thibaut Jombart \email{jombart@biomserv.univ-lyon1.fr}}
+\author{Thibaut Jombart \email{t.jombart@imperial.ac.uk}}
 \examples{
 par(mfrow=c(2,2))
 

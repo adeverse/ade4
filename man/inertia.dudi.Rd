@@ -36,7 +36,7 @@ Lebart, L., Morineau, A. and Piron, M. (1995) \emph{Statistique exploratoire mul
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(housetasks)

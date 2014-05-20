@@ -28,7 +28,7 @@ Chessel, D., Lebreton J. D. and Yoccoz N. (1987) Propriétés de l'analyse canoniq
 
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(rpjdl)

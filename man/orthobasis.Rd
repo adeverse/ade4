@@ -56,7 +56,7 @@ Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux 
 Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}.
 Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
-\author{Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
+\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \note{the function \code{orthobasis.haar} uses function \code{\link[waveslim]{wavelet.filter}} from package waveslim.}

@@ -18,7 +18,7 @@ returns a list of class \code{ktab}. See \code{\link{ktab}}
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(euro123)

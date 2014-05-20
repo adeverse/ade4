@@ -26,7 +26,7 @@ returns a logical value indicating if all the eigenvalues are positive or equal 
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 w <- matrix(runif(10000), 100, 100)

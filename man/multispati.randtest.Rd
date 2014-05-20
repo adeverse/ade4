@@ -28,7 +28,7 @@ Smouse, P. E. and Peakall, R. (1999) Spatial autocorrelation analysis of individ
 \emph{Heredity}, \bold{82}, 561--573.
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{

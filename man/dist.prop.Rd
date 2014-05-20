@@ -37,7 +37,7 @@ Nei, M. (1972) Genetic distances between populations. \emph{The American Natural
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(microsatt)

@@ -38,7 +38,7 @@ an object of class 'pcaivortho' sub-class of class \code{dudi}
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
 Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \references{

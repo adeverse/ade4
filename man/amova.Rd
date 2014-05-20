@@ -36,7 +36,7 @@ Excoffier, L., Smouse, P.E. and Quattro, J.M. (1992) Analysis of molecular varia
 from metric distances among DNA haplotypes: application to human mitochondrial DNA restriction
 data. \emph{Genetics}, \bold{131}, 479--491.
 }
-\author{Sandrine Pavoine \email{pavoine@biomserv.univ-lyon1.fr}
+\author{Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \seealso{\code{\link{randtest.amova}}}
 \examples{

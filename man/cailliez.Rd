@@ -30,7 +30,7 @@ From the DistPCoa program of P. Legendre et M.J. Anderson\cr
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(capitales)

@@ -36,7 +36,7 @@ sub = "", csub = 1.25, possub = "bottomleft")
 \value{
 The matched call.
 }
-\author{Stephane Dray \email{dray@biomserv.univ-lyon1.fr}, Jean Thioulouse }
+\author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}, Jean Thioulouse }
 \examples{
 data(meau)
 envpca <- dudi.pca(meau$env, scannf=FALSE)

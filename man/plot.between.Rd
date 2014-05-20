@@ -27,7 +27,7 @@ I- Description d'un plan d'observations complet par projection de variables. \em
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
 Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \seealso{\code{\link{bca.dudi}}, \code{\link{bca.coinertia}}}

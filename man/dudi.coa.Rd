@@ -24,7 +24,7 @@ Greenacre, M. J. (1984) \emph{Theory and applications of correspondence analysis
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(rpjdl)

@@ -72,8 +72,8 @@ spatially explicit multivariate method to disentangle global and local
 patterns of genetic variability. Submitted to \emph{Genetics}.
 }
 \author{Daniel Chessel  \cr
-Sebastien Ollier \email{ollier@biomserv.univ-lyon1.fr} \cr
-Thibaut Jombart \email{jombart@biomserv.univ-lyon1.fr}
+Sebastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
+Thibaut Jombart \email{t.jombart@imperial.ac.uk}
 
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}

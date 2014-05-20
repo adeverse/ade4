@@ -1,7 +1,7 @@
 ######################################################
 # Function to add sub-graphics to an existing plot
 # Thibaut Jombart 2007
-# (jombart@biomserv.univ-lyon1.fr)
+# (t.jombart@imperial.ac.uk)
 ######################################################
 
 # Note: this function uses par("plt"), which interacts with other par()

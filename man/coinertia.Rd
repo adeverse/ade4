@@ -57,7 +57,7 @@ IMPORTANT : \code{dudi1} and \code{dudi2} must have identical row weights.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(doubs)

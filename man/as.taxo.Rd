@@ -23,7 +23,7 @@ dist.taxo(taxo)
 \code{dist.taxo} returns a numeric of class \code{dist}.
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{taxo2phylog}} to transform an object of class \code{taxo} into an object of class \code{phylog}
 }

@@ -24,8 +24,7 @@ aire: spatial distribution area (\eqn{km^{2}}{km^2})\cr
 alti: maximum altitude in meter (logged transform)\cr       
 }
 \source{
-This data set was obtained by Clémentine Gimaret-Carpentier\cr
- \email{gimaret@biomserv.univ-lyon1.fr}.
+This data set was obtained by Clémentine Gimaret-Carpentier.
 }
 \examples{
 \dontrun{

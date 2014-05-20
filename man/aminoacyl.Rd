@@ -20,7 +20,7 @@
  } 
 }
 \source{
- Data prepared by D. Charif \email{charif@biomserv.univ-lyon1.fr} starting from:\cr
+ Data prepared by D. Charif \email{Delphine.Charif@versailles.inra.fr} starting from:\cr
  \url{http://www.expasy.org/sprot/}
 }
 \references{

@@ -57,7 +57,7 @@ Chessel, D. and Hanafi, M. (1996) Analyses de la co-inertie de K nuages de point
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(friday87)

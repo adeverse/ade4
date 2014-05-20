@@ -47,8 +47,8 @@ Dolédec, S., Chessel, D. and Gimaret, C. (2000) Niche separation in community an
 }
 \author{
 Daniel Chessel\cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}\cr
-Stephane Dray \email{dray@biomserv.univ-lyon1.fr}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
+Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(doubs)

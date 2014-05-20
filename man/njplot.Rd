@@ -16,7 +16,7 @@ This data set describes the phylogeny of 36 bacteria as reported by Perrière and
    }
 }
 \source{
-Data were obtained by Manolo Gouy \email{mgouy@biomserv.univ-lyon1.fr}
+Data were obtained by Manolo Gouy \email{manolo.gouy@univ-lyon1.fr}
 }
 \references{
 Perrière, G. and Gouy, M. (1996) WWW-Query : an on-line retrieval system for biological sequence banks. \emph{Biochimie}, \bold{78}, 364--369.

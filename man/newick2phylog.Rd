@@ -31,7 +31,7 @@ newick2phylog.addtools(res, tol = 1e-07)
 Return object of class \code{phylog}.
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{ollier@biomserv.univ-lyon1.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{phylog}}, \code{\link{plot.phylog}}, \code{\link{as.taxo}}}
 \examples{

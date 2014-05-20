@@ -28,7 +28,7 @@ Legendre, P., and L. Legendre. (1998) Numerical ecology, 2nd English edition edi
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{dray@biomserv.univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \note{ according to the program DistPCoa of P. Legendre and M.J. Anderson\cr
 \url{http://www.fas.umontreal.ca/BIOL/Casgrain/en/labo/distpcoa.html}

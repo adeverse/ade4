@@ -16,7 +16,7 @@ kdist2ktab(kd, scale = TRUE, tol = 1e-07)
 returns a list of class \code{ktab} containing for each distance of \code{kd} the data frame of its Euclidean representation
 }
 \author{ Daniel Chessel  \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}}
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}}
 \examples{
 data(friday87)
 fri.w <- ktab.data.frame(friday87$fau, friday87$fau.blo, 

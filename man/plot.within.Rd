@@ -29,7 +29,7 @@ Dol?dec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnel
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{dufour@biomserv.univ-lyon1.fr}\cr
+Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
 Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \seealso{\code{\link{wca.dudi}}, \code{\link{wca.coinertia}}}

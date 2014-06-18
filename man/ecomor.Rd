@@ -42,19 +42,31 @@ data(ecomor)
 ric <- apply(ecomor$habitat, 2, sum)
 s.corcircle(dudi.pca(log(ecomor$morpho), scan = FALSE)$co)
 
-forsub <- data.frame(t(apply(ecomor$forsub, 1,
-     function (x) x/sum(x))))
+forsub <- data.frame(t(apply(ecomor$forsub, 1, function (x) x / sum(x))))
 pca1 <- dudi.pca(forsub, scan = FALSE, scale = FALSE)
-s.arrow(pca1$c1)
-w <- as.matrix(forsub)%*%as.matrix(pca1$c1)
-s.label(w, clab = 0, add.p = TRUE, cpoi = 2)
+w1 <- as.matrix(forsub)%*%as.matrix(pca1$c1)
+if(adegraphicsLoaded()) {
+  g1 <- s.arrow(pca1$c1, plot = FALSE)
+  g2 <- s.label(w1, plab.cex = 0, ppoi.cex = 2, plot = FALSE)
+  G1 <- superpose(g1, g2, plot = TRUE)
+} else {
+  s.arrow(pca1$c1)
+  s.label(w1, clab = 0, add.p = TRUE, cpoi = 2)
+}
 
-diet <- data.frame(t(apply(ecomor$diet, 1,
-     function (x) x/sum(x))))
+diet <- data.frame(t(apply(ecomor$diet, 1, function (x) x / sum(x))))
 pca2 <- dudi.pca(diet, scan = FALSE, scale = FALSE)
-s.arrow(pca2$c1)
-w <- as.matrix(diet)%*%as.matrix(pca2$c1)
-s.label(w, clab = 0, add.p = TRUE, cpoi = 2)
+w2 <- as.matrix(diet)%*%as.matrix(pca2$c1)
+if(adegraphicsLoaded()) {
+  g3 <- s.arrow(pca2$c1, plot = FALSE)
+  g4 <- s.label(w2, plab.cex = 0, ppoi.cex = 2, plot = FALSE)
+  G2 <- superpose(g3, g4, plot = TRUE)
+} else {
+  s.arrow(pca2$c1)
+  s.label(w2, clab = 0, add.p = TRUE, cpoi = 2)
+}
+
+
 \dontrun{
 dmorpho <- dist.quant(log(ecomor$morpho), 3)
 dhabitat <- dist.binary(ecomor$habitat, 1)

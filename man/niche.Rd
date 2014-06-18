@@ -48,27 +48,44 @@ Dolédec, S., Chessel, D. and Gimaret, C. (2000) Niche separation in community an
 \author{
 Daniel Chessel\cr
 Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(doubs)
 dudi1 <- dudi.pca(doubs$env, scale = TRUE, scan = FALSE, nf = 3)
 nic1 <- niche(dudi1, doubs$fish, scann = FALSE)
 
-par(mfrow = c(2,2))
-s.traject(dudi1$li, clab = 0)
-s.traject(nic1$ls, clab = 0)
-s.corcircle(nic1$as)
-s.arrow(nic1$c1)
+if(adegraphicsLoaded()) {
+  g1 <- s.traject(dudi1$li, plab.cex = 0, plot = FALSE)
+  g2 <- s.traject(nic1$ls, plab.cex = 0, plot = FALSE)
+  g3 <- s.corcircle(nic1$as, plot = FALSE)
+  g4 <- s.arrow(nic1$c1, plot = FALSE)
+  G1 <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
+  
+  glist <- list()
+  for(i in 1:ncol(doubs$fish))
+    glist[[i]] <- s.distri(nic1$ls, dfdistri = doubs$fish[, i], psub.text = names(doubs$fish)[i], 
+      plot = FALSE, storeData = TRUE)
+  G2 <- ADEgS(glist, layout = c(5, 6))
+  
+  G3 <- s.arrow(nic1$li, plab.cex = 0.7)  
+    
+} else {
+  par(mfrow = c(2, 2))
+  s.traject(dudi1$li, clab = 0)
+  s.traject(nic1$ls, clab = 0)
+  s.corcircle(nic1$as)
+  s.arrow(nic1$c1)
 
-par(mfrow = c(5,6))
-for (i in 1:27) s.distri(nic1$ls, as.data.frame(doubs$fish[,i]),
+  par(mfrow = c(5, 6))
+  for (i in 1:27) s.distri(nic1$ls, as.data.frame(doubs$fish[,i]),
     csub = 2, sub = names(doubs$fish)[i])
+    
+  par(mfrow = c(1, 1))
+  s.arrow(nic1$li, clab = 0.7)
 
-par(mfrow = c(1,1))
-s.arrow(nic1$li, clab = 0.7)
+}
 
-par(mfrow = c(1,1))
 data(trichometeo)
 pca1 <- dudi.pca(trichometeo$meteo, scan = FALSE)
 nic1 <- niche(pca1, log(trichometeo$fau + 1), scan = FALSE)

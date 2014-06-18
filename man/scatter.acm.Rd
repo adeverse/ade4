@@ -18,10 +18,14 @@ performs the scatter diagrams of a Multiple Correspondence Analysis.
     "topright", "bottomleft", "bottomright") in a array of figures}
   \item{\dots}{further arguments passed to or from other methods}
 }
-\author{Daniel Chessel }
+\author{Daniel Chessel}
 \examples{
 data(lascaux)
-scatter(dudi.acm(lascaux$ornem, sca = FALSE), csub = 3)
+if(adegraphicsLoaded()) {
+  plot(dudi.acm(lascaux$ornem, sca = FALSE))
+} else {
+  scatter(dudi.acm(lascaux$ornem, sca = FALSE), csub = 3)
+}
 }
 \keyword{multivariate}
 \keyword{hplot}

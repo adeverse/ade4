@@ -22,7 +22,16 @@ Laiolo, P. and Rolando, A. (2003) The evolution of vocalisations in the genus Co
 }
 \examples{
 data(corvus)
-plot(corvus[,1:2])
-s.class(corvus[,1:2], corvus[,4]:corvus[,3], add.p = TRUE)
+
+if(adegraphicsLoaded()) {
+  g1 <- s.label(corvus[, 1:2], plab.cex = 0, pori.incl = FALSE, pgrid.draw = F, 
+    paxes.draw = T, paxes.asp = "full", plot = FALSE)
+  g2 <- s.class(corvus[, 1:2], corvus[, 4]:corvus[, 3], plot = FALSE)
+  G <- superpose(g1, g2, plot = TRUE)
+
+} else {
+  plot(corvus[, 1:2])
+  s.class(corvus[, 1:2], corvus[, 4]:corvus[, 3], add.p = TRUE)
+}
 }
 \keyword{datasets}

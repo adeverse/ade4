@@ -18,11 +18,11 @@ performs the canonical graph of a Multiple Correspondence Analysis.
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
-\author{Daniel Chessel }
+\author{Daniel Chessel}
 \examples{
 data(banque)
 banque.acm <- dudi.acm(banque, scann = FALSE, nf = 3)
-score(banque.acm, which = which(banque.acm$cr[,1] > 0.2), csub = 3)
+score(banque.acm, which = which(banque.acm$cr[, 1] > 0.2))
 }
 \keyword{multivariate}
 \keyword{hplot}

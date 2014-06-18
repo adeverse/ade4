@@ -22,15 +22,20 @@ performs the scatter diagrams of a fuzzy correspondence analysis.
 \author{Daniel Chessel 
 }
 \references{
-Chevenet, F., DolÃ©dec, S. and Chessel, D. (1994) 
+Chevenet, F., Dolédec, S. and Chessel, D. (1994) 
 A fuzzy coding approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309.
 }
 \examples{
 data(coleo)
 coleo.fuzzy <- prep.fuzzy.var(coleo$tab, coleo$col.blocks)
 fca1 <- dudi.fca(coleo.fuzzy, sca = FALSE, nf = 3)
-scatter(fca1, labels = coleo$moda.names, clab.moda = 1.5,
+
+if(adegraphicsLoaded()) {
+  plot(fca1)
+} else {
+  scatter(fca1, labels = coleo$moda.names, clab.moda = 1.5,
     sub = names(coleo$col.blocks), csub = 3)
+}
 }
 \keyword{multivariate}
 \keyword{hplot}

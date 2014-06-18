@@ -17,12 +17,19 @@ Ordination of vegetation samples by Gaussian species distributions.
 }
 \examples{
 data(santacatalina)
-par(mfrow = c(2,2))
-table.value(log(santacatalina + 1), grid = TRUE)
-table.value(log(santacatalina + 1)[,sample(10)], grid = TRUE)
 coa1 <- dudi.coa(log(santacatalina + 1), scan = FALSE) # 2 factors
-table.value(log(santacatalina + 1)[order(coa1$li[,1]), 
-    order(coa1$co[,1])], grid = TRUE) 
-scatter(coa1, posi = "bottomright")
-}
+
+if(adegraphicsLoaded()) {
+  g1 <- table.value(log(santacatalina + 1), plot = F)
+  g2 <- table.value(log(santacatalina + 1)[, sample(10)], plot = F)
+  g3 <- table.value(log(santacatalina + 1)[order(coa1$li[, 1]), order(coa1$co[, 1])], plot = F)
+  g4 <- scatter(coa1, posi = "bottomright", plot = F)
+  G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
+} else {
+  par(mfrow = c(2, 2))
+  table.value(log(santacatalina + 1))
+  table.value(log(santacatalina + 1)[, sample(10)])
+  table.value(log(santacatalina + 1)[order(coa1$li[, 1]), order(coa1$co[, 1])]) 
+  scatter(coa1, posi = "bottomright")
+}}
 \keyword{datasets}

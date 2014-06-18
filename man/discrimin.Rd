@@ -44,7 +44,8 @@ data(chazeb)
 dis1 <- discrimin(dudi.pca(chazeb$tab, scan = FALSE), chazeb$cla, 
     scan = FALSE)
 dis1
-plot(dis1)
+if(!adegraphicsLoaded())
+  plot(dis1)
 
 data(skulls)
 plot(discrimin(dudi.pca(skulls, scan = FALSE), gl(5,30), 

@@ -84,10 +84,13 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     maf.xy <- mafragh$xy
     maf.flo <- mafragh$flo
     maf.listw <- nb2listw(neig2nb(mafragh$neig))
-    s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
+    if(adegraphicsLoaded()) {
+      g1 <- s.label(maf.xy, nb = neig2nb(mafragh$neig), plab.cex = 0.75)
+    } else {
+      s.label(maf.xy, neig = mafragh$neig, clab = 0.75)
+    }
     maf.coa <- dudi.coa(maf.flo,scannf = FALSE)
-    maf.coa.ms <- multispati(maf.coa, maf.listw, scannf = FALSE, nfposi = 2, 
-        nfnega = 2)
+    maf.coa.ms <- multispati(maf.coa, maf.listw, scannf = FALSE, nfposi = 2, nfnega = 2)
     maf.coa.ms
     
     ### detail eigenvalues components
@@ -123,26 +126,50 @@ if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     ## end eigenvalues details
 
 
-    par(mfrow = c(1,3))
-    barplot(maf.coa$eig)
-    barplot(maf.coa.ms$eig) 
-    s.corcircle(maf.coa.ms$as)
+    if(adegraphicsLoaded()) {
+      g2 <- s1d.barchart(maf.coa$eig, p1d.hori = FALSE, plot = FALSE)
+      g3 <- s1d.barchart(maf.coa.ms$eig, p1d.hori = FALSE, plot = FALSE) 
+      g4 <- s.corcircle(maf.coa.ms$as, plot = FALSE)
+      G1 <- ADEgS(list(g2, g3, g4), layout = c(1, 3))
+    } else {
+      par(mfrow = c(1, 3))
+      barplot(maf.coa$eig)
+      barplot(maf.coa.ms$eig) 
+      s.corcircle(maf.coa.ms$as)
+      par(mfrow = c(1, 1))
+    }
  
-    par(mfrow = c(2,2))
-    s.value(maf.xy, -maf.coa$li[,1])
-    s.value(maf.xy, -maf.coa$li[,2])
-    s.value(maf.xy, maf.coa.ms$li[,1])
-    s.value(maf.xy, maf.coa.ms$li[,2])
-    par(mfrow = c(1,1))
+ 
+    if(adegraphicsLoaded()) {
+      g5 <- s.value(maf.xy, -maf.coa$li[, 1], plot = FALSE)
+      g6 <- s.value(maf.xy, -maf.coa$li[, 2], plot = FALSE)
+      g7 <- s.value(maf.xy, maf.coa.ms$li[, 1], plot = FALSE)
+      g8 <- s.value(maf.xy, maf.coa.ms$li[, 2], plot = FALSE)
+      G2 <- ADEgS(list(g5, g6, g7, g8), layout = c(2, 2))
+    } else {
+      par(mfrow = c(2, 2))
+      s.value(maf.xy, -maf.coa$li[, 1])
+      s.value(maf.xy, -maf.coa$li[, 2])
+      s.value(maf.xy, maf.coa.ms$li[, 1])
+      s.value(maf.xy, maf.coa.ms$li[, 2])
+      par(mfrow = c(1, 1))
+    }
 
-    par(mfrow = c(1,2))
-    w1 <- -maf.coa$li[,1:2]
+
+    w1 <- -maf.coa$li[, 1:2]
     w1m <- apply(w1, 2, lag.listw, x = maf.listw)
-    s.match(w1, w1m, clab = 0.75)
-    w1.ms <- maf.coa.ms$li[,1:2]
+    w1.ms <- maf.coa.ms$li[, 1:2]
     w1.msm <- apply(w1.ms, 2, lag.listw, x = maf.listw)
-    s.match(w1.ms, w1.msm, clab = 0.75)
-    par(mfrow = c(1,1))
+    if(adegraphicsLoaded()) {
+      g9 <- s.match(w1, w1m, plab.cex = 0.75, plot = FALSE)
+      g10 <- s.match(w1.ms, w1.msm, plab.cex = 0.75, plot = FALSE)
+      G3 <- cbindADEg(g9, g10, plot = TRUE)
+    } else {
+      par(mfrow = c(1,2))
+      s.match(w1, w1m, clab = 0.75)
+      s.match(w1.ms, w1.msm, clab = 0.75)
+      par(mfrow = c(1, 1))
+    }
 
     maf.pca <- dudi.pca(mafragh$mil, scannf = FALSE)
     multispati.randtest(maf.pca, maf.listw)

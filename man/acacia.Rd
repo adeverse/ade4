@@ -22,13 +22,18 @@ semi-desert scrub in the Sudan. \emph{Journal of Ecology}, \bold{53}, 465--474.
 \references{
 Hill, M.O. (1973) The intensity of spatial pattern in plant communities. \emph{Journal of Ecology}, \bold{61}, 225--235.
 }
-\examples{
-data(acacia)
-par(mfcol = c(5,3))
-par(mar = c(2,2,2,2))
-for(k in 1:15) {
-    barplot(acacia[,k], ylim = c(0,20), col = grey(0.8))
+\examples{data(acacia)
+if(adegraphicsLoaded()) {
+  gg <- s1d.barchart(acacia, p1d.horizontal = F, psub.position = "topleft", 
+    plabels.cex = 0, ylim = c(0,20))
+} else {
+  par(mfcol = c(5, 3))
+  par(mar = c(2, 2, 2, 2))
+  for(k in 1:15) {
+    barplot(acacia[, k], ylim = c(0, 20), col = grey(0.8))
     ade4:::scatterutil.sub(names(acacia)[k], 1.5, "topleft")
+  }
+  par(mfcol = c(1, 1))
 }
-par(mfcol = c(1,1))}
+}
 \keyword{datasets}

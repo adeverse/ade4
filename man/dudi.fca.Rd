@@ -54,8 +54,13 @@ attributes(w2)
 
 data(bsetal97)
 w <- prep.fuzzy.var(bsetal97$biol, bsetal97$biol.blo)
-scatter(dudi.fca(w, scann = FALSE, nf = 3), csub = 3, clab.moda = 1.5)
-scatter(dudi.fpca(w, scann = FALSE, nf = 3), csub = 3, clab.moda = 1.5)
+
+if(adegraphicsLoaded()) {
+  g1 <- plot(dudi.fca(w, scann = FALSE, nf = 3), pla.cex = 1.5)
+} else {
+  scatter(dudi.fca(w, scann = FALSE, nf = 3), csub = 3, clab.moda = 1.5)
+  scatter(dudi.fpca(w, scann = FALSE, nf = 3), csub = 3, clab.moda = 1.5)
+}
 
 \dontrun{
 w1 <- prep.fuzzy.var(bsetal97$biol, bsetal97$biol.blo)

@@ -51,12 +51,22 @@ Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 data(humDNAm)
 dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
 dpcoahum
-plot(dpcoahum, csize = 1.5)
+if(adegraphicsLoaded()) {
+  g1 <- plot(dpcoahum, G4.maxsize = 1.5)
+} else {
+  plot(dpcoahum, csize = 1.5)
+}
+  
 \dontrun{
 data(ecomor)
 dtaxo <- dist.taxo(ecomor$taxo)
 dpcoaeco <- dpcoa(ecomor$habitat, dtaxo, scan = FALSE, nf = 2)
 dpcoaeco
-plot(dpcoaeco, csize = 1.5)}
+
+if(adegraphicsLoaded()) {
+  g1 <- plot(dpcoaeco, G4.maxsize = 1.5)
+} else {
+  plot(dpcoaeco, csize = 1.5)
 }
+}}
 \keyword{multivariate}

@@ -19,14 +19,13 @@ returns a list of class \code{ktab} containing for each distance of \code{kd} th
 Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}}
 \examples{
 data(friday87)
-fri.w <- ktab.data.frame(friday87$fau, friday87$fau.blo, 
-    tabnames = friday87$tab.names)
+fri.w <- ktab.data.frame(friday87$fau, friday87$fau.blo, tabnames = friday87$tab.names)
 fri.kd <- lapply(1:10, function(x) dist.binary(fri.w[[x]], 10))
-names(fri.kd) <-  substr(friday87$tab.names, 1, 4)
+names(fri.kd) <- substr(friday87$tab.names, 1, 4)
 fri.kd <- kdist(fri.kd)
-fri.ktab = kdist2ktab(kd = fri.kd)
-fri.sepan = sepan(fri.ktab)
-plot(fri.sepan, csub = 3)
+fri.ktab <- kdist2ktab(kd = fri.kd)
+fri.sepan <- sepan(fri.ktab)
+plot(fri.sepan)
 
 tapply(fri.sepan$Eig, fri.sepan$TC[,1], sum)
 # the sum of the eigenvalues is constant and equal to 1, for each K tables
@@ -42,4 +41,4 @@ fri.statis$RV.tabw
 plot(apply(fri.statis$RV, 1, mean), fri.statis$RV.tabw)
 plot(fri.statis$RV.tabw, fri.statis$RV.tabw)
 }
-\keyword{ multivariate }
+\keyword{multivariate}

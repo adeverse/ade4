@@ -57,10 +57,15 @@ data(jv73)
 statis3 <- statis(kta3, scann = FALSE)
 plot(statis3)
 
-s.arrow(statis3$C.li, cgrid = 0)
-
-kplot(statis3, traj = TRUE, arrow = FALSE, unique = TRUE, 
+if(adegraphicsLoaded()) {
+  s.arrow(statis3$C.li, pgrid.text.cex = 0)
+  kplot(statis3, traj = TRUE, arrow = FALSE, plab.cex = 0, psub.cex = 3, ppoi.cex = 3)
+} else {
+  s.arrow(statis3$C.li, cgrid = 0)
+  kplot(statis3, traj = TRUE, arrow = FALSE, unique = TRUE, 
     clab = 0, csub = 3, cpoi = 3)
+}
+
 statis3
 }
 \keyword{multivariate}

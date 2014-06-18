@@ -21,11 +21,15 @@ using an object of class \code{foucart}.
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
   \item{\dots}{further arguments passed to or from other methods}
 }
-\author{Daniel Chessel }
 \examples{
 data(bf88)
 fou1 <- foucart(bf88, scann = FALSE, nf = 3)
-kplot(fou1, clab.r = 0, clab.c = 2, csub = 3)
+
+if(adegraphicsLoaded()) {
+  g <- kplot(fou1, row.plab.cex = 0, psub.cex = 2)
+} else {
+  kplot(fou1, clab.c = 2, clab.r = 0, csub = 3)
+}
 }
 \keyword{multivariate}
 \keyword{hplot}

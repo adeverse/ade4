@@ -16,14 +16,14 @@ Size and shape variation in the painted turtle. A principal component analysis.
 }
 \examples{
 data(tortues)
-xyz <- as.matrix(tortues[,1:3])
-ref <- -svd(xyz)$u[,1]
-pch0 <- c(1,20)[as.numeric(tortues$sex)]
-plot(ref, xyz[,1], ylim = c(40,180), pch = pch0)
-abline(lm(xyz[,1]~ -1 + ref))
-points(ref,xyz[,2], pch = pch0)
-abline(lm(xyz[,2]~ -1 + ref))
-points(ref,xyz[,3], pch = pch0)
-abline(lm(xyz[,3]~ -1 + ref))
+xyz <- as.matrix(tortues[, 1:3])
+ref <- -svd(xyz)$u[, 1]
+pch0 <- c(1, 20)[as.numeric(tortues$sexe)]
+plot(ref, xyz[, 1], ylim = c(40, 180), pch = pch0)
+abline(lm(xyz[, 1] ~ -1 + ref))
+points(ref,xyz[, 2], pch = pch0)
+abline(lm(xyz[, 2] ~ -1 + ref))
+points(ref,xyz[, 3], pch = pch0)
+abline(lm(xyz[, 3] ~ -1 + ref))
 }
 \keyword{datasets}

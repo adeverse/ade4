@@ -50,9 +50,11 @@ foucart(X, scannf = TRUE, nf = 2)
 }
 \references{Foucart, T. (1984) \emph{Analyse factorielle de tableaux multiples}, Masson, Paris.
 }
+
 \author{P. Bady \email{pierre.bady@univ-lyon1.fr}\cr
 Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
+
 \examples{
 data(bf88)
 fou1 <- foucart(bf88, scann = FALSE, nf = 3)
@@ -64,6 +66,12 @@ l1 <- split(meaudret$spe, meaudret$design$season)
 l1 <- lapply(l1, function(x) 
     {row.names(x) <- paste("Sit",1:5,sep="");x})
 fou2 <- foucart(l1, scan = FALSE)
-kplot(fou2, clab.r = 2)
+
+if(adegraphicsLoaded()) {
+  kplot(fou2, row.plabels.cex = 2)
+} else {
+  kplot(fou2, clab.r = 2)
 }
+}
+
 \keyword{multivariate}

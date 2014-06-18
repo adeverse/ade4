@@ -40,23 +40,35 @@ adapted rescaling such as the \code{scatter.dudi}.\cr
 \author{Daniel Chessel }
 \examples{
 data(escopage)
-w <- data.frame(scale(escopage$tab))
-w <- ktab.data.frame(w, escopage$blo, tabnames = escopage$tab.names)
-sep1 <- sepan(w)
-kplot(sep1, show = FALSE)
+w1 <- data.frame(scale(escopage$tab))
+w1 <- ktab.data.frame(w1, escopage$blo, tabnames = escopage$tab.names)
+sep1 <- sepan(w1)
+if(adegraphicsLoaded()) {
+  kplot(sep1, posieig = "none")
+} else {
+  kplot(sep1, show = FALSE)
+}
 
 data(friday87)
-w <- data.frame(scale(friday87$fau, scal = FALSE))
-w <- ktab.data.frame(w, friday87$fau.blo, tabnames = friday87$tab.names)
-kplot(sepan(w), clab.r = 1.25, clab.c = 0, csub = 3)
+w2 <- data.frame(scale(friday87$fau, scal = FALSE))
+w2 <- ktab.data.frame(w2, friday87$fau.blo, tabnames = friday87$tab.names)
+if(adegraphicsLoaded()) {
+  kplot(sepan(w2), row.plabel.cex = 1.25, col.plab.cex = 0)
+} else {
+  kplot(sepan(w2), clab.r = 1.25, clab.c = 0)
+}
 
 data(microsatt)
-w <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE)
+w3 <- dudi.coa(data.frame(t(microsatt$tab)), scann = FALSE)
 loci.fac <- factor(rep(microsatt$loci.names, microsatt$loci.eff))
-wit <- wca(w, loci.fac, scann = FALSE)
+wit <- wca(w3, loci.fac, scann = FALSE)
 microsatt.ktab <- ktab.within(wit)
-kplot.sepan.coa(sepan(microsatt.ktab), show = FALSE, clab.c = 0, 
+if(adegraphicsLoaded()) {
+  kplot.sepan.coa(sepan(microsatt.ktab), posieig = "none", col.plab.cex = 0, row.plab.cex = 1.5)
+} else {
+  kplot.sepan.coa(sepan(microsatt.ktab), show = FALSE, clab.c = 0, 
     mfrow = c(3,3), clab.r = 1.5)
+}    
 }
 \keyword{multivariate}
 \keyword{hplot}

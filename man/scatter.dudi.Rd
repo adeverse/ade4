@@ -25,7 +25,7 @@ performs the scatter diagrams of objects of class \code{dudi}.
 The \code{permute} argument can be used to choose between the distance biplot (default) and the correlation biplot (permute = TRUE).
 
 }
-\author{Daniel Chessel }
+\author{Daniel Chessel}
 \examples{
 data(deug)
 scatter(dd1 <- dudi.pca(deug$tab, scannf = FALSE, nf = 4), 
@@ -33,7 +33,11 @@ scatter(dd1 <- dudi.pca(deug$tab, scannf = FALSE, nf = 4),
 
 data(rhone)
 dd1 <- dudi.pca(rhone$tab, nf = 4, scann = FALSE)
-scatter(dd1, sub = "Principal component analysis")
+if(adegraphicsLoaded()) {
+  scatter(dd1, row.psub.text = "Principal component analysis")
+} else {
+  scatter(dd1, sub = "Principal component analysis")
+}
 }
 \keyword{multivariate}
 \keyword{hplot}

@@ -28,15 +28,26 @@ M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Micr
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps069.pdf} (in French).
 }
 \examples{
-if(require(pixmap, quiet=TRUE)){
-	data(ggtortoises)
-	a1 <- ggtortoises$area
-	area.plot(a1)
-	rect(min(a1$x), min(a1$y), max(a1$x), max(a1$y), col = "lightblue")
-	invisible(lapply(split(a1, a1$id), function(x) polygon(x[, -1],col = "white")))
-	s.label(ggtortoises$misc, grid=FALSE,include.ori=FALSE,addaxes=FALSE,add.p=TRUE)
-	listico <- ggtortoises$ico[as.character(ggtortoises$pop$carap)]
-	s.logo(ggtortoises$pop,listico,add.p=TRUE)
-}
-}
+if(require(pixmap, quiet=TRUE)) {
+  data(ggtortoises)
+  
+  if(adegraphicsLoaded()) {
+    if(require(sp, quiet = TRUE)) {
+      g1 <- s.logo(ggtortoises$pop, ggtortoises$ico[as.character(ggtortoises$pop$carap)], 
+        Sp = ggtortoises$Spatial, pback.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE,
+        ppoints.cex = 0.5)
+      g1 <- s.label(ggtortoises$misc, pgrid.draw = FALSE, porigin.include = FALSE, paxes.draw = F, 
+        add = TRUE)
+    }
+
+  } else {    
+  	a1 <- ggtortoises$area
+  	area.plot(a1)
+  	rect(min(a1$x), min(a1$y), max(a1$x), max(a1$y), col = "lightblue")
+  	invisible(lapply(split(a1, a1$id), function(x) polygon(x[, -1],col = "white")))
+  	s.label(ggtortoises$misc, grid=FALSE,include.ori=FALSE,addaxes=FALSE,add.p=TRUE)
+  	listico <- ggtortoises$ico[as.character(ggtortoises$pop$carap)]
+  	s.logo(ggtortoises$pop,listico,add.p=TRUE)
+  }
+}}
 \keyword{datasets}

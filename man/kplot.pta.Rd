@@ -36,11 +36,12 @@ using an object of class \code{pta}.
 \examples{
 data(meaudret)
 wit1 <- wca(dudi.pca(meaudret$spe, scan = FALSE, scal = FALSE), 
-    meaudret$design$season, scan = FALSE)
-kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5"), 4))
-kta2 <- t(kta1) ; pta1 <- pta(kta2, scann = FALSE)
-kplot(pta1, clab = 1.5, csub = 3)
-kplot(pta1, clab = 1.5, csub = 3, which.graph = 3, mfrow = c(2,2))
+  meaudret$design$season, scan = FALSE)
+kta1 <- ktab.within(wit1, colnames = rep(c("S1", "S2", "S3", "S4", "S5"), 4))
+kta2 <- t(kta1)
+pta1 <- pta(kta2, scann = FALSE)
+kplot(pta1)
+kplot(pta1, which.graph = 3)
 }
 \keyword{multivariate}
 \keyword{hplot}

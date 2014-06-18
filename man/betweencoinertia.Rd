@@ -51,7 +51,7 @@ bet1 <- bca(pca1, meaudret$design$site, scan = FALSE, nf = 2)
 bet2 <- bca(pca2, meaudret$design$site, scan = FALSE, nf = 2)
 coib <- coinertia(bet1, bet2, scannf = FALSE)
 
-coi <- coinertia(pca1,pca2,scannf = FALSE,nf = 3)
+coi <- coinertia(pca1, pca2, scannf = FALSE, nf = 3)
 coi.b <- bca(coi,meaudret$design$site, scannf = FALSE)
 ## coib and coi.b are equivalent
 

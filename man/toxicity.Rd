@@ -23,10 +23,13 @@ of Graphical Techniques Combined with Multivariate Analyses.
 }
 \examples{
 data(toxicity)
-table.paint(toxicity$tab, row.lab = toxicity$species, 
-    col.lab = toxicity$chemicals)
-
-table.value(toxicity$tab, row.lab = toxicity$species, 
-    col.lab = toxicity$chemicals)
-}
+if(adegraphicsLoaded()) {
+  table.image(toxicity$tab, labelsy = toxicity$species, labelsx = toxicity$chemicals, nclass = 7, 
+    ptable.x.cst = c(25, 5), ptable.y.cst = c(26, 5), pgrid.draw = TRUE)
+  table.value(toxicity$tab, labelsy = toxicity$species, labelsx = toxicity$chemicals, 
+    ptable.x.cst = c(25, 5), ptable.y.cst = c(26, 5))
+} else {
+  table.paint(toxicity$tab, row.lab = toxicity$species, col.lab = toxicity$chemicals)
+  table.value(toxicity$tab, row.lab = toxicity$species, col.lab = toxicity$chemicals)
+}}
 \keyword{datasets}

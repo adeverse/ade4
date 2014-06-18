@@ -60,14 +60,14 @@ if (require(splancs, quiet = TRUE)){
 \dontrun{
 data(t3012)
 if (require(splancs, quiet = TRUE)){
-    par(mfrow = c(4,4))
+    par(mfrow = c(3,4))
     for(k in 1:12)  s.image(t3012$xy,scalewt(t3012$temp[,k]), kgrid = 3)
     par(mfrow = c(1,1))
 }
     
 data(elec88)
 if (require(splancs, quiet = TRUE)){
-   par(mfrow = c(4,4))
+   par(mfrow = c(3,4))
    for(k in 1:12)
    s.image(t3012$xy, scalewt(t3012$temp[,k]), kgrid = 3, sub = names(t3012$temp)[k],
         csub = 3, area = elec88$area)

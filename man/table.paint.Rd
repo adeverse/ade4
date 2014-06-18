@@ -38,5 +38,6 @@ table.paint(X, x = x, y = y, clabel.c = 0, cleg = 0,
     row.lab = paste("  ", row.names(X), sep = ""))
 abline(v = 114.9, lwd = 3, col = "red")
 abline(v = 66.4, lwd = 3, col = "red")
+par(mfrow = c(1, 1))
 }
 \keyword{hplot}

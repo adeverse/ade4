@@ -18,26 +18,24 @@ Borrego, J., Morales, J.A., de la Torre, M.L. and Grande, J.A. (2002) Geochemica
 }
 \examples{
 data(tintoodiel)
+if(!adegraphicsLoaded()) {
+  \dontrun{
+  if(require(pixmap, quiet = TRUE)) {
+    estuary.pnm <- read.pnm(system.file("pictures/tintoodiel.pnm", package = "ade4"))
+    s.label(tintoodiel$xy, pixmap = estuary.pnm, neig = tintoodiel$neig,
+      clab = 0, cpoi = 2, cneig = 3, addax = FALSE, cgrid = 0, grid = FALSE)
+  }}
+  
+  estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
+  
+  if(require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
+    estuary.listw <- nb2listw(neig2nb(tintoodiel$neig))
+    estuary.pca.ms <- multispati(estuary.pca, estuary.listw, scan = FALSE, nfposi = 3, nfnega = 2)
+    summary(estuary.pca.ms)
+    par(mfrow = c(1, 2))
+    barplot(estuary.pca$eig)
+    barplot(estuary.pca.ms$eig)
+    par(mfrow = c(1, 1))
+}}}
 
-\dontrun{
-if (require(pixmap, quiet = TRUE)){
-estuary.pnm <- read.pnm(system.file("pictures/tintoodiel.pnm",
-    package = "ade4"))
-s.label(tintoodiel$xy,pixmap = estuary.pnm, neig = tintoodiel$neig,
-    clab = 0, cpoi = 2, cneig = 3, addax = FALSE, cgrid = 0, grid = FALSE)
-}
-}
-
-estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
-if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
-estuary.listw <- nb2listw(neig2nb(tintoodiel$neig))
-estuary.pca.ms <- multispati(estuary.pca, estuary.listw, scan = FALSE,
-    nfposi = 3,nfnega = 2)
-summary(estuary.pca.ms)
-par(mfrow = c(1,2))
-barplot(estuary.pca$eig)
-barplot(estuary.pca.ms$eig)
-par(mfrow = c(1,1))
-}
-}
 \keyword{datasets}

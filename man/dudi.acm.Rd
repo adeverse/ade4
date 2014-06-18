@@ -47,17 +47,33 @@ Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 \examples{
 data(ours)
 summary(ours)
-boxplot(dudi.acm(ours, scan = FALSE))
+
+if(adegraphicsLoaded()) {
+  g1 <- s1d.boxplot(dudi.acm(ours, scan = FALSE)$li[, 1], ours)
+} else {
+  boxplot(dudi.acm(ours, scan = FALSE))
+}
 \dontrun{
 data(banque)
 banque.acm <- dudi.acm(banque, scann = FALSE, nf = 3)
-scatter(banque.acm)
+
+if(adegraphicsLoaded()) {
+  g2 <- adegraphics:::scatter.dudi(banque.acm)
+} else {
+  scatter(banque.acm)
+}  
 
 apply(banque.acm$cr, 2, mean)
 banque.acm$eig[1:banque.acm$nf] # the same thing
-boxplot(banque.acm)
 
-scatter(banque.acm)
+if(adegraphicsLoaded()) {
+  g3 <- s1d.boxplot(banque.acm$li[, 1], banque)
+  g4 <- scatter(banque.acm)
+} else {
+  boxplot(banque.acm)
+  scatter(banque.acm)
+}
+
 
 s.value(banque.acm$li, banque.acm$li[,3])
 

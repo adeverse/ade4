@@ -32,15 +32,11 @@ using an object of class \code{mcoa}.
 \examples{
 data(friday87)
 w1 <- data.frame(scale(friday87$fau, scal = FALSE))
-w2 <- ktab.data.frame(w1, friday87$fau.blo, 
-    tabnames = friday87$tab.names)
+w2 <- ktab.data.frame(w1, friday87$fau.blo, tabnames = friday87$tab.names)
 mcoa1 <- mcoa(w2, "lambda1", scan = FALSE)
-kplot(mcoa1, clab = 2, csub = 2, cpoi = 3, opt = "axis")
-
-kplot(mcoa1, mfrow = c(3,4), clab = 2, csub = 3, cpoi = 3)
-
-kplot(mcoa1, clab = 2, csub = 3, cpoi = 3, mfrow = c(3,4), 
-    opt = "columns")
+kplot(mcoa1, option = "axis")
+kplot(mcoa1)
+kplot(mcoa1, option = "columns")
 }
 \keyword{multivariate}
 \keyword{hplot}

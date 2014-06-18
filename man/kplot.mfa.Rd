@@ -29,8 +29,7 @@ using an object of class \code{mfa}.
 \examples{
 data(friday87)
 w1 <- data.frame(scale(friday87$fau, scal = FALSE))
-w2 <- ktab.data.frame(w1, friday87$fau.blo, 
-    tabnames = friday87$tab.names)
+w2 <- ktab.data.frame(w1, friday87$fau.blo, tabnames = friday87$tab.names)
 mfa1 <- mfa(w2, scann = FALSE)
 kplot(mfa1)
 }

@@ -42,9 +42,9 @@ and relative abundance, 2/ taxonomic composition, 3/ Body Sizes, 4/ Feeding habi
 \source{
     Ivol, J.M., Guinand, B., Richoux, P. and Tachet, H. (1997) Longitudinal changes in
     Trichoptera and Coleoptera assemblages and environmental conditions in the Loire
-    River (France). \emph{Archiv für Hydrobiologie}, \bold{138}, 525--557.\cr
+    River (France). \emph{Archiv for Hydrobiologie}, \bold{138}, 525--557.\cr
 
-    Pavoine S. and Dolédec S. (2005) The apportionment of quadratic entropy: 
+    Pavoine S. and Doledec S. (2005) The apportionment of quadratic entropy: 
     a useful alternative for partitioning diversity in ecological data. 
     \emph{Environmental and Ecological Statistics}, \bold{12}, 125--138.
 }

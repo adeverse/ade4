@@ -51,28 +51,50 @@ Dray, S., Chessel, D. and Thioulouse, J.  (2003) Procustean co-inertia analysis 
 }
 \examples{
 data(macaca)
-par(mfrow = c(2,2))
 pro1 <- procuste(macaca$xy1, macaca$xy2, scal = FALSE)
-s.match(pro1$tab1, pro1$rot2, clab = 0.7)
-s.match(pro1$tab2, pro1$rot1, clab = 0.7)
 pro2 <- procuste(macaca$xy1, macaca$xy2)
-s.match(pro2$tab1, pro2$rot2, clab = 0.7)
-s.match(pro2$tab2, pro2$rot1, clab = 0.7)
-par(mfrow = c(1,1))
+if(adegraphicsLoaded()) {
+  g1 <- s.match(pro1$tab1, pro1$rot2, plab.cex = 0.7, plot = F)
+  g2 <- s.match(pro1$tab2, pro1$rot1, plab.cex = 0.7, plot = F)
+  g3 <- s.match(pro2$tab1, pro2$rot2, plab.cex = 0.7, plot = F)
+  g4 <- s.match(pro2$tab2, pro2$rot1, plab.cex = 0.7, plot = F)
+  G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
+} else {
+  par(mfrow = c(2, 2))
+  s.match(pro1$tab1, pro1$rot2, clab = 0.7)
+  s.match(pro1$tab2, pro1$rot1, clab = 0.7)
+  s.match(pro2$tab1, pro2$rot2, clab = 0.7)
+  s.match(pro2$tab2, pro2$rot1, clab = 0.7)
+  par(mfrow = c(1,1))
+}
 
 data(doubs)
 pca1 <- dudi.pca(doubs$env, scal = TRUE, scann = FALSE)
 pca2 <- dudi.pca(doubs$fish, scal = FALSE, scann = FALSE)
 pro3 <- procuste(pca1$tab, pca2$tab, nf = 2)
-par(mfrow = c(2,2))
-s.traject(pro3$scor1, clab = 0)
-s.label(pro3$scor1, clab = 0.8, add.p = TRUE)
-s.traject(pro3$scor2, clab = 0)
-s.label(pro3$scor2, clab = 0.8, add.p = TRUE)
-s.arrow(pro3$load1, clab = 0.75)
-s.arrow(pro3$load2, clab = 0.75)
+if(adegraphicsLoaded()) {
+  g11 <- s.traject(pro3$scor1, plab.cex = 0, plot = F)
+  g12 <- s.label(pro3$scor1, plab.cex = 0.8, plot = F)
+  g1 <- superpose(g11, g12)
+  g21 <- s.traject(pro3$scor2, plab.cex = 0, plot = F)
+  g22 <- s.label(pro3$scor2, plab.cex = 0.8, plot = F)
+  g2 <- superpose(g21, g22)
+  g3 <- s.arrow(pro3$load1, plab.cex = 0.75, plot = F)
+  g4 <- s.arrow(pro3$load2, plab.cex = 0.75, plot = F)
+  G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
+
+} else {
+  par(mfrow = c(2, 2))
+  s.traject(pro3$scor1, clab = 0)
+  s.label(pro3$scor1, clab = 0.8, add.p = TRUE)
+  s.traject(pro3$scor2, clab = 0)
+  s.label(pro3$scor2, clab = 0.8, add.p = TRUE)
+  s.arrow(pro3$load1, clab = 0.75)
+  s.arrow(pro3$load2, clab = 0.75)
+  par(mfrow = c(1, 1))
+}
+
 plot(pro3)
-par(mfrow = c(1,1))
 
 data(fruits)
 plot(procuste(scalewt(fruits$jug), scalewt(fruits$var)))

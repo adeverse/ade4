@@ -22,8 +22,14 @@ Besse, P. (1979)
 \examples{
 data(t3012)
 data(elec88)
-area.plot(elec88$area)
-s.arrow(t3012$xy, ori = as.numeric(t3012$xy["Paris",]),
- add.p = TRUE)
-}
+
+if(adegraphicsLoaded()) {
+  if(require(sp, quiet = TRUE)) {
+    s.arrow(t3012$xy, pori.ori = as.numeric(t3012$xy["Paris", ]), Sp = t3012$Spatial, 
+      pSp.col = "white", pgrid.draw = F)
+  }
+} else {
+  area.plot(elec88$area)
+  s.arrow(t3012$xy, ori = as.numeric(t3012$xy["Paris", ]), add.p = TRUE)
+}}
 \keyword{datasets}

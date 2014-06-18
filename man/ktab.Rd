@@ -81,6 +81,11 @@ wit1 <- withinpca(meaudret$env, meaudret$design$season, scan = FALSE,
     scal = "partial")
 kta1 <- ktab.within(wit1, colnames = rep(c("S1","S2","S3","S4","S5"), 4))
 kta2 <- t(kta1)
-kplot(sepan(kta2), clab.r = 1.5, clab.c = 0.75)
+
+if(adegraphicsLoaded()) {
+  kplot(sepan(kta2), row.plab.cex = 1.5, col.plab.cex = 0.75)
+} else {
+  kplot(sepan(kta2), clab.r = 1.5, clab.c = 0.75)
+}
 }
 \keyword{multivariate}

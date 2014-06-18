@@ -22,7 +22,7 @@ performs the canonical graph of a Principal Component Analysis.
 \examples{
 data(deug)
 dd1 <- dudi.pca(deug$tab, scan = FALSE)
-score(dd1, csub = 3)
+score(dd1)
  
 # The correlations are :
 dd1$co[,1]

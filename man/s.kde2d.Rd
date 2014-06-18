@@ -53,13 +53,16 @@ The matched call.
 }
 \examples{
 # To recognize groups of points
-data(casitas)
-casitas.fuz = fuzzygenet(casitas)
-casitas.pop <- as.factor(rep(c("dome", "cast", "musc", "casi"), c(24,11,9,30)))
-casitas.pca = dudi.pca(casitas.fuz, scannf = FALSE, scale = FALSE)
-if (require(MASS, quiet=TRUE)) {s.kde2d(casitas.pca$li)
-s.class(casitas.pca$li,casitas.pop, cell = 0, add.p = TRUE)
+if(!adegraphicsLoaded()) {
+  data(casitas)
+  casitas.fuz <- fuzzygenet(casitas)
+  casitas.pop <- as.factor(rep(c("dome", "cast", "musc", "casi"), c(24, 11, 9, 30)))
+  casitas.pca <- dudi.pca(casitas.fuz, scannf = FALSE, scale = FALSE)
+  if(require(MASS, quiet = TRUE)) {
+    s.kde2d(casitas.pca$li)
+    s.class(casitas.pca$li, casitas.pop, cell = 0, add.p = TRUE)
+  }
 }
 }
 \keyword{multivariate}
-\keyword{ hplot }
+\keyword{hplot}

@@ -31,10 +31,19 @@ Vespini, F., Légier, P. and Champeau, A. (1987) Ecologie d'une rivière non aména
 }
 \examples{
 data(buech)
-par(mfrow = c(1,2))
-s.label(buech$xy, contour = buech$contour, neig = buech$neig)
-s.value (buech$xy, buech$tab2$Suspens-buech$tab1$Suspens,
-     contour = buech$contour, neig = buech$neig, csi = 3)
-par(mfrow = c(1,1))
-}
+if(adegraphicsLoaded()) {
+  if(require(sp, quiet = TRUE)) {
+    g1 <- s.label(buech$xy, Sp = buech$Spatial, nb = buech$nb, 
+      pSp.col = "transparent", plot = FALSE)
+    g2 <- s.value(buech$xy, buech$tab2$Suspens - buech$tab1$Suspens, 
+      Sp = buech$Spatial, nb = buech$nb, pSp.col = "transparent", plot = FALSE)
+    G <- cbindADEg(g1, g2, plot = TRUE)
+  }
+} else {
+  par(mfrow = c(1,2))
+  s.label(buech$xy, contour = buech$contour, neig = buech$neig)
+  s.value(buech$xy, buech$tab2$Suspens - buech$tab1$Suspens,
+    contour = buech$contour, neig = buech$neig, csi = 3)
+  par(mfrow = c(1,1))
+}}
 \keyword{datasets}

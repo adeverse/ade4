@@ -57,88 +57,91 @@ Multivariate analysis of spatial patterns: a unified approach to local and globa
 }
 \author{Daniel Chessel }
 \examples{
-data(mafragh)
-if (require(deldir, quietly=TRUE)) {
-    par(mfrow = c(2,1))
+if(!adegraphicsLoaded()) {
+  
+  if(require(deldir, quietly = TRUE)) {
+  
+    data(mafragh)
+    par(mfrow = c(2, 1))
     provi <- deldir(mafragh$xy)
-    provi.neig <- neig(edges = as.matrix(provi$delsgs[,5:6]))
+    provi.neig <- neig(edges = as.matrix(provi$delsgs[, 5:6]))
     
     s.label(mafragh$xy, neig = provi.neig, inc = FALSE, 
-        addax = FALSE, clab = 0, cnei = 2)
+      addax = FALSE, clab = 0, cnei = 2)
     dist <- apply(provi.neig, 1, function(x) 
-        sqrt(sum((mafragh$xy[x[1],] - mafragh$xy[x[2],])^2)))
+      sqrt(sum((mafragh$xy[x[1], ] - mafragh$xy[x[2], ]) ^ 2)))
     #hist(dist, nclass = 50)
-    mafragh.neig <- neig(edges = provi.neig[dist<50,])
+    mafragh.neig <- neig(edges = provi.neig[dist < 50, ])
     s.label(mafragh$xy, neig = mafragh.neig, inc = FALSE, 
-        addax = FALSE, clab = 0, cnei = 2)
-    par(mfrow = c(1,1))
+      addax = FALSE, clab = 0, cnei = 2)
+    par(mfrow = c(1, 1))
     
     data(irishdata)
     irish.neig <- neig(area = irishdata$area)
-      summary(irish.neig)
-      print(irish.neig)
+    summary(irish.neig)
+    print(irish.neig)
     s.label(irishdata$xy, neig = irish.neig, cneig = 3,
-        area = irishdata$area, clab = 0.8, inc = FALSE)
+      area = irishdata$area, clab = 0.8, inc = FALSE)
     
     irish.scores <- scores.neig(irish.neig)
-    par(mfrow = c(2,3))
-    for (i in 1:6) s.value(irishdata$xy, irish.scores[,i],
-        inc = FALSE, grid = FALSE, addax = FALSE,
-        neig = irish.neig,
-        csi = 2, cleg = 0, sub = paste("Eigenvector ",i), csub = 2)
-    par(mfrow = c(1,1))
+    par(mfrow = c(2, 3))
+    for(i in 1:6)
+      s.value(irishdata$xy, irish.scores[, i], inc = FALSE, grid = FALSE, addax = FALSE,
+        neig = irish.neig, csi = 2, cleg = 0, sub = paste("Eigenvector ",i), csub = 2)
+    par(mfrow = c(1, 1))
     
     a.neig <- neig(n.circle = 16)
     a.scores <- scores.neig(a.neig)
     xy <- cbind.data.frame(cos((1:16) * pi / 8), sin((1:16) * pi / 8))
-    par(mfrow = c(4,4))
-    for (i in 1:15) s.value(xy, a.scores[,i], neig = a.neig, 
-        csi = 3, cleg = 0)
-    par(mfrow = c(1,1))
+    par(mfrow = c(4, 4))
+    for(i in 1:15)
+      s.value(xy, a.scores[, i], neig = a.neig, csi = 3, cleg = 0)
+    par(mfrow = c(1, 1))
     
     a.neig <- neig(n.line = 28)
     a.scores <- scores.neig(a.neig)
-    par(mfrow = c(7,4))
-    par(mar = c(1.1,2.1,0.1,0.1))
-    for (i in 1:27) barplot(a.scores[,i], col = grey(0.8))
-}
-par(mfrow = c(1,1))
+    par(mfrow = c(7, 4))
+    par(mar = c(1.1, 2.1, 0.1, 0.1))
+    for(i in 1:27)
+      barplot(a.scores[, i], col = grey(0.8))
+    par(mfrow = c(1, 1))
+  }
 
-if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
+  if(require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
     data(columbus)
-    par(mfrow = c(2,1))
-    par(mar = c(0.1,0.1,0.1,0.1))
+    par(mfrow = c(2, 1))
+    par(mar = c(0.1, 0.1, 0.1, 0.1))
     plot(col.gal.nb, coords)
     s.label(data.frame(coords), neig = neig(list = col.gal.nb),
-        inc = FALSE, clab = 0.6, cneig = 1)
-    par(mfrow = c(1,1))
+      inc = FALSE, clab = 0.6, cneig = 1)
+    par(mfrow = c(1, 1))
     
     data(mafragh)
     maf.rel <- relativeneigh(as.matrix(mafragh$xy))
     maf.rel <- graph2nb(maf.rel)
     s.label(mafragh$xy, neig = neig(list = maf.rel), inc = FALSE,
-        clab = 0, addax = FALSE, cne = 1, cpo = 2)
+      clab = 0, addax = FALSE, cne = 1, cpo = 2)
     
-    par(mfrow = c(2,2))
+    par(mfrow = c(2, 2))
     w <- matrix(runif(100), 50, 2)
     x.gab <- gabrielneigh(w)
     x.gab <- graph2nb(x.gab)
     s.label(data.frame(w), neig = neig(list = x.gab), inc = FALSE,
-        clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "relative")
+      clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "relative")
     x.rel <- relativeneigh(w)
     x.rel <- graph2nb(x.rel)
     s.label(data.frame(w), neig = neig(list = x.rel), inc = FALSE,
-        clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "Gabriel")
+      clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "Gabriel")
     k1 <- knn2nb(knearneigh(w))
     s.label(data.frame(w), neig = neig(list = k1), inc = FALSE,
-        clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "k nearest neighbours")
+      clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "k nearest neighbours")
     
     all.linked <- max(unlist(nbdists(k1, w)))
     z <- dnearneigh(w, 0, all.linked)
-    s.label(data.frame(w), neig = neig(list = z), inc = FALSE,
-        clab = 0, addax = FALSE, cne = 1, cpo = 2, 
-        sub = "Neighbourhood contiguity by distance")
-}
-par(mfrow = c(1,1))
-}
+    s.label(data.frame(w), neig = neig(list = z), inc = FALSE, clab = 0, 
+      addax = FALSE, cne = 1, cpo = 2, sub = "Neighbourhood contiguity by distance")
+    par(mfrow = c(1, 1))
+  }
+  
+}}
 \keyword{utilities}

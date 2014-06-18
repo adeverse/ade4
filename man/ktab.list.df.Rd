@@ -33,6 +33,6 @@ data(jv73)
 l0 <- split(jv73$morpho, jv73$fac.riv)
 l0 <- lapply(l0, function(x) data.frame(t(scalewt(x))))
 kta <- ktab.list.df(l0)
-kplot(sepan(kta[c(2,5,7,10)]), perm = TRUE, clab.r = 1, clab.c = 1.5)
+kplot(sepan(kta[c(2, 5, 7, 10)]), perm = TRUE)
 }
 \keyword{multivariate}

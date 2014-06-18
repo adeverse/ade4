@@ -34,6 +34,11 @@ names(yrange) <- row.names(carni70$tab)
 symbols.phylog(carni70.phy,yrange)
 orthogram(yrange, phylog = carni70.phy)
 
-s.hist(cbind.data.frame(size, yrange), clabel = 0)
+if(adegraphicsLoaded()) {
+  g1 <- s.label(cbind.data.frame(size, yrange), plabel.cex = 0)
+  g2 <- addhist(g1)
+} else {
+  s.hist(cbind.data.frame(size, yrange), clabel = 0)
+}
 }}
 \keyword{datasets}

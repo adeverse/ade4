@@ -73,10 +73,13 @@ Pages 197-220 in B. J. and M. Greenacre, editors.
 }
 \examples{
 data(worksurv)
-acm1 <- dudi.acm(worksurv, row.w = attr(worksurv,"counts"), 
-    scan = FALSE)
-par(mfrow = c(2,2))
-apply(worksurv,2, function(x) s.class(acm1$li, factor(x),
-    attr(worksurv, 'counts')))
+acm1 <- dudi.acm(worksurv, row.w = attr(worksurv, "counts"), scan = FALSE)
+
+if(adegraphicsLoaded()) {
+  s.class(acm1$li, worksurv)
+} else {
+  par(mfrow = c(2, 2))
+  apply(worksurv, 2, function(x) s.class(acm1$li, factor(x), attr(worksurv, 'counts')))
+}
 }
 \keyword{datasets}

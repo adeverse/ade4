@@ -25,6 +25,6 @@ It gives also distances among the haplotypes.
 data(humDNAm)
 dpcoahum <- dpcoa(humDNAm$samples, 
     sqrt(humDNAm$distances), scan = FALSE, nf = 2)
-plot(dpcoahum, csize = 1.5)
+plot(dpcoahum)
 }
 \keyword{datasets}

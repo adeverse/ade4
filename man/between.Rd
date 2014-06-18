@@ -59,21 +59,29 @@ Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)
-par(mfrow = c(2,2))
 pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 4)
-s.class(pca1$li, meaudret$design$site,
-    sub = "Principal Component Analysis (env)", csub = 1.75)
 pca2 <- dudi.pca(meaudret$spe, scal = FALSE, scan = FALSE, nf = 4)
-s.class(pca2$li, meaudret$design$site,
-    sub = "Principal Component Analysis (spe)", csub = 1.75)
 bet1 <- bca(pca1, meaudret$design$site, scan = FALSE, nf = 2)
 bet2 <- bca(pca2, meaudret$design$site, scan = FALSE, nf = 2)
-s.class(bet1$ls, meaudret$design$site,
-    sub = "Between sites PCA (env)", csub = 1.75)
-s.class(bet2$ls, meaudret$design$site,
-    sub = "Between sites PCA (spe)", csub = 1.75)
+  
+if(adegraphicsLoaded()) {
+  g1 <- s.class(pca1$li, meaudret$design$site, psub.text = "Principal Component Analysis (env)",
+    plot = F)
+  g2 <- s.class(pca2$li, meaudret$design$site, psub.text = "Principal Component Analysis (spe)",
+    plot = F)
+  g3 <- s.class(bet1$ls, meaudret$design$site, psub.text = "Between sites PCA (env)", plot = F)
+  g4 <- s.class(bet2$ls, meaudret$design$site, psub.text = "Between sites PCA (spe)", plot = F)
+  G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
+  
+} else {
+  par(mfrow = c(2, 2))
+  s.class(pca1$li, meaudret$design$site, sub = "Principal Component Analysis (env)", csub = 1.75)
+  s.class(pca2$li, meaudret$design$site, sub = "Principal Component Analysis (spe)", csub = 1.75)
+  s.class(bet1$ls, meaudret$design$site, sub = "Between sites PCA (env)", csub = 1.75)
+  s.class(bet2$ls, meaudret$design$site, sub = "Between sites PCA (spe)", csub = 1.75)
+  par(mfrow = c(1, 1))
+}
 
-par(mfrow = c(1,1))
 coib <- coinertia(bet1, bet2, scann = FALSE)
 plot(coib)
 }

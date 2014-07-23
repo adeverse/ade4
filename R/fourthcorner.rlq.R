@@ -70,7 +70,7 @@ fourthcorner.rlq <- function(xtest, nrepet = 999, modeltype = 6, typetest = c("a
       }
     }
     Rinit <- res[,-1]
-    names(Rinit) <- provinames[-1] 
+    colnames(Rinit) <- provinames[-1] 
   } else stop ("Not yet available")
 
   
@@ -106,7 +106,7 @@ fourthcorner.rlq <- function(xtest, nrepet = 999, modeltype = 6, typetest = c("a
     }
   }
   Qinit <- res[,-1]
-  names(Qinit) <- provinames[-1] 
+  colnames(Qinit) <- provinames[-1] 
 } else stop ("Not yet available")
 
 
@@ -197,7 +197,7 @@ if(typetest == "axes"){
   res$indexR <- res$indexQ <- rep(1,naxes)
 } else if (typetest == "Q.axes"){
   res$varnames.Q <- names(tabQ)
-  res$colnames.Q <- names(Qinit)
+  res$colnames.Q <- colnames(Qinit)
   res$varnames.R <-  res$colnames.R <- names(xtest$lR)
   res$indexQ <- indexQ
   res$assignQ <- assignQ
@@ -206,7 +206,7 @@ if(typetest == "axes"){
 } else if(typetest == "R.axes"){
   res$varnames.Q <-  res$colnames.Q <- names(xtest$lQ)
   res$varnames.R <- names(tabR)
-  res$colnames.R <- names(Rinit)
+  res$colnames.R <- colnames(Rinit)
   res$indexR <- indexR
   res$assignR <- assignR
   res$assignQ <- 1:naxes

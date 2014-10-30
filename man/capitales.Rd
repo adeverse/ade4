@@ -12,7 +12,9 @@ This list contains the following objects:
     \item{dist}{is dist object the road distances between 15 European capitals. }
     \item{xy}{is a data frame containing the coordinates of capitals. }
     \item{area}{is a data frame containing three variables, designed to be used in area.plot function.}
-    \item{logo}{is a list of pixmap objects, each one symbolizing a capital}
+    \item{logo}{is a list of pixmap objects, each one symbolizing a
+      capital}
+     \item{Spatial}{is a SpatialPolygons object containing the map}
     }
 }
 \source{

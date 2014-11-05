@@ -40,7 +40,8 @@ par(mfrow = c(1, 1))
 if(adegraphicsLoaded()) {
   fac1 <- w$orthobasis
   names(fac1) <- as.character(signif(attr(w$orthobasis, "values"), 3))
-  s.value(w$xy, fac1, pori.in = F, pleg.draw = F, pgrid.text.cex = 0, maxsize = 2, ylim = c(0, 10))
+  s.value(w$xy, fac1, pori.in = F, pleg.draw = F, pgrid.text.cex = 0,
+  ppoints.cex = 2, ylim = c(0, 10))
 
 } else {
   par(mfrow = c(5,8))

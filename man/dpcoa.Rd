@@ -52,7 +52,7 @@ data(humDNAm)
 dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
 dpcoahum
 if(adegraphicsLoaded()) {
-  g1 <- plot(dpcoahum, G4.maxsize = 1.5)
+  g1 <- plot(dpcoahum, G4.ppoints.cex = 1.5)
 } else {
   plot(dpcoahum, csize = 1.5)
 }

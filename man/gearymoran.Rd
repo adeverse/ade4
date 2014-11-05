@@ -53,8 +53,10 @@ mjr.tab <- log(mjrochet$tab)
 gearymoran(mjr.phy$Amat, mjr.tab)
 gearymoran(mjr.phy$Wmat, mjr.tab)
 if(adegraphicsLoaded()) {
-  g1 <- table.value(mjr.phy$Wmat, maxsize = 0.35, nclass = 5, axis.text = list(cex = 0), plot = F)
-  g2 <- table.value(mjr.phy$Amat, maxsize = 0.35, nclass = 5, axis.text = list(cex = 0), plot = F)
+  g1 <- table.value(mjr.phy$Wmat, ppoints.cex = 0.35, nclass = 5,
+axis.text = list(cex = 0), plot = F)
+  g2 <- table.value(mjr.phy$Amat, ppoints.cex = 0.35, nclass = 5,
+axis.text = list(cex = 0), plot = F)
   G <- cbindADEg(g1, g2, plot = TRUE)
   
 } else {

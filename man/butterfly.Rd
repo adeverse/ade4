@@ -34,7 +34,7 @@ if(adegraphicsLoaded()) {
       porigin.include = FALSE, plot = FALSE)
     g2 <- table.value(dist(butterfly$xy), plot = FALSE)
     g3 <- s.value(butterfly$xy, dudi.pca(butterfly$envir, scan = FALSE)$li[, 1], 
-      Sp = butterfly$Spatial, pori.inc = FALSE, pSp.col = "transparent", maxsize = 2, plot = F)
+      Sp = butterfly$Spatial, pori.inc = FALSE, pSp.col = "transparent", ppoints.cex = 2, plot = F)
 ##    mt <- mantel.randtest(dist(butterfly$xy), dist(butterfly$gen), 99)
     G <- ADEgS(list(g1, g2, g3), layout = c(2, 2), plot = TRUE)
   }

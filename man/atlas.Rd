@@ -51,7 +51,7 @@ if(adegraphicsLoaded()) {
     obj6 <- sp::SpatialPolygonsDataFrame(Sr = atlas$Spatial, data = coa1$li)
     g6 <- s.Spatial(obj6[, 1], nclass = 12, psub = list(position = "topleft", 
       text = "Correspondence analysis", cex = 1.5), plot = FALSE)
-    g7 <- s.value(atlas$xy, coa1$li$Axis1, Sp = atlas$Spatial.contour, maxsize = 2, 
+    g7 <- s.value(atlas$xy, coa1$li$Axis1, Sp = atlas$Spatial.contour, ppoints.cex = 2, 
       porigin.include = FALSE, paxes.draw = FALSE, pSp.col = "white", plot = FALSE)
     g8 <- triangle.label(atlas$alti, plabels.cex = 0, plot = FALSE)
     G2 <- ADEgS(list(g5, g6, g7, g8), layout = c(2, 2))

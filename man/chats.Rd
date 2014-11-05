@@ -24,13 +24,13 @@ chatsw <- as.table(t(chats))
 chatscoa <- dudi.coa(data.frame(t(chats)), scann = FALSE)
 
 if(adegraphicsLoaded()) {
-  g1 <- table.value(chatsw, maxsize = 1.3, meanX = TRUE, ablineX = TRUE, plabel.cex = 1.5, 
+  g1 <- table.value(chatsw, ppoints.cex = 1.3, meanX = TRUE, ablineX = TRUE, plabel.cex = 1.5, 
     plot = FALSE)
-  g2 <- table.value(chatsw, maxsize = 1.3, meanY = TRUE, ablineY = TRUE, plabel.cex = 1.5, 
+  g2 <- table.value(chatsw, ppoints.cex = 1.3, meanY = TRUE, ablineY = TRUE, plabel.cex = 1.5, 
     plot = FALSE)
-  g3 <- table.value(chatsw, maxsize = 1.3, coordsx = chatscoa$c1[, 1], coordsy = chatscoa$l1[, 1],
-    meanX = TRUE, ablineX = TRUE, plot = FALSE)
-  g4 <- table.value(chatsw, maxsize = 1.3, coordsx = chatscoa$c1[, 1], coordsy = chatscoa$l1[, 1],
+  g3 <- table.value(chatsw, ppoints.cex = 1.3, coordsx = chatscoa$c1[,
+  1], coordsy = chatscoa$l1[, 1], meanX = TRUE, ablineX = TRUE, plot = FALSE)
+  g4 <- table.value(chatsw, maxsize = 1.3, coordsx = chatscoa$c1[, 1],coordsy = chatscoa$l1[, 1],
     meanY = TRUE, ablineY = TRUE, plot = FALSE)
   G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
 

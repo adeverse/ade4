@@ -66,7 +66,7 @@ Daniel Chessel
 # a 2D spatial orthobasis
 w <- gridrowcol(8, 8)
 if(adegraphicsLoaded()) {
-  g1 <- s.value(w$xy, w$orthobasis[, 1:16], pleg.draw = F, maxsize = 2, pgri.text.cex = 0, 
+  g1 <- s.value(w$xy, w$orthobasis[, 1:16], pleg.draw = F, ppoints.cex = 2, pgri.text.cex = 0, 
     ylim = c(0, 10), pori.inc = F, paxes.dr = F)
   g2 <- g2 <- s1d.barchart(attr(w$orthobasis, "values"), p1d.hori = F, 
     labels = names(attr(w$orthobasis, "values")), plabels.cex = 0.7)

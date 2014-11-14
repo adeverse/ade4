@@ -37,9 +37,9 @@ mdpcoa <- function(msamples, mdistances = NULL, method = c("mcoa", "statis", "mf
         }
         else
             nf1 <- 2
-        dpcoasep <- dpcoa(msamples[[i]], mdistances[[i]], scannf = scansep, full = full, nf = nf1, tol = tol)
-        YesY[[i]] <- dpcoasep$l2
-        YesX[[i]] <- dpcoasep$l1
+        dpcoasep <- dpcoa(data.frame(t(msamples[[i]])), mdistances[[i]], scannf = scansep, full = full, nf = nf1, tol = tol)
+        YesY[[i]] <- dpcoasep$li
+        YesX[[i]] <- dpcoasep$dls
         
         if (option == "lambda1")
             valoption[i] <- 1/(dpcoasep$eig[1])

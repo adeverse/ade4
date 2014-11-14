@@ -2,71 +2,83 @@
 \alias{dpcoa}
 \alias{plot.dpcoa}
 \alias{print.dpcoa}
+\alias{summary.dpcoa}
 \title{Double principal coordinate analysis}
 \description{
 Performs a double principal coordinate analysis  
 }
 \usage{
-dpcoa (df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e-07)
-\method{plot}{dpcoa}(x, xax = 1, yax = 2, option = 1:4, csize = 2, \dots)
+dpcoa(df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e-07,
+RaoDecomp = TRUE)
+\method{plot}{dpcoa}(x, xax = 1, yax = 2, \dots)
 \method{print}{dpcoa} (x, \dots)
+\method{summary}{dpcoa} (object, \dots)
 }
 \arguments{
-  \item{df}{a data frame with elements as rows, samples as columns and abundance or presence-absence as entries}
-  \item{dis}{an object of class \code{dist} containing the distances between the elements.}
-  \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
+  \item{df}{a data frame with samples as rows and categories
+    (i.e. species) as columns and abundance or presence-absence as
+    entries. Previous releases of \pkg{ade4} (<=1.6-2) considered the
+    transposed matrix as argument.}
+  \item{dis}{an object of class \code{dist} containing the distances between the categories.}
+  \item{scannf}{a logical value indicating whether the eigenvalues bar
+    plot should be displayed}
+  \item{RaoDecomp}{a logical value indicating whether Rao diversity
+    decomposition should be performed}
   \item{nf}{if scannf is FALSE, an integer indicating the number of kept axes}
   \item{full}{a logical value indicating whether all non null eigenvalues should be kept}
   \item{tol}{a tolerance threshold for null eigenvalues (a value less than tol times the first one is considered as null)}
-  \item{x}{an object of class \code{dpcoa}}
+  \item{x, object}{an object of class \code{dpcoa}}
   \item{xax}{the column number for the x-axis}
   \item{yax}{the column number for the y-axis}
-  \item{option}{the function \code{plot.dpcoa} produces four graphs, \code{option} allows us to choose only some of them}
-  \item{csize}{a size coefficient for symbols}
   \item{\dots}{\code{\dots} further arguments passed to or from other methods}
 }
 \value{
 Returns a list of class \code{dpcoa} containing:
   \item{call}{call}
   \item{nf}{a numeric value indicating the number of kept axes}
-  \item{w1}{a numeric vector containing the weights of the elements}
-  \item{w2}{a numeric vector containing the weights of the samples}
+  \item{dw}{a numeric vector containing the weights of the elements (was
+    \code{w1} in previous releases of \pkg{ade4})}
+  \item{lw}{a numeric vector containing the weights of the samples (was
+    \code{w2} in previous releases of \pkg{ade4})}
   \item{eig}{a numeric vector with all the eigenvalues}
   \item{RaoDiv}{a numeric vector containing diversities within samples}
   \item{RaoDis}{an object of class \code{dist} containing the dissimilarities between samples}
   \item{RaoDecodiv}{a data frame with the decomposition of the diversity}
-  \item{l1}{a data frame with the coordinates of the elements}
-  \item{l2}{a data frame with the coordinates of the samples}
+  \item{dls}{a data frame with the coordinates of the elements (was
+    \code{l1} in previous releases of \pkg{ade4})}
+  \item{li}{a data frame with the coordinates of the samples (was
+    \code{l2} in previous releases of \pkg{ade4})}
   \item{c1}{a data frame with the scores of the principal axes of the elements}
 }
+
 \references{
   Pavoine, S., Dufour, A.B. and Chessel, D. (2004) From dissimilarities among species to dissimilarities among communities:
   a double principal coordinate analysis. \emph{Journal of Theoretical Biology}, \bold{228}, 523--537.
 }
 \author{Daniel Chessel  \cr
 Sandrine Pavoine \email{pavoine@mnhn.fr} \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Stephane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(humDNAm)
-dpcoahum <- dpcoa(humDNAm$samples, sqrt(humDNAm$distances), scan = FALSE, nf = 2)
+dpcoahum <- dpcoa(data.frame(t(humDNAm$samples)), sqrt(humDNAm$distances), scan = FALSE, nf = 2)
 dpcoahum
 if(adegraphicsLoaded()) {
-  g1 <- plot(dpcoahum, G4.ppoints.cex = 1.5)
+  g1 <- plot(dpcoahum)
 } else {
-  plot(dpcoahum, csize = 1.5)
+  plot(dpcoahum)
 }
   
 \dontrun{
 data(ecomor)
 dtaxo <- dist.taxo(ecomor$taxo)
-dpcoaeco <- dpcoa(ecomor$habitat, dtaxo, scan = FALSE, nf = 2)
+dpcoaeco <- dpcoa(data.frame(t(ecomor$habitat)), dtaxo, scan = FALSE, nf = 2)
 dpcoaeco
 
 if(adegraphicsLoaded()) {
-  g1 <- plot(dpcoaeco, G4.maxsize = 1.5)
+  g1 <- plot(dpcoaeco)
 } else {
-  plot(dpcoaeco, csize = 1.5)
+  plot(dpcoaeco)
 }
 }}
 \keyword{multivariate}

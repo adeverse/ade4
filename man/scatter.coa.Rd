@@ -14,8 +14,8 @@ performs the scatter diagrams of a correspondence analysis.
   \item{yax}{the column number for the y-axis}
   \item{method}{an integer between 1 and 3 \cr
     1 Rows and columns with the coordinates of lambda variance\cr
-    2 Rows variance 1 and columns by averaging\cr
-    3 Columns variance 1 and rows by averaging}
+    2 Columns variance 1 and rows by averaging\cr
+    3 Rows variance 1 and columns by averaging}
   \item{clab.row}{a character size for the rows}
   \item{clab.col}{a character size for the columns}
   \item{posieig}{if "top" the eigenvalues bar plot is upside,vif "bottom" it is downside, if "none" no plot}

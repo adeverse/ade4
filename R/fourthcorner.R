@@ -254,8 +254,8 @@
   }
 
   provinames <- apply(expand.grid(res$colnames.R, res$colnames.Q), 1, paste, collapse=" / ")
-  res$tabD <- as.krandtest(obs = res$tabD[1, ], sim = res$tabD[-1, ], names = provinames, alter = alter.D, call = match.call(), p.adjust.method = p.adjust.method.D)
-  res$tabD2 <- as.krandtest(obs = res$tabD2[1, ], sim = res$tabD2[-1, ], names = provinames, alter = alter.D2, call = match.call(), p.adjust.method = p.adjust.method.D)
+  res$tabD <- as.krandtest(obs = res$tabD[1, ], sim = res$tabD[-1, , drop = FALSE], names = provinames, alter = alter.D, call = match.call(), p.adjust.method = p.adjust.method.D)
+  res$tabD2 <- as.krandtest(obs = res$tabD2[1, ], sim = res$tabD2[-1, , drop = FALSE], names = provinames, alter = alter.D2, call = match.call(), p.adjust.method = p.adjust.method.D)
 
 
   if(p.adjust.D == "levels"){

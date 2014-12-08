@@ -273,8 +273,8 @@ for (i in 1:nrowD){
 }
 
 provinames <- apply(expand.grid(res$colnames.R, res$colnames.Q), 1, paste, collapse=" / ")
-res$tabD <- as.krandtest(obs = res$tabD[1, ], sim = res$tabD[-1, ], names = provinames, alter = alter.D, call = match.call(), p.adjust.method = p.adjust.method.D)
-res$tabD2 <- as.krandtest(obs = res$tabD2[1, ], sim = res$tabD2[-1, ], names = provinames, alter = alter.D2, call = match.call(), p.adjust.method = p.adjust.method.D)
+res$tabD <- as.krandtest(obs = res$tabD[1, ], sim = res$tabD[-1, , drop = FALSE], names = provinames, alter = alter.D, call = match.call(), p.adjust.method = p.adjust.method.D)
+res$tabD2 <- as.krandtest(obs = res$tabD2[1, ], sim = res$tabD2[-1, , drop = FALSE], names = provinames, alter = alter.D2, call = match.call(), p.adjust.method = p.adjust.method.D)
 
 
 if(p.adjust.D == "levels"){
@@ -292,7 +292,7 @@ if(p.adjust.D == "levels"){
 }
 
 provinames <- apply(expand.grid(res$varnames.R, res$varnames.Q), 1, paste, collapse=" / ")
-res$tabG <- as.krandtest(obs = res$tabG[1, ], sim = res$tabG[-1, ], names = provinames, alter = alter.G, call = match.call(), p.adjust.method = p.adjust.method.G)
+res$tabG <- as.krandtest(obs = res$tabG[1, ], sim = res$tabG[-1, , drop = FALSE], names = provinames, alter = alter.G, call = match.call(), p.adjust.method = p.adjust.method.G)
 
 res$tabD$statnames <- names.stat.D
 res$tabD2$statnames <- names.stat.D2

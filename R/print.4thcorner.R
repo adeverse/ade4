@@ -37,7 +37,7 @@
     signifpval <- symnum(xrand$adj.pvalue, corr = FALSE, na = FALSE, cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1), symbols = c("***", "**", "*", ".", " "))
     sumry <- cbind(sumry,signifpval)
     colnames(sumry)[ncol(sumry)] <- " "
-    sumry <- sumry[idx.vars, ]
+    sumry <- sumry[idx.vars, , drop = FALSE]
     rownames(sumry) <- 1:nrow(sumry)
     
     print(sumry, quote = FALSE, right = TRUE)

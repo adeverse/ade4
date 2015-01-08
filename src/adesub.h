@@ -2,6 +2,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
+#include <R.h>
 
 int dtodelta (double **data, double *pl);
 void initvec (double *v1, double r);

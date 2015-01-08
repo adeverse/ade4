@@ -22,8 +22,8 @@ This function takes 2 ktabs and crosses each pair of tables of these ktabs with 
 a list of class ktab, subclass kcoinertia. See \link{ktab}
 }
 \references{
-Thioulouse J., Simier M. and Chessel D. (2004). Simultaneous analysis of a sequence of paired ecological tables.  \emph{Ecology} \bold{85}, 272-283.. 
-
+Thioulouse J. (2011). Simultaneous analysis of a sequence of paired ecological tables: a comparison of several methods. \emph{Annals of Applied Statistics}, \bold{5}, 2300-2325.
+Thioulouse J., Simier M. and Chessel D. (2004). Simultaneous analysis of a sequence of paired ecological tables.  \emph{Ecology} \bold{85}, 272-283.
 Simier, M., Blanc L., Pellegrin F., and Nandris D. (1999). Approche simultanée de K couples de tableaux : 
 Application a l'étude des relations pathologie végétale - environnement. \emph{Revue de Statistique Appliquée}, \bold{47}, 31-46.
 }

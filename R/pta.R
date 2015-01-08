@@ -151,12 +151,15 @@
     # nblo nombre de tableau
     blocks <- X$supblo
     nblo <- length(blocks)
-    w <- NULL
-    for (i in 1:nblo) w <- c(w, 1:blocks[i])
-    w <- cbind.data.frame(factor(rep(1:nblo, blocks)), factor(w))
-    names(w) <- c("T", "I")
-    atp$supTI <- w
-    lw <- X$suplw
+#    w <- NULL
+#    for (i in 1:nblo) w <- c(w, 1:blocks[i])
+#    w <- cbind.data.frame(factor(rep(1:nblo, blocks)), factor(w))
+#    names(w) <- c("T", "I")
+#    atp$supTI <- w
+#    atp$supTI <- auxinames$Trow
+    atp$supTI <- as.data.frame(matrix(unlist(strsplit(auxinames$Trow, "[.]")), ncol=2, byrow=T))
+	names(atp$supTI) <- c("T", "I")
+	lw <- X$suplw
     lw <- split(lw, factor(rep(1:length(blocks),blocks)))
     lw <- lapply(lw, function(x) x/sum(x))
     lw <- unlist(lw)    

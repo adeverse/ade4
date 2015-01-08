@@ -50,13 +50,13 @@ This data frame defines an orthonormal basis with \emph{n-1} vectors of length \
   \item{call}{: call}
 }
 \references{
-Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux classiques par décomposition en ondelettes. 
-\emph{Revue de Statistique Appliquée}, \bold{41}, 5--32.
+Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux classiques par d?composition en ondelettes. 
+\emph{Revue de Statistique Appliqu?e}, \bold{41}, 5--32.
 
-Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}.
-Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
+Cornillon, P.A. (1998) \emph{Prise en compte de proximit?s en analyse factorielle et comparative}.
+Th?se, Ecole Nationale Sup?rieure Agronomique, Montpellier.
 }
-\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
+\author{S?bastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \note{the function \code{orthobasis.haar} uses function \code{\link[waveslim]{wavelet.filter}} from package waveslim.}
@@ -66,9 +66,9 @@ Daniel Chessel
 # a 2D spatial orthobasis
 w <- gridrowcol(8, 8)
 if(adegraphicsLoaded()) {
-  g1 <- s.value(w$xy, w$orthobasis[, 1:16], pleg.draw = F, ppoints.cex = 2, pgri.text.cex = 0, 
+  g1 <- s.value(w$xy, w$orthobasis[, 1:16], pleg.drawKey = F, pgri.text.cex = 0, 
     ylim = c(0, 10), pori.inc = F, paxes.dr = F)
-  g2 <- g2 <- s1d.barchart(attr(w$orthobasis, "values"), p1d.hori = F, 
+  g2 <- s1d.barchart(attr(w$orthobasis, "values"), p1d.hori = F, 
     labels = names(attr(w$orthobasis, "values")), plabels.cex = 0.7)
 
 } else {
@@ -83,38 +83,39 @@ if(adegraphicsLoaded()) {
 
 # Haar 1D orthobasis
 w <- orthobasis.haar(32)
-par(mfrow = c(8,4))
-par(mar = c(0.1,0.1,0.1,0.1))
+par(mfrow = c(8, 4))
+par(mar = c(0.1, 0.1, 0.1, 0.1))
  for (k in 1:31) {
-    plot(w[,k], type="S",xlab = "", ylab = "", xaxt = "n",
-     yaxt = "n", xaxs = "i", yaxs = "i",ylim=c(-4.5,4.5))
-    points(w[,k], type = "p", pch = 20, cex = 1.5)
+    plot(w[, k], type = "S", xlab = "", ylab = "", xaxt = "n",
+     yaxt = "n", xaxs = "i", yaxs = "i", ylim = c(-4.5, 4.5))
+    points(w[, k], type = "p", pch = 20, cex = 1.5)
 }
 
 # a 1D orthobasis
 w <- orthobasis.line(n = 33)
-par(mfrow = c(8,4))
-par(mar = c(0.1,0.1,0.1,0.1))
+par(mfrow = c(8, 4))
+par(mar = c(0.1, 0.1, 0.1, 0.1))
  for (k in 1:32) {
-    plot(w[,k], type="l",xlab = "", ylab = "", xaxt = "n",
-     yaxt = "n", xaxs = "i", yaxs = "i",ylim=c(-1.5,1.5))
-    points(w[,k], type = "p", pch = 20, cex = 1.5)
+    plot(w[, k], type = "l", xlab = "", ylab = "", xaxt = "n",
+     yaxt = "n", xaxs = "i", yaxs = "i", ylim = c(-1.5, 1.5))
+    points(w[, k], type = "p", pch = 20, cex = 1.5)
 }
 
 if(adegraphicsLoaded()) {
-  s1d.barchart(attr(w, "values"), p1d.hori = F, labels = names(attr(w, "values")), plab.cex = 0.7)
+  s1d.barchart(attr(w, "values"), p1d.hori = F, labels = names(attr(w, "values")), 
+    plab.cex = 0.7)
 } else {
-  par(mfrow = c(1,1))
+  par(mfrow = c(1, 1))
   barplot(attr(w, "values"))
 }
 
 w <- orthobasis.circ(n = 26)
-#par(mfrow = c(5,5))
-#par(mar = c(0.1,0.1,0.1,0.1))
+#par(mfrow = c(5, 5))
+#par(mar = c(0.1, 0.1, 0.1, 0.1))
 # for (k in 1:25) 
-#    dotcircle(w[,k], xlim = c(-1.5,1.5), cleg = 0)
+#    dotcircle(w[, k], xlim = c(-1.5, 1.5), cleg = 0)
 
-par(mfrow = c(1,1))
+par(mfrow = c(1, 1))
 #barplot(attr(w, "values"))
 
 \dontrun{
@@ -122,13 +123,13 @@ par(mfrow = c(1,1))
 data(mafragh)
 w <- orthobasis.neig(mafragh$neig)
 if(adegraphicsLoaded()) {
-  s.value(mafragh$xy, w[, 1:8], pleg.draw = F)
+  s.value(mafragh$xy, w[, 1:8], pleg.drawKey = F)
   s1d.barchart(attr(w, "values"), p1d.hori = F)
 } else {
   par(mfrow = c(4, 2))
   for(k in 1:8)
     s.value(mafragh$xy, w[, k], cleg = 0, sub = as.character(k), csub = 3)
-  par(mfrow = c(1,1))
+  par(mfrow = c(1, 1))
   barplot(attr(w, "values"))
 }
 

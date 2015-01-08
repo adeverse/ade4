@@ -25,7 +25,8 @@ data(corvus)
 
 if(adegraphicsLoaded()) {
   g1 <- s.label(corvus[, 1:2], plab.cex = 0, pori.incl = FALSE, pgrid.draw = F, 
-    paxes.draw = T, paxes.asp = "full", plot = FALSE)
+    paxes.draw = T, paxes.asp = "full", xlab = names(corvus)[2], 
+    ylab = names(corvus)[2], plot = FALSE)
   g2 <- s.class(corvus[, 1:2], corvus[, 4]:corvus[, 3], plot = FALSE)
   G <- superpose(g1, g2, plot = TRUE)
 

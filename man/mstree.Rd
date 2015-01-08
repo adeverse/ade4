@@ -29,13 +29,13 @@ if(adegraphicsLoaded()) {
 xy <- data.frame(x = runif(20), y = runif(20))
 
 if(adegraphicsLoaded()) {
-  g1 <- s.label(xy, xlim = c(0, 1), ylim = c(0,1), 
+  g1 <- s.label(xy, xlim = c(0, 1), ylim = c(0, 1), 
     nb = neig2nb(ade4::mstree(dist.quant(xy, 1), 1)), plot = FALSE)
-  g2 <- s.label(xy, xlim = c(0, 1), ylim = c(0,1), 
+  g2 <- s.label(xy, xlim = c(0, 1), ylim = c(0, 1), 
     nb = neig2nb(ade4::mstree(dist.quant(xy, 1), 2)), plot = FALSE)
-  g3 <- s.label(xy, xlim = c(0, 1), ylim = c(0,1), 
+  g3 <- s.label(xy, xlim = c(0, 1), ylim = c(0, 1), 
     nb = neig2nb(ade4::mstree(dist.quant(xy, 1), 3)), plot = FALSE)
-  g4 <- s.label(xy, xlim = c(0, 1), ylim = c(0,1), 
+  g4 <- s.label(xy, xlim = c(0, 1), ylim = c(0, 1), 
     nb = neig2nb(ade4::mstree(dist.quant(xy, 1), 4)), plot = FALSE)
   G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
 

@@ -41,8 +41,11 @@
     Monographs},  \bold{82}, 257--275.
 }
 \examples{
-data(pcw)
-if(adegraphicsLoaded())
-s.label(pcw$xy, nb = nb1, Sp = pcw$map)
-}
+if(adegraphicsLoaded()) {
+  data(pcw)
+  if(require(spdep, quietly = TRUE)) {
+    nb1 <- graph2nb(gabrielneigh(pcw$xy.utm), sym = T) 
+    s.label(pcw$xy, nb = nb1, Sp = pcw$map)
+  }
+}}
 \keyword{datasets}

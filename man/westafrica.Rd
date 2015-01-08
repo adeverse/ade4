@@ -22,22 +22,22 @@ This data set contains informations about faunal similarities between river basi
 \source{
 Data provided by B. Hugueny \email{hugueny@mnhn.fr}.
 
-Paugy, D., Traoré, K. and Diouf, P.F. (1994) Faune ichtyologique des eaux douces d'Afrique de l'Ouest. 
-In \emph{Diversité biologique des poissons des eaux douces et saumâtres d'Afrique. Synthèses géographiques}, 
-Teugels, G.G., Guégan, J.F. and Albaret, J.J. (Editors). Annales du Musée Royal de l'Afrique Centrale,  
+Paugy, D., Traor?, K. and Diouf, P.F. (1994) Faune ichtyologique des eaux douces d'Afrique de l'Ouest. 
+In \emph{Diversit? biologique des poissons des eaux douces et saum?tres d'Afrique. Synth?ses g?ographiques}, 
+Teugels, G.G., Gu?gan, J.F. and Albaret, J.J. (Editors). Annales du Mus?e Royal de l'Afrique Centrale,  
 Zoologie, \bold{275}, Tervuren, Belgique, 35--66.
 
-Hugueny, B. (1989) \emph{Biogéographie et structure des peuplements de Poissons d'eau douce de l'Afrique de l'ouest : 
-approches quantitatives}. Thèse de doctorat, Université Paris 7.
+Hugueny, B. (1989) \emph{Biog?ographie et structure des peuplements de Poissons d'eau douce de l'Afrique de l'ouest : 
+approches quantitatives}. Th?se de doctorat, Universit? Paris 7.
 }
 \references{
-Hugueny, B., and Lévêque, C. (1994) Freshwater fish zoogeography in west Africa: 
+Hugueny, B., and L?v?que, C. (1994) Freshwater fish zoogeography in west Africa: 
 faunal similarities between river basins. \emph{Environmental Biology of Fishes}, \bold{39}, 365--380.
 }
 \examples{
 data(westafrica)
 
-if(! adegraphicsLoaded()) {
+if(!adegraphicsLoaded()) {
   s.label(westafrica$cadre, xlim = c(30, 500), ylim = c(50, 290),
     cpoi = 0, clab = 0, grid = FALSE, addax = 0)
   old.par <- par(no.readonly = TRUE)
@@ -99,6 +99,6 @@ if(require(spdep, quiet = TRUE)) {
 }
 
 par(mfrow = c(1, 1))
-plot(hclust(afri.dist, "ward"), h = -0.2)
+plot(hclust(afri.dist, "ward.D"), h = -0.2)
 }
 \keyword{datasets}

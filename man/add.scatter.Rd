@@ -68,7 +68,7 @@ The matched call (invisible).
     b3 <- s1d.barchart(sort(a3), p1d.horizontal = FALSE, plot = FALSE)
     h3 <- s1d.hist(a3, pgrid.draw = FALSE, porigin.draw = FALSE, pbackground.col = "grey", 
       plot = FALSE, ppoly.col = "white", ppoly.alpha = 1)
-    g3 <- insert(h3, b3, posi = "topleft", inset = 0.25, ratio = 0.1, plot = FALSE)
+    g3 <- insert(h3, b3, posi = "bottomleft", inset = 0.4, ratio = 0.2, plot = FALSE)
   
     a4 <- rnorm(100)
     b4 <- s1d.barchart(sort(a4), p1d.horizontal = FALSE, plot = FALSE)

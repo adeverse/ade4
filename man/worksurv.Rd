@@ -63,7 +63,7 @@ The data frame \code{worksurv} has the attribute 'counts' giving the number of r
 }
 \source{
 Rouanet, H. and Le Roux, B. (1993) 
-\emph{Analyse des données multidimensionnelles}. Dunod, Paris.
+\emph{Analyse des donn?es multidimensionnelles}. Dunod, Paris.
 }
 \references{
 Le Roux, B. and Rouanet, H.  (1997) 
@@ -80,6 +80,7 @@ if(adegraphicsLoaded()) {
 } else {
   par(mfrow = c(2, 2))
   apply(worksurv, 2, function(x) s.class(acm1$li, factor(x), attr(worksurv, 'counts')))
+  par(mfrow = c(1, 1))
 }
 }
 \keyword{datasets}

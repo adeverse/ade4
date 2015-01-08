@@ -36,7 +36,7 @@ if(adegraphicsLoaded()) {
   
   g21 <- s.label(irishdata$xy.utm, Sp = irishdata$Spatial, pSp.col = "white", plab.cex = 0, 
     ppoints.cex = 0, plot = FALSE)
-  g22 <- s.label(irishdata$xy.utm, Sp = irishdata$Spatial.contour, pSp.col = "white", 
+  g22 <- s.label(irishdata$xy.utm, Sp = irishdata$Spatial.contour, pSp.col = "transparent", 
     plab.cex = 0, ppoints.cex = 0, pSp.lwd = 3, plot = FALSE)
   g2 <- superpose(g21, g22)   
 

@@ -25,9 +25,9 @@ of Graphical Techniques Combined with Multivariate Analyses.
 data(toxicity)
 if(adegraphicsLoaded()) {
   table.image(toxicity$tab, labelsy = toxicity$species, labelsx = toxicity$chemicals, nclass = 7, 
-    ptable.x.cst = c(25, 5), ptable.y.cst = c(26, 5), pgrid.draw = TRUE)
+    ptable.margin = list(b = 5, l = 25, t = 25, r = 5), ptable.y.pos = "left", pgrid.draw = TRUE)
   table.value(toxicity$tab, labelsy = toxicity$species, labelsx = toxicity$chemicals, 
-    ptable.x.cst = c(25, 5), ptable.y.cst = c(26, 5))
+    ptable.margin = list(b = 5, l = 5, t = 25, r = 26))
 } else {
   table.paint(toxicity$tab, row.lab = toxicity$species, col.lab = toxicity$chemicals)
   table.value(toxicity$tab, row.lab = toxicity$species, col.lab = toxicity$chemicals)

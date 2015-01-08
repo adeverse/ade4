@@ -1,4 +1,5 @@
 \name{scatterutil}
+\alias{scatterutil}
 \alias{scatterutil.base}
 \alias{scatterutil.sco}
 \alias{scatterutil.chull}

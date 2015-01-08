@@ -26,16 +26,17 @@ table.value(df, x = 1:ncol(df), y = nrow(df):1,
 Daniel Chessel 
 }
 \examples{
-data(olympic)
-w <- olympic$tab
-w <- data.frame(scale(w))
-wpca <- dudi.pca(w, scann = FALSE)
-par(mfrow = c(1,3))
-table.value(w, csi = 2, clabel.r = 2, clabel.c = 2)
-table.value(w, y = rank(wpca$li[,1]), x = rank(wpca$co[,1]), csi = 2,
+if(!adegraphicsLoaded()) {
+  data(olympic)
+  w <- olympic$tab
+  w <- data.frame(scale(w))
+  wpca <- dudi.pca(w, scann = FALSE)
+  par(mfrow = c(1, 3))
+  table.value(w, csi = 2, clabel.r = 2, clabel.c = 2)
+  table.value(w, y = rank(wpca$li[, 1]), x = rank(wpca$co[, 1]), csi = 2,
     clabel.r = 2, clabel.c = 2)
-table.value(w, y = wpca$li[,1], x = wpca$co[,1], csi = 2, 
+  table.value(w, y = wpca$li[, 1], x = wpca$co[, 1], csi = 2, 
     clabel.r = 2, clabel.c = 2)
-par(mfrow = c(1,1))
-}
+  par(mfrow = c(1, 1))
+}}
 \keyword{hplot}

@@ -31,5 +31,6 @@ if(adegraphicsLoaded()) {
   table.value(log(santacatalina + 1)[, sample(10)])
   table.value(log(santacatalina + 1)[order(coa1$li[, 1]), order(coa1$co[, 1])]) 
   scatter(coa1, posi = "bottomright")
+  par(mfrow = c(1, 1))
 }}
 \keyword{datasets}

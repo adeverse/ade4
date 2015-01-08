@@ -33,7 +33,8 @@ if(adegraphicsLoaded()) {
     g2 <- s.logo(capitales$xy[sort(rownames(capitales$xy)), ], capitales$logo, 
       Sp = capitales$Spatial, pback.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE, 
       plot = F)
-    g3 <- table.value(capitales$dist, ptable.x.cst = c(15, 5), ptable.y.cst = c(15, 5), plot = F)
+    g3 <- table.value(capitales$dist, ptable.margin = list(b = 5, l = 5, t = 15, r = 15), 
+      ptable.x.tck = 3, ptable.y.tck = 3, plot = F)
     g4 <- s.logo(pcoscaled(lingoes(capitales$dist)), capitales$logo[index], plot = F) 
     
     G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))

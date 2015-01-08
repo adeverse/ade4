@@ -1,4 +1,6 @@
 \name{randxval}
+\alias{randxval}
+\alias{krandxval}
 \alias{as.krandxval}
 \alias{print.krandxval}
 \alias{as.randxval}

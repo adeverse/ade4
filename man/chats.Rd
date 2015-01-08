@@ -15,7 +15,7 @@ This data set is a contingency table of age classes and fecundity classes of cat
 }
 \source{
 Legay, J.M. and Pontier, D. (1985)
-Relation âge-fécondité dans les populations de Chats domestiques, Felis catus.
+Relation ?ge-f?condit? dans les populations de Chats domestiques, Felis catus.
 \emph{Mammalia}, \bold{49}, 395--402.
 }
 \examples{
@@ -30,8 +30,8 @@ if(adegraphicsLoaded()) {
     plot = FALSE)
   g3 <- table.value(chatsw, ppoints.cex = 1.3, coordsx = chatscoa$c1[,
   1], coordsy = chatscoa$l1[, 1], meanX = TRUE, ablineX = TRUE, plot = FALSE)
-  g4 <- table.value(chatsw, maxsize = 1.3, coordsx = chatscoa$c1[, 1],coordsy = chatscoa$l1[, 1],
-    meanY = TRUE, ablineY = TRUE, plot = FALSE)
+  g4 <- table.value(chatsw, ppoints.cex = 1.3, meanY = TRUE, ablineY = TRUE, 
+    coordsx = chatscoa$c1[, 1], coordsy = chatscoa$l1[, 1], plot = FALSE)
   G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
 
 } else {

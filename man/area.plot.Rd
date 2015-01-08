@@ -84,14 +84,14 @@ par(mfrow = c(1, 1))
     
     if(adegraphicsLoaded()) {
       if(require(sp, quiet = TRUE)) {
-        s.value(elec88$xy, elec88$tab[, i], Sp = elec88$Spatial,
-          meth = "color", psub.text = names(elec88$tab)[i], psub.cex = 3, 
-          pleg.text.cex = 1.5, porigin.incl = FALSE)
+        s.value(elec88$xy, elec88$tab, Sp = elec88$Spatial,
+          meth = "color", psub.text = names(elec88$tab), psub.cex = 3, 
+          pSp.col = "white", pgrid.draw = F, porigin.incl = FALSE)
       }
     } else {
       par(mfrow = c(3, 3))
       for(i in 1:9) {
-        x <- elec88$tab[,i]
+        x <- elec88$tab[, i]
         s.value(elec88$xy, elec88$tab[, i], contour = elec88$contour,
          meth = "greylevel", sub = names(elec88$tab)[i], csub = 3, 
          cleg = 1.5, incl = FALSE)

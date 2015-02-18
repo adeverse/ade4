@@ -1,5 +1,5 @@
 as.randxval <- function(RMSEc, RMSEv, quantiles = c(0.25, 0.75), call = match.call()){
-    ## RMSEc: a vector (length n) with residual mean square error of calibrartion
+    ## RMSEc: a vector (length n) with residual mean square error of calibration
     ## RMSEv: a vector (length n) with residual mean square error of validation
     ## n: number of repetitions
     if(length(RMSEc) != length(RMSEv))

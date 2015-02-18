@@ -21,7 +21,7 @@
   statistical predictions. \emph{Journal of the Royal Statistical
     Society}, 36, 111-147}
 
-\author{St\'ephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and St\'ephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stephane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{mbpcaiv}}, \code{\link{mbpls}},
   \code{\link{randboot.multiblock}}, \code{\link{as.krandxval}}}

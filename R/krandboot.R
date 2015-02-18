@@ -10,6 +10,8 @@ as.krandboot <- function(obs, boot, quantiles = c(0.025, 0.975), names = colname
 
     res$stats <- t(sapply(1:length(obs), function(i) obs[i] - quantile(boot[,i] - obs[i], probs = rev(quantiles), na.rm = TRUE)))
     colnames(res$stats) <- rev(colnames(res$stats))
+    if(is.null(names))
+        names <- 1: nrow(res$stats)
     rownames(res$stats) <- names
     res$call <- call
     class(res) <- "krandboot"

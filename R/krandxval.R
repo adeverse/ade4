@@ -1,5 +1,5 @@
 as.krandxval <- function(RMSEc, RMSEv, quantiles = c(0.25, 0.75), names = colnames(RMSEc), call = match.call()){
-    ## RMSEc: n x p matrix with residual mean square error of calibrartion
+    ## RMSEc: n x p matrix with residual mean square error of calibration
     ## RMSEv: n x p matrix with residual mean square error of validation
     ## n: number of repetitions, p: number of statistics
     if(nrow(RMSEc) != nrow(RMSEv))
@@ -33,7 +33,7 @@ print.krandxval <- function(x, ...){
     cat("Call: ")
     print(x$call)
     cat("\nResults for", ncol(x$RMSEc), "statistics\n\n")
-    cat("Root mean square error of calibrartion:\n")
+    cat("Root mean square error of calibration:\n")
     print(cbind.data.frame(N.rep = x$repRMSEc, x$statsRMSEc))
     cat("\nRoot mean square error of validation:\n")
     print(cbind.data.frame(N.rep = x$repRMSEv, x$statsRMSEv))

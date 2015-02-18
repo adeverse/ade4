@@ -13,9 +13,10 @@ mbpcaiv(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), scannf = TRUE
     explanatory variables}
 \item{scale}{logical value indicating whether the explanatory variables
   should be standardized}
-\item{option}{an option for the block weighting:
-  \option{uniform}{the block weight is equal to $1/K$ for \eqn{(X_1, \dots, X_K)} and to $1$ for $X$ and $Y$}
-  \option{none}{the block weight is equal to the block inertia}}
+\item{option}{an option for the block weighting. If \code{uniform},
+  the block weight is equal to $1/K$ for \eqn{(X_1, \dots, X_K)} and to
+  $1$ for $X$ and $Y$. If \code{none}, the block weight is equal to the
+  block inertia}
 \item{scannf}{logical value indicating whether the eigenvalues bar plot should be displayed}
 \item{nf}{integer indicating the number of kept dimensions}
 }
@@ -47,8 +48,8 @@ mbpcaiv(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), scannf = TRUE
 \item{vip}{variable importances for a given dimension}
 \item{vipc}{cumulated variable importances for a given number of dimensions}
 }
-\references{Bougeard, S., Qannari, E.M. \& Rose, N. (2011) Multiblock Redundancy Analysis: interpretation tools and application in epidemiology. \emph{Journal of Chemometrics}, 23, 1-9}
-\author{St\'ephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and St\'ephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\references{Bougeard, S., Qannari, E.M. and Rose, N. (2011) Multiblock Redundancy Analysis: interpretation tools and application in epidemiology. \emph{Journal of Chemometrics}, 23, 1-9}
+\author{Stephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stephane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{mbpls}}, \code{\link{testdim.multiblock}}, \code{\link{randboot.multiblock}}}
 \examples{

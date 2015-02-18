@@ -93,12 +93,16 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     res$cov2 <- Ak <- matrix(0, nrow = nblo, ncol = maxdim, dimnames = list(names(ktabX$blo), dimlab))
     res$Tfa  <- lapply(1:nblo, function(k)  matrix(0, nrow = ncol(Xk[[k]]), ncol = maxdim, dimnames = list(colnames(Xk[[k]]), dimlab)))
     res$Tli  <- res$Tl1 <- rep(list(matrix(0, nrow = nr, ncol = maxdim, dimnames = list(row.names(dudiY$tab), dimlab))), nblo)
-    ## res$W <- matrix(0, nrow = ncolX, ncol = maxdim, dimnames = list(col.names(ktabX), dimlab))
+    res$faX <- matrix(0, nrow = ncolX, ncol = maxdim, dimnames = list(col.names(ktabX), dimlab))
+    lX1 <- res$lX
+    W <- res$faX
     
     ##-----------------------------------------------------------------------
     ##     Compute components and loadings by an iterative algorithm
     ##-----------------------------------------------------------------------
     
+    if (!require(MASS)) stop("library MASS required for ginv")
+
     Y <- as.matrix(Y)
     X <- as.matrix(X)
       
@@ -126,6 +130,7 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
         
         ## Compute the loadings Wk and the components Tk (Xk datasets)
         
+        covutcarre <- 0
         covutk <- rep(0, nblo)   
         for (k in 1 : nblo) {
             lm1 <- lm.wfit(x = Xk[[k]], y = res$lY[, h], w = res$lw)
@@ -134,7 +139,8 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
             res$Tli[[k]][, h] <- lm1$fitted.values 
             
             covutk[k] <- crossprod(res$lY[, h] * res$lw, res$Tl1[[k]][, h])
-            res$cov2[k, h] <- covutk[k]^2  
+            res$cov2[k, h] <- covutk[k]^2
+            covutcarre <- covutcarre + res$cov2[k, h]
         }
         
         for(k in 1 : nblo) {
@@ -142,8 +148,10 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
             res$lX[, h]  <- res$lX[, h] + Ak[k, h] * res$Tl1[[k]][, h]
         }
         
+        lX1[, h] <- res$lX[, h] / sqrt(sum(res$lX[, h]^2))
+
         ## use ginv to avoid NA in coefficients (collinear system)
-        ## res$W[, h]  <- tcrossprod(ginv(crossprod(X)), X) %*% res$lX[, h]
+        W[, h]  <- tcrossprod(MASS::ginv(crossprod(X)), X) %*% res$lX[, h]
         
         ## Deflation of the Xk datasets on the global components T
         Xk <- lapply(Xk, function(y) lm.wfit(x = as.matrix(res$lX[, h]), y = y, w = res$lw)$residuals)
@@ -159,8 +167,18 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     Y <- as.matrix(res$tabY)
 
     ## Computing the regression coefficients of X onto the global components T (Wstar)
-    res$faX <- lm.wfit(x = X, y = res$lX, w = res$lw)$coefficients
-
+    ## res$faX <- lm.wfit(x = X, y = res$lX, w = res$lw)$coefficients ## lm is not used to avoid NA coefficients in the case of not full rank matrices
+    res$faX[, 1] <- W[, 1, drop = FALSE]
+    A <- diag(ncolX)
+    if(maxdim >= 2){
+        for(h in 2:maxdim){
+            a <- crossprod(lX1[, h-1], X) / sqrt(sum(res$lX[, h-1]^2))
+            A <- A %*% (diag(ncolX) - W[, h-1] %*% a)
+            res$faX[, h] <- A %*% W[, h]
+            X <- X - tcrossprod(lX1[, h-1]) %*% X
+        }
+    }
+    
     ##  Computing the regression coefficients of X onto Y (Beta)
     res$Yco <-  t(Y) %*% diag(res$lw) %*% res$lX
     norm.li <- diag(crossprod(res$lX * sqrt(res$lw)))

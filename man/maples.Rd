@@ -34,7 +34,7 @@ par(mfrow = c(1,1))
 plot(bif,dom,pch = 20)
 abline(lm(dom~bif))
 summary(lm(dom~bif))
-if (require(ape, quiet = TRUE)){
+if (requireNamespace("ape", quiet = TRUE)){
 cor.test(bif,dom)
 phylo <- read.tree(text = maples$tre)
 pic.bif <- pic(bif, phylo)

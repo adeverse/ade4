@@ -98,8 +98,6 @@ mbpls <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), sca
     ##     Compute components and loadings by an iterative algorithm
     ##-----------------------------------------------------------------------
 
-    if (!require(MASS)) stop("library MASS required for ginv")
-    
     Y <- as.matrix(Y)
     X <- as.matrix(X)
       

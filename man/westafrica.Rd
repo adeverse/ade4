@@ -67,7 +67,7 @@ if(adegraphicsLoaded()) {
   barplot(afri.pco$li[, 3])
 }
 
-if(require(spdep, quiet = TRUE)) {
+if(requireNamespace("spdep", quiet = TRUE)) {
   # multivariate spatial analysis
   afri.neig <- neig(n.line = 33)
   afri.nb <- neig2nb(afri.neig)

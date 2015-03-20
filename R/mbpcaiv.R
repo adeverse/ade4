@@ -101,61 +101,59 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     ##     Compute components and loadings by an iterative algorithm
     ##-----------------------------------------------------------------------
     
-    if (!require(MASS)) stop("library MASS required for ginv")
-
-    Y <- as.matrix(Y)
-    X <- as.matrix(X)
-      
-    f1 <- function(x) lm.wfit(x = x, y = Y, w = res$lw)$fitted.values
-   
-    for(h in 1 : maxdim) {
+      Y <- as.matrix(Y)
+      X <- as.matrix(X)
         
-        ## iterative algorithm
-        
-        ## Compute the matrix M for the eigenanalysis
-        M <- lapply(lapply(Xk, f1), function (x) crossprod(x * sqrt(res$lw)))
-        M <- Reduce("+", M)
-        
-        ## Compute the loadings V and the components U (Y dataset)
-        eig.M <- eigen(M)
-        
-        if (eig.M$values[1] < sqrt(.Machine$double.eps)) {
-            res$rank <- h-1 ## update the rank
-            break
-        }
-
-        res$eig[h] <- eig.M$values[1]    
-        res$Yc1[, h]  <- eig.M$vectors[, 1, drop = FALSE]
-        res$lY[, h]  <- Y %*% res$Yc1[, h]
-        
-        ## Compute the loadings Wk and the components Tk (Xk datasets)
-        
-        covutcarre <- 0
-        covutk <- rep(0, nblo)   
-        for (k in 1 : nblo) {
-            lm1 <- lm.wfit(x = Xk[[k]], y = res$lY[, h], w = res$lw)
-            res$Tfa[[k]][, h] <- lm1$coefficients / sqrt(sum(res$lw * lm1$fitted.values^2))
-            res$Tl1[[k]][, h] <- scalewt(lm1$fitted.values, wt = res$lw)
-            res$Tli[[k]][, h] <- lm1$fitted.values 
-            
-            covutk[k] <- crossprod(res$lY[, h] * res$lw, res$Tl1[[k]][, h])
-            res$cov2[k, h] <- covutk[k]^2
-            covutcarre <- covutcarre + res$cov2[k, h]
-        }
-        
-        for(k in 1 : nblo) {
-            Ak[k, h] <- covutk[k] / sqrt(sum(res$cov2[,h]))
-            res$lX[, h]  <- res$lX[, h] + Ak[k, h] * res$Tl1[[k]][, h]
-        }
-        
-        lX1[, h] <- res$lX[, h] / sqrt(sum(res$lX[, h]^2))
-
-        ## use ginv to avoid NA in coefficients (collinear system)
-        W[, h]  <- tcrossprod(MASS::ginv(crossprod(X)), X) %*% res$lX[, h]
-        
-        ## Deflation of the Xk datasets on the global components T
-        Xk <- lapply(Xk, function(y) lm.wfit(x = as.matrix(res$lX[, h]), y = y, w = res$lw)$residuals)
-        X  <- as.matrix(cbind.data.frame(Xk))
+      f1 <- function(x) lm.wfit(x = x, y = Y, w = res$lw)$fitted.values
+     
+      for(h in 1 : maxdim) {
+          
+          ## iterative algorithm
+          
+          ## Compute the matrix M for the eigenanalysis
+          M <- lapply(lapply(Xk, f1), function (x) crossprod(x * sqrt(res$lw)))
+          M <- Reduce("+", M)
+          
+          ## Compute the loadings V and the components U (Y dataset)
+          eig.M <- eigen(M)
+          
+          if (eig.M$values[1] < sqrt(.Machine$double.eps)) {
+              res$rank <- h-1 ## update the rank
+              break
+          }
+  
+          res$eig[h] <- eig.M$values[1]    
+          res$Yc1[, h]  <- eig.M$vectors[, 1, drop = FALSE]
+          res$lY[, h]  <- Y %*% res$Yc1[, h]
+          
+          ## Compute the loadings Wk and the components Tk (Xk datasets)
+          
+          covutcarre <- 0
+          covutk <- rep(0, nblo)   
+          for (k in 1 : nblo) {
+              lm1 <- lm.wfit(x = Xk[[k]], y = res$lY[, h], w = res$lw)
+              res$Tfa[[k]][, h] <- lm1$coefficients / sqrt(sum(res$lw * lm1$fitted.values^2))
+              res$Tl1[[k]][, h] <- scalewt(lm1$fitted.values, wt = res$lw)
+              res$Tli[[k]][, h] <- lm1$fitted.values 
+              
+              covutk[k] <- crossprod(res$lY[, h] * res$lw, res$Tl1[[k]][, h])
+              res$cov2[k, h] <- covutk[k]^2
+              covutcarre <- covutcarre + res$cov2[k, h]
+          }
+          
+          for(k in 1 : nblo) {
+              Ak[k, h] <- covutk[k] / sqrt(sum(res$cov2[,h]))
+              res$lX[, h]  <- res$lX[, h] + Ak[k, h] * res$Tl1[[k]][, h]
+          }
+          
+          lX1[, h] <- res$lX[, h] / sqrt(sum(res$lX[, h]^2))
+  
+          ## use ginv to avoid NA in coefficients (collinear system)
+          W[, h]  <- tcrossprod(MASS::ginv(crossprod(X)), X) %*% res$lX[, h]
+          
+          ## Deflation of the Xk datasets on the global components T
+          Xk <- lapply(Xk, function(y) lm.wfit(x = as.matrix(res$lX[, h]), y = y, w = res$lw)$residuals)
+          X  <- as.matrix(cbind.data.frame(Xk))
     }
 
     ##-----------------------------------------------------------------------

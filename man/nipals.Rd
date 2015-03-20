@@ -70,7 +70,7 @@ nip1 <- nipals(doubs$env)
 
 
 if(adegraphicsLoaded()) {
-  if(require(lattice, quiet = TRUE)) {
+  if(requireNamespace("lattice", quiet = TRUE)) {
     g1 <- s1d.barchart(acp1$eig, psub.text = "dudi.pca", p1d.hori = F, plot = F)
     g2 <- s1d.barchart(nip1$eig, psub.text = "nipals", p1d.hori = F, plot = F)
     g3 <- xyplot(nip1$c1[, 1] ~ acp1$c1[, 1], main = "col scores", xlab = "dudi.pca", 

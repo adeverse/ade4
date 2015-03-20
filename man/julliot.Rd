@@ -20,7 +20,7 @@ Species names of \code{julliot$tab} are \emph{Pouteria torta}, \emph{Minquartia 
 \references{
 Julliot, C. (1992) Utilisation des ressources alimentaires par le singe hurleur roux, 
 \emph{Alouatta seniculus} (Atelidae, Primates), en Guyane : 
-impact de la dissémination des graines sur la régénération forestière. Thèse de troisième cycle, Université de Tours.
+impact de la diss?mination des graines sur la r?g?n?ration foresti?re. Th?se de troisi?me cycle, Universit? de Tours.
 
 Julliot, C. (1997) Impact of seed dispersal by red howler monkeys \emph{Alouatta seniculus} 
 on the seedling population in the understorey of tropical rain forest. \emph{Journal of Ecology}, \bold{85}, 431--440.
@@ -30,7 +30,7 @@ data(julliot)
 
 \dontrun{
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp"", quiet = TRUE)) {
     obj1 <- sp::SpatialPolygonsDataFrame(Sr = julliot$Spatial, data = log(julliot$tab + 1))
     g1 <- s.Spatial(obj1)
     
@@ -39,7 +39,7 @@ if(adegraphicsLoaded()) {
     
   }
 } else {
-  if(require(splancs, quiet = TRUE)) {
+  if(requireNamespace("splancs", quiet = TRUE)) {
     par(mfrow = c(3, 3))
     for(k in 1:7)
       area.plot(julliot$area, val = log(julliot$tab[, k] + 1),
@@ -58,13 +58,13 @@ if(adegraphicsLoaded()) {
 
 
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     g3 <- s.image(julliot$xy, log(julliot$tab + 1), span = 0.25)
   }
   g4 <- s.value(julliot$xy, log(julliot$tab + 1))
   
 } else {
-  if(require(splancs, quiet = TRUE)) {
+  if(requireNamespace("splancs", quiet = TRUE)) {
     par(mfrow = c(3, 3))
     for(k in 1:7)
       s.image(julliot$xy, log(julliot$tab[, k] + 1), kgrid = 3, span = 0.25,
@@ -80,7 +80,7 @@ if(adegraphicsLoaded()) {
 }
         
 \dontrun{
-if(require(spdep, quiet = TRUE)) {
+if(requireNamespace("spdep", quiet = TRUE)) {
   neig0 <- nb2neig(dnearneigh(as.matrix(julliot$xy), 1, 1.8))
   if(adegraphicsLoaded()) {
     g5 <- s.label(julliot$xy, nb = dnearneigh(as.matrix(julliot$xy), 1, 1.8))

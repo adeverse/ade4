@@ -28,11 +28,11 @@ M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Micr
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps069.pdf} (in French).
 }
 \examples{
-if(require(pixmap, quiet=TRUE)) {
+if(requireNamespace("pixmap", quiet=TRUE)) {
   data(ggtortoises)
   
   if(adegraphicsLoaded()) {
-    if(require(sp, quiet = TRUE)) {
+    if(requireNamespace("sp", quiet = TRUE)) {
       g1 <- s.logo(ggtortoises$pop, ggtortoises$ico[as.character(ggtortoises$pop$carap)], 
         Sp = ggtortoises$Spatial, pback.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE,
         ppoints.cex = 0.5)

@@ -41,8 +41,8 @@ ori.xy <- oribatid$xy[, c(2, 1)]
 names(ori.xy) <- c("x","y")
 plot(ori.xy,pch = 20, cex = 2, asp = 1)
 
-if(require(deldir, quiet = TRUE)) {
-  if(require(spdep, quiet = TRUE)) {
+if(requireNamespace("deldir", quiet = TRUE)) {
+  if(requireNamespace("spdep", quiet = TRUE)) {
     plot(deldir(ori.xy), add = TRUE)
     if(adegraphicsLoaded()) {
       s.label(ori.xy, nb = knn2nb(knearneigh(as.matrix(ori.xy), 3)), plab.cex = 0)

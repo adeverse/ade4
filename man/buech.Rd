@@ -25,14 +25,14 @@ Organic (organic particles (mg/l)) ; Nitrate (nitrate rate (mg/l NO3-)) ;
 Ammonia (amoniac rate (mg/l NH4-))
 }
 \source{
-Vespini, F. (1985) \emph{Contribution à l'étude hydrobiologique du Buech, rivière non aménagée de Haute-Provence}. Thèse de troisième cycle, Université de Provence.
+Vespini, F. (1985) \emph{Contribution ? l'?tude hydrobiologique du Buech, rivi?re non am?nag?e de Haute-Provence}. Th?se de troisi?me cycle, Universit? de Provence.
 
-Vespini, F., Légier, P. and Champeau, A. (1987) Ecologie d'une rivière non aménagée des Alpes du Sud : Le Buëch (France) I. Evolution longitudinale des descripteurs physiques et chimiques. \emph{Annales de Limnologie}, \bold{23}, 151--164.
+Vespini, F., L?gier, P. and Champeau, A. (1987) Ecologie d'une rivi?re non am?nag?e des Alpes du Sud : Le Bu?ch (France) I. Evolution longitudinale des descripteurs physiques et chimiques. \emph{Annales de Limnologie}, \bold{23}, 151--164.
 }
 \examples{
 data(buech)
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     g1 <- s.label(buech$xy, Sp = buech$Spatial, nb = buech$nb, 
       pSp.col = "transparent", plot = FALSE)
     g2 <- s.value(buech$xy, buech$tab2$Suspens - buech$tab1$Suspens, 

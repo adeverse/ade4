@@ -50,7 +50,7 @@ Ollier, S., Couteron, P. and Chessel, D. (2005) Orthonormal transforms to detect
 phylogenetic autocorrelation. \emph{Biometrics} (in press).
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
+S?bastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{newick2phylog}}, \code{\link{plot.phylog}}}
 \examples{
@@ -60,14 +60,14 @@ marthans.tre[2] <- "((6:5,7:5)e:4,(8:4,9:4)f:5)g:4);"
 marthans.phylog <- newick2phylog(marthans.tre)
 marthans.phylog
 
-if (require(ape, quietly=TRUE)) {
-marthans.phylo <- read.tree(text = marthans.tre)
-marthans.phylo
+if(requireNamespace("ape", quietly=TRUE)) {
+  marthans.phylo <- ape::read.tree(text = marthans.tre)
+  marthans.phylo
 
-par(mfrow =c (1,2))
-plot(marthans.phylog, cnode = 3, f = 0.8, cle = 3)
-plot(marthans.phylo)
-par(mfrow = c(1,1))
+  par(mfrow =c (1,2))
+  plot(marthans.phylog, cnode = 3, f = 0.8, cle = 3)
+  plot(marthans.phylo)
+  par(mfrow = c(1,1))
 }
 }
 \keyword{manip}

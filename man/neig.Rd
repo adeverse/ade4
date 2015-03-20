@@ -59,11 +59,11 @@ Multivariate analysis of spatial patterns: a unified approach to local and globa
 \examples{
 if(!adegraphicsLoaded()) {
   
-  if(require(deldir, quietly = TRUE)) {
+  if(requireNamespace("deldir", quietly = TRUE)) {
   
     data(mafragh)
     par(mfrow = c(2, 1))
-    provi <- deldir(mafragh$xy)
+    provi <- deldir::deldir(mafragh$xy)
     provi.neig <- neig(edges = as.matrix(provi$delsgs[, 5:6]))
     
     s.label(mafragh$xy, neig = provi.neig, inc = FALSE, 
@@ -107,7 +107,7 @@ if(!adegraphicsLoaded()) {
     par(mfrow = c(1, 1))
   }
 
-  if(require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
+  if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
     data(columbus)
     par(mfrow = c(2, 1))
     par(mar = c(0.1, 0.1, 0.1, 0.1))

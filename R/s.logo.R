@@ -6,7 +6,6 @@
     csub = 1.25, possub = "bottomleft", pixmap = NULL, contour = NULL, 
     area = NULL, add.plot = FALSE) 
 {
-  if(!require(pixmap,quietly=TRUE)) stop("the library pixmap is required; please install the package")
   dfxy <- data.frame(dfxy)
     if (!is.list(listlogo)) stop (paste(deparse(substitute(listlogo)),' is not a list'))
     nlogo <- length(listlogo)

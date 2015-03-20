@@ -26,7 +26,7 @@ Percival, D. B., and Walden, A.T. (2000) \emph{Wavelet Methods for Time Series A
 \examples{
 \dontrun{
 # figure 130 in Percival and Walden (2000)
-if (require(waveslim) == TRUE) { 
+if (requireNamespace("waveslim") == TRUE) { 
 data(ecg)
 ecg.level <- haar2level(ecg)
 ecg.haar <- orthobasis.haar(length(ecg))

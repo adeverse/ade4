@@ -126,7 +126,6 @@ return(res)
 # la seconde exploite les potentialités de la librairie waveslim, en remarquant qu'il existe un lien étroit entre la définition des filtres et la définition
 # des bases. Cette stratégie permettra à l'avenir de définir les bases associées à d'autres famille de fonctions.
 "haar.basis.2" <-  function (n) {
-    if (!require(waveslim)) stop ("Please install waveslim")
     J <- a    #nombre de niveau
     res <- matrix(0, nrow = n,ncol = n-1)
     filter.seq <- "H" #filtre correspondant au niveau 1

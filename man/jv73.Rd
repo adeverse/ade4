@@ -19,9 +19,9 @@ This data set gives physical and physico-chemical variables, fish species, spati
     }
 }
 \source{
-Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).
-Recherches écologiques sur le réseau hydrographique du Doubs.
-Essai de biotypologie. Thèse d'Etat, Besançon.
+Verneaux, J. (1973) Cours d'eau de Franche-Comt? (Massif du Jura).
+Recherches ?cologiques sur le r?seau hydrographique du Doubs.
+Essai de biotypologie. Th?se d'Etat, Besan?on.
 }
 \references{
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps047.pdf} (in French).
@@ -34,7 +34,7 @@ w <- lapply(w, function(x) t(dudi.pca(x, scann = FALSE)))
 w <- ktab.list.dudi(w)
 
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     g11 <- s.label(jv73$xy, Sp = jv73$Spatial, pori.incl = FALSE, plab.cex = 0.75, plot = FALSE)
     g12 <- s.class(jv73$xy, jv73$fac.riv, ellipseSize = 0, pellipses.axes.draw = FALSE, 
       starSize = 0, ppoints.cex = 0, plab.cex = 1.25, plot = FALSE)

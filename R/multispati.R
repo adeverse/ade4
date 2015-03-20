@@ -1,5 +1,4 @@
 "multispati" <- function(dudi, listw, scannf=TRUE, nfposi=2, nfnega=0) {
-    if(!require(spdep,quietly=TRUE)) stop("the library spdep is required; please install the package")
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected")
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected")
@@ -75,8 +74,7 @@
     return(norm)
   }
   
-  if (!inherits(object, "multispati"))stop("to be used with 'multispati' object")
-  if(!require(spdep,quietly=TRUE)) stop("the library spdep is required; please install this package")
+  if (!inherits(object, "multispati")) stop("to be used with 'multispati' object")
   
   cat("\nMultivariate Spatial Analysis\n")
   cat("Call: ")

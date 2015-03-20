@@ -21,14 +21,13 @@ This list contains the following objects:
  \url{http://www.euro.gouv.fr/jeunes/eurocollege/tableaucarte.htm}
 }
 \examples{
-
 data(capitales)
 attr(capitales$dist, "Labels")
 index <- pmatch(tolower(attr(capitales$dist, "Labels")), names(capitales$logo))
 w1 <- capitales$area
 
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     g1 <- s.label(capitales$xy, lab = rownames(capitales$xy), pori.incl = F, plot = F)
     g2 <- s.logo(capitales$xy[sort(rownames(capitales$xy)), ], capitales$logo, 
       Sp = capitales$Spatial, pback.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE, 
@@ -41,7 +40,7 @@ if(adegraphicsLoaded()) {
   }
   
 } else {
-  if(require(pixmap, quiet = TRUE)) {
+  if(requireNamespace("pixmap", quiet = TRUE)) {
     par(mfrow = c(2, 2))
     s.label(capitales$xy, lab = attr(capitales$dist, "Labels"), include.origin = FALSE)
     area.plot(w1)
@@ -54,7 +53,7 @@ if(adegraphicsLoaded()) {
       # depends on pixmap
     par(mfrow = c(1, 1))
   }
+  }
 }
 
-}
 \keyword{datasets}

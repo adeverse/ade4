@@ -31,7 +31,7 @@ Direction de la Protection de la Nature, Ministere de la Qualite de la Vie. 1--3
 \examples{
 data(atlas)
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     g11 <- s.Spatial(atlas$Spatial, pSp.col = "white", plot = FALSE)
     g12 <- s.label(atlas$area[, 2:3], plabels.cex = 0, plot = FALSE)
     g1 <- superpose(g11, g12, plot = FALSE)

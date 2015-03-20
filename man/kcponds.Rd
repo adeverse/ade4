@@ -29,7 +29,7 @@ data(kcponds)
 w <- as.numeric(scalewt(kcponds$tab$N))
 
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     g1 <- s.label(kcponds$xy, Sp = kcponds$Spatial, pSp.col = "white", nb = kcponds$nb, 
       plab.cex = 0, paxes.asp = "fill", plot = F)
     g2 <- s.label(kcponds$xy, Sp = kcponds$Spatial, pSp.col = "white", plabels.cex = 0.8, 
@@ -54,7 +54,7 @@ if(adegraphicsLoaded()) {
 \dontrun{
   par(mfrow = c(3, 1))
   pca1 <- dudi.pca(kcponds$tab, scan = FALSE, nf = 4)
-  if(require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
+  if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
     multi1 <- multispati(pca1, nb2listw(neig2nb(kcponds$neig)), scan = F, nfposi = 2, nfnega = 1)
     summary(multi1)
   }

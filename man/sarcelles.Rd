@@ -19,15 +19,15 @@ for which the ring was retrieved in the area \emph{i} during the month \emph{j} 
 }
 \source{
  Lebreton, J.D. (1973)
- Etude des déplacements saisonniers des Sarcelles d'hiver, 
- Anas c. crecca L., hivernant en Camargue à l'aide de l'analyse factorielle des correspondances.
- \emph{Compte rendu hebdomadaire des séances de l'Académie des sciences}, Paris, D, III, \bold{277}, 2417--2420.
+ Etude des d?placements saisonniers des Sarcelles d'hiver, 
+ Anas c. crecca L., hivernant en Camargue ? l'aide de l'analyse factorielle des correspondances.
+ \emph{Compte rendu hebdomadaire des s?ances de l'Acad?mie des sciences}, Paris, D, III, \bold{277}, 2417--2420.
 }
 \examples{
 \dontrun{
 if(!adegraphicsLoaded()) {
   # depends of pixmap
-  if(require(pixmap, quietly = TRUE)) {
+  if(requireNamespace("pixmap", quietly = TRUE)) {
     bkgnd.pnm <- read.pnm(system.file("pictures/sarcelles.pnm", package = "ade4"))
     data(sarcelles)
     par(mfrow = c(4, 3))

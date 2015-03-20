@@ -19,8 +19,8 @@ This data set gives environmental and spatial informations about species and sit
         \item{area}{is a data frame of class \code{area}}
 }}
 \source{
-Belair, G.d. and Bencheikh-Lehocine, M. (1987) Composition et déterminisme de la végétation d'une 
-plaine côtière marécageuse : La Mafragh (Annaba, Algérie). \emph{Bulletin d'Ecologie}, \bold{18}, 393--407.
+Belair, G.d. and Bencheikh-Lehocine, M. (1987) Composition et d?terminisme de la v?g?tation d'une 
+plaine c?ti?re mar?cageuse : La Mafragh (Annaba, Alg?rie). \emph{Bulletin d'Ecologie}, \bold{18}, 393--407.
 }
 \references{
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps053.pdf} (in French).
@@ -56,7 +56,7 @@ neig1 <- neig(mat01 = 1*(link1 > 0))
 nb1 <- neig2nb(neig1)
 
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     g7 <- s.label(mafragh$xy, Sp = mafragh$Spatial, pSp.col = "white", plot = FALSE)
     g8 <- s.label(mafragh$xy, Sp = mafragh$Spatial, pSp.col = "white", nb = nb1, plab.cex = 0, 
       pnb.node.cex = 0, ppoints.cex = 0, plot = FALSE)
@@ -70,7 +70,7 @@ if(adegraphicsLoaded()) {
   par(mfrow = c(1, 1))
 }
 
-if(require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
+if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
   lw1 <- apply(link1, 1, function(x) x[x > 0])
   listw1 <- nb2listw(nb1, lw1)
   coa1 <- dudi.coa(mafragh$flo, scan = FALSE, nf = 4)
@@ -78,7 +78,7 @@ if(require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
   summary(ms1)
   
   if(adegraphicsLoaded()) {
-    if(require(lattice, quiet = TRUE)) {
+    if(requireNamespace("lattice", quiet = TRUE)) {
       g9 <- s1d.barchart(coa1$eig, p1d.hori = FALSE, plot = FALSE)
       g10 <- s1d.barchart(ms1$eig, p1d.hori = FALSE, plot = FALSE)
       g11 <- s.corcircle(ms1$as, plot = FALSE)

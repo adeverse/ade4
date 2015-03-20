@@ -28,11 +28,11 @@ Smouse, P. E. and Peakall, R. (1999) Spatial autocorrelation analysis of individ
 \emph{Heredity}, \bold{82}, 561--573.
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
+S?bastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{
-if (require(maptools, quiet = TRUE) & require(spdep, quiet = TRUE)) {
+if (requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
     data(mafragh)
     maf.listw <- nb2listw(neig2nb(mafragh$neig))
     maf.pca <- dudi.pca(mafragh$mil, scannf = FALSE)

@@ -36,7 +36,7 @@ summary(elec88$res)
 pca1 <- dudi.pca(elec88$tab, scal = FALSE, scan = FALSE)
 
 if(adegraphicsLoaded()) {
-  if(require(sp, quiet = TRUE)) {
+  if(requireNamespace("sp", quiet = TRUE)) {
     data1 <- as.data.frame(as.numeric(rownames(elec88$tab) == "D25"))
     rownames(data1) <- row.names(elec88$Spatial)
     obj1 <- sp::SpatialPolygonsDataFrame(Sr = elec88$Spatial, data = data1)

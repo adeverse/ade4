@@ -5,7 +5,6 @@
     csub = 1.25, possub = "bottomleft", pixmap = NULL, contour = NULL, 
     area = NULL, add.plot = FALSE) { 
     
-    if (!require(MASS)) stop("library MASS required for kde2d")
     # kde2d is a function of the library MASS
     # Venables, W. N. and Ripley, B. D. (2002) _Modern Applied
     # Statistics with S._ Fourth edition.  Springer.

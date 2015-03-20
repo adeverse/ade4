@@ -51,7 +51,7 @@ strains to interact with either M. laciniata or M. truncatula.
 
 # The functions used below require the package ape
 data(rhizobium)
-if (require(ape, quiet = TRUE)) {
+if(requireNamespace("ape", quiet = TRUE)) {
 dat <- prep.mdpcoa(rhizobium[[1]], rhizobium[[2]], 
     model = c("F84", "F84", "F84", "F81"),
     pairwise.deletion = TRUE)

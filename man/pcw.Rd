@@ -43,7 +43,7 @@
 \examples{
 if(adegraphicsLoaded()) {
   data(pcw)
-  if(require(spdep, quietly = TRUE)) {
+  if(requireNamespace("spdep", quietly = TRUE)) {
     nb1 <- graph2nb(gabrielneigh(pcw$xy.utm), sym = T) 
     s.label(pcw$xy, nb = nb1, Sp = pcw$map)
   }

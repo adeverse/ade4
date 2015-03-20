@@ -46,7 +46,7 @@ The matched call.
 \author{Daniel Chessel}
 \examples{
 if(!adegraphicsLoaded()) {
-  if(require(splancs, quiet = TRUE)) {
+  if(requireNamespace("splancs", quiet = TRUE)) {
     wxy <- data.frame(expand.grid(-3:3, -3:3))
     names(wxy) <- c("x", "y")
     z <- (1 / sqrt(2)) * exp(-(wxy$x ^ 2 + wxy$y ^ 2) / 2)
@@ -60,7 +60,7 @@ if(!adegraphicsLoaded()) {
   
   \dontrun{
   data(t3012)
-  if(require(splancs, quiet = TRUE)) {
+  if(requireNamespace("splancs", quiet = TRUE)) {
     par(mfrow = c(3, 4))
     for(k in 1:12)
       s.image(t3012$xy, scalewt(t3012$temp[, k]), kgrid = 3)
@@ -68,7 +68,7 @@ if(!adegraphicsLoaded()) {
   }
       
   data(elec88)
-  if(require(splancs, quiet = TRUE)) {
+  if(requireNamespace("splancs", quiet = TRUE)) {
     par(mfrow = c(3,4))
     for(k in 1:12)
       s.image(t3012$xy, scalewt(t3012$temp[, k]), kgrid = 3, sub = names(t3012$temp)[k],

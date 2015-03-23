@@ -1,9 +1,9 @@
 Package: ade4
-Version: 1.7
-Date: 2015/03/20
+Version: 1.7-0
+Date: 2015-03-23
 Title: Analysis of Ecological Data : Exploratory and Euclidean methods in Environmental sciences
 Author: Stéphane Dray <stephane.dray@univ-lyon1.fr>, Anne-Béatrice Dufour <anne-beatrice.dufour@univ-lyon1.fr>, and Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>, with contributions from Thibaut Jombart, Sandrine Pavoine, Jean R. Lobry, Sébastien Ollier, and Aurélie Siberchicot. Based on earlier work by Daniel Chessel.
-Maintainer: Simon Penel <simon.penel@univ-lyon1.fr>
+Maintainer: Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 Suggests: waveslim, splancs, MASS, maptools, spdep, pixmap, ape, deldir, ade4TkGUI, adegraphics, sp, lattice
 Depends: R (>= 2.10)
 Description: Multivariate data analysis and graphical display.

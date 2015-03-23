@@ -1,3 +1,313 @@
+2015-03-23 15:40  aursiber
+
+	* DESCRIPTION: ---------- release of ade4 1.7-0 ----------
+
+2015-03-23 10:52  sdray
+
+	* DESCRIPTION: Aurelie is the new official maintainer
+
+2015-03-23 08:45  sdray
+
+	* R/coinertia.R, R/rlq.R: Improve the outputs of the RLQ/coinertia
+	  analysis
+
+2015-03-20 09:13  aursiber
+
+	* DESCRIPTION, R/mbpcaiv.R, R/mbpls.R, R/multispati.R,
+	  R/orthobasis.R, R/s.image.R, R/s.kde2d.R, R/s.logo.R,
+	  man/area.plot.Rd, man/atlas.Rd, man/atya.Rd, man/avijons.Rd,
+	  man/buech.Rd, man/butterfly.Rd, man/capitales.Rd, man/ecg.Rd,
+	  man/elec88.Rd, man/ggtortoises.Rd, man/irishdata.Rd,
+	  man/julliot.Rd, man/jv73.Rd, man/kcponds.Rd, man/mafragh.Rd,
+	  man/maples.Rd, man/mdpcoa.Rd, man/multispati.Rd,
+	  man/multispati.randtest.Rd, man/multispati.rtest.Rd, man/neig.Rd,
+	  man/nipals.Rd, man/olympic.Rd, man/oribatid.Rd, man/pcw.Rd,
+	  man/phylog.Rd, man/rhizobium.Rd, man/s.image.Rd, man/s.kde2d.Rd,
+	  man/s.logo.Rd, man/sarcelles.Rd, man/score.coa.Rd, man/t3012.Rd,
+	  man/tintoodiel.Rd, man/vegtf.Rd, man/westafrica.Rd: Update the
+	  use of packages listed in 'Suggests' according with R-3.1.3
+
+2015-03-18 14:07  sdray
+
+	* R/between.R: Correct a bug in 1D plot of plot.between (message of
+	  Matthieu Salpeteur 18/03/2015 on adelist)
+
+2015-02-19 19:03  sdray
+
+	* R/dist.dudi.R: Correct a bug to deal with null distances (message
+	  of Robin Cura on adelist 16/02/2015
+
+2015-02-18 15:03  sdray
+
+	* R/krandboot.R, R/krandxval.R, R/mbpcaiv.R, R/mbpls.R,
+	  R/multiblock.R, R/randxval.R, man/mbpcaiv.Rd, man/mbpls.Rd,
+	  man/multiblock.Rd, man/randboot.multiblock.Rd,
+	  man/testdim.multiblock.Rd: Update some functions related to
+	  multiblock methods. Use 'ginv' to deal with matrices are not of
+	  full rank.
+
+2015-01-15 11:50  sdray
+
+	* NAMESPACE, R/betwitdpcoa.R, man/bwca.dpcoa.Rd: Add new functions
+	  to perform between- within dpcoa (Dray et al. 2015, MER)
+
+2015-01-09 12:35  sdray
+
+	* src/adesub.c: remove the unused variable 'seed'
+
+2015-01-08 16:47  aursiber
+
+	* man/add.scatter.Rd, man/area.plot.Rd, man/atlas.Rd,
+	  man/capitales.Rd, man/chats.Rd, man/corvus.Rd, man/divcmax.Rd,
+	  man/gridrowcol.Rd, man/irishdata.Rd, man/mstree.Rd,
+	  man/orthobasis.Rd, man/pcw.Rd, man/randxval.Rd, man/rtest.Rd,
+	  man/s.class.Rd, man/s.corcircle.Rd, man/s.distri.Rd,
+	  man/s.image.Rd, man/s.label.Rd, man/s.logo.Rd, man/s.match.Rd,
+	  man/s.traject.Rd, man/s.value.Rd, man/santacatalina.Rd,
+	  man/scatterutil.Rd, man/score.Rd, man/table.value.Rd,
+	  man/toxicity.Rd, man/triangle.class.Rd, man/westafrica.Rd,
+	  man/worksurv.Rd: Modify examples due to modifications in
+	  adegraphics
+
+2015-01-08 16:36  sdray
+
+	* src/adesub.c, src/adesub.h: Remove calls to C random number
+	  generators (now use R RNG)
+
+2015-01-08 13:59  thioulouse
+
+	* NAMESPACE, R/costatis.R, R/ktab.R, R/pta.R, R/statico.R,
+	  man/costatis.Rd, man/costatis.randtest.Rd, man/statico.Rd,
+	  man/statico.krandtest.Rd: Added statico.krandtest and
+	  costatis.randtest funtions for permutation tests
+
+2014-12-08 14:33  sdray
+
+	* R/fourthcorner.R, R/fourthcorner.rlq.R, R/print.4thcorner.R:
+	  Correct a bug to display properly the outputs in the case of 1
+	  trait x 1 env variable
+
+2014-11-28 09:38  aursiber
+
+	* man/scatter.coa.Rd: Correct the documentation of the used method
+	  in 'scatter.coa'
+
+2014-11-14 08:42  sdray
+
+	* R/mdpcoa.R: correct the call to dist.dna of the ape package
+
+2014-11-14 08:41  sdray
+
+	* NAMESPACE, R/dpcoa.R, R/mdpcoa.R, man/dpcoa.Rd, man/humDNAm.Rd:
+	  Update the dpcoa function: names of outputs are modified and the
+	  df argument shoul be a site-by-species nor a species-by-sites
+	  matrix. This allows to be more coherent with other methods
+
+2014-11-05 15:32  sdray
+
+	* man/atlas.Rd, man/butterfly.Rd, man/chats.Rd, man/dpcoa.Rd,
+	  man/gearymoran.Rd, man/gridrowcol.Rd, man/orthobasis.Rd: Modify
+	  examples due to modifications in adegraphics
+
+2014-10-30 15:04  sdray
+
+	* data/capitales.rda, man/capitales.Rd: Transform the Spatial
+	  component from SpatialPolygonsDataFrame to SpatialPolygons
+
+2014-09-11 14:50  sdray
+
+	* NAMESPACE, R/procuste.R, man/macaca.Rd, man/procuste.Rd: Change
+	  names of arguments and outputs of 'procuste' function and add a
+	  method 'randtest' for procuste class
+
+2014-09-02 12:04  sdray
+
+	* data/pcw.rda, man/pcw.Rd: Add new dataset (distribution of trees
+	  in forest plots along the panama canal)
+
+2014-07-23 14:09  sdray
+
+	* R/fourthcorner.rlq.R: Correct a small bug (used names instead of
+	  colnames on a matrix)
+
+2014-06-18 15:26  aursiber
+
+	* DESCRIPTION, NAMESPACE, man/acacia.Rd, man/add.scatter.Rd,
+	  man/aravo.Rd, man/ardeche.Rd, man/area.plot.Rd, man/atlas.Rd,
+	  man/atya.Rd, man/avijons.Rd, man/avimedi.Rd, man/bacteria.Rd,
+	  man/banque.Rd, man/baran95.Rd, man/between.Rd,
+	  man/betweencoinertia.Rd, man/bf88.Rd, man/buech.Rd,
+	  man/butterfly.Rd, man/capitales.Rd, man/carni70.Rd, man/cca.Rd,
+	  man/chats.Rd, man/chazeb.Rd, man/chevaine.Rd, man/clementines.Rd,
+	  man/coinertia.Rd, man/coleo.Rd, man/corkdist.Rd, man/corvus.Rd,
+	  man/deug.Rd, man/discrimin.Rd, man/dist.prop.Rd,
+	  man/dist.quant.Rd, man/doubs.Rd, man/dpcoa.Rd, man/dudi.acm.Rd,
+	  man/dudi.coa.Rd, man/dudi.fca.Rd, man/dudi.hillsmith.Rd,
+	  man/dudi.mix.Rd, man/dudi.nsc.Rd, man/dudi.pca.Rd, man/ecomor.Rd,
+	  man/elec88.Rd, man/euro123.Rd, man/foucart.Rd, man/friday87.Rd,
+	  man/fruits.Rd, man/gearymoran.Rd, man/ggtortoises.Rd,
+	  man/granulo.Rd, man/gridrowcol.Rd, man/hdpg.Rd,
+	  man/housetasks.Rd, man/humDNAm.Rd, man/irishdata.Rd,
+	  man/julliot.Rd, man/jv73.Rd, man/kcponds.Rd, man/kdist2ktab.Rd,
+	  man/kdisteuclid.Rd, man/kplot.foucart.Rd, man/kplot.mcoa.Rd,
+	  man/kplot.mfa.Rd, man/kplot.pta.Rd, man/kplot.sepan.Rd,
+	  man/kplot.statis.Rd, man/ktab.Rd, man/ktab.list.df.Rd,
+	  man/ktab.list.dudi.Rd, man/lascaux.Rd, man/macaca.Rd,
+	  man/macroloire.Rd, man/mafragh.Rd, man/mariages.Rd, man/meau.Rd,
+	  man/meaudret.Rd, man/microsatt.Rd, man/mollusc.Rd, man/mstree.Rd,
+	  man/multiblock.Rd, man/multispati.Rd, man/neig.Rd, man/niche.Rd,
+	  man/nipals.Rd, man/olympic.Rd, man/oribatid.Rd,
+	  man/orthobasis.Rd, man/ours.Rd, man/pcaivortho.Rd,
+	  man/plot.between.Rd, man/plot.within.Rd, man/presid2002.Rd,
+	  man/procuste.Rd, man/pta.Rd, man/rankrock.Rd, man/rpjdl.Rd,
+	  man/s.chull.Rd, man/s.image.Rd, man/s.kde2d.Rd,
+	  man/s.match.class.Rd, man/santacatalina.Rd, man/sarcelles.Rd,
+	  man/scatter.acm.Rd, man/scatter.coa.Rd, man/scatter.dudi.Rd,
+	  man/scatter.fca.Rd, man/sco.distri.Rd, man/score.acm.Rd,
+	  man/score.pca.Rd, man/seconde.Rd, man/skulls.Rd, man/statis.Rd,
+	  man/supcol.Rd, man/suprow.Rd, man/t3012.Rd, man/table.paint.Rd,
+	  man/tintoodiel.Rd, man/tortues.Rd, man/toxicity.Rd,
+	  man/triangle.plot.Rd, man/trichometeo.Rd, man/vegtf.Rd,
+	  man/wca.rlq.Rd, man/westafrica.Rd, man/within.Rd,
+	  man/withincoinertia.Rd, man/withinpca.Rd, man/witwit.coa.Rd,
+	  man/worksurv.Rd, man/zealand.Rd: Update the examples to become
+	  effective when 'adegraphics' is loaded
+
+2014-05-20 13:30  sdray
+
+	* R/add.scatter.R, man/EH.Rd, man/PI2newick.Rd, man/add.scatter.Rd,
+	  man/aminoacyl.Rd, man/amova.Rd, man/as.taxo.Rd, man/bacteria.Rd,
+	  man/between.Rd, man/betweencoinertia.Rd, man/cailliez.Rd,
+	  man/cca.Rd, man/coinertia.Rd, man/corkdist.Rd, man/disc.Rd,
+	  man/discrimin.Rd, man/discrimin.coa.Rd, man/dist.binary.Rd,
+	  man/dist.dudi.Rd, man/dist.genet.Rd, man/dist.neig.Rd,
+	  man/dist.prop.Rd, man/dist.quant.Rd, man/divc.Rd, man/divcmax.Rd,
+	  man/dotchart.phylog.Rd, man/dpcoa.Rd, man/dudi.Rd,
+	  man/dudi.acm.Rd, man/dudi.coa.Rd, man/dudi.dec.Rd,
+	  man/dudi.fca.Rd, man/dudi.hillsmith.Rd, man/dudi.mix.Rd,
+	  man/dudi.nsc.Rd, man/dudi.pca.Rd, man/dudi.pco.Rd,
+	  man/foucart.Rd, man/gearymoran.Rd, man/gridrowcol.Rd,
+	  man/inertia.dudi.Rd, man/is.euclid.Rd, man/kdist.Rd,
+	  man/kdist2ktab.Rd, man/kdisteuclid.Rd, man/krandtest.Rd,
+	  man/ktab.Rd, man/ktab.data.frame.Rd, man/ktab.list.df.Rd,
+	  man/ktab.list.dudi.Rd, man/ktab.within.Rd, man/lingoes.Rd,
+	  man/mantel.randtest.Rd, man/mantel.rtest.Rd, man/mcoa.Rd,
+	  man/mfa.Rd, man/mld.Rd, man/multispati.Rd,
+	  man/multispati.randtest.Rd, man/multispati.rtest.Rd,
+	  man/newick.eg.Rd, man/newick2phylog.Rd, man/niche.Rd,
+	  man/nipals.Rd, man/njplot.Rd, man/optimEH.Rd, man/originality.Rd,
+	  man/orisaved.Rd, man/orthobasis.Rd, man/orthogram.Rd,
+	  man/palm.Rd, man/pcaiv.Rd, man/pcaivortho.Rd, man/phylog.Rd,
+	  man/plot.between.Rd, man/plot.phylog.Rd, man/plot.within.Rd,
+	  man/procuste.Rd, man/procuste.randtest.Rd, man/procuste.rtest.Rd,
+	  man/pta.Rd, man/quasieuclid.Rd, man/randEH.Rd,
+	  man/randtest.amova.Rd, man/randtest.between.Rd,
+	  man/randtest.coinertia.Rd, man/randtest.discrimin.Rd,
+	  man/randtest.pcaiv.Rd, man/reconst.Rd, man/rlq.Rd, man/s.logo.Rd,
+	  man/s.match.class.Rd, man/scatterutil.Rd, man/sco.class.Rd,
+	  man/sco.gauss.Rd, man/sco.label.Rd, man/sco.match.Rd,
+	  man/supcol.Rd, man/suprow.Rd, man/symbols.phylog.Rd,
+	  man/table.phylog.Rd, man/testdim.Rd, man/variance.phylog.Rd,
+	  man/westafrica.Rd, man/within.Rd, man/withincoinertia.Rd,
+	  man/withinpca.Rd, man/witwit.coa.Rd: Update email addresses
+
+2014-05-16 15:38  sdray
+
+	* NAMESPACE, R/between.R, R/within.R, man/plot.between.Rd,
+	  man/plot.within.Rd: New summary method for within and between
+	  classes
+
+2014-05-16 15:19  sdray
+
+	* R/randtest.between.R: Clean the code
+
+2014-04-18 15:50  aursiber
+
+	* R/scatterutil.R, man/area.plot.Rd, man/carni70.Rd,
+	  man/divcmax.Rd, man/dudi.acm.Rd, man/ecomor.Rd, man/julliot.Rd,
+	  man/microsatt.Rd, man/newick2phylog.Rd, man/orthogram.Rd,
+	  man/presid2002.Rd, man/score.Rd: Correct the examples which are
+	  not run
+
+2014-04-17 15:44  sdray
+
+	* NAMESPACE, R/krandboot.R, R/krandxval.R, R/mbpcaiv.R, R/mbpls.R,
+	  R/multiblock.R, R/randboot.R, R/randxval.R, man/mbpcaiv.Rd,
+	  man/mbpls.Rd, man/multiblock.Rd, man/randboot.Rd,
+	  man/randboot.multiblock.Rd, man/randxval.Rd,
+	  man/testdim.multiblock.Rd: Add new functions for multiblock
+	  analysis (coll. with S. Bougeard): multiblock pcaiv and
+	  multiblock pls. Add new functions and classes to manage results
+	  of two-fold cross-validation and bootstrap
+
+2014-04-17 15:39  sdray
+
+	* data/chickenk.rda, man/chickenk.Rd: New data set chickenk
+
+2014-04-17 15:24  sdray
+
+	* R/testdim.R, man/testdim.Rd: Change argument name for testdim
+	  method
+
+2014-04-17 15:22  sdray
+
+	* NAMESPACE, man/bacteria.Rd, man/dudi.acm.Rd,
+	  man/dudi.hillsmith.Rd, man/dudi.mix.Rd, man/santacatalina.Rd,
+	  man/scatter.coa.Rd: Unexport methods for generic functions
+	  scatter and score
+
+2014-04-17 15:19  sdray
+
+	* NAMESPACE, man/adegraphicsLoaded.Rd: Export the function
+	  adegraphicsLoaded
+
+2014-04-17 08:19  sdray
+
+	* R/utilities.R: New function 'adegraphicsLoaded' to test if
+	  adegraphics is loaded
+
+2014-04-15 08:41  sdray
+
+	* NAMESPACE, R/dudi.R, R/ktab.R, man/dudi.Rd, man/ktab.Rd: Improve
+	  '[.ktab' and add '[.dudi': extraction methods allow to select
+	  rows and/or columns of dudi and ktab objects
+
+2014-04-15 07:44  sdray
+
+	* ., NAMESPACE, R/ktab.R, R/ktab.data.frame.R, R/ktab.list.df.R,
+	  R/ktab.list.dudi.R, R/ktab.match2ktabs.R, R/ktab.within.R,
+	  man/ktab.Rd: Clean the building of TL, TC, T4 (they contain names
+	  and not numbers) and remove two bugs (building of TC and in
+	  [.ktab)
+
+2014-04-11 07:45  sdray
+
+	* R/fourthcorner.rlq.R: Correct a typo
+
+2014-03-13 17:36  sdray
+
+	* R/randtest.rlq.R, src/fourthcorner.c, src/tests.c: Correct some
+	  minor bugs and typos
+
+2014-01-14 15:27  thioulouse
+
+	* R/foucart.R, R/kplot.foucart.R, R/kplot.mcoa.R, R/kplot.mfa.R,
+	  R/kplot.pta.R, R/kplot.sepan.R, R/kplot.statis.R, R/ktab.R,
+	  R/ktab.data.frame.R, R/ktab.list.df.R, R/ktab.list.dudi.R,
+	  R/ktab.match2ktabs.R, R/ktab.within.R, R/mcoa.R, R/mdpcoa.R,
+	  R/mfa.R, R/pta.R, R/sepan.R, R/statis.R: Global update of TL TC
+	  and T4 ktab elements
+
+2014-01-07 15:16  thioulouse
+
+	* R/ktab.R, R/pta.R: row names correction of supIX and supIY in a
+	  kcoinertia pta
+
+2013-12-03 13:22  sdray
+
+	* data/mafragh.rda: Modify the order of the sites in the
+	  'SpatialPoints' object to be coherent with the 'nb' object
+
 2013-11-19 15:58  sdray
 
 	* DESCRIPTION: ---------- release of ade4 1.6-2 ----------

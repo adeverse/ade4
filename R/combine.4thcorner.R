@@ -44,6 +44,7 @@ combine.4thcorner <- function(four1,four2){
     for(i in 1:length(res$tabD$names)){
       ## For tabD
       idx <- ifelse(four2$tabD$adj.pvalue[i] > four1$tabD$adj.pvalue[i], 1, 2)
+      idx <- ifelse(is.na(idx), 1, idx) ## NA could occur in the case of factor with one level. In this case, return the first output
       if(idx == 1) {
         tmp <- four2
       } else if(idx == 2){

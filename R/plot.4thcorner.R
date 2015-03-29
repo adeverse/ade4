@@ -29,25 +29,27 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
             for(j in 1:ncol(res)){
                 ## in res, 1 corresponds to white, 2 to dark grey and 3 to light grey
                 idx.var <-  ncol(res) * (i - 1) + j
-                if(xrand$adj.pvalue[idx.var] < alpha){
-                    ## for significant associations
-                    res[i,j] <- ifelse(xrand$alter[idx.var]=="greater", 2, 3)
-                    
-                    if((x$indexR[x$assignR[j]]==1) != (x$indexQ[x$assignQ[i]]==1)){
-                        if(stat == "D")
-                            ## homogeneity has no sign and test only "positive" association
-                            res[i,j] <- 2 
-                        if(stat == "D2")
+                if(!is.na(xrand$adj.pvalue[idx.var])){
+                    if(xrand$adj.pvalue[idx.var] < alpha){
+                        ## for significant associations
+                        res[i,j] <- ifelse(xrand$alter[idx.var]=="greater", 2, 3)
+                        
+                        if((x$indexR[x$assignR[j]]==1) != (x$indexQ[x$assignQ[i]]==1)){
+                            if(stat == "D")
+                                ## homogeneity has no sign and test only "positive" association
+                                res[i,j] <- 2 
+                            if(stat == "D2")
+                                ## sign of the correlation (two-sided test)
+                                res[i,j] <- ifelse(xrand$obs[idx.var] > 0, 2, 3) 
+                        }
+                        else if((x$indexR[x$assignR[j]]==1) & (x$indexQ[x$assignQ[i]]==1)){
                             ## sign of the correlation (two-sided test)
                             res[i,j] <- ifelse(xrand$obs[idx.var] > 0, 2, 3) 
-                    }
-                    else if((x$indexR[x$assignR[j]]==1) & (x$indexQ[x$assignQ[i]]==1)){
-                        ## sign of the correlation (two-sided test)
-                        res[i,j] <- ifelse(xrand$obs[idx.var] > 0, 2, 3) 
-                    }
-                    else if((x$indexR[x$assignR[j]]==2) & (x$indexQ[x$assignQ[i]]==2)){
-                        ## sign relative to the mean of permuted values
-                        res[i,j] <- ifelse(xrand$obs[idx.var] > mean(xrand$sim[,idx.var]), 2, 3) 
+                        }
+                        else if((x$indexR[x$assignR[j]]==2) & (x$indexQ[x$assignQ[i]]==2)){
+                            ## sign relative to the mean of permuted values
+                            res[i,j] <- ifelse(xrand$obs[idx.var] > mean(xrand$sim[,idx.var]), 2, 3) 
+                        }
                     }
                 }
             }

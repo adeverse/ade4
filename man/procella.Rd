@@ -25,7 +25,7 @@ col.size: an integer vector that describes the colony size (no nests monitored)
 Bried, J., Pontier, D. and Jouventin, P. (2002) Mate fidelity in monogamus birds: a re-examination of the Procellariiformes. 
 \emph{Animal Behaviour}, \bold{65}, 235--246. 
 
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps037.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps037.pdf} (in French).
 }
 \examples{
 data(procella)

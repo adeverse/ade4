@@ -46,14 +46,14 @@ bdo - biological demand for oxygen (mg/l * 10).
 }
 \source{
  Verneaux, J. (1973) 
- \emph{Cours d'eau de Franche-Comté (Massif du Jura). 
- Recherches écologiques sur le réseau hydrographique du Doubs. Essai de biotypologie}. 
- Thèse d'état, Besançon. 1--257.
+ \emph{Cours d'eau de Franche-Comt? (Massif du Jura). 
+ Recherches ?cologiques sur le r?seau hydrographique du Doubs. Essai de biotypologie}. 
+ Th?se d'?tat, Besan?on. 1--257.
 }
 \references{
-See a French description of fish species at \url{http://pbil.univ-lyon1.fr/R/articles/arti049.pdf}.\cr
-Chesse, D., Lebreton, J.D. and Yoccoz, N.G. (1987) Propriétés de l'analyse canonique des correspondances. Une illustration
-en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{35}, 4, 55--72.
+See a French description of fish species at \url{http://pbil.univ-lyon1.fr/R/pdf/pps047.pdf}.\cr
+Chesse, D., Lebreton, J.D. and Yoccoz, N.G. (1987) Propri?t?s de l'analyse canonique des correspondances. Une illustration
+en hydrobiologie. \emph{Revue de Statistique Appliqu?e}, \bold{35}, 4, 55--72.
 }
 \examples{
 data(doubs)

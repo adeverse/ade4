@@ -26,7 +26,7 @@ clutch.F (clutch frequency).
 Bauwens, D., and D\'iaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a comparative study. 
 \emph{American Naturalist}, \bold{149}, 91--111. 
 
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps063.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps063.pdf} (in French).
 }
 \examples{
 data(lizards)

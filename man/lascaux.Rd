@@ -28,7 +28,7 @@ Lascaux, J.M. (1996)
 Thèse de doctorat en sciences agronomiques, INP Toulouse.
 }
 \references{
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps022.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps022.pdf} (in French).
 }
 \examples{
 data(lascaux)

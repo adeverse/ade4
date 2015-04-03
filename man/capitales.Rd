@@ -17,9 +17,6 @@ This list contains the following objects:
      \item{Spatial}{is a SpatialPolygons object containing the map}
     }
 }
-\source{
- \url{http://www.euro.gouv.fr/jeunes/eurocollege/tableaucarte.htm}
-}
 \examples{
 data(capitales)
 attr(capitales$dist, "Labels")

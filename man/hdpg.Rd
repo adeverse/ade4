@@ -43,7 +43,7 @@ corresponding to the 52 populations described above, and 4992 microsatellite mar
 }
 \source{
 Extract of data prepared by the Human Diversity Panel Genotypes 
-\url{http://research.marshfieldclinic.org/genetics/Freq/FreqInfo.htm}
+(invalid http://research.marshfieldclinic.org/genetics/Freq/FreqInfo.htm)
 
 prepared by Hinda Haned, from data used in:
 Noah A. Rosenberg, Jonatahan K. Pritchard, James L. Weber, Howard M. Cabb, Kenneth K. Kidds, 

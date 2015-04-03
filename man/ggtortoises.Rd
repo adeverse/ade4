@@ -25,7 +25,7 @@ M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Micr
 M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Microsatellite analysis of genetic divergence among populations of giant galapagos tortoises.
 \emph{Molecular Ecology} \bold{11}: 2265-2283.
 
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps069.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps069.pdf} (in French).
 }
 \examples{
 if(requireNamespace("pixmap", quiet=TRUE)) {

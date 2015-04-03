@@ -14,9 +14,9 @@ This data set contains various exemples of phylogenetic trees in Newick format.
 Trees 1 to 7 were obtained from the URL \cr 
 \url{http://evolution.genetics.washington.edu/phylip/newicktree.html}. 
 
-Trees 8 and 9 were obtained by Clémentine Carpentier-Gimaret. 
+Trees 8 and 9 were obtained by Cl?mentine Carpentier-Gimaret. 
 
-Tree 10 was obtained from Treezilla Data Sets starting from \cr \url{http://www.cis.upenn.edu/~krice/treezilla/}. 
+Tree 10 was obtained from Treezilla Data Sets . 
 
 Trees 11 and 12 are taken from Bauwens and D\'iaz-Uriarte (1997).
 

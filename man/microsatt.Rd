@@ -32,7 +32,7 @@ Caractérisation de la race bovine Somba à l'aide de marqueurs moléculaires.
 \emph{Revue d'Elevage et de Médecine Vétérinaire des pays Tropicaux}, \bold{54}, 1--10.
 }
 \references{
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps055.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps055.pdf} (in French).
 }
 \examples{
 \dontrun{

@@ -17,7 +17,7 @@ This data set gathers three phylogenies with three sets of traits as reported by
    \item{vec3}{is a numeric vector with 15 values.} 
 }}
 \source{
-Data taken from the phylogenetic independence program developped by Ehab Abouheif starting from \url{http://ww2.mcgill.ca/biology/faculty/abouheif/programs.html}.
+Data taken from the phylogenetic independence program developped by Ehab Abouheif
 }
 \references{
 Abouheif, E. (1999) A method for testing the assumption of phylogenetic independence in comparative data. \emph{Evolutionary Ecology Research}, \bold{1}, 895--909.

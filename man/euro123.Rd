@@ -18,8 +18,7 @@ sectors for 12 European countries in 1978, 1986 and 1997.
     }
 }
 \source{
-Encyclopaedia Universalis, Symposium, Les chiffres du Monde. Encyclopaedia Universalis, Paris. 519.\cr\cr
-Université de Barcelone : \url{http://www.ub.es/medame/nutstat1.html}
+Encyclopaedia Universalis, Symposium, Les chiffres du Monde. Encyclopaedia Universalis, Paris. 519.
 }
 \examples{
 data(euro123)

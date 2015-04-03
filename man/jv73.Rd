@@ -24,7 +24,7 @@ Recherches ?cologiques sur le r?seau hydrographique du Doubs.
 Essai de biotypologie. Th?se d'Etat, Besan?on.
 }
 \references{
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps047.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps047.pdf} (in French).
 }
 \examples{
 data(jv73)

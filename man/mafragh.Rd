@@ -23,7 +23,7 @@ Belair, G.d. and Bencheikh-Lehocine, M. (1987) Composition et d?terminisme de la
 plaine c?ti?re mar?cageuse : La Mafragh (Annaba, Alg?rie). \emph{Bulletin d'Ecologie}, \bold{18}, 393--407.
 }
 \references{
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps053.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps053.pdf} (in French).
 }
 \examples{
 data(mafragh)

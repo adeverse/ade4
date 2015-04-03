@@ -21,21 +21,21 @@ This data set describes the phylogeny of 49 teleos fishes as reported by Rochet 
 }
 \source{
 Data taken from: \cr
-    Summary of data - Clupeiformes : \url{http://www.ifremer.fr/maerha/clupe.html} \cr
-    Summary of data - Argentiniformes : \url{http://www.ifremer.fr/maerha/argentin.html} \cr
-    Summary of data - Salmoniformes : \url{http://www.ifremer.fr/maerha/salmon.html} \cr
-    Summary of data - Gadiformes : \url{http://www.ifremer.fr/maerha/gadi.html} \cr
-    Summary of data - Lophiiformes : \url{http://www.ifremer.fr/maerha/loph.html} \cr
-    Summary of data - Atheriniformes : \url{http://www.ifremer.fr/maerha/ather.html} \cr
-    Summary of data - Perciformes : \url{http://www.ifremer.fr/maerha/perci.html} \cr
-    Summary of data - Pleuronectiformes : \url{http://www.ifremer.fr/maerha/pleuro.html} \cr
-    Summary of data - Scorpaeniformes : \url{http://www.ifremer.fr/maerha/scorpa.html} \cr
-    Phylogenetic tree : \url{http://www.ifremer.fr/maerha/life_history.html}
+    Summary of data - Clupeiformes : http://www.ifremer.fr/maerha/clupe.html \cr
+    Summary of data - Argentiniformes : http://www.ifremer.fr/maerha/argentin.html \cr
+    Summary of data - Salmoniformes : http://www.ifremer.fr/maerha/salmon.html \cr
+    Summary of data - Gadiformes : http://www.ifremer.fr/maerha/gadi.html \cr
+    Summary of data - Lophiiformes : http://www.ifremer.fr/maerha/loph.html \cr
+    Summary of data - Atheriniformes : http://www.ifremer.fr/maerha/ather.html \cr
+    Summary of data - Perciformes : http://www.ifremer.fr/maerha/perci.html \cr
+    Summary of data - Pleuronectiformes : http://www.ifremer.fr/maerha/pleuro.html \cr
+    Summary of data - Scorpaeniformes : http://www.ifremer.fr/maerha/scorpa.html \cr
+    Phylogenetic tree : http://www.ifremer.fr/maerha/life_history.html
 }
 \references{
 Rochet, M. J., Cornillon, P-A., Sabatier, R. and Pontier, D. (2000) 
 Comparative analysis of phylogenic and fishing effects in life history patterns of teleos fishes.
-\emph{Oïkos}, \bold{91}, 255--270.
+\emph{O?kos}, \bold{91}, 255--270.
 }
 \examples{
 data(mjrochet)

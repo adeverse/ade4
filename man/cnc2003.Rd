@@ -25,7 +25,6 @@
 }
 \source{
 National Center of Cinematography (CNC), september 2003\cr
-\url{http://www.cnc.fr/cncinfo/288/index.html}
 }
 \seealso{
 This dataset is compatible with \code{elec88} and \code{presid2002}}

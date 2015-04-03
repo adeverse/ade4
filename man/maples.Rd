@@ -13,9 +13,6 @@ This data set describes the phylogeny of 17 flowers as reported by Ackerly and D
             \item{tab}{is a data frame with 17 species and 31 traits}
 	    }
 }
-\source{
-Data were obtained from the URL \url{http://www.stanford.edu/~dackerly/acerdata.html}.
-}
 \references{
 Ackerly, D. D. and Donoghue, M.J. (1998) Leaf size, sappling allometry, and Corner's rules: phylogeny and correlated evolution in Maples (Acer). 
 \emph{American Naturalist}, \bold{152}, 767--791.

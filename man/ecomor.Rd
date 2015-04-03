@@ -35,7 +35,7 @@ among mediterranean bird communities of Chile, California, and France. In \emph{
 (eds M.K. Hecht, B. Wallace and R.J. MacIntyre), 141--213, \bold{18}. Plenum Press, New York.
 }
 \references{
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps023.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps023.pdf} (in French).
 }
 \examples{
 data(ecomor)

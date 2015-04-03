@@ -46,7 +46,7 @@ the eggs are definitely attached (6 modalities), egg deposition - the position o
  \emph{Freshwater Biology}, \bold{38}, 109--135.
 }
 \references{
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps029.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps029.pdf} (in French).
 }
 \examples{
 data(bsetal97)

@@ -24,7 +24,7 @@ Usseglio-Polatera, P. and Auda, Y. (1987)
 Influence des facteurs météorologiques sur les résultats de piégeage lumineux. 
 \emph{Annales de Limnologie}, \bold{23}, 65--79. (code des espèces p. 76)
 
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps034.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps034.pdf} (in French).
 }
 \examples{
 data(trichometeo)

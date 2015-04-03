@@ -23,7 +23,7 @@ Bournaud, M., Amoros, C., Chessel, D., Coulet, M., Doledec, S., Michelot, J.L., 
 Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: 
 a unified approach to local and global structures. \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps051.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps051.pdf} (in French).
 }
 \examples{
 data(avijons)

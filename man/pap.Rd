@@ -19,8 +19,7 @@ famille (family with 6 levels), superfamille (superfamily with 2 levels).\cr
 Variables of \code{pap$tab} are Group Size, Body Weight, Brain Weight, Litter Size.
 }
 \source{
-Data taken from the phylogenetic autocorrelation package starting from:\cr
- \url{http://www.ent.orst.edu/pa/demopa.asp}.
+Data taken from the phylogenetic autocorrelation package
 }
 \examples{
 data(pap)

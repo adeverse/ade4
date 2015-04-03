@@ -33,7 +33,7 @@ an example using Oribatid mites (\emph{Acari Oribatei}). \emph{Environmental and
 Borcard, D., Legendre, P., and Drapeau, P. (1992) Partialling out the spatial component of ecological variation. 
 \emph{Ecology}, \bold{73}, 1045--1055.
 
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pps/pps039.pdf} (in French).
+See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps039.pdf} (in French).
 }
 \examples{
 data(oribatid)

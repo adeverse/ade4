@@ -12,7 +12,7 @@ using an object of class \code{sepan}.
     clab.col = 1.25, traject.row = FALSE, csub = 2, 
     possub = "bottomright", show.eigen.value = TRUE,\dots)
 
-\method{kplotsepan}{coa}(object, xax = 1, yax = 2, which.tab = 1:length(object$blo), 
+kplotsepan.coa(object, xax = 1, yax = 2, which.tab = 1:length(object$blo), 
     mfrow = NULL, permute.row.col = FALSE, clab.row = 1, 
     clab.col = 1.25, csub = 2, possub = "bottomright", 
     show.eigen.value = TRUE, poseig = c("bottom", "top"), \dots)

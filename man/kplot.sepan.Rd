@@ -1,6 +1,6 @@
 \name{kplot.sepan}
 \alias{kplot.sepan}
-\alias{kplot.sepan.coa}
+\alias{kplotsepan.coa}
 \title{Multiple Graphs for Separated Analyses in a K-tables}
 \description{
 performs high level plots for Separed Analyses in a K-tables, 
@@ -12,7 +12,7 @@ using an object of class \code{sepan}.
     clab.col = 1.25, traject.row = FALSE, csub = 2, 
     possub = "bottomright", show.eigen.value = TRUE,\dots)
 
-\method{kplot}{sepan.coa}(object, xax = 1, yax = 2, which.tab = 1:length(object$blo), 
+\method{kplotsepan}{coa}(object, xax = 1, yax = 2, which.tab = 1:length(object$blo), 
     mfrow = NULL, permute.row.col = FALSE, clab.row = 1, 
     clab.col = 1.25, csub = 2, possub = "bottomright", 
     show.eigen.value = TRUE, poseig = c("bottom", "top"), \dots)
@@ -35,7 +35,7 @@ using an object of class \code{sepan}.
 \details{
 \code{kplot.sepan} superimposes the points for the rows and the arrows for the columns using an 
 adapted rescaling such as the \code{scatter.dudi}.\cr
-\code{kplot.sepan.coa} superimposes the row coordinates and the column coordinates with the same scale.
+\code{kplotsepan.coa} superimposes the row coordinates and the column coordinates with the same scale.
 }
 \author{Daniel Chessel }
 \examples{
@@ -64,9 +64,9 @@ loci.fac <- factor(rep(microsatt$loci.names, microsatt$loci.eff))
 wit <- wca(w3, loci.fac, scann = FALSE)
 microsatt.ktab <- ktab.within(wit)
 if(adegraphicsLoaded()) {
-  kplot.sepan.coa(sepan(microsatt.ktab), posieig = "none", col.plab.cex = 0, row.plab.cex = 1.5)
+  kplotsepan.coa(sepan(microsatt.ktab), posieig = "none", col.plab.cex = 0, row.plab.cex = 1.5)
 } else {
-  kplot.sepan.coa(sepan(microsatt.ktab), show = FALSE, clab.c = 0, 
+  kplotsepan.coa(sepan(microsatt.ktab), show = FALSE, clab.c = 0, 
     mfrow = c(3,3), clab.r = 1.5)
 }    
 }

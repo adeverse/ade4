@@ -204,7 +204,7 @@ export("combine.4thcorner", "combine.randtest.rlq", "mantel.randtest", "mantel.r
 
 ## ******* K-table methods *******
 export("costatis",  "costatis.randtest",  "foucart", "mcoa", "mbpcaiv", "mbpls", "mdpcoa", "mfa", "pta", "sepan", "statico", "statico.krandtest", "statis")
-export("is.ktab", "kdist", "kdist2ktab", "kdist.cor", "kdisteuclid", "kplotX.mdpcoa", "kplot.sepan.coa", "ktab.data.frame", "ktab.list.df", "ktab.list.dudi", "ktab.match2ktabs",  "ktab.within", "ldist.ktab", "mantelkdist", "prep.binary", "prep.circular", "prep.fuzzy", "prep.mdpcoa", "RVkdist", "RV.rtest")
+export("is.ktab", "kdist", "kdist2ktab", "kdist.cor", "kdisteuclid", "kplotX.mdpcoa", "kplotsepan.coa", "ktab.data.frame", "ktab.list.df", "ktab.list.dudi", "ktab.match2ktabs",  "ktab.within", "ldist.ktab", "mantelkdist", "prep.binary", "prep.circular", "prep.fuzzy", "prep.mdpcoa", "RVkdist", "RV.rtest")
 
 ## ******* genet *******
 export("char2genet", "count2genet", "dist.genet", "freq2genet", "fuzzygenet") 

@@ -1,3 +1,42 @@
+2015-04-08 13:27  aursiber
+
+	* DESCRIPTION: ---------- release of ade4 1.7-1 ----------
+
+2015-04-08 09:25  sdray
+
+	* DESCRIPTION, NAMESPACE, R/orthobasis.R, man/orthobasis.Rd: Add
+	  new functions to handle orthobasis objects. The orthobasis.listw
+	  function is removed and will be available in the forthcoming
+	  adespatial
+
+2015-04-03 16:28  aursiber
+
+	* man/kplot.sepan.Rd: The 'kplot.sepan.coa' function becomes
+	  'kplotsepan.coa' in 'adegraphics' also
+
+2015-04-03 14:30  aursiber
+
+	* NAMESPACE, R/kplot.sepan.R, man/kplot.sepan.Rd: The
+	  'kplot.sepan.coa' function becomes 'kplotsepan.coa'
+
+2015-04-03 14:04  aursiber
+
+	* DESCRIPTION, man/abouheif.eg.Rd, man/avijons.Rd, man/baran95.Rd,
+	  man/bsetal97.Rd, man/capitales.Rd, man/chevaine.Rd,
+	  man/cnc2003.Rd, man/doubs.Rd, man/ecomor.Rd, man/euro123.Rd,
+	  man/ggtortoises.Rd, man/hdpg.Rd, man/jv73.Rd, man/lascaux.Rd,
+	  man/lizards.Rd, man/mafragh.Rd, man/maples.Rd, man/microsatt.Rd,
+	  man/mjrochet.Rd, man/newick.eg.Rd, man/oribatid.Rd, man/pap.Rd,
+	  man/presid2002.Rd, man/procella.Rd, man/rpjdl.Rd,
+	  man/tarentaise.Rd, man/trichometeo.Rd: Remove invalid url in man
+	  files
+
+2015-03-29 11:59  sdray
+
+	* R/combine.4thcorner.R, R/plot.4thcorner.R: Update the outputs of
+	  the combine.4thcorner functions to avoid bugs when the 'D' stat
+	  can not be computed (factor with only one level)
+
 2015-03-23 15:40  aursiber
 
 	* DESCRIPTION: ---------- release of ade4 1.7-0 ----------

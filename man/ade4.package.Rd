@@ -19,4 +19,4 @@ To cite ade4, please use \code{citation("ade4")}.
 }
 \keyword{manip}
 \keyword{multivariate}
-\seealso{\code{ade4TkGUI}, \code{adegenet}, \code{adehabitat}}
+\seealso{\code{ade4TkGUI}, \code{adegenet}, \code{adehabitat}, \code{adegraphics}}

@@ -5,20 +5,21 @@
 \alias{orthobasis.line}
 \alias{orthobasis.circ}
 \alias{orthobasis.mat}
-\alias{orthobasis.listw}
 \alias{orthobasis.haar}
 \alias{print.orthobasis}
+\alias{is.orthobasis}
+\alias{summary.orthobasis}
+\alias{plot.orthobasis}
 
 \title{Orthonormal basis for orthonormal transform}
 \description{
-These functions returns object of class \code{'orthobasis'} that contains data frame with \emph{n} rows and \emph{n-1} columns.
-Each data frame defines an orthonormal basis for the uniform weights.
+These functions returns object of class \code{'orthobasis'} that
+contains data frame defining an orthonormal basis.
 
 \code{orthobasic.neig} returns the eigen vectors of the matrix N-M where M is the symmetric \emph{n} by \emph{n} matrix of the between-sites neighbouring graph and N is the diagonal matrix of neighbour numbers. \cr
 \code{orthobasis.line} returns the analytical solution for the linear neighbouring graph. \cr
 \code{orthobasic.circ} returns the analytical solution for the circular neighbouring graph. \cr
 \code{orthobsic.mat} returns the eigen vectors of the general link matrix M. \cr
-\code{orthobasis.listw} returns the eigen vectors of the general link matrix M associated to a \code{listw} object. \cr
 \code{orthobasis.haar} returns wavelet haar basis. 
 }
 \usage{
@@ -26,37 +27,39 @@ orthobasis.neig(neig)
 orthobasis.line(n)
 orthobasis.circ(n)
 orthobasis.mat(mat, cnw=TRUE)
-orthobasis.listw(listw)
 orthobasis.haar(n)
-\method{print}{orthobasis}(x,...)
+\method{print}{orthobasis}(x,..., nr = 6, nc = 4)
+\method{plot}{orthobasis}(x,...)
+\method{summary}{orthobasis}(object,...)
+is.orthobasis(x)
 }
 \arguments{
   \item{neig}{is an object of class \code{neig}}
   \item{n}{is an integer that defines length of vectors}
   \item{mat}{is a \emph{n} by \emph{n} phylogenetic or spatial link matrix}
-  \item{listw}{is a \code{'listw'} object}
   \item{cnw}{if TRUE, the matrix of the neighbouring graph is modified to give Constant Neighbouring Weights}
-  \item{x}{is an object of class \code{orthobasis}}
+  \item{x, object}{is an object of class \code{orthobasis}}
+  \item{nr, nc}{the number of rows and columns to be printed}
   \item{\dots}{: further arguments passed to or from other methods}
 }
 \value{
-All the functions excepted \code{print.ortobasis} return an object of class \code{orthobasis} containing a data frame.
-This data frame defines an orthonormal basis with \emph{n-1} vectors of length \emph{n}. Various attributes are associated to it : \cr
-  \item{names}{: names of the vectors}
-  \item{row.names}{: row names of the data frame}
-  \item{class}{: class}
-  \item{values}{: row weights (uniform weights)}
-  \item{weights}{: numeric values to class vectors according to their quadratic forms (Moran ones)}
+All the functions return an object of class \code{orthobasis} containing a data frame.
+This data frame defines an orthonormal basis with various attributes: \cr
+  \item{names}{names of the vectors}
+  \item{row.names}{row names of the data frame}
+  \item{class}{class}
+  \item{values}{optional associated eigenvalues}
+  \item{weights}{weights for the rows}
   \item{call}{: call}
 }
 \references{
-Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux classiques par d?composition en ondelettes. 
+Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux classiques par décomposition en ondelettes. 
 \emph{Revue de Statistique Appliqu?e}, \bold{41}, 5--32.
 
 Cornillon, P.A. (1998) \emph{Prise en compte de proximit?s en analyse factorielle et comparative}.
-Th?se, Ecole Nationale Sup?rieure Agronomique, Montpellier.
+Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
-\author{S?bastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
+\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \note{the function \code{orthobasis.haar} uses function \code{\link[waveslim]{wavelet.filter}} from package waveslim.}

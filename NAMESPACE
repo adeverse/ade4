@@ -42,6 +42,7 @@ S3method("plot","mcoa")
 S3method("plot","mfa")
 S3method("plot","multispati")
 S3method("plot","niche")
+S3method("plot","orthobasis")
 S3method("plot","pcaiv")
 S3method("plot","phylog")
 S3method("plot","procuste")                 
@@ -137,6 +138,7 @@ S3method("summary","mfa")
 S3method("summary","multiblock")
 S3method("summary","multispati")
 S3method("summary","neig")
+S3method("summary","orthobasis")
 S3method("summary","pcaiv")
 S3method("summary","pcaivortho")
 S3method("summary","rlq")
@@ -166,7 +168,7 @@ S3method("wca","rlq")
 #####################################
 importFrom(stats, "biplot", "screeplot")
 importFrom(graphics, "plot", "boxplot")
-
+importFrom(methods, "setOldClass")
 
 #####################################
 ##               Export            ##
@@ -214,7 +216,7 @@ export("as.taxo", "dist.taxo", "dotchart.phylog", "enum.phylog", "gearymoran", "
 export("EH", "randEH", "optimEH", "originality", "orisaved")
 
 ## ******* orthobasis *******
-export("haar2level", "mld", "orthobasis.circ", "orthobasis.haar", "orthobasis.line", "orthobasis.listw", "orthobasis.mat", "orthobasis.neig")
+export("haar2level", "mld", "orthobasis.circ", "orthobasis.haar", "orthobasis.line", "orthobasis.mat", "orthobasis.neig", "is.orthobasis")
 
 ## ******* spatial *******
 export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multispati", "multispati.randtest", "mstree", "multispati.rtest", "nb2neig", "neig", "neig2mat", "neig2nb", "poly2area", "scores.neig")

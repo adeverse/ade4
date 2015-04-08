@@ -1,25 +1,54 @@
-print.orthobasis <- function(x,...) {
-    if (!inherits(x,"orthobasis")) stop ("for 'orthobasis' object")
-    cat("Orthonormal basis: ")
-    n <- nrow(x)
-    p <- ncol(x)
-    if (n!=(p+1)) stop ("Non convenient dimension: author's error")
-    cat("data.frame with",n,"rows and",ncol(x),"columns\n")
-    cat("--------------------------------------\n")
-    cat("Columns are an orthonormal basis of 1n-orthogonal for\n")
-    cat("the inner product defined by the weights attribute\n")
-    cat("---------------------------------------\n")
-    w <- attributes(x)
-    if (!is.null(w$"names")) cat("names =", w$names[1],"...",w$names[p],"\n")
-    if (!is.null(w$"row.names")) cat("row.names =", w$row.names[1],"...",w$row.names[n],"\n")
-    if (!is.null(w$"weights")) cat("weights =", w$weights[1],"...",w$weights[n],"\n")
-    if (!is.null(w$"values")) cat("values =", w$values[1],"...",w$values[p],"\n")
-    if (!is.null(w$"class")) cat("class =", w$class,"\n")
-    if (!is.null(w$"call")) {
-        cat("call =")
-        print(w$"call")
-    }
-  } 
+## define 'orthobasis' as a subclass of 'data.frame'. This allows to introduce an 'orthobasis' object in slot @data in sp objects.
+setOldClass(c("orthobasis","data.frame"))
+
+## TODO NEW
+is.orthobasis <- function(x){
+  if(!inherits(x,"orthobasis"))
+    return(FALSE)
+  wt <- attr(x,"weights")
+  x <- as.matrix(x)
+  # vectors should be centred
+  test <- isTRUE(all.equal(rep(0, ncol(x)), apply(x, 2, weighted.mean, w = wt), check.attributes = FALSE))
+  # test orthogonality
+  if(test){
+    test <- test & isTRUE(all.equal(diag(1,ncol(x)), crossprod(x*wt,x), check.attributes = FALSE))
+  }
+  return(test)
+}
+
+## TODO updated
+print.orthobasis <- function(x,..., nr = 6, nc = 4) {
+  cat("Orthobasis with", nrow(x),"rows and", ncol(x),"columns\n")
+  cat("Only", nr, "rows and", nc , "columns are shown\n")
+  print.data.frame(x[1:nr, 1:nc])
+} 
+
+## TODO new
+summary.orthobasis <- function(object,...) {
+  if (!inherits(object,"orthobasis")) stop ("for 'orthobasis' object")
+  cat("Orthonormal basis: ")
+  n <- nrow(object)
+  p <- ncol(object)
+  cat("data.frame with",n,"rows and",ncol(object),"columns\n")
+  cat("----------------------------------------------------------------\n")
+  cat("Columns form a centred orthonormal basis (i.e. 1n-orthogonal)\n")
+  cat("for the inner product defined by the 'weights' attribute\n")
+  cat("----------------------------------------------------------------\n")
+  w <- attributes(object)
+  cat("\nAttributes:\n")
+  if (!is.null(w$names)) cat("- names:", w$names[1],"...",w$names[p],"\n")
+  if (!is.null(w$row.names)) cat("- row.names:", w$row.names[1],"...",w$row.names[n],"\n")
+  if (!is.null(w$weights)) cat("- weights:", w$weights[1],"...",w$weights[n],"\n")
+  if (!is.null(w$values)) cat("- values:", w$values[1],"...",w$values[p],"\n")
+  if (!is.null(w$class)) cat("- class:", w$class,"\n")
+  if (!is.null(w$call)) cat("- call:", deparse(w$call), "\n\n")
+  
+} 
+
+## TODO new
+plot.orthobasis <- function(x,...){
+  table.value(x,...)
+}
 
 
 orthobasis.mat <- function(mat, cnw=TRUE) {
@@ -271,36 +300,6 @@ return(res)
     return(res)
 }
 
-"orthobasis.listw" <- function( listw) {
-    appel = match.call()
-    if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
-    if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
-    n = length(listw$weights)
-    fun <- function (x) {
-        num = listw$neighbours[[x]]
-        wei = listw$weights[[x]]
-        res = rep(0,n)
-        res[num] = wei
-        return (res)
-    }
-    b0 <- matrix(unlist(lapply(1:n,fun)),n,n)
-    b0=(t(b0)+b0)/2 
-    b0=bicenter.wt(b0)
-    a0 <- eigen(b0, symmetric = TRUE)
-    #barplot(a0$values)
-    a0 <- a0$vectors
-    a0 <- cbind(rep(1,n),a0)
-    a0 <- qr.Q(qr(a0))
-    a0 <- as.data.frame(a0[,-1])*sqrt(n)
-    row.names(a0) <- attr(listw,"region.id")
-    names(a0) <- paste("VP", 1:(n-1), sep = "")
-    z <- apply(a0,2,function(x) sum((t(b0*x)*x))/n)
-    attr(a0,"values") <- z
-    attr(a0,"weights") <- rep(1/n,n)
-    attr(a0,"call") <- appel
-    attr(a0,"class") <- c("orthobasis","data.frame")        
-    return(a0)
-}
 
 
 "orthobasis.neig" <- function( neig) {

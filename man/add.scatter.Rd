@@ -79,7 +79,7 @@ The matched call (invisible).
     G1 <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2), plot = TRUE)
     
     g5 <- s.label(w$co, plot = FALSE)
-    g6 <- adegraphics:::.add.scatter.eig(w$eig, w$nf, psub = list(text = "Eigenvalues"), 
+    g6 <- plotEig(w$eig, w$nf, psub = list(text = "Eigenvalues"), 
       pbackground = list(box = TRUE), plot = FALSE)
     G2 <- insert(g6, g5, posi = "bottomright", ratio = 0.25)
 
@@ -112,7 +112,7 @@ The matched call (invisible).
     par(mfrow=c(1,1))
     
     s.label(w$co)
-    ade4:::add.scatter.eig(w$eig,w$nf,posi="bottomright",1,2)
+    add.scatter.eig(w$eig,w$nf,posi="bottomright",1,2)
   }
 }
 \keyword{multivariate}

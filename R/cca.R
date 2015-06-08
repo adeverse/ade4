@@ -10,3 +10,24 @@
     x$call <- match.call()
     return(x)
 }
+
+summary.cca <- function(object, ...){
+    thetitle <- "Canonical correspondence analysis" 
+    cat(thetitle)
+    cat("\n\n")
+    summary.dudi(object, ...)
+    
+    appel <- as.list(object$call)
+    df <- as.data.frame(eval.parent(appel$sitenv))
+    spe <- eval.parent(appel$sitspe)
+    coa1 <- dudi.coa(spe, scannf = FALSE)
+
+    cat(paste("Total unconstrained inertia (",deparse(appel$sitspe),"): ", sep = ""))
+    cat(signif(sum(coa1$eig), 4))
+    cat("\n\n")
+
+    cat(paste("Inertia of" ,deparse(appel$sitspe),"explained by", deparse(appel$sitenv), "(%): "))
+    cat(signif(sum(object$eig) / sum(coa1$eig) * 100, 4))
+    cat("\n\n")
+
+}

@@ -1,18 +1,23 @@
 \encoding{latin1}
 \name{cca}
 \alias{cca}
+\alias{summary.cca}
 \title{Canonical Correspondence Analysis}
 \description{
 Performs a Canonical Correspondence Analysis.  
 }
 \usage{
 cca(sitspe, sitenv, scannf = TRUE, nf = 2)
+\method{summary}{cca}(object, \dots) 
 }
 \arguments{
   \item{sitspe}{a data frame for correspondence analysis, typically a sites x species table}
   \item{sitenv}{a data frame containing variables, typically a sites x environmental variables table}
   \item{scannf}{a logical value indicating whether the eigenvalues bar plot should be displayed}
-  \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
+  \item{nf}{if scannf FALSE, an integer indicating the number of kept
+    axes}
+  \item{object}{an object of class \code{cca}}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 returns an object of class \code{pcaiv}. See \code{\link{pcaiv}}

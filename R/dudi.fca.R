@@ -106,6 +106,7 @@
     col.w <- unlist(lapply(bloc, function(k) rep(1/k,k)))
     X <- dudi.pca (df, row.w = row.w, col.w = col.w, center = TRUE,
         scale = FALSE, scannf = scannf, nf = nf)
+    X$call <- match.call()
     X$blo <- bloc
     X$indica <- indica
     w1 <- unlist(lapply(X$tab,function(x) sum(x*x*row.w)))

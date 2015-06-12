@@ -26,6 +26,8 @@ dudi.type <- function(x){
     if (!call.list$center & call.list$scale) typ <- 5
     if (call.list$center & !call.list$scale) typ <- 4
     if (call.list$center & call.list$scale) typ <- 3
+  } else if (dudi.name == "dudi.fpca") {
+    typ <- 4
   } else if (dudi.name == "dudi.coa") {
     typ <- 6
   } else if (dudi.name == "dudi.fca") {

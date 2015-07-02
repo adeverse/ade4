@@ -4,9 +4,9 @@ Date: 2015-06-01
 Title: Analysis of Ecological Data : Exploratory and Euclidean Methods in Environmental Sciences
 Author: Stéphane Dray <stephane.dray@univ-lyon1.fr>, Anne-Béatrice Dufour <anne-beatrice.dufour@univ-lyon1.fr>, and Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>, with contributions from Thibaut Jombart, Sandrine Pavoine, Jean R. Lobry, Sébastien Ollier, and Aurélie Siberchicot. Based on earlier work by Daniel Chessel.
 Maintainer: Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
-Imports: methods
-Suggests: waveslim, splancs, MASS, maptools, spdep, pixmap, ape, deldir, ade4TkGUI, adegraphics, sp, lattice
 Depends: R (>= 2.10)
+Imports: graphics, grDevices, methods, stats, utils
+Suggests: ade4TkGUI, adegraphics, ape, deldir, lattice, maptools, MASS, pixmap, sp, spdep, splancs, waveslim
 Description: Multivariate data analysis and graphical display.
 License: GPL (>= 2)
 URL: http://pbil.univ-lyon1.fr/ADE-4, Mailing list: http://listes.univ-lyon1.fr/wws/info/adelist

@@ -22,7 +22,7 @@ randtest.rlq <- function(xtest, nrepet = 999, modeltype = 6, ...) {
   
   R.cw <- dudiR$cw
   appelR <- as.list(dudiR$call)
-  Rinit <- eval.parent(appelR$df)
+  Rinit <- as.data.frame(eval.parent(appelR$df))
   
   ## Test the different cases
   typR <- dudi.type(dudiR$call)
@@ -58,7 +58,7 @@ randtest.rlq <- function(xtest, nrepet = 999, modeltype = 6, ...) {
   
   Q.cw <- dudiQ$cw
   appelQ <- as.list(dudiQ$call)
-  Qinit <- eval.parent(appelQ$df)
+  Qinit <- as.data.frame(eval.parent(appelQ$df))
   typQ <- dudi.type(dudiQ$call)
   
   if (typQ %in% c(1,3,4,5,6,7)) {

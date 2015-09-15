@@ -26,22 +26,34 @@ covwt <- function(x, wt, na.rm = FALSE) {
 }
 
 scalewt <- function (df, wt = rep(1/nrow(df), nrow(df)), center = TRUE, scale = TRUE) {
-    df <- data.frame(df)
-    mean.df <- apply(df, 2, weighted.mean, w = wt)
+    df <- as.matrix(df)
+    mean.df <- FALSE
+    if(center){
+        mean.df <- apply(df, 2, weighted.mean, w = wt)
+        df <- sweep(df, 2, mean.df, "-") 
+    }
+    
     var.df <- FALSE
     if(scale){
-        var.df <- apply(df, 2, varwt, wt = wt)
+        f <- function(x, w) sum(w * x^2) / sum(w)  
+        var.df <- apply(df, 2, f, w = wt)
         temp <- var.df < 1e-14
         if (any(temp)) {
             warning("Variables with null variance not standardized.")
             var.df[temp] <- 1
         }
         var.df <- sqrt(var.df)
+        df <- sweep(df, 2, var.df, "/")
     }
     
-    res <- scale(df, scale = var.df, center = mean.df)
-    return(res)
+    if (is.numeric(mean.df)) 
+        attr(df, "scaled:center") <- mean.df
+    if (is.numeric(var.df)) 
+        attr(df, "scaled:scale") <- var.df
+    
+    return(df)
 }
+
 
 
 meanfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FALSE) {

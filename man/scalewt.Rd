@@ -26,7 +26,7 @@ scalefacwt(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), scale = TRUE, drop = 
   \item{x}{a numeric vector (\code{varwt}) or a matrix (\code{covwt})
     containg the data.}
   \item{na.rm}{a logical value indicating whether NA values should be stripped before the computation proceeds.}
-  \item{df}{a dataframe containing the data.}
+  \item{df}{a matrix or a dataframe containing the data.}
   \item{fac}{a factor partitioning the data.}
   \item{wt}{a numeric vector of weights.}
   \item{drop}{a logical value indicating whether unused levels should be kept.}

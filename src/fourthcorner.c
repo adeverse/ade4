@@ -617,7 +617,7 @@ void quatriemecoin2 (double *tabR, double *tabL,
   /* Declarations de variables C locales */
   double  **XR,**XL,**XQ,**LtR, **XG;
   double  **XLpermute,**contingxy;
-  double  *varx, *vary, **tabx,**taby,resF=0, *reschi2G, *indica;
+  double  *varx, *vary, **tabx,**taby;
   int i,j,k,l,lL,cL,cQ,cR,vR,vQ, *nvR, *nvQ, *assignR, *assignQ, *typR, *typQ,dimx=0,dimy=0,npermut;
 
 
@@ -1053,8 +1053,8 @@ void quatriemecoinRLQ (double *tabR, double *tabL, double *tabQ,
 
   /* Declarations de variables C locales */
   double  **XR,**XL,**XQ,**XD, **XD2, **XG, **LtR;
-  double  **XLpermute, **contingxy;
-  double  *varx, *vary, **tabx,**taby,resF=0, *reschi2G, *indica;
+  double  **XLpermute;
+  double  *varx, *vary, **tabx,**taby,resF=0, *indica;
   int i,j,k,l,lL,cL,cQ,cR,vR,vQ, *nvR, *nvQ, *assignR, *assignQ, *typR, *typQ,dimx=0,dimy=0,npermut;
   int    typAnalR, typAnalQ;
   double  **tabc1, **tabl1, **axesR, **axesQ, *pcR, *pcQ, **initR, **initQ, Ntot=0.0, *pcL, *plL;

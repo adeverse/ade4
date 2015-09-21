@@ -22,7 +22,7 @@
       else if(as.list(dudi$call)[[1]] == "dudi.mix" )
         stop ("Not implemented for non-uniform weights in the case of dudi.mix")
     }
-    isim<-testdiscrimin(nrepet, rank, X.lw, length(unique(fac)), fac, X, nrow(X), ncol(X))
+    isim<-testdiscrimin(nrepet, rank, X.lw, fac, X, nrow(X), ncol(X))
     obs<-isim[1]
     return(as.randtest(isim[-1],obs,call=match.call()))
 }

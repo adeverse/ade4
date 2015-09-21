@@ -1,10 +1,9 @@
-testdiscrimin <- function(npermut, rank, pl, moda, indica, tab, l1, c1)
+testdiscrimin <- function(npermut, rank, pl, indica, tab, l1, c1)
   .C("testdiscrimin",
      as.integer(npermut),
      as.double(rank),
      as.double(pl),
      as.integer(length(pl)),
-     as.integer(moda),
      as.double(indica),
      as.integer(length(indica)),
      as.double(t(tab)),

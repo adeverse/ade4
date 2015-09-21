@@ -6,7 +6,7 @@
 
 double betweenvar (double **tab, double *pl, double *indica);
 double inerbetween (double *pl, double *pc, int moda, double *indica, double **tab);
-void testdiscrimin(int *npermut,double *rank,double *pl1,int *npl,int *moda1,double *indica1,int *nindica,double *tab1, int *il1, int *ic1,double *inersim);
+void testdiscrimin(int *npermut,double *rank,double *pl1,int *npl,double *indica1,int *nindica,double *tab1, int *il1, int *ic1,double *inersim);
 void testertrace (int *npermut,double *pc1r, double *pc2r, double *tab1r, int *l1r, int *c1r,double *tab2r, int *c2r,double *inersimul);
 void testertracenu (int *npermut,double *pc1r, double *pc2r, double *plr, double *tab1r, int *l1r, int *c1r,double *tab2r, int *c2r,double *tabinit1r,double *tabinit2r, int *typ1r, int *typ2r,double *inersimul);
 void testertracenubis ( int *npermut,double *pc1r, double *pc2r, double *plr, double *tab1r, int *l1r, int *c1r,double *tab2r, int *c2r,double *tabinit1r,double *tabinit2r, int *typ1r, int *typ2r, int *ntabr,double *inersimul);
@@ -194,7 +194,7 @@ void testdistRV(int *npermut1,int *lig1,double *init11,double *init21,double *RV
 }
 
 /*********************************************/
-/*  On commence par une première version ou l'on importe la liste listw sous forme matricielle. 
+/*  On commence par une premiÃ¨re version ou l'on importe la liste listw sous forme matricielle. 
     On pourrait suivre la logique de Bivand qui est plus judicieuse, surtout quand les matrices
     L on beaucoup de 0. Il travaille avec des listes et calcul le produit L%*%X par la fonction
     lagw.c. */
@@ -253,7 +253,7 @@ void testmultispati (int *npermut, int *lig1, int *col1, double *tab, double *ma
     k = k + 1;
   }
     
-  /* On calcul la valeur observée */
+  /* On calcul la valeur observÃ©e */
   inersim[0]=traceXtdLXq(X, L, d, q);
     
   /* On calcul les valeurs pour chaque simulation */
@@ -266,7 +266,7 @@ void testmultispati (int *npermut, int *lig1, int *col1, double *tab, double *ma
   }
     
     
-  /* Libération des réservations locales */
+  /* LibÃ©ration des rÃ©servations locales */
     
   freetab(X);
   freetab(L);
@@ -473,7 +473,6 @@ void testdiscrimin( int *npermut,
 		    double *rank,
 		    double *pl1,
 		    int *npl,
-		    int *moda1,
 		    double *indica1,
 		    int *nindica,
 		    double *tab1, int *il1, int *ic1,
@@ -484,13 +483,12 @@ void testdiscrimin( int *npermut,
   int         l1, c1;
     
   double  **tab, **tabp, *pl, *plp, *indica, rang;
-  int     moda, i, j, k, *numero;
+  int     i, j, k, *numero;
 
   /* Allocation memoire pour les variables C locales */
 
   l1 = *il1;
   c1 = *ic1;
-  moda = *moda1;
   rang = *rank;
 
   vecalloc (&pl, *npl);
@@ -1141,7 +1139,7 @@ void testertracenubis ( int *npermut,
     } else {
       getpermutation (numero1,k);
       matpermut (init1, numero1, X1);
-      /* poids colonne recalculé si acm*/
+      /* poids colonne recalculÃ© si acm*/
       if (typ1 == 2) {
 	for(j=1;j<=c1;j++){
 	  pc1[j]=0;

@@ -1,3 +1,98 @@
+2015-11-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-3 ----------
+
+2015-10-19  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/ktab.R: Change ktab.util.names to allow for ktabs with varying
+	numbers of rows (columns)
+
+2015-10-14  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: Suggest the 'CircStats' package which is used in Rd
+	cross-references
+
+2015-09-21  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/randtest-internal.R, R/randtest.discrimin.R,
+	src/fourthcorner.c, src/tests.c: Remove some unused variables in C
+	code
+
+2015-09-18  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* README.md: Add badges and informations for Mac and Windows users
+
+2015-09-18  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* .travis.yml: Change setting for travis(error was produced due to
+	unchanged dates and version numbers)
+
+2015-09-18  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* .Rbuildignore, appveyor.yml: Add windows check (via appveyor)
+
+2015-09-18  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/mbpcaiv.R, R/mbpls.R, R/multiblock.R: Udate multiblock methods
+	to deal with non-centred data
+
+2015-09-18  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* .Rbuildignore: Add README.md to .Rbuildignore
+
+2015-09-15  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/scalewt.R, man/scalewt.Rd: Correct a bug to allow scaling
+	without centring
+
+2015-09-09  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : Reorder the levels of season (spring as first)
+
+2015-09-09  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/randtest.rlq.R: Correct a bug to deal with a single trait and/or
+	environmental variable (email by C. ter Braak 28/08/2015)
+
+2015-09-09  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* .Rbuildignore, .travis.yml, README.md: Add travis support and
+	README
+
+2015-08-27  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dudi.R: Use make.unique instead of make.names to produce
+	row.names for outputs. The second is devoted to names (e.g., by
+	avoiding integer which are authorized as row.names)
+
+2015-08-26  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/pta.R: Modify the levels names of supTI
+
+2015-07-15  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : Reorder the levels of the 'design' factor (use temporal instead
+	of alphabetic order)
+
+2015-07-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION, NAMESPACE: The default packages other than 'base' are
+	now imported (new item for r-devel)
+
+2015-06-12  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/dudi.fca.R, R/utilities.R: Modify the '$call' in 'dudi.fpca'
+
+2015-06-08  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* NAMESPACE, R/cca.R, man/cca.Rd: New summary method for 'cca'
+	objects
+
+2015-06-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION, man/add.scatter.Rd: Update an exemple which uses the
+	new function 'plotEig' of 'adegraphics'
+
 2015-04-14 07:38  aursiber
 
 	* DESCRIPTION: ---------- release of ade4 1.7-2 ----------

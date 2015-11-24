@@ -99,9 +99,11 @@ plot.dpcoa <- function(x, xax = 1, yax = 2, ...) {
     X <- eval.parent(X)
     s.distri(x$dls[, c(xax, yax)], t(X), cellipse = 1, cstar = 0,
              sub = "Categories & Collections", possub = "bottomleft", csub = 1.5)
-    s.label(x$li[, c(xax, yax)], sub = "Collections", possub = "bottomleft", csub = 1.5)
+    s.label(x$dls[, c(xax, yax)], sub = "Categories", possub = "bottomleft", csub = 1.5)
     if(!is.null(x$RaoDiv))
         s.value(x$li[, c(xax, yax)], x$RaoDiv, sub = "Rao Divcs")
+    else
+        s.label(x$li[, c(xax, yax)], sub = "Collections", possub = "bottomleft", csub = 1.5)
     
 }
 

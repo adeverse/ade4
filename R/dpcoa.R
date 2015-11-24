@@ -19,7 +19,7 @@ dpcoa <- function (df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e
     }
     if (is.null(dis)) {
         dis <- (matrix(1, nesp, nesp) - diag(rep(1, nesp))) * sqrt(2)
-        rownames(dis) <- colnames(dis) <- rownames(df)
+        rownames(dis) <- colnames(dis) <- names(df)
         dis <- as.dist(dis)
     }
     if (is.null(attr(dis, "Labels"))) 

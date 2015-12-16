@@ -1659,7 +1659,7 @@ void quatriemecoinRLQ (double *tabR, double *tabL, double *tabQ,
 	freevec(vary);	
       }
        
-      if ((*typeTest==3)){
+      if (*typeTest==3){
 	/* Q.axes*/
 	for (j=1;j<= *naxes;j++){
 	  vecalloc (&varx, lL); /*R axis*/

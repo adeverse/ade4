@@ -175,7 +175,7 @@
     if (!inherits(x, "mfa")) 
         stop("non convenient data")
     cat("Multiple Factorial Analysis\n")
-    cat(paste("list of class", class(mfa)))
+    cat(paste("list of class", class(x)))
     cat("\n$call: ")
     print(x$call)
     cat("$nf:", x$nf, "axis-components saved\n\n")

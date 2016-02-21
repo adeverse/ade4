@@ -101,8 +101,10 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
                 
                 idR <- which(diff(assignR)==1)
                 idQ <- which(diff(assignQ)==1)
-                segments(sort(unique(xtot))[idR]+xdelta, max(ytot+ydelta), sort(unique(xtot))[idR]+xdelta, min(ytot-ydelta), lwd=2)
-                segments(max(xtot+xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, min(xtot-xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, lwd=2)
+                if(length(idR) > 0)
+                    segments(sort(unique(xtot))[idR]+xdelta, max(ytot+ydelta), sort(unique(xtot))[idR]+xdelta, min(ytot-ydelta), lwd=2)
+                if(length(idQ) > 0)
+                    segments(max(xtot+xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, min(xtot-xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, lwd=2)
             }
             rect(min(xtot) - xdelta, min(ytot) - ydelta, max(xtot) + xdelta, max(ytot) + ydelta, col = NULL)
             

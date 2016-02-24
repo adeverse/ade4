@@ -28,9 +28,9 @@ testdim(object, ...)
   procedure}
 }
 \references{
-  Dray, S. (2007) On the number of principal components: A test of
+  Dray, S. (2008) On the number of principal components: A test of
   dimensionality based on measurements of similarity between
-  matrices. \emph{Computational Statistics and Data Analysis}, in press.
+  matrices. \emph{Computational Statistics and Data Analysis}, \bold{Volume 52}, 2228--2237. doi:10.1016/j.csda.2007.07.015
 }
 \author{ Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
 \seealso{\code{\link{dudi.pca}}, \code{\link{RV.rtest}},\code{\link{testdim.multiblock}}}

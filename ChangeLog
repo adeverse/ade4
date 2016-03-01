@@ -1,3 +1,70 @@
+2016-03-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* : DESCRIPTION: ---------- release of ade4 1.7-4 ----------
+
+2016-02-24  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : Merge pull request #3 from Rekyt/patch-1 Correct Reference with DOI
+
+2016-02-22  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .gitignore: Add a configure file to ignore some files in the Git
+	repository
+
+2016-02-21  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : commit 93fe29b91eb21adeb4f08e07b432b3b61d54e07a Author:
+	Stéphane Dray <stephane.dray@univ-lyon1.fr> Date:   Sun Feb 21
+	14:33:14 2016 +0100
+
+2016-01-22  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/mfa.R: print.mfa print mfa object class
+
+2015-12-16  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : commit e983689cedf4c297aae70ee4dcce8cecca1a6b54 Author:
+	Stéphane Dray <stephane.dray@univ-lyon1.fr> Date:   Wed Dec 16
+	10:45:46 2015 +0100
+
+2015-11-26  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* README.md: Add references to the binary packages
+
+2015-11-24  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dpcoa.R: Update the plot function to represent species (and
+	sites or their diversity according to RaoDecomp argument)
+
+2015-11-24  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dpcoa.R: Correct a small bug in the handling of species names
+
+2015-11-24  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : commit 4691e39258ac4c2f743d97f94cbc2b6d94d53ec1 Author:
+	Stéphane Dray <stephane.dray@univ-lyon1.fr> Date:   Tue Nov 24
+	13:58:43 2015 +0100
+
+2015-11-24  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/randtest.dpcoa.R, man/randtest.dpcoa.Rd: Add new function
+	randtest.dpcoa
+
+2015-11-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION: Add BugReports field
+
+2015-11-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-3 ----------
+
+2015-11-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : commit 13ff73165e429972dbfaa2d44f8eaef4ca826324 Author:
+	Stéphane Dray <stephane.dray@univ-lyon1.fr> Date:   Tue Nov 10
+	10:04:42 2015 +0100
+	
 2015-11-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-3 ----------

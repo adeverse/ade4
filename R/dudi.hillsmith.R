@@ -24,18 +24,24 @@
     col.w <- NULL
     col.assign <- NULL
     k <- 0
+    center <- vector(mode = "numeric", length = 0)
+    norm <- vector(mode = "numeric", length = 0)
     for (j in 1:nc) {
         if (index[j] == "q") {
-            
-                res <- cbind(res, scalewt(df[, j],wt=row.w))
-                provinames <- c(provinames, names(df)[j])
-                col.w <- c(col.w, 1)
-                k <- k + 1
-                col.assign <- c(col.assign, k)
+            var.tmp <- scalewt(df[, j], wt = row.w)
+            center <- c(center, attr(var.tmp, "scaled:center"))
+            norm <- c(norm, attr(var.tmp, "scaled:scale"))
+            res <- cbind(res, var.tmp)
+            provinames <- c(provinames, names(df)[j])
+            col.w <- c(col.w, 1)
+            k <- k + 1
+            col.assign <- c(col.assign, k)
             
         }
         else if (index[j] == "f") {
             w <- fac2disj(df[, j], drop = TRUE)
+            center <- c(center, NA)
+            norm <- c(norm, NA)
             cha <- paste(substr(names(df)[j], 1, 5), ".", names(w), 
                 sep = "")
             col.w.provi <- drop(row.w %*% as.matrix(w))
@@ -49,7 +55,7 @@
     }
     res <- data.frame(res)
     names(res) <- make.names(provinames, unique = TRUE)
-    row.names(res)<-row.names(df)
+    row.names(res) <- row.names(df)
     res <- res[, -1]
     names(col.w) <- provinames[-1]
     X <- as.dudi(res, col.w, row.w, scannf = scannf, nf = nf, 
@@ -88,5 +94,7 @@
     row.names(rcor) <- names(df)
     names(rcor) <- names(X$l1)
     X$cr <- rcor
-    X
+    X$center <- center
+    X$norm <- norm
+    return(X)
 }

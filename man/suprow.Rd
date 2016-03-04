@@ -3,25 +3,31 @@
 \alias{suprow.coa}
 \alias{suprow.pca}
 \alias{suprow.dudi}
+\alias{predict.dudi}
+\alias{suprow.acm}
+\alias{suprow.mix}
 \title{Projections of Supplementary Rows}
 \description{
-performs projections of supplementary rows. 
+This function performs a projection of supplementary rows (i.e. supplementary individuals). 
 }
 \usage{ 
 \method{suprow}{coa}(x, Xsup, \dots) 
 \method{suprow}{dudi}(x, Xsup, \dots) 
-\method{suprow}{pca}(x, Xsup, \dots) 
+\method{predict}{dudi}(object, newdata, \dots) 
+\method{suprow}{pca}(x, Xsup, \dots)
+\method{suprow}{acm}(x, Xsup, \dots) 
+\method{suprow}{mix}(x, Xsup, \dots) 
 }
 \arguments{
-  \item{x}{an object of class \code{dudi}}
-  \item{Xsup}{an array with the supplementary rows (\code{Xsup} and \code{x$tab} have the same column number)}
+  \item{x, object}{an object of class \code{dudi}}
+  \item{Xsup, newdata}{an array with the supplementary rows}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 If \code{suprow.dudi} is used, the column vectors of Xsup are projected without prior modifications onto the principal components of dudi with the scalar product associated to the row weightings of dudi.
 }
 \value{
-returns a data frame containing the coordinates of the supplementary projections
+\code{predict} returns a data frame containing the coordinates of the supplementary rows. \code{suprow} returns a list with the transformed table \code{Xsup} in \code{tabsup} and the coordinates of the supplementary rows in \code{lisup}.
 }
 \references{
 Gower, J. C. (1967) Multivariate analysis and multivariate geometry. \emph{The statistician}, \bold{17}, 13--28.

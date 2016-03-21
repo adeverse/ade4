@@ -7,7 +7,7 @@ This data set gives the results of the presidential election in France in 1988 f
 }
 \usage{data(elec88)}
 \format{
-\code{elec88} is a list of 7 components. 
+\code{elec88} is a list of 10 components. 
 \describe{
     \item{tab}{is a data frame with 94 rows (departments) and 9 variables (candidates)}
     \item{res}{is the global result of the election all-over the country.}
@@ -22,6 +22,9 @@ This data set gives the results of the presidential election in France in 1988 f
     \item{contour}{is a data frame with 4 variables (x1,y1,x2,y2)for the contour display of France}
     \item{xy}{is a data frame with two variables (x,y) giving the position of the center for each department}
     \item{neig}{is the neighbouring graph between departments, object of the class \code{neig}}
+    \item{nb}{is the neighbouring graph between departments, object of the class \code{nb}}
+    \item{Spatial}{is the map of the french departments in Lambert II coordinates, object of the class \code{SpatialPolygons}}
+    \item{Spatialcontour}{is the map of France in Lambert II coordinates, object of the class \code{SpatialPolygons}}
     }
 }
 \source{

@@ -189,8 +189,13 @@
             test <- 1
         }
         if (((abs(cxy)) < epsi) && (test == 0)) {
-            a0 <- 1
-            b0 <- 0
+            if(vx > vy){
+                a0 <- 1
+                b0 <- 0
+            } else {
+                a0 <- 0
+                b0 <- 1
+            }
             test <- 1
         }
         if (test == 0) {

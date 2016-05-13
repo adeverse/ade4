@@ -71,7 +71,7 @@
 # res$li contient la representation euclidienne 
 # les nf premiers scores conserves
 # cas particulier d'un tableau de coordonnees dont on fait l'ACP
-    w <- t(t(eig$vectors[, 1:nf])/wsqrt)
+    w <- eig$vectors[, 1:nf]/wsqrt
     w <- data.frame(w)
     names(w) <- paste("RS", 1:nf, sep = "")
     row.names(w) <- rownames

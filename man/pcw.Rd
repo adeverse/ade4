@@ -14,7 +14,7 @@
 
   \describe{
     \item{spe}{Distribution of the abundances of 778 species in 50 sites}
-    \item{env}{Measurments of environmental variables for the 50 sites}
+    \item{env}{Measurements of environmental variables for the 50 sites}
     \item{xy}{Spatial coordinates for the sites (decimal degrees)}
     \item{xy.utm}{Spatial coordinates for the sites (UTM)}
     \item{map}{Map of the study area stored as a SpatialPolygons object}

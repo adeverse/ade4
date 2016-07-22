@@ -75,6 +75,10 @@ Application for improving the measurement of functional diversity. \emph{Oikos},
 }
 \author{Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
+
+\details{
+When preparing the object of class \code{ktab} (object x), variables of type "Q", "O", "D", "F", "B" and "C" should be of class \code{numeric} (the class \code{ordered} is not yet considered by \code{dist.ktab}); variables of type "N" should be of class \code{character} or \code{factor}
+}
 \seealso{
 \code{\link{daisy}} in the \code{cluster} package in the case of ratio-scale (quantitative) and nominal variables;
 and \code{\link{woangers}} for an application.

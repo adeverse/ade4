@@ -19,7 +19,7 @@ is.orthobasis <- function(x){
 ## TODO updated
 print.orthobasis <- function(x,..., nr = 6, nc = 4) {
   cat("Orthobasis with", nrow(x),"rows and", ncol(x),"columns\n")
-  cat("Only", nr, "rows and", nc , "columns are shown\n")
+  cat("Only", min(nr, nrow(x)), "rows and", min(nc, ncol(x)) , "columns are shown\n")
   print.data.frame(x[1:min(nr, nrow(x)), 1:min(nc, ncol(x))])
 } 
 

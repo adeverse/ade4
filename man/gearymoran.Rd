@@ -32,14 +32,14 @@ Cliff, A. D. and Ord, J. K. (1973) \emph{Spatial autocorrelation}, Pion, London.
 Thioulouse, J., Chessel, D. and Champely, S. (1995) Multivariate analysis of spatial patterns: a unified approach to local and global structures. 
 \emph{Environmental and Ecological Statistics}, \bold{2}, 1--14.
 }
-\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
+\author{S?bastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \seealso{\code{\link[spdep]{moran.test}} and \code{\link[spdep]{geary.test}} for classical versions of Moran's test and Geary's one}
 \examples{
 # a spatial example
 data(mafragh)
-tab0 <- (as.data.frame(scalewt(mafragh$mil)))
+tab0 <- (as.data.frame(scalewt(mafragh$env)))
 bilis0 <- neig2mat(mafragh$neig)
 gm0 <- gearymoran(bilis0, tab0, 999)
 gm0

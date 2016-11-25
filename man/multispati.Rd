@@ -171,7 +171,7 @@ if (requireNamespace("maptools", quiet = TRUE) & requireNamespace(spdep, quiet =
       par(mfrow = c(1, 1))
     }
 
-    maf.pca <- dudi.pca(mafragh$mil, scannf = FALSE)
+    maf.pca <- dudi.pca(mafragh$env, scannf = FALSE)
     multispati.randtest(maf.pca, maf.listw)
     maf.pca.ms <- multispati(maf.pca, maf.listw, scannf=FALSE)
     plot(maf.pca.ms)

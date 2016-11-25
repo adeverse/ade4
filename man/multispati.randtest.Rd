@@ -35,7 +35,7 @@ S?bastien Ollier \email{sebastien.ollier@u-psud.fr}
 if (requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
     data(mafragh)
     maf.listw <- nb2listw(neig2nb(mafragh$neig))
-    maf.pca <- dudi.pca(mafragh$mil, scannf = FALSE)
+    maf.pca <- dudi.pca(mafragh$env, scannf = FALSE)
     multispati.randtest(maf.pca, maf.listw)
     maf.pca.ms <- multispati(maf.pca, maf.listw, scannf=FALSE)
     plot(maf.pca.ms)

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{mariages}
 \alias{mariages}
 \docType{data}
@@ -18,9 +17,9 @@ aut (other workers).
 }
 \source{
 Vallet, L.A. (1986)
-Activité professionnelle de la femme mariée et détermination de la position sociale de la famille.
+ActivitÃ© professionnelle de la femme mariÃ©e et dÃ©termination de la position sociale de la famille.
 Un test empirique : la France entre 1962 et 1982.
-\emph{Revue Française de Sociologie}, \bold{27}, 656--696.
+\emph{Revue FranÃ§aise de Sociologie}, \bold{27}, 656--696.
 }
 \examples{
 data(mariages)

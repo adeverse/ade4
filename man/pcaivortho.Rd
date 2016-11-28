@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{pcaivortho}
 \alias{pcaivortho}
 \alias{summary.pcaivortho}
@@ -38,8 +37,8 @@ an object of class 'pcaivortho' sub-class of class \code{dudi}
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \references{
 Rao, C. R. (1964) The use and interpretation of principal component analysis in applied research. \emph{Sankhya}, \bold{A 26}, 329--359.\cr\cr
@@ -61,7 +60,7 @@ interAplusB <- pcaiv(coa1, avimedi$plan, scan = FALSE)
 
 if(adegraphicsLoaded()) {
   g1 <- s.class(coa1$li, cla, psub.text = "Sans contrainte", plot = F)
-  g21 <- s.match(w1$li, w1$ls, plab.cex = 0, psub.text = "Intra R�gion", plot = F)
+  g21 <- s.match(w1$li, w1$ls, plab.cex = 0, psub.text = "Intra Région", plot = F)
   g22 <- s.class(w1$li, cla, plot = F)
   g2 <- superpose(g21, g22)
   g31 <- s.match(pcaivnonA$li, pcaivnonA$ls, plab.cex = 0, psub.tex = "Contrainte Non A", plot = F)
@@ -76,7 +75,7 @@ if(adegraphicsLoaded()) {
 } else {
   par(mfrow = c(2, 2))
   s.class(coa1$li, cla, sub = "Sans contrainte")
-  s.match(w1$li, w1$ls, clab = 0, sub = "Intra R�gion")
+  s.match(w1$li, w1$ls, clab = 0, sub = "Intra Région")
   s.class(w1$li, cla, add.plot = TRUE)
   s.match(pcaivnonA$li, pcaivnonA$ls, clab = 0, sub = "Contrainte Non A")
   s.class(pcaivnonA$li, cla, add.plot = TRUE)

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{rpjdl}
 \alias{rpjdl}
 \docType{data}
@@ -20,12 +19,12 @@ in 182 sites.
 }
 \source{
 Prodon, R. and Lebreton, J.D. (1981)
-Breeding avifauna of a Mediterranean succession : the holm oak and cork oak series in the eastern Pyrénées.
+Breeding avifauna of a Mediterranean succession : the holm oak and cork oak series in the eastern PyrÃ©nÃ©es.
 1 : Analysis and modelling of the structure gradient.
-\emph{Oïkos}, \bold{37}, 21--38.
+\emph{OÃ¯kos}, \bold{37}, 21--38.
 
 Lebreton, J. D., Chessel D., Prodon R. and Yoccoz N. (1988)
-L'analyse des relations espèces-milieu par l'analyse canonique des correspondances.
+L'analyse des relations espÃ¨ces-milieu par l'analyse canonique des correspondances.
 I. Variables de milieu quantitatives.
 \emph{Acta Oecologica, Oecologia Generalis}, \bold{9}, 53--67.
 }

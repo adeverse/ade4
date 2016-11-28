@@ -47,7 +47,7 @@ mbpls(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), scannf = TRUE, 
 \item{vipc}{cumulated variable importances for a given number of dimensions}
 }
 \references{Bougeard, S., Qannari, E.M., Lupo, C. and Hanafi, M. (2011). From multiblock partial least squares to multiblock redundancy analysis. A continuum approach. \emph{Informatica}, 22(1), 11-26}
-\author{Stephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stéphanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{mbpls}}, \code{\link{testdim.multiblock}},
   \code{\link{randboot.multiblock}}}

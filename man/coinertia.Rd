@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{coinertia}
 \alias{coinertia}
 \alias{print.coinertia}
@@ -12,7 +11,7 @@ The coinertia analysis performs a double inertia analysis of two tables.
 coinertia(dudiX, dudiY, scannf = TRUE, nf = 2)
 \method{plot}{coinertia} (x, xax = 1, yax = 2, \dots) 
 \method{print}{coinertia} (x, \dots) 
-\method{summary}{coinertia} (object, \dots) 
+\method{summary}{coinertia} (object, \dots)
 }
 \arguments{
   \item{dudiX}{a duality diagram providing from one of the functions dudi.coa, dudi.pca, \dots}
@@ -46,18 +45,18 @@ Returns a list of class 'coinertia', sub-class 'dudi' containing:
   \item{aY}{Correlations between dudiY axes and coinertia axes}
 }
 \references{
-Dol�dec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for studying species-environment relationships. 
+Dolédec, S. and Chessel, D. (1994) Co-inertia analysis: an alternative method for studying species-environment relationships. 
 \emph{Freshwater Biology}, \bold{31}, 277--294.\cr
 
 Dray, S., Chessel, D. and J. Thioulouse (2003) Co-inertia analysis and the linking of the ecological data tables.
 \emph{Ecology}, \bold{84}, 11, 3078--3089.
 }
-\section{WARNING }{
+\section{WARNING}{
 IMPORTANT : \code{dudi1} and \code{dudi2} must have identical row weights.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(doubs)

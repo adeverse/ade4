@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{statico}
 \alias{statico}
 \title{STATIS and Co-Inertia : Analysis of a series of paired ecological tables}
@@ -24,8 +23,8 @@ a list of class ktab, subclass kcoinertia. See \link{ktab}
 \references{
 Thioulouse J. (2011). Simultaneous analysis of a sequence of paired ecological tables: a comparison of several methods. \emph{Annals of Applied Statistics}, \bold{5}, 2300-2325.
 Thioulouse J., Simier M. and Chessel D. (2004). Simultaneous analysis of a sequence of paired ecological tables.  \emph{Ecology} \bold{85}, 272-283.
-Simier, M., Blanc L., Pellegrin F., and Nandris D. (1999). Approche simultanée de K couples de tableaux : 
-Application a l'étude des relations pathologie végétale - environnement. \emph{Revue de Statistique Appliquée}, \bold{47}, 31-46.
+Simier, M., Blanc L., Pellegrin F., and Nandris D. (1999). Approche simultanÃ©e de K couples de tableaux : 
+Application a l'Ã©tude des relations pathologie vÃ©gÃ©tale - environnement. \emph{Revue de Statistique AppliquÃ©e}, \bold{47}, 31-46.
 }
 \author{Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}}
 \section{WARNING }{

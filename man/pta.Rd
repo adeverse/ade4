@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{pta}
 \alias{pta}
 \alias{print.pta}
@@ -35,7 +34,7 @@ returns a list of class 'pta', sub-class of  'dudi' containing :
   \item{cw}{a numeric vector with the column weights}
   \item{lw}{a numeric vector with the row weights}
   \item{eig}{a numeric vector with the all eigenvalues (compromis)}
-  \item{cos2}{a numeric vector with the \eqn{\cos^2}{cos²} between compromise and arrays} 
+  \item{cos2}{a numeric vector with the \eqn{\cos^2}{cosÂ²} between compromise and arrays} 
   \item{tab}{a data frame with the modified array}
   \item{li}{a data frame with the row coordinates}
   \item{l1}{a data frame with the row normed scores}
@@ -50,12 +49,12 @@ returns a list of class 'pta', sub-class of  'dudi' containing :
   \item{T4}{a data frame with the factors for Tax and Tcomp}
 }
 \references{
-Blanc, L., Chessel, D. and Dolédec, S. (1998) Etude de la stabilité temporelle des structures spatiales par Analyse d'une série de tableaux faunistiques totalement appariés. \emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{348}, 1--21.\cr\cr
-Thioulouse, J., and D. Chessel. 1987. Les analyses multi-tableaux en écologie factorielle. I De la typologie d'état à la typologie de fonctionnement par l'analyse triadique. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 463--480.
+Blanc, L., Chessel, D. and DolÃ©dec, S. (1998) Etude de la stabilitÃ© temporelle des structures spatiales par Analyse d'une sÃ©rie de tableaux faunistiques totalement appariÃ©s. \emph{Bulletin FranÃ§ais de la PÃªche et de la Pisciculture}, \bold{348}, 1--21.\cr\cr
+Thioulouse, J., and D. Chessel. 1987. Les analyses multi-tableaux en Ã©cologie factorielle. I De la typologie d'Ã©tat Ã  la typologie de fonctionnement par l'analyse triadique. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 463--480.
 }
 \author{
 Pierre Bady \email{pierre.bady@univ-lyon1.fr}\cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

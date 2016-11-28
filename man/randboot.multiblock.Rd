@@ -19,7 +19,7 @@
 \value{A list containing objects of class \code{krandboot}}
 
 \references{Carpenter, J. and Bithell, J. (2000) Bootstrap confidence intervals: when, which, what? A practical guide for medical statisticians.\emph{Statistics in medicine}, 19, 1141-1164}
-\author{Stephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stéphanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{mbpcaiv}}, \code{\link{mbpls}},
   \code{\link{testdim.multiblock}}, \code{\link{as.krandboot}}}

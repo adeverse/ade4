@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{mfa}
 \alias{mfa}
 \alias{print.mfa}
@@ -47,11 +46,11 @@ mfa(X, option = c("lambda1", "inertia", "uniform", "internal"),
   \item{lisup}{a data frame with the projections of normalized scores of rows for each table}
   \item{link}{a data frame containing the projected inertia and the links between the arrays and the reference array}
 }
-\references{Escofier, B. and Pag�s, J. (1994) Multiple factor analysis (AFMULT package), \emph{Computational Statistics and Data Analysis}, \bold{18}, 121--140.
+\references{Escofier, B. and Pagès, J. (1994) Multiple factor analysis (AFMULT package), \emph{Computational Statistics and Data Analysis}, \bold{18}, 121--140.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(friday87)

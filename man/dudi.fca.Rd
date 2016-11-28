@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dudi.fca}
 \alias{dudi.fca}
 \alias{dudi.fpca}
@@ -38,11 +37,11 @@ The function \code{dudi.fpca} returns a list of class \code{pca} and \code{dudi}
 \item inertia
 }
 }
-\references{Chevenet, F., Dol�dec, S. and Chessel, D. (1994) A fuzzy coding 
-approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309. }
+\references{Chevenet, F., Dolédec, S. and Chessel, D. (1994) A fuzzy coding 
+approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309.}
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 w1 <- matrix(c(1,0,0,2,1,1,0,2,2,0,1,0,1,1,1,0,1,3,1,0), 4, 5)

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{fruits}
 \alias{fruits}
 \docType{data}
@@ -32,17 +31,17 @@
     \item verrou: intensity of green in red area (1/none - 4)
     \item foncee: intensity of dark area (0/pink - 4)
     \item comucr: intensity of the mucron color (1=no contrast - 4/dark)
-    \item impres: kind of impression (1/watched - 4/pointillé)
+    \item impres: kind of impression (1/watched - 4/pointillÃ©)
     \item coldom: intensity of the predominating color (0/clear - 4)
     \item calibr: grade (1/<90g - 5/>200g)
     }
 }
  
 \source{ Kervella, J. (1991) Analyse de l'attrait d'un produit : 
-exemple d'une comparaison de lots de pêches. Agro-Industrie et 
-méthodes statistiques. Compte-rendu des secondes journées 
-européennes. Nantes 13-14 juin 1991.  Association pour la 
-Statistique et ses Utilisations, Paris,  313--325. } 
+exemple d'une comparaison de lots de pÃªches. Agro-Industrie et 
+mÃ©thodes statistiques. Compte-rendu des secondes journÃ©es 
+europÃ©ennes. Nantes 13-14 juin 1991.  Association pour la 
+Statistique et ses Utilisations, Paris, 313--325.} 
 
 \examples{ 
 data(fruits)

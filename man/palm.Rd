@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{palm}
 \alias{palm}
 \docType{data}
@@ -24,7 +23,7 @@ aire: spatial distribution area (\eqn{km^{2}}{km^2})\cr
 alti: maximum altitude in meter (logged transform)\cr       
 }
 \source{
-This data set was obtained by Clémentine Gimaret-Carpentier.
+This data set was obtained by ClÃ©mentine Gimaret-Carpentier.
 }
 \examples{
 \dontrun{

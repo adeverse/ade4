@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dudi.coa}
 \alias{dudi.coa}
 \title{Correspondence Analysis}
@@ -18,13 +17,13 @@ returns a list of class \code{coa} and \code{dudi} (see \link{dudi}) containing
   \item{N}{the sum of all the values of the initial table}
 }
 \references{
-Benzécri, J.P. and Coll. (1973) \emph{L'analyse des données. II L'analyse des correspondances}, Bordas, Paris. 1--620.\cr
+BenzÃ©cri, J.P. and Coll. (1973) \emph{L'analyse des donnÃ©es. II L'analyse des correspondances}, Bordas, Paris. 1--620.\cr
 
 Greenacre, M. J. (1984) \emph{Theory and applications of correspondence analysis}, Academic Press, London.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(rpjdl)

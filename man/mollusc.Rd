@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{mollusc}
 \alias{mollusc}
 \docType{data}
@@ -19,7 +18,7 @@ the sampler types and the time of exposure.
 \source{
  Richardot-Coulet, M., Chessel D. and Bournaud M. (1986)
  Typological value of the benthos of old beds of a large river. Methodological approach.
- \emph{Archiv fùr Hydrobiologie}, \bold{107}, 363--383.
+ \emph{Archiv fÃ¹r Hydrobiologie}, \bold{107}, 363--383.
 }
 \examples{
 data(mollusc)

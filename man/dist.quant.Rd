@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dist.quant}
 \alias{dist.quant}
 \title{Computation of Distance Matrices on Quantitative Variables}
@@ -30,7 +29,7 @@ an object of class \code{dist}
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(ecomor)

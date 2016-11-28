@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{morphosport}
 \alias{morphosport}
 \docType{data}
@@ -24,8 +23,8 @@ hand (handball), judo, nata (swimming), voll (volleyball).
 }
 \source{
 Mimouni , N. (1996) 
-\emph{Contribution de méthodes biométriques à l'analyse de la morphotypologie des sportifs}. 
-Thèse de doctorat. Université Lyon 1.
+\emph{Contribution de mÃ©thodes biomÃ©triques Ã  l'analyse de la morphotypologie des sportifs}. 
+ThÃ¨se de doctorat. UniversitÃ© Lyon 1.
 }
 \examples{
 data(morphosport)

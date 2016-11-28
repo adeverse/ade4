@@ -43,8 +43,8 @@ Lebart, L., Morineau, A. and Piron, M. (1995) \emph{Statistique exploratoire mul
 \details{Contributions are printed in percentage and the sign is the sign of the coordinates}
 \author{
 Daniel Chessel \cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}\cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}\cr
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(housetasks)

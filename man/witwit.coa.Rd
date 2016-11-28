@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{witwit.coa}
 \alias{witwit.coa}
 \alias{summary.witwit}
@@ -37,13 +36,13 @@ returns a list of class \code{witwit}, \code{coa} and \code{dudi} (see \link{as.
   \item{cbw}{a data frame with the marginal weighting of the column classes}
 }
 \references{
-Cazes, P., Chessel, D. and Dolédec, S. (1988) L'analyse des correspondances internes d'un tableau partitionné :
-son usage en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{36}, 39--54. 
+Cazes, P., Chessel, D. and DolÃ©dec, S. (1988) L'analyse des correspondances internes d'un tableau partitionnÃ© :
+son usage en hydrobiologie. \emph{Revue de Statistique AppliquÃ©e}, \bold{36}, 39--54. 
 }
 \author{
 Daniel Chessel
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
-Correction by Campo Elías PARDO \email{cepardot@cable.net.co}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Correction by Campo ElÃ­as PARDO \email{cepardot@cable.net.co}
 }
 \examples{
 data(ardeche)

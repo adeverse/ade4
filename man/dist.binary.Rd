@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dist.binary}
 \alias{dist.binary}
 \title{Computation of Distance Matrices for Binary Data}
@@ -38,7 +37,7 @@ returns a distance matrix of class \code{dist} between the rows of the data fram
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(aviurba)

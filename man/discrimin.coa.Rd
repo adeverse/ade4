@@ -26,7 +26,7 @@ Perriere, G. and Thioulouse, J. (2003) Use of Correspondence Discriminant Analys
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(perthi02)

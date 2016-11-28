@@ -57,7 +57,7 @@ Returns a list of class \code{dpcoa} containing:
 }
 \author{Daniel Chessel  \cr
 Sandrine Pavoine \email{pavoine@mnhn.fr} \cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(humDNAm)

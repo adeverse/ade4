@@ -73,7 +73,7 @@ traits-environment relationships in the fourth corner problem.
 \emph{Ecology}, \bold{93}, 1525--1526.
 
 }
-\author{ Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+\author{Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 
 \section{WARNING }{
 IMPORTANT : row weights for \code{dudiR} and \code{dudiQ} must be taken from \code{dudiL}.

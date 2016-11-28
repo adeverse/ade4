@@ -23,7 +23,7 @@ Each element of the initial list have to possess the same names and row numbers
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \value{
 returns a list of class \code{ktab}. See \code{\link{ktab}}

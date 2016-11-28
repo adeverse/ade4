@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{rhone}
 \alias{rhone}
 \docType{data}
@@ -18,7 +17,7 @@ with the number of sample date and the flows of three tributaries.
 }
 \source{
 Carrel, G., Barthelemy, D., Auda, Y. and Chessel, D. (1986)
-Approche graphique de l'analyse en composantes principales normée : utilisation en hydrobiologie.
+Approche graphique de l'analyse en composantes principales normÃ©e : utilisation en hydrobiologie.
 \emph{Acta Oecologica, Oecologia Generalis}, \bold{7}, 189--203.
 }
 \examples{

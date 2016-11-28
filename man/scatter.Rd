@@ -34,7 +34,7 @@ rep("grey", npcs - x$nf)), \dots)
 \code{\link{s.match}}, \code{\link{s.traject}}, \code{\link{s.value}}, \code{\link{add.scatter}}
 }
 \author{Daniel Chessel \cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 \examples{
 data(rpjdl)
 rpjdl.coa <- dudi.coa(rpjdl$fau, scannf = FALSE, nf = 4)

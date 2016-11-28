@@ -1,5 +1,4 @@
 \name{originality}
-\encoding{latin1}
 \alias{originality}
 \title{Originality of a species
 }

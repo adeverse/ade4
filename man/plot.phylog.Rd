@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{plot.phylog}
 \alias{plot.phylog}
 \alias{radial.phylog}
@@ -46,7 +45,7 @@ The vector y is a permutation of the set of leaves \{1,2,\dots,f\} compatible wi
 The function \code{enum.phylog} returns a matrix with as many columns as leaves. Each row gives a permutation of the set of leaves \{1,2,\dots,f\} compatible with the phylogeny's topology. 
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
+SÃ©bastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{phylog}}}
 \examples{

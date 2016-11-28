@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{clementines}
 \alias{clementines}
 \docType{data}
@@ -11,9 +10,9 @@ The \code{clementines} is a data set containing the fruit production of 20 cleme
 A data frame with 15 rows and 20 columns
 }
 \source{
-Tisné-Agostini, D. (1988) \emph{Description par analyse en composantes principales de l'évolution de 
-la production du clémentinier en association avec 12 types de porte-greffe}.
-Rapport technique, DEA Analyse et modélisation des systèmes biologiques, Université Lyon 1. 
+TisnÃ©-Agostini, D. (1988) \emph{Description par analyse en composantes principales de l'Ã©volution de 
+la production du clÃ©mentinier en association avec 12 types de porte-greffe}.
+Rapport technique, DEA Analyse et modÃ©lisation des systÃ¨mes biologiques, UniversitÃ© Lyon 1. 
 }
 \examples{
 data(clementines)

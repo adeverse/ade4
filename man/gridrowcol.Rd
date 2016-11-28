@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{gridrowcol}
 \alias{gridrowcol}
 \title{Complete regular grid analysis}
@@ -21,12 +20,12 @@ Returns a list containing the following items :
     \item{orthobasis}{: an object of class \code{'orthobasis'} corresponding to the analytical solution for the neighbouring graph}
 }
 \references{
-M?ot, A., Chessel, D. and Sabatier, D. (1993) Op?rateurs de voisinage et analyse des donn?es spatio-temporelles.
-\emph{in} J.D. Lebreton and B. Asselain, editors. Biom?trie et environnement. Masson, 45-72.
+Méot, A., Chessel, D. and Sabatier, D. (1993) Opérateurs de voisinage et analyse des données spatio-temporelles.
+\emph{in} J.D. Lebreton and B. Asselain, editors. Biométrie et environnement. Masson, 45-72.
 
-Cornillon, P.A. (1998) \emph{Prise en compte de proximit?s en analyse factorielle et comparative}. Th?se, Ecole Nationale Sup?rieure Agronomique, Montpellier.
+Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}. Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
-\author{S?bastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
+\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \seealso{\code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link{mld}}}

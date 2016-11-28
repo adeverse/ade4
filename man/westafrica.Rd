@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{westafrica}
 \alias{westafrica}
 \docType{data}
@@ -22,16 +21,16 @@ This data set contains informations about faunal similarities between river basi
 \source{
 Data provided by B. Hugueny \email{hugueny@mnhn.fr}.
 
-Paugy, D., Traor?, K. and Diouf, P.F. (1994) Faune ichtyologique des eaux douces d'Afrique de l'Ouest. 
-In \emph{Diversit? biologique des poissons des eaux douces et saum?tres d'Afrique. Synth?ses g?ographiques}, 
-Teugels, G.G., Gu?gan, J.F. and Albaret, J.J. (Editors). Annales du Mus?e Royal de l'Afrique Centrale,  
+Paugy, D., Traoré, K. and Diouf, P.F. (1994) Faune ichtyologique des eaux douces d'Afrique de l'Ouest. 
+In \emph{Diversité biologique des poissons des eaux douces et saumâtres d'Afrique. Synthèses géographiques}, 
+Teugels, G.G., Guégan, J.F. and Albaret, J.J. (Editors). Annales du Musée Royal de l'Afrique Centrale,  
 Zoologie, \bold{275}, Tervuren, Belgique, 35--66.
 
-Hugueny, B. (1989) \emph{Biog?ographie et structure des peuplements de Poissons d'eau douce de l'Afrique de l'ouest : 
-approches quantitatives}. Th?se de doctorat, Universit? Paris 7.
+Hugueny, B. (1989) \emph{Biogéographie et structure des peuplements de Poissons d'eau douce de l'Afrique de l'ouest : 
+approches quantitatives}. Thèse de doctorat, Université Paris 7.
 }
 \references{
-Hugueny, B., and L?v?que, C. (1994) Freshwater fish zoogeography in west Africa: 
+Hugueny, B., and Lévêque, C. (1994) Freshwater fish zoogeography in west Africa: 
 faunal similarities between river basins. \emph{Environmental Biology of Fishes}, \bold{39}, 365--380.
 }
 \examples{

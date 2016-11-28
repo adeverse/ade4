@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{ardeche}
 \alias{ardeche}
 \docType{data}
@@ -24,8 +23,8 @@ The columns of the data frame \code{ardeche$tab} define the samples by a number 
 and a letter between A and F (the site).
 }
 \source{
- Cazes, P., Chessel, D., and Dolédec, S. (1988) L'analyse des correspondances internes d'un tableau partitionné :
- son usage en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{36}, 39--54.
+ Cazes, P., Chessel, D., and DolÃ©dec, S. (1988) L'analyse des correspondances internes d'un tableau partitionnÃ© :
+ son usage en hydrobiologie. \emph{Revue de Statistique AppliquÃ©e}, \bold{36}, 39--54.
 }
 \examples{
 data(ardeche)

@@ -1,5 +1,4 @@
 \name{mdpcoa}
-\encoding{latin1}
 \alias{mdpcoa}
 \alias{kplotX.mdpcoa}
 \alias{prep.mdpcoa}

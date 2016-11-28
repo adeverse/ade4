@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{pcaiv}
 \alias{pcaiv}
 \alias{plot.pcaiv}
@@ -57,8 +56,8 @@ Kluwer Academic Publishers, 85--114.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(rhone)

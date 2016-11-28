@@ -41,7 +41,7 @@ Objects of class \code{betdpcoa}, \code{witdpcoa} or \code{betwit}
 Dray, S., Pavoine, S. and Aguirre de Carcer, D. (2015) Considering external information to improve the phylogenetic comparison of microbial communities: a new approach based on constrained Double Principal Coordinates Analysis (cDPCoA). \emph{Molecular Ecology Resources}, in press.
 }
 \author{
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 
 \seealso{

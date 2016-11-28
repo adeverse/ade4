@@ -1,8 +1,7 @@
-\encoding{latin1}
 \name{is.euclid}
 \alias{is.euclid}
 \alias{summary.dist}
-\title{Is a Distance Matrix Euclidean ?}
+\title{Is a Distance Matrix Euclidean?}
 \description{
 Confirmation of the Euclidean nature of a distance matrix by the Gower's theorem.\cr
 \code{is.euclid} is used in \code{summary.dist}.\cr
@@ -13,8 +12,8 @@ is.euclid(distmat, plot = FALSE, print = FALSE, tol = 1e-07)
 }
 \arguments{
   \item{distmat}{an object of class 'dist'}
-  \item{plot}{a logical value indicating whether the eigenvalues bar plot of the matrix of the term \eqn{-\frac{1}{2} {d_{ij}^2}}{-1/2 dij²} centred by rows and columns should be diplayed}
-  \item{print}{a logical value indicating whether the eigenvalues of the matrix of the term \eqn{-\frac{1}{2} {d_{ij}^2}}{-1/2 dij²} centred by rows and columns should be printed}
+  \item{plot}{a logical value indicating whether the eigenvalues bar plot of the matrix of the term \eqn{-\frac{1}{2} {d_{ij}^2}}{-1/2 dijÂ²} centred by rows and columns should be diplayed}
+  \item{print}{a logical value indicating whether the eigenvalues of the matrix of the term \eqn{-\frac{1}{2} {d_{ij}^2}}{-1/2 dijÂ²} centred by rows and columns should be printed}
   \item{tol}{a tolerance threshold : an eigenvalue is considered positive if it is larger than \code{-tol*lambda1} where \code{lambda1} is the largest eigenvalue.}
   \item{object}{an object of class 'dist'}
   \item{\dots}{further arguments passed to or from other methods}
@@ -26,7 +25,7 @@ returns a logical value indicating if all the eigenvalues are positive or equal 
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 w <- matrix(runif(10000), 100, 100)

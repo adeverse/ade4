@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{divcmax}
 \alias{divcmax}
 \title{Maximal value of Rao's diversity coefficient also called 
@@ -54,7 +53,7 @@ are any dissimilarities suitable? \emph{Theoretical Population Biology},
 
 }
 \author{
-Stephane Champely \email{Stephane.Champely@univ-lyon1.fr} \cr
+Stéphane Champely \email{Stephane.Champely@univ-lyon1.fr} \cr
 Sandrine Pavoine \email{pavoine@mnhn.fr}
 }
 \examples{

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dist.prop}
 \alias{dist.prop}
 \title{Computation of Distance Matrices of Percentage Data
@@ -37,7 +36,7 @@ Nei, M. (1972) Genetic distances between populations. \emph{The American Natural
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(microsatt)

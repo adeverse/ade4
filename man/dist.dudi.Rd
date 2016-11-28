@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dist.dudi}
 \alias{dist.dudi}
 \title{Computation of the Distance Matrix from a Statistical Triplet
@@ -18,7 +17,7 @@ an object of class \code{dist}
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data (meaudret)

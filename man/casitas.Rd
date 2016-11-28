@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{casitas}
 \docType{data}
 \alias{casitas}
@@ -19,13 +18,13 @@ The 74 individuals of  \code{casitas} belong to 4 groups:
 } 
 \source{
 Exemple du logiciel GENETIX.
-Belkhir k. et al. GENETIX, logiciel sous WindowsTM pour la génétique des populations. 
-Laboratoire Génome, Populations, Interactions CNRS UMR 5000, Université de Montpellier II, Montpellier (France). \cr
+Belkhir k. et al. GENETIX, logiciel sous WindowsTM pour la gÃ©nÃ©tique des populations. 
+Laboratoire GÃ©nome, Populations, Interactions CNRS UMR 5000, UniversitÃ© de Montpellier II, Montpellier (France). \cr
 \url{http://www.univ-montp2.fr/~genetix/genetix/genetix.htm}
 }
 \references{
-Orth, A., T. Adama, W. Din and F. Bonhomme. (1998) Hybridation naturelle entre deux sous espèces de souris domestique 
-\emph{Mus musculus domesticus} et \emph{Mus musculus castaneus} près de Lake Casitas (Californie). \emph{Genome}, \bold{41}, 104--110.
+Orth, A., T. Adama, W. Din and F. Bonhomme. (1998) Hybridation naturelle entre deux sous espÃ¨ces de souris domestique 
+\emph{Mus musculus domesticus} et \emph{Mus musculus castaneus} prÃ¨s de Lake Casitas (Californie). \emph{Genome}, \bold{41}, 104--110.
 }
 \examples{
 data(casitas)

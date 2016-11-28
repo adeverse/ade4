@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{cca}
 \alias{cca}
 \alias{summary.cca}
@@ -27,13 +26,13 @@ Ter Braak, C. J. F. (1986) Canonical correspondence analysis : a new eigenvector
 
 Ter Braak, C. J. F. (1987) The analysis of vegetation-environment relationships by canonical correspondence analysis. \emph{Vegetatio}, \bold{69}, 69--77.\cr
 
-Chessel, D., Lebreton J. D. and Yoccoz N. (1987) Propriétés de l'analyse canonique des correspondances. Une utilisation en hydrobiologie. \emph{Revue de Statistique Appliquée}, \bold{35}, 55--72.\cr
+Chessel, D., Lebreton J. D. and Yoccoz N. (1987) PropriÃ©tÃ©s de l'analyse canonique des correspondances. Une utilisation en hydrobiologie. \emph{Revue de Statistique AppliquÃ©e}, \bold{35}, 55--72.\cr
 }
 \seealso{\code{\link{cca}} in the package \code{vegan}}
 
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(rpjdl)

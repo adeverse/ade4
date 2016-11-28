@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{carni70}
 \alias{carni70}
 \docType{data}
@@ -15,7 +14,7 @@ This data set describes the phylogeny of 70 carnivora as reported by Diniz-Filho
    \item{tab}{is a data frame with 70 species and two traits: size (body size (kg)) ; range (geographic range size (km)).}    
 }}
 \source{
-Diniz-Filho, J. A. F., and N. M. Tôrres. (2002) Phylogenetic comparative methods and the 
+Diniz-Filho, J. A. F., and N. M. TÃ´rres. (2002) Phylogenetic comparative methods and the 
 geographic range size-body size relationship in new world terrestrial carnivora. \emph{Evolutionary Ecology}, \bold{16}, 351--367.
 }
 \examples{

@@ -40,7 +40,7 @@ responses to livestock grazing from spatio-temporal variation: the
 partial RLQ approach. \emph{Journal of Vegetation Science}, \bold{23}, 98--113.
 }
 \author{
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 
 \seealso{

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{mjrochet}
 \alias{mjrochet}
 \docType{data}
@@ -35,7 +34,7 @@ Data taken from: \cr
 \references{
 Rochet, M. J., Cornillon, P-A., Sabatier, R. and Pontier, D. (2000) 
 Comparative analysis of phylogenic and fishing effects in life history patterns of teleos fishes.
-\emph{O?kos}, \bold{91}, 255--270.
+\emph{Oïkos}, \bold{91}, 255--270.
 }
 \examples{
 data(mjrochet)

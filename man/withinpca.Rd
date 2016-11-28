@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{withinpca}
 \alias{withinpca}
 \title{Normed within principal component analysis}
@@ -32,12 +31,12 @@ have a null mean in each sub-table and a global variance equal to one.
 \value{
 returns a list of the sub-class \code{within} of class \code{dudi}. See \code{\link{within}}
 }
-\references{Bouroche, J. M. (1975) \emph{Analyse des données ternaires: la double analyse en composantes principales}. 
- Thèse de 3ème cycle, Université de Paris VI.
+\references{Bouroche, J. M. (1975) \emph{Analyse des donnÃ©es ternaires: la double analyse en composantes principales}. 
+ ThÃ¨se de 3Ã¨me cycle, UniversitÃ© de Paris VI.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

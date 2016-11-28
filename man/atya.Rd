@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{atya}
 \alias{atya}
 \docType{data}
@@ -15,7 +14,7 @@ This data set contains information about genetic variability of \emph{Atya innoc
    \item{neig}{: an object of class \code{neig}}   
 }}
 \source{
-Fievet, E., Eppe, F. and Dol?dec, S. (2001) Etude de la variabilit? morphom?trique et g?n?tique des populations de Cacadors (\emph{Atya innocous} et \emph{Atya scabra}) de l'?le de Basse-Terre. Direction R?gionale de L'Environnement Guadeloupe, Laboratoire des hydrosyst?mes fluviaux, Universit? Lyon 1.
+Fievet, E., Eppe, F. and Dolédec, S. (2001) Etude de la variabilité morphométrique et génétique des populations de Cacadors (\emph{Atya innocous} et \emph{Atya scabra}) de l'île de Basse-Terre. Direction Régionale de L'Environnement Guadeloupe, Laboratoire des hydrosystèmes fluviaux, Université Lyon 1.
 }
 \examples{
 \dontrun{

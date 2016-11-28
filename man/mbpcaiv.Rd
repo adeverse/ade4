@@ -49,7 +49,7 @@ mbpcaiv(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), scannf = TRUE
 \item{vipc}{cumulated variable importances for a given number of dimensions}
 }
 \references{Bougeard, S., Qannari, E.M. and Rose, N. (2011) Multiblock Redundancy Analysis: interpretation tools and application in epidemiology. \emph{Journal of Chemometrics}, 23, 1-9}
-\author{Stephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stéphanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{mbpls}}, \code{\link{testdim.multiblock}}, \code{\link{randboot.multiblock}}}
 \examples{

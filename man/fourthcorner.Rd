@@ -138,7 +138,7 @@ Combining the fourth-corner and the RLQ methods for assessing trait
 responses to environmental variation. \emph{Ecology}, in press.
  }
  
- \author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+\author{Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 \seealso{ \code{\link{rlq}}, \code{\link{combine.4thcorner}}, \code{\link[stats]{p.adjust.methods}}}
 \examples{
 data(aviurba)

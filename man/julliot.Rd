@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{julliot}
 \alias{julliot}
 \docType{data}
@@ -20,7 +19,7 @@ Species names of \code{julliot$tab} are \emph{Pouteria torta}, \emph{Minquartia 
 \references{
 Julliot, C. (1992) Utilisation des ressources alimentaires par le singe hurleur roux, 
 \emph{Alouatta seniculus} (Atelidae, Primates), en Guyane : 
-impact de la diss?mination des graines sur la r?g?n?ration foresti?re. Th?se de troisi?me cycle, Universit? de Tours.
+impact de la dissémination des graines sur la régénération forestière. Thèse de troisième cycle, Université de Tours.
 
 Julliot, C. (1997) Impact of seed dispersal by red howler monkeys \emph{Alouatta seniculus} 
 on the seedling population in the understorey of tropical rain forest. \emph{Journal of Ecology}, \bold{85}, 431--440.

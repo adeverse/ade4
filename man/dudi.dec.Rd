@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dudi.dec}
 \alias{dudi.dec}
 \title{Decentred Correspondence Analysis}
@@ -18,12 +17,12 @@ dudi.dec(df, eff, scannf = TRUE, nf = 2)
 Returns a list of class \code{dec} and \code{dudi} (see \code{\link{dudi}}) containing also 
   \item{R}{sum of all the values of the initial table}
 }
-\references{Dolédec, S., Chessel, D. and Olivier J. M. (1995) L'analyse des correspondances décentrée: 
-application aux peuplements ichtyologiques du haut-Rhône. 
-\emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{336}, 29--40.}
+\references{DolÃ©dec, S., Chessel, D. and Olivier J. M. (1995) L'analyse des correspondances dÃ©centrÃ©e: 
+application aux peuplements ichtyologiques du haut-RhÃ´ne. 
+\emph{Bulletin FranÃ§ais de la PÃªche et de la Pisciculture}, \bold{336}, 29--40.}
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(ichtyo)

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{chatcat}
 \alias{chatcat}
 \docType{data}
@@ -20,8 +19,8 @@ The value in \code{eff} is the number of cats in this group.
 }
 \source{
 Pontier, D. (1984)
-\emph{Contribution à la biologie et à la génétique des populations de chats domestiques (Felis catus).}
-Thèse de 3ème cycle. Université Lyon 1, p. 67.
+\emph{Contribution Ã  la biologie et Ã  la gÃ©nÃ©tique des populations de chats domestiques (Felis catus).}
+ThÃ¨se de 3Ã¨me cycle. UniversitÃ© Lyon 1, p. 67.
 }
 \examples{
 data(chatcat)

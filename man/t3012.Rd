@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{t3012}
 \alias{t3012}
 \docType{data}
@@ -17,7 +16,7 @@
 \source{
 Besse, P. (1979)
 \emph{Etude descriptive d'un processus; approximation, interpolation}.
- Th?se de troisi?me cycle, Universit? Paul Sabatier, Toulouse.
+ Thèse de troisième cycle, Université Paul Sabatier, Toulouse.
 }
 \examples{
 data(t3012)

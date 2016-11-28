@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{mantel.rtest}
 \alias{mantel.rtest}
 \title{Mantel test (correlation between two distance matrices (in R).)
@@ -21,7 +20,7 @@ an object of class \code{rtest} (randomization tests)
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
     data(yanomama)

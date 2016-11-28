@@ -64,8 +64,8 @@ NATO advanced Institute,  Serie G. Springer Verlag, Berlin,  139--156.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(deug)

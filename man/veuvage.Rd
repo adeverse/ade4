@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{veuvage}
 \alias{veuvage}
 \docType{data}

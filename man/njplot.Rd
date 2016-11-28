@@ -1,10 +1,9 @@
-\encoding{latin1}
 \name{njplot}
 \alias{njplot}
 \docType{data}
 \title{Phylogeny and trait of bacteria}
 \description{
-This data set describes the phylogeny of 36 bacteria as reported by Perrière and Gouy (1996). It also gives the GC rate corresponding to these 36 species.
+This data set describes the phylogeny of 36 bacteria as reported by PerriÃ¨re and Gouy (1996). It also gives the GC rate corresponding to these 36 species.
 }
 \usage{data(njplot)}
 \format{
@@ -19,7 +18,7 @@ This data set describes the phylogeny of 36 bacteria as reported by Perrière and
 Data were obtained by Manolo Gouy \email{manolo.gouy@univ-lyon1.fr}
 }
 \references{
-Perrière, G. and Gouy, M. (1996) WWW-Query : an on-line retrieval system for biological sequence banks. \emph{Biochimie}, \bold{78}, 364--369.
+PerriÃ¨re, G. and Gouy, M. (1996) WWW-Query : an on-line retrieval system for biological sequence banks. \emph{Biochimie}, \bold{78}, 364--369.
 }
 \examples{
 data(njplot)

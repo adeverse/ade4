@@ -25,7 +25,7 @@ If \code{supcol.dudi} is used, the column vectors of \code{Xsup} are projected w
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(rpjdl)

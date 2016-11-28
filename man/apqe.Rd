@@ -1,5 +1,4 @@
 \name{apqe}
-\encoding{latin1}
 \alias{apqe}
 \alias{print.apqe}
 \title{Apportionment of Quadratic Entropy}
@@ -31,7 +30,7 @@ Returns a list of class \code{apqe}
   Rao, C.R. (1982) Diversity: its measurement, decomposition, apportionment and analysis. 
   \emph{Sankhya: The Indian Journal of Statistics}, \bold{A44}, 1--22.
 
-  Pavoine S. and Dolédec S. (2005) The apportionment of quadratic entropy: 
+  Pavoine S. and DolÃ©dec S. (2005) The apportionment of quadratic entropy: 
   a useful alternative for partitioning diversity in ecological data. 
   \emph{Environmental and Ecological Statistics}, \bold{12}, 125--138.
 }

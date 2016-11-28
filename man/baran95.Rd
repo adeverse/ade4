@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{baran95}
 \alias{baran95}
 \docType{data}
@@ -18,8 +17,8 @@ This data set is a list containing relations between sites and fish species link
     }
 }
 \source{
-Baran, E. (1995) \emph{Dynamique spatio-temporelle des peuplements de Poissons estuariens en Guinée (Afrique de l'Ouest)}.
-Thèse de Doctorat, Université de Bretagne Occidentale. 
+Baran, E. (1995) \emph{Dynamique spatio-temporelle des peuplements de Poissons estuariens en GuinÃ©e (Afrique de l'Ouest)}.
+ThÃ¨se de Doctorat, UniversitÃ© de Bretagne Occidentale. 
 Data collected by net fishing sampling in the Fatala river estuary.
 }
 \references{

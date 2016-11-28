@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{worksurv}
 \alias{worksurv}
 \docType{data}
@@ -45,7 +44,7 @@ providing from a French Worker Survey.
       \item \code{Pompidou}
       \item \code{NRAbs} No response, abstention}
     
-    \item pol: political sympathy. Which political party do you feel closest to, as a rule ?
+    \item pol: political sympathy. Which political party do you feel closest to, as a rule?
       \itemize{
 	\item \code{Communist} (PCF)
       \item \code{Socialist} (SFIO+PSU+FGDS)
@@ -63,7 +62,7 @@ The data frame \code{worksurv} has the attribute 'counts' giving the number of r
 }
 \source{
 Rouanet, H. and Le Roux, B. (1993) 
-\emph{Analyse des donn?es multidimensionnelles}. Dunod, Paris.
+\emph{Analyse des données multidimensionnelles}. Dunod, Paris.
 }
 \references{
 Le Roux, B. and Rouanet, H.  (1997) 

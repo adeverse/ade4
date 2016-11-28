@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dist.neig}
 \alias{dist.neig}
 \title{Computation of the Distance Matrix associated to a Neighbouring Graph
@@ -18,7 +17,7 @@ returns a distance matrix, object of class \code{dist}
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
     data(elec88)

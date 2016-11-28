@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{as.taxo}
 \alias{as.taxo}
 \alias{dist.taxo}
@@ -23,7 +22,7 @@ dist.taxo(taxo)
 \code{dist.taxo} returns a numeric of class \code{dist}.
 }
 \author{Daniel Chessel  \cr
-Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
+SÃ©bastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{taxo2phylog}} to transform an object of class \code{taxo} into an object of class \code{phylog}
 }

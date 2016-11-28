@@ -30,7 +30,7 @@ The attributs of a 'kdist' object are:\cr
 }
 \references{ Gower, J. C. (1966) Some distance properties of latent root and vector methods used in multivariate analysis. \emph{Biometrika}, \bold{53}, 325--338. }
 \author{ Daniel Chessel  \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}}
 \examples{
 # starting from a list of matrices 
 data(yanomama)

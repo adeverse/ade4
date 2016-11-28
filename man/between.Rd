@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{bca}
 \alias{between}
 \alias{bca}
@@ -42,7 +41,7 @@ Returns a list of class \code{\link{dudi}}, subclass 'between' containing
   \item{as}{a data frame containing the projection of inertia axes onto between axes}
 }
 \references{
-Dol�dec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique
+Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique
 I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
 
@@ -55,7 +54,7 @@ is replaced by the method \code{bca.dudi} of the new generic \code{bca} function
 
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

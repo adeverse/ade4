@@ -41,7 +41,7 @@ max for all factors (else the max is different for each factor).
 \value{
 The matched call.
 }
-\author{Jean Thioulouse, Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+\author{Jean Thioulouse, Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 \examples{
 data(meau)
 envpca <- dudi.pca(meau$env, scannf=FALSE)

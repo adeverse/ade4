@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{between}
 \alias{summary.between}
 \alias{print.between}
@@ -22,13 +21,13 @@ Outputs and graphical representations of the results of a between-class analysis
 }
 
 \references{
-Dol�dec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique
+Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique
 I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \seealso{\code{\link{bca.dudi}}, \code{\link{bca.coinertia}}}
 \examples{

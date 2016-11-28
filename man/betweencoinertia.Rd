@@ -38,7 +38,7 @@ is replaced by the method \code{bca.coinertia} of the new generic \code{bca} fun
 }
 
 \author{
-Stephane Dray \email{stephane.dray@univ-lyon1.fr} and Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr} and Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}
 }
 
 \seealso{\code{\link{coinertia}}, \code{\link{between}}}

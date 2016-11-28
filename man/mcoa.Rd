@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{mcoa}
 \alias{mcoa}
 \alias{print.mcoa}
@@ -53,11 +52,11 @@ mcoa returns a list of  class 'mcoa' containing :
   \item{cov2}{a numeric vector with the all pseudo eigenvalues (synthetic analysis)}
 }
 \references{
-Chessel, D. and Hanafi, M. (1996) Analyses de la co-inertie de K nuages de points, \emph{Revue de Statistique Appliqu�e}, \bold{44}, 35--60.
+Chessel, D. and Hanafi, M. (1996) Analyses de la co-inertie de K nuages de points, \emph{Revue de Statistique Appliquée}, \bold{44}, 35--60.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(friday87)

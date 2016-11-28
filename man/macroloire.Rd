@@ -1,5 +1,4 @@
 \name{macroloire}
-\encoding{latin1}
 \alias{macroloire}
 \docType{data}
 \title{Assemblages of Macroinvertebrates in the Loire River (France)}

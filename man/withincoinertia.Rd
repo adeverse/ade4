@@ -41,7 +41,7 @@ is replaced by the method \code{wca.coinertia} of the generic \code{wca} functio
 }
 
 \author{
-Stephane Dray \email{stephane.dray@univ-lyon1.fr} and Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr} and Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}
 }
 \seealso{\code{\link{coinertia}}, \code{\link{within}}
 }

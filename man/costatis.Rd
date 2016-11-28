@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{costatis}
 \alias{costatis}
 \title{STATIS and Co-Inertia : Analysis of a series of paired ecological tables}

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{costatis.randtest}
 \alias{costatis.randtest}
 \title{Monte-Carlo test on a Costatis analysis (in C).}

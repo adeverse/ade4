@@ -44,7 +44,7 @@ the matrix of weighted co-variances. For \code{scalewt}, the scaled
 dataframe. For other function a list (if \code{fac} is not null) of dataframes with approriate values
 }
 
-\author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+\author{Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 \examples{
 data(meau)
 w <- rowSums(meau$spe)

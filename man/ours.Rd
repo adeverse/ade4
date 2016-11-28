@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{ours}
 \alias{ours}
 \docType{data}
@@ -70,16 +69,16 @@
     \itemize{
       \item \code{AHP} Alpes-de-Haute-Provence 
       \item \code{AM} Alpes-Maritimes 
-      \item \code{D} Drôme 
+      \item \code{D} DrÃ´me 
       \item \code{HP} Hautes-Alpes 
       \item \code{HS} Haute-Savoie 
-      \item \code{I} Isère 
+      \item \code{I} IsÃ¨re 
       \item \code{S} Savoie}
   }
 }
 \source{
- Erome, G. (1989) \emph{L'ours brun dans les Alpes françaises. Historique de sa disparition}.
- Centre Ornithologique Rhône-Alpes, Villeurbanne. 120 p.
+ Erome, G. (1989) \emph{L'ours brun dans les Alpes franÃ§aises. Historique de sa disparition}.
+ Centre Ornithologique RhÃ´ne-Alpes, Villeurbanne. 120 p.
 }
 \examples{
 data(ours)

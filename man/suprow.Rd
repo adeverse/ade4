@@ -34,7 +34,7 @@ Gower, J. C. (1967) Multivariate analysis and multivariate geometry. \emph{The s
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(euro123)

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{monde84}
 \alias{monde84}
 \docType{data}
@@ -20,7 +19,7 @@ for 48 countries in the world.
 }
 \source{
 Geze, F. and Coll., eds. (1984)
-\emph{L'état du Monde 1984 : annuaire économique et géopolitique mondial}. La Découverte, Paris.
+\emph{L'Ã©tat du Monde 1984 : annuaire Ã©conomique et gÃ©opolitique mondial}. La DÃ©couverte, Paris.
 }
 \examples{
 data(monde84)

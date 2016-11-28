@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{granulo}
 \alias{granulo}
 \docType{data}
@@ -15,9 +14,9 @@ This data set gives the repartition in diameter classes of deposit samples.
     }
 }
 \source{
-Gaschignard-Fossati, O. (1986) \emph{Répartition spatiale des macroinvertébrés benthiques d'un bras vif du Rhône.
-Rôle des crues et dynamique saisonnière.}
-Thèse de doctorat, Université Lyon 1.
+Gaschignard-Fossati, O. (1986) \emph{RÃ©partition spatiale des macroinvertÃ©brÃ©s benthiques d'un bras vif du RhÃ´ne.
+RÃ´le des crues et dynamique saisonniÃ¨re.}
+ThÃ¨se de doctorat, UniversitÃ© Lyon 1.
 }
 \examples{
 data(granulo)

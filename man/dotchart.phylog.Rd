@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dotchart.phylog}
 \alias{dotchart.phylog}
 \title{Representation of many quantitative variables in front of a phylogenetic tree}
@@ -33,7 +32,7 @@ TRUE, yranging = NULL, joining = TRUE, yjoining = NULL, ceti = 1, cdot =
 }
 \author{
 Daniel Chessel  \cr
-Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
+SÃ©bastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{symbols.phylog}} and \code{\link{table.phylog}}}
 \examples{

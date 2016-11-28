@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{orthobasis}
 \alias{orthobasis}
 \alias{orthobasis.neig}
@@ -54,9 +53,9 @@ This data frame defines an orthonormal basis with various attributes: \cr
 }
 \references{
 Misiti, M., Misiti, Y., Oppenheim, G. and Poggi, J.M. (1993) Analyse de signaux classiques par décomposition en ondelettes. 
-\emph{Revue de Statistique Appliqu?e}, \bold{41}, 5--32.
+\emph{Revue de Statistique Appliquée}, \bold{41}, 5--32.
 
-Cornillon, P.A. (1998) \emph{Prise en compte de proximit?s en analyse factorielle et comparative}.
+Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factorielle et comparative}.
 Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 }
 \author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr

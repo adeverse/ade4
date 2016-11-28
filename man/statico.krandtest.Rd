@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{statico.krandtest}
 \alias{statico.krandtest}
 \title{Monte-Carlo test on a Statico analysis (in C).}

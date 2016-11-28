@@ -1,5 +1,4 @@
 \name{dist.ktab}
-\encoding{latin1}
 \alias{dist.ktab}
 \alias{prep.binary}
 \alias{prep.circular}

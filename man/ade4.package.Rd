@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{ade4-package}
 \alias{ade4-package}
 \alias{ade4}
@@ -13,7 +12,7 @@ ade4 is characterized by (1) the implementation of graphical and statistical fun
 To cite ade4, please use \code{citation("ade4")}.
  }
 
-\author{Daniel Chessel, Anne B Dufour, Stephane Dray with the contributions from J.R. Lobry, S. Ollier, S. Pavoine and J. Thioulouse}
+\author{Daniel Chessel, Anne-Béatrice Dufour, Stéphane Dray with the contributions from J.R. Lobry, S. Ollier, S. Pavoine and J. Thioulouse}
 \references{
   See ade4 website: \url{http://pbil.univ-lyon1.fr/ADE-4/}
 }

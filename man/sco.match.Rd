@@ -41,7 +41,7 @@ sco.match(score1, score2, label = names(score1), clabel = 1,
 \value{
 The matched call.
 }
-\author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+\author{Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 \examples{
 sco.match(-5:5,2*(-5:5))
 }

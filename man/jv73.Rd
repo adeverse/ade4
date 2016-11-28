@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{jv73}
 \alias{jv73}
 \docType{data}
@@ -19,9 +18,9 @@ This data set gives physical and physico-chemical variables, fish species, spati
     }
 }
 \source{
-Verneaux, J. (1973) Cours d'eau de Franche-Comt? (Massif du Jura).
-Recherches ?cologiques sur le r?seau hydrographique du Doubs.
-Essai de biotypologie. Th?se d'Etat, Besan?on.
+Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).
+Recherches écologiques sur le réseau hydrographique du Doubs.
+Essai de biotypologie. Thèse d'Etat, Besançon.
 }
 \references{
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps047.pdf} (in French).

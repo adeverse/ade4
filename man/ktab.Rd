@@ -66,8 +66,8 @@ A 'ktab' object can be created with :\cr
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(friday87)

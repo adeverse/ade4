@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{lascaux}
 \alias{lascaux}
 \docType{data}
@@ -24,8 +23,8 @@ for 306 trouts.
 }
 \source{
 Lascaux, J.M. (1996)
-\emph{Analyse de la variabilité morphologique de la truite commune (Salmo trutta L.) dans les cours d'eau du bassin pyrénéen méditerranéen}.
-Thèse de doctorat en sciences agronomiques, INP Toulouse.
+\emph{Analyse de la variabilitÃ© morphologique de la truite commune (Salmo trutta L.) dans les cours d'eau du bassin pyrÃ©nÃ©en mÃ©diterranÃ©en}.
+ThÃ¨se de doctorat en sciences agronomiques, INP Toulouse.
 }
 \references{
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps022.pdf} (in French).

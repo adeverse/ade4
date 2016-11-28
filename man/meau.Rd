@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{meau}
 \alias{meau}
 \docType{data}
@@ -26,9 +25,9 @@ one physico chemical variable - the oxygen concentration were added.
 }
 \source{
 Pegaz-Maucet, D. (1980)
-\emph{Impact d'une perturbation d'origine organique sur la dérive des macro-invertébrés benthiques d'un cours d'eau.
+\emph{Impact d'une perturbation d'origine organique sur la dÃ©rive des macro-invertÃ©brÃ©s benthiques d'un cours d'eau.
 Comparaison avec le benthos}.
-Thèse de troisième cycle, Université Lyon 1, 130 p.
+ThÃ¨se de 3Ã¨me cycle, UniversitÃ© Lyon 1, 130 p.
 
 Thioulouse, J., Simier, M. and Chessel, D. (2004) Simultaneous analysis of a sequence of paired ecological
 tables. \emph{Ecology}, \bold{85}, 1, 272--283.

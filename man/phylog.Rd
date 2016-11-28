@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{phylog}
 \alias{phylog}
 \alias{print.phylog}
@@ -50,7 +49,7 @@ Ollier, S., Couteron, P. and Chessel, D. (2005) Orthonormal transforms to detect
 phylogenetic autocorrelation. \emph{Biometrics} (in press).
 }
 \author{Daniel Chessel  \cr
-S?bastien Ollier \email{sebastien.ollier@u-psud.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{newick2phylog}}, \code{\link{plot.phylog}}}
 \examples{

@@ -17,7 +17,7 @@
   \item{\dots}{other arguments to be passed to methods}
 }
 
-\author{Stephanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stéphanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{
 \code{\link{mbpls}}, \code{\link{mbpcaiv}}

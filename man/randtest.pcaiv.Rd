@@ -25,8 +25,8 @@ Performs a Monte-Carlo test on on the percentage of explained (i.e.
 \value{
   a list of the class \code{randtest}
 }
-\author{Stephane Dray \email{stephane.dray@univ-lyon1.fr}, original code
-  by Raphael Pelissier}
+\author{Stéphane Dray \email{stephane.dray@univ-lyon1.fr}, original code
+  by Raphaël Pélissier}
 \examples{
 data(rpjdl)
 millog <- log(rpjdl$mil + 1)

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{aviurba}
 \alias{aviurba}
 \docType{data}
@@ -29,7 +28,7 @@ from a minimum cover (R5) up to a maximum (R100).\cr
 breeding stratum (ground, building, scrub, foliage) and migration strategy (resident, migrant).
 }
 \source{
-Dolédec, S., Chessel, D., Ter Braak,C. J. F.  and Champely S. (1996)
+DolÃ©dec, S., Chessel, D., Ter Braak,C. J. F. and Champely S. (1996)
 Matching species traits to environmental variables: a new three-table ordination method.
 \emph{Environmental and Ecological Statistics}, \bold{3}, 143--166.
 }

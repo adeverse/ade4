@@ -22,7 +22,7 @@ Jackson, D.A. (1995) PROTEST: a PROcustean randomization TEST of community envir
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(doubs)

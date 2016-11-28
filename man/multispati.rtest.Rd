@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{multispati.rtest}
 \alias{multispati.rtest}
 \title{Multivariate spatial autocorrelation test}
@@ -28,7 +27,7 @@ Smouse, P. E. and Peakall, R. (1999) Spatial autocorrelation analysis of individ
 \emph{Heredity}, \bold{82}, 561--573.
 }
 \author{Daniel Chessel  \cr
-S?bastien Ollier \email{sebastien.ollier@u-psud.fr}
+Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{

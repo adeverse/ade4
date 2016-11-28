@@ -197,7 +197,7 @@ void DiagobgComp (int n0, double **w, double *d, int *rang)
 /*--------------------------------------------------
  * Diagonalisation
  * T. FOUCART Analyse factorielle de tableaux multiples,
- * Masson, Paris 1984,185p., p. 62. D'apr?s VPROP et TRIDI,
+ * Masson, Paris 1984,185p., p. 62. D'après VPROP et TRIDI,
  * de LEBART et coll.
  --------------------------------------------------*/
 {

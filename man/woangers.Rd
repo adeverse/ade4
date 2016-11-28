@@ -1,10 +1,9 @@
 \name{woangers}
-\encoding{latin1}
 \alias{woangers}
 \docType{data}
 \title{Plant assemblages in woodlands of the conurbation of Angers (France)}
 \description{
-This data set gives the presence of plant species in relevés of woodlands in the conurbation of Angers; and their biological traits. 
+This data set gives the presence of plant species in relevÃ©s of woodlands in the conurbation of Angers; and their biological traits. 
 }
 \usage{data(woangers)}
 \format{

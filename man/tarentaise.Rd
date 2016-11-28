@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{tarentaise}
 \alias{tarentaise}
 \docType{data}
@@ -34,7 +33,7 @@ Oiseaux de Vanoise. Guide de l'ornithologue en montagne.
 \emph{Libris}, Grenoble. 1--240. 
 
 Lebreton, Ph., Lebrun, Ph., Martinot, J.P., Miquet, A. and Tournier, H. (1999) 
-Approche écologique de l'avifaune de la Vanoise. 
+Approche Ã©cologique de l'avifaune de la Vanoise. 
 \emph{Travaux scientifiques du Parc national de la Vanoise}, \bold{21}, 7--304.
 
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps038.pdf} (in French).

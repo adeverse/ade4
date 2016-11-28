@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{scatter.fca}
 \alias{scatter.fca}
 \title{Plot of the factorial maps for a fuzzy correspondence analysis}
@@ -22,7 +21,7 @@ performs the scatter diagrams of a fuzzy correspondence analysis.
 \author{Daniel Chessel 
 }
 \references{
-Chevenet, F., Dolédec, S. and Chessel, D. (1994) 
+Chevenet, F., DolÃ©dec, S. and Chessel, D. (1994) 
 A fuzzy coding approach for the analysis of long-term ecological data. \emph{Freshwater Biology}, \bold{31}, 295--309.
 }
 \examples{

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{chats}
 \alias{chats}
 \docType{data}
@@ -15,7 +14,7 @@ This data set is a contingency table of age classes and fecundity classes of cat
 }
 \source{
 Legay, J.M. and Pontier, D. (1985)
-Relation ?ge-f?condit? dans les populations de Chats domestiques, Felis catus.
+Relation âge-fécondité dans les populations de Chats domestiques, Felis catus.
 \emph{Mammalia}, \bold{49}, 395--402.
 }
 \examples{

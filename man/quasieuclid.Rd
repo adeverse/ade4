@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{quasieuclid}
 \alias{quasieuclid}
 \title{Transformation of a distance matrice to a Euclidean one}
@@ -20,7 +19,7 @@ object of class \code{dist} containing a Euclidean distance matrice
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(yanomama)

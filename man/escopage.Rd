@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{escopage}
 \alias{escopage}
 \docType{data}
@@ -17,11 +16,11 @@ rest, visual, olfactory and global.
     }
 }
 \source{
-Escofier, B. and Pagès, J. (1990) 
-\emph{Analyses factorielles simples et multiples : objectifs, méthodes et interprétation} 
+Escofier, B. and PagÃ¨s, J. (1990) 
+\emph{Analyses factorielles simples et multiples : objectifs, mÃ©thodes et interprÃ©tation} 
 Dunod, Paris. 1--267.
 
-Escofier, B. and Pagès, J. (1994) 
+Escofier, B. and PagÃ¨s, J. (1994) 
 Multiple factor analysis (AFMULT package). 
 \emph{Computational Statistics and Data Analysis}, \bold{18}, 121--140.
 }

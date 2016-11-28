@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{variance.phylog}
 \alias{variance.phylog}
 \title{The phylogenetic ANOVA}
@@ -32,7 +31,7 @@ Grafen, A. (1989) The phylogenetic regression. \emph{Philosophical Transactions 
 
 Diniz-Filho, J. A. F., Sant'Ana, C.E.R. and Bini, L.M. (1998) An eigenvector method for estimating phylogenetic inertia. \emph{Evolution}, \bold{52}, 1247--1262.
 }
-\author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
+\author{SÃ©bastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
 \seealso{\code{\link{phylog}}, \code{\link{lm}}}

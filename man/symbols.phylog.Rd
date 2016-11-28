@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{symbols.phylog}
 \alias{symbols.phylog}
 \title{Representation of a quantitative variable in front of a phylogenetic tree}
@@ -24,7 +23,7 @@ symbols.phylog(phylog, circles, squares, csize = 1, clegend = 1,
 }
 \author{
 Daniel Chessel  \cr
-Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
+SÃ©bastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{table.phylog}} and \code{\link{dotchart.phylog}} for many variables}
 \examples{

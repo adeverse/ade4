@@ -29,7 +29,7 @@
       \item \code{d812} [8 years, 12 years[ 
       \item \code{dp12} >= 12 years}
     
-    \item oppo: "Stopped a check ?" a factor with levels
+    \item oppo: "Stopped a check?" a factor with levels
     \itemize{
       \item \code{non} no 
       \item \code{oui} yes}
@@ -52,12 +52,12 @@
       \item \code{non} no 
       \item \code{oui} yes }
     
-    \item cableue: "Possess a bank card ?" a factor with levels 
+    \item cableue: "Possess a bank card?" a factor with levels 
     \itemize{
       \item \code{non} no 
       \item \code{oui} yes }
     
-    \item assurvi: "Contrat of life insurance ?" a factor with levels 
+    \item assurvi: "Contrat of life insurance?" a factor with levels 
     \itemize{
       \item \code{non} no\cr
       \item \code{oui} yes}
@@ -129,21 +129,21 @@
       \item \code{nul} none 
       \item \code{fai} <2500 
       \item \code{moy} 2500-5000 
-      \item \code{for} >5000  }
+      \item \code{for} >5000}
     
     \item virecre: "Credit transfer amount" a factor with levels 
     \itemize{
       \item \code{for} >10000 
       \item \code{moy} 10000-5000 
       \item \code{fai} <5000 
-      \item \code{nul} aucun  }
+      \item \code{nul} aucun}
     
     \item porttit: "Securities portfolio estimations" a factor with levels 
     \itemize{
       \item \code{nul} none 
       \item \code{fai} < 20000 
       \item \code{moy} 20000-100000 
-      \item \code{for} >100000  }
+      \item \code{for} >100000}
   }
 }
 \source{
@@ -151,7 +151,7 @@
 }
 \examples{
 data(banque)
-banque.acm <- dudi.acm(banque, scann = FALSE, nf = 3)
+banque.acm <- dudi.acm(banque, scannf = FALSE, nf = 3)
 apply(banque.acm$cr, 2, mean)
 banque.acm$eig[1:banque.acm$nf] # the same thing
 

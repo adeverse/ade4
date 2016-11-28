@@ -55,7 +55,7 @@ p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
   Improved testing of species traits-environment relationships in the
   fourth corner problem. \emph{Ecology}, \bold{93}, 1525--1526.
 }
-\author{ Stephane Dray \email{stephane.dray@univ-lyon1.fr}}
+\author{Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 
 \seealso{
 \code{\link{rlq}}, \code{\link{fourthcorner}}, \code{\link[stats]{p.adjust.methods}}

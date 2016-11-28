@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{within}
 \alias{print.within}
 \alias{summary.within}
@@ -24,13 +23,13 @@ Outputs and graphical representations of the results of a within-class analysis.
 }
 
 \references{
-Benz�cri, J. P. (1983) Analyse de l'inertie intra-classe par l'analyse d'un tableau de correspondances. \emph{Les Cahiers de l'Analyse des donn?es}, \bold{8}, 351--358.\cr\cr
-Dol�dec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
+Benzécri, J. P. (1983) Analyse de l'inertie intra-classe par l'analyse d'un tableau de correspondances. \emph{Les Cahiers de l'Analyse des données}, \bold{8}, 351--358.\cr\cr
+Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
-Stephane Dray \email{stephane.dray@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
+Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \seealso{\code{\link{wca.dudi}}, \code{\link{wca.coinertia}}}
 \examples{

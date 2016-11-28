@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{steppe}
 \alias{steppe}
 \docType{data}
@@ -15,9 +14,9 @@ This data set gives the presence-absence of 37 species on 515 sites.
     }
 }
 \source{
-Estève, J. (1978) Les méthodes d'ordination : éléments pour une discussion.
+EstÃ¨ve, J. (1978) Les mÃ©thodes d'ordination : Ã©lÃ©ments pour une discussion.
 in J. M. Legay and R. Tomassone, editors. 
-\emph{Biométrie et Ecologie}, Société Française de Biométrie, Paris, 223--250. 
+\emph{BiomÃ©trie et Ecologie}, SociÃ©tÃ© FranÃ§aise de BiomÃ©trie, Paris, 223--250. 
 }
 \examples{
 par(mfrow = c(3,1))

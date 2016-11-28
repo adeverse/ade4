@@ -23,7 +23,7 @@ Garland, T., Dickerman, A. W., Janis, C. M. and Jones, J. A. (1993) Phylogenetic
 \emph{Systematics Biology}, \bold{42}, 265--292. 
 
 Garland, T. J. and Janis, C.M. (1993) Does metatarsal-femur ratio predict maximal running speed in cursorial mammals? 
-\emph{Journal of  Zoology}, \bold{229}, 133--151.
+\emph{Journal of Zoology}, \bold{229}, 133--151.
 }
 \examples{
 \dontrun{

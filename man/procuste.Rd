@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{procuste}
 \alias{procuste}
 \alias{plot.procuste}
@@ -43,13 +42,13 @@ returns a list of the class \code{procuste} with 9 components
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \references{
 Digby, P. G. N. and Kempton, R. A. (1987) Multivariate Analysis of Ecological Communities. \emph{Population and Community Biology Series}, Chapman and Hall, London.\cr\cr
 Gower, J.C. (1971) Statistical methods of comparing different multivariate analyses of the same data. In \emph{Mathematics in the archaeological and historical sciences}, Hodson, F.R, Kendall, D.G. & Tautu, P. (Eds.) University Press, Edinburgh,  138--149.\cr\cr
-Schönemann, P.H. (1968) On two-sided Procustes problems. \emph{Psychometrika}, \bold{33}, 19--34.\cr\cr
-Torre, F. and Chessel, D. (1994) Co-structure de deux tableaux totalement appariés. \emph{Revue de Statistique Appliquée}, \bold{43}, 109--121.\cr\cr
+SchÃ¶nemann, P.H. (1968) On two-sided Procustes problems. \emph{Psychometrika}, \bold{33}, 19--34.\cr\cr
+Torre, F. and Chessel, D. (1994) Co-structure de deux tableaux totalement appariÃ©s. \emph{Revue de Statistique AppliquÃ©e}, \bold{43}, 109--121.\cr\cr
 Dray, S., Chessel, D. and Thioulouse, J.  (2003) Procustean co-inertia analysis for the linking of multivariate datasets. \emph{Ecoscience}, \bold{10}, 1, 110-119.
 }
 \examples{

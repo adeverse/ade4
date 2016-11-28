@@ -8,9 +8,9 @@ This data set is extracted from an opinion poll (period 1970-1980) on 1000 respo
 \usage{data(syndicats)}
 \format{
 The \code{syndicats} data frame has 5 rows and 4 columns.\cr
-"Which politic family are you agreeing about ?" has 5 response items : 
+"Which politic family are you agreeing about?" has 5 response items : 
 \code{extgauche} (extreme left) \code{left} \code{center} \code{right} and \code{extdroite} (extreme right)\cr
-"What do you think of the trade importance ?" has 4 response items :
+"What do you think of the trade importance?" has 4 response items :
 \code{trop} (too important) \code{adequate} \code{insufficient} \code{nesaispas} (no opinion)
 }
 \source{

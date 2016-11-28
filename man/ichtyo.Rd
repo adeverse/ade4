@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{ichtyo}
 \alias{ichtyo}
 \docType{data}
@@ -22,13 +21,13 @@ the year of the sampling occasion.
     to the number of sampling points of the \emph{ith} sampling occasion (in \code{eff}) that contains the \emph{jth} species.
 }
 \source{
-Dolédec, S., Chessel, D. and Olivier, J. M. (1995)
-L'analyse des correspondances décentrée: application aux peuplements ichtyologiques du haut-Rhône.
-\emph{Bulletin Français de la Pêche et de la Pisciculture}, \bold{336}, 29--40.
+DolÃ©dec, S., Chessel, D. and Olivier, J. M. (1995)
+L'analyse des correspondances dÃ©centrÃ©e: application aux peuplements ichtyologiques du haut-RhÃ´ne.
+\emph{Bulletin FranÃ§ais de la PÃªche et de la Pisciculture}, \bold{336}, 29--40.
 }
 \examples{
 data(ichtyo)
-dudi1 <- dudi.dec(ichtyo$tab, ichtyo$eff, scan = FALSE)
+dudi1 <- dudi.dec(ichtyo$tab, ichtyo$eff, scannf = FALSE)
 s.class(dudi1$li, ichtyo$dat, wt = ichtyo$eff / sum(ichtyo$eff))
 }
 \keyword{datasets}

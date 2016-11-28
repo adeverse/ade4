@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{cailliez}
 \alias{cailliez}
 \title{Transformation to make Euclidean a distance matrix}
@@ -30,7 +29,7 @@ From the DistPCoa program of P. Legendre et M.J. Anderson\cr
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(capitales)

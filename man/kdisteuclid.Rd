@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{kdisteuclid}
 \alias{kdisteuclid}
 \title{a way to obtain Euclidean distance matrices}
@@ -29,7 +28,7 @@ Legendre, P., and L. Legendre. (1998) Numerical ecology, 2nd English edition edi
 
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 
 \note{according to the program DistPCoa of P. Legendre and M.J. Anderson\cr

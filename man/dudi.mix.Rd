@@ -39,7 +39,7 @@ Kiers, H. A. L. 1994. Simple structure in component analysis techniques for mixt
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(dunedata)

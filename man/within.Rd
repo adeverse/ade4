@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{wca}
 \alias{within}
 \alias{wca}
@@ -46,8 +45,8 @@ Returns a list of the sub-class \code{within} in the class \code{dudi}
   \item{as}{data frame inertia axis onto within axis}
 }
 \references{
-Benzécri, J. P. (1983) Analyse de l'inertie intra-classe par l'analyse d'un tableau de correspondances. \emph{Les Cahiers de l'Analyse des données}, \bold{8}, 351--358.\cr\cr
-Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
+BenzÃ©cri, J. P. (1983) Analyse de l'inertie intra-classe par l'analyse d'un tableau de correspondances. \emph{Les Cahiers de l'Analyse des donnÃ©es}, \bold{8}, 351--358.\cr\cr
+DolÃ©dec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
 
 \note{
@@ -57,7 +56,7 @@ generic \code{wca} function instead.
 }
 \author{
 Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
 \examples{
 data(meaudret)

@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{corkdist}
 \alias{corkdist}
 \alias{mantelkdist}
@@ -35,7 +34,7 @@ The \code{corkdist} class has some generic functions \code{print}, \code{plot} a
 }
 \author{
 Daniel Chessel  \cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(friday87)

@@ -9,6 +9,6 @@ adegraphicsLoaded()
 
 \value{A logical}
 
-\author{Stephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \keyword{ internal }

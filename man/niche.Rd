@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{niche}
 \alias{niche}
 \alias{plot.niche}
@@ -43,12 +42,12 @@ Returns a list of the class \code{niche} (sub-class of \code{dudi}) containing :
  \item{as}{a data frame with the axis upon niche axis} 
 }
 \references{
-Dolédec, S., Chessel, D. and Gimaret, C. (2000) Niche separation in community analysis: a new method. \emph{Ecology}, \bold{81}, 2914--1927.
+DolÃ©dec, S., Chessel, D. and Gimaret, C. (2000) Niche separation in community analysis: a new method. \emph{Ecology}, \bold{81}, 2914--1927.
 }
 \author{
 Daniel Chessel\cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
-Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
+Anne-BÃ©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}\cr
+StÃ©phane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 data(doubs)

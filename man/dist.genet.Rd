@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{dist.genet}
 \alias{dist.genet}
 \title{ Genetic distances from gene frequencies }
@@ -76,15 +75,15 @@ Rogers, J.S. (1972) Measures of genetic similarity and genetic distances. \emph{
 Avise, J. C. (1994) Molecular markers, natural history and evolution. Chapman & Hall, London. 
 
 Distance 5:\cr
-Prevosti A. (1974) La distancia genÈtica entre poblaciones. \emph{Miscellanea AlcobÈ}, \bold{68}, 109--118. \cr
-Prevosti A., Oca\~na J. and Alonso G. (1975) Distances between populations of Drosophila subobscura, based on chromosome arrangements frequencies. \emph{Theoretical and Applied Genetics}, \bold{45}, 231--241. \cr
+Prevosti A. (1974) La distancia gen√©tica entre poblaciones. \emph{Miscellanea Alcob√©}, \bold{68}, 109--118. \cr
+Prevosti A., Oca√±a J. and Alonso G. (1975) Distances between populations of Drosophila subobscura, based on chromosome arrangements frequencies. \emph{Theoretical and Applied Genetics}, \bold{45}, 231--241. \cr
 
 To find some useful explanations:\cr
-Sanchez-Mazas A. (2003) Cours de GÈnÈtique MolÈculaire des Populations. Cours VIII Distances gÈnÈtiques - ReprÈsentation des populations. \cr
+Sanchez-Mazas A. (2003) Cours de G√©n√©tique Mol√©culaire des Populations. Cours VIII Distances g√©n√©tiques - Repr√©sentation des populations. \cr
 \url{http://anthro.unige.ch/GMDP/Alicia/GMDP_dist.htm}
 }
 \author{ Daniel Chessel \cr
-Anne B Dufour \email{anne-beatrice.dufour@univ-lyon1.fr} 
+Anne-B√©atrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr} 
 }
 \examples{
 data(casitas)

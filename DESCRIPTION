@@ -1,6 +1,6 @@
 Package: ade4
-Version: 1.7-4
-Date: 2016-03-01
+Version: 1.7-5
+Date: 2016-12-13
 Title: Analysis of Ecological Data : Exploratory and Euclidean Methods in Environmental Sciences
 Author: Stéphane Dray <stephane.dray@univ-lyon1.fr>, Anne-Béatrice Dufour <anne-beatrice.dufour@univ-lyon1.fr>, and Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>, with contributions from Thibaut Jombart, Sandrine Pavoine, Jean R. Lobry, Sébastien Ollier, and Aurélie Siberchicot. Based on earlier work by Daniel Chessel.
 Maintainer: Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>

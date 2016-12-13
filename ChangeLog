@@ -1,3 +1,142 @@
+2016-12-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-5 ----------
+
+2016-12-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* README.md: Add badge
+
+2016-11-28  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/PI2newick.Rd, man/ade4.package.Rd, man/adegraphicsLoaded.Rd,
+	man/aminoacyl.Rd, man/apqe.Rd, man/ardeche.Rd, man/as.taxo.Rd,
+	man/atlas.Rd, man/atya.Rd, man/avijons.Rd, man/aviurba.Rd,
+	man/banque.Rd, man/baran95.Rd, man/bca.rlq.Rd, man/between.Rd,
+	man/betweencoinertia.Rd, man/buech.Rd, man/bwca.dpcoa.Rd,
+	man/cailliez.Rd, man/carni70.Rd, man/carniherbi49.Rd,
+	man/casitas.Rd, man/cca.Rd, man/chatcat.Rd, man/chats.Rd,
+	man/clementines.Rd, man/coinertia.Rd, man/combine.4thcorner.Rd,
+	man/corkdist.Rd, man/costatis.Rd, man/costatis.randtest.Rd,
+	man/discrimin.Rd, man/discrimin.coa.Rd, man/dist.binary.Rd,
+	man/dist.dudi.Rd, man/dist.genet.Rd, man/dist.ktab.Rd,
+	man/dist.neig.Rd, man/dist.prop.Rd, man/dist.quant.Rd,
+	man/divcmax.Rd, man/dotchart.phylog.Rd, man/doubs.Rd, man/dpcoa.Rd,
+	man/dudi.Rd, man/dudi.acm.Rd, man/dudi.coa.Rd, man/dudi.dec.Rd,
+	man/dudi.fca.Rd, man/dudi.hillsmith.Rd, man/dudi.mix.Rd,
+	man/dudi.nsc.Rd, man/dudi.pca.Rd, man/dudi.pco.Rd, man/escopage.Rd,
+	man/euro123.Rd, man/foucart.Rd, man/fourthcorner.Rd, man/fruits.Rd,
+	man/gearymoran.Rd, man/granulo.Rd, man/gridrowcol.Rd,
+	man/ichtyo.Rd, man/inertia.dudi.Rd, man/is.euclid.Rd,
+	man/julliot.Rd, man/jv73.Rd, man/kdist.Rd, man/kdist2ktab.Rd,
+	man/kdisteuclid.Rd, man/krandtest.Rd, man/ktab.Rd,
+	man/ktab.data.frame.Rd, man/ktab.list.df.Rd, man/ktab.list.dudi.Rd,
+	man/ktab.match2ktabs.Rd, man/ktab.within.Rd, man/lascaux.Rd,
+	man/lingoes.Rd, man/macon.Rd, man/macroloire.Rd,
+	man/mantel.rtest.Rd, man/mariages.Rd, man/mbpcaiv.Rd, man/mbpls.Rd,
+	man/mcoa.Rd, man/mdpcoa.Rd, man/meau.Rd, man/meaudret.Rd,
+	man/mfa.Rd, man/microsatt.Rd, man/mjrochet.Rd, man/mld.Rd,
+	man/mollusc.Rd, man/monde84.Rd, man/morphosport.Rd,
+	man/multiblock.Rd, man/multispati.randtest.Rd,
+	man/multispati.rtest.Rd, man/newick.eg.Rd, man/newick2phylog.Rd,
+	man/niche.Rd, man/nipals.Rd, man/njplot.Rd, man/originality.Rd,
+	man/orthobasis.Rd, man/orthogram.Rd, man/ours.Rd, man/palm.Rd,
+	man/pcaiv.Rd, man/pcaivortho.Rd, man/phylog.Rd,
+	man/plot.between.Rd, man/plot.phylog.Rd, man/plot.within.Rd,
+	man/procuste.Rd, man/procuste.rtest.Rd, man/pta.Rd,
+	man/quasieuclid.Rd, man/randboot.multiblock.Rd,
+	man/randtest.coinertia.Rd, man/randtest.pcaiv.Rd, man/reconst.Rd,
+	man/rhone.Rd, man/rlq.Rd, man/rpjdl.Rd, man/s.match.class.Rd,
+	man/sarcelles.Rd, man/scalewt.Rd, man/scatter.Rd,
+	man/scatter.fca.Rd, man/scatterutil.Rd, man/sco.class.Rd,
+	man/sco.gauss.Rd, man/sco.label.Rd, man/sco.match.Rd,
+	man/statico.Rd, man/statico.krandtest.Rd, man/steppe.Rd,
+	man/supcol.Rd, man/suprow.Rd, man/symbols.phylog.Rd,
+	man/syndicats.Rd, man/t3012.Rd, man/table.phylog.Rd,
+	man/tarentaise.Rd, man/testdim.Rd, man/testdim.multiblock.Rd,
+	man/trichometeo.Rd, man/ungulates.Rd, man/variance.phylog.Rd,
+	man/veuvage.Rd, man/wca.rlq.Rd, man/westafrica.Rd, man/within.Rd,
+	man/withincoinertia.Rd, man/withinpca.Rd, man/witwit.coa.Rd,
+	man/woangers.Rd, man/worksurv.Rd, src/adesub.c: Correct encoding of
+	Rd files
+
+2016-11-25  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/gearymoran.Rd, man/mafragh.Rd, man/multispati.Rd,
+	man/multispati.randtest.Rd, man/multispati.rtest.Rd: Update and
+	clean 'mafragh' data
+
+2016-11-21  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : Merge pull request #4 from zkamvar/zkamvar-patch-1 Fix bug in randtest.amova
+
+2016-11-20  Zhian N. Kamvar <kamvarz@science.oregonstate.edu>
+
+	* R/randtest.amova.R: fix bug in randtest.amova This bug came up in
+	https://groups.google.com/forum/#!topic/poppr/D1gpqgQM2F0 There is no issue when comparing three hierarchical levels, but when
+	there are four or more, the alternate hypothesis for every fourth
+	level is incorrect due to the recycling of c("less", "greater",
+	"greater").
+
+2016-10-18  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/nipals.R: Correct a small bug identified by Denis Clot in the
+	rescaling of sd
+
+2016-09-27  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/orthobasis.R: Correct a minor bug in the print method of
+	orthobasis objects
+
+2016-09-12  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* README.md: Update homepage
+
+2016-07-22  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* man/dist.ktab.Rd: Update the doc to indicate that ordered
+	variables are not yet considered.
+
+2016-06-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : commit 7a4a263d8ac2822ee89f1cf167e4e118c03b4023 Author:
+	Stéphane Dray <stephane.dray@univ-lyon1.fr> Date:   Fri Jun 10
+	15:50:04 2016 +0200
+
+2016-05-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .Rbuildignore, man/pcw.Rd: Update Rbuildignore
+
+2016-05-13  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/scatterutil.R: Correct a bug when covariance is null (ellipses
+	were reversed)
+
+2016-05-13  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dudi.pco.R: Correct a bug in the scaling of normed components
+	with non-uniform weights
+
+2016-05-02  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* NAMESPACE, R/inertia.dudi.R, man/inertia.dudi.Rd: The function
+	'inertia.dudi' now becomes a method. It returns object of class
+	'inertia' with 'print' and 'summary' methods
+
+2016-03-21  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* man/elec88.Rd: Update the doc and add informations on nb, Spatial
+	and Spatialcontour
+
+2016-03-04  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* NAMESPACE, R/suprow.R, man/suprow.Rd: New methods suprow.acm,
+	suprow.mix and predict.dudi
+
+2016-03-04  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dudi.hillsmith.R: Function dudi.hillsmith now returns vectors
+	center and norm (useful for the suprow.mix function)
+
 2016-03-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* : DESCRIPTION: ---------- release of ade4 1.7-4 ----------

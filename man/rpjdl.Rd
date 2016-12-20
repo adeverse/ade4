@@ -3,14 +3,14 @@
 \docType{data}
 \title{Avifauna and Vegetation}
 \description{
-This data set gives the abundance of 52 species and 8 environmental variables 
+This data set gives the abundance of 51 species and 8 environmental variables 
 in 182 sites. 
 }
 \usage{data(rpjdl)}
 \format{
     \code{rpjdl} is a list of 5 components.
     \describe{
-    \item{fau}{is the faunistic array of 182 sites (rows) and 52 species (columns).}
+    \item{fau}{is the faunistic array of 182 sites (rows) and 51 species (columns).}
     \item{mil}{is the array of environmental variables : 182 sites and 8 variables.}
     \item{frlab}{is a vector of the names of species in French.}
     \item{lalab}{is a vector of the names of species in Latin.}

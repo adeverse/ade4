@@ -7,9 +7,9 @@ This data set is a contingency table of age classes and fecundity classes of cat
 }
 \usage{data(chats)}
 \format{
-    \code{chats} is a data frame with 8 rows and 8 columns.\
-    The 8 rows are age classes (age1, \dots, age8)\
-    The 8 columns are fecundity classes (f0, f12, f34, \dots, fcd)\
+    \code{chats} is a data frame with 8 rows and 8 columns.\cr
+    The 8 rows are age classes (age1, \dots, age8).\cr
+    The 8 columns are fecundity classes (f0, f12, f34, \dots, fcd).\cr
     The values are cats numbers (contingency table).
 }
 \source{

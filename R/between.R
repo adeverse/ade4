@@ -73,7 +73,7 @@
     s.arrow(bet$co, xax = xax, yax = yax, sub = "Variables", 
         csub = 2, cgrid = 0, clabel = 1.25)
     scatterutil.eigen(bet$eig, wsel = c(xax, yax))
-    s.class(bet$ls, fac, xax = xax, yax = yax, sub = "Scores and classes", 
+    s.class(bet$ls, fac, wt = bet$lw, xax = xax, yax = yax, sub = "Scores and classes", 
         csub = 2, clabel = 1.25)
     s.corcircle(bet$as, xax = xax, yax = yax, sub = "Inertia axes", 
         csub = 2, cgrid = 0, clabel = 1.25)

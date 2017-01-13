@@ -66,11 +66,11 @@ wca <- function (x, ...) UseMethod("wca")
     s.arrow(x$co, xax = xax, yax = yax, sub = "Variables", 
         csub = 2, clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
-    s.class(x$ls, fac, xax = xax, yax = yax, sub = "Scores and classes", 
+    s.class(x$ls, fac, wt = x$lw, xax = xax, yax = yax, sub = "Scores and classes", 
         csub = 2, clabel = 1.5, cpoint = 2)
     s.corcircle(x$as, xax = xax, yax = yax, sub = "Inertia axes", 
         csub = 2, cgrid = 0, clabel = 1.25)
-    s.class(x$li, fac, xax = xax, yax = yax, axesell = FALSE, 
+    s.class(x$li, fac, wt = x$lw, xax = xax, yax = yax, axesell = FALSE, 
         clabel = 0, cstar = 0, sub = "Common centring", csub = 2)
 }
 

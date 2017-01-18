@@ -107,8 +107,8 @@ if(!adegraphicsLoaded()) {
     par(mfrow = c(1, 1))
   }
 
-  if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
-    data(columbus)
+  if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
+    data(columbus, package = "spdep")
     par(mfrow = c(2, 1))
     par(mar = c(0.1, 0.1, 0.1, 0.1))
     plot(col.gal.nb, coords)
@@ -117,27 +117,27 @@ if(!adegraphicsLoaded()) {
     par(mfrow = c(1, 1))
     
     data(mafragh)
-    maf.rel <- relativeneigh(as.matrix(mafragh$xy))
-    maf.rel <- graph2nb(maf.rel)
+    maf.rel <- spdep::relativeneigh(as.matrix(mafragh$xy))
+    maf.rel <- spdep::graph2nb(maf.rel)
     s.label(mafragh$xy, neig = neig(list = maf.rel), inc = FALSE,
       clab = 0, addax = FALSE, cne = 1, cpo = 2)
     
     par(mfrow = c(2, 2))
     w <- matrix(runif(100), 50, 2)
-    x.gab <- gabrielneigh(w)
-    x.gab <- graph2nb(x.gab)
+    x.gab <- spdep::gabrielneigh(w)
+    x.gab <- spdep::graph2nb(x.gab)
     s.label(data.frame(w), neig = neig(list = x.gab), inc = FALSE,
       clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "relative")
-    x.rel <- relativeneigh(w)
-    x.rel <- graph2nb(x.rel)
+    x.rel <- spdep::relativeneigh(w)
+    x.rel <- spdep::graph2nb(x.rel)
     s.label(data.frame(w), neig = neig(list = x.rel), inc = FALSE,
       clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "Gabriel")
-    k1 <- knn2nb(knearneigh(w))
+    k1 <- spdep::knn2nb(spdep::knearneigh(w))
     s.label(data.frame(w), neig = neig(list = k1), inc = FALSE,
       clab = 0, addax = FALSE, cne = 1, cpo = 2, sub = "k nearest neighbours")
     
-    all.linked <- max(unlist(nbdists(k1, w)))
-    z <- dnearneigh(w, 0, all.linked)
+    all.linked <- max(unlist(spdep::nbdists(k1, w)))
+    z <- spdep::dnearneigh(w, 0, all.linked)
     s.label(data.frame(w), neig = neig(list = z), inc = FALSE, clab = 0, 
       addax = FALSE, cne = 1, cpo = 2, sub = "Neighbourhood contiguity by distance")
     par(mfrow = c(1, 1))

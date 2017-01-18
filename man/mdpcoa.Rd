@@ -131,10 +131,9 @@ and populations onto the compromise space.
 \examples{
 # The functions used below require the package ape
 data(rhizobium)
-if (requireNamespace("ape", quiet = TRUE)) {
+if (requireNamespace("ape", quietly = TRUE)) {
 dat <- prep.mdpcoa(rhizobium[[1]], rhizobium[[2]], 
-    model = c("F84", "F84", "F84", "F81"),
-    pairwise.deletion = TRUE)
+    model = c("F84", "F84", "F84", "F81"), pairwise.deletion = TRUE)
 sam <- dat$sam
 dis <- dat$dis
 # The distances should be Euclidean. 

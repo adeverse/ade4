@@ -20,16 +20,16 @@ Borrego, J., Morales, J.A., de la Torre, M.L. and Grande, J.A. (2002) Geochemica
 data(tintoodiel)
 if(!adegraphicsLoaded()) {
   \dontrun{
-  if(requireNamespace("pixmap", quiet = TRUE)) {
-    estuary.pnm <- read.pnm(system.file("pictures/tintoodiel.pnm", package = "ade4"))
+  if(requireNamespace("pixmap", quietly = TRUE)) {
+    estuary.pnm <- pixmap::read.pnm(system.file("pictures/tintoodiel.pnm", package = "ade4"))
     s.label(tintoodiel$xy, pixmap = estuary.pnm, neig = tintoodiel$neig,
       clab = 0, cpoi = 2, cneig = 3, addax = FALSE, cgrid = 0, grid = FALSE)
   }}
   
   estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
   
-  if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
-    estuary.listw <- nb2listw(neig2nb(tintoodiel$neig))
+  if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
+    estuary.listw <- spdep::nb2listw(neig2nb(tintoodiel$neig))
     estuary.pca.ms <- multispati(estuary.pca, estuary.listw, scan = FALSE, nfposi = 3, nfnega = 2)
     summary(estuary.pca.ms)
     par(mfrow = c(1, 2))

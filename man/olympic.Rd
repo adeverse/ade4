@@ -27,7 +27,7 @@ data(olympic)
 pca1 <- dudi.pca(olympic$tab, scan = FALSE)
 
 if(adegraphicsLoaded()) {
-  if(requireNamespace("lattice", quiet = TRUE)) {
+  if(requireNamespace("lattice", quietly = TRUE)) {
     g1 <- s1d.barchart(pca1$eig, p1d.hori = F, plot = F)
     g2 <- s.corcircle(pca1$co, plot = F)
     g3 <- xyplot(pca1$l1[, 1] ~ olympic$score, type = c("p", "r"))

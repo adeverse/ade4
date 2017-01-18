@@ -31,7 +31,7 @@ Vespini, F., Légier, P. and Champeau, A. (1987) Ecologie d'une rivière non am�
 \examples{
 data(buech)
 if(adegraphicsLoaded()) {
-  if(requireNamespace("sp", quiet = TRUE)) {
+  if(requireNamespace("sp", quietly = TRUE)) {
     g1 <- s.label(buech$xy, Sp = buech$Spatial, nb = buech$nb, 
       pSp.col = "transparent", plot = FALSE)
     g2 <- s.value(buech$xy, buech$tab2$Suspens - buech$tab1$Suspens, 

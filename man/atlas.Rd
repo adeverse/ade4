@@ -30,7 +30,7 @@ Direction de la Protection de la Nature, Ministere de la Qualite de la Vie. 1--3
 \examples{
 data(atlas)
 if(adegraphicsLoaded()) {
-  if(requireNamespace("sp", quiet = TRUE)) {
+  if(requireNamespace("sp", quietly = TRUE)) {
     g11 <- s.Spatial(atlas$Spatial, pSp.col = "white", plot = FALSE)
     g12 <- s.label(atlas$area[, 2:3], plabels.cex = 0, plot = FALSE)
     g1 <- superpose(g11, g12, plot = FALSE)
@@ -58,7 +58,7 @@ if(adegraphicsLoaded()) {
   }
 } else {
   op <- par(no.readonly = TRUE) 
-  par(mfrow = c(2,2))
+  par(mfrow = c(2, 2))
   area.plot(atlas$area, cpoin = 1.5)
   area.plot(atlas$area, lab = atlas$names.district, clab = 1)
   x <- atlas$meteo$mini.jan
@@ -81,6 +81,6 @@ if(adegraphicsLoaded()) {
       incl = FALSE, addax = FALSE)
   triangle.plot(atlas$alti)
   par(op)
-  par(mfrow=c(1,1))}
+  par(mfrow = c(1, 1))}
 }
 \keyword{datasets}

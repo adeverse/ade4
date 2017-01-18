@@ -6,7 +6,7 @@ Author: Stéphane Dray <stephane.dray@univ-lyon1.fr>, Anne-Béatrice Dufour <ann
 Maintainer: Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 Depends: R (>= 2.10)
 Imports: graphics, grDevices, methods, stats, utils
-Suggests: ade4TkGUI, adegraphics, ape, CircStats, deldir, lattice, maptools, MASS, pixmap, sp, spdep, splancs, waveslim
+Suggests: ade4TkGUI, adegraphics, adephylo, ape, CircStats, deldir, lattice, maptools, MASS, pixmap, sp, spdep, splancs, waveslim
 Description: Multivariate data analysis and graphical display.
 License: GPL (>= 2)
 URL: http://pbil.univ-lyon1.fr/ADE-4, Mailing list: http://listes.univ-lyon1.fr/wws/info/adelist

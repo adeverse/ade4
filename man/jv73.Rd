@@ -33,7 +33,7 @@ w <- lapply(w, function(x) t(dudi.pca(x, scann = FALSE)))
 w <- ktab.list.dudi(w)
 
 if(adegraphicsLoaded()) {
-  if(requireNamespace("sp", quiet = TRUE)) {
+  if(requireNamespace("sp", quietly = TRUE)) {
     g11 <- s.label(jv73$xy, Sp = jv73$Spatial, pori.incl = FALSE, plab.cex = 0.75, plot = FALSE)
     g12 <- s.class(jv73$xy, jv73$fac.riv, ellipseSize = 0, pellipses.axes.draw = FALSE, 
       starSize = 0, ppoints.cex = 0, plab.cex = 1.25, plot = FALSE)

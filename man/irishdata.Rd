@@ -31,7 +31,7 @@ data(irishdata)
 
 if(adegraphicsLoaded()) {
 
-  if(requireNamespace("sp", quiet = TRUE)){
+  if(requireNamespace("sp", quietly = TRUE)){
   g1 <- s.label(irishdata$xy.utm, Sp = irishdata$Spatial, pSp.col = "white", plot = FALSE)
   
   g21 <- s.label(irishdata$xy.utm, Sp = irishdata$Spatial, pSp.col = "white", plab.cex = 0, 

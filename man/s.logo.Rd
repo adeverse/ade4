@@ -43,7 +43,7 @@ The matched call.
 \author{Daniel Chessel and Thibaut Jombart \email{t.jombart@imperial.ac.uk}}
 \examples{
 if(!adegraphicsLoaded()) {
-  if(requireNamespace("pixmap", quiet = TRUE)) {
+  if(requireNamespace("pixmap", quietly = TRUE)) {
   	data(ggtortoises)
   	a1 <- ggtortoises$area
   	area.plot(a1)

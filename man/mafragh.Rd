@@ -66,7 +66,7 @@ neig1 <- neig(mat01 = 1*(link1 > 0))
 nb1 <- neig2nb(neig1)
 
 if(adegraphicsLoaded()) {
-  if(requireNamespace("sp", quiet = TRUE)) {
+  if(requireNamespace("sp", quietly = TRUE)) {
     g7 <- s.label(mafragh$xy, Sp = mafragh$Spatial, pSp.col = "white", plot = FALSE)
     g8 <- s.label(mafragh$xy, Sp = mafragh$Spatial, pSp.col = "white", nb = nb1, plab.cex = 0, 
       pnb.node.cex = 0, ppoints.cex = 0, plot = FALSE)
@@ -80,7 +80,7 @@ if(adegraphicsLoaded()) {
   par(mfrow = c(1, 1))
 }
 
-if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
+if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
   lw1 <- apply(link1, 1, function(x) x[x > 0])
   listw1 <- nb2listw(nb1, lw1)
   coa1 <- dudi.coa(mafragh$flo, scan = FALSE, nf = 4)
@@ -88,7 +88,7 @@ if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet 
   summary(ms1)
   
   if(adegraphicsLoaded()) {
-    if(requireNamespace("lattice", quiet = TRUE)) {
+    if(requireNamespace("lattice", quietly = TRUE)) {
       g9 <- s1d.barchart(coa1$eig, p1d.hori = FALSE, plot = FALSE)
       g10 <- s1d.barchart(ms1$eig, p1d.hori = FALSE, plot = FALSE)
       g11 <- s.corcircle(ms1$as, plot = FALSE)

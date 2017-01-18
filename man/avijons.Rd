@@ -33,7 +33,7 @@ area.plot(avijons$area, center = avijons$xy, val = w1[, 1], clab = 0.75,
 \dontrun{
 data(avijons)
 if(!adegraphicsLoaded()) {
-  if(requireNamespace("pixmap", quiet = TRUE)) {
+  if(requireNamespace("pixmap", quietly = TRUE)) {
     pnm.eau <- read.pnm(system.file("pictures/avijonseau.pnm", package = "ade4"))
     pnm.rou <- read.pnm(system.file("pictures/avijonsrou.pnm", package = "ade4"))
     pnm.veg <- read.pnm(system.file("pictures/avijonsveg.pnm", package = "ade4"))
@@ -56,8 +56,8 @@ if(!adegraphicsLoaded()) {
     par(mfrow = c(1, 1))
   }
 
-  if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE) & 
-    requireNamespace("pixmap", quiet = TRUE)) {
+  if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE) & 
+    requireNamespace("pixmap", quietly = TRUE)) {
     
     link1 <- area2link(avijons$area)
     lw1 <- apply(link1, 1, function(x) x[x > 0])

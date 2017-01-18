@@ -79,7 +79,7 @@ Thibaut Jombart \email{t.jombart@imperial.ac.uk}
 \seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{
 \dontrun{
-if (requireNamespace("maptools", quiet = TRUE) & requireNamespace(spdep, quiet = TRUE)) {
+if (requireNamespace("maptools", quietly = TRUE) & requireNamespace(spdep, quietly = TRUE)) {
     data(mafragh)
     maf.xy <- mafragh$xy
     maf.flo <- mafragh$flo

@@ -19,7 +19,7 @@ Fievet, E., Eppe, F. and Dolédec, S. (2001) Etude de la variabilité morphomét
 \examples{
 \dontrun{
 data(atya)
-if(requireNamespace("pixmap", quiet = TRUE)) {
+if(requireNamespace("pixmap", quietly = TRUE)) {
   atya.digi <- read.pnm(system.file("pictures/atyadigi.pnm",
       package = "ade4"))
   atya.carto <- read.pnm(system.file("pictures/atyacarto.pnm",
@@ -29,7 +29,7 @@ if(requireNamespace("pixmap", quiet = TRUE)) {
   plot(atya.carto)
   points(atya$xy, pch = 20, cex = 2)
 }
-if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
+if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
   plot(neig2nb(atya$neig), atya$xy, col = "red", add = TRUE, lwd = 2)
   par(mfrow = c(1,1))
 }

@@ -83,7 +83,7 @@ par(mfrow = c(1, 1))
     par(mfrow = c(1, 1))
     
     if(adegraphicsLoaded()) {
-      if(requireNamespace("sp", quiet = TRUE)) {
+      if(requireNamespace("sp", quietly = TRUE)) {
         s.value(elec88$xy, elec88$tab, Sp = elec88$Spatial,
           meth = "color", psub.text = names(elec88$tab), psub.cex = 3, 
           pSp.col = "white", pgrid.draw = F, porigin.incl = FALSE)
@@ -111,14 +111,14 @@ par(mfrow = c(1, 1))
         cpoi = 3, addax = FALSE, contour = w)
       s.label(xy, area = irishdata$area, incl = FALSE, 
         addax = FALSE, contour = w)
-      if(requireNamespace("maptools", quiet = TRUE) & requireNamespace("spdep", quiet = TRUE)) {
+      if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
         data(columbus)
         par(mfrow = c(2, 2))
         plot(col.gal.nb, coords, pch = 20, cex = 2)
         col.gal.neig <- nb2neig(col.gal.nb)
         s.label(data.frame(coords), neig = col.gal.neig,
           inc = FALSE, addax = FALSE, clab = 0, cneig = 1, cpo = 2)
-        maptools:::plot.polylist(polys, bbs)
+        maptools::plot.polylist(polys, bbs)
         area.plot(poly2area(polys))
     
         # 1

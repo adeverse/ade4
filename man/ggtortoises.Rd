@@ -32,7 +32,7 @@ if(requireNamespace("pixmap", quiet=TRUE)) {
   data(ggtortoises)
   
   if(adegraphicsLoaded()) {
-    if(requireNamespace("sp", quiet = TRUE)) {
+    if(requireNamespace("sp", quietly = TRUE)) {
       g1 <- s.logo(ggtortoises$pop, ggtortoises$ico[as.character(ggtortoises$pop$carap)], 
         Sp = ggtortoises$Spatial, pback.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE,
         ppoints.cex = 0.5)
@@ -44,10 +44,10 @@ if(requireNamespace("pixmap", quiet=TRUE)) {
   	a1 <- ggtortoises$area
   	area.plot(a1)
   	rect(min(a1$x), min(a1$y), max(a1$x), max(a1$y), col = "lightblue")
-  	invisible(lapply(split(a1, a1$id), function(x) polygon(x[, -1],col = "white")))
-  	s.label(ggtortoises$misc, grid=FALSE,include.ori=FALSE,addaxes=FALSE,add.p=TRUE)
+  	invisible(lapply(split(a1, a1$id), function(x) polygon(x[, -1], col = "white")))
+  	s.label(ggtortoises$misc, grid = FALSE, include.ori = FALSE, addaxes = FALSE, add.p = TRUE)
   	listico <- ggtortoises$ico[as.character(ggtortoises$pop$carap)]
-  	s.logo(ggtortoises$pop,listico,add.p=TRUE)
+  	s.logo(ggtortoises$pop, listico, add.p = TRUE)
   }
 }}
 \keyword{datasets}

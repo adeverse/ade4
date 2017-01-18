@@ -23,7 +23,7 @@ data(t3012)
 data(elec88)
 
 if(adegraphicsLoaded()) {
-  if(requireNamespace("sp", quiet = TRUE)) {
+  if(requireNamespace("sp", quietly = TRUE)) {
     s.arrow(t3012$xy, pori.ori = as.numeric(t3012$xy["Paris", ]), Sp = t3012$Spatial, 
       pSp.col = "white", pgrid.draw = F)
   }

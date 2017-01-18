@@ -29,7 +29,7 @@ Second edition. Chapman & Hall, London. 1--215.
 data(butterfly)
 
 if(adegraphicsLoaded()) {
-  if(requireNamespace("sp", quiet = TRUE)) {
+  if(requireNamespace("sp", quietly = TRUE)) {
     g1 <- s.label(butterfly$xy, Sp = butterfly$Spatial, pSp.col = "white", 
       porigin.include = FALSE, plot = FALSE)
     g2 <- table.value(dist(butterfly$xy), plot = FALSE)

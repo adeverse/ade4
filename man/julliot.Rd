@@ -34,7 +34,7 @@ if(adegraphicsLoaded()) {
     g1 <- s.Spatial(obj1)
     
     g2 <- s.value(julliot$xy, scalewt(log(julliot$tab + 1)), Sp = julliot$Spatial, 
-      pSp.col = "white", pgrid.draw = F)
+      pSp.col = "white", pgrid.draw = FALSE)
     
   }
 } else {

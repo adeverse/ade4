@@ -25,13 +25,14 @@ w1 <- capitales$area
 
 if(adegraphicsLoaded()) {
   if(requireNamespace("sp", quietly = TRUE)) {
-    g1 <- s.label(capitales$xy, lab = rownames(capitales$xy), pori.incl = F, plot = F)
+    g1 <- s.label(capitales$xy, lab = rownames(capitales$xy), porigin.include = FALSE, 
+      plot = FALSE)
     g2 <- s.logo(capitales$xy[sort(rownames(capitales$xy)), ], capitales$logo, 
-      Sp = capitales$Spatial, pback.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE, 
-      plot = F)
+      Sp = capitales$Spatial, pbackground.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE, 
+      plot = FALSE)
     g3 <- table.value(capitales$dist, ptable.margin = list(b = 5, l = 5, t = 15, r = 15), 
-      ptable.x.tck = 3, ptable.y.tck = 3, plot = F)
-    g4 <- s.logo(pcoscaled(lingoes(capitales$dist)), capitales$logo[index], plot = F) 
+      ptable.x.tck = 3, ptable.y.tck = 3, plot = FALSE)
+    g4 <- s.logo(pcoscaled(lingoes(capitales$dist)), capitales$logo[index], plot = FALSE) 
     
     G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
   }

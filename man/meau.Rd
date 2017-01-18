@@ -38,7 +38,8 @@ pca1 <- dudi.pca(meau$env, scan = FALSE, nf = 4)
 pca2 <- bca(pca1, meau$design$season, scan = FALSE, nf = 2)
 
 if(adegraphicsLoaded()) {
-  g1 <- s.class(pca1$li, meau$design$season, psub.text = "Principal Component Analysis", plot = F)
+  g1 <- s.class(pca1$li, meau$design$season, psub.text = "Principal Component Analysis", 
+    plot = FALSE)
   g2 <- s.class(pca2$ls, meau$design$season, 
     psub.text = "Between seasons Principal Component Analysis", plot = FALSE)
   g3 <- s.corcircle(pca1$co, plot = FALSE)

@@ -52,8 +52,9 @@ ww
 summary(ww)
 
 if(adegraphicsLoaded()) {
-  g1 <- s.class(ww$co, ardeche$sta.fac, plab.cex = 1.5, ellipseSi = 0, paxes.dr = FALSE, plot = F)
-  g2 <- s.label(ww$co, plab.cex = 0.75, plot = F)
+  g1 <- s.class(ww$co, ardeche$sta.fac, plab.cex = 1.5, ellipseSi = 0, paxes.draw = FALSE, 
+    plot = FALSE)
+  g2 <- s.label(ww$co, plab.cex = 0.75, plot = FALSE)
   G <- superpose(g1, g2, plot = TRUE)
   
 } else {

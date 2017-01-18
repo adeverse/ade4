@@ -65,11 +65,11 @@ bet2 <- bca(pca2, meaudret$design$site, scan = FALSE, nf = 2)
   
 if(adegraphicsLoaded()) {
   g1 <- s.class(pca1$li, meaudret$design$site, psub.text = "Principal Component Analysis (env)",
-    plot = F)
+    plot = FALSE)
   g2 <- s.class(pca2$li, meaudret$design$site, psub.text = "Principal Component Analysis (spe)",
-    plot = F)
-  g3 <- s.class(bet1$ls, meaudret$design$site, psub.text = "Between sites PCA (env)", plot = F)
-  g4 <- s.class(bet2$ls, meaudret$design$site, psub.text = "Between sites PCA (spe)", plot = F)
+    plot = FALSE)
+  g3 <- s.class(bet1$ls, meaudret$design$site, psub.text = "Between sites PCA (env)", plot = FALSE)
+  g4 <- s.class(bet2$ls, meaudret$design$site, psub.text = "Between sites PCA (spe)", plot = FALSE)
   G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
   
 } else {

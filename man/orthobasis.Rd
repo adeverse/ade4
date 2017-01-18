@@ -68,9 +68,9 @@ Daniel Chessel
 # a 2D spatial orthobasis
 w <- gridrowcol(8, 8)
 if(adegraphicsLoaded()) {
-  g1 <- s.value(w$xy, w$orthobasis[, 1:16], pleg.drawKey = F, pgri.text.cex = 0, 
-    ylim = c(0, 10), pori.inc = F, paxes.dr = F)
-  g2 <- s1d.barchart(attr(w$orthobasis, "values"), p1d.hori = F, 
+  g1 <- s.value(w$xy, w$orthobasis[, 1:16], pleg.drawKey = FALSE, pgri.text.cex = 0, 
+    ylim = c(0, 10), porigin.include = FALSE, paxes.draw = FALSE)
+  g2 <- s1d.barchart(attr(w$orthobasis, "values"), p1d.horizontal = FALSE, 
     labels = names(attr(w$orthobasis, "values")), plabels.cex = 0.7)
 
 } else {
@@ -104,7 +104,7 @@ par(mar = c(0.1, 0.1, 0.1, 0.1))
 }
 
 if(adegraphicsLoaded()) {
-  s1d.barchart(attr(w, "values"), p1d.hori = F, labels = names(attr(w, "values")), 
+  s1d.barchart(attr(w, "values"), p1d.horizontal = FALSE, labels = names(attr(w, "values")), 
     plab.cex = 0.7)
 } else {
   par(mfrow = c(1, 1))
@@ -125,8 +125,8 @@ par(mfrow = c(1, 1))
 data(mafragh)
 w <- orthobasis.neig(mafragh$neig)
 if(adegraphicsLoaded()) {
-  s.value(mafragh$xy, w[, 1:8], pleg.drawKey = F)
-  s1d.barchart(attr(w, "values"), p1d.hori = F)
+  s.value(mafragh$xy, w[, 1:8], plegend.drawKey = FALSE)
+  s1d.barchart(attr(w, "values"), p1d.horizontal = FALSE)
 } else {
   par(mfrow = c(4, 2))
   for(k in 1:8)
@@ -134,7 +134,6 @@ if(adegraphicsLoaded()) {
   par(mfrow = c(1, 1))
   barplot(attr(w, "values"))
 }
-
 
 # a phylogenetic orthobasis
 data(njplot)

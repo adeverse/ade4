@@ -32,8 +32,8 @@ pca1 <- dudi.pca(trichometeo$meteo, scan = FALSE)
 niche1 <- niche(pca1, faulog, scan = FALSE)
 
 if(adegraphicsLoaded()) {
-  g1 <- s.distri(niche1$ls, faulog, plab.cex = 0.6, ellipseSize = 0, starSize = 0.3, plot = F)
-  g2 <- s.arrow(7 * niche1$c1, plab.cex = 1, plot = F)
+  g1 <- s.distri(niche1$ls, faulog, plab.cex = 0.6, ellipseSize = 0, starSize = 0.3, plot = FALSE)
+  g2 <- s.arrow(7 * niche1$c1, plab.cex = 1, plot = FALSE)
   G <- superpose(g1, g2, plot = TRUE)
   
 } else {

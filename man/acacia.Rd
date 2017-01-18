@@ -24,7 +24,7 @@ Hill, M.O. (1973) The intensity of spatial pattern in plant communities. \emph{J
 }
 \examples{data(acacia)
 if(adegraphicsLoaded()) {
-  gg <- s1d.barchart(acacia, p1d.horizontal = F, psub.position = "topleft", 
+  gg <- s1d.barchart(acacia, p1d.horizontal = FALSE, psub.position = "topleft", 
     plabels.cex = 0, ylim = c(0,20))
 } else {
   par(mfcol = c(5, 3))

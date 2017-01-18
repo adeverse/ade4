@@ -56,9 +56,9 @@ if(!adegraphicsLoaded()) {
 # multivariate analysis
 afri.w <- data.frame(t(westafrica$tab))
 afri.dist <- dist.binary(afri.w,1)
-afri.pco <- dudi.pco(afri.dist, scan = FALSE, nf = 3)
+afri.pco <- dudi.pco(afri.dist, scannf = FALSE, nf = 3)
 if(adegraphicsLoaded()) {
-  G1 <- s1d.barchart(afri.pco$li[, 1:3], p1d.hori = F, plab.cex = 0)
+  G1 <- s1d.barchart(afri.pco$li[, 1:3], p1d.horizontal = FALSE, plabels.cex = 0)
 } else {
   par(mfrow = c(3, 1))
   barplot(afri.pco$li[, 1])
@@ -71,15 +71,15 @@ if(requireNamespace("spdep", quietly = TRUE)) {
   afri.neig <- neig(n.line = 33)
   afri.nb <- neig2nb(afri.neig)
   afri.listw <- spdep::nb2listw(afri.nb)
-  afri.ms <- multispati(afri.pco, afri.listw, scan = FALSE, nfposi = 6, nfnega = 0)
+  afri.ms <- multispati(afri.pco, afri.listw, scannf = FALSE, nfposi = 6, nfnega = 0)
   
   if(adegraphicsLoaded()) {
-    G2 <- s1d.barchart(afri.ms$li[, 1:3], p1d.hori = F, plab.cex = 0)
+    G2 <- s1d.barchart(afri.ms$li[, 1:3], p1d.horizontal = FALSE, plabels.cex = 0)
     
-    g31 <- s.label(afri.ms$li, plab.cex = 0.75, ppoi.cex = 0, nb = afri.nb, plot = F)
-    g32 <- s.value(afri.ms$li, afri.ms$li[, 3], plot = F)
-    g33 <- s.value(afri.ms$li, afri.ms$li[, 4], plot = F)
-    g34 <- s.value(afri.ms$li, afri.ms$li[, 5], plot = F)
+    g31 <- s.label(afri.ms$li, plabels.cex = 0.75, ppoints.cex = 0, nb = afri.nb, plot = FALSE)
+    g32 <- s.value(afri.ms$li, afri.ms$li[, 3], plot = FALSE)
+    g33 <- s.value(afri.ms$li, afri.ms$li[, 4], plot = FALSE)
+    g34 <- s.value(afri.ms$li, afri.ms$li[, 5], plot = FALSE)
     G3 <- ADEgS(list(g31, g32, g33, g34), layout = c(2, 2))
     
   } else {

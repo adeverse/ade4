@@ -59,16 +59,17 @@ summary(pcaivnonA)
 interAplusB <- pcaiv(coa1, avimedi$plan, scan = FALSE)
 
 if(adegraphicsLoaded()) {
-  g1 <- s.class(coa1$li, cla, psub.text = "Sans contrainte", plot = F)
-  g21 <- s.match(w1$li, w1$ls, plab.cex = 0, psub.text = "Intra Région", plot = F)
-  g22 <- s.class(w1$li, cla, plot = F)
+  g1 <- s.class(coa1$li, cla, psub.text = "Sans contrainte", plot = FALSE)
+  g21 <- s.match(w1$li, w1$ls, plab.cex = 0, psub.text = "Intra Région", plot = FALSE)
+  g22 <- s.class(w1$li, cla, plot = FALSE)
   g2 <- superpose(g21, g22)
-  g31 <- s.match(pcaivnonA$li, pcaivnonA$ls, plab.cex = 0, psub.tex = "Contrainte Non A", plot = F)
+  g31 <- s.match(pcaivnonA$li, pcaivnonA$ls, plab.cex = 0, psub.tex = "Contrainte Non A", 
+    plot = FALSE)
   g32 <- s.class(pcaivnonA$li, cla, plot = FALSE)
   g3 <- superpose(g31, g32)
   g41 <- s.match(interAplusB$li, interAplusB$ls, plab.cex = 0, psub.text = "Contrainte A + B", 
-    plot = F)
-  g42 <- s.class(interAplusB$li, cla, plot = F)
+    plot = FALSE)
+  g42 <- s.class(interAplusB$li, cla, plot = FALSE)
   g4 <- superpose(g41, g42)
   G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
 

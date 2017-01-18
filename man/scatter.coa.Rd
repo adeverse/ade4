@@ -30,11 +30,11 @@ performs the scatter diagrams of a correspondence analysis.
 data(housetasks)
 w <- dudi.coa(housetasks, scan = FALSE)
 if(adegraphicsLoaded()) {
-  g1 <- scatter(w, method = 1, psub.text = "1 / Standard", posieig = "none", plot = F)
+  g1 <- scatter(w, method = 1, psub.text = "1 / Standard", posieig = "none", plot = FALSE)
   g2 <- scatter(w, method = 2, psub.text = "2 / Columns -> averaging -> Rows", 
-    posieig = "none", plot = F)
+    posieig = "none", plot = FALSE)
   g3 <- scatter(w, method = 3, psub.text = "3 / Rows -> averaging -> Columns ", 
-    posieig = "none", plot = F)
+    posieig = "none", plot = FALSE)
   G <- ADEgS(list(g1, g2, g3), layout = c(2, 2))
   
 } else {

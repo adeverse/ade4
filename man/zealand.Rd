@@ -28,13 +28,13 @@ if(adegraphicsLoaded()) {
   G1 <- s.label(zealand$xy, lab = as.character(1:13), nb = zealand$nb)
   
   g1 <- s.label(cmdscale(dist(zealand$xy)), lab = as.character(1:13), nb = zealand$nb, 
-    psub.text = "Distance canonique", plot = F)
+    psub.text = "Distance canonique", plot = FALSE)
   g2 <- s.label(cmdscale(d0), lab = as.character(1:13), nb = zealand$nb, 
-    psub.text = "Distance routiere", plot = F)
+    psub.text = "Distance routiere", plot = FALSE)
   g3 <- s.label(cmdscale(d1), lab = as.character(1:13), nb = zealand$nb, 
-    psub.text = "Distance routiere / Cailliez", plot = F)
+    psub.text = "Distance routiere / Cailliez", plot = FALSE)
   g4 <- s.label(cmdscale(d2), lab = as.character(1:13), nb = zealand$nb, 
-    psub.text = "Distance routiere / Lingoes", plot = F)
+    psub.text = "Distance routiere / Lingoes", plot = FALSE)
   G2 <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
 
 } else {

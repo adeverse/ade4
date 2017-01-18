@@ -40,7 +40,8 @@ data(mafragh)
 coa1 <- dudi.coa(mafragh$flo, scan = FALSE)
 pca1 <- dudi.pca(mafragh$xy, scan = FALSE)
 if(adegraphicsLoaded()) {
-  g1 <- s.label(mafragh$xy, nb = mafragh$nb, psub.text = "Samples & Neighbourhood graph", plot = F)
+  g1 <- s.label(mafragh$xy, nb = mafragh$nb, psub.text = "Samples & Neighbourhood graph", 
+    plot = FALSE)
   g2 <- s.value(mafragh$xy, coa1$li[, 1], psub.text = "Axis 1 - COA", plot = FALSE)
   g3 <- s.value(mafragh$xy, pca1$li[,1], psub.text = "Axis 1 - PCA", plot = FALSE)
   g4 <- s.class(pca1$li, mafragh$partition, psub.text = "Plane 1-2 - PCA", plot = FALSE)
@@ -82,7 +83,7 @@ if(adegraphicsLoaded()) {
 
 if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
   lw1 <- apply(link1, 1, function(x) x[x > 0])
-  listw1 <- nb2listw(nb1, lw1)
+  listw1 <- spdep::nb2listw(nb1, lw1)
   coa1 <- dudi.coa(mafragh$flo, scan = FALSE, nf = 4)
   ms1 <- multispati(coa1, listw1, scan = FALSE, nfp = 2, nfn = 0)
   summary(ms1)

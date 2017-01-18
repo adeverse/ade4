@@ -34,10 +34,10 @@ if(requireNamespace("pixmap", quiet=TRUE)) {
   if(adegraphicsLoaded()) {
     if(requireNamespace("sp", quietly = TRUE)) {
       g1 <- s.logo(ggtortoises$pop, ggtortoises$ico[as.character(ggtortoises$pop$carap)], 
-        Sp = ggtortoises$Spatial, pback.col = "lightblue", pSp.col = "white", pgrid.draw = FALSE,
-        ppoints.cex = 0.5)
-      g1 <- s.label(ggtortoises$misc, pgrid.draw = FALSE, porigin.include = FALSE, paxes.draw = F, 
-        add = TRUE)
+        Sp = ggtortoises$Spatial, pbackground.col = "lightblue", pSp.col = "white", 
+        pgrid.draw = FALSE, ppoints.cex = 0.5)
+      g1 <- s.label(ggtortoises$misc, pgrid.draw = FALSE, porigin.include = FALSE, 
+        paxes.draw = FALSE, add = TRUE)
     }
 
   } else {    

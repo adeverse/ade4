@@ -83,7 +83,7 @@ if (requireNamespace("maptools", quietly = TRUE) & requireNamespace(spdep, quiet
     data(mafragh)
     maf.xy <- mafragh$xy
     maf.flo <- mafragh$flo
-    maf.listw <- nb2listw(neig2nb(mafragh$neig))
+    maf.listw <- spdep::nb2listw(neig2nb(mafragh$neig))
     if(adegraphicsLoaded()) {
       g1 <- s.label(maf.xy, nb = neig2nb(mafragh$neig), plab.cex = 0.75)
     } else {

@@ -39,11 +39,11 @@ wit1 <- wca(pca1, meaudret$design$site, scan = FALSE, nf = 2)
 
 if(adegraphicsLoaded()) {
   g1 <- s.traject(pca1$li, meaudret$design$site, psub.text = "Principal Component Analysis", 
-    plines.lty = 1:length(levels(meaudret$design$site)), plot = F)
+    plines.lty = 1:length(levels(meaudret$design$site)), plot = FALSE)
   g2 <- s.traject(wit1$li, meaudret$design$site, psub.text = 
     "Within site Principal Component Analysis", 
-    plines.lty = 1:length(levels(meaudret$design$site)), plot = F)
-  g3 <- s.corcircle (wit1$as, plot = F)
+    plines.lty = 1:length(levels(meaudret$design$site)), plot = FALSE)
+  g3 <- s.corcircle (wit1$as, plot = FALSE)
   G <- ADEgS(list(g1, g2, g3), layout = c(2, 2))
   
 } else {

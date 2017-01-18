@@ -39,13 +39,13 @@ w3 <- scale(elec88$tab$Mitterand)
 w4 <- scale(presid2002$tour2$Chirac / presid2002$tour2$exprimes)
 
 if(adegraphicsLoaded()) {
-  g1 <- s.value(elec88$xy, w1, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = F, 
+  g1 <- s.value(elec88$xy, w1, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = FALSE, 
     psub.text = "Chirac 1988 T1", plot = FALSE)
-  g2 <- s.value(elec88$xy, w2, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = F, 
+  g2 <- s.value(elec88$xy, w2, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = FALSE, 
     psub.text = "Chirac 2002 T1", plot = FALSE)
-  g3 <- s.value(elec88$xy, w3, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = F, 
+  g3 <- s.value(elec88$xy, w3, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = FALSE, 
     psub.text = "Mitterand 1988 T1", plot = FALSE)
-  g4 <- s.value(elec88$xy, w4, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = F, 
+  g4 <- s.value(elec88$xy, w4, Sp = elec88$Spatial, pSp.col = "white", pgrid.draw = FALSE, 
     psub.text = "Chirac 2002 T2", plot = FALSE)
   G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
       

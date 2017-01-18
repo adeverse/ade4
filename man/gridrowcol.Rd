@@ -39,7 +39,7 @@ par(mfrow = c(1, 1))
 if(adegraphicsLoaded()) {
   fac1 <- w$orthobasis
   names(fac1) <- as.character(signif(attr(w$orthobasis, "values"), 3))
-  s.value(w$xy, fac1, pori.in = F, plegend.drawKey = F, pgrid.text.cex = 0,
+  s.value(w$xy, fac1, porigin.include = FALSE, plegend.drawKey = FALSE, pgrid.text.cex = 0,
     ylim = c(0, 10))
 
 } else {

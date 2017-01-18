@@ -85,8 +85,8 @@ par(mfrow = c(1, 1))
     if(adegraphicsLoaded()) {
       if(requireNamespace("sp", quietly = TRUE)) {
         s.value(elec88$xy, elec88$tab, Sp = elec88$Spatial,
-          meth = "color", psub.text = names(elec88$tab), psub.cex = 3, 
-          pSp.col = "white", pgrid.draw = F, porigin.incl = FALSE)
+          method = "color", psub.text = names(elec88$tab), psub.cex = 3, 
+          pSp.col = "white", pgrid.draw = FALSE, porigin.include = FALSE)
       }
     } else {
       par(mfrow = c(3, 3))

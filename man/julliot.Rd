@@ -32,10 +32,8 @@ if(adegraphicsLoaded()) {
   if(requireNamespace("sp"", quietly = TRUE)) {
     obj1 <- sp::SpatialPolygonsDataFrame(Sr = julliot$Spatial, data = log(julliot$tab + 1))
     g1 <- s.Spatial(obj1)
-    
     g2 <- s.value(julliot$xy, scalewt(log(julliot$tab + 1)), Sp = julliot$Spatial, 
       pSp.col = "white", pgrid.draw = FALSE)
-    
   }
 } else {
   if(requireNamespace("splancs", quietly = TRUE)) {

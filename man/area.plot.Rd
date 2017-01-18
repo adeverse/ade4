@@ -112,13 +112,13 @@ par(mfrow = c(1, 1))
       s.label(xy, area = irishdata$area, incl = FALSE, 
         addax = FALSE, contour = w)
       if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
-        data(columbus)
+        data(columbus, package = "spdep")
         par(mfrow = c(2, 2))
         plot(col.gal.nb, coords, pch = 20, cex = 2)
         col.gal.neig <- nb2neig(col.gal.nb)
         s.label(data.frame(coords), neig = col.gal.neig,
           inc = FALSE, addax = FALSE, clab = 0, cneig = 1, cpo = 2)
-        maptools::plot.polylist(polys, bbs)
+        maptools:::plot.polylist(polys, bbs)
         area.plot(poly2area(polys))
     
         # 1

@@ -34,10 +34,10 @@ area.plot(avijons$area, center = avijons$xy, val = w1[, 1], clab = 0.75,
 data(avijons)
 if(!adegraphicsLoaded()) {
   if(requireNamespace("pixmap", quietly = TRUE)) {
-    pnm.eau <- read.pnm(system.file("pictures/avijonseau.pnm", package = "ade4"))
-    pnm.rou <- read.pnm(system.file("pictures/avijonsrou.pnm", package = "ade4"))
-    pnm.veg <- read.pnm(system.file("pictures/avijonsveg.pnm", package = "ade4"))
-    pnm.vil <- read.pnm(system.file("pictures/avijonsvil.pnm", package = "ade4"))
+    pnm.eau <- pixmap::read.pnm(system.file("pictures/avijonseau.pnm", package = "ade4"))
+    pnm.rou <- pixmap::read.pnm(system.file("pictures/avijonsrou.pnm", package = "ade4"))
+    pnm.veg <- pixmap::read.pnm(system.file("pictures/avijonsveg.pnm", package = "ade4"))
+    pnm.vil <- pixmap::read.pnm(system.file("pictures/avijonsvil.pnm", package = "ade4"))
     jons.coa <- dudi.coa(avijons$fau, scan = FALSE, nf = 4)
     
     par(mfcol = c(3, 2))

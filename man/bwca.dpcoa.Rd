@@ -49,7 +49,6 @@ Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
 \dontrun{
-library(adegraphics)
 
 ## First example of Dray et al (2015) paper
 

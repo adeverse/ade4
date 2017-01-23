@@ -29,7 +29,7 @@ data(julliot)
 
 \dontrun{
 if(adegraphicsLoaded()) {
-  if(requireNamespace("sp"", quietly = TRUE)) {
+  if(requireNamespace("sp", quietly = TRUE)) {
     obj1 <- sp::SpatialPolygonsDataFrame(Sr = julliot$Spatial, data = log(julliot$tab + 1))
     g1 <- s.Spatial(obj1)
     g2 <- s.value(julliot$xy, scalewt(log(julliot$tab + 1)), Sp = julliot$Spatial, 
@@ -47,7 +47,7 @@ if(adegraphicsLoaded()) {
     for(k in 1:7) {
       area.plot(julliot$area)
       s.value(julliot$xy, scalewt(log(julliot$tab[, k] + 1)),
-        sub = names(julliot$tab)[k],csub = 2.5, add.p = TRUE)
+        sub = names(julliot$tab)[k], csub = 2.5, add.p = TRUE)
     }
     par(mfrow = c(1, 1))
   }
@@ -78,9 +78,9 @@ if(adegraphicsLoaded()) {
         
 \dontrun{
 if(requireNamespace("spdep", quietly = TRUE)) {
-  neig0 <- nb2neig(dnearneigh(as.matrix(julliot$xy), 1, 1.8))
+  neig0 <- nb2neig(spdep::dnearneigh(as.matrix(julliot$xy), 1, 1.8))
   if(adegraphicsLoaded()) {
-    g5 <- s.label(julliot$xy, nb = dnearneigh(as.matrix(julliot$xy), 1, 1.8))
+    g5 <- s.label(julliot$xy, nb = spdep::dnearneigh(as.matrix(julliot$xy), 1, 1.8))
   
   } else {
     par(mfrow = c(1, 1))

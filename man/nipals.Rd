@@ -73,9 +73,9 @@ if(adegraphicsLoaded()) {
   if(requireNamespace("lattice", quietly = TRUE)) {
     g1 <- s1d.barchart(acp1$eig, psub.text = "dudi.pca", p1d.horizontal = FALSE, plot = FALSE)
     g2 <- s1d.barchart(nip1$eig, psub.text = "nipals", p1d.horizontal = FALSE, plot = FALSE)
-    g3 <- xyplot(nip1$c1[, 1] ~ acp1$c1[, 1], main = "col scores", xlab = "dudi.pca", 
+    g3 <- lattice::xyplot(nip1$c1[, 1] ~ acp1$c1[, 1], main = "col scores", xlab = "dudi.pca", 
       ylab = "nipals")
-    g4 <- xyplot(nip1$li[, 1] ~ acp1$li[, 1], main = "row scores", xlab = "dudi.pca", 
+    g4 <- lattice::xyplot(nip1$li[, 1] ~ acp1$li[, 1], main = "row scores", xlab = "dudi.pca", 
       ylab = "nipals")
     G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
   }

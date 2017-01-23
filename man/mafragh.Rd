@@ -93,7 +93,7 @@ if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quie
       g9 <- s1d.barchart(coa1$eig, p1d.hori = FALSE, plot = FALSE)
       g10 <- s1d.barchart(ms1$eig, p1d.hori = FALSE, plot = FALSE)
       g11 <- s.corcircle(ms1$as, plot = FALSE)
-      g12 <- xyplot(ms1$li[, 1] ~ coa1$li[, 1])
+      g12 <- lattice::xyplot(ms1$li[, 1] ~ coa1$li[, 1])
       G <- ADEgS(list(g9, g10, g11, g12), layout = c(2, 2))
     }
     

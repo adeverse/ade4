@@ -27,7 +27,7 @@ for which the ring was retrieved in the area \emph{i} during the month \emph{j} 
 if(!adegraphicsLoaded()) {
   # depends of pixmap
   if(requireNamespace("pixmap", quietly = TRUE)) {
-    bkgnd.pnm <- read.pnm(system.file("pictures/sarcelles.pnm", package = "ade4"))
+    bkgnd.pnm <- pixmap::read.pnm(system.file("pictures/sarcelles.pnm", package = "ade4"))
     data(sarcelles)
     par(mfrow = c(4, 3))
     for(i in 1:12) {

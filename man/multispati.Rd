@@ -79,7 +79,7 @@ Thibaut Jombart \email{t.jombart@imperial.ac.uk}
 \seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{
 \dontrun{
-if (requireNamespace("maptools", quietly = TRUE) & requireNamespace(spdep, quietly = TRUE)) {
+if (requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
     data(mafragh)
     maf.xy <- mafragh$xy
     maf.flo <- mafragh$flo
@@ -98,7 +98,7 @@ if (requireNamespace("maptools", quietly = TRUE) & requireNamespace(spdep, quiet
       # use multispati summary
       sum.obj <- summary(obj)
       # compute Imin and Imax
-      L <- listw2mat(eval(as.list(obj$call)$listw))
+      L <- spdep::listw2mat(eval(as.list(obj$call)$listw))
       Imin <- min(eigen(0.5*(L+t(L)))$values)
       Imax <- max(eigen(0.5*(L+t(L)))$values)
       I0 <- -1/(nrow(obj$li)-1)
@@ -157,9 +157,9 @@ if (requireNamespace("maptools", quietly = TRUE) & requireNamespace(spdep, quiet
 
 
     w1 <- -maf.coa$li[, 1:2]
-    w1m <- apply(w1, 2, lag.listw, x = maf.listw)
+    w1m <- apply(w1, 2, spdep::lag.listw, x = maf.listw)
     w1.ms <- maf.coa.ms$li[, 1:2]
-    w1.msm <- apply(w1.ms, 2, lag.listw, x = maf.listw)
+    w1.msm <- apply(w1.ms, 2, spdep::lag.listw, x = maf.listw)
     if(adegraphicsLoaded()) {
       g9 <- s.match(w1, w1m, plab.cex = 0.75, plot = FALSE)
       g10 <- s.match(w1.ms, w1.msm, plab.cex = 0.75, plot = FALSE)

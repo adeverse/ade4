@@ -133,10 +133,10 @@ Improved testing of species traits-environment relationships in the
 fourth corner problem. \emph{Ecology}, \bold{93}, 1525--1526.
 
 Dray, S., Choler, P., Doledec, S., Peres-Neto, P.R., Thuiller, W.,
-Pavoine, S. and ter Braak, C.J.F (2013)
+Pavoine, S. and ter Braak, C.J.F (2014)
 Combining the fourth-corner and the RLQ methods for assessing trait
-responses to environmental variation. \emph{Ecology}, in press.
- }
+responses to environmental variation. \emph{Ecology}, \bold{95}, 14--21. doi:10.1890/13-0196.1
+}
  
 \author{Stéphane Dray \email{stephane.dray@univ-lyon1.fr}}
 \seealso{ \code{\link{rlq}}, \code{\link{combine.4thcorner}}, \code{\link[stats]{p.adjust.methods}}}

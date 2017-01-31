@@ -38,7 +38,7 @@ bwca.dpcoa(x, fac, cofac, scannf = TRUE, nf = 2, ...)
 Objects of class \code{betdpcoa}, \code{witdpcoa} or \code{betwit}
 }
 \references{
-Dray, S., Pavoine, S. and Aguirre de Carcer, D. (2015) Considering external information to improve the phylogenetic comparison of microbial communities: a new approach based on constrained Double Principal Coordinates Analysis (cDPCoA). \emph{Molecular Ecology Resources}, in press.
+Dray, S., Pavoine, S. and Aguirre de Carcer, D. (2015) Considering external information to improve the phylogenetic comparison of microbial communities: a new approach based on constrained Double Principal Coordinates Analysis (cDPCoA). \emph{Molecular Ecology Resources}, \bold{15}, 242--249. doi:10.1111/1755-0998.12300
 }
 \author{
 Stéphane Dray \email{stephane.dray@univ-lyon1.fr}

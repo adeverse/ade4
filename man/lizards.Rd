@@ -3,7 +3,7 @@
 \docType{data}
 \title{Phylogeny and quantitative traits of lizards}
 \description{
-This data set describes the phylogeny of 18 lizards as reported by Bauwens and D\'iaz-Uriarte (1997). 
+This data set describes the phylogeny of 18 lizards as reported by Bauwens and Díaz-Uriarte (1997). 
 It also gives life-history traits corresponding to these 18 species.
 }
 \usage{data(lizards)}
@@ -23,7 +23,7 @@ age.mat (age at maturity (number of months of activity)),
 clutch.F (clutch frequency).
 }
 \references{
-Bauwens, D., and D\'iaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a comparative study. 
+Bauwens, D., and Díaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a comparative study. 
 \emph{American Naturalist}, \bold{149}, 91--111. 
 
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps063.pdf} (in French).

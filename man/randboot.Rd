@@ -35,7 +35,7 @@ randboot(object, ...)
   intervals: when, which, what? A practical guide for medical
   statisticians.\emph{Statistics in medicine}, 19, 1141-1164}
 
-\author{St\'ephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{randboot.multiblock}}}
 \examples{

@@ -38,7 +38,7 @@ match.call())
 \references{Stone M. (1974) Cross-validatory choice and assessment of
   statistical predictions. \emph{Journal of the Royal Statistical
     Society}, 36, 111-147}
-\author{St\'ephane Dray (\email{stephane.dray@univ-lyon1.fr})}
+\author{Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{testdim.multiblock}}}
 \examples{

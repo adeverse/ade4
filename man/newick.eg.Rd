@@ -17,14 +17,14 @@ Trees 8 and 9 were obtained by Clémentine Carpentier-Gimaret.
 
 Tree 10 was obtained from Treezilla Data Sets . 
 
-Trees 11 and 12 are taken from Bauwens and D\'iaz-Uriarte (1997).
+Trees 11 and 12 are taken from Bauwens and Díaz-Uriarte (1997).
 
 Tree 13 is taken from Cheverud and Dow (1985). 
 
 Tree 13 is taken from Martins and Hansen (1997).
 }
 \references{
-Bauwens, D. and D\'iaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a comparative study. 
+Bauwens, D. and Díaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a comparative study. 
 \emph{American Naturalist}, \bold{149}, 91--111. 
 
 Cheverud, J. and Dow, M.M. (1985) An autocorrelation analysis of genetic variation due to lineal fission in social groups of rhesus macaques. 

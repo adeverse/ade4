@@ -4,7 +4,7 @@
 ########## summary.corkdist ##########
 ########## plot.corkdist #############
 
-"mantelkdist" <- function(kd, nrepet = 999) {
+"mantelkdist" <- function(kd, nrepet = 999, ...) {
     if (!inherits(kd,"kdist")) stop ("Object of class 'kdist' expected")
     res <- list()
     ndist <- length(kd)
@@ -33,7 +33,7 @@
         for(j in (i+1):ndist) {
             m2 <- kdistelem2dist(j)
             k <- k+1
-            w <- mantel.randtest (m1, m2, nrepet)
+            w <- mantel.randtest (m1, m2, nrepet, ...)
             w$call <- match.call()
             res[[k]] <- w
         }
@@ -45,7 +45,7 @@
     return(res)
 }
 
-"RVkdist" <- function(kd, nrepet = 999) {
+"RVkdist" <- function(kd, nrepet = 999, ...) {
     if (!inherits(kd,"kdist")) stop ("Object of class 'kdist' expected")
     if (any(!attr(kd,"euclid"))) stop ("Euclidean matrices expected")
     res=list()
@@ -75,7 +75,7 @@
         for(j in (i+1):ndist) {
             m2 <- kdistelem2dist(j)
             k <- k+1
-            w <- RVdist.randtest (m1, m2, nrepet)
+            w <- RVdist.randtest (m1, m2, nrepet, ...)
             w$call <- match.call()
             res[[k]] <- w
         }
@@ -102,7 +102,7 @@
         cat("\n") ; cat(names(x)[3],"\n")
         print.randtest (x[[3]])
      }
-     if (length(x)>33) {
+     if (length(x)>3) {
         cat("...\n")
      }
    cat("list of",length (x), "'randtest' objects\n")
@@ -116,7 +116,7 @@ summary.corkdist <- function (object, ...) {
     ndig0 <- nchar(as.character(as.integer(object[[1]]$rep)))
     pval <- round(unlist(lapply(object, function(x) x$pvalue)), digits = ndig0)
     ndist <- max(design$I)
-    res=matrix(0,ndist,ndist)
+    res <- matrix(0,ndist,ndist)
     res[row(res) <= col(res)] <- NA
     dist.names <- names(eval.parent(as.list(attr(object,"call"))$kd))
     dimnames(res) <- list(dist.names, as.character(1:length(dist.names)))
@@ -126,19 +126,8 @@ summary.corkdist <- function (object, ...) {
 }
 
 
-plot.corkdist <- function (x, whichinrow=NULL, whichincol=NULL, gap=4, nclass = 10, coeff = 1, ...) {
-    "hist.simul.util" <- function(sim, obs, nclass, coeff, title="") {
-        r0 <- c(sim, obs)
-        h0 <- hist(sim, plot = FALSE, nclass = nclass, xlim = xlim0)
-        y0 <- max(h0$counts)
-        l0 <- max(sim) - min(sim)
-        w0 <- l0/(log(length(sim), base = 2) + 1)
-        w0 <- w0 * coeff
-        xlim0 <- range(r0) + c( - w0, w0)
-        hist(sim, plot = TRUE, nclass = nclass, xlim = xlim0, main=title, col=grey(0.9))
-        lines(c(obs, obs), c(y0/2, 0))
-        points(obs, y0/2, pch = 18, cex = 2)
-    }
+plot.corkdist <- function (x, whichinrow = NULL, whichincol = NULL, gap = 4, nclass = 10, ...) {
+
     kdistelem2delta    <- function (i) {
         m1 <- matrix(0, nind, nind)
         m1[row(m1) > col(m1)] <- kd[[i]]
@@ -170,10 +159,8 @@ plot.corkdist <- function (x, whichinrow=NULL, whichincol=NULL, gap=4, nclass = 
                 text(0.5, 0.5, labels[i], cex = cex.labels, font = 1)
             } else if (i>j) {
                 n0 <- (1:nrow(design))[design$I==i & design$J==j]
-                sim <- x[[n0]]$sim
-                obs <- x[[n0]]$obs
                 titre <- row.names(design)[n0]
-                hist.simul.util(sim,obs,title=titre,nclass=nclass,coeff=coeff)
+                plot(x[[n0]], main = titre, nclass = nclass)
             } else if (j>i) {
                 if (attr(x,"test")=="Mantel's tests")
                     plot(kd[[i]],kd[[j]])

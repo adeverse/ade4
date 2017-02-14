@@ -153,7 +153,7 @@ randtest.betwit <- function(xtest, nrepet = 999, ...){
     ## permutation under reduced-model
     for (i in 1:nrepet)
         isim[i] <- sum((lm.wfit(y =  Y.f + Y.r[sample(nrow(Y.r)), ], x = x.resid, w = dudi1$lw)$fitted.values * wt)^2)/inertot
-    return(as.randtest(isim, obs, call = match.call()))
+    return(as.randtest(isim, obs, call = match.call(), ...))
 }
 
 

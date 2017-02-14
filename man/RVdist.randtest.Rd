@@ -5,11 +5,12 @@
 performs a RV Test between two distance matrices. 
 }
 \usage{
-RVdist.randtest(m1, m2, nrepet = 999)
+RVdist.randtest(m1, m2, nrepet = 999, ...)
 }
 \arguments{
   \item{m1, m2}{two Euclidean matrices}
   \item{nrepet}{the number of permutations}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 returns a list of class 'randtest'

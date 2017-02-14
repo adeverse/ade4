@@ -12,7 +12,7 @@ It thus provides tools (graphical displays and test) for analysing phylogenetic,
 orthogram(x, orthobas = NULL, neig = NULL, phylog = NULL,
      nrepet = 999, posinega = 0, tol = 1e-07, na.action = c("fail",
      "mean"), cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass,
-     high.scores = 0,alter=c("greater", "less", "two-sided"))
+     high.scores = 0,alter=c("greater", "less", "two-sided"), ...)
 }
 \arguments{
   \item{x}{a numeric vector corresponding to the quantitative variable}
@@ -32,6 +32,7 @@ orthogram(x, orthobas = NULL, neig = NULL, phylog = NULL,
     the larger part of variance.}
   \item{alter}{a character string specifying the alternative hypothesis,
     must be one of "greater" (default), "less" or "two-sided"}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 The function computes the variance decomposition of a quantitative vector x on an orthonormal basis B. The variable is normalized given the uniform weight to eliminate problem of scales.

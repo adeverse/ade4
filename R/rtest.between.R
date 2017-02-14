@@ -34,5 +34,5 @@
     }
     obs <- inerinter(FALSE)
     sim <- unlist(lapply(1:nrepet, inerinter))
-    return(as.rtest(sim, obs))
+    return(as.randtest(sim, obs, call = match.call(), ...))
 }

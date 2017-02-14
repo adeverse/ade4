@@ -74,7 +74,7 @@
     ## RV computed using the coinertia
     isim <- isim/sqrt(sum(dudiX$eig^2))/sqrt(sum(dudiY$eig^2))
     obs <- isim[1]
-    return(as.randtest(isim[-1],obs,call=match.call()))
+    return(as.randtest(sim = isim[-1], obs = obs, call = match.call(), ...))
   } else {
     stop ("Equal row weights expected")
   }

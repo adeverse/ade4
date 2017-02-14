@@ -1,4 +1,4 @@
-"gearymoran" <- function (bilis, X, nrepet=999,alter=c("greater", "less", "two-sided")) {
+"gearymoran" <- function (bilis, X, nrepet = 999,alter = c("greater", "less", "two-sided")) {
     alter <- match.arg(alter)
     ## bilis doit être une matrice
     bilis <- as.matrix(bilis)
@@ -23,6 +23,6 @@
         restot = double (nrepet),
         PACKAGE="ade4"
     )
-    res <- as.krandtest(obs=res$obs,sim=matrix(res$result,ncol=nvar, byrow=TRUE),names=test.names,alter=alter)
+    res <- as.krandtest(obs = res$obs, sim = matrix(res$result, ncol = nvar, byrow = TRUE), names = test.names, alter = alter)
     return(res)
 }

@@ -1,4 +1,4 @@
-"procuste.randtest" <- function(df1, df2, nrepet=999) {
+"procuste.randtest" <- function(df1, df2, nrepet = 999, ...) {
     if (!is.data.frame(df1)) 
         stop("data.frame expected")
     if (!is.data.frame(df2)) 
@@ -21,5 +21,5 @@
     c2<-ncol(Y)
     isim<-testprocuste(nrepet, lig, c1, c2, as.matrix(X), as.matrix(Y))
     obs<-isim[1]
-    return(as.randtest(isim[-1],obs,call=match.call()))
+    return(as.randtest(sim = isim[-1], obs = obs, call = match.call(), ...))
 }

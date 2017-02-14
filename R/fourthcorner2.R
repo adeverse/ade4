@@ -1,4 +1,4 @@
-"fourthcorner2" <- function(tabR, tabL, tabQ, modeltype = 6,nrepet = 999, tr01 = FALSE, p.adjust.method.G = p.adjust.methods) {  
+"fourthcorner2" <- function(tabR, tabL, tabQ, modeltype = 6,nrepet = 999, tr01 = FALSE, p.adjust.method.G = p.adjust.methods, ...) {  
   
   ## tabR ,tabL, tabQ are 3 data frames containing the data    
   ## permut.model is the permutational model and can take 6 values (1:6). 6 corresponds to the combined approach      
@@ -36,8 +36,8 @@
     stop("modeltype should be 1, 2, 3, 4, 5 or 6")
 
   if(modeltype == 6){
-    test1 <- fourthcorner2(tabR, tabL, tabQ, modeltype = 2,nrepet = nrepet, tr01 = tr01, p.adjust.method.G = p.adjust.method.G)
-    test2 <- fourthcorner2(tabR, tabL, tabQ, modeltype = 4,nrepet = nrepet, tr01 = tr01, p.adjust.method.G = p.adjust.method.G)
+    test1 <- fourthcorner2(tabR, tabL, tabQ, modeltype = 2,nrepet = nrepet, tr01 = tr01, p.adjust.method.G = p.adjust.method.G, ...)
+    test2 <- fourthcorner2(tabR, tabL, tabQ, modeltype = 4,nrepet = nrepet, tr01 = tr01, p.adjust.method.G = p.adjust.method.G, ...)
     res <- combine.4thcorner(test1,test2)
     res$call <- res$tabG$call <- res$trRLQ$call <- match.call()
     return(res)
@@ -204,8 +204,8 @@
   }
   
   provinames <- apply(expand.grid(res$varnames.R, res$varnames.Q), 1, paste, collapse=" / ")
-  res$tabG <- as.krandtest(obs = res$tabG[1, ], sim = res$tabG[-1, ,drop = FALSE], names = provinames, alter = alter.G, call = match.call(), p.adjust.method = p.adjust.method.G)
-  res$trRLQ <- as.randtest(obs = res$trRLQ[1], sim = res$trRLQ[-1], alter = "greater", call = match.call())
+  res$tabG <- as.krandtest(obs = res$tabG[1, ], sim = res$tabG[-1, ,drop = FALSE], names = provinames, alter = alter.G, call = match.call(), p.adjust.method = p.adjust.method.G, ...)
+  res$trRLQ <- as.randtest(obs = res$trRLQ[1], sim = res$trRLQ[-1], alter = "greater", call = match.call(), ...)
   res$tabG$statnames <- names.stat.G
   
   res$call <- match.call()  

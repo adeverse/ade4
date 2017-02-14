@@ -10,10 +10,10 @@
 The mantelkdist and RVkdist functions apply to blocks of distance matrices the mantel.rtest and RV.rtest functions.
 }
 \usage{
-mantelkdist (kd, nrepet = 999)
-RVkdist (kd, nrepet = 999)
+mantelkdist (kd, nrepet = 999, ...)
+RVkdist (kd, nrepet = 999, ...)
 \method{plot}{corkdist}(x, whichinrow = NULL, whichincol = NULL, 
-   gap = 4, nclass = 10, coeff = 1,\dots)
+   gap = 4, nclass = 10,\dots)
 }
 \arguments{
   \item{kd}{a list of class \code{kdist}}
@@ -23,7 +23,6 @@ RVkdist (kd, nrepet = 999)
   \item{whichincol}{a vector of integers to select the graphs in columns (if NULL all the graphs are computed)}
   \item{gap}{an integer to determinate the space between two graphs}
   \item{nclass}{a number of intervals for the histogram}
-  \item{coeff}{an integer to fit the magnitude of the graph}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \value{

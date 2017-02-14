@@ -10,15 +10,17 @@ randtest is a generic function. It proposes methods for the following objects \c
 \usage{
     randtest(xtest, \dots)
     \method{plot}{randtest}(x, nclass = 10, coeff = 1, \dots)
-    as.randtest (sim, obs,alter=c("greater", "less", "two-sided"), call = match.call())
+    as.randtest (sim, obs,alter=c("greater", "less", "two-sided"),
+    output = c("light", "full"), call = match.call())
     \method{print}{randtest}(x, \dots)
 }
 \arguments{
 \item{xtest}{an object used to select a method}
 \item{x}{an object of class \code{randtest}}
 \item{\dots}{\code{\dots} further arguments passed to or from other methods; in \code{plot.randtest} to \code{hist}}
-\item{nclass}{a number of intervals for the histogram}
-\item{coeff}{to fit the magnitude of the graph}
+\item{output}{a character string specifying if all simulations should be stored (\code{"full"}). This was the default until \code{ade4} 1.7-5. Now, by default (\code{"light"}), only the distribution of simulated values is stored in element \code{plot} as produced by the \code{hist} function.}
+\item{nclass}{a number of intervals for the histogram. Ignored if object output is \code{"light"}}
+\item{coeff}{to fit the magnitude of the graph. Ignored if object output is \code{"light"}}
 \item{sim}{a numeric vector of simulated values}
 \item{obs}{a numeric vector of an observed value}
 \item{alter}{a character string specifying the alternative hypothesis,

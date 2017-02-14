@@ -1,4 +1,4 @@
-"randtest.between" <- function(xtest, nrepet=999, ...) {
+"randtest.between" <- function(xtest, nrepet = 999, ...) {
   if (!inherits(xtest,"dudi"))
         stop("Object of class dudi expected")
     if (!inherits(xtest,"between"))
@@ -20,5 +20,5 @@
     inertot <- sum(dudi1$eig)
     isim <- testinter(nrepet, dudi1$lw, dudi1$cw, length(unique(fac)), fac, dudi1$tab, nrow(X), ncol(X))/inertot
     obs <- isim[1]
-    return(as.randtest(isim[-1],obs,call=match.call()))
+    return(as.randtest(sim = isim[-1], obs = obs, call = match.call(), ...))
 }

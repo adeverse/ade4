@@ -44,8 +44,7 @@ randtest.dpcoa <- function(xtest, model = c("1p","1s"), nrep = 99, alter = c("gr
 	}
 		
 	ressim <- sapply(1:nrep, funrandomization)
-	res <- as.randtest(obs = obs, sim = ressim, alter = alter)
-	res$call <- match.call()
+	res <- as.randtest(obs = obs, sim = ressim, alter = alter, call = match.call(), ...)
 	return(res)
 
 }

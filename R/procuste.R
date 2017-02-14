@@ -145,5 +145,5 @@
     c2 <- ncol(xtest$tabY)
     isim <- testprocuste(nrepet, lig, c1, c2, as.matrix(xtest$tabX), as.matrix(xtest$tabY))
     obs <- isim[1]
-    return(as.randtest(isim[-1], obs, call = match.call()))
+    return(as.randtest(isim[-1], obs, call = match.call(), ...))
 }

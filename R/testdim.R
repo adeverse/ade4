@@ -32,7 +32,7 @@
 
     res$sim <- matrix(res$sim[1:(nbax*nrepet)],nrepet,nbax,byrow=TRUE)
     res$obs <- res$obs[1:nbax]
-    res <- as.krandtest(sim=res$sim,obs=res$obs,names=paste("Axis", 1:length(res$obs)),call=match.call())
+    res <- as.krandtest(sim=res$sim,obs=res$obs,names=paste("Axis", 1:length(res$obs)),call=match.call(), ...)
     
     nb <- which(res$pvalue>alpha)
     if(length(nb)==0) {res$nb <- length(res$obs)} else {res$nb <- min(nb)-1}

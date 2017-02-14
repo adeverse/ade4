@@ -67,7 +67,7 @@
 	return(res)
 }
 
-"costatis.randtest" <- function (KTX, KTY, nrepet = 999) {
+"costatis.randtest" <- function (KTX, KTY, nrepet = 999, ...) {
     if (!inherits(KTX, "ktab")) stop("The first argument must be a 'ktab'")
     if (!inherits(KTY, "ktab")) stop("The second argument must be a 'ktab'")
 #### Parameters of first ktab
@@ -96,6 +96,6 @@
 	acpX=dudi.pca(t(ptaX$tab), center=FALSE, scannf=FALSE, nf=ptaX$nf)
 	acpY=dudi.pca(t(ptaY$tab), center=FALSE, scannf=FALSE, nf=ptaY$nf)
 	res <- coinertia(acpX, acpY, scannf = FALSE)
-	rtest1 <- randtest(res, nrepet = nrepet)
+	rtest1 <- randtest(res, nrepet = nrepet, ...)
 	return(rtest1)
 }

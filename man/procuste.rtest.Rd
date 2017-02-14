@@ -7,12 +7,13 @@
 performs a Monte-Carlo Test on the sum of the singular values of a procustean rotation. 
 }
 \usage{
-procuste.rtest(df1, df2, nrepet = 99)
+procuste.rtest(df1, df2, nrepet = 99, ...)
 }
 \arguments{
   \item{df1}{a data frame}
   \item{df2}{a data frame}
   \item{nrepet}{the number of permutations}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 returns a list of class \code{rtest}

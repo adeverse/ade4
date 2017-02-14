@@ -5,12 +5,13 @@
 Performs a Monte-Carlo test on a Costatis analysis. 
 }
 \usage{
-costatis.randtest(KTX, KTY, nrepet = 999)
+costatis.randtest(KTX, KTY, nrepet = 999, ...)
 }
 \arguments{
   \item{KTX}{an objet of class ktab}
   \item{KTY}{an objet of class ktab}
   \item{nrepet}{the number of permutations}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 a list of the class \code{randtest}

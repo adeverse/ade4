@@ -1,4 +1,4 @@
-"procuste.rtest" <- function (df1, df2, nrepet = 99) {
+"procuste.rtest" <- function (df1, df2, nrepet = 99, ...) {
     if (!is.data.frame(df1)) 
         stop("data.frame expected")
     if (!is.data.frame(df2)) 
@@ -24,6 +24,6 @@
     perm <- matrix(0, nrow = nrepet, ncol = 1)
     perm <- apply(perm, 1, function(x) sum(svd(t(X) %*% Y[sample(l1), 
         ])$d))
-    w <- as.rtest(obs = obs, sim = perm, call = match.call())
+    w <- as.randtest(obs = obs, sim = perm, call = match.call(), ...)
     return(w)
 }

@@ -5,12 +5,13 @@
 This function performs a multivariate autocorrelation test.
 }
 \usage{
-multispati.rtest(dudi, listw, nrepet = 99)
+multispati.rtest(dudi, listw, nrepet = 99, ...)
 }
 \arguments{
   \item{dudi}{an object of class \code{dudi} for the duality diagram analysis}
   \item{listw}{an object of class \code{listw} for the spatial dependence of data observations}
   \item{nrepet}{the number of permutations}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 We note X the data frame with the variables, Q the column weight matrix 

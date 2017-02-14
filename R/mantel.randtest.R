@@ -1,4 +1,4 @@
-"mantel.randtest" <- function(m1, m2, nrepet=999) {
+"mantel.randtest" <- function(m1, m2, nrepet = 999, ...) {
     if (!inherits(m1, "dist")) 
         stop("Object of class 'dist' expected")
     if (!inherits(m2, "dist")) 
@@ -11,5 +11,5 @@
     col <- ncol(m1)
     isim<-testmantel(nrepet, col, as.matrix(m1), as.matrix(m2))
     obs<-isim[1]
-    return(as.randtest(isim[-1],obs,call=match.call()))
+    return(as.randtest(sim = isim[-1], obs = obs, call = match.call(), ...))
 }

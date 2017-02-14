@@ -5,12 +5,13 @@
 Performs the series of Monte-Carlo coinertia tests of a Statico analysis (one for each couple of tables). 
 }
 \usage{
-statico.krandtest(KTX, KTY, nrepet = 999)
+statico.krandtest(KTX, KTY, nrepet = 999, ...)
 }
 \arguments{
   \item{KTX}{an objet of class ktab}
   \item{KTY}{an objet of class ktab}
   \item{nrepet}{the number of permutations}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 This function takes 2 ktabs and does a coinertia analysis with \link{coinertia} on each pair of tables. It then uses the \link{randtest} function to do a permutation test on each of these coinertia analyses.

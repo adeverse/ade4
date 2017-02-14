@@ -9,7 +9,7 @@
   4 (sequential approach).
 }
 \usage{
-combine.randtest.rlq(obj1, obj2)
+combine.randtest.rlq(obj1, obj2, ...)
 combine.4thcorner(four1,four2)
 p.adjust.4thcorner(x, p.adjust.method.G = p.adjust.methods,
 p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
@@ -33,6 +33,7 @@ p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
   \item{p.adjust.D}{a string indicating if multiple adjustment for
   tabD/tabD2 should be done globally or only between levels of a factor
   ("levels", as in the original paper of Legendre et al. 1997)}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 

@@ -7,8 +7,8 @@ randtest.rlq <- function(xtest, nrepet = 999, modeltype = 6, ...) {
     stop("modeltype should be 2, 4, 5 or 6")
   
   if(modeltype == 6){
-    test1 <- randtest.rlq(xtest, modeltype = 2, nrepet = nrepet,...)
-    test2 <- randtest.rlq(xtest, modeltype = 4, nrepet = nrepet,...)
+    test1 <- randtest.rlq(xtest, modeltype = 2, nrepet = nrepet, output = "full", ...)
+    test2 <- randtest.rlq(xtest, modeltype = 4, nrepet = nrepet, output = "full", ...)
     res <- combine.randtest.rlq(test1,test2)
     res$call <-  match.call()
     return(res)
@@ -92,11 +92,11 @@ randtest.rlq <- function(xtest, nrepet = 999, modeltype = 6, ...) {
   isim <- testertracerlq(nrepet, R.cw, Q.cw, L.lw, L.cw, Rinit, Qinit, L, typQ, typR,indexR, assignR, indexQ, assignQ, modeltype)
   
   obs <- isim[1]
-  return(as.randtest(isim[-1], obs, call = match.call()))
+  return(as.randtest(isim[-1], obs, call = match.call(), ...))
 }
 
 
-combine.randtest.rlq <- function(obj1, obj2) {
+combine.randtest.rlq <- function(obj1, obj2, ...) {
   if(!inherits(obj1, "randtest") | !inherits(obj2, "randtest"))
     stop("Not a 'randtest' object")
   
@@ -115,7 +115,7 @@ combine.randtest.rlq <- function(obj1, obj2) {
      stop("modeltype(s) must be 2 and 4")
   sim <- cbind(obj1$sim, obj2$sim)
   colnames(sim) <- paste("Model",modeltypes)
-  res <- as.krandtest(sim, c(obj1$obs,obj2$obs), alter = c(obj1$alter, obj2$alter), call=match.call(), p.adjust.method = "none")
+  res <- as.krandtest(sim, c(obj1$obs,obj2$obs), alter = c(obj1$alter, obj2$alter), call=match.call(), p.adjust.method = "none", ...)
   res$comb.pvalue <- max(obj1$pvalue, obj2$pvalue)
   return(res)
 }

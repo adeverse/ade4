@@ -133,7 +133,7 @@
 }
 
 
-rtest.niche <- function(xtest,nrepet=99,...){
+rtest.niche <- function(xtest, nrepet = 99,...){
   if (!inherits(xtest, "dudi"))
     stop("Object of class dudi expected")
   if (!inherits(xtest, "niche"))
@@ -154,6 +154,6 @@ rtest.niche <- function(xtest,nrepet=99,...){
   obs <- c(obs, OMI.mean = mean(obs))
   sim <- sapply(1:nrepet,function(x) apply(apply(Y,2,sample),2,calcul.margi,mil=X))
   sim <- rbind(sim, OMI.mean=apply(sim,2,mean))
-  res <- as.krandtest(obs=obs,sim=t(sim))
+  res <- as.krandtest(obs=obs,sim=t(sim), ...)
   return(res)
 }

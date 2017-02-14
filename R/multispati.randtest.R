@@ -1,4 +1,4 @@
-"multispati.randtest" <- function (dudi, listw, nrepet = 999) {
+"multispati.randtest" <- function (dudi, listw, nrepet = 999, ...) {
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected") 
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
@@ -29,7 +29,7 @@
     inertot<- sum(dudi$eig)
     inersim<- inersim/inertot
     obs <- inersim[1]
-    w<-as.rtest(inersim[-1], obs, call = match.call())
+    w <- as.randtest(sim = inersim[-1], obs = obs, call = match.call(), ...)
     return(w)
 }
 

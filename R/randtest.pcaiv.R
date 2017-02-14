@@ -23,7 +23,7 @@
     isim <- c()
     for(i in 1:nrepet)
       isim[i] <- sum((lm.wfit(y = y,x = x[sample(nrow(x)),], w = dudi1$lw)$fitted.values * wt)^2) / inertot
-    return(as.randtest(isim,obs,call=match.call()))
+    return(as.randtest(sim = isim, obs = obs, call = match.call(), ...))
     
   }
 

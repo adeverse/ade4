@@ -5,11 +5,12 @@
 performs a Monte-Carlo Test on the sum of eigenvalues of a co-inertia analysis. 
 }
 \usage{
-RV.rtest(df1, df2, nrepet = 99)
+RV.rtest(df1, df2, nrepet = 99, ...)
 }
 \arguments{
   \item{df1, df2}{two data frames with the same rows}
   \item{nrepet}{the number of permutations}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 returns a list of class 'rtest'

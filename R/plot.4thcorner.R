@@ -48,7 +48,7 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
                         }
                         else if((x$indexR[x$assignR[j]]==2) & (x$indexQ[x$assignQ[i]]==2)){
                             ## sign relative to the mean of permuted values
-                            res[i,j] <- ifelse(xrand$obs[idx.var] > mean(xrand$sim[,idx.var]), 2, 3) 
+                            res[i,j] <- ifelse(xrand$obs[idx.var] > xrand$expvar$Expectation[idx.var], 2, 3) 
                         }
                     }
                 }

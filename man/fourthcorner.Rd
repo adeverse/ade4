@@ -13,9 +13,9 @@
 \usage{
 fourthcorner(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 =
 FALSE, p.adjust.method.G = p.adjust.methods, p.adjust.method.D =
-p.adjust.methods, p.adjust.D = c("global", "levels"))
+p.adjust.methods, p.adjust.D = c("global", "levels"), ...)
 fourthcorner2(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 =
-FALSE, p.adjust.method.G = p.adjust.methods)
+FALSE, p.adjust.method.G = p.adjust.methods, ...)
 \method{print}{4thcorner}(x, varQ = 1:length(x$varnames.Q), varR =
 1:length(x$varnames.R), stat = c("D", "D2"), ...)
 \method{summary}{4thcorner}(object,...)

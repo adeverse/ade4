@@ -33,7 +33,7 @@
 	return(res)
 }
 
-"statico.krandtest" <- function (KTX, KTY, nrepet = 999) {
+"statico.krandtest" <- function (KTX, KTY, nrepet = 999, ...) {
     if (!inherits(KTX, "ktab")) stop("The first argument must be a 'ktab'")
     if (!inherits(KTY, "ktab")) stop("The second argument must be a 'ktab'")
 #### crossed ktab
@@ -68,10 +68,10 @@
         pcax <- dudi.pca(tx, row.w=lw[[i]], col.w=lwX, scannf=FALSE)
         pcay <- dudi.pca(ty, row.w=lw[[i]], col.w=lwY, scannf=FALSE)
         coin1 <- coinertia(pcax, pcay, scannf=FALSE)
-        res[[i]] <- randtest(coin1, nrepet=nrepet)
-        ksim[,i] <- res[[i]]$sim
-        kobs[i] <- res[[i]]$obs
+        tmp <- randtest(coin1, nrepet = nrepet, output = "full")
+        ksim[,i] <- tmp$sim
+        kobs[i] <- tmp$obs
      }
 #### Return a krandtest
-     as.krandtest(ksim, kobs)
+     as.krandtest(ksim, kobs, call = match.call(), ...)
 }

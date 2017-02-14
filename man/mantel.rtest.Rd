@@ -6,12 +6,13 @@
 Performs a Mantel test between two distance matrices.
 }
 \usage{
-mantel.rtest(m1, m2, nrepet = 99)
+mantel.rtest(m1, m2, nrepet = 99, ...)
 }
 \arguments{
   \item{m1}{an object of class \code{dist}}
   \item{m2}{an object of class \code{dist}}
   \item{nrepet}{the number of permutations}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 an object of class \code{rtest} (randomization tests)

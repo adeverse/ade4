@@ -10,8 +10,8 @@ fourthcorner.rlq <- function(xtest, nrepet = 999, modeltype = 6, typetest = c("a
     stop("modeltype should be 2, 4, 5 or 6")
 
   if(modeltype == 6){
-    test1 <- fourthcorner.rlq(xtest, modeltype = 2,nrepet = nrepet, typetest = typetest, p.adjust.method.G = p.adjust.method.G, p.adjust.method.D = p.adjust.method.D, p.adjust.D = p.adjust.D)
-    test2 <- fourthcorner.rlq(xtest, modeltype = 4,nrepet = nrepet, typetest = typetest, p.adjust.method.G = p.adjust.method.G, p.adjust.method.D = p.adjust.method.D, p.adjust.D = p.adjust.D)
+    test1 <- fourthcorner.rlq(xtest, modeltype = 2,nrepet = nrepet, typetest = typetest, p.adjust.method.G = p.adjust.method.G, p.adjust.method.D = p.adjust.method.D, p.adjust.D = p.adjust.D, ...)
+    test2 <- fourthcorner.rlq(xtest, modeltype = 4,nrepet = nrepet, typetest = typetest, p.adjust.method.G = p.adjust.method.G, p.adjust.method.D = p.adjust.method.D, p.adjust.D = p.adjust.D, ...)
     res <- combine.4thcorner(test1, test2)
     res$call <- res$tabD2$call <- res$tabD$call <- res$tabG$call <- match.call()
     return(res)
@@ -273,8 +273,8 @@ for (i in 1:nrowD){
 }
 
 provinames <- apply(expand.grid(res$colnames.R, res$colnames.Q), 1, paste, collapse=" / ")
-res$tabD <- as.krandtest(obs = res$tabD[1, ], sim = res$tabD[-1, , drop = FALSE], names = provinames, alter = alter.D, call = match.call(), p.adjust.method = p.adjust.method.D)
-res$tabD2 <- as.krandtest(obs = res$tabD2[1, ], sim = res$tabD2[-1, , drop = FALSE], names = provinames, alter = alter.D2, call = match.call(), p.adjust.method = p.adjust.method.D)
+res$tabD <- as.krandtest(obs = res$tabD[1, ], sim = res$tabD[-1, , drop = FALSE], names = provinames, alter = alter.D, call = match.call(), p.adjust.method = p.adjust.method.D, ...)
+res$tabD2 <- as.krandtest(obs = res$tabD2[1, ], sim = res$tabD2[-1, , drop = FALSE], names = provinames, alter = alter.D2, call = match.call(), p.adjust.method = p.adjust.method.D, ...)
 
 
 if(p.adjust.D == "levels"){
@@ -292,7 +292,7 @@ if(p.adjust.D == "levels"){
 }
 
 provinames <- apply(expand.grid(res$varnames.R, res$varnames.Q), 1, paste, collapse=" / ")
-res$tabG <- as.krandtest(obs = res$tabG[1, ], sim = res$tabG[-1, , drop = FALSE], names = provinames, alter = alter.G, call = match.call(), p.adjust.method = p.adjust.method.G)
+res$tabG <- as.krandtest(obs = res$tabG[1, ], sim = res$tabG[-1, , drop = FALSE], names = provinames, alter = alter.G, call = match.call(), p.adjust.method = p.adjust.method.G, ...)
 
 res$tabD$statnames <- names.stat.D
 res$tabD2$statnames <- names.stat.D2

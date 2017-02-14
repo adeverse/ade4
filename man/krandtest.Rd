@@ -8,15 +8,15 @@
 Plot and print many permutation tests. Objects of class \code{'krandtest'} are lists.
 }
 \usage{
-\method{plot}{krandtest}(x, mfrow = NULL, nclass = NULL, main.title = x$names, ...)
+\method{plot}{krandtest}(x, mfrow = NULL, nclass = 10, main.title = x$names, ...)
 \method{print}{krandtest}(x, ...)
-as.krandtest(sim, obs, alter = "greater", call =
-match.call(), names = colnames(sim), p.adjust.method = "none")
+as.krandtest(sim, obs, alter = "greater", call = match.call(),
+names = colnames(sim), p.adjust.method = "none", output = c("light", "full"))
 }
 \arguments{
   \item{x}{: an object of class \code{'krandtest'}}
   \item{mfrow}{: a vector of the form 'c(nr,nc)', otherwise computed by as special own function \code{n2mfrow}}
-  \item{nclass}{: a number of intervals for the histogram}
+  \item{nclass}{a number of intervals for the histogram. Ignored if object output is \code{"light"}}
   \item{main.title}{: a string of character for the main title}
   \item{\dots}{: further arguments passed to or from other methods}
   \item{sim}{a matrix or data.frame of simulated values (repetitions as
@@ -30,6 +30,7 @@ match.call(), names = colnames(sim), p.adjust.method = "none")
   \item{names}{a vector of names for tests}
   \item{p.adjust.method}{a string indicating a method for multiple
     adjustment, see \code{p.adjust.methods} for possible choices.}
+  \item{output}{a character string specifying if all simulations should be stored (\code{"full"}). This was the default until \code{ade4} 1.7-5. Now, by default (\code{"light"}), only the distribution of simulated values is stored in element \code{plot} as produced by the \code{hist} function.} 
 }
 \value{
 \code{plot.krandtest} draws the \emph{p} simulated values histograms and the position of the observed value.

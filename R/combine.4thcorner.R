@@ -32,7 +32,9 @@ combine.4thcorner <- function(four1,four2){
     res$tabG$expvar[i,] <-  tmp$tabG$expvar[i,]
     res$tabG$pvalue[i] <-  tmp$tabG$pvalue[i]
     res$tabG$adj.pvalue[i] <- tmp$tabG$adj.pvalue[i]
-    res$tabG$sim[,i] <- tmp$tabG$sim[,i]
+    res$tabG$plot[[i]] <- tmp$tabG$plot[[i]]
+    if(!inherits(res$tabG, "lightkrandtest"))
+        res$tabG$sim[,i] <- tmp$tabG$sim[,i]
   }
   res$tabG$call <- match.call()
   
@@ -53,7 +55,9 @@ combine.4thcorner <- function(four1,four2){
       res$tabD$expvar[i,] <-  tmp$tabD$expvar[i,]
       res$tabD$pvalue[i] <-  tmp$tabD$pvalue[i]
       res$tabD$adj.pvalue[i] <- tmp$tabD$adj.pvalue[i]
-      res$tabD$sim[,i] <- tmp$tabD$sim[,i]
+      res$tabD$plot[[i]] <- tmp$tabD$plot[[i]]
+      if(!inherits(res$tabD, "lightkrandtest"))
+          res$tabD$sim[,i] <- tmp$tabD$sim[,i]
       
       ## For tabD2
       idx <- ifelse(four2$tabD2$adj.pvalue[i] > four1$tabD2$adj.pvalue[i], 1, 2)
@@ -65,7 +69,9 @@ combine.4thcorner <- function(four1,four2){
       res$tabD2$expvar[i,] <-  tmp$tabD2$expvar[i,]
       res$tabD2$pvalue[i] <-  tmp$tabD2$pvalue[i]
       res$tabD2$adj.pvalue[i] <- tmp$tabD2$adj.pvalue[i]
-      res$tabD2$sim[,i] <- tmp$tabD2$sim[,i]
+      res$tabD2$plot[[i]] <- tmp$tabD2$plot[[i]]
+      if(!inherits(res$tabD2, "lightkrandtest"))
+          res$tabD2$sim[,i] <- tmp$tabD2$sim[,i]
     }
     res$tabD2$call <- res$tabD$call <- match.call()
   } else {

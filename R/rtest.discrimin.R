@@ -43,5 +43,5 @@
     }
     obs <- inertia.ratio(perm = FALSE)
     sim <- unlist(lapply(1:nrepet, inertia.ratio))
-    return(as.rtest(sim, obs))
+    return(as.randtest(sim, obs, call = match.call(), ...))
 }

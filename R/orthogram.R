@@ -1,7 +1,7 @@
 "orthogram"<- function (x, orthobas = NULL, neig = NULL, phylog = NULL,
     nrepet = 999, posinega = 0, tol = 1e-07,
     na.action = c("fail", "mean"),
-    cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0,alter=c("greater", "less", "two-sided"))
+    cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0,alter=c("greater", "less", "two-sided"), ...)
 {
     .Deprecated("orthogram", "ade4", msg="This function is now deprecated. Please use the fuction 'orthogram' in adephylo.")
     "orthoneig" <- function (obj) {
@@ -159,22 +159,22 @@
         nclass <- as.integer (nrepet/25)
         nclass <- min(c(nclass,40))
     }
-    plot.randtest (as.randtest (w$R2Max[-1],w$R2Max[1],call=match.call()),main = "R2Max",nclass=nclass)
+    plot.randtest (as.randtest (w$R2Max[-1],w$R2Max[1],call=match.call(), output = "full"),main = "R2Max",nclass=nclass)
     if (posinega !=0) {
-        plot.randtest (as.randtest (w$ratio[-1],w$ratio[1],call=match.call()),main = "Ratio",nclass=nclass)
+        plot.randtest (as.randtest (w$ratio[-1],w$ratio[1],call=match.call(), output = "full"),main = "Ratio",nclass=nclass)
     } else {
-        plot.randtest (as.randtest (w$SkR2k[-1],w$SkR2k[1],call=match.call()),main = "SkR2k",nclass=nclass)
+        plot.randtest (as.randtest (w$SkR2k[-1],w$SkR2k[1],call=match.call(), output = "full"),main = "SkR2k",nclass=nclass)
     }
-    plot.randtest (as.randtest (w$Dmax[-1],w$Dmax[1],call=match.call()),main = "DMax",nclass=nclass)
-    plot.randtest (as.randtest (w$SCE[-1],w$SCE[1],call=match.call()),main = "SCE",nclass=nclass)
+    plot.randtest (as.randtest (w$Dmax[-1],w$Dmax[1], call=match.call(), output = "full"),main = "DMax",nclass=nclass)
+    plot.randtest (as.randtest (w$SCE[-1],w$SCE[1], call=match.call(), output = "full"),main = "SCE", nclass=nclass)
 
     w$param <- w$observed <- w$vecpro <- NULL
     w$phylogram <- NULL
     w$phylo95 <- w$sig025 <- w$sig975 <- NULL
     if (posinega==0) {
-      w <- as.krandtest(obs=c(w$R2Max[1],w$SkR2k[1],w$Dmax[1],w$SCE[1]),sim=cbind(w$R2Max[-1],w$SkR2k[-1],w$Dmax[-1],w$SCE[-1]),names=c("R2Max","SkR2k","Dmax","SCE"),alter=alter,call=match.call())
+      w <- as.krandtest(obs=c(w$R2Max[1],w$SkR2k[1],w$Dmax[1],w$SCE[1]),sim=cbind(w$R2Max[-1],w$SkR2k[-1],w$Dmax[-1],w$SCE[-1]),names=c("R2Max","SkR2k","Dmax","SCE"),alter=alter,call=match.call(), ...)
       } else {
-         w <- as.krandtest(obs=c(w$R2Max[1],w$SkR2k[1],w$Dmax[1],w$SCE[1],w$ratio[1]),sim=cbind(w$R2Max[-1],w$SkR2k[-1],w$Dmax[-1],w$SCE[-1],w$ratio[-1]),names=c("R2Max","SkR2k","Dmax","SCE","ratio"),alter=alter,call=match.call())
+         w <- as.krandtest(obs=c(w$R2Max[1],w$SkR2k[1],w$Dmax[1],w$SCE[1],w$ratio[1]),sim=cbind(w$R2Max[-1],w$SkR2k[-1],w$Dmax[-1],w$SCE[-1],w$ratio[-1]),names=c("R2Max","SkR2k","Dmax","SCE","ratio"),alter=alter,call=match.call(), ...)
       }
 
     if (high.scores != 0)

@@ -1,4 +1,4 @@
-"multispati.rtest" <- function (dudi, listw, nrepet = 99) {
+"multispati.rtest" <- function (dudi, listw, nrepet = 99, ...) {
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
     if (!(identical(all.equal(dudi$lw,rep(1/nrow(dudi$tab), nrow(dudi$tab))),TRUE))) {
@@ -26,7 +26,7 @@
     obs <- fun (permuter = FALSE)/inertot
     if (nrepet == 0) return(obs)
     perm <- unlist(lapply(1:nrepet, fun))/inertot
-    w <- as.rtest(obs = obs, sim = perm, call = match.call())
+    w <- as.randtest(obs = obs, sim = perm, call = match.call(), ...)
     return(w)
 }
 

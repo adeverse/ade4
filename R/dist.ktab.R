@@ -655,7 +655,7 @@ self-similarity\n")
             if(is.null(attributes(df)$col.blocks))
                 stop("The fuzzy data set must be prepared with the function prep.fuzzy")
             
-            if (!all(abs(apply(df, 1, sum, na.rm = TRUE) - 1) < tol, na.rm = TRUE))
+            if(!all(abs(apply(df, 1, sum, na.rm = TRUE) - floor(apply(df, 1, sum, na.rm = TRUE))) < tol, na.rm = TRUE))
                 stop("The fuzzy data set must be prepared with the function prep.fuzzy")
             
             #*****************************************************#
@@ -1546,7 +1546,7 @@ self-similarity\n")
             if(is.null(attributes(df)$col.blocks))
                 stop("The fuzzy data set must be prepared with the function prep.fuzzy")
             
-            if (!all(abs(apply(df, 1, sum, na.rm = TRUE) - 1) < tol, na.rm = TRUE))
+            if(!all(abs(apply(df, 1, sum, na.rm = TRUE) - floor(apply(df, 1, sum, na.rm = TRUE))) < tol, na.rm = TRUE))
                 stop("The fuzzy data set must be prepared with the function prep.fuzzy")
             
             #*****************************************************#
@@ -2194,7 +2194,7 @@ self-similarity\n")
                 if(is.null(attributes(df)$col.blocks))
                     stop("The fuzzy data set must be prepared with the function prep.fuzzy")
                 
-                if (!all(abs(apply(df, 1, sum, na.rm = TRUE) - 1) < tol, na.rm = TRUE))
+                if(!all(abs(apply(df, 1, sum, na.rm = TRUE) - floor(apply(df, 1, sum, na.rm = TRUE))) < tol, na.rm = TRUE))
                     stop("The fuzzy data set must be prepared with the function prep.fuzzy")
                 
                 #*****************************************************#
@@ -2983,7 +2983,7 @@ self-similarity\n")
                     if(is.null(attributes(df)$col.blocks))
                         stop("The fuzzy data set must be prepared with the function prep.fuzzy")
                     
-                    if (!all(abs(apply(df, 1, sum, na.rm = TRUE) - 1) < tol, na.rm = TRUE))
+                    if(!all(abs(apply(df, 1, sum, na.rm = TRUE) - floor(apply(df, 1, sum, na.rm = TRUE))) < tol, na.rm = TRUE))
                         stop("The fuzzy data set must be prepared with the function prep.fuzzy")
                     
                     #*****************************************************#

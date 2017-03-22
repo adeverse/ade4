@@ -1,7 +1,7 @@
 #####################################
 ##              Load DLL           ##
 #####################################
-useDynLib(ade4, .registration = TRUE, .fixes = "C_")
+useDynLib(ade4, .registration = TRUE)
 
 
 #####################################

@@ -1,3 +1,147 @@
+2017-03-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-6 ----------
+
+2017-03-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE: Fix an error with C routines in a Linux configuration
+
+2017-03-22  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, src/init.c: Fix an error with C routines in a Windows
+	configuration (32bit)
+
+2017-03-22  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/divcmax.Rd: Example in divcmax becomes 'dontrun', pending
+	correction
+
+2017-03-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, src/init.c: Register native routines (new
+	recommendations in R-3.4.0)
+
+2017-02-24  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dist.ktab.R: Remove some useless checks
+
+2017-02-16  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/casitas.Rd: Update an invalid URL
+
+2017-02-14  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dist.ktab.R: Revert commit
+	0894456972fea6668635069832ef6a7739c1f150 (bug was not fixed by the
+	previous corrections).
+
+2017-02-14  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* NAMESPACE, R/RV.rtest.R, R/RVdist.randtest.R, R/betwitdpcoa.R,
+	R/combine.4thcorner.R, R/corkdist.R, R/costatis.R,
+	R/fourthcorner.R, R/fourthcorner.rlq.R, R/fourthcorner2.R,
+	R/gearymoran.R, R/krandtest.R, R/mantel.randtest.R,
+	R/mantel.rtest.R, R/multispati.randtest.R, R/multispati.rtest.R,
+	R/niche.R, R/orthogram.R, R/plot.4thcorner.R, R/procuste.R,
+	R/procuste.randtest.R, R/procuste.rtest.R, R/randtest.R,
+	R/randtest.amova.R, R/randtest.between.R, R/randtest.cca.R,
+	R/randtest.coinertia.R, R/randtest.discrimin.R, R/randtest.dpcoa.R,
+	R/randtest.pcaiv.R, R/randtest.pcaivortho.R, R/randtest.rlq.R,
+	R/rtest.R, R/rtest.between.R, R/rtest.discrimin.R, R/statico.R,
+	R/testdim.R, man/RV.rtest.Rd, man/RVdist.randtest.Rd,
+	man/combine.4thcorner.Rd, man/corkdist.Rd,
+	man/costatis.randtest.Rd, man/fourthcorner.Rd, man/krandtest.Rd,
+	man/mantel.randtest.Rd, man/mantel.rtest.Rd,
+	man/multispati.randtest.Rd, man/multispati.rtest.Rd,
+	man/orthogram.Rd, man/procuste.randtest.Rd, man/procuste.rtest.Rd,
+	man/randtest.Rd, man/rtest.Rd, man/statico.krandtest.Rd: Modify the
+	structures of classes (randtest and rtest) to store outputs of
+	randomization procedures
+
+2017-02-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dist.ktab.R: Correct a bug in the management of fuzzy data.
+	Message of Jean-Yves BARNAGAUD on adelist (08/02/2017).
+
+2017-02-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dist.ktab.R: Reindent lines
+
+2017-02-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/divc.Rd, man/divcmax.Rd, man/lizards.Rd, man/newick.eg.Rd,
+	man/randboot.Rd, man/randxval.Rd: Correct some typo
+
+2017-01-31  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/bwca.dpcoa.Rd, man/fourthcorner.Rd, man/mafragh.Rd,
+	man/phylog.Rd: Update bibliographic references (in press)
+
+2017-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/bwca.dpcoa.Rd, man/julliot.Rd, man/mafragh.Rd,
+	man/multispati.Rd, man/nipals.Rd, man/olympic.Rd, man/pcw.Rd,
+	man/sarcelles.Rd: Solve errors in examples not runned
+
+2017-01-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/area.plot.Rd, man/atya.Rd, man/avijons.Rd, man/julliot.Rd: 
+	Correct the import of functions of the suggested packages used in
+	some examples.
+
+2017-01-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/acacia.Rd, man/area.plot.Rd, man/avijons.Rd, man/between.Rd,
+	man/butterfly.Rd, man/capitales.Rd, man/cca.Rd, man/corvus.Rd,
+	man/doubs.Rd, man/dudi.fca.Rd, man/euro123.Rd, man/gearymoran.Rd,
+	man/ggtortoises.Rd, man/gridrowcol.Rd, man/julliot.Rd,
+	man/kcponds.Rd, man/lascaux.Rd, man/mafragh.Rd, man/meau.Rd,
+	man/multispati.Rd, man/nipals.Rd, man/olympic.Rd,
+	man/orthobasis.Rd, man/pcaivortho.Rd, man/pcw.Rd,
+	man/plot.between.Rd, man/plot.within.Rd, man/presid2002.Rd,
+	man/procuste.Rd, man/randEH.Rd, man/santacatalina.Rd,
+	man/scatter.coa.Rd, man/t3012.Rd, man/trichometeo.Rd,
+	man/westafrica.Rd, man/witwit.coa.Rd, man/zealand.Rd: Complete some
+	T/F in TRUE/FALSE
+
+2017-01-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION, man/area.plot.Rd, man/atlas.Rd, man/atya.Rd,
+	man/avijons.Rd, man/buech.Rd, man/butterfly.Rd, man/capitales.Rd,
+	man/elec88.Rd, man/ggtortoises.Rd, man/irishdata.Rd,
+	man/julliot.Rd, man/jv73.Rd, man/kcponds.Rd, man/mafragh.Rd,
+	man/maples.Rd, man/mdpcoa.Rd, man/multispati.Rd,
+	man/multispati.randtest.Rd, man/multispati.rtest.Rd, man/neig.Rd,
+	man/nipals.Rd, man/olympic.Rd, man/oribatid.Rd, man/phylog.Rd,
+	man/rhizobium.Rd, man/s.image.Rd, man/s.kde2d.Rd, man/s.logo.Rd,
+	man/t3012.Rd, man/tintoodiel.Rd, man/vegtf.Rd, man/westafrica.Rd: 
+	'quiet' parameter becomes 'quietly' in the 'requireNamespace'
+	function. Add 'adephylo' in the suggested packages. Correct the
+	import of functions of the suggested packages used in examples.
+
+2017-01-13  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/between.R: use weights to properly darw ellipses when
+	non-uniform row weights are used.
+
+2017-01-13  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/within.R: Correct a small bug in plot of wca. Use weights to
+	plot ellipses (this allow that ellipses are centred on 0 when coa is
+	used). Thanks to Sylvain Dolédec.
+
+2017-01-12  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/chats.Rd: Correct typos in a help file
+
+2016-12-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/rpjdl.Rd: Correct the species number in the help file of rpjdl
+
+2016-12-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-5 ----------
+
 2016-12-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-5 ----------

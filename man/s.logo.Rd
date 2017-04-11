@@ -42,8 +42,8 @@ The matched call.
 }
 \author{Daniel Chessel and Thibaut Jombart \email{t.jombart@imperial.ac.uk}}
 \examples{
-if(!adegraphicsLoaded()) {
-  if(requireNamespace("pixmap", quietly = TRUE)) {
+if(requireNamespace("pixmap", quietly = TRUE) & requireNamespace("sp", quietly = TRUE)) {
+  if(!adegraphicsLoaded()) {
   	data(ggtortoises)
   	a1 <- ggtortoises$area
   	area.plot(a1)
@@ -52,15 +52,13 @@ if(!adegraphicsLoaded()) {
   	s.label(ggtortoises$misc, grid = FALSE, include.ori = FALSE, addaxes = FALSE, add.p = TRUE)
   	listico <- ggtortoises$ico[as.character(ggtortoises$pop$carap)]
   	s.logo(ggtortoises$pop, listico, add.p = TRUE)
-  
-  	data(capitales)
-  	index <- pmatch(tolower(attr(capitales$dist, "Labels")), names(capitales$logo))
-  	w1 <- capitales$area
-  	area.plot(w1)
-  	rect(min(w1$x), min(w1$y), max(w1$x), max(w1$y), col = "lightblue")
-  	invisible(lapply(split(w1, w1$id), function(x) polygon(x[, -1],col = "white")))
-  	s.logo(capitales$xy, capitales$logo, klogo = index, add.plot = TRUE, clogo = 1) 
-    # depends on pixmap
+  	
+  } else {
+  	data(capitales, package = "ade4")
+  	# 'capitales' data doesn't work with ade4 anymore
+    g3 <- s.logo(capitales$xy[sort(rownames(capitales$xy)), ], capitales$logo, 
+      Sp = capitales$Spatial, pbackground.col = "lightblue", pSp.col = "white", 
+      pgrid.draw = FALSE)
   }
 }}
 \keyword{multivariate}

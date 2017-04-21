@@ -100,7 +100,7 @@ S3method("randboot","multiblock")
 S3method("randtest","amova")
 S3method("randtest","betwit")
 S3method("randtest","between")
-S3method("randtest","cca")
+#S3method("randtest","caiv")
 S3method("randtest","coinertia")
 S3method("randtest","discrimin")
 S3method("randtest","dpcoa")
@@ -129,7 +129,7 @@ S3method("screeplot","dudi")
 S3method("summary","4thcorner")
 S3method("summary","between")
 S3method("summary","betwit")
-S3method("summary","cca")
+#S3method("summary","caiv")
 S3method("summary","coinertia")
 S3method("summary","corkdist")
 S3method("summary","dist")
@@ -209,7 +209,7 @@ export("dudi.acm", "dudi.coa", "dudi.dec", "dudi.fca", "dudi.fpca", "dudi.hillsm
 export("as.dudi", "dist.dudi", "dudi.type","inertia.dudi", "is.dudi", "prep.fuzzy.var", "reciprocal.coa", "redo.dudi")
 
 ## ******* 2/3-table methods *******
-export("cca", "coinertia", "discrimin", "discrimin.coa", "fourthcorner", "fourthcorner2", "fourthcorner.rlq", "niche", "pcaiv", "pcaivortho", "procuste", "rlq", "withinpca", "witwit.coa", "witwitsepan")
+export("coinertia", "discrimin", "discrimin.coa", "fourthcorner", "fourthcorner2", "fourthcorner.rlq", "niche", "pcaiv", "pcaivortho", "procuste", "rlq", "withinpca", "witwit.coa", "witwitsepan")
 export("combine.4thcorner", "combine.randtest.rlq", "mantel.randtest", "mantel.rtest", "niche.param", "p.adjust.4thcorner", "procuste.randtest", "procuste.rtest", "RVdist.randtest")
 
 ## ******* K-table methods *******

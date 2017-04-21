@@ -56,6 +56,8 @@
     w <- t(w) %*% as.matrix(X$l1)
     w <- data.frame(w)
     X$cor <- w
+    if (inherits(dudi, "coa")) 
+      class(X) <- c("caiv", class(X))
     return(X)
 }
 
@@ -83,20 +85,22 @@
     s.corcircle(x$as, xax, yax, sub = "Inertia axes", csub = 2)
     s.match(x$li, x$ls, xax, yax, clabel = 1.5, sub = "Scores and predictions", 
         csub = 2)
-    if (inherits(x, "cca")) 
+    if (inherits(x, "caiv")) 
         s.label(x$co, xax, yax, clabel = 0, cpoint = 3, add.plot = TRUE)
-    if (inherits(x, "cca")) 
-        s.label(x$co, xax, yax, clabel = 1.25, sub = "Species", 
-            csub = 2)
-    else s.arrow(x$c1, xax = xax, yax = yax, sub = "Variables", 
-        csub = 2, clabel = 1.25)
+    if (inherits(x, "caiv")) 
+        s.label(x$co, xax, yax, clabel = 1.25, sub = "Species", csub = 2)
+    else s.arrow(x$c1, xax = xax, yax = yax, sub = "Variables", csub = 2, 
+                 clabel = 1.25)
     scatterutil.eigen(x$eig, wsel = c(xax, yax))
 }
 
 "print.pcaiv" <- function (x, ...) {
     if (!inherits(x, "pcaiv")) 
-        stop("to be used with 'pcaiv' object")
-    cat("Principal Component Analysis with Instrumental Variables\n")
+      stop("to be used with 'pcaiv' object")
+    if (inherits(x, "caiv"))
+      cat("Canonical correspondence analysis\n")
+    else
+      cat("Principal Component Analysis with Instrumental Variables\n")
     cat("call: ")
     print(x$call)
     cat("class: ")
@@ -147,7 +151,11 @@
 }
 
 summary.pcaiv <- function(object, ...){
-  thetitle <- "Principal component analysis with instrumental variables" 
+  if (inherits(object, "caiv"))
+    thetitle <- "Canonical correspondence analysis"
+  else
+    thetitle <- "Principal component analysis with instrumental variables"
+  
   cat(thetitle)
   cat("\n\n")
   NextMethod()
@@ -155,25 +163,27 @@ summary.pcaiv <- function(object, ...){
   appel <- as.list(object$call)
   dudi <- eval.parent(appel$dudi)
 
-  cat(paste("Total unconstrained inertia (",deparse(appel$dudi),"): ", sep = ""))
+  cat(paste("Total unconstrained inertia (", deparse(appel$dudi), "): ", sep = ""))
   cat(signif(sum(dudi$eig), 4))
   cat("\n\n")
 
-  cat(paste("Inertia of" ,deparse(appel$dudi),"explained by", deparse(appel$df), "(%): "))
+  cat(paste("Inertia of", deparse(appel$dudi), "explained by", deparse(appel$df), "(%): "))
   cat(signif(sum(object$eig) / sum(dudi$eig) * 100, 4))
   cat("\n\n")
 
-  cat("Decomposition per axis:\n")
-
-  sumry <- array(0, c(object$nf, 7), list(1:object$nf, c("iner", "inercum", "inerC", "inercumC", "ratio", "R2", "lambda")))
-  sumry[, 1] <- dudi$eig[1:object$nf]
-  sumry[, 2] <- cumsum(dudi$eig[1:object$nf])
-  varpro <- apply(object$ls, 2, function(x) sum(x * x * object$lw))
-  sumry[, 3] <- varpro
-  sumry[, 4] <- cumsum(varpro)
-  sumry[, 5] <- cumsum(varpro)/cumsum(dudi$eig[1:object$nf])
-  sumry[, 6] <- object$eig[1:object$nf]/varpro
-  sumry[, 7] <- object$eig[1:object$nf]
-  print(sumry, digits = 3)
-  invisible(sumry)
+  if (!inherits(object, "caiv")) {
+    cat("Decomposition per axis:\n")
+    
+    sumry <- array(0, c(object$nf, 7), list(1:object$nf, c("iner", "inercum", "inerC", "inercumC", "ratio", "R2", "lambda")))
+    sumry[, 1] <- dudi$eig[1:object$nf]
+    sumry[, 2] <- cumsum(dudi$eig[1:object$nf])
+    varpro <- apply(object$ls, 2, function(x) sum(x * x * object$lw))
+    sumry[, 3] <- varpro
+    sumry[, 4] <- cumsum(varpro)
+    sumry[, 5] <- cumsum(varpro)/cumsum(dudi$eig[1:object$nf])
+    sumry[, 6] <- object$eig[1:object$nf]/varpro
+    sumry[, 7] <- object$eig[1:object$nf]
+    print(sumry, digits = 3)
+    invisible(sumry)
+  }
 }

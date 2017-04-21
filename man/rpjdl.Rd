@@ -34,18 +34,20 @@ See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps048.pdf} (in F
 \examples{
 \dontrun{
 data(rpjdl)
-xy <- dudi.coa(rpjdl$fau, scann = FALSE)$l1
-xy1 <- dudi.pca(rpjdl$fau, scal = FALSE, scann = FALSE)$l1
+coa1 <- dudi.coa(rpjdl$fau, scann = FALSE)
+pca1 <- dudi.pca(rpjdl$fau, scal = FALSE, scann = FALSE)
 
 if(adegraphicsLoaded()) {
-  g1 <- s.distri(xy, rpjdl$fau, xax = 2, yax = 1, starSize = 0.3, ellipseSize = 0, plab.cex = 0)
-  g2 <- s.distri(xy1, rpjdl$fau, xax = 2, yax = 1, starSize = 0.3, ellipseSize = 0, plab.cex = 0)
+  g1 <- s.distri(coa1$l1, rpjdl$fau, xax = 2, yax = 1, starSize = 0.3, 
+                 ellipseSize = 0, plab.cex = 0)
+  g2 <- s.distri(pca1$l1, rpjdl$fau, xax = 2, yax = 1, starSize = 0.3, 
+                 ellipseSize = 0, plab.cex = 0)
 } else {
-  s.distri(xy, rpjdl$fau, 2, 1, cstar = 0.3, cell = 0)
-  s.distri(xy1, rpjdl$fau, 2, 1, cstar = 0.3, cell = 0)
+  s.distri(coa1$l1, rpjdl$fau, 2, 1, cstar = 0.3, cell = 0)
+  s.distri(pca1$l1, rpjdl$fau, 2, 1, cstar = 0.3, cell = 0)
 }
 
-cca1 <- cca(rpjdl$fau, rpjdl$mil, scan = FALSE)
-plot(cca1)
+caiv1 <- pcaiv(coa1, rpjdl$mil, scan = FALSE)
+plot(caiv1)
 }}
 \keyword{datasets}

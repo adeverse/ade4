@@ -235,10 +235,8 @@ export("bwca.dpcoa")
 #####################################
 
 ## ******* deprecated *******
-## "ade4toR"
 ## "between"
 ## "betweencoinertia"
-## "Rtoade4"
 ## "within"
 ## "withincoinertia"
 

@@ -23,14 +23,15 @@
   for(i in 1:length(obs)){
       
     vec.sim <- na.omit(sim[,i])
-    
-    ## compute histogram (mainly used for 'light' randtest)
-    r0 <- c(vec.sim, obs[i])
-    l0 <- max(vec.sim) - min(vec.sim)
-    w0 <- l0/(log(length(vec.sim), base = 2) + 1)
-    xlim0 <- range(r0) + c(-w0, w0)
-    h0 <- hist(vec.sim, plot = FALSE, nclass = 10)
-    res$plot[[i]] <- list(hist = h0, xlim = xlim0)
+    if(length(vec.sim > 0)){
+        ## compute histogram (mainly used for 'light' randtest)
+        r0 <- c(vec.sim, obs[i])
+        l0 <- max(vec.sim) - min(vec.sim)
+        w0 <- l0/(log(length(vec.sim), base = 2) + 1)
+        xlim0 <- range(r0) + c(-w0, w0)
+        h0 <- hist(vec.sim, plot = FALSE, nclass = 10)
+        res$plot[[i]] <- list(hist = h0, xlim = xlim0)
+    }
     
     res$alter[i] <- match.arg(res$alter[i], c("greater", "less", "two-sided"))
     res$expvar[i,1] <- (obs[i] - mean(vec.sim)) / sd(vec.sim)

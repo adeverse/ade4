@@ -10,6 +10,7 @@
         res <- list(obs = obs)
         
     res$alter <- match.arg(alter)
+    sim <- na.omit(sim)
     res$rep <- length(sim)
     res$expvar <- c(Std.Obs=(res$obs-mean(sim))/sd(sim),Expectation=mean(sim),Variance=var(sim))
     if(res$alter=="greater"){
@@ -25,12 +26,14 @@
     }
     
     ## compute histogram (mainly used for 'light' randtest)
-    r0 <- c(sim, obs)
-    l0 <- max(sim) - min(sim)
-    w0 <- l0/(log(length(sim), base = 2) + 1)
-    xlim0 <- range(r0) + c(-w0, w0)
-    h0 <- hist(sim, plot = FALSE, nclass = 10)
-    res$plot <- list(hist = h0, xlim = xlim0)
+    if(length(sim) > 0){
+        r0 <- c(sim, obs)
+        l0 <- max(sim) - min(sim)
+        w0 <- l0/(log(length(sim), base = 2) + 1)
+        xlim0 <- range(r0) + c(-w0, w0)
+        h0 <- hist(sim, plot = FALSE, nclass = 10)
+        res$plot <- list(hist = h0, xlim = xlim0)
+    }
     
     res$call <- call
     class(res) <- "randtest"

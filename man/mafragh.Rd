@@ -13,7 +13,7 @@ This data set gives environmental and spatial informations about species and sit
         \item{flo}{is a data frame with 97 sites and 56 species.}
         \item{neig}{is the neighbourhood graph of the 97 sites (an object of class 'neig').}
         \item{env}{is a data frame with 97 sites and 11 environmental variables.}
-        \item{partition}{is a factor classifying the 97 sites in 5 classes.}
+        \item{partition}{is a factor classifying the 97 sites in 7 classes.}
         \item{area}{is a data frame of class \code{area}}
         \item{tre}{a character providing the phylogeny as a newick object}
         \item{traits}{a list of data frame. Each data frame provides the value of biological traits for plant species}

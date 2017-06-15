@@ -23,8 +23,8 @@ This data set gives environmental and spatial informations about species and sit
 }}
 
 \source{
-  de Belair, G. and Bencheikh-Lehocine, M. (1987) Composition et déterminisme de la végétation d'une 
-  plaine côtière marécageuse : La Mafragh (Annaba, Algérie). \emph{Bulletin d'Ecologie}, \bold{18}, 393--407.
+  de Bélair, Gérard and Bencheikh-Lehocine, Mahmoud (1987) Composition et déterminisme de la végétation d'une 
+  plaine côtière marécageuse : La Mafragh (Annaba, Algérie). \emph{Bulletin d'Ecologie}, \bold{18}(4), 393--407.
   
   Pavoine, S., Vela, E., Gachet, S., de Bélair, G. and Bonsall, M. B. (2011)
   Linking patterns in phylogeny, traits, abiotic variables and space: a novel approach to linking environmental filtering and plant community assembly. 

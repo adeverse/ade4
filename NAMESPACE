@@ -188,7 +188,7 @@ export("acm.burt", "acm.disjonctif", "adegraphicsLoaded", "as.krandboot", "as.kr
 export("bicenter.wt", "covfacwt", "covwt", "meanfacwt", "scalefacwt", "scalewt", "varfacwt", "varwt")
 
 ## ******* dist *******
-export("cailliez", "dist.binary", "dist.ktab", "dist.prop", "dist.quant", "is.euclid", "lingoes", "quasieuclid")
+export("cailliez", "dist.binary", "dist.ktab", "dist.prop", "dist.quant", "is.euclid", "lingoes", "quasieuclid", "supdist")
 
 ## ******* generic *******
 export("bca", "col.names", "col.names<-", "inertia", "kplot", "reconst", "randboot", "randtest", "rtest", "scatter", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )

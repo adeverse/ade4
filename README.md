@@ -40,3 +40,14 @@ Once installed, the package can be loaded using:
 library("ade4")
 ```
 
+If you do not wish to install the development environments Rtools (Windows) / XCode (Mac), you can download and install the pre-compiled binary packages from this repository:
+
+* **Windows**:
+```r
+install.packages("http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/ade4_1.7-6.zip")
+```
+
+* **Mac**:
+```r
+install.packages("http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/ade4_1.7-6.tgz")
+```

@@ -1,42 +1,41 @@
 \name{elec88}
 \alias{elec88}
 \docType{data}
+
 \title{Electoral Data}
-\description{
-This data set gives the results of the presidential election in France in 1988 for each department and all the candidates. 
-}
+
+\description{This data set gives the results of the presidential election in France in 1988 for each department and all the candidates.}
+
 \usage{data(elec88)}
+
 \format{
-\code{elec88} is a list of 10 components. 
-\describe{
+  \code{elec88} is a list of 10 components:
+  \describe{
     \item{tab}{is a data frame with 94 rows (departments) and 9 variables (candidates)}
     \item{res}{is the global result of the election all-over the country.}
     \item{lab}{is a data frame with three variables: 
-    \code{elec88$lab$dep} a vector containing the names of the 94 french departments,
-    \code{elec88$lab$reg}  a vector containing the names of the 21 French
-    administraitve regions. and,
-  \code{elec88$lab$reg.fac} a factor with 21 levels defining the French administraitve regions.}
+      \code{elec88$lab$dep} a vector containing the names of the 94 french departments,
+      \code{elec88$lab$reg}  a vector containing the names of the 21 French administraitve regions.}
     \item{area}{is the data frame of 3 variables returning the boundary lines of each department. 
-    The first variable is a factor. The levels of this one are the row.names of tab. 
-    The second and third variables return the coordinates (x,y) of the points of the boundary line.}
-    \item{contour}{is a data frame with 4 variables (x1,y1,x2,y2)for the contour display of France}
-    \item{xy}{is a data frame with two variables (x,y) giving the position of the center for each department}
+      The first variable is a factor. The levels of this one are the row.names of \code{tab}. 
+      The second and third variables return the coordinates (x, y) of the points of the boundary line.}
+    \item{contour}{is a data frame with 4 variables (x1, y1, x2, y2) for the contour display of France}
+    \item{xy}{is a data frame with two variables (x, y) giving the position of the center for each department}
     \item{neig}{is the neighbouring graph between departments, object of the class \code{neig}}
     \item{nb}{is the neighbouring graph between departments, object of the class \code{nb}}
-    \item{Spatial}{is the map of the french departments in Lambert II coordinates, object of the class \code{SpatialPolygons}}
-    \item{Spatialcontour}{is the map of France in Lambert II coordinates, object of the class \code{SpatialPolygons}}
-    }
-}
-\source{
- Public data
-}
-\seealso{
-This dataset is compatible with \code{presid2002} and \code{cnc2003}}
+    \item{Spatial}{is the map of the french departments in Lambert II coordinates (an object of the class \code{SpatialPolygons} of \code{sp}).}
+    \item{Spatial.contour}{is the contour of the map of France in Lambert II coordinates (an object of the class \code{SpatialPolygons} of \code{sp}).}
+}}
+
+\source{Public data}
+
+\seealso{This dataset is compatible with \code{presid2002} and \code{cnc2003}}
+
 \examples{
 data(elec88)
 apply(elec88$tab, 2, mean)
 summary(elec88$res)
-pca1 <- dudi.pca(elec88$tab, scal = FALSE, scan = FALSE)
+pca1 <- dudi.pca(elec88$tab, scale = FALSE, scannf = FALSE)
 
 if(adegraphicsLoaded()) {
   if(requireNamespace("sp", quietly = TRUE)) {
@@ -58,17 +57,19 @@ if(adegraphicsLoaded()) {
     
     G <- ADEgS(list(g1, g2, g3, g4), layout = c(2, 2))
   }
+  
 } else {
-  par(mfrow = c(2,2))
-  plot(elec88$area[,2:3], type = "n", asp = 1)
-  lpoly <- split(elec88$area[,2:3], elec88$area[,1])
-  lapply(lpoly, function(x) {points (x,type = "l");invisible()})
-  polygon(elec88$area[elec88$area$V1=="D25", 2:3], col = 1)
+  par(mfrow = c(2, 2))
+  plot(elec88$area[, 2:3], type = "n", asp = 1)
+  lpoly <- split(elec88$area[, 2:3], elec88$area[, 1])
+  lapply(lpoly, function(x) {points(x, type = "l"); invisible()})
+  polygon(elec88$area[elec88$area$V1 == "D25", 2:3], col = 1)
   area.plot(elec88$area, graph = elec88$neig, lwdg = 1)
-  polygon(elec88$area[elec88$area$V1=="D25", 2:3], col = 1)
-  area.plot(elec88$area, val = elec88$xy[,1] + elec88$xy[,2])
-  area.plot(elec88$area, val = pca1$li[,1], sub = "F1 PCA", 
+  polygon(elec88$area[elec88$area$V1 == "D25", 2:3], col = 1)
+  area.plot(elec88$area, val = elec88$xy[, 1] + elec88$xy[, 2])
+  area.plot(elec88$area, val = pca1$li[, 1], sub = "F1 PCA", 
     csub = 2, cleg = 1.5)
-  par(mfrow = c(1,1))
+  par(mfrow = c(1, 1))
 }}
+
 \keyword{datasets}

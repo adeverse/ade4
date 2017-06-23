@@ -1,24 +1,28 @@
 \name{atlas}
 \alias{atlas}
 \docType{data}
+
 \title{Small Ecological Dataset}
-\description{
-\code{atlas} is a list containing three kinds of information about 23 regions (The French Alps) : \cr
-geographical coordinates, meteorology and bird presences. 
-}
+
+\description{\code{atlas} is a list containing three kinds of information about 23 regions (The French Alps) : \cr
+geographical coordinates, meteorology and bird presences.}
+
 \usage{data(atlas)}
+
 \format{
- This list contains the following objects:
+  \code{atlas} is a list of 9 components:
   \describe{
     \item{area}{is a convex hull of 23 geographical regions.}
     \item{xy}{are the coordinates of the region centers and altitude (in meters).}
     \item{names.district}{is a vector of region names.}
     \item{meteo}{is a data frame with 7 variables: min and max temperature in january; 
-    min and max temperature in july; january, july and total rainfalls.}
+      min and max temperature in july; january, july and total rainfalls.}
     \item{birds}{is a data frame with 15 variables (species).}
+    \item{contour}{is a data frame with 4 variables (x1, y1, x2, y2) for the contour display of The French Alps.}
     \item{alti}{is a data frame with 3 variables altitude in percentage [0,800], ]800,1500] and ]1500,5000].}
-    }
-}
+    \item{Spatial}{is the map of the 23 regions of The French Alps (an object of the class \code{SpatialPolygons} of \code{sp}).}
+    \item{Spatial.contour}{is the contour of the map of the 23 regions of the French Alps (an object of the class \code{SpatialPolygons} of \code{sp}).}
+}}
 
 \source{
 Extract from: \cr
@@ -64,23 +68,19 @@ if(adegraphicsLoaded()) {
   x <- atlas$meteo$mini.jan
   
   names(x) <- row.names(atlas$meteo)
-  area.plot(atlas$area, val = x, ncl = 12, sub = "Temp Mini January", 
-      csub = 2, cleg = 1)
-  s.corcircle((dudi.pca(atlas$meteo, scann = FALSE)$co), 
-      clab = 1)
+  area.plot(atlas$area, val = x, ncl = 12, sub = "Temp Mini January", csub = 2, cleg = 1)
+  s.corcircle((dudi.pca(atlas$meteo, scann = FALSE)$co), clab = 1)
   
-  area.plot(atlas$area, val = dudi.pca(atlas$meteo,scann=FALSE)$li[,1], 
-      ncl = 12, sub = "Principal Component Analysis analysis", csub = 1.5, 
-      cleg = 1)
+  area.plot(atlas$area, val = dudi.pca(atlas$meteo,scann=FALSE)$li[, 1], ncl = 12, 
+    sub = "Principal Component Analysis analysis", csub = 1.5, cleg = 1)
   birds.coa <- dudi.coa(atlas$birds, sca = FALSE, nf = 1)
   x <- birds.coa$li$Axis1
-  area.plot(atlas$area, val = x, ncl = 12, 
-      sub = "Correspondence analysis", csub = 1.5, cleg = 1)
+  area.plot(atlas$area, val = x, ncl = 12, sub = "Correspondence analysis", csub = 1.5, cleg = 1)
   
-  s.value(atlas$xy, x, contour = atlas$contour, csi = 2, 
-      incl = FALSE, addax = FALSE)
+  s.value(atlas$xy, x, contour = atlas$contour, csi = 2, incl = FALSE, addax = FALSE)
   triangle.plot(atlas$alti)
   par(op)
   par(mfrow = c(1, 1))}
 }
+
 \keyword{datasets}

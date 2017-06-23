@@ -1,14 +1,16 @@
 \name{irishdata}
 \alias{irishdata}
 \docType{data}
+
 \title{Geary's Irish Data}
-\description{
-This data set contains geographical informations about 25 counties of Ireland. 
-}
+
+\description{This data set contains geographical informations about 25 counties of Ireland.}
+
 \usage{data(irishdata)}
+
 \format{
-    \code{irishdata} is a list of 11 objects.
-\describe{
+  \code{irishdata} is a list of 13 components:
+  \describe{
     \item{area}{is a data frame with polygons for each of the 25 contiguous counties.}
     \item{county.names}{is a vector with the names of the 25 counties.}
     \item{xy}{is a data frame with the coordinates centers of the 25 counties.}
@@ -20,12 +22,16 @@ This data set contains geographical informations about 25 counties of Ireland.
     \item{link.utm}{is a matrix containing the common length between two counties from \code{area.utm}.}
     \item{tab.utm}{is a data frame with the 25 counties (explicitly named) and 12 variables.}
     \item{contour.utm}{is a data frame with the global polygon of all the 25 counties expressed in UTM coordinates.}
+    \item{Spatial}{is the map of the 25 counties of Ireland (an object of the class \code{SpatialPolygons} of \code{sp}).}
+    \item{Spatial.contour}{is the contour of the map of the 25 counties of Ireland (an object of the class \code{SpatialPolygons} of \code{sp}).}
 }}
+
 \source{
 Geary, R.C. (1954) The contiguity ratio and statistical mapping. \emph{The incorporated Statistician}, \bold{5}, 3, 115--145.
 
 Cliff, A.D. and Ord, J.K. (1973) \emph{Spatial autocorrelation}, Pion, London. 1--178.
 }
+
 \examples{
 data(irishdata)
 
@@ -42,7 +48,7 @@ if(adegraphicsLoaded()) {
 
   g3 <- s.corcircle(dudi.pca(irishdata$tab, scan = FALSE)$co, plot = FALSE)
   
-  score <- dudi.pca(irishdata$tab, scan = FALSE, nf = 1)$li$Axis1
+  score <- dudi.pca(irishdata$tab, scannf = FALSE, nf = 1)$li$Axis1
   names(score) <- row.names(irishdata$Spatial)
   
   obj <- sp::SpatialPolygonsDataFrame(Sr = irishdata$Spatial, data = as.data.frame(score))
@@ -52,15 +58,15 @@ if(adegraphicsLoaded()) {
   }
   
 } else {
-  par(mfrow = c(2,2))
+  par(mfrow = c(2, 2))
   area.plot(irishdata$area, lab = irishdata$county.names, clab = 0.75)
   area.plot(irishdata$area)
-  apply(irishdata$contour, 1, function(x) segments(x[1],x[2],x[3],x[4], 
-      lwd = 3))
-  s.corcircle(dudi.pca(irishdata$tab, scan = FALSE)$co)
-  score <- dudi.pca(irishdata$tab, scan = FALSE, nf = 1)$li$Axis1
+  apply(irishdata$contour, 1, function(x) segments(x[1], x[2], x[3], x[4], lwd = 3))
+  s.corcircle(dudi.pca(irishdata$tab, scannf = FALSE)$co)
+  score <- dudi.pca(irishdata$tab, scannf = FALSE, nf = 1)$li$Axis1
   names(score) <- row.names(irishdata$tab)
   area.plot(irishdata$area, score)
-  par(mfrow = c(1,1))
+  par(mfrow = c(1, 1))
 }}
+
 \keyword{datasets}

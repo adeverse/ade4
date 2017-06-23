@@ -1,25 +1,28 @@
 \name{mafragh}
 \alias{mafragh}
 \docType{data}
+
 \title{Phyto-Ecological Survey}
-\description{
-This data set gives environmental and spatial informations about species and sites. 
-}
+
+\description{This data set gives environmental and spatial informations about species and sites.}
+
 \usage{data(mafragh)}
+
 \format{
-  \code{mafragh} is a list of 6 components.
+  \code{mafragh} is a list of 12 components:
   \describe{
-        \item{xy}{are the coordinates of 97 sites.}
-        \item{flo}{is a data frame with 97 sites and 56 species.}
-        \item{neig}{is the neighbourhood graph of the 97 sites (an object of class 'neig').}
-        \item{env}{is a data frame with 97 sites and 11 environmental variables.}
-        \item{partition}{is a factor classifying the 97 sites in 7 classes.}
-        \item{area}{is a data frame of class \code{area}}
-        \item{tre}{a character providing the phylogeny as a newick object}
-        \item{traits}{a list of data frame. Each data frame provides the value of biological traits for plant species}
-        \item{nb}{is the neighbourhood graph of the 97 sites (an object of class 'nb').}
-        \item{Spatial}{is a data frame of class \code{sp}}
-        \item{spenames}{is a vector of the names of species.}
+    \item{xy}{are the coordinates of 97 sites.}
+    \item{flo}{is a data frame with 97 sites and 56 species.}
+    \item{neig}{is the neighbourhood graph of the 97 sites (an object of class \code{neig}).}
+    \item{env}{is a data frame with 97 sites and 11 environmental variables.}
+    \item{partition}{is a factor classifying the 97 sites in 7 classes.}
+    \item{area}{is a data frame of class \code{area}}
+    \item{tre}{a character providing the phylogeny as a newick object}
+    \item{traits}{a list of data frame. Each data frame provides the value of biological traits for plant species.}
+    \item{nb}{is the neighbourhood graph of the 97 Mafragh sites (an object of class \code{nb}).}
+    \item{Spatial}{is the map of the 97 Mafragh sites (an object of the class \code{SpatialPolygons} of \code{sp}).}
+    \item{spenames}{is a data frame with 56 rows (species) and 2 columns (names).}
+    \item{Spatial.contour}{is the contour of the Magragh map (an object of the class \code{SpatialPolygons} of \code{sp}).}
 }}
 
 \source{
@@ -41,7 +44,7 @@ if(adegraphicsLoaded()) {
   g1 <- s.label(mafragh$xy, nb = mafragh$nb, psub.text = "Samples & Neighbourhood graph", 
     plot = FALSE)
   g2 <- s.value(mafragh$xy, coa1$li[, 1], psub.text = "Axis 1 - COA", plot = FALSE)
-  g3 <- s.value(mafragh$xy, pca1$li[,1], psub.text = "Axis 1 - PCA", plot = FALSE)
+  g3 <- s.value(mafragh$xy, pca1$li[, 1], psub.text = "Axis 1 - PCA", plot = FALSE)
   g4 <- s.class(pca1$li, mafragh$partition, psub.text = "Plane 1-2 - PCA", plot = FALSE)
   g5 <- s.class(coa1$li, mafragh$partition, psub.text = "Plane 1-2 - COA", plot = FALSE)
   g6 <- s.class(mafragh$xy, mafragh$partition, chullSize = 1, ellipseSize = 0, starSize = 0, 
@@ -52,11 +55,11 @@ if(adegraphicsLoaded()) {
   par(mfrow = c(3, 2))
   s.label(mafragh$xy, inc = FALSE, neig = mafragh$neig, sub = "Samples & Neighbourhood graph")
   s.value(mafragh$xy, coa1$li[, 1], sub = "Axis 1 - COA")
-  s.value(mafragh$xy, pca1$li[,1], sub = "Axis 1 - PCA")
+  s.value(mafragh$xy, pca1$li[, 1], sub = "Axis 1 - PCA")
   s.class(pca1$li, mafragh$partition, sub = "Plane 1-2 - PCA")
   s.class(coa1$li, mafragh$partition, sub = "Plane 1-2 - COA")
   s.chull(mafragh$xy, mafragh$partition, optchull = 1)
-  par(mfrow=c(1, 1))
+  par(mfrow = c(1, 1))
 }
 
 \dontrun{
@@ -105,4 +108,5 @@ if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quie
   }
 }
 }}
+
 \keyword{datasets}

@@ -42,8 +42,6 @@ library("ade4")
 
 If you do not wish to install the development environments Rtools (Windows) / XCode (Mac), you can get the binary packages here:
 
-* **Windows**:
-[Windows](http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/)
+* [**Windows**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/)
 
-* **Mac**:
-[macOS](http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/)
+* [**macOS**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/)

@@ -34,8 +34,8 @@
 }
 
 "statico.krandtest" <- function (KTX, KTY, nrepet = 999, ...) {
-    if (!inherits(KTX, "ktab")) stop("The first argument must be a 'ktab'")
-    if (!inherits(KTY, "ktab")) stop("The second argument must be a 'ktab'")
+    if (!inherits(KTX, "ktab")) stop("The first argument must be the environmental 'ktab'")
+    if (!inherits(KTY, "ktab")) stop("The second argument must be the species 'ktab'")
 #### crossed ktab
     res <- list()
 #### Parameters of first ktab
@@ -66,7 +66,7 @@
         tx <- t(as.matrix(KTX[[i]]))
         ty <- t(as.matrix(KTY[[i]]))
         pcax <- dudi.pca(tx, row.w=lw[[i]], col.w=lwX, scannf=FALSE)
-        pcay <- dudi.pca(ty, row.w=lw[[i]], col.w=lwY, scannf=FALSE)
+        pcay <- dudi.pca(ty, scale = FALSE, row.w=lw[[i]], col.w=lwY, scannf=FALSE)
         coin1 <- coinertia(pcax, pcay, scannf=FALSE)
         tmp <- randtest(coin1, nrepet = nrepet, output = "full")
         ksim[,i] <- tmp$sim

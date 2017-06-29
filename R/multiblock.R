@@ -50,8 +50,8 @@ randboot.multiblock <- function(object, nrepet = 199, optdim, ...)
     thecall <- match.call()
     res$XYcoef <- lapply(1:ncY, function(x) as.krandboot(obs = object$XYcoef[[x]][, optdim], boot = res$XYcoef[[x]], call = thecall))
     names(res$XYcoef) <- colnames(object$tabY)
-    res$bipc <- as.krandboot(obs = object$bipc[, optdim], boot = res$bipc, call = thecall)
-    res$vipc <- as.krandboot(obs = object$vipc[, optdim], boot = res$vipc, call = thecall)
+    res$bipc <- as.krandboot(obs = object$bipc[, optdim], boot = res$bipc, call = thecall, ...)
+    res$vipc <- as.krandboot(obs = object$vipc[, optdim], boot = res$vipc, call = thecall, ...)
        
     return(res) 
 }

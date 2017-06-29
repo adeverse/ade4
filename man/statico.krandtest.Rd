@@ -8,8 +8,8 @@ Performs the series of Monte-Carlo coinertia tests of a Statico analysis (one fo
 statico.krandtest(KTX, KTY, nrepet = 999, ...)
 }
 \arguments{
-  \item{KTX}{an objet of class ktab}
-  \item{KTY}{an objet of class ktab}
+  \item{KTX}{an objet of class ktab containing the environmental data}
+  \item{KTY}{an objet of class ktab containing the species data}
   \item{nrepet}{the number of permutations}
   \item{\dots}{further arguments passed to or from other methods}
 }

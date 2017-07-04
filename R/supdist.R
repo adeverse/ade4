@@ -19,7 +19,7 @@
     	stop("The factor must give the Active (A) / Supplementary (S) status for each item in the distance matrix")
 	
 	# distance matrix between Supplementary and Active items
-	DSup <- as.matrix(d)[fsup == "S", fsup == "A"]
+	DSup <- as.matrix(d)[fsup == "S", fsup == "A", drop = FALSE]
 	nS <- table(fsup)[2]
 	nA <- table(fsup)[1]
 	nT <- nS + nA

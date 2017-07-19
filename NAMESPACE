@@ -207,7 +207,7 @@ export("dudi.acm", "dudi.coa", "dudi.dec", "dudi.fca", "dudi.fpca", "dudi.hillsm
 export("as.dudi", "dist.dudi", "dudi.type","inertia.dudi", "is.dudi", "prep.fuzzy.var", "reciprocal.coa", "redo.dudi")
 
 ## ******* 2/3-table methods *******
-export("coinertia", "discrimin", "discrimin.coa", "fourthcorner", "fourthcorner2", "fourthcorner.rlq", "niche", "pcaiv", "pcaivortho", "procuste", "rlq", "withinpca", "witwit.coa", "witwitsepan")
+export("coinertia", "discrimin", "discrimin.coa", "fourthcorner", "fourthcorner2", "fourthcorner.rlq", "niche", "pcaiv", "pcaivortho", "procuste", "rlq", "varipart", "withinpca", "witwit.coa", "witwitsepan")
 export("combine.4thcorner", "combine.randtest.rlq", "mantel.randtest", "mantel.rtest", "niche.param", "p.adjust.4thcorner", "procuste.randtest", "procuste.rtest", "RVdist.randtest")
 
 ## ******* K-table methods *******

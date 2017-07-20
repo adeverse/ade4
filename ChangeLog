@@ -1,3 +1,125 @@
+2017-07-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-7 ----------
+
+2017-07-19  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* NAMESPACE, R/varipart.R, man/varipart.Rd: Implement a very simple
+	version of variation partitioning (useful for msr method in
+	adespatial)
+
+2017-07-11  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/randtest.pcaiv.R, R/randtest.pcaivortho.R: Solve a bug to deal
+	properly with 'strange' variables names (environmental variables in
+	mafragh)
+
+2017-07-04  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/supdist.R: Add 'drop' argrument to deal with cases where only
+	one supplementary individual is considered.
+
+2017-06-29  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/multiblock.R: The '...' argument is now passed to the
+	as.krandboot function
+
+2017-06-29  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* man/statico.krandtest.Rd: species data must be in the second ktab
+
+2017-06-29  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/statico.R: species data should not be restandardized in each
+	table
+
+2017-06-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/atlas.Rd, man/elec88.Rd, man/irishdata.Rd: Update the help
+	files of 'atlas', 'elec88' and 'irishdata'
+
+2017-06-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/mafragh.Rd: Update the mafragh data set: spenames is now a
+	data frame with short names and a new Spatial.contour object is
+	added.
+
+2017-06-23  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* README.md: Update README.md
+
+2017-06-23  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* README.md: Update README.md
+
+2017-06-20  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* README.md: Update README.md
+
+2017-06-20  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* README.md: Update README.md
+
+2017-06-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/supdist.Rd: Clean the 'supdist' help file
+
+2017-06-18  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* NAMESPACE: added function supdist to project additional items in a
+	PCO analysis
+
+2017-06-18  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* man/supdist.Rd: Projection of additional items in a PCO analysis
+
+2017-06-18  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/supdist.R: Projection of additional items in a PCO analysis
+
+2017-06-15  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/mafragh.Rd: Correct the mafragh bibliography
+
+2017-06-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/mafragh.Rd: Update the 'mafragh' data set
+
+2017-05-12  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/krandtest.R, R/randtest.R: Update as.randtest/as.krandtest
+	functions to deal with cases with 0 repetitions (useful for
+	msr.4thcorner method implemented in adespatial)
+
+2017-04-21  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, R/ade4toR.R, man/ade4toR.Rd: The 'ade4toR' and
+	'Rtoade4' unused functions are removed.
+
+2017-04-21  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, R/cca.R, R/randtest.cca.R: The 'cca' function is
+	removed.
+
+2017-04-21  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, R/cca.R, R/pcaiv.R, R/randtest.cca.R,
+	R/randtest.pcaiv.R, man/arrival.Rd, man/cca.Rd, man/pcaiv.Rd,
+	man/randtest.pcaiv.Rd, man/rpjdl.Rd: The 'cca' function is no longer
+	used.
+
+2017-04-11  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/s.logo.Rd: Update the example of the 's.logo' function
+
+2017-04-07  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/between.R: Correct a small bug to deal with weights in wca plots
+
+2017-03-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-6 ----------
+	
 2017-03-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-6 ----------

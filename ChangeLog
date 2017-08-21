@@ -1,3 +1,25 @@
+2017-08-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-8 ----------
+	
+2017-08-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: Correct misprints in the DESCRIPTION file
+
+2017-08-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/divcmax.Rd: Update the example in 'divcmax' with correction
+	sent by Sandrine Pavoine
+
+2017-08-09  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION: Extend the 'Description' field as requested by Uwe
+	Ligges
+
+2017-07-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-7 ----------
+	
 2017-07-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-7 ----------

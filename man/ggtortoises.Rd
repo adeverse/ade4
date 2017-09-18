@@ -28,7 +28,7 @@ M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Micr
 See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps069.pdf} (in French).
 }
 \examples{
-if(requireNamespace("pixmap", quiet=TRUE)) {
+if(requireNamespace("pixmap", quietly=TRUE)) {
   data(ggtortoises)
   
   if(adegraphicsLoaded()) {

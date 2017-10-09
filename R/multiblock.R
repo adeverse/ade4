@@ -146,7 +146,7 @@ summary.multiblock <- function(object, ...) {
     varexplTX <- (covarTX/varT) / sum(covarTX/varT) * 100
     varexplTXcum <- cumsum(varexplTX) / sum(varexplTX) * 100 
    
-    cat(paste("Inertia explained by the global latent, i.e., ", deparse(substitute(object$lX)), "(in %): \n\n")) 
+    cat(paste("Inertia explained by the global latent, i.e.,", deparse(substitute(object$lX)), "(in %): \n\n")) 
     sumry <- array(0, c(object$nf, 4), list(1:object$nf, c("varY", "varYcum", "varX", "varXcum")))
     sumry[, 1] <- varexplTY[1 : object$nf]
     sumry[, 2] <- varexplTYcum[1 : object$nf]

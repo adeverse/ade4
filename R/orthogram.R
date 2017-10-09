@@ -3,7 +3,8 @@
     na.action = c("fail", "mean"),
     cdot = 1.5, cfont.main = 1.5, lwd = 2, nclass, high.scores = 0,alter=c("greater", "less", "two-sided"), ...)
 {
-    .Deprecated("orthogram", "ade4", msg="This function is now deprecated. Please use the fuction 'orthogram' in adephylo.")
+    .Deprecated(new="orthogram", package="ade4", 
+                msg="This function is now deprecated. Please use the 'orthogram' fuction in the 'adephylo' package.")
     "orthoneig" <- function (obj) {
         if (!inherits(obj, "neig"))
             stop("Object of class 'neig' expected")

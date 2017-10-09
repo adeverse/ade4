@@ -80,7 +80,8 @@ wca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...){
 
 
 withincoinertia <-  function (obj, fac, scannf = TRUE, nf = 2){
-  .Deprecated("wca", "ade4", "To avoid some name conflicts, the 'withincoinertia' function is now deprecated. Please use 'wca.coinertia' instead")
+  .Deprecated(new="wca", package="ade4", 
+              msg="To avoid some name conflicts, the 'withincoinertia' function is now deprecated. Please use 'wca.coinertia' instead")
   res <- wca(x=obj, fac=fac, scannf = scannf, nf = nf)
   res$call <- match.call()
   return(res)

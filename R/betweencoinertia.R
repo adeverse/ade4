@@ -79,7 +79,8 @@ function (x, fac, scannf = TRUE, nf = 2, ...)
 
 betweencoinertia <-
 function (obj, fac, scannf = TRUE, nf = 2) {
-  .Deprecated("bca", "ade4", "To avoid some name conflicts, the 'betweencoinertia' function is now deprecated. Please use 'bca.coinertia' instead")
+  .Deprecated(new="bca", package="ade4", 
+              msg="To avoid some name conflicts, the 'betweencoinertia' function is now deprecated. Please use 'bca.coinertia' instead")
   res <- bca(x=obj, fac=fac, scannf = scannf, nf = nf)
   res$call <- match.call()
   return(res)

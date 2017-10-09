@@ -37,7 +37,8 @@
 }
 
 "between" <- function (dudi, fac, scannf = TRUE, nf = 2) {
-  .Deprecated("bca", "ade4", "To avoid some name conflicts, the 'between' function is now deprecated. Please use 'bca' instead")
+  .Deprecated(new="bca", package="ade4", 
+              msg="To avoid some name conflicts, the 'between' function is now deprecated. Please use 'bca' instead")
   res <- bca(x=dudi, fac=fac, scannf = scannf, nf = nf)
   res$call <- match.call()
   return(res)

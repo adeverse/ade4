@@ -39,7 +39,8 @@ wca <- function (x, ...) UseMethod("wca")
 }
 
 "within" <- function (dudi, fac, scannf = TRUE, nf = 2) {
-  .Deprecated("wca", "ade4", "To avoid some name conflicts, the 'within' function is now deprecated. Please use 'wca' instead")
+  .Deprecated(new="wca", package="ade4", 
+              msg="To avoid some name conflicts, the 'within' function is now deprecated. Please use 'wca' instead")
   res <- wca(x=dudi, fac=fac, scannf = scannf, nf = nf)
   res$call <- match.call()
   return(res)

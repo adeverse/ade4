@@ -218,7 +218,7 @@ export("is.ktab", "kdist", "kdist2ktab", "kdist.cor", "kdisteuclid", "kplotX.mdp
 export("char2genet", "count2genet", "dist.genet", "freq2genet", "fuzzygenet") 
 
 ## ******* phylog *******
-export("as.taxo", "dist.taxo", "dotchart.phylog", "enum.phylog", "gearymoran", "hclust2phylog", "newick2phylog", "orthogram", "phylog.extract", "phylog.permut", "PI2newick", "radial.phylog","symbols.phylog", "table.phylog", "taxo2phylog", "variance.phylog")
+export("as.taxo", "dist.taxo", "dotchart.phylog", "enum.phylog", "gearymoran", "hclust2phylog", "newick2phylog", "phylog.extract", "phylog.permut", "PI2newick", "radial.phylog","symbols.phylog", "table.phylog", "taxo2phylog", "variance.phylog")
 export("EH", "randEH", "optimEH", "originality", "orisaved")
 
 ## ******* orthobasis *******
@@ -237,6 +237,7 @@ export("bwca.dpcoa")
 ## ******* deprecated *******
 ## "between"
 ## "betweencoinertia"
+## "orthogram"
 ## "within"
 ## "withincoinertia"
 

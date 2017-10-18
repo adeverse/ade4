@@ -28,7 +28,7 @@ Cornillon, P.A. (1998) \emph{Prise en compte de proximités en analyse factoriel
 \author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr} \cr
 Daniel Chessel 
 }
-\seealso{\code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link{mld}}}
+\seealso{\code{\link{orthobasis}}, \code{\link[adephylo]{orthogram}}, \code{\link{mld}}}
 \examples{
 w <- gridrowcol(8, 5)
 par(mfrow = c(1, 2))

@@ -32,7 +32,13 @@ Mallat, S. G. (1989) A theory for multiresolution signal decomposition: the wave
 Percival, D. B. and Walden, A. T. (2000) \emph{Wavelet Methods for Time Series Analysis}, Cambridge University Press.
 }
 \author{Sébastien Ollier \email{sebastien.ollier@u-psud.fr}}
-\seealso{\code{\link{gridrowcol}}, \code{\link{orthobasis}}, \code{\link{orthogram}}, \code{\link[waveslim]{mra}} for multiresolution analysis with various families of wavelets}
+
+\seealso{
+\code{\link{gridrowcol}}, \code{\link{orthobasis}}, 
+\code{\link[adephylo]{orthogram}}, \code{\link[waveslim]{mra}} 
+for multiresolution analysis with various families of wavelets
+}
+
 \examples{
 \dontrun{
 # decomposition of a time serie

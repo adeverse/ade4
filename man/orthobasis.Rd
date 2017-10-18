@@ -62,7 +62,13 @@ Thèse, Ecole Nationale Supérieure Agronomique, Montpellier.
 Daniel Chessel 
 }
 \note{the function \code{orthobasis.haar} uses function \code{\link[waveslim]{wavelet.filter}} from package waveslim.}
-\seealso{\code{\link{gridrowcol}} that defines an orthobasis for square grid, \code{\link{phylog}} that defines an orthobasis for phylogenetic tree, \code{\link{orthogram}} and \code{\link{mld}}}
+
+\seealso{
+\code{\link{gridrowcol}} that defines an orthobasis for square grid, 
+\code{\link{phylog}} that defines an orthobasis for phylogenetic tree, 
+\code{\link[adephylo]{orthogram}} and \code{\link{mld}}
+}
+
 \examples{
 
 # a 2D spatial orthobasis

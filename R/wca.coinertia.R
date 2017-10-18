@@ -1,4 +1,4 @@
-wca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...){
+wca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...) {
   if (!inherits(x, "coinertia")) 
     stop("Object of class coinertia expected")
   if (!is.factor(fac)) 
@@ -37,7 +37,7 @@ wca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...){
                    nf = nf)
   res$call <- match.call()
   ## cov=covB+covW, donc ce n'est pas vrai pour les carres et donc la coinertie
-  ##res$ratio <- sum(res$eig)/sum(x$eig)
+  ## res$ratio <- sum(res$eig)/sum(x$eig)
   U <- as.matrix(res$l1) * unlist(res$lw)
   U <- data.frame(as.matrix(dudiY$tab) %*% U)
   row.names(U) <- row.names(dudiY$tab)
@@ -78,18 +78,7 @@ wca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...){
   return(res)
 }
 
-
-withincoinertia <-  function (obj, fac, scannf = TRUE, nf = 2){
-  .Deprecated(new="wca", package="ade4", 
-              msg="To avoid some name conflicts, the 'withincoinertia' function is now deprecated. Please use 'wca.coinertia' instead")
-  res <- wca(x=obj, fac=fac, scannf = scannf, nf = nf)
-  res$call <- match.call()
-  return(res)
-}
-
-
-plot.witcoi <-
-function(x, xax = 1, yax = 2, ...) {
+plot.witcoi <- function(x, xax = 1, yax = 2, ...) {
   if (!inherits(x, "witcoi"))
     stop("Use only with 'witcoi' objects")
   if (x$nf == 1) {
@@ -116,12 +105,10 @@ function(x, xax = 1, yax = 2, ...) {
           csub = 2, clabel = 1.25)
   s.arrow(x$c1, xax = xax, yax = yax, sub = "X Canonical weights",
           csub = 2, clabel = 1.25)
-
+  
 }
 
-print.witcoi <-
-function (x, ...) 
-{
+print.witcoi <- function (x, ...) {
   if (!inherits(x, "witcoi")) 
     stop("to be used with 'witcoi' object")
   cat("Within coinertia analysis\n")
@@ -138,16 +125,14 @@ function (x, ...)
   if (l0 > 5) 
     cat(" ...\n\n")
   else cat("\n\n")
-  sumry <- array("", c(3, 4), list(1:3, c("vector", "length", 
-                                          "mode", "content")))
+  sumry <- array("", c(3, 4), list(1:3, c("vector", "length", "mode", "content")))
   sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "eigen values")
   sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), "row weigths (crossed array)")
   sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), "col weigths (crossed array)")
   
   print(sumry, quote = FALSE)
   cat("\n")
-  sumry <- array("", c(17, 4), list(1:17, c("data.frame", "nrow", 
-                                            "ncol", "content")))
+  sumry <- array("", c(17, 4), list(1:17, c("data.frame", "nrow", "ncol", "content")))
   sumry[1, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "crossed array (CA)")
   sumry[2, ] <- c("$li", nrow(x$li), ncol(x$li), "Y col = CA row: coordinates")
   sumry[3, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "Y col = CA row: normed scores")
@@ -157,23 +142,15 @@ function (x, ...)
   sumry[7, ] <- c("$mX", nrow(x$mX), ncol(x$mX), "normed row scores (X)")
   sumry[8, ] <- c("$lY", nrow(x$lY), ncol(x$lY), "row coordinates (Y)")
   sumry[9, ] <- c("$mY", nrow(x$mY), ncol(x$mY), "normed row scores (Y)")
-
   sumry[10, ] <- c("$lsX", nrow(x$lsX), ncol(x$lsX), "supplementary row coordinates (X)")
   sumry[11, ] <- c("$msX", nrow(x$msX), ncol(x$msX), "supplementary normed row scores (X)")
   sumry[12, ] <- c("$lsY", nrow(x$lsY), ncol(x$lsY), "supplementaryrow coordinates (Y)")
   sumry[13, ] <- c("$msY", nrow(x$msY), ncol(x$msY), "supplementary normed row scores (Y)")
-  sumry[14, ] <- c("$aX", nrow(x$aX), ncol(x$aX),
-                   "within axis onto within co-inertia axis (X)")
-  sumry[15, ] <- c("$aY", nrow(x$aY), ncol(x$aY),
-                   "within axis onto within co-inertia axis (Y)")
-  sumry[16, ] <- c("$acX", nrow(x$acX), ncol(x$acX),
-                   "co-inertia axis onto within co-inertia axis (X)")
-  sumry[17, ] <- c("$acY", nrow(x$acY), ncol(x$acY),
-                   "co-inertia axis onto within co-inertia axis (Y)")
-  
+  sumry[14, ] <- c("$aX", nrow(x$aX), ncol(x$aX), "within axis onto within co-inertia axis (X)")
+  sumry[15, ] <- c("$aY", nrow(x$aY), ncol(x$aY), "within axis onto within co-inertia axis (Y)")
+  sumry[16, ] <- c("$acX", nrow(x$acX), ncol(x$acX), "co-inertia axis onto within co-inertia axis (X)")
+  sumry[17, ] <- c("$acY", nrow(x$acY), ncol(x$acY), "co-inertia axis onto within co-inertia axis (Y)")
   
   print(sumry, quote = FALSE)
   cat("\n")
 }
-
-

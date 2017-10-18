@@ -1,6 +1,4 @@
-bca.coinertia <-
-function (x, fac, scannf = TRUE, nf = 2, ...) 
-{
+bca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...) {
   if (!inherits(x, "coinertia")) 
     stop("Xect of class coinertia expected")
   if (!is.factor(fac)) 
@@ -18,13 +16,11 @@ function (x, fac, scannf = TRUE, nf = 2, ...)
     return(z)
   }
   cla.w <- tapply(dudiX$lw, fac, sum)
-  tabmoyX <- apply(dudiX$tab, 2, mean.w, w = dudiX$lw, fac = fac, 
-                   cla.w = cla.w)
+  tabmoyX <- apply(dudiX$tab, 2, mean.w, w = dudiX$lw, fac = fac, cla.w = cla.w)
   tabmoyX <- data.frame(tabmoyX)
   row.names(tabmoyX) <- levels(fac)
   names(tabmoyX) <- names(dudiX$tab)
-  tabmoyY <- apply(dudiY$tab, 2, mean.w, w = dudiY$lw, fac = fac, 
-                   cla.w = cla.w)
+  tabmoyY <- apply(dudiY$tab, 2, mean.w, w = dudiY$lw, fac = fac, cla.w = cla.w)
   tabmoyY <- data.frame(tabmoyY)    
   row.names(tabmoyY) <- levels(fac)
   names(tabmoyY) <- names(dudiY$tab)
@@ -32,8 +28,7 @@ function (x, fac, scannf = TRUE, nf = 2, ...)
                       nf = nf, call = match.call(), type = "bet")
   dudimoyY <- as.dudi(tabmoyY, dudiY$cw, as.vector(cla.w), scannf = FALSE, 
                       nf = nf, call = match.call(), type = "coa")
-  res <- coinertia(dudimoyX, dudimoyY, scannf = scannf, 
-                 nf = nf)
+  res <- coinertia(dudimoyX, dudimoyY, scannf = scannf, nf = nf)
   res$call <- match.call()
   ## cov=covB+covW, donc ce n'est pas vrai pour les carres et donc la coinertie
   ##res$ratio <- sum(res$eig)/sum(x$eig)
@@ -53,12 +48,12 @@ function (x, fac, scannf = TRUE, nf = 2, ...)
   res$msX<-data.frame(t(t(res$lsX)*ratioX))
   row.names(res$msX) <- row.names(res$lsX)
   names(res$msX) <- names(res$mX)
-
+  
   ratioY<-unlist(res$mY[1,]/res$lY[1,])
   res$msY<-data.frame(t(t(res$lsY)*ratioY))
   row.names(res$msY) <- row.names(res$lsY)
   names(res$msY) <- names(res$mY)
-
+  
   U <- as.matrix(res$l1) * unlist(res$lw)
   U <- data.frame(t(as.matrix(x$l1)) %*% U)
   row.names(U) <- paste("AxcY", (1:x$nf), sep = "")
@@ -77,17 +72,7 @@ function (x, fac, scannf = TRUE, nf = 2, ...)
   return(res)
 }
 
-betweencoinertia <-
-function (obj, fac, scannf = TRUE, nf = 2) {
-  .Deprecated(new="bca", package="ade4", 
-              msg="To avoid some name conflicts, the 'betweencoinertia' function is now deprecated. Please use 'bca.coinertia' instead")
-  res <- bca(x=obj, fac=fac, scannf = scannf, nf = nf)
-  res$call <- match.call()
-  return(res)
-}
-
-plot.betcoi <-
-function(x, xax = 1, yax = 2, ...) {
+plot.betcoi <- function(x, xax = 1, yax = 2, ...) {
   if (!inherits(x, "betcoi"))
     stop("Use only with 'betcoi' objects")
   if (x$nf == 1) {
@@ -102,23 +87,18 @@ function(x, xax = 1, yax = 2, ...) {
   fac <- eval.parent(appel$fac)
   def.par <- par(no.readonly = TRUE)
   on.exit(par(def.par))
-  nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3),
-               respect = TRUE)
+  nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), respect = TRUE)
   par(mar = c(0.1, 0.1, 0.1, 0.1))
   s.arrow(x$aX, xax, yax, sub = "X axes", csub = 2, clabel = 1.25)
   s.arrow(x$aY, xax, yax, sub = "Y axes", csub = 2, clabel = 1.25)
   scatterutil.eigen(x$eig, wsel = c(xax, yax))
   s.match.class(df1xy = x$msX, df2xy = x$msY, fac = fac, clabel = 1.5) # wt?
   
-  s.arrow(x$l1, xax = xax, yax = yax, sub = "Y Canonical weights",
-          csub = 2, clabel = 1.25)
-  s.arrow(x$c1, xax = xax, yax = yax, sub = "X Canonical weights",
-          csub = 2, clabel = 1.25)
-  
+  s.arrow(x$l1, xax = xax, yax = yax, sub = "Y Canonical weights", csub = 2, clabel = 1.25)
+  s.arrow(x$c1, xax = xax, yax = yax, sub = "X Canonical weights", csub = 2, clabel = 1.25)
 }
 
-print.betcoi <-
-function (x, ...) {
+print.betcoi <- function (x, ...) {
   if (!inherits(x, "betcoi")) 
     stop("to be used with 'betcoi' object")
   cat("Between coinertia analysis\n")
@@ -135,16 +115,14 @@ function (x, ...) {
   if (l0 > 5) 
     cat(" ...\n\n")
   else cat("\n\n")
-  sumry <- array("", c(3, 4), list(1:3, c("vector", "length", 
-                                          "mode", "content")))
+  sumry <- array("", c(3, 4), list(1:3, c("vector", "length", "mode", "content")))
   sumry[1, ] <- c("$eig", length(x$eig), mode(x$eig), "Eigenvalues")
   sumry[2, ] <- c("$lw", length(x$lw), mode(x$lw), paste("Row weigths (for ", eval(x$call[[2]])$call[[3]], " cols)", sep=""))
   sumry[3, ] <- c("$cw", length(x$cw), mode(x$cw), paste("Col weigths (for ", eval(x$call[[2]])$call[[2]], " cols)", sep=""))
   
   print(sumry, quote = FALSE)
   cat("\n")
-  sumry <- array("", c(17, 4), list(1:17, c("data.frame", "nrow", 
-                                            "ncol", "content")))
+  sumry <- array("", c(17, 4), list(1:17, c("data.frame", "nrow", "ncol", "content")))
   sumry[1, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "Crossed Table (CT)")
   sumry[2, ] <- c("$li", nrow(x$li), ncol(x$li), paste("CT row scores (cols of ", eval(x$call[[2]])$call[[3]], ")", sep=""))
   sumry[3, ] <- c("$l1", nrow(x$l1), ncol(x$l1), paste("CT normed row scores (cols of ", eval(x$call[[2]])$call[[3]], ")", sep=""))
@@ -158,17 +136,11 @@ function (x, ...) {
   sumry[11, ] <- c("$msX", nrow(x$msX), ncol(x$msX), paste("Normed row scores (rows of ", eval(x$call[[2]])$call[[2]], ")", sep=""))
   sumry[12, ] <- c("$lsY", nrow(x$lsY), ncol(x$lsY), paste("Row scores (rows of ", eval(x$call[[2]])$call[[3]], ")", sep=""))
   sumry[13, ] <- c("$msY", nrow(x$msY), ncol(x$msY), paste("Normed row scores (rows of ", eval(x$call[[2]])$call[[3]], ")", sep=""))
-  sumry[14, ] <- c("$aX", nrow(x$aX), ncol(x$aX),
-                   paste("Corr ", eval(x$call[[2]])$call[[2]], " axes / betcoi axes", sep=""))
-  sumry[15, ] <- c("$aY", nrow(x$aY), ncol(x$aY),
-                   paste("Corr ", eval(x$call[[2]])$call[[3]], " axes / betcoi axes", sep=""))
-  sumry[16, ] <- c("$acX", nrow(x$acX), ncol(x$acX),
-                   paste("Corr ", eval(x$call[[2]])$call[[2]], " coinertia axes / betcoi axes", sep=""))
-  sumry[17, ] <- c("$acY", nrow(x$acY), ncol(x$acY),
-                   paste("Corr ", eval(x$call[[2]])$call[[3]], " coinertia axes / betcoi axes", sep=""))
-  
+  sumry[14, ] <- c("$aX", nrow(x$aX), ncol(x$aX), paste("Corr ", eval(x$call[[2]])$call[[2]], " axes / betcoi axes", sep=""))
+  sumry[15, ] <- c("$aY", nrow(x$aY), ncol(x$aY), paste("Corr ", eval(x$call[[2]])$call[[3]], " axes / betcoi axes", sep=""))
+  sumry[16, ] <- c("$acX", nrow(x$acX), ncol(x$acX), paste("Corr ", eval(x$call[[2]])$call[[2]], " coinertia axes / betcoi axes", sep=""))
+  sumry[17, ] <- c("$acY", nrow(x$acY), ncol(x$acY), paste("Corr ", eval(x$call[[2]])$call[[3]], " coinertia axes / betcoi axes", sep=""))
   
   print(sumry, quote = FALSE)
   cat("\n")
 }
-

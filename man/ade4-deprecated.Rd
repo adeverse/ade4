@@ -5,5 +5,9 @@
 \description{
   The functions/data listed below are deprecated:
   
-  - \code{orthogram}: replaced by \code{orthogram} in adephylo.
+  - \code{between}: replaced by \code{bca}
+  - \code{betweencoinertia}: replaced by \code{bca.coinertia}
+  - \code{orthogram}: replaced by \code{orthogram} in the \code{adephylo} package
+  - \code{within}: replaced by \code{wca}
+  - \code{withincoinertia}: replaced by \code{wca.coinertia}
 }

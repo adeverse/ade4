@@ -49,7 +49,7 @@ is replaced by the method \code{wca.coinertia} of the generic \code{wca} functio
 Stéphane Dray \email{stephane.dray@univ-lyon1.fr} and Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}
 }
 
-\seealso{\code{\link{coinertia}}, \code{\link{within}}
+\seealso{\code{\link{coinertia}}, \code{\link{wca}}
 }
 
 \examples{

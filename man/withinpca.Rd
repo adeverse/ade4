@@ -29,7 +29,7 @@ centred in each sub-table and then normed globally. Hence, variables
 have a null mean in each sub-table and a global variance equal to one.
 }
 \value{
-returns a list of the sub-class \code{within} of class \code{dudi}. See \code{\link{within}}
+returns a list of the sub-class \code{within} of class \code{dudi}. See \code{\link{wca}}
 }
 \references{Bouroche, J. M. (1975) \emph{Analyse des données ternaires: la double analyse en composantes principales}. 
  Thèse de 3ème cycle, Université de Paris VI.

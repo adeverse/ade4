@@ -42,6 +42,8 @@ mjrochet.phy <- newick2phylog(mjrochet$tre)
 tab <- log((mjrochet$tab))
 tab0 <- data.frame(scalewt(tab))
 table.phylog(tab0, mjrochet.phy, csi = 2, clabel.r = 0.75)
-orthogram(tab0[,1], ortho = mjrochet.phy$Bscores)
+if (requireNamespace("adephylo", quietly = TRUE)) {
+  adephylo::orthogram(tab0[,1], ortho = mjrochet.phy$Bscores)
+}
 }
 \keyword{datasets}

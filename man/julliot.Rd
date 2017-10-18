@@ -77,7 +77,7 @@ if(adegraphicsLoaded()) {
 }
         
 \dontrun{
-if(requireNamespace("spdep", quietly = TRUE)) {
+if (requireNamespace("spdep", quietly = TRUE)) {
   neig0 <- nb2neig(spdep::dnearneigh(as.matrix(julliot$xy), 1, 1.8))
   if(adegraphicsLoaded()) {
     g5 <- s.label(julliot$xy, nb = spdep::dnearneigh(as.matrix(julliot$xy), 1, 1.8))
@@ -88,8 +88,10 @@ if(requireNamespace("spdep", quietly = TRUE)) {
      addax = FALSE, grid = FALSE)
   }
   gearymoran(ade4:::neig.util.LtoG(neig0), log(julliot$tab + 1))
-  orthogram(log(julliot$tab[, 3] + 1), ortho = scores.neig(neig0),
-   nrepet = 9999)
+  
+  if (requireNamespace("adephylo", quietly = TRUE)) {
+    adephylo::orthogram(log(julliot$tab[, 3] + 1), ortho = scores.neig(neig0))
+  }
 }}
 }
 

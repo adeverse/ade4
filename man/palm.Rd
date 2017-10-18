@@ -31,7 +31,10 @@ data(palm)
 palm.phy <- newick2phylog(palm$tre)
 radial.phylog(palm.phy,clabel.l=1.25)
 
-orthogram(palm$traits[,4],palm.phy$Bscores)
+if (requireNamespace("adephylo", quietly = TRUE) & requireNamespace("ape", quietly = TRUE)) {
+  tre <- ape::read.tree(text = palm$tre)
+  adephylo::orthogram(palm$traits[, 4], tre)
+}
 dotchart.phylog(palm.phy,palm$traits[,4], clabel.l = 1,
  labels.n = palm.phy$Blabels, clabel.n = 0.75)
 w <- cbind.data.frame(palm.phy$Bscores[,c(3,4,6,13,21)],

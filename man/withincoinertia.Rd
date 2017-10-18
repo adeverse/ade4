@@ -1,18 +1,18 @@
-\name{withincoinertia}
-\alias{withincoinertia}
+\name{wca.coinertia}
+
 \alias{wca.coinertia}
+
 \title{Within-class coinertia analysis}
+
 \description{
 Performs a within-class analysis after a coinertia analysis
 }
+
 \usage{
-withincoinertia(obj, fac, scannf = TRUE, nf = 2)
 \method{wca}{coinertia}(x, fac, scannf = TRUE, nf = 2, \dots) 
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{obj}{a coinertia analysis (object of class \link{coinertia})
-    obtained by the function \link{coinertia}}
   \item{x}{a coinertia analysis (object of class \link{coinertia})
     obtained by the function \link{coinertia}}
   \item{fac}{a factor partitioning the rows in classes}
@@ -20,22 +20,27 @@ withincoinertia(obj, fac, scannf = TRUE, nf = 2)
   \item{nf}{if scannf FALSE, an integer indicating the number of kept axes}
   \item{\dots}{further arguments passed to or from other methods}
 }
+
+\value{
+  An object of the class \code{witcoi}. Outputs are described by the
+  \code{print} function
+}
+
 \details{
   This analysis is equivalent to do a within-class analysis on each
   initial dudi, and a coinertia analysis on the two within
   analyses. This function returns additional outputs for the interpretation. 
 }
-\value{
-  An object of the class \code{witcoi}. Outputs are described by the
-  \code{print} function
-}
+
 \references{
-Franquet E., Doledec S., and Chessel D. (1995) Using multivariate analyses for separating spatial and temporal effects within species-environment relationships. \emph{Hydrobiologia}, \bold{300}, 425--431.
+Franquet E., Doledec S., and Chessel D. (1995) Using multivariate analyses for 
+separating spatial and temporal effects within species-environment relationships. 
+\emph{Hydrobiologia}, \bold{300}, 425--431.
 }
 
 \note{
 To avoid conflict names with the \code{base:::within} function, the
-function \code{within} is now deprecated and will be removed. To be
+function \code{within} is now deprecated and removed. To be
 consistent, the \code{withincoinertia} function is also deprecated and
 is replaced by the method \code{wca.coinertia} of the generic \code{wca} function. 
 }
@@ -43,8 +48,10 @@ is replaced by the method \code{wca.coinertia} of the generic \code{wca} functio
 \author{
 Stéphane Dray \email{stephane.dray@univ-lyon1.fr} and Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}
 }
+
 \seealso{\code{\link{coinertia}}, \code{\link{within}}
 }
+
 \examples{
 data(meaudret)
 pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 4)
@@ -62,4 +69,3 @@ plot(coi.w)
 }
 
 \keyword{multivariate}
-

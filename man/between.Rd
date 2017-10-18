@@ -1,20 +1,21 @@
 \name{bca}
-\alias{between}
+
 \alias{bca}
 \alias{bca.dudi}
+
 \title{Between-Class Analysis}
+
 \description{
 Performs a particular case of a Principal Component Analysis with
 respect to Instrumental Variables (pcaiv), in which there is only a
 single factor as explanatory variable.
 }
+
 \usage{
-between(dudi, fac, scannf = TRUE, nf = 2)
 \method{bca}{dudi}(x, fac, scannf = TRUE, nf = 2, \dots) 
 }
+
 \arguments{
-  \item{dudi}{a duality diagram, object of class \code{\link{dudi}}
-    obtained from the functions \code{dudi.coa}, \code{dudi.pca},...}
   \item{x}{a duality diagram, object of class \code{\link{dudi}} from
     one of the functions \code{dudi.coa}, \code{dudi.pca},...}
   \item{fac}{a factor partitioning the rows of \code{dudi$tab} in classes}
@@ -22,6 +23,7 @@ between(dudi, fac, scannf = TRUE, nf = 2)
   \item{nf}{if scannf FALSE, a numeric value indicating the number of kept axes}
   \item{\dots}{further arguments passed to or from other methods}
 }
+
 \value{
 Returns a list of class \code{\link{dudi}}, subclass 'between' containing
   \item{tab}{a data frame class-variables containing the means per class
@@ -40,14 +42,16 @@ Returns a list of class \code{\link{dudi}}, subclass 'between' containing
   \item{ls}{a data frame with the row coordinates}
   \item{as}{a data frame containing the projection of inertia axes onto between axes}
 }
+
 \references{
-Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles en milieu aquatique
-I- Description d'un plan d'observations complet par projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
+Dolédec, S. and Chessel, D. (1987) Rythmes saisonniers et composantes stationnelles 
+en milieu aquatique I- Description d'un plan d'observations complet par 
+projection de variables. \emph{Acta Oecologica, Oecologia Generalis}, \bold{8}, 3, 403--426.
 }
 
 \note{
 To avoid conflict names with the \code{base:::within} function, the
-function \code{within} is now deprecated and will be removed. To be
+function \code{within} is now deprecated and removed. To be
 consistent, the \code{between} function is also deprecated and
 is replaced by the method \code{bca.dudi} of the new generic \code{bca} function. 
 }
@@ -56,6 +60,7 @@ is replaced by the method \code{bca.dudi} of the new generic \code{bca} function
 Daniel Chessel \cr
 Anne-Béatrice Dufour \email{anne-beatrice.dufour@univ-lyon1.fr}
 }
+
 \examples{
 data(meaudret)
 pca1 <- dudi.pca(meaudret$env, scan = FALSE, nf = 4)

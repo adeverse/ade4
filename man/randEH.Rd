@@ -3,6 +3,8 @@
 \title{Nee and May's random process
 }
 \description{
+This function is deprecated. See the function \code{EH} in the package \code{adiv}.
+
 When branch lengths in an ultrametric phylogenetic tree are expressed as divergence times, the total sum of branch 
 lengths in that tree expresses the amount of evolutionary history. The function \code{randEH}
 calculates the amount of evolutionary history preserved when \emph{k} random species out of \emph{n} 

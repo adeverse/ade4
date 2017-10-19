@@ -3,6 +3,8 @@
 \title{Maximal or minimal amount of originality saved under optimal conditions
 }
 \description{
+This function is deprecated. See the function \code{EH} in the package \code{adiv}.
+
 computes the maximal or minimal amount of originality saved over all 
 combinations of species optimizing the amount of evolutionary history preserved. The 
 originality of a species is measured with the QE-based index.

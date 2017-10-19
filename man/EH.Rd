@@ -3,6 +3,8 @@
 \title{Amount of Evolutionary History
 }
 \description{
+This function is deprecated. See the function \code{EH} in the package \code{adiv}.
+
 computes the sum of branch lengths on an ultrametric phylogenetic tree.
 }
 \usage{

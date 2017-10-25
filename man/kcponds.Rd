@@ -1,17 +1,25 @@
 \name{kcponds}
 \alias{kcponds}
 \docType{data}
+
 \title{Ponds in a nature reserve}
+
 \description{
-This data set contains informations about 33 ponds in De Maten reserve (Genk, Belgium).
+  This data set contains informations about 33 ponds in De Maten reserve 
+  (Genk, Belgium).
 }
+
 \usage{data(kcponds)}
-\format{
-\describe{
-        \item{tab}{: a data frame with 15 environmental variables(columns) on 33 ponds(rows)}
-        \item{area}{: an object of class \code{area}}
-        \item{xy}{: a data frame with the coordinates of ponds}
-        \item{neig}{: an object of class \code{neig}}  }}
+
+\format{\code{kponds} is a list with the following components:
+  \describe{
+    \item{tab}{a data frame with 15 environmental variables (columns) on 33 ponds (rows)}
+    \item{area}{an object of class \code{area}}
+    \item{xy}{a data frame with the coordinates of ponds}
+    \item{neig}{an object of class \code{neig}}
+    \item{nb}{the neighbourhood graph of the 33 sites (an object of class \code{nb})}
+    \item{Spatial}{an object of the class \code{SpatialPolygons} of \code{sp}, containing the map}
+}}
 
 \details{ 
 Variables of \code{kcponds$tab} are the following ones : depth, area, O2 (oxygen concentration), 
@@ -20,10 +28,13 @@ TP (total phosphorus concentration), chla (chlorophyll-a concentration), EM (eme
 FM (floating macrophyte cover), SM (submerged macrophyte cover), denMI (total density of macroinvertebrates),
 divMI (diversity macroinvertebrates)
 }
+
 \source{
-Cottenie, K. (2002) Local and regional processes in a zooplankton metacommunity. PhD, Katholieke Universiteit Leuven, Leuven, Belgium. \cr
-\url{http://www.kuleuven.ac.be/bio/eco/phdkarlcottenie.pdf}
+  Cottenie, K. (2002) Local and regional processes in a zooplankton metacommunity. 
+  PhD, Katholieke Universiteit Leuven, Leuven, Belgium. \cr
+  \url{http://www.kuleuven.ac.be/bio/eco/phdkarlcottenie.pdf}
 }
+
 \examples{
 data(kcponds)
 w <- as.numeric(scalewt(kcponds$tab$N))
@@ -61,6 +72,6 @@ if(adegraphicsLoaded()) {
     summary(multi1)
   }
   par(mfrow = c(1, 1))
-}
-}
+}}
+
 \keyword{datasets}

@@ -1,30 +1,38 @@
 \name{butterfly}
 \alias{butterfly}
 \docType{data}
+
 \title{Genetics-Ecology-Environment Triple}
+
 \description{
-This data set contains environmental and genetics informations about 16 \emph{Euphydryas editha} butterfly colonies studied in California and Oregon.
+  This data set contains environmental and genetics informations about 16 
+  \emph{Euphydryas editha} butterfly colonies studied in California and Oregon.
 }
+
 \usage{data(butterfly)}
-\format{
-\code{butterfly} is a list with 4 components.
-\describe{
-    \item{xy}{is a data frame with the two coordinates of the 16 \emph{Euphydryas editha} butterfly colonies. }
-    \item{envir}{is a environmental data frame of  16 sites - 4 variables. }
-    \item{genet}{is a genetics data frame of 16 sites - 6 allele frequencies. }
-    \item{contour}{is a data frame for background map (California map). }
-    }
-}
+
+\format{\code{butterfly} is a list with the following components:
+  \describe{
+    \item{xy}{a data frame with the two coordinates of the 16 \emph{Euphydryas 
+      editha} butterfly colonies}
+    \item{envir}{a environmental data frame of  16 sites - 4 variables}
+    \item{genet}{a genetics data frame of 16 sites - 6 allele frequencies}
+    \item{contour}{a data frame for background map (California map)}
+    \item{Spatial}{an object of the class \code{SpatialPolygons} of \code{sp},
+      containing the map}
+}}
+
 \source{
-McKechnie, S.W., Ehrlich, P.R. and White, R.R. (1975) 
-Population genetics of Euphydryas butterflies. 
-I. Genetic variation and the neutrality hypothesis. 
-\emph{Genetics}, \bold{81}, 571--594.
+  McKechnie, S.W., Ehrlich, P.R. and White, R.R. (1975). Population genetics of 
+  Euphydryas butterflies. I. Genetic variation and the neutrality hypothesis. 
+  \emph{Genetics}, \bold{81}, 571--594.
 }
+
 \references{
-Manly, B.F. (1994) \emph{Multivariate Statistical Methods. A primer.}
-Second edition. Chapman & Hall, London. 1--215.
+  Manly, B.F. (1994) \emph{Multivariate Statistical Methods. A primer.}
+  Second edition. Chapman & Hall, London. 1--215.
 }
+
 \examples{
 data(butterfly)
 
@@ -49,4 +57,5 @@ if(adegraphicsLoaded()) {
       main = "genetic/spatial")
   par(mfrow = c(1,1))
 }}
+
 \keyword{datasets}

@@ -1,22 +1,28 @@
 \name{capitales}
 \alias{capitales}
 \docType{data}
+
 \title{Road Distances}
+
 \description{
-This data set gives the road distances between 15 European capitals and their coordinates. 
+  This data set gives the road distances between 15 European capitals and their
+  coordinates. 
 }
+
 \usage{data(capitales)}
-\format{
-This list contains the following objects:
-    \describe{
-    \item{dist}{is dist object the road distances between 15 European capitals. }
-    \item{xy}{is a data frame containing the coordinates of capitals. }
-    \item{area}{is a data frame containing three variables, designed to be used in area.plot function.}
-    \item{logo}{is a list of pixmap objects, each one symbolizing a
+
+\format{\code{capitales} is a list with the following components:
+  \describe{
+    \item{xy}{a data frame containing the coordinates of capitals}
+    \item{area}{a data frame containing three variables, designed to be used 
+      in area.plot function}
+    \item{logo}{a list of pixmap objects, each one symbolizing a
       capital}
-     \item{Spatial}{is a SpatialPolygons object containing the map}
-    }
-}
+    \item{Spatial}{an object of the class \code{SpatialPolygons} of \code{sp},
+      containing the map}
+    \item{dist}{a dist object the road distances between 15 European capitals}
+}}
+
 \examples{
 data(capitales)
 attr(capitales$dist, "Labels")

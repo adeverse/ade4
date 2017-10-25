@@ -4,25 +4,27 @@
 
 \title{Phyto-Ecological Survey}
 
-\description{This data set gives environmental and spatial informations about species and sites.}
+\description{
+  This data set gives environmental and spatial informations about species and 
+  sites.
+}
 
 \usage{data(mafragh)}
 
-\format{
-  \code{mafragh} is a list of 12 components:
+\format{\code{mafragh} is a list with the following components:
   \describe{
-    \item{xy}{are the coordinates of 97 sites.}
-    \item{flo}{is a data frame with 97 sites and 56 species.}
-    \item{neig}{is the neighbourhood graph of the 97 sites (an object of class \code{neig}).}
-    \item{env}{is a data frame with 97 sites and 11 environmental variables.}
-    \item{partition}{is a factor classifying the 97 sites in 7 classes.}
-    \item{area}{is a data frame of class \code{area}}
+    \item{xy}{the coordinates of 97 sites}
+    \item{flo}{a data frame with 97 sites and 56 species}
+    \item{neig}{the neighbourhood graph of the 97 sites (an object of class \code{neig})}
+    \item{env}{a data frame with 97 sites and 11 environmental variables}
+    \item{partition}{a factor classifying the 97 sites in 7 classes}
+    \item{area}{a data frame of class \code{area}}
     \item{tre}{a character providing the phylogeny as a newick object}
-    \item{traits}{a list of data frame. Each data frame provides the value of biological traits for plant species.}
-    \item{nb}{is the neighbourhood graph of the 97 Mafragh sites (an object of class \code{nb}).}
-    \item{Spatial}{is the map of the 97 Mafragh sites (an object of the class \code{SpatialPolygons} of \code{sp}).}
-    \item{spenames}{is a data frame with 56 rows (species) and 2 columns (names).}
-    \item{Spatial.contour}{is the contour of the Magragh map (an object of the class \code{SpatialPolygons} of \code{sp}).}
+    \item{traits}{a list of data frame. Each data frame provides the value of biological traits for plant species}
+    \item{nb}{the neighbourhood graph of the 97 Mafragh sites (an object of class \code{nb})}
+    \item{Spatial}{the map of the 97 Mafragh sites (an object of the class \code{SpatialPolygons} of \code{sp})}
+    \item{spenames}{a data frame with 56 rows (species) and 2 columns (names)}
+    \item{Spatial.contour}{the contour of the Magragh map (an object of the class \code{SpatialPolygons} of \code{sp})}
 }}
 
 \source{

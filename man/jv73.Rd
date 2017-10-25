@@ -1,30 +1,38 @@
 \name{jv73}
 \alias{jv73}
 \docType{data}
+
 \title{K-tables Multi-Regions}
+
 \description{
-This data set gives physical and physico-chemical variables, fish species, spatial coordinates about 92 sites. 
+  This data set gives physical and physico-chemical variables, fish species, 
+  spatial coordinates about 92 sites. 
 }
+
 \usage{data(jv73)}
-\format{
-    \code{jv73} is a list of 6 components.
-    \describe{
-    \item{morpho}{is a data frame with 92 sites and 6 physical variables.}
-    \item{phychi}{is a data frame with 92 sites and 12 physico-chemical variables.}
-    \item{poi}{is a data frame with 92 sites and 19 fish species.}
-    \item{xy}{is a data frame with 92 sites and 2 spatial coordinates.}
-    \item{contour}{is a data frame for mapping.}
-    \item{fac.riv}{is a factor distributing the 92 sites on 12 rivers.}
-    }
-}
+
+\format{\code{jv73} is a list with the following components:
+  \describe{
+    \item{morpho}{a data frame with 92 sites and 6 physical variables}
+    \item{phychi}{a data frame with 92 sites and 12 physico-chemical variables}
+    \item{poi}{a data frame with 92 sites and 19 fish species}
+    \item{xy}{a data frame with 92 sites and 2 spatial coordinates}
+    \item{contour}{a data frame for mapping}
+    \item{fac.riv}{a factor distributing the 92 sites on 12 rivers}
+    \item{Spatial}{an object of the class \code{SpatialLines} of \code{sp},
+      containing the map}
+}}
+
 \source{
-Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).
-Recherches écologiques sur le réseau hydrographique du Doubs.
-Essai de biotypologie. Thèse d'Etat, Besançon.
+  Verneaux, J. (1973) Cours d'eau de Franche-Comté (Massif du Jura).
+  Recherches écologiques sur le réseau hydrographique du Doubs.
+  Essai de biotypologie. Thèse d'Etat, Besançon.
 }
+
 \references{
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps047.pdf} (in French).
+  See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps047.pdf} (in French).
 }
+
 \examples{
 data(jv73)
 

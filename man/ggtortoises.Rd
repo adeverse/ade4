@@ -1,32 +1,43 @@
 \name{ggtortoises}
 \alias{ggtortoises}
 \docType{data}
-\title{Microsatellites of Galapagos tortoises populations}
-\description{
-This data set gives genetic relationships between Galapagos tortoises populations with 10 microsatellites. 
-}
-\usage{data(ggtortoises)}
-\format{
-    \code{ggtortoises} is a list of 6 components. 
-    \describe{
-        \item{area}{is a data frame designed to be used in area.plot function.}
-        \item{ico}{is a list of three pixmap icons representing the tortoises morphotypes.}
-        \item{pop}{is a data frame containing meta informations about populations.}
-        \item{misc}{is a data frame containing the coordinates of the island labels.}
-        \item{loc}{is a numeric vector giving the number of alleles by marker.}
-        \item{tab}{is a data frame containing the number of alleles by populations for 10 microsatellites.} 
-    }
-}
-\source{
-M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Microsatellite analysis of genetic divergence among populations of giant galapagos tortoises.
-\emph{Molecular Ecology} \bold{11}: 2265-2283.
-}
-\references{
-M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) Microsatellite analysis of genetic divergence among populations of giant galapagos tortoises.
-\emph{Molecular Ecology} \bold{11}: 2265-2283.
 
-See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps069.pdf} (in French).
+\title{Microsatellites of Galapagos tortoises populations}
+
+\description{
+  This data set gives genetic relationships between Galapagos tortoises 
+  populations with 10 microsatellites. 
 }
+
+\usage{data(ggtortoises)}
+
+\format{\code{ggtortoises} is a list with the following components:
+  \describe{
+    \item{area}{a data frame designed to be used in the \code{area.plot} function}
+    \item{ico}{a list of three pixmap icons representing the tortoises morphotypes}
+    \item{pop}{a data frame containing meta informations about populations}
+    \item{misc}{a data frame containing the coordinates of the island labels}
+    \item{loc}{a numeric vector giving the number of alleles by marker}
+    \item{tab}{a data frame containing the number of alleles by populations for 10 microsatellites}
+    \item{Spatial}{an object of the class \code{SpatialPolygons} of \code{sp},
+      containing the map}
+}}
+
+\source{
+  M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002) 
+  Microsatellite analysis of genetic divergence among populations of giant 
+  galapagos tortoises. \emph{Molecular Ecology} \bold{11}: 2265-2283.
+}
+
+\references{
+  M.C. Ciofi, C. Milinkovitch, J.P. Gibbs, A. Caccone, and J.R. Powell (2002).
+  Microsatellite analysis of genetic divergence among populations of giant 
+  galapagos tortoises. \emph{Molecular Ecology} \bold{11}: 2265-2283.
+
+  See a data description at \url{http://pbil.univ-lyon1.fr/R/pdf/pps069.pdf} 
+  (in French).
+}
+
 \examples{
 if(requireNamespace("pixmap", quietly=TRUE)) {
   data(ggtortoises)
@@ -50,4 +61,5 @@ if(requireNamespace("pixmap", quietly=TRUE)) {
   	s.logo(ggtortoises$pop, listico, add.p = TRUE)
   }
 }}
+
 \keyword{datasets}

@@ -1,21 +1,32 @@
 \name{tintoodiel}
 \alias{tintoodiel}
 \docType{data}
+
 \title{Tinto and Odiel estuary geochemistry}
+
 \description{
-This data set contains informations about geochemical characteristics of heavy metal pollution in surface sediments of the Tinto and Odiel river estuary (south-western Spain).  
+  This data set contains informations about geochemical characteristics of heavy 
+  metal pollution in surface sediments of the Tinto and Odiel river estuary 
+  (south-western Spain).  
 }
+
 \usage{data(tintoodiel)}
-\format{
-\code{tintoodiel} is a list containing the following objects : 
-\describe{
-   \item{xy}{: a data frame that contains spatial coordinates of the 52 sites}   
-   \item{tab}{: a data frame with 12 columns (concentration of heavy metals) and 52 rows (sites)}
-   \item{neig}{: an object of class \code{neig}}
+
+\format{\code{tintoodiel} is a list with the following components:
+  \describe{
+    \item{xy}{a data frame that contains spatial coordinates of the 52 sites}   
+    \item{tab}{a data frame with 12 columns (concentration of heavy metals) and 52 rows (sites)}
+    \item{neig}{an object of class \code{neig}}
+    \item{nb}{the neighbourhood graph of the 52 sites (an object of class \code{nb})}
 }}
+
 \source{
-Borrego, J., Morales, J.A., de la Torre, M.L. and Grande, J.A. (2002) Geochemical characteristics of heavy metal pollution in surface sediments of the Tinto and Odiel river estuary (south-western Spain). \emph{Environmental Geology}, \bold{41}, 785--796.
+  Borrego, J., Morales, J.A., de la Torre, M.L. and Grande, J.A. (2002) 
+  Geochemical characteristics of heavy metal pollution in surface sediments of 
+  the Tinto and Odiel river estuary (south-western Spain). \emph{Environmental 
+  Geology}, \bold{41}, 785--796.
 }
+
 \examples{
 data(tintoodiel)
 if(!adegraphicsLoaded()) {

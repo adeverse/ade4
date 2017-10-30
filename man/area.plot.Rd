@@ -111,9 +111,13 @@ par(mfrow = c(1, 1))
         cpoi = 3, addax = FALSE, contour = w)
       s.label(xy, area = irishdata$area, incl = FALSE, 
         addax = FALSE, contour = w)
-      if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
-        data(columbus, package = "spdep")
+      par(mfrow = c(1, 1))
+        
+      if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE) & 
+        requireNamespace("spData", quietly = TRUE)) {
+        data(columbus, package = "spData")
         par(mfrow = c(2, 2))
+        col.gal.nb <- spdep::read.gal(system.file("weights/columbus.gal", package="spData")[1])
         plot(col.gal.nb, coords, pch = 20, cex = 2)
         col.gal.neig <- nb2neig(col.gal.nb)
         s.label(data.frame(coords), neig = col.gal.neig,

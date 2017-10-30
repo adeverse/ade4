@@ -1,6 +1,8 @@
 # Sample .travis.yml for R projects
 
 language: r
+cache: packages
+r: devel
 warnings_are_errors: false
 sudo: required
 
@@ -12,3 +14,9 @@ notifications:
   email:
     on_success: change
     on_failure: change
+
+addons:
+  apt:
+    packages:
+      - libgdal-dev
+      - libproj-dev

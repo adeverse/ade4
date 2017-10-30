@@ -27,6 +27,8 @@
     #   r <- quantile(x, c(0.25, 0.75)) 
     #   h <- (r[2] - r[1])/1.34 4 * 1.06 * min(sqrt(var(x)), h) * length(x)^(-1/5)
     # } 
+    opar <- par(no.readonly = TRUE)
+    on.exit(par(opar))
 
     par(mar=c(0.1,0.1,0.1,0.1))
     s.label(dfxy, xax = xax, yax = yax, clabel = 0,

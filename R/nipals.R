@@ -26,7 +26,7 @@ function(df, nf=2, rec=FALSE,niter=100, tol = 1e-9){
 
     #X<-scale(df, center=T, scale=T, na.rm=TRUE)
     cmeans <- colMeans(df, na.rm=TRUE)
-    csd <- apply(df, 2, sd, na.rm=TRUE) * (nr.na - 1) / nr.na
+    csd <- apply(df, 2, sd, na.rm=TRUE) * sqrt((nr.na - 1) / nr.na)
     X <- sweep(sweep(df, 2, cmeans, "-"), 2, csd, "/")
     x$tab<-X
     for (h in 1:nf) {

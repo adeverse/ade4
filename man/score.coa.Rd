@@ -49,8 +49,8 @@ data(rpjdl)
 rpjdl1 <- dudi.coa(rpjdl$fau, scan = FALSE)
 score(rpjdl1, clab.r = 0, clab.c = 0.75)
 if (requireNamespace("MASS", quietly = TRUE)) {
-   data(MASS::caith)
-   score(dudi.coa(MASS::caith, scan = FALSE), clab.r = 1.5, clab.c = 1.5, cpoi = 3)
+   data(caith, package = "MASS")
+   score(dudi.coa(caith, scan = FALSE), clab.r = 1.5, clab.c = 1.5, cpoi = 3)
    data(housetasks)
    score(dudi.coa(housetasks, scan = FALSE), clab.r = 1.25, clab.c = 1.25, 
         csub = 0, cpoi = 3)

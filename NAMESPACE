@@ -171,10 +171,10 @@ S3method("wca","rlq")
 #####################################
 importFrom("graphics", "abline", "arrows", "axis", "barplot", "box", "boxplot", "frame", "hist", "image", "layout", "lines", "mtext", "par", "plot.default", "plot", "plot.new", "points", "polygon", "rect", "segments", "strheight", "strwidth", "symbols", "text", "title")
 importFrom("grDevices", "chull", "dev.cur", "gray", "grey", "n2mfrow")
-importFrom("stats", "anova", "as.dist", "as.formula", "biplot", "coefficients", "cor", "cov", "cutree", "density", "dist", "dnorm", "hclust", "is.ts", "lm", "lm.wfit", "loess", "model.frame", "model.matrix", "na.omit", "p.adjust", "p.adjust.methods", "pf", "plot.ts", "poly", "ppoints", "predict", "quantile", "residuals", "screeplot", "sd", "symnum", "ts", "ts.union", "var", "weighted.mean")
+importFrom("stats", "shapiro.test", "anova", "as.dist", "as.formula", "biplot", "coefficients", "cor", "cov", "cutree", "density", "dist", "dnorm", "hclust", "is.ts", "lm", "lm.wfit", "loess", "model.frame", "model.matrix", "na.omit", "p.adjust", "p.adjust.methods", "pf", "plot.ts", "poly", "ppoints", "predict", "quantile", "residuals", "screeplot", "sd", "symnum", "ts", "ts.union", "var", "weighted.mean")
 importFrom("utils", "modifyList", "read.table", "write.table")
 importFrom("methods", "setOldClass")
-
+importFrom("MASS", "ginv", "kde2d")
 
 #####################################
 ##               Export            ##
@@ -229,7 +229,7 @@ export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multis
 
 ## ******* misc *********
 export("bwca.dpcoa")
-
+export("dagnelie.test")
 #####################################
 ##            Not Exported         ##
 #####################################

@@ -3,7 +3,7 @@
 \title{Nee and May's random process
 }
 \description{
-This function is deprecated. See the function \code{EH} in the package \code{adiv}.
+This function is deprecated. See the function \code{randEH} in the package \code{adiv}.
 
 When branch lengths in an ultrametric phylogenetic tree are expressed as divergence times, the total sum of branch 
 lengths in that tree expresses the amount of evolutionary history. The function \code{randEH}

@@ -1,7 +1,7 @@
 "optimEH" <- function(phyl, nbofsp, tol = 1e-8, give.list = TRUE)
 {
     .Deprecated(new="optimEH", package="ade4", 
-              msg="This function is now deprecated. Please use the 'optimEH' fuction in the 'adiv' package.")
+              msg="This function is now deprecated. Please use the 'optimEH' function in the 'adiv' package.")
     if (!inherits(phyl, "phylog")) stop("unconvenient phyl")
     if(is.null(phyl$Wdist)) phyl <- newick2phylog.addtools(phyl)
     phy.h <- hclust(phyl$Wdist^2 / 2)

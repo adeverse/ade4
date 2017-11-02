@@ -1,7 +1,7 @@
 "randEH" <- function(phyl, nbofsp, nbrep = 10)
 {
     .Deprecated(new="randEH", package="ade4", 
-              msg="This function is now deprecated. Please use the 'randEH' fuction in the 'adiv' package.")
+              msg="This function is now deprecated. Please use the 'randEH' function in the 'adiv' package.")
     if (!inherits(phyl, "phylog")) stop("unconvenient phyl")
     if(is.null(phyl$Wdist)) phyl <- newick2phylog.addtools(phyl)
     if (length(nbofsp)!= 1) stop("unconvenient nbofsp")

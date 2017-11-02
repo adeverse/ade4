@@ -1,7 +1,7 @@
 "EH" <- function(phyl, select = NULL)
 {
     .Deprecated(new="EH", package="ade4", 
-              msg="This function is now deprecated. Please use the 'EH' fuction in the 'adiv' package.")
+              msg="This function is now deprecated. Please use the 'EH' function in the 'adiv' package.")
     if (!inherits(phyl, "phylog")) stop("unconvenient phyl")
     if(is.null(phyl$Wdist)) phyl <- newick2phylog.addtools(phyl)
     if (is.null(select))

@@ -5,6 +5,8 @@
 \alias{freq2genet}
 \title{A class of data: tables of populations and alleles}
 \description{
+These functions are deprecated. See the \code{df2genind} and \code{genind2genpop} functions in the package \code{adegenet}.
+
 There are multiple formats of genetic data.  The functions of ade4 associated genetic data use the class \code{genet}.
 An object of the class \code{genet} is a list containing at least one data frame whose lines are groups of individuals (populations) and columns alleles forming blocks associated with the locus.
 They contain allelic frequencies expressed as a percentage. \cr

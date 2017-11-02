@@ -1,4 +1,8 @@
 "char2genet" <- function(X,pop,complete=FALSE) {
+  
+  .Deprecated(new="char2genet", package="ade4", 
+              msg="This function is now deprecated. Please use the 'df2genind' and 'genind2genpop' functions in the 'adegenet' package.")
+  
     if (!inherits(X, "data.frame")) stop ("X is not a data.frame")
     if (!is.factor(pop)) stop("pop is not a factor")
     nind <- length(pop)
@@ -218,6 +222,10 @@
 
 
 "count2genet" <- function (PopAllCount) {
+  
+  .Deprecated(new="count2genet", package="ade4", 
+              msg="This function is now deprecated. Please use the 'df2genind' and 'genind2genpop' functions in the 'adegenet' package.")
+  
     # PopAllCount est un data.frame qui contient des dénombrements
      ####################################################################################
     "codred" <- function(base, n) {
@@ -294,6 +302,10 @@
 }
 
 "freq2genet" <- function (PopAllFreq) {
+  
+  .Deprecated(new="freq2genet", package="ade4", 
+              msg="This function is now deprecated. Please use the 'df2genind' and 'genind2genpop' functions in the 'adegenet' package.")
+  
     # PopAllFreq est un data.frame qui contient des fréquences alléliques
      ####################################################################################
     "codred" <- function(base, n) {

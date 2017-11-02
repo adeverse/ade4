@@ -1,4 +1,8 @@
 "fuzzygenet" <- function(X) {
+  
+  .Deprecated(new="fuzzygenet", package="ade4", 
+              msg="This function is now deprecated. Please use the 'df2genind' function in the 'adegenet' package.")
+  
     if (!inherits(X, "data.frame")) stop ("X is not a data.frame")
     nind <- nrow(X)
     ####################################################################################

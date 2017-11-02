@@ -2,6 +2,8 @@
 \alias{dist.genet}
 \title{ Genetic distances from gene frequencies }
 \description{
+  This function is deprecated. See the \code{dist.genpop} function in the package \code{adegenet}.
+
   This program computes any one of five measures of genetic distance from a set of gene frequencies in different populations with several loci.
 }
 \usage{

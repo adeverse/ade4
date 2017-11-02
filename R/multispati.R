@@ -1,4 +1,8 @@
 "multispati" <- function(dudi, listw, scannf=TRUE, nfposi=2, nfnega=0) {
+  
+  .Deprecated(new="multispati", package="ade4", 
+              msg="This function is now deprecated. Please use the 'multispati' fuction in the 'adespatial' package.")
+  
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected")
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected")

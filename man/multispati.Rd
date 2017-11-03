@@ -5,6 +5,8 @@
 \alias{print.multispati}
 \title{Multivariate spatial analysis}
 \description{
+This function is deprecated. See the function \code{multispati} in the package \code{adespatial}.
+
 This function ensures a multivariate extension of the univariate method of spatial autocorrelation analysis.
 By accounting for the spatial dependence of data observations and their multivariate covariance simultaneously, 
 complex interactions among many variables are analysed. Using a methodological scheme borrowed from duality diagram 

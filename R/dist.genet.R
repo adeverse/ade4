@@ -1,4 +1,8 @@
 "dist.genet" <- function (genet, method = 1, diag = FALSE, upper = FALSE) { 
+  
+  .Deprecated(new="dist.genet", package="ade4", 
+              msg="This function is now deprecated. Please use the 'dist.genpop' function in the 'adegenet' package.")
+  
     METHODS = c("Nei","Edwards","Reynolds","Rodgers","Provesti")
     if (all((1:5)!=method)) {
         cat("1 = Nei 1972\n")

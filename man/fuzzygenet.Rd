@@ -2,6 +2,8 @@
 \alias{fuzzygenet}
 \title{ Reading a table of genetic data (diploid individuals) }
 \description{
+  This function is deprecated. See the \code{df2genind} function in the package \code{adegenet}.
+
   Reads data like \code{char2genet} without a priori population
 }
 \usage{

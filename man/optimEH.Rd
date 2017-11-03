@@ -3,7 +3,7 @@
 \title{Nee and May's optimizing process
 }
 \description{
-This function is deprecated. See the function \code{EH} in the package \code{adiv}.
+This function is deprecated. See the function \code{optimEH} in the package \code{adiv}.
 
 performs Nee and May's optimizing scheme. When branch lengths in an ultrametric phylogenetic 
 tree are expressed as divergence times, the total sum of branch lengths in that 

@@ -40,7 +40,7 @@ if(requireNamespace("pixmap", quietly = TRUE)) {
   pixmap:::plot(atya.carto)
   points(atya$xy, pch = 20, cex = 2)
 }
-if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
+if(requireNamespace("spdep", quietly = TRUE)) {
   plot(neig2nb(atya$neig), atya$xy, col = "red", add = TRUE, lwd = 2)
   par(mfrow = c(1,1))
 }

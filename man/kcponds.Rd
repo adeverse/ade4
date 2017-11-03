@@ -66,7 +66,7 @@ if(adegraphicsLoaded()) {
 \dontrun{
   par(mfrow = c(3, 1))
   pca1 <- dudi.pca(kcponds$tab, scan = FALSE, nf = 4)
-  if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
+  if(requireNamespace("spdep", quietly = TRUE)) {
     multi1 <- multispati(pca1, spdep::nb2listw(neig2nb(kcponds$neig)), scannf = FALSE, nfposi = 2, 
       nfnega = 1)
     summary(multi1)

@@ -84,7 +84,7 @@ if(adegraphicsLoaded()) {
   par(mfrow = c(1, 1))
 }
 
-if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE)) {
+if(requireNamespace("spdep", quietly = TRUE)) {
   lw1 <- apply(link1, 1, function(x) x[x > 0])
   listw1 <- spdep::nb2listw(nb1, lw1)
   coa1 <- dudi.coa(mafragh$flo, scan = FALSE, nf = 4)

@@ -69,7 +69,7 @@ if(!adegraphicsLoaded()) {
     par(mfrow = c(1, 1))
   }
 
-  if(requireNamespace("maptools", quietly = TRUE) & requireNamespace("spdep", quietly = TRUE) & 
+  if(requireNamespace("spdep", quietly = TRUE) & 
     requireNamespace("pixmap", quietly = TRUE)) {
     
     link1 <- area2link(avijons$area)

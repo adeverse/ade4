@@ -40,6 +40,10 @@
       barplot(eig[1:rank])
       cat("Select the number of axes: ")
       nf <- as.integer(readLines(n = 1))
+      
+      newcall <- deparse(call)
+      newcall <- paste0(substr(newcall, 1, nchar(newcall) - 1), ", scannf = FALSE, nf = ", nf, "L)")
+      cat(paste0("\nYou can reproduce this result with the following command: ", newcall))
     }
   }
   if (nf <= 0)

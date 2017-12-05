@@ -222,10 +222,11 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     ##			         Modify the outputs
     ##-----------------------------------------------------------------------
     
-    if (scannf == TRUE){
+    if (scannf) {
         barplot(res$eig[1:res$rank])
         cat("Select the number of global components: ")
         res$nf <- as.integer(readLines(n = 1))
+        messageScannf(match.call(), res$nf)
     }
 
     if(res$nf > res$rank)

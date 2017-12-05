@@ -52,6 +52,7 @@
         barplot(eig[1:rank])
         cat("Select the number of axes: ")
         nf <- as.integer(readLines(n = 1))
+        messageScannf(match.call(), nf)
     }
     if (nf <= 0) 
         nf <- 2

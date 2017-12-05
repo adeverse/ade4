@@ -46,3 +46,9 @@ adegraphicsLoaded <- function() {
     "package:adegraphics"%in%search()
 }
     
+messageScannf <- function(oldCall, myNf) {
+  newcall <- as.list(oldCall)
+  newcall$scannf <- FALSE
+  newcall$nf <- myNf
+  message("\nYou can reproduce this result non-interactively with: \n", c(as.call(newcall)), "\n")
+}

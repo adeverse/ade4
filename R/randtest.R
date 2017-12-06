@@ -2,7 +2,7 @@
     UseMethod("randtest")
 }
 
-"as.randtest" <- function (sim, obs, alter = c("greater", "less", "two-sided"), output = c("light", "full"), call = match.call() ) {
+"as.randtest" <- function (sim, obs, alter = c("greater", "less", "two-sided"), output = c("light", "full"), call = match.call(), subclass = NULL ) {
     output <- match.arg(output)
     if(output == "full")
         res <- list(sim = sim, obs = obs)
@@ -38,7 +38,7 @@
     res$call <- call
     class(res) <- "randtest"
     if(output == "light")
-        class(res) <- c(class(res), "lightrandtest")
+        class(res) <- c(subclass, class(res), "lightrandtest")
     return(res)
 }
 

@@ -11,7 +11,7 @@ randtest is a generic function. It proposes methods for the following objects \c
     randtest(xtest, \dots)
     \method{plot}{randtest}(x, nclass = 10, coeff = 1, \dots)
     as.randtest (sim, obs,alter=c("greater", "less", "two-sided"),
-    output = c("light", "full"), call = match.call())
+    output = c("light", "full"), call = match.call(), subclass = NULL)
     \method{print}{randtest}(x, \dots)
 }
 \arguments{
@@ -26,6 +26,7 @@ randtest is a generic function. It proposes methods for the following objects \c
 \item{alter}{a character string specifying the alternative hypothesis,
   must be one of "greater" (default), "less" or "two-sided"}
 \item{call}{a call order}
+\item{subclass}{a character vector indicating the subclasses associated to the returned object}
 }
 \value{
 \code{as.randtest} returns a list of class \code{randtest}\cr

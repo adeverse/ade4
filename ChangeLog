@@ -1,3 +1,229 @@
+2017-12-15  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-9 ----------
+
+2017-12-06  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/mantel.randtest.R, R/mantel.rtest.R: Returned objects now belong
+	to subclass "mantelrtest" (to implement a 'msr.mantelrtest' in
+	adespatial).
+
+2017-12-06  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/randtest.R, man/randtest.Rd: Add a new argument to function
+	as.randtest to specify subclasses for the returned object (by
+	default NULL)
+
+2017-12-05  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/coinertia.R, R/dudi.R, R/dudi.pco.R, R/mbpcaiv.R, R/mbpls.R,
+	R/mcoa.R, R/statis.R, R/utilities.R: Add a message containing the
+	function called for the 'dudi' creation, after user selects nf
+	(Feature request by Zhian N. Kamvar, on Github, 2017-11-07)
+
+2017-12-04  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/dudi.R: Add a message containing the complete call when users
+	interactively choose the number of axes in an analysis
+
+2017-11-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* .travis.yml: Remove addons packages as 'rgdal' is no longer
+	required
+
+2017-11-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION, man/area.plot.Rd, man/atya.Rd, man/avijons.Rd,
+	man/kcponds.Rd, man/mafragh.Rd, man/multispati.Rd,
+	man/multispati.randtest.Rd, man/multispati.rtest.Rd, man/neig.Rd,
+	man/tintoodiel.Rd: Remove dependencies to maptools and spData
+	(examples with columbus data set are removed)
+
+2017-11-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : commit 0d0c2004ce328889b7644f0f86bfc74bc6e552b5 Author:
+	Stéphane Dray <stephane.dray@univ-lyon1.fr> Date:   Fri Nov 3
+	11:27:42 2017 +0100
+
+2017-11-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/dist.genet.R, R/fuzzygenet.R, R/genet.R, man/dist.genet.Rd,
+	man/fuzzygenet.Rd, man/genet.Rd: The functions 'char2genet',
+	'count2genet', 'freq2genet', 'dist.genet' and 'fuzzygenet' are
+	deprecated and are now in the 'adegenet' package
+
+2017-11-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/EH.R, R/ade4-deprecated.R, R/multispati.R, R/optimEH.R,
+	R/orisaved.R, R/randEH.R: Correct a misprint
+
+2017-11-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/optimEH.Rd, man/orisaved.Rd, man/randEH.Rd: Correct typo in
+	the help files of the 'optimEH', 'orisaved' and 'randEH' deprecated
+	functions
+
+2017-11-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/multispati.R, man/multispati.Rd: The 'multispati' function is
+	now deprecated
+
+2017-11-01  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION, NAMESPACE, R/mbpcaiv.R, R/mbpls.R, R/s.kde2d.R,
+	man/score.coa.Rd: Add dagnelie.test package MASS in Imports and
+	update calls to MASS functions/Data
+
+2017-11-01  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dagnelie.test.R, man/dagnelie.test.Rd: Adds Dagnelie's test for
+	multivariate normality
+
+2017-10-31  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: Specify the required version for the spData package
+
+2017-10-31  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/nipals.R: Correct a bug in the computation of biased sd from
+	unbiased estimator. Thanks to Kevin Wright  that identified the
+	problem.
+
+2017-10-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION, man/area.plot.Rd, man/neig.Rd: Correct import the
+	'columbus' data from the spData package that was moved from the
+	spdep package
+
+2017-10-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* : Merge pull request #7 from zkamvar/patch-1 Reset par in kde2d
+
+2017-10-30  Zhian N. Kamvar <zkamvar@gmail.com>
+
+	* R/s.kde2d.R: reset par in kde2d
+
+2017-10-25  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/atya.Rd, man/avijons.Rd, man/buech.Rd, man/butterfly.Rd,
+	man/capitales.Rd, man/elec88.Rd, man/ggtortoises.Rd,
+	man/irishdata.Rd, man/julliot.Rd, man/jv73.Rd, man/kcponds.Rd,
+	man/mafragh.Rd, man/sarcelles.Rd, man/t3012.Rd, man/tintoodiel.Rd,
+	man/vegtf.Rd, man/zealand.Rd: Update help files for data
+
+2017-10-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/EH.R, R/optimEH.R, R/orisaved.R, R/randEH.R, man/EH.Rd,
+	man/optimEH.Rd, man/orisaved.Rd, man/randEH.Rd: The 'EH', 'optimEH',
+	'orisaved' and 'randEH' functions are now deprecated
+
+2017-10-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/ade4-deprecated.Rd: Update the 'ade4-deprecated' file: a
+	precision is added and the formatting is updated
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/carni70.Rd, man/julliot.Rd, man/mjrochet.Rd, man/palm.Rd,
+	man/ungulates.Rd, man/variance.phylog.Rd: Update examples that call
+	the 'orthogram' function
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/gridrowcol.Rd, man/mld.Rd, man/orthobasis.Rd: Update
+	cross-references for 'othogram'
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/orthogram.Rd: Remove the help page of 'orthogram' because it
+	is deprecated
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/ade4-deprecated.R, R/orthogram.R: The R code of the 'orthogram'
+	function is pasted in the 'ade4-deprecated.R' file and the
+	'orthogram.R' file is removed
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE: The 'orthogram' function is no longer exported because
+	it is deprecated
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/bca.coinertia.Rd, man/wca.coinertia.Rd, man/withinpca.Rd: 
+	Update cross-references for 'between' and 'within' functions
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/ade4-deprecated.R, R/bca.R, R/bca.coinertia.R, R/wca.R,
+	R/wca.coinertia.R: Move the 'between', 'betweencoinertia', 'within'
+	and 'withincoinertia' R functions in the 'ade4-deprecated' file
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/ade4-deprecated.R: Add an 'ade4-deprecated' file to store the R
+	code for deprecated functions
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/ade4-deprecated.Rd: Update the 'ade4-deprecated' help file:
+	the 'between',  'betweencoinertia', 'within' and 'withincoinertia'
+	functions are added as deprecated
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/bca.R, R/bca.coinertia.R, R/between.R, R/betweencoinertia.R,
+	R/wca.R, R/wca.coinertia.R, R/within.R, R/withincoinertia.R: Rename
+	R files for the 'bca', 'bca.coinertia', 'wca' and 'wca.coinertia'
+	functions
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/bca.Rd, man/bca.coinertia.Rd, man/between.Rd,
+	man/betweencoinertia.Rd, man/wca.Rd, man/wca.coinertia.Rd,
+	man/within.Rd, man/withincoinertia.Rd: Rename help files for the
+	'bca', 'bca.coinertia', 'wca' and 'bca.coinertia' functions
+
+2017-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/between.Rd, man/betweencoinertia.Rd, man/within.Rd,
+	man/withincoinertia.Rd: Update the help file because the 'between',
+	'betweencoinertia', 'within' and 'withincoinertia' are deprecated
+
+2017-10-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/between.R, R/betweencoinertia.R, R/orthogram.R, R/within.R,
+	R/withincoinertia.R: Update the call to the '.Deprecated' function
+
+2017-10-09  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/multiblock.R: Remove an unrequired space
+
+2017-09-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* : commit 7b6de30d8740e9df053e0caa76d5c22cbd939dba Author: Aurélie
+	Siberchicot <aurelie.siberchicot@univ-lyon1.fr> Date:   Mon Sep 18
+	15:03:04 2017 +0200
+
+2017-08-21  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* : commit 5fc0e8ce3d26264fb2a7cf6b16672bcd236dd5d9 Author:
+	Stéphane Dray <stephane.dray@univ-lyon1.fr> Date:   Mon Aug 21
+	14:02:01 2017 +0200
+
+2017-08-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-8 ----------
+
+2017-08-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: Correct misprints in the DESCRIPTION file
+
+2017-08-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-8 ----------
+	
 2017-08-09  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-8 ----------

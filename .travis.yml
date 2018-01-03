@@ -7,7 +7,7 @@ cache: packages
 warnings_are_errors: false
 sudo: required
 
-r_check_args: "--as-cran --run-dontrun"
+r_check_args: "--as-cran"
 
 r_packages:
 - devtools

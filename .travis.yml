@@ -1,10 +1,16 @@
 # Sample .travis.yml for R projects
 
 language: r
-cache: packages
 r: devel
+cache: packages
+
 warnings_are_errors: false
 sudo: required
+
+r_check_args: "--as-cran --run-dontrun"
+
+r_packages:
+- devtools
 
 env:
  global:

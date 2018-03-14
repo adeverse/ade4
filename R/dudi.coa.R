@@ -1,4 +1,7 @@
 "dudi.coa" <- function (df, scannf = TRUE, nf = 2) {
+    
+    df <- data.matrix(df)
+    storage.mode(df) <- "double"
     df <- as.data.frame(df)
     if (!is.data.frame(df)) 
         stop("data.frame expected")

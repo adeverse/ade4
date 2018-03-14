@@ -141,3 +141,18 @@
     names(res) <- names(x$tab)
     return(list(tabsup = res, lisup = coosup))
 }
+
+"suprow.fca" <- function (x, Xsup, ...) {
+    Xsup <- data.frame(Xsup)
+    if (!inherits(x, "dudi")) 
+        stop("Object of class 'dudi' expected")
+    if (!inherits(x, "fca")) 
+        stop("Object of class 'fca' expected")
+    if (ncol(Xsup) != ncol(x$tab)) 
+        stop("non convenient col numbers")
+    Xsup <- sweep(Xsup, 2, length(x$blo)*x$cw, "/") - 1
+    coosup <- as.matrix(Xsup) %*% (as.matrix(x$c1) * x$cw)
+    coosup <- data.frame(coosup, row.names = row.names(Xsup))
+    names(coosup) <- names(x$li)
+    return(list(tabsup = Xsup, lisup = coosup))
+}

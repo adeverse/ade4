@@ -3,6 +3,7 @@
 \alias{suprow.coa}
 \alias{suprow.pca}
 \alias{suprow.dudi}
+\alias{suprow.fca}
 \alias{predict.dudi}
 \alias{suprow.acm}
 \alias{suprow.mix}
@@ -16,7 +17,8 @@ This function performs a projection of supplementary rows (i.e. supplementary in
 \method{predict}{dudi}(object, newdata, \dots) 
 \method{suprow}{pca}(x, Xsup, \dots)
 \method{suprow}{acm}(x, Xsup, \dots) 
-\method{suprow}{mix}(x, Xsup, \dots) 
+\method{suprow}{mix}(x, Xsup, \dots)
+\method{suprow}{fca}(x, Xsup, \dots)
 }
 \arguments{
   \item{x, object}{an object of class \code{dudi}}

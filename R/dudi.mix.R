@@ -52,7 +52,7 @@
         }
         else if (index[j] == "o") {
             w <- as.numeric(df[, j])
-            deg.poly <- min(nlevels(df[, j]) - 1, 2)
+            deg.poly <- min(length(unique(df[, j])) - 1, 2)
             w <- sqrt(nl - 1) * poly(w, deg.poly)
             if (deg.poly == 1) 
                 cha <- names(df)[j]

@@ -4,6 +4,12 @@ wca.dpcoa <- function (x, fac, scannf = TRUE, nf = 2, ...){
         stop("Object of class dpcoa expected")
     if (!is.factor(fac)) 
         stop("factor expected")
+  
+  ## check for unused levels and drop them
+  if(nlevels(fac) > length(unique(fac))) {
+    fac <- droplevels(fac)
+  }
+  
     tabw <- tapply(x$lw, fac, sum)
     tabw <- tabw/sum(tabw)
 
@@ -46,6 +52,12 @@ bca.dpcoa <- function(x, fac, scannf = TRUE, nf = 2, ...){
         stop("Object of class dpcoa expected")
     if (!is.factor(fac)) 
         stop("factor expected")
+  
+  ## check for unused levels and drop them
+  if(nlevels(fac) > length(unique(fac))) {
+    fac <- droplevels(fac)
+  }
+  
     tabw <- tapply(x$lw, fac, sum)
     tabw <- as.vector(tabw/sum(tabw))
     
@@ -89,6 +101,16 @@ bwca.dpcoa <- function(x, fac, cofac, scannf = TRUE, nf = 2, ...){
         stop("Object of class dpcoa expected")
     if (!is.factor(fac) || !is.factor(cofac) ) 
         stop("factor expected")
+  
+  ## check for unused levels and drop them
+  if(nlevels(fac) > length(unique(fac))) {
+    fac <- droplevels(fac)
+  }
+  
+  ## check for unused levels and drop them
+  if(nlevels(cofac) > length(unique(cofac))) {
+    cofac <- droplevels(cofac)
+  }
 
     cofac01 <- model.matrix( ~ -1 + cofac)
     fac01 <- model.matrix( ~ -1 + fac)

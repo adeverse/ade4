@@ -3,6 +3,12 @@ bca.coinertia <- function (x, fac, scannf = TRUE, nf = 2, ...) {
     stop("Xect of class coinertia expected")
   if (!is.factor(fac)) 
     stop("factor expected")
+  
+  ## check for unused levels and drop them
+  if(nlevels(fac) > length(unique(fac))) {
+    fac <- droplevels(fac)
+  }
+  
   appel <- as.list(x$call)    
   dudiX <- eval.parent(appel$dudiX)
   dudiY <- eval.parent(appel$dudiY)

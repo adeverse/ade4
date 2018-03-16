@@ -2,6 +2,14 @@
     if (!all(unlist(lapply(df, is.factor)))) 
         stop("All variables must be factors")
     df <- as.data.frame(df)
+    
+    ## check for unused levels and drop them
+    if(any(
+      sapply(df, nlevels)> 
+      sapply(df, function(x) length(unique(x))))) {
+      df <- droplevels(df)
+    }
+    
     X <- acm.disjonctif(df)
     lig <- nrow(X)
     col <- ncol(X)
@@ -109,7 +117,7 @@ fac2disj<- function(fac, drop = FALSE) {
   fac <- as.factor(fac)
   if(drop)
     fac <- factor(fac)
-  x <- matrix(0, n, length(unique(fac)))
+  x <- matrix(0, n, nlevels(fac))
   x[(1:n) + n * (unclass(fac) - 1)] <- 1
   dimnames(x) <- list(names(fac), as.character(levels(fac)))
   return(data.frame(x, check.names = FALSE))

@@ -11,7 +11,7 @@
     sqlw <- sqrt(dudi1$lw)
     sqcw <- sqrt(dudi1$cw)
        
-    fmla <- as.formula(paste("y ~", paste(names(df)[[2]], collapse = "+")))
+    fmla <- as.formula(paste("y ~", paste(names(df), collapse = "+")))
     mf <- model.frame(fmla, data = cbind.data.frame(y, df))
     mt <- attr(mf, "terms")
     x <- model.matrix(mt, mf)

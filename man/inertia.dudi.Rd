@@ -10,12 +10,13 @@ Computes the decomposition of inertia to measure the contributions of row and/or
 \usage{
 \method{inertia}{dudi}(x, row.inertia = FALSE, col.inertia = FALSE, ...)
 \method{print}{inertia}(x, ...)
-\method{summary}{inertia}(object, subset = 5, ...)
+\method{summary}{inertia}(object, sort.axis = 1, subset = 5, ...)
 }
 \arguments{
   \item{x, object}{a duality diagram, object of class \code{dudi} for \code{inertia.dudi}. An object of class \code{inertia} for the methods \code{print} and \code{summary}}
   \item{row.inertia}{if TRUE, returns the decomposition of inertia for the rows}
   \item{col.inertia}{if TRUE, returns the decomposition of inertia for the columns}
+  \item{sort.axis}{the kept axis used to sort the contributions in decreasing order}
   \item{subset}{the number of rows and/or columns to display in the summary}
   \item{\dots}{further arguments passed to or from other methods}
 }

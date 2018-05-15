@@ -8,10 +8,10 @@
     inertia <- x$eig
     cum <- cumsum(inertia)
     ratio <- cum/sum(inertia) * 100
-    TOT <- cbind.data.frame(inertia, cum, ratio)
-    rownames(TOT) <- paste0("Ax", 1:length(ratio))
-    names(TOT)[3] <- "cum(%)"
-    listing <- list(TOT = TOT)
+    tot.inertia <- cbind.data.frame(inertia, cum, ratio)
+    rownames(tot.inertia) <- paste0("Ax", 1:length(ratio))
+    names(tot.inertia)[3] <- "cum(%)"
+    listing <- list(tot.inertia = tot.inertia)
     if (row.inertia) {
         w <- x$tab * sqrt(x$lw)
         w <- sweep(w, 2, sqrt(x$cw), "*")
@@ -66,6 +66,7 @@
         names(listing$col.cum) <- paste0("Axis", c(1, if(nf > 1) paste(1,2:nf, sep =":") else NULL, paste0(nf+ 1, ":", length(ratio))))
     }  
     
+    listing$nf <- nf
     listing$call <- match.call()
     class(listing) <- c("inertia", class(listing))
     return(listing)
@@ -76,7 +77,7 @@ print.inertia <- function(x, ...){
     cat("\nCall: ")
     print(x$call)
     cat("\nDecomposition of total inertia:\n")
-    print(format(x$TOT, digits = 4, trim = TRUE, width = 7), quote = FALSE)
+    print(format(x$tot.inertia, digits = 4, trim = TRUE, width = 7), quote = FALSE)
   
     if(!is.null(x$row.abs)){
         cat("\nRow contributions (%):\n")
@@ -110,52 +111,53 @@ print.inertia <- function(x, ...){
 }
 
 
-summary.inertia <- function(object, subset = 5, ...){
+summary.inertia <- function(object, sort.axis = 1, subset = 5, ...){
     cat("\nTotal inertia: ")
-    cat(signif(sum(object$TOT$inertia), 4))
+    cat(signif(sum(object$tot.inertia$inertia), 4))
     cat("\n")
-    l0 <- nrow(object$TOT)
+    
+    call <- as.list(object$call)$x
+    tab <- eval.parent(call)$tab
+    subset <- min(subset, dim(tab))
+    
+    nf <- object$nf
+    if(sort.axis > nf)
+      stop("Non convenient axis for sorting contributions (sort.axis parameter).")
+    l0 <- nrow(object$tot.inertia)
     
     cat("\nProjected inertia (%):\n")
-    vec <- (object$TOT$inertia / sum(object$TOT$inertia) * 100)[1:(min(subset, l0))]
-    names(vec) <- paste("Ax",1:length(vec), sep = "")
+    vec <- (object$tot.inertia$inertia / sum(object$tot.inertia$inertia) * 100)[1:(min(nf, l0))]
+    names(vec) <- paste("Ax", 1:length(vec), sep = "")
     print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
     
-    if (l0 > 5) {
+    if (l0 > nf) {
         cat("\n")
-        cat(paste("(Only ", subset, " dimensions (out of ",l0, ") are shown)\n", sep="",collapse=""))
+        cat(paste("(Only ", nf, " dimensions (out of ", l0, ") are shown)\n", sep = "", collapse = ""))
     }
     cat("\n") 
     
     if(!is.null(object$row.abs)){
-        nsub <- min(subset, length(object$row.contrib))
-        
-        cat("\nRow contributions (%):\n")
-        vec <- sort(object$row.contrib, decreasing = TRUE)[1:nsub]
-        
-        print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
-        
         cat("\nRow absolute contributions (%):\n")
         idx <- apply(object$row.abs, 2, order, decreasing = TRUE)
-        idx <- unique(as.vector(idx[1:nsub,]))
-        print(format(object$row.abs[idx,], digits = 4, trim = TRUE, width = 7), quote = FALSE)
-        cat("\n")               
+        idx <- unique(as.vector(idx[1:subset, sort.axis]))
+        print(format(object$row.abs[idx, ], digits = 4, trim = TRUE, width = 7), quote = FALSE)
+        cat("\n")
+        
+        cat("\nRow relative contributions (%):\n")
+        idx <- apply(abs(object$row.rel), 2, order, decreasing = TRUE)
+        idx <- unique(as.vector(idx[1:subset, sort.axis]))
+        print(format(abs(object$row.rel[idx, ]), digits = 4, trim = TRUE, width = 7), quote = FALSE)
     }
   
     if(!is.null(object$col.abs)){
-        nsub <- min(subset, length(object$col.contrib))
-
-        cat("\nColumn contributions (%):\n")
-        vec <- sort(object$col.contrib, decreasing = TRUE)[1:nsub]
-        
-        print(format(vec, digits = 4, trim = TRUE, width = 7), quote = FALSE)
-        
         cat("\nColumn absolute contributions (%):\n")
         idx <- apply(object$col.abs, 2, order, decreasing = TRUE)
-        idx <- unique(as.vector(idx[1:nsub,]))
-        print(format(object$col.abs[idx,], digits = 4, trim = TRUE, width = 7), quote = FALSE)
+        idx <- unique(as.vector(idx[1:subset, sort.axis]))
+        print(format(object$col.abs[idx, ], digits = 4, trim = TRUE, width = 7), quote = FALSE)
         
+        cat("\nColumn relative contributions (%):\n")
+        idx <- apply(abs(object$col.rel), 2, order, decreasing = TRUE)
+        idx <- unique(as.vector(idx[1:subset, sort.axis]))
+        print(format(abs(object$col.rel[idx, ]), digits = 4, trim = TRUE, width = 7), quote = FALSE)
     }
-    
-    
 }

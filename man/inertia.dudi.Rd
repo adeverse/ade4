@@ -21,7 +21,7 @@ Computes the decomposition of inertia to measure the contributions of row and/or
 }
 \value{
 An object of class \code{inertia}, i.e. a list containing :
-\item{TOT}{repartition of the total inertia between axes}
+\item{tot.inertia}{repartition of the total inertia between axes}
 \item{row.contrib}{contributions of the rows to the total inertia}
 \item{row.abs}{absolute contributions of the rows (i.e. decomposition per axis)}
 \item{row.rel}{relative contributions of the rows}
@@ -30,6 +30,7 @@ An object of class \code{inertia}, i.e. a list containing :
 \item{col.abs}{absolute contributions of the columns (i.e. decomposition per axis)}
 \item{col.rel}{relative contributions of the columns}
 \item{col.cum}{cumulative relative contributions of the columns (i.e. decomposition per column)}
+\item{nf}{the number of kept axes}
 }
 \references{
 Lebart, L., Morineau, A. and Tabart, N. (1977) \emph{Techniques de la description statistique, méthodes et logiciels pour la description des grands tableaux}, Dunod, Paris, 61--62.\cr\cr

@@ -19,7 +19,6 @@
         listing$row.contrib <- apply(w, 1, sum)/sum(w) * 100
         w <- x$li * x$li * x$lw
         listing$row.abs <- sweep(w, 2, x$eig[1:nf], "/") * 100
-        names(listing$row.abs) <- paste0(names(listing$row.abs), "(%)")
          
         w <- x$tab
         w <- sweep(w, 2, sqrt(x$cw), "*")
@@ -45,7 +44,7 @@
         listing$col.contrib <- apply(w, 2, sum)/sum(w) * 100
         w <- x$co * x$co * x$cw
         listing$col.abs <- sweep(w, 2, x$eig[1:nf], "/") * 100
-        names(listing$col.abs) <- paste0("Axis", 1:nf,"(%)")
+        names(listing$col.abs) <- paste0("Axis", 1:nf)
         
         w <- x$tab
         w <- sweep(w, 1, sqrt(x$lw), "*")

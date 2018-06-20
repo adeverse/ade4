@@ -108,7 +108,7 @@ plot.dpcoa <- function(x, xax = 1, yax = 2, ...) {
 }
 
 summary.dpcoa <- function(object, ...){
-    summary.dudi(dpcoa, ...)
+    summary.dudi(object, ...)
 }
 
 

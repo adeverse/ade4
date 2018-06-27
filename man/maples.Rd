@@ -14,7 +14,7 @@ This data set describes the phylogeny of 17 flowers as reported by Ackerly and D
 	    }
 }
 \references{
-Ackerly, D. D. and Donoghue, M.J. (1998) Leaf size, sappling allometry, and Corner's rules: phylogeny and correlated evolution in Maples (Acer). 
+Ackerly, D. D. and Donoghue, M.J. (1998) Leaf size, sapling allometry, and Corner's rules: phylogeny and correlated evolution in Maples (Acer). 
 \emph{American Naturalist}, \bold{152}, 767--791.
 }
 \examples{

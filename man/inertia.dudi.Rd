@@ -10,18 +10,19 @@ Computes the decomposition of inertia to measure the contributions of row and/or
 \usage{
 \method{inertia}{dudi}(x, row.inertia = FALSE, col.inertia = FALSE, ...)
 \method{print}{inertia}(x, ...)
-\method{summary}{inertia}(object, subset = 5, ...)
+\method{summary}{inertia}(object, sort.axis = 1, subset = 5, ...)
 }
 \arguments{
   \item{x, object}{a duality diagram, object of class \code{dudi} for \code{inertia.dudi}. An object of class \code{inertia} for the methods \code{print} and \code{summary}}
   \item{row.inertia}{if TRUE, returns the decomposition of inertia for the rows}
   \item{col.inertia}{if TRUE, returns the decomposition of inertia for the columns}
+  \item{sort.axis}{the kept axis used to sort the contributions in decreasing order}
   \item{subset}{the number of rows and/or columns to display in the summary}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \value{
 An object of class \code{inertia}, i.e. a list containing :
-\item{TOT}{repartition of the total inertia between axes}
+\item{tot.inertia}{repartition of the total inertia between axes}
 \item{row.contrib}{contributions of the rows to the total inertia}
 \item{row.abs}{absolute contributions of the rows (i.e. decomposition per axis)}
 \item{row.rel}{relative contributions of the rows}
@@ -30,6 +31,7 @@ An object of class \code{inertia}, i.e. a list containing :
 \item{col.abs}{absolute contributions of the columns (i.e. decomposition per axis)}
 \item{col.rel}{relative contributions of the columns}
 \item{col.cum}{cumulative relative contributions of the columns (i.e. decomposition per column)}
+\item{nf}{the number of kept axes}
 }
 \references{
 Lebart, L., Morineau, A. and Tabart, N. (1977) \emph{Techniques de la description statistique, méthodes et logiciels pour la description des grands tableaux}, Dunod, Paris, 61--62.\cr\cr

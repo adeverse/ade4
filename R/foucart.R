@@ -107,7 +107,7 @@
     on.exit(par(opar))
     par(mfrow = c(2, 2))
     cootot <- x$li[, c(xax, yax)]
-    auxi <- x$li[, c(xax, yax)]
+    auxi <- x$co[, c(xax, yax)]
     names(auxi) <- names(cootot)
     cootot <- rbind.data.frame(cootot, auxi)
     auxi <- x$Tli[, c(xax, yax)]

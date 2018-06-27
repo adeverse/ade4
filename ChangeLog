@@ -1,3 +1,60 @@
+2018-04-05  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-11 ----------
+
+2018-04-04  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/randtest.pcaiv.R: Error in dimnames() vs names() in formula fmla L. 14 : dimnames(df)[[2]] was replaced by names(df)[[2]], which is
+	not good. Replaced by names(df).
+
+2018-03-29  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/coinertia.R: Misprint in print.coinertia
+
+2018-03-16  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dudi.mix.R: Correct the extracting in tab (now by drop = FALSE)
+	to deal with cases with only two levels (bug identified by Ceres
+	Barros on GitHub, issue 10)
+
+2018-03-14  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* NAMESPACE, R/suprow.R, man/suprow.Rd: Add new method "suprow.fca"
+	(proposition by Martial Ferreol on Github)
+
+2018-03-14  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dudi.coa.R: Correct a bug to deal with large numbers in integer
+	matrix (bug found by Angela Fuentes Pardo, email 10/02/2018)
+
+2018-01-16  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* .travis.yml: Remove last commit (was an error)
+
+2018-01-16  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* .travis.yml: Add 'RANN' to allow building vignette
+
+2018-01-03  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .travis.yml: Update .travis.yml Remove the '--run-dontrun'  argument in the 'r_check_args' tag
+
+2018-01-03  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .travis.yml: Update .travis.yml Remove the 'travis_wait' use
+
+2018-01-03  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .travis.yml: Update .travis.yml Add a tag to extend the time the command has to finish.
+
+2018-01-03  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .travis.yml: Update .travis.yml Add 'r_check_args' and 'r_packages' tags
+
+2017-12-15  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-10 ----------
+
 2017-12-15  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-10 ----------

@@ -180,7 +180,7 @@
   row.names(U) <- util(object$nf)
   res$InerR <- U
   print(U)
-  cat(paste("\nInertia & coinertia Q (", deparse(appel$dudiR),"):\n", sep=""))
+  cat(paste("\nInertia & coinertia Q (", deparse(appel$dudiQ),"):\n", sep=""))
   inertia <- cumsum(sdQ^2)
   max <- cumsum(dudiQ$eig[1:object$nf])
   ratio <- inertia/max

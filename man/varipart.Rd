@@ -1,22 +1,26 @@
 \name{varipart}
 \alias{varipart}
+\alias{print.varipart}
 \title{Partition of the variation of a response multivariate table by 2 explanatory tables}
 \usage{
-varipart(dudiY, X, W, nrepet = 999, type = c("simulated", "parametric"), ...)
+varipart(dudiY, X, W = NULL, nrepet = 999, type = c("simulated", "parametric"), \dots)
+\method{print}{varipart}(x, \dots)
 }
 \arguments{
 \item{dudiY}{an object of class dudi. Usually a principal component analysis or
 correspondence analysis on a response table Y.}
 
 \item{X, W}{dataframes or matrices of explanatory (co)variables (numeric and/or factor
-variables).}
+variables). By default, no covariables are considered (\code{W} is \code{NULL}) and this case corresponds to simple caonical ordination.}
 
 \item{nrepet}{an integer indicating the number of permutations
 .}
 
-\item{type}{a character specifying the algorithm which should be used to adjust R-squared.}
+\item{type}{a character specifying the algorithm which should be used to adjust R-squared (either \code{"simulated"} or \ code{"parametric"}).}
 
-\item{\dots}{further arguments passed to \code{as.krandtest}}
+\item{\dots}{further arguments passed to \code{as.krandtest} or \code{as.randtest} (if no covariables are considered) for function \code{varipart}.}
+
+\item{x}{an object of class \code{varipart}}
 }
 
 \value{
@@ -59,8 +63,14 @@ Y <- mafragh$flo
 dudiY <- dudi.pca(Y, scannf = FALSE, scale = FALSE)
 
 # Variation partitioning based on RDA
+# without covariables
+vprda <- varipart(dudiY,  mafragh$env)
+vprda
+# Variation partitioning based on RDA
+# with covariables and parametric estimation
 vprda <- varipart(dudiY,  mafragh$env, mafragh$xy, type = "parametric")
 vprda
+names(vprda)
 }
 \references{
 Borcard, D., P. Legendre, and P. Drapeau. 1992. Partialling out the spatial component

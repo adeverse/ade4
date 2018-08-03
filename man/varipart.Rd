@@ -3,12 +3,12 @@
 \alias{print.varipart}
 \title{Partition of the variation of a response multivariate table by 2 explanatory tables}
 \usage{
-varipart(dudiY, X, W = NULL, nrepet = 999, type = c("simulated", "parametric"), \dots)
+varipart(Y, X, W = NULL, nrepet = 999, type = c("simulated", "parametric"),
+scale = FALSE, \dots)
 \method{print}{varipart}(x, \dots)
 }
 \arguments{
-\item{dudiY}{an object of class dudi. Usually a principal component analysis or
-correspondence analysis on a response table Y.}
+\item{Y}{a vector, matrix or data frame or an object of class \code{dudi}. If not a \code{dudi} object, the data are trated by a principal component analysis (\code{dudi.pca}).}
 
 \item{X, W}{dataframes or matrices of explanatory (co)variables (numeric and/or factor
 variables). By default, no covariables are considered (\code{W} is \code{NULL}) and this case corresponds to simple caonical ordination.}
@@ -17,6 +17,8 @@ variables). By default, no covariables are considered (\code{W} is \code{NULL}) 
 .}
 
 \item{type}{a character specifying the algorithm which should be used to adjust R-squared (either \code{"simulated"} or \ code{"parametric"}).}
+
+\item{scale}{If \code{Y} is not a dudi, a \code{logical} indicating if variables should be scaled}
 
 \item{\dots}{further arguments passed to \code{as.krandtest} or \code{as.randtest} (if no covariables are considered) for function \code{varipart}.}
 

@@ -1,6 +1,9 @@
-varipart <- function(dudiY, X, W = NULL, nrepet = 999, type = c("simulated", "parametric"), ...){
+varipart <- function(Y, X, W = NULL, nrepet = 999, type = c("simulated", "parametric"), scale = FALSE, ...){
     
-    
+    if (!inherits(Y, "dudi"))
+       dudiY <- dudi.pca(Y, center = TRUE, scale = scale, scannf = FALSE) 
+    else
+      dudiY <- Y  
     response.generic <- as.matrix(dudiY$tab)
     inertot <- sum(dudiY$eig)
     sqlw <- sqrt(dudiY$lw)

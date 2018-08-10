@@ -5,6 +5,12 @@ wca <- function (x, ...) UseMethod("wca")
     stop("Object of class dudi expected")
   if (!is.factor(fac)) 
     stop("factor expected")
+  
+  ## check for unused levels and drop them
+  if(nlevels(fac) > length(unique(fac))) {
+    fac <- droplevels(fac)
+  }
+  
   lig <- nrow(x$tab)
   if (length(fac) != lig) 
     stop("Non convenient dimension")

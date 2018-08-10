@@ -4,6 +4,12 @@
         stop("Object of class rlq expected")
     if (!is.factor(fac)) 
         stop("factor expected")
+  
+  ## check for unused levels and drop them
+  if(nlevels(fac) > length(unique(fac))) {
+    fac <- droplevels(fac)
+  }
+  
     appel <- as.list(x$call)    
     dudiR <- eval.parent(appel$dudiR)
     dudiL <- eval.parent(appel$dudiL)

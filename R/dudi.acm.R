@@ -2,6 +2,14 @@
     if (!all(unlist(lapply(df, is.factor)))) 
         stop("All variables must be factors")
     df <- as.data.frame(df)
+    
+    ## check for unused levels and drop them
+    if(any(
+      sapply(df, nlevels)> 
+      sapply(df, function(x) length(unique(x))))) {
+      df <- droplevels(df)
+    }
+    
     X <- acm.disjonctif(df)
     lig <- nrow(X)
     col <- ncol(X)

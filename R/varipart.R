@@ -24,7 +24,7 @@ varipart <- function(Y, X, W = NULL, nrepet = 999, type = c("simulated", "parame
         df <- data.frame(df)
         mf <- model.matrix(~., df)
         x <- scalewt(mf[, -1, drop = FALSE], scale = FALSE, wt = lw) * sqrt(lw)
-        response.generic = response.generic * wt
+        response.generic <- response.generic * wt
         Q <- qr(x, tol = 1e-06)
         Yfit.X <- qr.fitted(Q, response.generic)
         obs <- sum(Yfit.X^2)

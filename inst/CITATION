@@ -1,53 +1,63 @@
-citHeader("To cite ade4 in publications use one these references:")
+bibentry(bibtype = "Article",
+  title          = "The {ade4} Package: Implementing the Duality Diagram for Ecologists",
+  author         = c(person(given = "St\\'ephane",
+                            family = "Dray"),
+		     person(given = "Anne--B\\'eatrice",
+		            family = "Dufour")),
+  journal        = "Journal of Statistical Software",
+  year           = "2007",
+  volume         = "22",
+  number         = "4",         
+  pages          = "1--20",
+  doi            = "10.18637/jss.v022.i04",
 
-citEntry(entry="Article",
-	title = "The ade4 package: implementing the duality diagram for ecologists",
-        author = personList(as.person("S. Dray"),as.person("A.B. Dufour")),
-	journal = "Journal of Statistical Software",
-  	year = "2007",
-	volume = "22",
-	pages = "1-20",
-	number = "4",         
-        textVersion = 
-        paste("Dray, S. and Dufour, A.B. ",
-	       "(2007): ", 
-               "The ade4 package: implementing the duality diagram for ecologists. ",
-               "Journal of Statistical Software. ",
-               "22(4): 1-20.",
-               sep="")
-         )
+  header         = "To cite ade4 in publications use:"
+)
 
-citEntry(entry="Article",
-	title = "The ade4 package-{I}- {O}ne-table methods",
-        author = personList(as.person("D. Chessel"),as.person("A.B. Dufour"), as.person("J. Thioulouse")),
-	journal = "R News",
-  	year = "2004",
-	volume = "4",
-	pages = "5-10",
-	         
-        textVersion = 
-        paste("Chessel, D. and Dufour, A.B. and Thioulouse, J. ",
-	       "(2004): ", 
-               "The ade4 package-I- One-table methods. ",
-               "R News. ",
-               "4: 5-10.",
-               sep="")
-         )
+bibentry(bibtype = "Article",
+  title          = "Supervised Multiblock Analysis in {R} with the {ade4} Package",
+  author         = c(person(given = "St\\'ephanie",
+                            family = "Bougeard",
+                            email = "stephanie.bougeard@anses.fr"),
+                     person(given = "St\\'ephane",
+                            family = "Dray",
+                            email = "stephane.dray@univ-lyon1.fr")),
+  journal        = "Journal of Statistical Software",
+  year           = "2018",
+  volume         = "86",
+  number         = "1",
+  pages          = "1--17",
+  doi            = "10.18637/jss.v086.i01"
+)
 
-citEntry(entry="Article",
-	title = "The ade4 package-{II}: {T}wo-table and {K}-table methods.",
-        author = personList(as.person("S. Dray"),as.person("A.B. Dufour"), as.person("D. Chessel")),
-	journal = "R News",
-  	year = "2007",
-	volume = "7",
-	number = "2",  
-	pages = "47-52",
-	         
-        textVersion = 
-        paste("Dray, S. and Dufour, A.B. and Chessel, D. ",
-	       "(2007): ", 
-               "The ade4 package-II: Two-table and K-table methods. ",
-               "R News. ",
-               "7(2): 47-52.",
-               sep="")
-         )
+bibentry(bibtype = "Article",
+  title          = "The {ade4} Package -- {I}: One-Table Methods",
+  author         = c(person(given = "Daniel",
+		            family = "Chessel"),
+		     person(given = "Anne-B\\'eatrice",
+		            family = "Dufour"),
+		     person(given = "Jean",
+		            family = "Thioulouse")),
+  journal        = "R News",
+  year           = "2004",  
+  volume         = "4",
+  number         = "1",
+  pages          = "5--10",
+  url            = "http://CRAN.R-project.org/doc/Rnews/"
+)
+
+bibentry(bibtype = "Article",
+  title          = "The {ade4} Package -- {II}: Two-Table and {K}-Table Methods",
+  author         = c(person(given = "St\\'ephane",
+                            family = "Dray"),
+		     person(given = "Anne-B\\'eatrice",
+		            family = "Dufour"),
+		     person(given = "Daniel",
+		            family = "Chessel")),
+  journal        = "R News",
+  year           = "2007",
+  volume         = "7",
+  number         = "2",
+  pages          = "47--52",
+  url            = "http://CRAN.R-project.org/doc/Rnews/"
+)

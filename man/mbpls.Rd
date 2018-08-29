@@ -46,7 +46,10 @@ mbpls(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), scannf = TRUE, 
 \item{vip}{variable importances for a given dimension}
 \item{vipc}{cumulated variable importances for a given number of dimensions}
 }
-\references{Bougeard, S., Qannari, E.M., Lupo, C. and Hanafi, M. (2011). From multiblock partial least squares to multiblock redundancy analysis. A continuum approach. \emph{Informatica}, 22(1), 11-26}
+\references{Bougeard, S., Qannari, E.M., Lupo, C. and Hanafi, M. (2011). From multiblock partial least squares to multiblock redundancy analysis. A continuum approach. \emph{Informatica}, 22(1), 11-26
+
+Bougeard, S. and Dray S. (2018) Supervised Multiblock Analysis in R with the ade4 Package. \emph{Journal of Statistical Software}, \bold{86} (1), 1-17. \url{http://doi.org/10.18637/jss.v086.i01}}
+
 \author{Stéphanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{mbpls}}, \code{\link{testdim.multiblock}},

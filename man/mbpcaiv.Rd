@@ -48,7 +48,12 @@ mbpcaiv(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), scannf = TRUE
 \item{vip}{variable importances for a given dimension}
 \item{vipc}{cumulated variable importances for a given number of dimensions}
 }
-\references{Bougeard, S., Qannari, E.M. and Rose, N. (2011) Multiblock Redundancy Analysis: interpretation tools and application in epidemiology. \emph{Journal of Chemometrics}, 23, 1-9}
+
+\references{Bougeard, S., Qannari, E.M. and Rose, N. (2011) Multiblock Redundancy Analysis: interpretation tools and application in epidemiology. \emph{Journal of Chemometrics}, \bold{23}, 1-9
+
+Bougeard, S. and Dray S. (2018) Supervised Multiblock Analysis in R with the ade4 Package. \emph{Journal of Statistical Software}, \bold{86} (1), 1-17. \url{http://doi.org/10.18637/jss.v086.i01}
+}
+
 \author{Stéphanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 
 \seealso{\code{\link{mbpls}}, \code{\link{testdim.multiblock}}, \code{\link{randboot.multiblock}}}

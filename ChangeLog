@@ -1,3 +1,81 @@
+2018-08-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-12 ----------
+
+2018-08-29  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION, inst/CITATION, man/ade4.package.Rd, man/mbpcaiv.Rd,
+	man/mbpls.Rd, man/multiblock.Rd, man/randboot.multiblock.Rd,
+	man/testdim.multiblock.Rd: Update citation and add reference to the
+	new JSS paper
+
+2018-08-20  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/varipart.R: Clean the code
+
+2018-08-06  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/varipart.R: Start a new and faster implementation to deal with
+	unweighted models
+
+2018-08-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/varipart.R, man/varipart.Rd: The function 'varipart' now accepts
+	a matrix, vector or data.frame as response table
+
+2018-08-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* NAMESPACE, R/varipart.R, man/varipart.Rd: Improve varipart to
+	compute adjusted fractions when no covaribales are considered and
+	add a new method 'print.varipart'
+
+2018-08-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* man/dist.ktab.Rd: Correct a link to a function in the doc
+
+2018-07-06  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/rlq.R: Correct a typo in the summary.rlq function (mail by
+	Manfred Jensen, 29/06/2018)
+
+2018-06-22  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/maples.Rd: Correct a bibliographic reference
+
+2018-06-20  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dpcoa.R: correct a small bug in summary.dpcoa
+
+2018-05-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/inertia.dudi.R: Update output names in inertia.dudi
+
+2018-05-15  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/inertia.dudi.Rd: Update the help file of 'inertia.dudi'
+
+2018-05-15  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/inertia.dudi.Rd: Update the help file of 'inertia.dudi'
+
+2018-05-15  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/inertia.dudi.R: Update 'inertia.dudi' and 'summary.inertia'
+
+2018-05-14  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/orthobasis.R: Correct the output for orthobasis that contains
+	only one column (and transformed to vector by default, i.e. when
+	drop = TRUE)
+
+2018-04-25  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/foucart.R: issue raised by Didier Plat https://github.com/sdray/ade4/issues/13
+
+2018-04-05  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-11 ----------
+
 2018-04-05  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-11 ----------

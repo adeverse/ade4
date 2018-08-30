@@ -1,5 +1,17 @@
 2018-08-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
+	* DESCRIPTION: ---------- release of ade4 1.7-13 ----------
+
+2018-08-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* inst/CITATION, man/bacteria.Rd: Correct invalid URL
+
+2018-08-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-12 ----------
+
+2018-08-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
 	* DESCRIPTION: ---------- release of ade4 1.7-12 ----------
 
 2018-08-29  Stéphane Dray <stephane.dray@univ-lyon1.fr>

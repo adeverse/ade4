@@ -17,8 +17,6 @@
 }
 \source{
 Data prepared by J. Lobry \email{Jean.Lobry@univ-lyon1.fr}
-starting from:\cr
-\url{http://www.tigr.org/tdb/mdb/mdbcomplete.html}
 }
 \examples{
 data(bacteria)

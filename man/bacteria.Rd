@@ -16,7 +16,7 @@
     }
 }
 \source{
-Data prepared by J. Lobry \email{Jean.Lobry@univ-lyon1.fr}
+Data prepared by J. Lobry \email{Jean.Lobry@univ-lyon1.fr} starting from \url{https://www.jcvi.org/}.
 }
 \examples{
 data(bacteria)

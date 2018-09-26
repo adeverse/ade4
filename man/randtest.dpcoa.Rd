@@ -8,13 +8,13 @@ Permutation test for double principal coordinate analysis (DPCoA)
 }
 
 \usage{
-\method{randtest}{dpcoa}(xtest, model = c("1p","1s"), nrep = 99,
+\method{randtest}{dpcoa}(xtest, model = c("1p","1s"), nrepet = 99,
 alter = c("greater", "less", "two-sided"), ...)
 }
 \arguments{
   \item{xtest}{an object of class \code{dpcoa}}
   \item{model}{either "1p", "1s", or the name of a function, (see details)}
-  \item{nrep}{the number of permutations to perform, the default is 99}
+  \item{nrepet}{the number of permutations to perform, the default is 99}
   \item{alter}{a character string specifying the alternative hypothesis, must be one of "greater" (default), "less" or "two-sided"}
   \item{\dots}{further arguments passed to or from other methods}
   }

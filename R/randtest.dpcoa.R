@@ -1,4 +1,4 @@
-randtest.dpcoa <- function(xtest, model = c("1p","1s"), nrep = 99, alter = c("greater", "less", "two-sided"), ...){
+randtest.dpcoa <- function(xtest, model = c("1p","1s"), nrepet = 99, alter = c("greater", "less", "two-sided"), ...){
 
     if (!inherits(xtest, "dpcoa")) 
         stop("Type 'dpcoa' expected")
@@ -43,7 +43,7 @@ randtest.dpcoa <- function(xtest, model = c("1p","1s"), nrep = 99, alter = c("gr
 
 	}
 		
-	ressim <- sapply(1:nrep, funrandomization)
+	ressim <- sapply(1:nrepet, funrandomization)
 	res <- as.randtest(obs = obs, sim = ressim, alter = alter, call = match.call(), ...)
 	return(res)
 

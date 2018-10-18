@@ -563,7 +563,7 @@ self-similarity\n")
             }
             
             verif <- function(u){
-                if(any(is.na(match(u, c(0, 1)))))
+                if(any(!u[!is.na(u)] %in% c(0, 1)))
                     stop("Dichotomous variables should have only 0, and 1")
             }
             
@@ -1481,7 +1481,7 @@ self-similarity\n")
             }
             
             verif <- function(u){
-                if(any(is.na(match(u, c(0, 1)))))
+                if(any(!u[!is.na(u)] %in% c(0, 1)))
                     stop("Dichotomous variables should have only 0, and 1")
             }
             
@@ -2126,7 +2126,7 @@ self-similarity\n")
                 }
                 
                 verif <- function(u){
-                    if(any(is.na(match(u, c(0,1)))))
+                    if(any(!u[!is.na(u)] %in% c(0, 1)))
                         stop("Dichotomous variables should have only 0, and 1")
                 }
                 
@@ -2884,7 +2884,7 @@ self-similarity\n")
                     }
                     
                     verif <- function(u){
-                        if(any(is.na(match(u, c(0,1)))))
+                        if(any(!u[!is.na(u)] %in% c(0, 1)))
                             stop("Dichotomous variables should have only 0, and 1")
                     }
                     

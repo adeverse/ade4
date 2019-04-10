@@ -8,7 +8,11 @@
   
   - \code{between}: replaced by \code{bca} \cr
   - \code{betweencoinertia}: replaced by \code{bca.coinertia} \cr
+  - \code{EH}: replaced by \code{EH} in the \code{adiv} package \cr
+  - \code{optimEH}: replaced by \code{optimEH} in the \code{adiv} package \cr
+  - \code{orisaved}: replaced by \code{orisaved} in the \code{adiv} package \cr
   - \code{orthogram}: replaced by \code{orthogram} in the \code{adephylo} package \cr
+  - \code{randEH}: replaced by \code{randEH} in the \code{adiv} package \cr
   - \code{within}: replaced by \code{wca} \cr
   - \code{withincoinertia}: replaced by \code{wca.coinertia} \cr
 }

@@ -212,3 +212,129 @@
     w$scores.order <- scores.order
   return(w)
 }
+
+"EH" <- function(phyl, select = NULL) {
+  .Deprecated(new="EH", package="ade4", 
+              msg="This function is now deprecated. Please use the 'EH' function in the 'adiv' package.")
+  if (!inherits(phyl, "phylog")) stop("unconvenient phyl")
+  if(is.null(phyl$Wdist)) phyl <- newick2phylog.addtools(phyl)
+  if (is.null(select))
+    return(sum(phyl$leaves) + sum(phyl$nodes))
+  else {
+    if(!is.numeric(select)) stop("unconvenient select")
+    select <- unique(select)
+    nbesp <- length(phyl$leaves)
+    nbselect <- length(select)
+    if(any(is.na(match(select, 1:nbesp)))) stop("unconvenient select")
+    phyl.D <- as.matrix(phyl$Wdist^2 / 2)
+    if(length(select)==1) return(max(phyl.D))
+    if(length(select)==2) return(phyl.D[select[1], select[2]] + max(phyl.D))
+    fun <- function(i) {
+      min(phyl.D[select[i], select[1:(i - 1)]])
+    }
+    res <-  phyl.D[select[1], select[2]] + max(phyl.D) + sum(sapply(3:nbselect, fun)) 
+    return(res)
+  }
+}
+
+"orisaved" <- function(phyl, rate = 0.1, method = 1) {
+  .Deprecated(new="orisaved", package="ade4", 
+              msg="This function is now deprecated. Please use the 'orisaved' function in the 'adiv' package.")
+  if (!inherits(phyl, "phylog")) stop("unconvenient phyl")
+  if(is.null(phyl$Wdist)) phyl <- newick2phylog.addtools(phyl)
+  if (any(is.na(match(method, 1:2)))) stop("unconvenient method")
+  if (length(method) != 1) stop("only one method can be chosen")
+  if (length(rate) != 1) stop("unconvenient rate")
+  if (!is.numeric(rate)) stop("rate must be a real value")
+  if (!(rate>=0 & rate<=1)) stop("rate must be between 0 and 1")
+  if (rate == 0) return(0)
+  phy.h <- hclust(phyl$Wdist^2 / 2)
+  nbesp <- length(phy.h$labels)
+  Rate <- round(seq(0, nbesp, by = nbesp * rate))
+  Rate <- Rate[-1]
+  phyl.D <- as.matrix(phyl$Wdist^2 / 2)
+  Orig <- (solve(phyl.D)%*%rep(1, nbesp) / sum(solve(phyl.D)))
+  OrigCalc <- function(i) {
+    if (method == 1) {
+      return(sum(unlist(lapply(split(Orig, cutree(phy.h, i)), max))))
+    }
+    if (method == 2) {
+      return(sum(unlist(lapply(split(Orig, cutree(phy.h, i)), min))))
+    }
+  }
+  res <- c(0, sapply(Rate, OrigCalc))
+  return(res)
+}
+
+"randEH" <- function(phyl, nbofsp, nbrep = 10) {
+  .Deprecated(new="randEH", package="ade4", 
+              msg="This function is now deprecated. Please use the 'randEH' function in the 'adiv' package.")
+  if (!inherits(phyl, "phylog")) stop("unconvenient phyl")
+  if(is.null(phyl$Wdist)) phyl <- newick2phylog.addtools(phyl)
+  if (length(nbofsp)!= 1) stop("unconvenient nbofsp")
+  nbesp <- length(phyl$leaves)
+  if (!((0 <= nbofsp) & (nbofsp <= nbesp))) stop("unconvenient nbofsp")
+  nbofsp <- round(nbofsp)
+  if (nbofsp == 0) return(rep(0, nbrep))
+  if (nbofsp == nbesp) {
+    return(rep(EH(phyl), nbrep))
+  }
+  simuA1 <- function(i, phy) {
+    comp = sample(1:nbesp, nbofsp)
+    if (nbofsp == 2) {
+      phyl.D <- as.matrix(phyl$Wdist^2 / 2)
+      resc <- (max(phyl.D) + phyl.D[comp[1], comp[2]])
+    }
+    else {
+      if (nbofsp == 1)
+        resc <- max(phyl$Wdist^2 / 2)
+      else {
+        resc <- EH(phyl, select = comp)
+      }
+    }
+    return(resc)
+  }
+  res <- sapply(1:nbrep, simuA1, phyl)
+  return(res)
+}
+
+"optimEH" <- function(phyl, nbofsp, tol = 1e-8, give.list = TRUE) {
+  .Deprecated(new="optimEH", package="ade4", 
+              msg="This function is now deprecated. Please use the 'optimEH' function in the 'adiv' package.")
+  if (!inherits(phyl, "phylog")) stop("unconvenient phyl")
+  if(is.null(phyl$Wdist)) phyl <- newick2phylog.addtools(phyl)
+  phy.h <- hclust(phyl$Wdist^2 / 2)
+  nbesp <- length(phy.h$labels)
+  if (length(nbofsp) != 1) stop("unconvenient nbofsp")
+  if (nbofsp == 0) return(0)
+  if (!((0 < nbofsp) & (nbofsp <= nbesp))) stop("unconvenient nbofsp")
+  nbofsp <- round(nbofsp)
+  sp.names <- phy.h$labels
+  if (nbofsp == nbesp) {
+    res1 <- EH(phyl)
+    sauv.names <- sp.names
+  }
+  else {
+    phyl.D <- as.matrix(phyl$Wdist^2 / 2)
+    Orig <- (solve(phyl.D)%*%rep(1, nbesp) / sum(solve(phyl.D)))
+    Orig <- as.data.frame(Orig)
+    car1 <- split(Orig, cutree(phy.h, nbofsp))
+    name1 <- lapply(car1,function(x) rownames(x)[abs(x - max(x)) < tol])
+    sauv.names <- lapply(name1, paste, collapse = " OR ")
+    comp <- as.character(as.vector(lapply(name1, function(x) x[1])))
+    nb1 <- as.vector(sapply(comp, function(x) (1:nbesp)[sp.names == x]))
+    if (nbofsp == 2)
+      res1 <- max(phyl$Wdist^2 / 2) * 2
+    else {
+      if (nbofsp == 1)
+        res1 <- max(phyl$Wdist^2 / 2)
+      else {
+        res1 <- EH(phyl, select = nb1)
+      }
+    }
+  }
+  if (give.list == TRUE)
+    return(list(value = res1, selected.sp = cbind.data.frame(names = unlist(sauv.names))))
+  else
+    return(res1)
+}

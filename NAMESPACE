@@ -221,7 +221,7 @@ export("char2genet", "count2genet", "dist.genet", "freq2genet", "fuzzygenet")
 
 ## ******* phylog *******
 export("as.taxo", "dist.taxo", "dotchart.phylog", "enum.phylog", "gearymoran", "hclust2phylog", "newick2phylog", "phylog.extract", "phylog.permut", "PI2newick", "radial.phylog","symbols.phylog", "table.phylog", "taxo2phylog", "variance.phylog")
-export("EH", "randEH", "optimEH", "originality", "orisaved")
+export("originality")
 
 ## ******* orthobasis *******
 export("haar2level", "mld", "orthobasis.circ", "orthobasis.haar", "orthobasis.line", "orthobasis.mat", "orthobasis.neig", "is.orthobasis")
@@ -239,7 +239,11 @@ export("dagnelie.test")
 ## ******* deprecated *******
 ## "between"
 ## "betweencoinertia"
+## "EH"
+## "optimEH"
+## "orisaved"
 ## "orthogram"
+## "randEH"
 ## "within"
 ## "withincoinertia"
 

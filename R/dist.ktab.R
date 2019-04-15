@@ -2288,7 +2288,7 @@ self-similarity\n")
                         x[x < tol] <- 0
                         return(x)
                     }
-                    thedis <- lapply(res, funfor0)
+                    thedis <- lapply(listdis, funfor0)
                     names(thedis) <- attributes(x[[i]])$Labels
                 }
             }
@@ -2400,7 +2400,7 @@ self-similarity\n")
                         x[x < tol] <- 0
                         return(x)
                     }
-                    thedis <- lapply(res, funfor0)
+                    thedis <- lapply(listdis, funfor0)
                     names(thedis) <- names(x[[i]])
                 }
             }

@@ -18,8 +18,7 @@ Franck P., Garnery L., Solignac M. and Cornuet J.M. (2000) Molecular confirmatio
 }
 \examples{
 data(apis108)
-apis <- count2genet(as.data.frame(t(apis108)))
-apis.pca <- dudi.pca(apis$tab, center = apis$center,
-    scale = FALSE, scannf = FALSE, nf = 3)
+str(apis108)
+names(apis108)
 } 
 \keyword{datasets}

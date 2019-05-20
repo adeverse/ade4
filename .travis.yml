@@ -12,9 +12,12 @@ r_check_args: "--as-cran"
 r_packages:
 - devtools
 
-r_binary_packages:
- - tkrplot
-
+addons:
+  apt:
+  packages:
+  - r-cran-tkrplot
+  - tk-dev
+  
 env:
  global:
    - CRAN: http://cran.rstudio.com

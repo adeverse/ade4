@@ -15,8 +15,8 @@ r_packages:
 addons:
   apt:
     packages:
-      - r-cran-tkrplot
-      - tk-dev
+      - tcl8.5-dev
+      - tk8.5-dev
   
 env:
  global:

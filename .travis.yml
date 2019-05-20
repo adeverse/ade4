@@ -10,13 +10,13 @@ sudo: required
 r_check_args: "--as-cran"
 
 r_packages:
-- devtools
+  - devtools
 
 addons:
   apt:
-  packages:
-  - r-cran-tkrplot
-  - tk-dev
+    packages:
+      - r-cran-tkrplot
+      - tk-dev
   
 env:
  global:

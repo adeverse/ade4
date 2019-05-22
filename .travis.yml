@@ -9,7 +9,5 @@ addons:
    - r-cran-tkrplot
    - tk-dev
 
-cache: packages
 r_check_args: "--as-cran"
 warnings_are_errors: false
-sudo: required

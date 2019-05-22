@@ -1,29 +1,15 @@
-# Sample .travis.yml for R projects
-
 language: r
-r: devel
-cache: packages
 
-warnings_are_errors: false
-sudo: required
-
-r_check_args: "--as-cran"
-
-r_packages:
-  - devtools
+r: 
+ - devel
 
 addons:
-  apt:
-    packages:
-      - tcl8.5-dev
-      - tk8.5-dev
-  
-env:
- global:
-   - CRAN: http://cran.rstudio.com
+ apt:
+  packages:
+   - r-cran-tkrplot
+   - tk-dev
 
-notifications:
-  email:
-    on_success: change
-    on_failure: change
-
+cache: packages
+r_check_args: "--as-cran"
+warnings_are_errors: false
+sudo: required

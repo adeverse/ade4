@@ -1,13 +1,18 @@
 language: r
-
-r: 
- - devel
+cache: packages
+r: devel
+warnings_are_errors: false
+sudo: required
 
 addons:
  apt:
   packages:
-   - r-cran-tkrplot
-   - tk-dev
+    - r-cran-tkrplot
+    - tk-dev
 
 r_check_args: "--as-cran"
-warnings_are_errors: false
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change

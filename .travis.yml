@@ -1,5 +1,6 @@
 language: r
 r: devel
+cache: packages
 warnings_are_errors: true
 sudo: required
 
@@ -8,6 +9,7 @@ addons:
   packages:
     - r-cran-tkrplot
     - tk-dev
+    - libudunits2-dev
 
 r_check_args: "--as-cran"
 

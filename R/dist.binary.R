@@ -1,5 +1,5 @@
 "dist.binary" <- function (df, method = NULL, diag = FALSE, upper = FALSE) {
-    METHODS <- c("JACCARD S3", "SOCKAL & MICHENER S4", "SOCKAL & SNEATH S5", 
+    METHODS <- c("JACCARD S3", "SOKAL & MICHENER S4", "SOKAL & SNEATH S5", 
         "ROGERS & TANIMOTO S6", "CZEKANOWSKI S7", "GOWER & LEGENDRE S9", "OCHIAI S12", "SOKAL & SNEATH S13", 
         "Phi of PEARSON S14", "GOWER & LEGENDRE S2")
     if (!(inherits(df, "data.frame") | inherits(df, "matrix"))) 
@@ -18,9 +18,9 @@
     if (is.null(method)) {
         cat("1 = JACCARD index (1901) S3 coefficient of GOWER & LEGENDRE\n")
         cat("s1 = a/(a+b+c) --> d = sqrt(1 - s)\n")
-        cat("2 = SOCKAL & MICHENER index (1958) S4 coefficient of GOWER & LEGENDRE \n")
+        cat("2 = SOKAL & MICHENER index (1958) S4 coefficient of GOWER & LEGENDRE \n")
         cat("s2 = (a+d)/(a+b+c+d) --> d = sqrt(1 - s)\n")
-        cat("3 = SOCKAL & SNEATH(1963) S5 coefficient of GOWER & LEGENDRE\n")
+        cat("3 = SOKAL & SNEATH(1963) S5 coefficient of GOWER & LEGENDRE\n")
         cat("s3 = a/(a+2(b+c)) --> d = sqrt(1 - s)\n")
         cat("4 = ROGERS & TANIMOTO (1960) S6 coefficient of GOWER & LEGENDRE\n")
         cat("s4 = (a+d)/(a+2(b+c)+d) --> d = sqrt(1 - s)\n")

@@ -76,7 +76,7 @@ s.corcircle(dudi.pca(as.data.frame(w3), scan = FALSE)$co)
 
 data(rpjdl)
 w1 = lapply(1:10, function(x) dist.binary(rpjdl$fau, method = x))
-w2 = c("JACCARD", "SOCKAL_MICHENER", "SOCKAL_SNEATH_S4", "ROGERS_TANIMOTO")
+w2 = c("JACCARD", "SOKAL_MICHENER", "SOKAL_SNEATH_S4", "ROGERS_TANIMOTO")
 w2 = c(w2, "CZEKANOWSKI", "S9_GOWER_LEGENDRE", "OCHIAI", "SOKAL_SNEATH_S13")
 w2 <- c(w2, "Phi_PEARSON", "S2_GOWER_LEGENDRE")
 names(w1) <- w2

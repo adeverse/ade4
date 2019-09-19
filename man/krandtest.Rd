@@ -41,5 +41,7 @@ names = colnames(sim), p.adjust.method = "none", output = c("light", "full"))
 wkrandtest <- as.krandtest(obs=c(0,1.2,2.4,3.4,5.4,20.4),sim=matrix(rnorm(6*200),200,6))
 wkrandtest
 plot(wkrandtest)
+wkrandtest[c(1,4,6)]
+wkrandtest[[1]]
 }
 \keyword{methods}

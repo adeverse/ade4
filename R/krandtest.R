@@ -119,36 +119,36 @@
 }
 
 
-"[.krandtest" <- function(object, selection) {
+"[.krandtest" <- function(x, i) {
   res <- list()
-  if (!inherits(object, "lightkrandtest"))
-    if(length(selection) == 1)
-      res$sim <- object$sim[, selection, drop = FALSE]
+  if (!inherits(x, "lightkrandtest"))
+    if(length(i) == 1)
+      res$sim <- x$sim[, i, drop = FALSE]
     else
-      res$sim <- object$sim[, selection]
-  res$obs <- object$obs[selection]
-  res$alter <- object$alter[selection]
-  res$rep <- object$rep[selection]
-  res$ntest <- length(selection)
-  res$expvar <- object$expvar[selection, ]
-  res$names <- object$names[selection]
-  res$pvalue <- object$pvalue[selection]
-  res$plot <- object$plot[selection]
-  res$adj.pvalue <- object$adj.pvalue[selection]
-  res$adj.method <- object$adj.method
+      res$sim <- x$sim[, i]
+  res$obs <- x$obs[i]
+  res$alter <- x$alter[i]
+  res$rep <- x$rep[i]
+  res$ntest <- length(i)
+  res$expvar <- x$expvar[i, ]
+  res$names <- x$names[i]
+  res$pvalue <- x$pvalue[i]
+  res$plot <- x$plot[i]
+  res$adj.pvalue <- x$adj.pvalue[i]
+  res$adj.method <- x$adj.method
   res$call <- match.call()
-  class(res) <- class(object)
+  class(res) <- class(x)
   return(res)
 }
 
-"[[.krandtest" <- function(object, selection) {
-  if(length(selection) != 1)
-    stop("Only one element can be selected: 'selection' must be an index of length at 1.")
+"[[.krandtest" <- function(x, i) {
+  if(length(i) != 1)
+    stop("Only one element can be selected: 'i' must be an index of length at 1.")
   
-  obj <- object[selection]
+  obj <- x[i]
 
   res <- list()
-  if (!inherits(object, "lightkrandtest"))
+  if (!inherits(x, "lightkrandtest"))
     res$sim <- obj$sim
   res$obs <- obj$obs
   res$alter <- obj$alter
@@ -159,7 +159,7 @@
   res$call <- match.call()
   
   class(res) <- "randtest"
-  if (inherits(object, "lightkrandtest")) 
+  if (inherits(x, "lightkrandtest")) 
     class(res) <- c(class(res), "lightrandtest")
   
   return(res)

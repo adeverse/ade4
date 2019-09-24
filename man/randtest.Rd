@@ -11,8 +11,8 @@
 
 \usage{
 randtest(xtest, \dots)
-as.randtest(sim, obs, alter = c("greater", "less", "two-sided"), output = c("light", "full"), 
-  call = match.call(), subclass = NULL)
+as.randtest(sim, obs, alter = c("greater", "less", "two-sided"), 
+  output = c("light", "full"), call = match.call(), subclass = NULL)
 
 \method{plot}{randtest}(x, nclass = 10, coeff = 1, \dots)
 \method{print}{randtest}(x, \dots)

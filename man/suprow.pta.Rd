@@ -1,42 +1,39 @@
-\encoding{latin1}
-\name{suprowpta}
-\alias{suprowpta}
+\name{suprow.pta}
+\alias{suprow.pta}
 \title{
 Projections of Supplementary Rows for a Partial Triadic Analysis of K-tables
 }
 \description{
 This function performs a projection of supplementary rows (i.e. supplementary individuals) for a Partial Triadic Analysis (\code{pta}) of K-tables.
-This is only valid in the case of a \code{pta} done on a K-Tables obtained by the \code{withinpca} and \code{ktab.within} functions.
+Computations are valid ONLY if the \code{pta} has been done on a K-Tables obtained by the \code{withinpca} function, followed by calls to the \code{ktab.within} and \code{t} functions.
 }
 \usage{
-suprowpta(ptaX, dfY, facY, scaling = c("partial", "total"))
+\method{suprow}{pta}(x, Xsup, facSup, \dots)
 }
 \arguments{
-  \item{ptaX}{an object of class \code{pta}}
-  \item{dfY}{an table with the supplementary rows}
-  \item{facY}{a factor partitioning the rows of \code{dfY}}
-  \item{scaling}{a string of characters as a scaling option: \cr
-  if "partial", the sub-table corresponding to each class is centred and normed. \cr
-  If "total", the sub-table corresponding to each class is centred and the total table is then normed.}
+  \item{x}{an object of class \code{pta}}
+  \item{Xsup}{a table with the supplementary rows}
+  \item{facSup}{a factor partitioning the rows of \code{Xsup}}
+  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 This function computes the coordinates of the supplementary rows for a K-tables.
 The table of supplementary rows is standardized according to the 'Bouroche' standardization used in the Within Analysis of the original \code{pta}.
-In a first step, the table of supplementary rows is standardized (centred and normed) with the mean and variance of the original table of active individuals (i.e. the K-tables used in \code{pta}). Then, as in the \code{withinpca} procedure, a second transformation is applied according to the value of the \code{scaling} argument.
+In a first step, the table of supplementary rows is standardized (centred and normed) with the mean and variance of the original table of active individuals (i.e. the K-tables used in \code{pta}). Then, according to the \code{withinpca} procedure, a second transformation is applied.
 
 For "partial", supplementary rows are standardized in each sub-table (corresponding to each level of the factor) by the mean and variance of each corresponding sub-sample in the table of active individuals. Hence, supplementary rows have null mean and unit variance in each sub-table.
 
 For "total", supplementary rows are centred in each sub-table with the mean of each coresponding sub-sample in the table of active individuals and then normed with the global variance ot the table of active individuals. Hence, supplementary rows have a null mean in each sub-table and a global variance equal to one. 
 }
 \value{
-Returns a list with the transformed table \code{dfY} in \code{tabsup} and the coordinates of the supplementary rows in \code{lisup}.
+Returns a list with the transformed table \code{Xsup} in \code{tabsup} and the coordinates of the supplementary rows in \code{lisup}.
 }
 \author{
 Benjamin Alric  \email{benjamin.alric@irstea.fr} \cr
 Jean Thioulouse \email{jean.thioulouse@univ-lyon1.fr}
 }
-\references{Bouroche, J. M. (1975) \emph{Analyse des donn?es ternaires: la double analyse en composantes principales}. 
-Th?se de 3?me cycle, Universit? de Paris VI.
+\references{Bouroche, J. M. (1975) \emph{Analyse des données ternaires: la double analyse en composantes principales}. 
+Thèse de 3ème cycle, Université de Paris VI.
 }
 \examples{
 data(meau)
@@ -59,7 +56,7 @@ wit1 <- withinpca(df = actenv, fac = actfac, scannf = FALSE, scaling = "partial"
 kta1 <- ktab.within(wit1, colnames = rep(c("S1", "S2", "S3", "S4", "S5"), 4))
 kta2 <- t(kta1)
 pta1 <- pta(kta2, scann = FALSE)
-supenv.pta <- suprowpta(ptaX = pta1, dfY = supenv, facY = supfac, scaling = "partial")
+supenv.pta <- suprow(x = pta1, Xsup = supenv, facSup = supfac)
 if (adegraphicsLoaded()) {
 # g1t = active + suplementary rows
 	g1t <- s.label(pta1tot$Tli, labels = rownames(totenv), 

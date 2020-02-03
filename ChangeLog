@@ -1,3 +1,77 @@
+2020-02-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-14 ----------
+
+2020-02-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION: Packages sp and pixmap are now in 'Imports'as they
+	defined S4 classes used in some data sets. Mail by B. Ripley
+
+2019-10-14  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, R/suprowpta.R, man/suprowpta.Rd: New function
+	'suprowpta'
+
+2019-09-24  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/randtest.Rd: Trunk a line in a help file
+
+2019-09-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/krandtest.R, man/krandtest.Rd, man/randtest.Rd: Udpate and
+	uniformize the help pages of 'krandtest' and 'randtest'
+
+2019-09-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, R/krandtest.R, man/krandtest.Rd: Add [ and [[ methods
+	for krandtest
+
+2019-08-07  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* R/dist.binary.R, R/dist.ktab.R, man/kdist.Rd: Correct a typo:
+	"Sockal" is now "Sokal" (Comment by P. Legendre)
+
+2019-05-17  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/apis108.Rd, man/casitas.Rd, man/chevaine.Rd, man/hdpg.Rd: 
+	Simplify the examples of the datasets 'apis108', 'casitas',
+	'chevaine' and 'hdpg' (no longer use deprecated genetic functions)
+
+2019-05-17  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/s.kde2d.Rd: Update the example used with 's.kde2d'
+
+2019-04-11  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, R/ade4-deprecated.R, R/dist.genet.R, R/fuzzygenet.R,
+	R/genet.R, man/ade4-deprecated.Rd, man/dist.genet.Rd,
+	man/fuzzygenet.Rd, man/genet.Rd: The functions 'dist.genet',
+	'fuzzygenet', 'char2genet', 'count2genet' and 'freq2genet' are
+	removed
+
+2019-04-10  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* NAMESPACE, R/EH.R, R/ade4-deprecated.R, R/optimEH.R,
+	R/orisaved.R, R/randEH.R, man/EH.Rd, man/ade4-deprecated.Rd,
+	man/optimEH.Rd, man/orisaved.Rd, man/randEH.Rd: The functions 'EH',
+	'randEH', 'optimEH' and 'orisaved' are removed
+
+2019-04-10  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/multispati.R, man/multispati.Rd: The 'print.multispati',
+	'plot.multispati' and 'summary.multispati' methods are now
+	deprecated
+
+2018-10-18  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/dist.ktab.R: Correct a bug in 'dist.ktab', 'ldist.ktab' and
+	'kdist.cor'
+
+
+2018-09-03  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/bacteria.Rd: Add url in the help page of 'bacteria' data
+
 2018-08-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-13 ----------

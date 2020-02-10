@@ -22,9 +22,7 @@ density: substratum density (\eqn{g.L^{-1}}{g.L^-1})\cr
 water: water content of the substratum (\eqn{g.L^{-1}}{g.L^-1})
 }
 \source{
-Data prepared by P. Legendre \email{Pierre.Legendre@umontreal.ca} and \cr
-D. Borcard \email{borcardd@magellan.umontreal.ca} starting from \cr
-\url{http://www.fas.umontreal.ca/biol/casgrain/fr/labo/oribates.html}\cr
+Data prepared by P. Legendre \email{Pierre.Legendre@umontreal.ca} and D. Borcard \email{borcardd@magellan.umontreal.ca}
 }
 \references{
 Borcard, D., and Legendre, P. (1994) Environmental control and spatial structure in ecological communities: 

@@ -24,8 +24,6 @@ Legendre, P. and Anderson, M.J. (1999) Distance-based redundancy analysis: testi
 
 Legendre, P., and Legendre, L. (1998) \emph{Numerical ecology}, 2nd English edition edition. Elsevier Science BV, Amsterdam.\cr
 
-From the DistPCoa program of P. Legendre et M.J. Anderson\cr
-\url{http://www.fas.umontreal.ca/BIOL/Casgrain/en/labo/distpcoa.html}
 }
 \author{
 Daniel Chessel  \cr

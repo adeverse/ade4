@@ -31,9 +31,6 @@ Daniel Chessel  \cr
 Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 
-\note{according to the program DistPCoa of P. Legendre and M.J. Anderson\cr
-\url{http://www.fas.umontreal.ca/BIOL/Casgrain/en/labo/distpcoa.html}
-}
 
 \examples{
 w <- c(0.8, 0.8, 0.377350269, 0.8, 0.377350269, 0.377350269) # see ref.

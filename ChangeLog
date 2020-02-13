@@ -1,3 +1,12 @@
+2020-02-13  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-15 ----------
+
+2020-02-10  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* DESCRIPTION, man/cailliez.Rd, man/kdisteuclid.Rd, man/oribatid.Rd: 
+	Remove some broken URL
+
 2020-02-03  Stéphane Dray <stephane.dray@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-14 ----------

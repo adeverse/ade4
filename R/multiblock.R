@@ -16,7 +16,6 @@ randboot.multiblock <- function(object, nrepet = 199, optdim, ...)
     Y <- eval.parent(appel$dudiY)  
     nr <- nrow(Y$tab)  
     ncY <- ncol(Y$tab)
-    h <- object$rank
 
     nblo <- length(object$blo) ## number of X tables 
     ncX <- sum(X$blo) ## total number of variables in X
@@ -37,7 +36,8 @@ randboot.multiblock <- function(object, nrepet = 199, optdim, ...)
     for (i in 1 : nrepet){
         s <- sample(x = nr, replace = TRUE)
         Xboot <- X[, s, ]
-        Yboot <- Y[s, ] 
+        Yboot <- Y[s, ]
+        Yboot$call <- Y$call # to pass dudi.type
         
         resboot <- do.call(method, list(dudiY = Yboot, ktabX = Xboot, scale = scale, option = option, scannf = FALSE, nf = as.integer(optdim)))
                 
@@ -94,21 +94,18 @@ testdim.multiblock <- function(object, nrepet = 100, quantiles = c(0.25, 0.75), 
       Xv <- X[, -s, ]
       Yc <- Y[s, ]
       Yv <- Y[-s, ]
+      Yc$call <- Yv$call <- Y$call # to pass dudi.type
       
       ## Applying the multiblock method to the calibration/validation datasets    
       rescal <- do.call(method, list(dudiY = Yc, ktabX = Xc, scale = scale, option = option, scannf = FALSE, nf = h))
       resval <- do.call(method, list(dudiY = Yv, ktabX = Xv, scale = scale, option = option, scannf = FALSE, nf = h))                   
       
       ## Compute Root Mean Square Errors of Calibration (RMSEC) and Validation (RMSEV)
-      nblo   <- length(Xc$blo)    
-      Xc.mat <- cbind.data.frame(unclass(Xc)[1:nblo])
-      Xv.mat <- cbind.data.frame(unclass(Xv)[1:nblo])
       for(j in 1 : min(rescal$rank, resval$rank, h)){
           XYcoef.cal <- sapply(rescal$XYcoef, function(x) x[, j])
-          intercept.cal <- sapply(rescal$intercept, function(x) x[, j])      
-          residYc <- as.matrix(Yc$tab) - (matrix(rep(intercept.cal, each = Nc), ncol = q) + as.matrix(Xc.mat) %*% XYcoef.cal)      
-          RMSEC[i, j] <- sqrt(sum(residYc^2) / (Nc * q)) 
-          residYv <- as.matrix(Yv$tab) - (matrix(rep(intercept.cal, each = Nv), ncol = q) + as.matrix(Xv.mat) %*% XYcoef.cal)
+          residYc <- as.matrix(rescal$tabY) - as.matrix(rescal$tabX) %*% XYcoef.cal
+          RMSEC[i, j] <- sqrt(sum(residYc^2) / (Nc * q))                         
+          residYv <- as.matrix(resval$tabY) - as.matrix(resval$tabX) %*% XYcoef.cal
           RMSEV[i, j] <- sqrt(sum(residYv^2) / (Nv * q))
       }
   }

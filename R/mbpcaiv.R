@@ -24,12 +24,8 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
         nf <- 2
     
     ## Only works with centred pca (dudi.pca with center=TRUE) with uniform row weights
-    # if (!any(dudi.type(dudiY$call) == c(3,4)))
-    #    stop("Only implemented for centred pca")
-
-    # Vérifier la formule / arrondi
-    #if (any(dudiY$lw != 1/nrow(dudiY$tab)))
-    #    stop("Only implemented for uniform row weights")
+    if (!any(dudi.type(dudiY$call) == c(3,4)))
+        stop("Only implemented for centred pca")
 
     option <- match.arg(option)
     
@@ -38,7 +34,7 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     ## -------------------------------------------------------------------------------
     
     ## Preparation of the data frames
-    Y     <- scalewt(as.matrix(dudiY$tab), wt = dudiY$lw, center = TRUE, scale = scale)
+    Y     <- as.matrix(dudiY$tab)
     nblo  <- length(ktabX$blo)
     Xk    <- lapply(unclass(ktabX)[1 : nblo], scalewt, wt = ktabX$lw, center = TRUE, scale = scale)
       
@@ -185,19 +181,6 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     res$XYcoef <- lapply(1:ncolY, function(x) t(apply(sweep(res$faX, 2 , res$Yco[x,] / norm.li, "*"), 1, cumsum)))
     names(res$XYcoef) <- colnames(dudiY$tab)
     
-    ##  Computing the intercept
-    X <- cbind.data.frame(lapply(unclass(ktabX)[1 : nblo], scalewt, wt = dudiY$lw, center = FALSE, scale = scale))
-    if (any(apply(X, 2, weighted.mean, w = dudiY$lw) < sqrt(.Machine$double.eps)) == FALSE & scale == TRUE) {
-        ## i.e. center=F, scale=T
-        meanY <- apply(sweep(as.matrix(dudiY$tab), 2, sqrt(apply(dudiY$tab, 2, varwt, wt = dudiY$lw)), "/"), 2, weighted.mean, w = dudiY$lw)
-        meanX <- apply(sweep(as.matrix(X), 2, sqrt(apply(X, 2, varwt, wt = dudiY$lw)), "/"), 2, weighted.mean, w = dudiY$lw)
-    } else {
-        meanY  <- apply(as.matrix(dudiY$tab), 2, weighted.mean, w = dudiY$lw)
-        meanX  <- apply(as.matrix(X), 2, weighted.mean, w = dudiY$lw)    
-    }
-    res$intercept <- lapply(1:ncolY, function(x)  (meanY[x] - meanX %*% res$XYcoef[[x]]))
-    names(res$intercept) <- colnames(dudiY$tab)
-    
     ##-----------------------------------------------------------------------
     ##   		Variable and block importances
     ##-----------------------------------------------------------------------
@@ -240,7 +223,6 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     res$Tli <- do.call("rbind", res$Tli)
     res <- modifyList(res, lapply(res[c("Yc1", "Yco", "lY", "Tfa", "Tl1", "Tli", "cov2", "faX", "vip", "vipc", "bip", "bipc")], function(x) x[, 1:res$nf, drop = FALSE]))
     res$XYcoef <- lapply(res$XYcoef, function(x) x[, 1:res$nf, drop = FALSE])
-    res$intercept <- lapply(res$intercept, function(x) x[, 1:res$nf, drop = FALSE])
     res$call <- match.call()
     class(res) <- c("multiblock", "mbpcaiv")
     return(res)

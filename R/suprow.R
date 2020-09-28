@@ -35,8 +35,8 @@
 "suprow.dudi" <- function (x, Xsup, ...) {
     # modif pour Culhane, Aedin" <a.culhane@ucc.ie> 
     # suprow renvoie une liste à deux éléments tabsup et lisup
-    warning("The use of the 'suprow.dudi' method requires that the 
-            supplementary table has been transformed as the original table")
+    warning("The use of the 'suprow.dudi' method requires that the ",
+            "supplementary table has been transformed as the original table")
     Xsup <- data.frame(Xsup)
     if (!inherits(x, "dudi")) 
         stop("Object of class 'dudi' expected")

@@ -30,6 +30,9 @@ S3method("kplot","mfa")
 S3method("kplot","pta")
 S3method("kplot","sepan")
 S3method("kplot","statis")
+S3method("loocv","dudi")
+S3method("loocv","between")
+S3method("loocv","discrimin")
 S3method("plot","4thcorner")                
 S3method("plot","betcoi")
 S3method("plot","betrlq")                   
@@ -176,10 +179,11 @@ S3method("wca","rlq")
 #####################################
 importFrom("graphics", "abline", "arrows", "axis", "barplot", "box", "boxplot", "frame", "hist", "image", "layout", "lines", "mtext", "par", "plot.default", "plot", "plot.new", "points", "polygon", "rect", "segments", "strheight", "strwidth", "symbols", "text", "title")
 importFrom("grDevices", "chull", "dev.cur", "gray", "grey", "n2mfrow")
-importFrom("stats", "shapiro.test", "anova", "as.dist", "as.formula", "biplot", "coefficients", "cor", "cov", "cutree", "density", "dist", "dnorm", "hclust", "is.ts", "lm", "lm.wfit", "loess", "model.frame", "model.matrix", "na.omit", "p.adjust", "p.adjust.methods", "pf", "plot.ts", "poly", "ppoints", "predict", "quantile", "residuals", "screeplot", "sd", "symnum", "ts", "ts.union", "var", "weighted.mean")
+importFrom("stats", "IQR", "shapiro.test", "anova", "as.dist", "as.formula", "biplot", "coefficients", "cor", "cov", "cutree", "density", "dist", "dnorm", "hclust", "is.ts", "lm", "lm.wfit", "loess", "model.frame", "model.matrix", "na.omit", "p.adjust", "p.adjust.methods", "pf", "plot.ts", "poly", "ppoints", "predict", "quantile", "residuals", "screeplot", "sd", "symnum", "ts", "ts.union", "var", "weighted.mean")
 importFrom("utils", "modifyList", "read.table", "write.table")
 importFrom("methods", "setOldClass")
 importFrom("MASS", "ginv", "kde2d")
+importFrom("progress", "progress_bar")
 
 #####################################
 ##               Export            ##
@@ -196,7 +200,7 @@ export("bicenter.wt", "covfacwt", "covwt", "meanfacwt", "scalefacwt", "scalewt",
 export("cailliez", "dist.binary", "dist.ktab", "dist.prop", "dist.quant", "is.euclid", "lingoes", "quasieuclid", "supdist")
 
 ## ******* generic *******
-export("bca", "col.names", "col.names<-", "inertia", "kplot", "reconst", "randboot", "randtest", "rtest", "scatter", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )
+export("bca", "col.names", "col.names<-", "inertia", "kplot", "loocv", "reconst", "randboot", "randtest", "rtest", "scatter", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )
 
 ## ******* graphics *******
 export("s.arrow", "s.class", "s.chull", "s.corcircle", "s.distri", "s.hist", "s.image", "s.kde2d", "s.label", "s.logo", "s.match", "s.match.class", "s.multinom", "s.traject", "s.value")

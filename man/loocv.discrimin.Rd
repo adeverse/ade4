@@ -39,7 +39,7 @@ data(skulls)
 pcaskul <- dudi.pca(skulls, scan = FALSE)
 facskul <- gl(5,30)
 diskul <- discrimin(pcaskul, facskul, scan = FALSE)
-xdiskul <- loocv.discrimin(diskul, progress = TRUE)
+xdiskul <- loocv(diskul, progress = TRUE)
 pst1 <- paste0("Skulls discrimin randtest: p=", round(randtest(diskul)$pvalue, 4))
 pst2 <- paste0("Skulls cross-validation: Ax1= ", round(xdiskul$RMSEIQR[1],2),
 " Ax2= ", round(xdiskul$RMSEIQR[2],2))

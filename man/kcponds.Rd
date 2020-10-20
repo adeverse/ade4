@@ -32,7 +32,7 @@ divMI (diversity macroinvertebrates)
 \source{
   Cottenie, K. (2002) Local and regional processes in a zooplankton metacommunity. 
   PhD, Katholieke Universiteit Leuven, Leuven, Belgium. \cr
-  \url{http://www.kuleuven.ac.be/bio/eco/phdkarlcottenie.pdf}
+  \url{https://bio.kuleuven.be/eco/phdkarlcottenie.pdf}
 }
 
 \examples{

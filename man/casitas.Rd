@@ -20,7 +20,7 @@ The 74 individuals of  \code{casitas} belong to 4 groups:
 Exemple du logiciel GENETIX.
 Belkhir k. et al. GENETIX, logiciel sous WindowsTM pour la génétique des populations. 
 Laboratoire Génome, Populations, Interactions CNRS UMR 5000, Université de Montpellier II, Montpellier (France). \cr
-\url{http://kimura.univ-montp2.fr/genetix/}
+\url{https://kimura.univ-montp2.fr/genetix/}
 }
 \references{
 Orth, A., T. Adama, W. Din and F. Bonhomme. (1998) Hybridation naturelle entre deux sous espèces de souris domestique 

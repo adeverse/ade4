@@ -13,7 +13,7 @@ This data set gives arrival times of 254 patients at an intensive care unit duri
    \item{hours}{is a vector giving the number of arrivals per hour for the day considered}
 }}
 \source{
-Data taken from the Oriana software developped by Warren L. Kovach \email{sales@kovcomp.com} starting from \url{http://www.kovcomp.com/oriana/index.html}.
+Data taken from the Oriana software developped by Warren L. Kovach \email{sales@kovcomp.com} starting from \url{https://www.kovcomp.co.uk/oriana/index.html}.
 }
 \references{
 Fisher, N. I. (1993) \emph{Statistical Analysis of Circular Data}. Cambridge University Press. 

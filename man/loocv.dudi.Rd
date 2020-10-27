@@ -38,5 +38,5 @@ xvpca <- loocv(envpca)
 s.match(envpca$li, xvpca$XValCoord)
 }
 
-\keyword{ ~dplot }
-\keyword{ ~multivariate }
+\keyword{dplot}
+\keyword{multivariate}

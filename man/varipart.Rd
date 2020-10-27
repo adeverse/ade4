@@ -79,7 +79,7 @@ Borcard, D., P. Legendre, and P. Drapeau. 1992. Partialling out the spatial comp
 of ecological variation. Ecology 73:1045. 
 
 Peres-Neto, P. R., P. Legendre, S. Dray, and D. Borcard. 2006. Variation partitioning of
-species data matrices: estimation and comparison of fractions. Ecology 87:2614–2625.
+species data matrices: estimation and comparison of fractions. Ecology 87:2614-2625.
 }
 \seealso{
 \code{\link{pcaiv}}

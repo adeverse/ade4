@@ -85,5 +85,5 @@ if (adegraphicsLoaded()) {
 }
 }}
 
-\keyword{ ~dplot }
-\keyword{ ~multivariate }
+\keyword{dplot}
+\keyword{multivariate}

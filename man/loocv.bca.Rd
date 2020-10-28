@@ -26,10 +26,11 @@ This function returns a list containing the cross-validated coordinates of the r
 }
 }
 \references{
-Cardini A, O’Higgins P, Rohlf J. Seeing Distinct Groups Where There are None: Spurious Patterns from Between‑Group PCA. Evolutionary Biology (2019) 46:303-316
+Cardini A, O'Higgins P, Rohlf J. Seeing Distinct Groups Where There are None: Spurious Patterns from Between-Group PCA. Evolutionary Biology (2019) 46:303-316
 
 Cardini A, Polly D. Cross-validated Between Group PCA Scatterplots: A Solution to Spurious Group Separation? Evolutionary Biology (2020) https://doi.org/10.1007/s11692-020-09494-x
-Bookstein F. Pathologies of Between‑Groups Principal Components Analysis in Geometric Morphometrics. Evolutionary Biology (2019) 46:271-302
+
+Bookstein F. Pathologies of Between-Groups Principal Components Analysis in Geometric Morphometrics. Evolutionary Biology (2019) 46:271-302
 }
 \author{
 Jean Thioulouse

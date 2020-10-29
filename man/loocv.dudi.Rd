@@ -20,16 +20,16 @@ logical to display a progress bar during computations (see the \code{progress} p
  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
-This function returns a list with two elements: \code{$XValCoord} and  \code{$lsFac}, the cross-validated row coordinates and a factor to plot them. The analysis is redone after removing each row of the data table, one at a time. The coordinates of the missing row are computed by projection as supplementary element in the \code{dudi} space. This can be used to check the dispersion of the coordinates of one point and it's sensitivity to outliers.
+This function does a cross-validation of the row coordinates of a dudi. Each row is removed from the table and its coordinates are computed by projection in the analysis of the table with the removed row. This can be used to check the sensitivity of an analysis to outliers. The cross-validated and original coordinates can be compared with the \code{s.match} function (see example).
 }
 \value{
-{a list with two elements: \code{$XValCoord} and \code{$lsFac} containing the cross-validated row coordinates and the factor to plot them using the \code{s.class} (see example).}
+A list with the cross-validated row coordinates \code{XValCoord}, the Predicted Residual Error Sum (\code{PRESS}, for each row and \code{PRESSTot}, its sum for each \code{dudi} axis), the Root Mean Square Error (\code{RMSE}) and the IQR-standardized RMSE (\code{RMSEIQR}) for each \code{dudi} axis. 
 }
 \author{
 Jean Thioulouse
 }
 \seealso{
-\link{suprow}
+\link{suprow}, \link{s.match}
 }
 \examples{
 data(meaudret)

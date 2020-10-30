@@ -37,6 +37,7 @@ Jean Thioulouse
 }
 \seealso{
 \link{loocv.dudi}
+\link{loocv.discrimin}
 }
 \examples{
 # Data = meaudret

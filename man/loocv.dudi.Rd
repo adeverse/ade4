@@ -29,7 +29,7 @@ A list with the cross-validated row coordinates \code{XValCoord}, the Predicted 
 Jean Thioulouse
 }
 \seealso{
-\link{suprow}, \link{s.match}
+\link{loocv.between}, \link{loocv.discrimin}, \link{suprow}, \link{s.match}
 }
 \examples{
 data(meaudret)

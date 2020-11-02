@@ -20,7 +20,7 @@ logical to display a progress bar during computations (see the \code{progress} p
  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
-This function does a cross-validation of the row coordinates of a dudi. Each row is removed from the table and its coordinates are computed by projection in the analysis of the table with the removed row. This can be used to check the sensitivity of an analysis to outliers. The cross-validated and original coordinates can be compared with the \code{s.match} function (see example).
+This function does a cross-validation of the row coordinates of a dudi. Each row is removed from the table one at a time, and its coordinates are computed by projection of this row in the analysis of the table with the removed row. This can be used to check the sensitivity of an analysis to outliers. The cross-validated and original coordinates can be compared with the \code{s.match} function (see example).
 }
 \value{
 A list with the cross-validated row coordinates \code{XValCoord}, the Predicted Residual Error Sum (\code{PRESS}, for each row and \code{PRESSTot}, its sum for each \code{dudi} axis), the Root Mean Square Error (\code{RMSE}) and the IQR-standardized RMSE (\code{RMSEIQR}) for each \code{dudi} axis. 

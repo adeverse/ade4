@@ -8,7 +8,7 @@
 
 \title{ Functions to compute the fourth-corner statistic  }
 \description{
-  These functions allow to compute the fourth-corner statistic for abundance or presence-absence data. The fourth-corner statistic has been developed by Legendre et al (1997) and extended in Dray and Legendre (2008). The statistic measures the link between three tables: a table L (n x p) containing the abundances of p species at n sites, a second table R (n x m) with the measurements of m environmental variables for the n sites, and a third table Q (p x s) describing s species traits for the p species. 
+  These functions allow to compute the fourth-corner statistic for abundance or presence-absence data. The fourth-corner statistic has been developed by Legendre et al (1997) and extended in Dray and Legendre (2008). The statistic measures the link between three tables: a table L (n x p) containing the abundances of p species at n sites, a second table R (n x m) containing the measurements of m environmental variables for the n sites, and a third table Q (p x s) describing s species traits for the p species. 
 }
 \usage{
 fourthcorner(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 =
@@ -29,16 +29,16 @@ p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
 }
 
 \arguments{
-  \item{tabR}{ a dataframe with the measurements of m environmental variables (columns) for the n sites (rows).}
+  \item{tabR}{ a dataframe containing the measurements (numeric values or factors) of m environmental variables (columns) for the n sites (rows).}
   \item{tabL}{ a dataframe containing the abundances of p species (columns) at n sites (rows).}
-  \item{tabQ}{ a dataframe describing s species traits (columns) for the p species (rows).}
+  \item{tabQ}{ a dataframe containing numeric values or factors describing s species traits (columns) for the p species (rows).}
   \item{modeltype}{ an integer (1-6) indicating the permutation model used in the testing procedure (see details). }
   \item{nrepet}{ the number of permutations }
   \item{tr01}{ a logical indicating if data in \code{tabL} must be transformed to presence-absence data (FALSE by default)}
   \item{object}{ an object of the class 4thcorner}
   \item{x}{ an object of the class 4thcorner}
-  \item{varR}{ a vector with indices for variables in \code{tabR}}
-  \item{varQ}{ a vector with indices for variables in \code{tabQ}}
+  \item{varR}{ a vector containing indices for variables in \code{tabR}}
+  \item{varQ}{ a vector containing indices for variables in \code{tabQ}}
   \item{type}{ results are represented by a table or on a biplot (see x.rlq)}
   \item{alpha}{ a value of significance level}
   \item{p.adjust.method.G}{a string indicating a method for multiple

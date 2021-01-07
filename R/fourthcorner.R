@@ -99,7 +99,7 @@
       provinames <- c(provinames, cha)  
       k <- k + 1  
       assignR <- c(assignR, rep(k, length(cha)))  
-    } else stop("Not yet available")
+    } else stop("'tabR' must contain only numeric values or factors (see the '", names(tabR)[j] ,"' variable in 'tabR').")
   } 
   matR <- data.frame(matR[, -1])  
   names(matR) <- provinames[-1]
@@ -133,7 +133,7 @@
       provinames <- c(provinames, cha)  
       k <- k + 1  
       assignQ <- c(assignQ, rep(k, length(cha)))  
-    }
+    } else stop("'tabQ' must contain only numeric values or factors (see the '", names(tabQ)[j] ,"' variable in 'tabQ').")
   }  
   matQ <- data.frame(matQ[, -1])  
   names(matQ) <- provinames[-1]

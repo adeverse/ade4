@@ -1,5 +1,3 @@
-[![Travis-CI Build Status](https://travis-ci.org/sdray/ade4.svg?branch=master)](https://travis-ci.org/sdray/ade4)
-[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/d0hkq4c3f02bpvm0/branch/master?svg=true)](https://ci.appveyor.com/project/sdray/ade4/branch/master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ade4)](http://cran.r-project.org/package=ade4)
 [![CRAN Downloads](https://cranlogs.r-pkg.org/badges/ade4)](https://cran.r-project.org/package=ade4)
 [![R-CMD-check](https://github.com/sdray/ade4/workflows/R-CMD-check/badge.svg)](https://github.com/sdray/ade4/actions)

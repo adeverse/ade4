@@ -184,6 +184,10 @@ importFrom("utils", "modifyList", "read.table", "write.table")
 importFrom("methods", "setOldClass")
 importFrom("MASS", "ginv", "kde2d")
 importFrom("progress", "progress_bar")
+importFrom("parallel", "detectCores")
+importFrom("doParallel", "registerDoParallel")
+importFrom("foreach", "foreach", "%dopar%")
+importFrom("iterators", "iter")
 
 #####################################
 ##               Export            ##

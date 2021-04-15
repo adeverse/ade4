@@ -4,25 +4,51 @@
 Leave-one-out cross-validation for a \code{bca}
 }
 \description{
-Leave-one-out cross-validation to test the existence of spurious groups in \code{bca} in the case p (number of variables) > n (number of samples).
+Leave-one-out cross-validation for \code{bca}.
 }
 \usage{
-\method{loocv}{between}(x, progress = FALSE, \dots)
+\method{loocv}{between}(x, nax = 0, progress = FALSE, parallel = FALSE, \dots)
 }
 \arguments{
   \item{x}{
-the dudi of the \code{bca} on which cross-validation should be done
+dudi of the \code{bca} on which cross-validation should be done
+}
+\item{nax}{
+list of axes for mean overlap index computation (0 = all axes)
 }
   \item{progress}{
-logical to display a progress bar during computations (see the \code{progress} package)
+logical, TRUE = display a progress bar during computations
+}
+  \item{parallel}{
+logical, TRUE = process cross-validation in parallel computing 
 }
  \item{\dots}{further arguments passed to or from other methods}
 }
 \details{
-This function returns a list containing the cross-validated coordinates of the rows (the rows of the original analysis, not the rows of the \code{bca}). The analysis on which the \code{bca} was computed is redone after removing each row of the data table, one at a time. A \code{bca} is done on this new analysis and the coordinates of the missing row are computed by projection as supplementary element in the corresponding \code{bca}. This is mostly useful in the case p >> n (many variables and few samples), where \code{bca} graphs can show spurious groups (see Refs.)
+This function returns a list containing the cross-validated coordinates of the rows (the rows of the original analysis, not the rows of the \code{bca}). The \code{dudi} on which the \code{bca} was computed is redone after removing each row of the data table, one at a time. A \code{bca} is done on this new \code{dudi} and the coordinates of the missing row are computed by projection as supplementary element in the corresponding \code{bca}. This is most useful in the case p >> n (many variables and few samples), where \code{bca} graphs can show spurious groups (see Refs.)
+
+For parallel computing (parallel argument = TRUE), the new \code{dudi}, \code{bca} and cross-validation computations are processed in parallel on all the available nodes of the computer processor(s).
 }
 \value{
-{A list with the cross-validated row coordinates \code{XValCoord}, the Predicted Residual Error Sum (\code{PRESS}, for each row and \code{PRESSTot}, its sum for each \code{bca} axis), the Root Mean Square Error (\code{RMSE}) and the IQR-standardized RMSE (\code{RMSEIQR}) for each \code{bca} axis. 
+{A list with:
+
+- \code{XValCoord}: 
+the cross-validated row coordinates 
+
+- \code{PRESS}: 
+the Predicted Residual Error Sum for each row
+
+- \code{PRESSTot}: 
+the sum of \code{PRESS} for each \code{bca} axis 
+
+- \code{sPRESS}: 
+the standardized PRESSTot 
+
+- \code{Oij_bga}: 
+the mean overlap index for BGA
+
+- \code{Oij_XVal}: 
+the mean overlap index for cross-validation
 }
 }
 \references{

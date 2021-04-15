@@ -1,8 +1,6 @@
-travis-tool.sh
-appveyor.yml
-^\.travis\.yml$
 ^README\.md$
 ^README\.Rmd$
 ^README-.*\.png$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.github$

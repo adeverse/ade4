@@ -324,7 +324,7 @@
         sumry[, 3] <- round(varproj, digits = 3)
         sumry[, 4] <- round(varprojplus, digits = 3)
         sumry[, 5] <- round(cos2, digits = 3)
-        sumry[, 6] <- round(object$cov2[i, ], digits = 3)
+        sumry[, 6] <- round(t(object$cov2[i, ]), digits = 3)
         
         print(sumry, quote = FALSE)
         cat("\n")

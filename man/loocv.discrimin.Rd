@@ -64,7 +64,7 @@ oijdisc <- xdiskul$Oij_disc
 oijxval <- xdiskul$Oij_XVal
 Doij <- (oijxval - oijdisc)/0.5*100
 pst1 <- paste0("Skulls discrimin randtest: p=", round(randtest(diskul)$pvalue, 4), ", Oij = ", round(oijdisc,2))
-pst2 <- paste0("Skulls cross-validation: Oij = ", round(oijxval,2), ", dOij = ", round(Doij), "%")
+pst2 <- paste0("Skulls cross-validation: Oij = ", round(oijxval,2), ", dOij = ", round(Doij), "\%")
 if (adegraphicsLoaded()) {
 	sc1 <- s.class(diskul$li, facskul, col = TRUE, psub.text = pst1, ellipseSize=0,
 	chullSize=1, plot = FALSE)

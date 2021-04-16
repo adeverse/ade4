@@ -16,13 +16,13 @@ dudi of the \code{bca} on which cross-validation should be done
 \item{nax}{
 list of axes for mean overlap index computation (0 = all axes)
 }
-  \item{progress}{
+\item{progress}{
 logical, TRUE = display a progress bar during computations
 }
-  \item{parallel}{
+\item{parallel}{
 logical, TRUE = process cross-validation in parallel computing 
 }
- \item{\dots}{further arguments passed to or from other methods}
+\item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 This function returns a list containing the cross-validated coordinates of the rows (the rows of the original analysis, not the rows of the \code{bca}). The \code{dudi} on which the \code{bca} was computed is redone after removing each row of the data table, one at a time. A \code{bca} is done on this new \code{dudi} and the coordinates of the missing row are computed by projection as supplementary element in the corresponding \code{bca}. This is most useful in the case p >> n (many variables and few samples), where \code{bca} graphs can show spurious groups (see Refs.)

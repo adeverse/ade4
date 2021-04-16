@@ -7,7 +7,7 @@ Leave-one-out cross-validation for a \code{discrimin} analysis
 Leave-one-out cross-validation to test the existence of groups in a \code{discrimin} analysis.
 }
 \usage{
-loocv.discrimin(x, nax = 0, progress = FALSE)
+\method{loocv}{discrimin}(x, nax = 0, progress = FALSE, ...)
 }
 \arguments{
 \item{x}{
@@ -19,6 +19,7 @@ list of axes for mean overlap index computation (0 = all axes)
 \item{progress}{
 logical to display a progress bar during computations (see the \code{progress} package)
 }
+\item{\dots}{further arguments passed to or from other methods}
 }
 \details{
 This function returns a list containing the cross-validated coordinates of the rows. The analysis on which the \code{discrimin} was computed is redone after removing each row of the data table, one at a time. A \code{discrimin} analysis is done on this new analysis and the coordinates of the missing row are computed by projection as supplementary element in the new \code{discrimin} analysis. This can be useful to check that the groups evidenced by the \code{discrimin} analysis are supported.

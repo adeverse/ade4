@@ -63,8 +63,10 @@ xdiskul <- loocv(diskul, progress = TRUE)
 oijdisc <- xdiskul$Oij_disc
 oijxval <- xdiskul$Oij_XVal
 Doij <- (oijxval - oijdisc)/0.5*100
-pst1 <- paste0("Skulls discrimin randtest: p=", round(randtest(diskul)$pvalue, 4), ", Oij = ", round(oijdisc,2))
-pst2 <- paste0("Skulls cross-validation: Oij = ", round(oijxval,2), ", dOij = ", round(Doij), "\%")
+pst1 <- paste0("Skulls discrimin randtest: p=", round(randtest(diskul)$pvalue, 4), 
+", Oij = ", round(oijdisc,2))
+pst2 <- paste0("Skulls cross-validation: Oij = ", round(oijxval,2), ", dOij = ",
+round(Doij), "\%")
 if (adegraphicsLoaded()) {
 	sc1 <- s.class(diskul$li, facskul, col = TRUE, psub.text = pst1, ellipseSize=0,
 	chullSize=1, plot = FALSE)
@@ -83,8 +85,10 @@ xdiscz <- loocv(discz, progress = TRUE)
 oijdiscz <- xdiscz$Oij_disc
 oijxvalz <- xdiscz$Oij_XVal
 Doijz <- (oijxvalz - oijdiscz)/0.5*100
-pst1 <- paste0("Chazeb discrimin randtest: p=", round(randtest(discz)$pvalue, 4), ", Oij = ", round(oijdiscz,2))
-pst2 <- paste0("Chazeb cross-validation: Oij = ", round(oijxvalz,2), ", dOij = ", round(Doijz), "\%")
+pst1 <- paste0("Chazeb discrimin randtest: p=", round(randtest(discz)$pvalue, 4), 
+", Oij = ", round(oijdiscz,2))
+pst2 <- paste0("Chazeb cross-validation: Oij = ", round(oijxvalz,2), ", dOij = ", 
+round(Doijz), "\%")
 if (adegraphicsLoaded()) {
 	tabi <- cbind(discz$li, pcacz$tab)
 	gr1 <- s.class(tabi, xax=1, yax=2:7, chazeb$cla, col = TRUE, plot = FALSE)

@@ -10,7 +10,7 @@ Leave-one-out cross-validation to test the existence of groups in a \code{discri
 loocv.discrimin(x, progress = FALSE)
 }
 \arguments{
-  \item{x}{
+\item{x}{
 the \code{discrimin} analysis on which cross-validation should be done
 }
 \item{nax}{
@@ -50,7 +50,7 @@ Jean Thioulouse
 }
 \seealso{
 \link{loocv.dudi}
-\link{loocv.bca}
+\link{loocv.between}
 }
 \examples{
 \dontrun{

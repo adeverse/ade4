@@ -7,7 +7,7 @@ Leave-one-out cross-validation for a \code{discrimin} analysis
 Leave-one-out cross-validation to test the existence of groups in a \code{discrimin} analysis.
 }
 \usage{
-loocv.discrimin(x, progress = FALSE)
+loocv.discrimin(x, nax = 0, progress = FALSE)
 }
 \arguments{
 \item{x}{

@@ -13,7 +13,10 @@ loocv.discrimin(x, progress = FALSE)
   \item{x}{
 the \code{discrimin} analysis on which cross-validation should be done
 }
-  \item{progress}{
+\item{nax}{
+list of axes for mean overlap index computation (0 = all axes)
+}
+\item{progress}{
 logical to display a progress bar during computations (see the \code{progress} package)
 }
 }

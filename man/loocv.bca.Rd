@@ -98,7 +98,8 @@ xbca2 <- loocv(bca2, progress = TRUE)
 sc4 <- s.class(xbca2$XValCoord, fac1, col = TRUE,
 psub.text = "rnorm cross-validation", ellipseSize=0,
 chullSize=1, xlim = c(-8, 8), ylim = c(-8, 8), plot = FALSE)
-ADEgS(list(sc3, sc4))}}
-
+ADEgS(list(sc3, sc4))
+}
+}
 \keyword{dplot}
 \keyword{multivariate}

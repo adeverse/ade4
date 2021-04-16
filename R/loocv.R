@@ -178,15 +178,15 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
     return(res1)
 }
 
-loocv.discrimin <- function(x, progress = FALSE, ...)
+loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
     ## Leave-one-out cross-validation for discriminant analysis (aka CVA)
     ## x = the discrimin analysis to be cross-validated
+    ## nax = list of axes for mean overlap index computation (0 = all axes)
     ## progress = logical to display a progress bar
     ## Returns a list with the cross-validated row coordinates (XValCoord),
     ## the predicted residual error sum of squares (PRESS) for each individual,
-    ## the total PRESS for each axis, (PRESSTot),
-    ## the root-mean-square error (RMSE), and
-    ## RMSEIQR, the interquartile range normalized RMSE.
+    ## the total PRESS for each axis, (PRESSTot), and the standardized PRESSTot
+    ## (sPRESS) for each axis
     #
 {
     if (!inherits(x, "discrimin")) 
@@ -198,9 +198,15 @@ loocv.discrimin <- function(x, progress = FALSE, ...)
     dudiOrig <- eval.parent(discCall[[2]])
     rank <- dudiOrig$rank
     dudiOrig <- redo.dudi(dudiOrig, rank)
-    fac <- eval.parent(discCall[[3]])
+    fac1 <- eval.parent(discCall[[3]])
+    ng1 <- nlevels(fac1)
+	lev1 <- levels(fac1)
+    nifac1 <- table(fac1)
+    lnax1 <- length(nax)
+    if (lnax1 == 1) if (nax == 0) nax <- 1:nf1
     lig1 <- nrow(dudiOrig$tab)
-    if (length(fac) != lig1) 
+    lw1 <- dudiOrig$lw
+    if (length(fac1) != lig1) 
         stop("Non convenient dimension")
     xcoo1 <- as.data.frame(matrix(0, lig1, nf1))
     mean.w <- function(x, w, fac, cla.w) {
@@ -210,6 +216,23 @@ loocv.discrimin <- function(x, progress = FALSE, ...)
     }
     if (progress) pb <- progress_bar$new(total = lig1,
         format = "  Computing [:bar] :percent eta: :eta")
+	# Compute mean overlap index (oijb1m) for bca
+	# Compute all distances between each individual and the mean of his group
+	oij1 <- matrix(0, nrow = lig1, ncol = ng1)
+	for (ind1 in 1:lig1) {
+		for (gr1 in 1:ng1) {
+			oij1[ind1, gr1] <- sqrt(sum((x$li[ind1, nax] - x$gc[gr1, nax])^2))
+		}
+	}
+	# Compute the number of individuals nearer to another group mean
+	oijb1 <- matrix(0, nrow = ng1, ncol = ng1)
+	for (gr1 in 1:ng1) {
+		for (gr2 in 1:ng1) {
+			oijb1[gr1, gr2] <- sum(oij1[fac1==lev1[gr1], gr2] < oij1[fac1==lev1[gr1], gr1])/nifac1[gr1]
+		}
+	}
+	# Mean overlap index
+	oijb1m <- mean(oijb1)
     for (ind1 in 1:lig1) {
         if (progress) pb$tick()
         ## Remove each row of the data table, one at a time,
@@ -240,8 +263,8 @@ loocv.discrimin <- function(x, progress = FALSE, ...)
         ##        for (j in 1:nf1)
         #	        if (cor(dudi1$li[,j], dudiOrig$li[-ind1,j]) < 0) dudi1$li[,j] <- -dudi1$li[,j]
         ## then do the discriminant analysis:
-        jfac1 <- fac[-ind1]
-        disc2 <- discrimin(dudi1, jfac1, scannf = FALSE)
+        jfac1 <- fac1[-ind1]
+        disc2 <- discrimin(dudi1, jfac1, scannf = FALSE, nf = nf1)
         ## Check that jackknifed axes are in the same direction as  original discrimin axes;
         ## if not, change the sign
         for (j in 1:nf1)
@@ -249,16 +272,89 @@ loocv.discrimin <- function(x, progress = FALSE, ...)
         ## Compute #ind1 row coordinates in this discriminant analysis and store it in xcoo1:
         xcoo1[ind1,] <- as.matrix(dudiOrig$tab[ind1,]) %*% as.matrix(disc2$fa)
     }
+	# Compute mean overlap index oijb2m for bca cross validation
+	oij2 <- matrix(0, nrow = lig1, ncol = ng1)
+	# compute means by group of cross-validation coordinates 
+	cla.w <- tapply(lw1, fac1, sum)
+	xmeans <- apply(xcoo1, 2, mean.w, w = lw1, fac = fac1, cla.w = cla.w)
+	# Compute all distances between each individual and the mean of his group
+	for (ind1 in 1:lig1) {
+		for (gr1 in 1:ng1) {
+			oij2[ind1, gr1] <- sqrt(sum((xcoo1[ind1, nax] - xmeans[gr1, nax])^2))
+		}
+	}
+	# Compute the number of individuals nearer to another group mean
+	oijb2 <- matrix(0, nrow = ng1, ncol = ng1)
+	for (gr1 in 1:ng1) {
+		for (gr2 in 1:ng1) {
+			oijb2[gr1, gr2] <- sum(oij2[fac1==lev1[gr1], gr2] < oij2[fac1==lev1[gr1], gr1])/nifac1[gr1]
+		}
+	}
+	oijb2m <- mean(oijb2)
     PRESS1 <- as.data.frame(matrix(0, lig1, nf1))
     for (j in 1:nf1) PRESS1[,j] <- (xcoo1[,j] - x$li[,j])^2
     PRESSTot <- colSums(PRESS1)
-    RMSE <- sqrt(PRESSTot/lig1)
-    RMSEIQR <- sqrt(PRESSTot/lig1)
-    for (j in 1:nf1) RMSEIQR[j] <- RMSEIQR[j]/IQR(x$li[,j])
-    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(RMSE) <- names(RMSEIQR) <- names(x$li[1:nf1])
-    res1 <- list(xcoo1, PRESS1, PRESSTot, RMSE, RMSEIQR)
-    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "RMSE", "RMSEIQR")
+	wca1 <- wca(dudiOrig, fac1, scannf = FALSE, nf = nf1)
+	dudi1 <- dudi.pca(wca1$tab, scale = FALSE, center = FALSE, scannf = FALSE, nf=nf1)
+    rank <- dudi1$rank
+    dudi1 <- redo.dudi(dudi1, rank)
+	disc1 <- discrimin2(dudi1, fac1, scannf = FALSE, nf = nf1)
+	sPRESS <- PRESSTot/colSums((disc1$li - x$li)^2)
+    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(sPRESS) <- names(x$li[1:nf1])
+    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS, oijb1m, oijb2m)
+    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS", "Oij_disc", "Oij_XVal")
     return(res1)
+}
+
+discrimin2 <- function (dudi, fac1, scannf = TRUE, nf = 2) 
+{
+    if (!inherits(dudi, "dudi")) 
+        stop("Object of class dudi expected")
+    if (!is.factor(fac1)) 
+        stop("factor expected")
+    lig <- nrow(dudi$tab)
+    if (length(fac1) != lig) 
+        stop("Non convenient dimension")
+    rank <- dudi$rank
+#    dudi <- redo.dudi(dudi, rank)
+    deminorm <- as.matrix(dudi$c1) * dudi$cw
+    deminorm <- t(t(deminorm)/sqrt(dudi$eig))
+    cla.w <- tapply(dudi$lw, fac1, sum)
+    mean.w <- function(x) {
+        z <- x * dudi$lw
+        z <- tapply(z, fac1, sum)/cla.w
+        return(z)
+    }
+    tabmoy <- apply(dudi$l1, 2, mean.w)
+    tabmoy <- data.frame(tabmoy)
+    row.names(tabmoy) <- levels(fac1)
+    cla.w <- cla.w/sum(cla.w)
+    X <- as.dudi(tabmoy, rep(1, rank), as.vector(cla.w), scannf = scannf, 
+        nf = nf, call = match.call(), type = "dis")
+    res <- list()
+    res$eig <- X$eig
+    res$nf <- X$nf
+    res$fa <- deminorm %*% as.matrix(X$c1)
+    res$li <- as.matrix(dudi$tab) %*% res$fa
+    w <- scalewt(dudi$tab, dudi$lw)
+    res$va <- t(as.matrix(w)) %*% (res$li * dudi$lw)
+    res$cp <- t(as.matrix(dudi$l1)) %*% (dudi$lw * res$li)
+    res$fa <- data.frame(res$fa)
+    row.names(res$fa) <- names(dudi$tab)
+    names(res$fa) <- paste("DS", 1:X$nf, sep = "")
+    res$li <- data.frame(res$li)
+    row.names(res$li) <- row.names(dudi$tab)
+    names(res$li) <- names(res$fa)
+    w <- apply(res$li, 2, mean.w)
+    res$gc <- data.frame(w)
+    row.names(res$gc) <- as.character(levels(fac1))
+    names(res$gc) <- names(res$fa)
+    res$cp <- data.frame(res$cp)
+    row.names(res$cp) <- names(dudi$l1)
+    names(res$cp) <- names(res$fa)
+    res$call <- match.call()
+    class(res) <- "discrimin"
+    return(res)
 }
 
 loocv.dudi <- function(x, progress = FALSE, ...) 
@@ -267,9 +363,8 @@ loocv.dudi <- function(x, progress = FALSE, ...)
     ## progress = logical to display a progress bar
     ## Returns a list with the cross-validated row coordinates (XValCoord),
     ## the predicted residual error sum of squares (PRESS) for each individual,
-    ## the total PRESS for each axis, (PRESSTot),
-    ## the root-mean-square error (RMSE), and
-    ## RMSEIQR, the interquartile range normalized RMSE.
+    ## the total PRESS for each axis, (PRESSTot), and the standardized PRESSTot
+    ## (sPRESS) for each axis
     #
 {
     if (!inherits(x, "dudi")) 
@@ -320,11 +415,10 @@ loocv.dudi <- function(x, progress = FALSE, ...)
     PRESS1 <- as.data.frame(matrix(0, lig1, nf1))
     for (j in 1:nf1) PRESS1[,j] <- (xcoo1[,j] - x$li[,j])^2
     PRESSTot <- colSums(PRESS1)
-    RMSE <- sqrt(PRESSTot/lig1)
-    RMSEIQR <- sqrt(PRESSTot/lig1)
-    for (j in 1:nf1) RMSEIQR[j] <- RMSEIQR[j]/IQR(x$li[,j])
-    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(RMSE) <- names(RMSEIQR) <- names(x$li[1:nf1])
-    res1 <- list(xcoo1, PRESS1, PRESSTot, RMSE, RMSEIQR)
-    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "RMSE", "RMSEIQR")
+	maxPRESS <- apply(PRESS1, 2, max)
+	sPRESS <- PRESSTot/maxPRESS/lig1
+    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(sPRESS) <- names(x$li[1:nf1])
+    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS)
+    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS")
     return(res1)
 }

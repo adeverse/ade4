@@ -29,7 +29,7 @@ and projects the distance matrix of Supplementary items in this PCO.
 Computations based on the Methods section of the following paper:
 Pele J, Abdi H, Moreau M, Thybert D, Chabbert M (2011) Multidimensional Scaling 
 Reveals the Main Evolutionary Pathways of Class A G-Protein-Coupled Receptors. 
-PLoS ONE 6(4): e19094. \url{https://doi.org/10.1371/journal.pone.0019094}
+PLoS ONE 6(4): e19094. \doi{10.1371/journal.pone.0019094}
 }
 
 \author{Jean Thioulouse}

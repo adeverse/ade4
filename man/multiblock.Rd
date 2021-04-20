@@ -17,7 +17,7 @@
   \item{\dots}{other arguments to be passed to methods}
 }
 
-\references{Bougeard, S. and Dray S. (2018) Supervised Multiblock Analysis in R with the ade4 Package. \emph{Journal of Statistical Software}, \bold{86} (1), 1-17. \url{https://doi.org/10.18637/jss.v086.i01}}
+\references{Bougeard, S. and Dray S. (2018) Supervised Multiblock Analysis in R with the ade4 Package. \emph{Journal of Statistical Software}, \bold{86} (1), 1-17. \doi{10.18637/jss.v086.i01}}
 
 \author{Stéphanie Bougeard (\email{stephanie.bougeard@anses.fr}) and Stéphane Dray (\email{stephane.dray@univ-lyon1.fr})}
 

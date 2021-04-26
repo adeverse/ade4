@@ -40,9 +40,12 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
         z <- tapply(z, fac, sum)/cla.w
         return(z)
     }
-    if (progress) pb <- progress_bar$new(total = lig1,
+    if (progress) pb <- progress::progress_bar$new(total = lig1,
         format = "  bgPCA cross-validation [:bar] :percent eta: :eta")
-	if (parallel) registerDoParallel(detectCores(all.tests=TRUE))
+	if (parallel) {
+		if (!(requireNamespace("doParallel", quietly = TRUE))) stop("You shoul install the doParallel package in order to use the `parallel = TRUE' option")
+		doParallel::registerDoParallel(parallel::detectCores(all.tests=TRUE))
+	}
 	trt1 <- function(dudiCall, fac1, nf1, x, ind1) {
 		# This is the function executed in parallel mode
         ## Remove each row of the data table, one at a time,
@@ -103,8 +106,10 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
 	# Mean overlap index
 	oijb1m <- mean(oijb1)
 	# LOOCV loop on individuals
-	if (parallel) xcoo1 <- foreach(j = 1:lig1, .combine = rbind) %dopar% trt1(dudiCall, fac1, nf1, x, j)
-	else {
+	if (parallel) {
+		# Note: Use function syntax of %dopar% operator, since foreach is not imported (thanks Aurelie)
+		xcoo1 <- foreach::"%dopar%"(foreach::foreach(j = 1:lig1, .combine = rbind) , {trt1(dudiCall, fac1, nf1, x, j)})
+	} else {
 		for (ind1 in 1:lig1) {
 			if (progress) pb$tick()
 			## Remove each row of the data table, one at a time,
@@ -214,7 +219,7 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
         z <- tapply(z, fac, sum)/cla.w
         return(z)
     }
-    if (progress) pb <- progress_bar$new(total = lig1,
+    if (progress) pb <- progress::progress_bar$new(total = lig1,
         format = "  Computing [:bar] :percent eta: :eta")
 	# Compute mean overlap index (oijb1m) for bca
 	# Compute all distances between each individual and the mean of his group
@@ -376,7 +381,7 @@ loocv.dudi <- function(x, progress = FALSE, ...)
     tab1 <- eval.parent(dudiCall[[2]])
     lig1 <- nrow(tab1)
     xcoo1 <- as.data.frame(matrix(0, lig1, nf1))
-    if (progress) pb <- progress_bar$new(total = lig1,
+    if (progress) pb <- progress::progress_bar$new(total = lig1,
         format = "  Computing [:bar] :percent eta: :eta")
     for (ind1 in 1:lig1) {
         if (progress) pb$tick()

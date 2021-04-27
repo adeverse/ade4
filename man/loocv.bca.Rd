@@ -72,15 +72,25 @@ pca1 <- dudi.pca(meaudret$env, scannf = FALSE, nf = 3)
 bca1 <- bca(pca1, meaudret$design$site, scannf = FALSE, nf = 3)
 pst1 <- paste0("Meaudret BGA randtest: p=",
 randtest(bca1)$pvalue, " ratio=", round(bca1$ratio, 2))
+xbca1 <- loocv(bca1, progress = TRUE)
 
 if(adegraphicsLoaded()){
     sc1 <- s.class(bca1$ls, meaudret$design$site, col = TRUE,
     psub.text = pst1, ellipseSize=0, chullSize=1, plot = FALSE)
-    xbca1 <- loocv(bca1, progress = TRUE)
     sc2 <- s.class(xbca1$XValCoord, meaudret$design$site,
     col = TRUE, psub.text = "Meaudret cross-validation",
     ellipseSize=0, chullSize=1, plot = FALSE)
     ADEgS(list(sc1, sc2))
+} else {
+	par(mfrow=c(2,2))
+	s.chull(dfxy = bca1$ls, fac = meaudret$design$site, cpoint = 1, 
+    	col = hcl.colors(5, "Dark 2"), sub = pst1)
+    s.class(bca1$ls, meaudret$design$site, col = hcl.colors(5, "Dark 2"),
+    	cellipse = 0, add.plot = TRUE)
+	s.chull(dfxy = xbca1$XValCoord, fac = meaudret$design$site, cpoint = 1, 
+    	col = hcl.colors(5, "Dark 2"), sub = "Meaudret cross-validation")
+    s.class(xbca1$XValCoord, meaudret$design$site, col = hcl.colors(5, "Dark 2"),
+    	cellipse = 0, add.plot = TRUE)
 }
 \dontrun{
 # Data = rnorm()
@@ -91,14 +101,26 @@ pca2 <- dudi.pca(tab, scannf = FALSE)
 bca2 <- bca(pca2, fac1, scannf = FALSE)
 pst2 <- paste0("rnorm spurious groups: p=",
 randtest(bca2)$pvalue, " ratio=", round(bca2$ratio, 2))
-sc3 <- s.class(bca2$ls, fac1, col = TRUE,
-psub.text = pst2, ellipseSize=0, chullSize=1,
-xlim = c(-8, 8), ylim = c(-8, 8), plot = FALSE)
 xbca2 <- loocv(bca2, progress = TRUE)
-sc4 <- s.class(xbca2$XValCoord, fac1, col = TRUE,
-psub.text = "rnorm cross-validation", ellipseSize=0,
-chullSize=1, xlim = c(-8, 8), ylim = c(-8, 8), plot = FALSE)
-ADEgS(list(sc3, sc4))
+if(adegraphicsLoaded()){
+	sc3 <- s.class(bca2$ls, fac1, col = TRUE,
+		psub.text = pst2, ellipseSize=0, chullSize=1,
+		xlim = c(-8, 8), ylim = c(-8, 8), plot = FALSE)
+	sc4 <- s.class(xbca2$XValCoord, fac1, col = TRUE,
+		psub.text = "rnorm cross-validation", ellipseSize=0,
+		chullSize=1, xlim = c(-8, 8), ylim = c(-8, 8), plot = FALSE)
+	ADEgS(list(sc3, sc4))
+} else {
+	par(mfrow=c(2,2))
+	s.chull(bca2$ls, fac1, optchull = 1, cpoint = 1, xlim = c(-8, 8), ylim = c(-8, 8),
+    	col = hcl.colors(3, "Dark 2"), sub = pst2)
+    s.class(bca2$ls, fac1, xlim = c(-8, 8), ylim = c(-8, 8),
+    	col = hcl.colors(3, "Dark 2"), cellipse = 0, add.plot = TRUE)
+	s.chull(xbca2$XValCoord, fac1, optchull = 1, cpoint = 1, xlim = c(-8, 8),
+		ylim = c(-8, 8), col = hcl.colors(3, "Dark 2"), sub = "rnorm cross-validation")
+    s.class(xbca2$XValCoord, fac1, xlim = c(-8, 8), ylim = c(-8, 8),
+    	col = hcl.colors(3, "Dark 2"), cellipse = 0, add.plot = TRUE)
+}
 }
 }
 \keyword{dplot}

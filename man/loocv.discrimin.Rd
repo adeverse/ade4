@@ -107,11 +107,10 @@ if (adegraphicsLoaded()) {
 	plot = FALSE)
 	ADEgS(list(gr1[[1]], gr1[[2]], gr1[[3]], gr1[[4]], gr1[[5]], gr1[[6]], sc1, sc2))
 } else {
-	plot(discz)
-	sco.gauss(discz$li[,1], as.data.frame(chazeb$cla), sub = pst1,
-	legen = FALSE)
-	sco.gauss(xdiscz$XValCoord[,1], as.data.frame(chazeb$cla), sub = pst2,
-	legen = FALSE)
+	dev.new()
+	sco.gauss(discz$li[,1], as.data.frame(chazeb$cla), sub = pst1)
+	dev.new()
+	sco.gauss(xdiscz$XValCoord[,1], as.data.frame(chazeb$cla), sub = pst2)
 }
 }}
 % Add one or more standard keywords, see file 'KEYWORDS' in the

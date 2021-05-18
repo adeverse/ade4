@@ -52,7 +52,7 @@ Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 
 ## First example of Dray et al (2015) paper
 
-con <- url("ftp://pbil.univ-lyon1.fr/pub/datasets/dray/MER2014/soilmicrob.rda")
+con <- url("https://pbil.univ-lyon1.fr/datasets/dray/MER2014/soilmicrob.rda")
 load(con)
 close(con)
 

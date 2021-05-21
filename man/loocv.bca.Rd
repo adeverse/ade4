@@ -49,6 +49,9 @@ the mean overlap index for BGA
 
 - \code{Oij_XVal}: 
 the mean overlap index for cross-validation
+
+- \code{DeltaOij}: 
+the spuriousness index
 }
 }
 \references{

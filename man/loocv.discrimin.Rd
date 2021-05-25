@@ -44,6 +44,9 @@ the mean overlap index for the discriminant analysis
 
 - \code{Oij_XVal}: 
 the mean overlap index for cross-validation
+
+- \code{DeltaOij}: 
+the spuriousness index
 }
 }
 \author{

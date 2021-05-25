@@ -178,8 +178,8 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
 	wca1 <- wca(dudiCall, fac1, scannf = FALSE, nf = nf1)
 	sPRESS <- PRESSTot/colSums((wca1$li - x$ls)^2)
     names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(sPRESS) <- names(x$ls)
-    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS, oijb1m, oijb2m)
-    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS", "Oij_bca", "Oij_XVal")
+    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
+    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS", "Oij_bca", "Oij_XVal", "DeltaOij")
     return(res1)
 }
 
@@ -306,8 +306,8 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
 	disc1 <- discrimin2(dudi1, fac1, scannf = FALSE, nf = nf1)
 	sPRESS <- PRESSTot/colSums((disc1$li - x$li)^2)
     names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(sPRESS) <- names(x$li[1:nf1])
-    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS, oijb1m, oijb2m)
-    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS", "Oij_disc", "Oij_XVal")
+    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
+    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS", "Oij_disc", "Oij_XVal", "DeltaOij")
     return(res1)
 }
 

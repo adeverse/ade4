@@ -70,7 +70,11 @@ The functions provide the following results:
 \references{
 Pavoine S., Vallet, J., Dufour, A.-B., Gachet, S. and Daniel, H. (2009) 
 On the challenge of treating various types of variables: 
-Application for improving the measurement of functional diversity. \emph{Oikos}, \bold{118}, 391--402.
+Application for improving the measurement of functional diversity. \emph{Oikos}, \bold{118}, 391--402. \doi{10.1111/j.1600-0706.2008.16668.x}
+
+Appendix available at: 
+\url{http://www.oikosjournal.org/sites/oikosjournal.org/files/appendix/o16668.pdf}
+\url{http://www.oikosjournal.org/sites/oikosjournal.org/files/appendix/o16668_files.zip}
 }
 \author{Sandrine Pavoine \email{pavoine@mnhn.fr}
 }

@@ -36,9 +36,6 @@ the Predicted Residual Error Sum for each row
 - \code{PRESSTot}: 
 the sum of \code{PRESS} for each \code{bca} axis 
 
-- \code{sPRESS}: 
-the standardized PRESSTot 
-
 - \code{Oij_disc}: 
 the mean overlap index for the discriminant analysis
 

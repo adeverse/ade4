@@ -11,7 +11,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
     ## Note that parallel computing should be used only for large tables to avoid overhead
     ## Returns a list with the cross-validated row coordinates (XValCoord),
     ## the predicted residual error sum of squares for each individual (PRESS),
-    ## the sum of PRESS for each axis (PRESSTot), the standardized PRESSTot (sPRESS), 
+    ## the sum of PRESS for each axis (PRESSTot)
     ## and the mean overlap index for BGA (Oij_bga) and for cross-validation (Oij_XVal).
     #
 {
@@ -175,11 +175,9 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
     PRESS1 <- as.data.frame(matrix(0, lig1, nf1))
     for (j in 1:nf1) PRESS1[,j] <- (xcoo1[,j] - x$ls[,j])^2
     PRESSTot <- colSums(PRESS1)
-	wca1 <- wca(dudiCall, fac1, scannf = FALSE, nf = nf1)
-	sPRESS <- PRESSTot/colSums((wca1$li - x$ls)^2)
-    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(sPRESS) <- names(x$ls)
-    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
-    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS", "Oij_bca", "Oij_XVal", "DeltaOij")
+    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(x$ls)
+    res1 <- list(xcoo1, PRESS1, PRESSTot, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
+    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "Oij_bca", "Oij_XVal", "DeltaOij")
     return(res1)
 }
 
@@ -190,8 +188,7 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
     ## progress = logical to display a progress bar
     ## Returns a list with the cross-validated row coordinates (XValCoord),
     ## the predicted residual error sum of squares (PRESS) for each individual,
-    ## the total PRESS for each axis, (PRESSTot), and the standardized PRESSTot
-    ## (sPRESS) for each axis
+    ## the total PRESS for each axis, (PRESSTot)
     #
 {
     if (!inherits(x, "discrimin")) 
@@ -299,68 +296,12 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
     PRESS1 <- as.data.frame(matrix(0, lig1, nf1))
     for (j in 1:nf1) PRESS1[,j] <- (xcoo1[,j] - x$li[,j])^2
     PRESSTot <- colSums(PRESS1)
-	wca1 <- wca(dudiOrig, fac1, scannf = FALSE, nf = nf1)
-	dudi1 <- dudi.pca(wca1$tab, scale = FALSE, center = FALSE, scannf = FALSE, nf=nf1)
-    rank <- dudi1$rank
-    dudi1 <- redo.dudi(dudi1, rank)
-	disc1 <- discrimin2(dudi1, fac1, scannf = FALSE, nf = nf1)
-	sPRESS <- PRESSTot/colSums((disc1$li - x$li)^2)
-    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(sPRESS) <- names(x$li[1:nf1])
-    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
-    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS", "Oij_disc", "Oij_XVal", "DeltaOij")
+	names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(x$li[1:nf1])
+    res1 <- list(xcoo1, PRESS1, PRESSTot, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
+    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "Oij_disc", "Oij_XVal", "DeltaOij")
     return(res1)
 }
 
-discrimin2 <- function (dudi, fac1, scannf = TRUE, nf = 2) 
-{
-    if (!inherits(dudi, "dudi")) 
-        stop("Object of class dudi expected")
-    if (!is.factor(fac1)) 
-        stop("factor expected")
-    lig <- nrow(dudi$tab)
-    if (length(fac1) != lig) 
-        stop("Non convenient dimension")
-    rank <- dudi$rank
-#    dudi <- redo.dudi(dudi, rank)
-    deminorm <- as.matrix(dudi$c1) * dudi$cw
-    deminorm <- t(t(deminorm)/sqrt(dudi$eig))
-    cla.w <- tapply(dudi$lw, fac1, sum)
-    mean.w <- function(x) {
-        z <- x * dudi$lw
-        z <- tapply(z, fac1, sum)/cla.w
-        return(z)
-    }
-    tabmoy <- apply(dudi$l1, 2, mean.w)
-    tabmoy <- data.frame(tabmoy)
-    row.names(tabmoy) <- levels(fac1)
-    cla.w <- cla.w/sum(cla.w)
-    X <- as.dudi(tabmoy, rep(1, rank), as.vector(cla.w), scannf = scannf, 
-        nf = nf, call = match.call(), type = "dis")
-    res <- list()
-    res$eig <- X$eig
-    res$nf <- X$nf
-    res$fa <- deminorm %*% as.matrix(X$c1)
-    res$li <- as.matrix(dudi$tab) %*% res$fa
-    w <- scalewt(dudi$tab, dudi$lw)
-    res$va <- t(as.matrix(w)) %*% (res$li * dudi$lw)
-    res$cp <- t(as.matrix(dudi$l1)) %*% (dudi$lw * res$li)
-    res$fa <- data.frame(res$fa)
-    row.names(res$fa) <- names(dudi$tab)
-    names(res$fa) <- paste("DS", 1:X$nf, sep = "")
-    res$li <- data.frame(res$li)
-    row.names(res$li) <- row.names(dudi$tab)
-    names(res$li) <- names(res$fa)
-    w <- apply(res$li, 2, mean.w)
-    res$gc <- data.frame(w)
-    row.names(res$gc) <- as.character(levels(fac1))
-    names(res$gc) <- names(res$fa)
-    res$cp <- data.frame(res$cp)
-    row.names(res$cp) <- names(dudi$l1)
-    names(res$cp) <- names(res$fa)
-    res$call <- match.call()
-    class(res) <- "discrimin"
-    return(res)
-}
 
 loocv.dudi <- function(x, progress = FALSE, ...) 
     ## Leave-one-out cross-validation for a dudi analysis
@@ -368,8 +309,7 @@ loocv.dudi <- function(x, progress = FALSE, ...)
     ## progress = logical to display a progress bar
     ## Returns a list with the cross-validated row coordinates (XValCoord),
     ## the predicted residual error sum of squares (PRESS) for each individual,
-    ## the total PRESS for each axis, (PRESSTot), and the standardized PRESSTot
-    ## (sPRESS) for each axis
+    ## the total PRESS for each axis, (PRESSTot)
     #
 {
     if (!inherits(x, "dudi")) 
@@ -420,10 +360,8 @@ loocv.dudi <- function(x, progress = FALSE, ...)
     PRESS1 <- as.data.frame(matrix(0, lig1, nf1))
     for (j in 1:nf1) PRESS1[,j] <- (xcoo1[,j] - x$li[,j])^2
     PRESSTot <- colSums(PRESS1)
-	maxPRESS <- apply(PRESS1, 2, max)
-	sPRESS <- PRESSTot/maxPRESS/lig1
-    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(sPRESS) <- names(x$li[1:nf1])
-    res1 <- list(xcoo1, PRESS1, PRESSTot, sPRESS)
-    names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "sPRESS")
+    names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(x$li[1:nf1])
+    res1 <- list(xcoo1, PRESS1, PRESSTot)
+    names(res1) <- c("XValCoord", "PRESS", "PRESSTot")
     return(res1)
 }

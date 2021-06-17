@@ -6,3 +6,4 @@ src/*.so
 src/*.dll
 ade4.Rproj
 .DS_Store
+revdep/

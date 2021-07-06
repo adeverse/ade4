@@ -1,5 +1,7 @@
 \name{loocv.between}
 \alias{loocv.between}
+\alias{plot.bcaloocv}
+\alias{print.bcaloocv}
 \title{
 Leave-one-out cross-validation for a \code{bca}
 }
@@ -8,6 +10,8 @@ Leave-one-out cross-validation for \code{bca}.
 }
 \usage{
 \method{loocv}{between}(x, nax = 0, progress = FALSE, parallel = FALSE, \dots)
+\method{print}{bcaloocv}(x, ...)
+\method{plot}{bcaloocv}(x, ...)
 }
 \arguments{
   \item{x}{

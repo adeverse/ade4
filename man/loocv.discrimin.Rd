@@ -1,5 +1,7 @@
 \name{loocv.discrimin}
 \alias{loocv.discrimin}
+\alias{plot.discloocv}
+\alias{print.discloocv}
 \title{
 Leave-one-out cross-validation for a \code{discrimin} analysis
 }
@@ -8,6 +10,8 @@ Leave-one-out cross-validation to test the existence of groups in a \code{discri
 }
 \usage{
 \method{loocv}{discrimin}(x, nax = 0, progress = FALSE, ...)
+\method{print}{discloocv}(x, ...)
+\method{plot}{discloocv}(x, ...)
 }
 \arguments{
 \item{x}{

@@ -178,7 +178,40 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
     names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(x$ls)
     res1 <- list(xcoo1, PRESS1, PRESSTot, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
     names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "Oij_bca", "Oij_XVal", "DeltaOij")
+    class(res1) <- "bcaloocv"
+    res1$call <- match.call()
     return(res1)
+}
+
+"print.bcaloocv" <- function (x, ...) 
+{
+    if (!inherits(x, "bcaloocv")) 
+        stop("to be used with 'bcaloocv' object")
+    cat("bca loocv object\n")
+    cat("call: ")
+    print(x$call)
+    cat("class: ")
+    cat(class(x), "\n")
+
+    sumry <- array("", c(4, 4), list(1:4, c("vector", "length", 
+        "mode", "content")))
+    sumry[1, ] <- c("$PRESSTot", length(x$PRESSTot), mode(x$PRESSTot), "Sum of PRESS for each bca axis")
+    sumry[2, ] <- c("$Oij_bca", length(x$Oij_bca), mode(x$Oij_bca), "mean overlap index for BGA")
+    sumry[3, ] <- c("$Oij_XVal", length(x$Oij_XVal), mode(x$Oij_XVal), "mean overlap index for cross-validation")
+    sumry[4, ] <- c("$DeltaOij", length(x$DeltaOij), mode(x$DeltaOij), "spuriousness index")
+    
+    print(sumry, quote = FALSE)
+    cat("\n")
+    sumry <- array("", c(2, 4), list(1:2, c("data.frame", "nrow", 
+        "ncol", "content")))
+    sumry[1, ] <- c("$XValCoord", nrow(x$XValCoord), ncol(x$XValCoord), "Cross-validates row coordinates")
+    sumry[2, ] <- c("$PRESS", nrow(x$PRESS), ncol(x$PRESS), "Predicted Residual Error Sum of Squares for each row")
+   
+    print(sumry, quote = FALSE)
+    cat("\n")
+}
+
+"plot.bcaloocv" <- function (x, ...) {
 }
 
 loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
@@ -299,9 +332,41 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
 	names(xcoo1) <- names(PRESS1) <- names(PRESSTot) <- names(x$li[1:nf1])
     res1 <- list(xcoo1, PRESS1, PRESSTot, oijb1m, oijb2m, (oijb2m-oijb1m)*200)
     names(res1) <- c("XValCoord", "PRESS", "PRESSTot", "Oij_disc", "Oij_XVal", "DeltaOij")
+    class(res1) <- "discloocv"
+    res1$call <- match.call()
     return(res1)
 }
 
+"print.discloocv" <- function (x, ...) 
+{
+    if (!inherits(x, "discloocv")) 
+        stop("to be used with 'discloocv' object")
+    cat("Discrimin loocv object\n")
+    cat("call: ")
+    print(x$call)
+    cat("class: ")
+    cat(class(x), "\n")
+
+    sumry <- array("", c(4, 4), list(1:4, c("vector", "length", 
+        "mode", "content")))
+    sumry[1, ] <- c("$PRESSTot", length(x$PRESSTot), mode(x$PRESSTot), "Sum of PRESS for each bca axis")
+    sumry[2, ] <- c("$Oij_disc", length(x$Oij_disc), mode(x$Oij_disc), "mean overlap index for BGA")
+    sumry[3, ] <- c("$Oij_XVal", length(x$Oij_XVal), mode(x$Oij_XVal), "mean overlap index for cross-validation")
+    sumry[4, ] <- c("$DeltaOij", length(x$DeltaOij), mode(x$DeltaOij), "spuriousness index")
+    
+    print(sumry, quote = FALSE)
+    cat("\n")
+    sumry <- array("", c(2, 4), list(1:2, c("data.frame", "nrow", 
+        "ncol", "content")))
+    sumry[1, ] <- c("$XValCoord", nrow(x$XValCoord), ncol(x$XValCoord), "Cross-validates row coordinates")
+    sumry[2, ] <- c("$PRESS", nrow(x$PRESS), ncol(x$PRESS), "Predicted Residual Error Sum of Squares for each row")
+   
+    print(sumry, quote = FALSE)
+    cat("\n")
+}
+
+"plot.discloocv" <- function (x, ...) {
+}
 
 loocv.dudi <- function(x, progress = FALSE, ...) 
     ## Leave-one-out cross-validation for a dudi analysis

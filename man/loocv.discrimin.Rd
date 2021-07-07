@@ -11,7 +11,7 @@ Leave-one-out cross-validation to test the existence of groups in a \code{discri
 \usage{
 \method{loocv}{discrimin}(x, nax = 0, progress = FALSE, ...)
 \method{print}{discloocv}(x, ...)
-\method{plot}{discloocv}(x, ...)
+\method{plot}{discloocv}(x, xax = 1, yax = 2, ...)
 }
 \arguments{
 \item{x}{
@@ -22,6 +22,9 @@ list of axes for mean overlap index computation (0 = all axes)
 }
 \item{progress}{
 logical to display a progress bar during computations (see the \code{progress} package)
+}
+\item{xax, yax}{
+the numbers of the x-axis and the y-axis
 }
 \item{\dots}{further arguments passed to or from other methods}
 }

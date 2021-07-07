@@ -11,7 +11,7 @@ Leave-one-out cross-validation for \code{bca}.
 \usage{
 \method{loocv}{between}(x, nax = 0, progress = FALSE, parallel = FALSE, \dots)
 \method{print}{bcaloocv}(x, ...)
-\method{plot}{bcaloocv}(x, ...)
+\method{plot}{bcaloocv}(x, xax = 1, yax = 2, ...)
 }
 \arguments{
   \item{x}{
@@ -25,6 +25,9 @@ logical, TRUE = display a progress bar during computations
 }
 \item{parallel}{
 logical, TRUE = process cross-validation in parallel computing 
+}
+\item{xax, yax}{
+the numbers of the x-axis and the y-axis
 }
 \item{\dots}{further arguments passed to or from other methods}
 }

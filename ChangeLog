@@ -1,3 +1,39 @@
+2021-09-16  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-18 ----------
+
+2021-09-16  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/loocv.bca.Rd: Update the help file of 'loocv.bca': the 'url'
+	tag becomes 'doi' for the references
+
+2021-09-15  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* man/loocv.bca.Rd: Update loocv.bca.Rd
+
+2021-09-14  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/pcw.Rd: Update URL
+
+2021-07-07  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* NAMESPACE, R/loocv.R, man/loocv.bca.Rd, man/loocv.discrimin.Rd: 
+	updates to print and plot functions for loocv objects updates to print and plot functions for bca and discrimin loocv
+	objects
+
+2021-07-06  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* NAMESPACE, R/loocv.R, man/loocv.bca.Rd, man/loocv.discrimin.Rd,
+	src/init.c: added print and plot functions for loocv Added print and (dummy) plot functions for loocv objects (bca +
+	discrimin). Added two classes for the corresponding objects:
+	bcaloocv and discloocv. Added the attributes and matched calls to
+	these objects in the loocv functions. Plot functions are really
+	implemented only in adegraphics.
+
+2021-06-17  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-17 ----------
+
 2021-06-17  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-17 ----------

@@ -5,7 +5,7 @@
 \description{
   Abundance of tropical trees, environmental variables and spatial
   coordinates for 50 sites. Data are available at
-  \url{https://www.sciencemag.org/doi/abs/10.1126/science.1066854}
+  \url{https://www.science.org/doi/abs/10.1126/science.1066854}
   but plots from Barro Colorado Island were removed.
 }
 \usage{data(pcw)}

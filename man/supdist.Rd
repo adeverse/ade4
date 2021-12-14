@@ -70,15 +70,15 @@ envTot <- rbind.data.frame(envpca2$tab, envSup)
 dTot <- dist(envTot)
 fSA2 <- as.factor(rep(c("A", "S"), c(20, 4)))
 cSup2 <- supdist(dTot, fSA2)
-## Supplementary items vs. real items
+## Supplementary items vs. real items (both in red)
 if(!adegraphicsLoaded()) {
- par(mfrow = c(1, 2))
- s.label(pco1$li)
- s.label(rbind.data.frame(pco2$li, cSup2$coordSup[, 1:2]))
+ par(mfrow = c(2, 2))
+ s.label(pco1$li, boxes = FALSE)
+ s.label(rbind.data.frame(pco2$li, cSup2$coordSup[, 1:2]), boxes = FALSE)
 } else {
- gl1 <- s.label(pco1$li, plabels.optim = TRUE)
+ gl1 <- s.label(pco1$li, plabels.optim = TRUE, plabels.col=rep(c(rep("black", 5),"red"), 4))
  gl2 <- s.label(rbind.data.frame(pco2$li, cSup2$coordSup[, 1:2]),
-  plabels.optim = TRUE)
+  plabels.optim = TRUE, plabels.col=rep(c("black","red"),c(20, 4)))
  ADEgS(list(gl1, gl2))
 }
 }

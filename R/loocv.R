@@ -55,7 +55,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
         ## The original analysis can be any dudi, so wee need to start from dudiCall$call:
         jcall1 <- dudiCall$call
         ## Change the df argument to discard row #ind1:
-        jcall1[[2]] <- eval.parent(jcall1[[2]])[-ind1, ]
+        jcall1[[2]] <- data.frame(eval.parent(jcall1[[2]]))[-ind1, , drop = FALSE]
         ## Check that the scannf argument is set to FALSE:
         if (any(names(jcall1) == "scannf")) jcall1[[which(names(jcall1) == "scannf")]] <- FALSE
         else {
@@ -82,7 +82,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
             nf = nf1, call = match.call(), type = "bet")
         ## Check that jackknifed axes are in the same direction as  original bca axes;
         ## if not, change the sign
-        for (j in 1:nf1)
+        if (nf1 > 1) for (j in 1:nf1)
             if (cor(jres$c1[,j], x$c1[,j]) < 0) jres$c1[,j] <- -jres$c1[,j]
         U <- as.matrix(jres$c1) * unlist(jres$cw)
         ## Compute #ind1 row coordinates in this BGA and store it in xcoo1:
@@ -119,7 +119,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
 			## The original analysis can be any dudi, so wee need to start from dudiCall$call:
 			jcall1 <- dudiCall$call
 			## Change the df argument to discard row #ind1:
-			jcall1[[2]] <- eval.parent(jcall1[[2]])[-ind1, ]
+			jcall1[[2]] <- data.frame(eval.parent(jcall1[[2]]))[-ind1, , drop = FALSE]
 			## Check that the scannf argument is set to FALSE:
 			if (any(names(jcall1) == "scannf")) jcall1[[which(names(jcall1) == "scannf")]] <- FALSE
 			else {
@@ -146,7 +146,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
 				nf = nf1, call = match.call(), type = "bet")
 			## Check that jackknifed axes are in the same direction as  original bca axes;
 			## if not, change the sign
-			for (j in 1:nf1)
+			if (nf1 > 1) for (j in 1:nf1)
 				if (cor(jres$c1[,j], x$c1[,j]) < 0) jres$c1[,j] <- -jres$c1[,j]
 			U <- as.matrix(jres$c1) * unlist(jres$cw)
 			## Compute #ind1 row coordinates in this BGA and store it in xcoo1:
@@ -307,7 +307,7 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
         ## The original analysis can be any dudi, so wee need to start from dudiOrig$call:
         origCall <- dudiOrig$call
         ## Change the df argument to discard row #ind1:
-        origCall[[2]] <- eval.parent(origCall[[2]])[-ind1, ]
+        origCall[[2]] <- data.frame(eval.parent(origCall[[2]]))[-ind1, , drop = FALSE]
         ## Check that the scannf argument is set to FALSE:
         if (any(names(origCall) == "scannf")) origCall[[which(names(origCall) == "scannf")]] <- FALSE
         else {
@@ -454,7 +454,7 @@ loocv.dudi <- function(x, progress = FALSE, ...)
         ## then do the analysis on the new table and estimate the coordinates
         ## of all the rows except the one that was removed
         #
-        tab2 <- tab1[-ind1, ]
+        tab2 <- tab1[-ind1, , drop = FALSE]
         ## Check that the scannf argument is set to FALSE:
         if (any(names(dudiCall) == "scannf")) dudiCall[[which(names(dudiCall) == "scannf")]] <- FALSE
         else {

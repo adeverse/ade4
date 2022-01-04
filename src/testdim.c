@@ -1,3 +1,4 @@
+#define USE_FC_LEN_T
 #include <R.h>
 #include <stddef.h>
 #include <math.h>
@@ -12,7 +13,9 @@
 #include <R_ext/Linpack.h>
 #include <R_ext/Lapack.h>
 #include "adesub.h"
-
+#ifndef FCONE
+# define FCONE
+#endif
 
 /*     Test of Dimensionality (Dray, CSDA, 2007) */
 
@@ -166,13 +169,13 @@ int svd(double **X, double **vecU, double **vecVt, double *vecD)
       i++;
       }
     }
-    F77_CALL(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,&work1, &lwork,&error);
+    F77_CALL(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,&work1, &lwork,&error FCONE FCONE);
   
     lwork=(int)floor(work1);
     if (work1-lwork>0.5) lwork++;
     work=(double *)calloc((size_t)lwork,sizeof(double));
     /* actual call */
-    F77_NAME(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,work, &lwork,&error);
+    F77_NAME(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,work, &lwork,&error FCONE FCONE);
     free(work);
   
     if (error) {
@@ -252,13 +255,13 @@ int svdd(double **X, double *vecD)
       i++;
       }
     }
-    F77_CALL(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,&work1, &lwork,&error);
+    F77_CALL(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,&work1, &lwork,&error FCONE FCONE);
   
     lwork=(int)floor(work1);
     if (work1-lwork>0.5) lwork++;
     work=(double *)calloc((size_t)lwork,sizeof(double));
     /* actual call */
-    F77_NAME(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,work, &lwork,&error);
+    F77_NAME(dgesvd)(&jobu, &jobvt,&nr, &nc,A, &nr, D,U,&nr,V,&ldvt,work, &lwork,&error FCONE FCONE);
     free(work);
   
     if (error) {

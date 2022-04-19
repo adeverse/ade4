@@ -1,3 +1,48 @@
+2022-04-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-19 ----------
+
+2022-04-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/pcw.Rd: Update a help file: a 'url' tag becomes a 'doi' tag
+
+2022-03-07  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* README.md: Add a badge for the licence required to apply for BlueHats Semester of Code
+
+2022-01-04  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* src/testdim.c: Specify string lengths to BLAS/LAPACK routines to
+	allow compilation using new compilers The solution is to pass the unit string lengths explicitly using
+	   FCONE defined in Rconfig.h if USE_FC_LEN_T is defined. See
+
+	http://developer.r-project.org/blosxom.cgi/R-devel/2019/08/29#n2019-08-29. Update required by B. Ripley by email (18/09/2021) for compatibility for next R versions
+
+2021-12-30  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/loocv.R: Update loocv.R modifications for the case p = 1 (only one variable): need to avoid
+	type coercition from dataframe to vector. And also, no need to check
+	axis direction.
+
+2021-12-14  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* man/supdist.Rd: Update supdist.Rd Supplementary distances plotted in red in supdist example
+
+2021-10-08  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* man/houmousr.Rd: Added the houmousr data set House Mouse morphometric data set, used in: Thioulouse, J., Renaud,
+	S., Dufour, AB. et al. Overcoming the Spurious Groups Problem in
+	Between-Group PCA. Evol Biol (2021).
+	https://doi.org/10.1007/s11692-021-09550-0
+
+2021-09-29  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/pcw.Rd: Update URL
+
+2021-09-16  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-18 ----------
+	
 2021-09-16  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-18 ----------

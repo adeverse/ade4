@@ -143,7 +143,7 @@
     lig <- nrow(xtest$tabX)
     c1 <- ncol(xtest$tabX)
     c2 <- ncol(xtest$tabY)
-    isim <- testprocuste(nrepet, lig, c1, c2, as.matrix(xtest$tabX), as.matrix(xtest$tabY))
-    obs <- isim[1]
-    return(as.randtest(isim[-1], obs, call = match.call(), ...))
+    df1 <- xtest$tabX
+    df2 <- xtest$tabY
+	procuste.rtest(df1, df2, nrepet = 999, ...)
 }

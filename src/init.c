@@ -22,6 +22,7 @@ extern void testmantel(void *, void *, void *, void *, void *);
 extern void testmultispati(void *, void *, void *, void *, void *, void *, void *, void *);
 extern void testprocuste(void *, void *, void *, void *, void *, void *, void *);
 extern void VarianceDecompInOrthoBasis(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
+extern void _ade4_RVrandtestCpp(void *, void *, void *);
 
 static const R_CMethodDef CEntries[] = {
   {"gearymoran",                 (DL_FUNC) &gearymoran,                  7},
@@ -45,8 +46,13 @@ static const R_CMethodDef CEntries[] = {
   {NULL, NULL, 0}
 };
 
+static const R_CallMethodDef CallEntries[] = {
+    {"_ade4_RVrandtestCpp", (DL_FUNC) &_ade4_RVrandtestCpp, 3},
+    {NULL, NULL, 0}
+};
+
 void R_init_ade4(DllInfo *dll)
 {
-  R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
+  R_registerRoutines(dll, CEntries, CallEntries, NULL, NULL);
   R_useDynamicSymbols(dll, FALSE);
 }

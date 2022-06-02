@@ -10,6 +10,7 @@
 \alias{testamova}
 \alias{dudi.type}
 \alias{fac2disj}
+\alias{RVrandtestCpp}
 \title{Internal ade4 functions}
 \description{
 Internal ade4 functions

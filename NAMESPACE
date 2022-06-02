@@ -187,6 +187,7 @@ importFrom("stats", "IQR", "shapiro.test", "anova", "as.dist", "as.formula", "bi
 importFrom("utils", "modifyList", "read.table", "write.table")
 importFrom("methods", "setOldClass")
 importFrom("MASS", "ginv", "kde2d")
+importFrom("Rcpp", "sourceCpp")
 
 #####################################
 ##               Export            ##
@@ -239,6 +240,11 @@ export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multis
 ## ******* misc *********
 export("bwca.dpcoa")
 export("dagnelie.test")
+
+## ******* Rcpp *********
+export("RV.randtest")
+export("RVrandtestCpp")
+
 #####################################
 ##            Not Exported         ##
 #####################################

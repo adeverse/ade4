@@ -2,6 +2,6 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 RVrandtestCpp <- function(X, Y, nrepet) {
-    .Call(`_ade4_RVrandtestCpp`, X, Y, nrepet)
+    .Call(`C__ade4_RVrandtestCpp`, X, Y, nrepet)
 }
 

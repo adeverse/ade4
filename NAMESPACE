@@ -244,6 +244,8 @@ export("dagnelie.test")
 ## ******* Rcpp *********
 export("RV.randtest")
 export("RVrandtestCpp")
+export("RVintra.randtest")
+export("RVintrarandtestCpp")
 
 #####################################
 ##            Not Exported         ##

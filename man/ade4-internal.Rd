@@ -11,6 +11,7 @@
 \alias{dudi.type}
 \alias{fac2disj}
 \alias{RVrandtestCpp}
+\alias{RVintrarandtestCpp}
 \title{Internal ade4 functions}
 \description{
 Internal ade4 functions

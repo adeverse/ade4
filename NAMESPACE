@@ -246,6 +246,7 @@ export("RV.randtest")
 export("RVrandtestCpp")
 export("RVintra.randtest")
 export("RVintrarandtestCpp")
+export("procusterandtestCpp")
 
 #####################################
 ##            Not Exported         ##

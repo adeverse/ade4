@@ -9,3 +9,7 @@ RVrandtestCpp <- function(X, Y, nrepet) {
     .Call(`C__ade4_RVrandtestCpp`, X, Y, nrepet)
 }
 
+procusterandtestCpp <- function(X, Y, nrepet) {
+    .Call(`C__ade4_procusterandtestCpp`, X, Y, nrepet)
+}
+

@@ -38,3 +38,16 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// procusterandtestCpp
+arma::vec procusterandtestCpp(const arma::mat& X, const arma::mat& Y, const int nrepet);
+RcppExport SEXP _ade4_procusterandtestCpp(SEXP XSEXP, SEXP YSEXP, SEXP nrepetSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type X(XSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type Y(YSEXP);
+    Rcpp::traits::input_parameter< const int >::type nrepet(nrepetSEXP);
+    rcpp_result_gen = Rcpp::wrap(procusterandtestCpp(X, Y, nrepet));
+    return rcpp_result_gen;
+END_RCPP
+}

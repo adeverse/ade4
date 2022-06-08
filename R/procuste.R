@@ -145,5 +145,5 @@
     c2 <- ncol(xtest$tabY)
     df1 <- xtest$tabX
     df2 <- xtest$tabY
-	procuste.rtest(df1, df2, nrepet = 999, ...)
+	procuste.randtest(df1, df2, nrepet = 999, ...)
 }

@@ -17,6 +17,7 @@ arma::vec procusterandtestCpp(const arma::mat & X, const arma::mat & Y, const in
 	int c2 = Y.n_cols;
 	Rcpp::IntegerVector v1, pop(l1);
 	arma::mat C(c1, c2);
+	arma::mat w(c1, c1);
 
 	/*--------------------------------------------------
 	 * RV obs
@@ -30,7 +31,23 @@ arma::vec procusterandtestCpp(const arma::mat & X, const arma::mat & Y, const in
 		  C(j,k) = s1;
 		}       
 	}
-	svd(U, S, V, C, "standard");
+	/*--------------------------------------------------
+ 	* Produit matriciel B = AAt
+ 	--------------------------------------------------*/
+	for (j=0; j<c1; j++) {
+		for (k=j; k<c1; k++) {
+		  s1 = 0;
+		  for (i=0; i<c2; i++) {
+			s1 = s1 + C(j, i) * C(k, i);
+		  }
+		  w(j, k) = s1;
+		  w(k, j) = s1;
+		}       
+	}
+	arma::eig_sym(S, w);
+	for (j=0; j<c1; j++) {
+		S(j) = sqrt(S(j));
+	}
 	s1 = sum(S);
 	s2(0) = s1;	
 	for (i=0; i<l1; i++) pop(i) = i;	
@@ -41,7 +58,7 @@ arma::vec procusterandtestCpp(const arma::mat & X, const arma::mat & Y, const in
 		 ------------------------*/
 		v1 = sample(pop, l1);
 		/*--------------------------------------------------
-		 * Produit matriciel AtB
+		 * Produit matriciel C = AtB
 		 --------------------------------------------------*/
 		for (j=0; j<c1; j++) {
 			for (k=0;k<c2;k++) {
@@ -52,7 +69,23 @@ arma::vec procusterandtestCpp(const arma::mat & X, const arma::mat & Y, const in
 			  C(j,k) = s1;
 			}       
 		}
-		svd(U, S, V, C, "standard");
+		/*--------------------------------------------------
+ 		* Produit matriciel B = AAt
+ 		--------------------------------------------------*/
+		for (j=0; j<c1; j++) {
+			for (k=j; k<c1; k++) {
+			  s1 = 0;
+			  for (i=0; i<c2; i++) {
+				s1 = s1 + C(j, i) * C(k, i);
+			  }
+		  	  w(j, k) = s1;
+		  	  w(k, j) = s1;
+			}       
+		}
+		arma::eig_sym(S, w);
+		for (j=0; j<c1; j++) {
+			S(j) = sqrt(S(j));
+		}
 		s1 = sum(S);		
 		s2(istep) = s1;
 	}			

@@ -13,6 +13,8 @@
 \alias{RVrandtestCpp}
 \alias{RVintrarandtestCpp}
 \alias{procusterandtestCpp}
+\alias{testinterCpp}
+\alias{inerbetweenCpp}
 \title{Internal ade4 functions}
 \description{
 Internal ade4 functions

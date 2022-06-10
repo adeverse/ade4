@@ -22,9 +22,14 @@ extern void testmantel(void *, void *, void *, void *, void *);
 extern void testmultispati(void *, void *, void *, void *, void *, void *, void *, void *);
 extern void testprocuste(void *, void *, void *, void *, void *, void *, void *);
 extern void VarianceDecompInOrthoBasis(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
+
+/* .Call calls */
 extern void _ade4_RVrandtestCpp(void *, void *, void *);
 extern void _ade4_RVintrarandtestCpp(void *, void *, void *, void *);
 extern void _ade4_procusterandtestCpp(void *, void *, void *);
+extern void _ade4_testinterCpp(void *, void *, void *, void *, void *);
+extern void _ade4_inerbetweenCpp(void *, void *, void *, void *, void *);
+
 
 static const R_CMethodDef CEntries[] = {
   {"gearymoran",                 (DL_FUNC) &gearymoran,                  7},
@@ -52,6 +57,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_ade4_procusterandtestCpp", (DL_FUNC) &_ade4_procusterandtestCpp, 3},
     {"_ade4_RVrandtestCpp", (DL_FUNC) &_ade4_RVrandtestCpp, 3},
     {"_ade4_RVintrarandtestCpp", (DL_FUNC) &_ade4_RVintrarandtestCpp, 4},
+    {"_ade4_testinterCpp", (DL_FUNC) &_ade4_testinterCpp, 5},
+    {"_ade4_inerbetweenCpp", (DL_FUNC) &_ade4_inerbetweenCpp, 5},
     {NULL, NULL, 0}
 };
 

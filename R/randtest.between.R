@@ -6,7 +6,7 @@
     appel <- as.list(xtest$call)
     dudi1 <- eval.parent(appel[[2]]) ## could work with bca (appel$x) or between (appel$dudi)
     fac <- eval.parent(appel$fac)
-    X <- dudi1$tab
+    X <- as.matrix(dudi1$tab)
     X.lw <- dudi1$lw
     if ((!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE)))) {
       if(as.list(dudi1$call)[[1]] == "dudi.acm" )
@@ -18,7 +18,8 @@
     }
     
     inertot <- sum(dudi1$eig)
-    isim <- testinter(nrepet, dudi1$lw, dudi1$cw, length(unique(fac)), fac, dudi1$tab, nrow(X), ncol(X))/inertot
+    isim <- testinterCpp(nrepet, dudi1$lw, dudi1$cw, fac, X)
+    isim <- isim/inertot
     obs <- isim[1]
     return(as.randtest(sim = isim[-1], obs = obs, call = match.call(), ...))
 }

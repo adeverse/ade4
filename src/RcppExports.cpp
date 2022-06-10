@@ -51,3 +51,33 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// inerbetweenCpp
+/************************************/ double inerbetweenCpp(const arma::vec& pl, const arma::vec& pc, const int moda, Rcpp::IntegerVector indica, const arma::mat& tab);
+RcppExport SEXP _ade4_inerbetweenCpp(SEXP plSEXP, SEXP pcSEXP, SEXP modaSEXP, SEXP indicaSEXP, SEXP tabSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::vec& >::type pl(plSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type pc(pcSEXP);
+    Rcpp::traits::input_parameter< const int >::type moda(modaSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indica(indicaSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type tab(tabSEXP);
+    rcpp_result_gen = Rcpp::wrap(inerbetweenCpp(pl, pc, moda, indica, tab));
+    return rcpp_result_gen;
+END_RCPP
+}
+// testinterCpp
+/************************************/ arma::vec testinterCpp(const int npermut, const arma::vec& pl, const arma::vec& pc, Rcpp::IntegerVector fac, const arma::mat& tab);
+RcppExport SEXP _ade4_testinterCpp(SEXP npermutSEXP, SEXP plSEXP, SEXP pcSEXP, SEXP facSEXP, SEXP tabSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const int >::type npermut(npermutSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type pl(plSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type pc(pcSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type fac(facSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type tab(tabSEXP);
+    rcpp_result_gen = Rcpp::wrap(testinterCpp(npermut, pl, pc, fac, tab));
+    return rcpp_result_gen;
+END_RCPP
+}

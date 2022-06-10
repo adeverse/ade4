@@ -13,3 +13,11 @@ procusterandtestCpp <- function(X, Y, nrepet) {
     .Call(`C__ade4_procusterandtestCpp`, X, Y, nrepet)
 }
 
+inerbetweenCpp <- function(pl, pc, moda, indica, tab) {
+    .Call(`C__ade4_inerbetweenCpp`, pl, pc, moda, indica, tab)
+}
+
+testinterCpp <- function(npermut, pl, pc, fac, tab) {
+    .Call(`C__ade4_testinterCpp`, npermut, pl, pc, fac, tab)
+}
+

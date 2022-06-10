@@ -247,6 +247,8 @@ export("RVrandtestCpp")
 export("RVintra.randtest")
 export("RVintrarandtestCpp")
 export("procusterandtestCpp")
+export("testinterCpp")
+export("inerbetweenCpp")
 
 #####################################
 ##            Not Exported         ##

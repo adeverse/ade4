@@ -81,3 +81,16 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// testmantelCpp
+arma::vec testmantelCpp(const int npermut, const arma::mat& m1, const arma::mat& m2);
+RcppExport SEXP _ade4_testmantelCpp(SEXP npermutSEXP, SEXP m1SEXP, SEXP m2SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const int >::type npermut(npermutSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type m1(m1SEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type m2(m2SEXP);
+    rcpp_result_gen = Rcpp::wrap(testmantelCpp(npermut, m1, m2));
+    return rcpp_result_gen;
+END_RCPP
+}

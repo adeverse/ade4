@@ -21,3 +21,7 @@ testinterCpp <- function(npermut, pl, pc, fac, tab) {
     .Call(`C__ade4_testinterCpp`, npermut, pl, pc, fac, tab)
 }
 
+testmantelCpp <- function(npermut, m1, m2) {
+    .Call(`C__ade4_testmantelCpp`, npermut, m1, m2)
+}
+

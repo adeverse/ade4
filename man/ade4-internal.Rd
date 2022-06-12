@@ -15,6 +15,7 @@
 \alias{procusterandtestCpp}
 \alias{testinterCpp}
 \alias{inerbetweenCpp}
+\alias{testmantelCpp}
 \title{Internal ade4 functions}
 \description{
 Internal ade4 functions

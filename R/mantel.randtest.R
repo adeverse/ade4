@@ -9,7 +9,7 @@
     m1 <- as.matrix(m1)
     m2 <- as.matrix(m2)
     col <- ncol(m1)
-    isim<-testmantel(nrepet, col, as.matrix(m1), as.matrix(m2))
-    obs<-isim[1]
+    isim <- testmantelCpp(nrepet, as.matrix(m1), as.matrix(m2))
+    obs <- isim[1]
     return(as.randtest(sim = isim[-1], obs = obs, call = match.call(), subclass = "mantelrtest", ...))
 }

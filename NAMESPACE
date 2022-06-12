@@ -249,6 +249,7 @@ export("RVintrarandtestCpp")
 export("procusterandtestCpp")
 export("testinterCpp")
 export("inerbetweenCpp")
+export("testmantelCpp")
 
 #####################################
 ##            Not Exported         ##

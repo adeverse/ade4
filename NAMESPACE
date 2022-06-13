@@ -250,6 +250,8 @@ export("procusterandtestCpp")
 export("testinterCpp")
 export("inerbetweenCpp")
 export("testmantelCpp")
+export("testdiscriminCpp")
+export("betweenvarCpp")
 
 #####################################
 ##            Not Exported         ##

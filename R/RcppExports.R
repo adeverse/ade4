@@ -13,6 +13,14 @@ procusterandtestCpp <- function(X, Y, nrepet) {
     .Call(`C__ade4_procusterandtestCpp`, X, Y, nrepet)
 }
 
+betweenvarCpp <- function(tab, pl, fac) {
+    .Call(`C__ade4_betweenvarCpp`, tab, pl, fac)
+}
+
+testdiscriminCpp <- function(npermut, rang, pl, fac, tab) {
+    .Call(`C__ade4_testdiscriminCpp`, npermut, rang, pl, fac, tab)
+}
+
 inerbetweenCpp <- function(pl, pc, moda, indica, tab) {
     .Call(`C__ade4_inerbetweenCpp`, pl, pc, moda, indica, tab)
 }

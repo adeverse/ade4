@@ -51,6 +51,34 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// betweenvarCpp
+/*********************************************/ double betweenvarCpp(const arma::mat& tab, const arma::vec& pl, Rcpp::IntegerVector fac);
+RcppExport SEXP _ade4_betweenvarCpp(SEXP tabSEXP, SEXP plSEXP, SEXP facSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type tab(tabSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type pl(plSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type fac(facSEXP);
+    rcpp_result_gen = Rcpp::wrap(betweenvarCpp(tab, pl, fac));
+    return rcpp_result_gen;
+END_RCPP
+}
+// testdiscriminCpp
+/*********************************************/ arma::vec testdiscriminCpp(const int npermut, const int rang, const arma::vec& pl, Rcpp::IntegerVector fac, const arma::mat& tab);
+RcppExport SEXP _ade4_testdiscriminCpp(SEXP npermutSEXP, SEXP rangSEXP, SEXP plSEXP, SEXP facSEXP, SEXP tabSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const int >::type npermut(npermutSEXP);
+    Rcpp::traits::input_parameter< const int >::type rang(rangSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type pl(plSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type fac(facSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type tab(tabSEXP);
+    rcpp_result_gen = Rcpp::wrap(testdiscriminCpp(npermut, rang, pl, fac, tab));
+    return rcpp_result_gen;
+END_RCPP
+}
 // inerbetweenCpp
 /************************************/ double inerbetweenCpp(const arma::vec& pl, const arma::vec& pc, const int moda, Rcpp::IntegerVector indica, const arma::mat& tab);
 RcppExport SEXP _ade4_inerbetweenCpp(SEXP plSEXP, SEXP pcSEXP, SEXP modaSEXP, SEXP indicaSEXP, SEXP tabSEXP) {

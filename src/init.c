@@ -30,6 +30,8 @@ extern void _ade4_procusterandtestCpp(void *, void *, void *);
 extern void _ade4_testinterCpp(void *, void *, void *, void *, void *);
 extern void _ade4_inerbetweenCpp(void *, void *, void *, void *, void *);
 extern void _ade4_testmantelCpp(void *, void *, void *);
+extern void _ade4_testdiscriminCpp(void *, void *, void *, void *, void *);
+extern void _ade4_betweenvarCpp(void *, void *, void *);
 
 
 static const R_CMethodDef CEntries[] = {
@@ -61,6 +63,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_ade4_testinterCpp", (DL_FUNC) &_ade4_testinterCpp, 5},
     {"_ade4_inerbetweenCpp", (DL_FUNC) &_ade4_inerbetweenCpp, 5},
     {"_ade4_testmantelCpp", (DL_FUNC) &_ade4_testmantelCpp, 3},
+    {"_ade4_testdiscriminCpp", (DL_FUNC) &_ade4_testdiscriminCpp, 5},
+    {"_ade4_betweenvarCpp", (DL_FUNC) &_ade4_betweenvarCpp, 3},
     {NULL, NULL, 0}
 };
 

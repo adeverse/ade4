@@ -5,6 +5,8 @@ using namespace arma;
 
 // [[Rcpp::depends(RcppArmadillo)]]
 
+#include <ade4.h>
+
 // [[Rcpp::export]]
 /*****************/
 arma::vec testertracenuCpp(int npermut,

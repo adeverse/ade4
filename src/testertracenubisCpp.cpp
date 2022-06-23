@@ -4,6 +4,7 @@ using namespace arma;
 #include <Rcpp.h>
 
 // [[Rcpp::depends(RcppArmadillo)]]
+#include <ade4.h>
 
 // [[Rcpp::export]]
 /*****************/

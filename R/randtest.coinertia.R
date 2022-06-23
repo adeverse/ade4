@@ -39,12 +39,12 @@
   
   if(identical(all.equal(X.lw, Y.lw), TRUE)) {
     if(identical(all.equal(X.lw, rep(1/nrow(X), nrow(X))), TRUE)) {
-      isim <- testertrace(nrepet, X.cw, Y.cw, X, Y, nrow(X), ncol(X), ncol(Y))
+      isim <- testertraceCpp(nrepet, X.cw, Y.cw, as.matrix(X), as.matrix(Y))
     } else {
       if(fixed == 0) {
         cat("Warning: non uniform weight. The results from simulations\n")
         cat("are not valid if weights are computed from analysed data.\n")
-        isim <- testertracenu(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY)
+        isim <- testertracenuCpp(nrepet, X.cw, Y.cw, X.lw, as.matrix(X), as.matrix(Y), as.matrix(Xinit), as.matrix(Yinit), typX, typY)
 	if(typX == 2)
           isim[-1] <- isim[-1]/ncol(eval.parent(appelX$df))
 	if(typY == 2)
@@ -54,7 +54,7 @@
         cat("are valid only if the row weights come from the fixed table.\n")
         cat("The fixed table is table X : ")
         print(apx)
-        isim <- testertracenubis(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY, fixed)
+        isim <- testertracenubisCpp(nrepet, X.cw, Y.cw, X.lw, as.matrix(X), as.matrix(Y), as.matrix(Xinit), as.matrix(Yinit), typX, typY, fixed)
 	if(typY == 2)
           isim[-1] <- isim[-1]/ncol(eval.parent(appelY$df))
       } else if (fixed==2) {
@@ -62,10 +62,9 @@
         cat("are valid only if the row weights come from the fixed table.\n")
         cat("The fixed table is table Y : ")
         print(apy)
-        isim <- testertracenubis(nrepet, X.cw, Y.cw, X.lw, X, Y, nrow(X), ncol(X), ncol(Y), Xinit, Yinit, typX, typY, fixed)
+        isim <- testertracenubisCpp(nrepet, X.cw, Y.cw, X.lw, as.matrix(X), as.matrix(Y), as.matrix(Xinit), as.matrix(Yinit), typX, typY, fixed)
 	if(typX == 2)
           isim[-1] <- isim[-1]/ncol(eval.parent(appelX$df))
-	
       }
       else
         stop ("Error : fixed must be =< 2")

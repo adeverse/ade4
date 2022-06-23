@@ -252,6 +252,9 @@ export("inerbetweenCpp")
 export("testmantelCpp")
 export("testdiscriminCpp")
 export("betweenvarCpp")
+export("testertraceCpp")
+export("testertracenuCpp")
+export("testertracenubisCpp")
 
 #####################################
 ##            Not Exported         ##

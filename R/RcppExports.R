@@ -21,6 +21,18 @@ testdiscriminCpp <- function(npermut, rang, pl, fac, tab) {
     .Call(`C__ade4_testdiscriminCpp`, npermut, rang, pl, fac, tab)
 }
 
+testertraceCpp <- function(npermut, pc1, pc2, X1, X2) {
+    .Call(`C__ade4_testertraceCpp`, npermut, pc1, pc2, X1, X2)
+}
+
+testertracenuCpp <- function(npermut, pc1, pc2, pl, tab1, tab2, tabinit1, tabinit2, typ1, typ2) {
+    .Call(`C__ade4_testertracenuCpp`, npermut, pc1, pc2, pl, tab1, tab2, tabinit1, tabinit2, typ1, typ2)
+}
+
+testertracenubisCpp <- function(npermut, pc1, pc2, pl, tab1, tab2, tabinit1, tabinit2, typ1, typ2, ntab) {
+    .Call(`C__ade4_testertracenubisCpp`, npermut, pc1, pc2, pl, tab1, tab2, tabinit1, tabinit2, typ1, typ2, ntab)
+}
+
 inerbetweenCpp <- function(pl, pc, moda, indica, tab) {
     .Call(`C__ade4_inerbetweenCpp`, pl, pc, moda, indica, tab)
 }

@@ -18,6 +18,9 @@
 \alias{testmantelCpp}
 \alias{betweenvarCpp}
 \alias{testdiscriminCpp}
+\alias{testertraceCpp}
+\alias{testertracenuCpp}
+\alias{testertracenubisCpp}
 \title{Internal ade4 functions}
 \description{
 Internal ade4 functions

@@ -5,8 +5,81 @@ using namespace arma;
 
 // [[Rcpp::depends(RcppArmadillo)]]
 
+/*********************************************/
+double betweenvarCpp (const arma::mat& tab, const arma::vec& pl, Rcpp::IntegerVector fac)
+{
+	double  s, bvar;
+	int     i, j, icla;
+	int l1 = tab.n_rows;
+	int c1 = tab.n_cols;
+	Rcpp::CharacterVector faclevs = fac.attr("levels");
+	int ncla = faclevs.length();
 
-/***********************************************************************/
+	bvar = 0;
+	for (j=0; j<c1; j++) {
+		arma::vec m(ncla);
+		arma::vec indicaw(ncla);
+		for (i=0; i<l1; i++) {
+			icla = fac(i) - 1;
+			indicaw(icla) = indicaw(icla) + pl(i);
+			m(icla) = m(icla) + tab(i, j) * pl(i);
+		}
+		s = 0;
+		for (i=0; i<ncla; i++) {
+			s = s + m(i) * m(i) / indicaw(i);
+		}   
+		bvar = bvar + s;
+	}
+	return (bvar);
+}
+
+/*********************************************/
+double inerbetweenCpp (const arma::vec& pl, const arma::vec& pc, const int moda, Rcpp::IntegerVector indica, const arma::mat& tab)
+{
+  int i, j, k, l1, rang;
+  double poi, a0, a1, s1;
+  double inerb;
+ 
+  l1 = tab.n_rows;
+  rang = tab.n_cols;
+  
+  arma::mat moy(moda, rang);
+  arma::vec pcla(moda);
+  
+  for (i=0; i<l1; i++) { 
+    k = indica(i)-1;
+    poi = pl(i);
+    pcla(k)=pcla(k)+poi;
+  }
+
+
+  for (i=0; i<l1; i++) {
+    k = indica(i)-1;
+    poi = pl(i);
+    for (j=0; j<rang; j++) {
+      moy(k, j) = moy(k, j) + tab(i, j) * poi;
+    }
+  }
+    
+  for (k=0; k<moda; k++) { 
+    a0 = pcla(k);
+    for (j=0; j<rang; j++) {
+      moy(k, j) = moy(k, j) / a0;
+    }
+  }
+
+  inerb = 0;
+  for (i=0; i<moda; i++) {
+    a1 = pcla(i);
+    for (j=0; j<rang; j++) {
+      s1 = moy(i, j);
+      inerb = inerb + s1 * s1 *a1 * pc(j);
+    }
+  }
+  return inerb;
+}
+
+/*********************************************/
 int matmodifcmCpp (arma::mat& tab, const arma::vec& poili)
 {
 /*--------------------------------------------------
@@ -49,7 +122,7 @@ int matmodifcmCpp (arma::mat& tab, const arma::vec& poili)
 }
 
 
-/***********************************************************************/
+/*********************************************/
 int matmodifcnCpp (arma::mat& tab, const arma::vec& poili)
 {
 /*--------------------------------------------------
@@ -107,7 +180,7 @@ int matmodifcnCpp (arma::mat& tab, const arma::vec& poili)
 }
 
 
-/***********************************************************************/
+/*********************************************/
 int matmodifcsCpp (arma::mat& tab, const arma::vec& poili)
 {
 /*--------------------------------------------------
@@ -155,7 +228,7 @@ int matmodifcsCpp (arma::mat& tab, const arma::vec& poili)
 }
 
 
-/***********************************************************************/
+/*********************************************/
 int matmodifcpCpp (arma::mat& tab, const arma::vec& poili)
 {
 /*--------------------------------------------------
@@ -196,7 +269,7 @@ int matmodifcpCpp (arma::mat& tab, const arma::vec& poili)
 }
 
 
-/***********************************************************************/
+/*********************************************/
 int matmodiffcCpp (arma::mat& tab, const arma::vec& poili)
 {
 /*--------------------------------------------------
@@ -250,7 +323,7 @@ int matmodiffcCpp (arma::mat& tab, const arma::vec& poili)
 }
 
 
-/***********************************************************************/
+/*********************************************/
 int matcentrageCpp (arma::mat& A, const arma::vec& poili, const int typ)
 {
   /* Modification of the original table for different analyses.

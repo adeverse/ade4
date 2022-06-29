@@ -47,7 +47,10 @@ firstly centered (using the average of random values) and secondly transformed t
 for symmetric random distribution.
 }
 
-\seealso{\link{mantel.randtest}, \link{procuste.randtest}, \link{rtest}}
+\seealso{\link{randtest.amova}, \link{randtest.between}, \link{randtest.coinertia}, \link{randtest.discrimin}, 
+\link{randtest.dpcoa}, \link{randtest.pcaiv}, \link{rtest}, \link{rtest.between}, \link{rtest.discrimin}, 
+\link{RV.rtest}, \link{RVdist.randtest}, \link{mantel.randtest}, \link{mantel.rtest}, \link{procuste.randtest}, \link{procuste.rtest}
+}
 
 \examples{
 par(mfrow = c(2,2))

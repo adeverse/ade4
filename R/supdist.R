@@ -9,7 +9,7 @@
     if (!inherits(d, "dist")) 
         stop("Distance matrix expected")
     n <- attr(d, "Size")
-    if (class(fsup) != "factor")
+    if (!inherits(fsup, "factor"))
     	stop("Argument fsup must be a factor")
     if (length(fsup) != attr(d, "Size"))
     	stop("Incompatible factor length")

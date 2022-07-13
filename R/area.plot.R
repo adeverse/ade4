@@ -45,7 +45,7 @@
         valgris <- seq(1, 0, le = (nborn - 1))
     }
     if (!is.null(graph)) {
-        if (class(graph) != "neig") 
+        if (!inherits(graph, "neig"))
             stop("graph need an object of class 'ng'")
     }
     if (cpoint != 0) 

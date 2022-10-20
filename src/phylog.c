@@ -33,7 +33,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
     taballoc(&tabperm,nobs,nvar);
     vecintalloc (&numero, nobs);
 
-    /* Définitions des variables C locales */
+    /* DÃ©finitions des variables C locales */
     k = 0;
     for (i=1; i<=nvar; i++) {
         for (j=1; j<=nobs; j++) {
@@ -56,7 +56,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
             mat[i][j] = mat[i][j]/provi ;
        }
     }
-    /* mat contient une distribution de fréquence bivariée */
+    /* mat contient une distribution de frÃ©quence bivariÃ©e */
     for (j=1; j<=nobs; j++) {
         provi = 0;
         for (i=1; i<=nobs; i++) {
@@ -65,10 +65,10 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
         poili[j] = provi;
     }
     /* poili contient la distribution marginale
-    le test sera du type xtPx avec x centré normé pour la pondération
+    le test sera du type xtPx avec x centrÃ© normÃ© pour la pondÃ©ration
     marginale et A = QtFQ soit la matrice des pij-pi.p.j */
     matmodifcn(tab,poili);
-    /* le tableau est normalisé pour la pondération marginale de la forme*/
+    /* le tableau est normalisÃ© pour la pondÃ©ration marginale de la forme*/
     for (j=1; j<=nobs; j++) {
         for (i=1; i<=nobs; i++) {
             mat[i][j] = mat[i][j] -poili[i]*poili[j] ;
@@ -84,7 +84,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
         obs[kvar-1] = provi;
     }
     k=0;
-    /* les résultats se suivent par simulation */
+    /* les rÃ©sultats se suivent par simulation */
     for (krepet=1; krepet<=nrepet; krepet++) {
         getpermutation (numero, krepet);
         matpermut (tab, numero, tabperm);
@@ -101,7 +101,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
         }
     }
     
-    /* libération mémoire locale */
+    /* libÃ©ration mÃ©moire locale */
     freevec(poili);
     freetab(mat);
     freeintvec(numero);
@@ -117,18 +117,18 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
     
     /* param contient 4 entiers : nobs le nombre de points, npro le nombre de vecteurs
     nrepet le nombre de permutations, posinega la nombre de vecteurs de la classe posi
-    qui est nul si cette notion n'existe pas. Exemple : la base Bscores d'une phylogénie a posinega = 0
-    mais la base Ascores a posinega à prendre dans Adim
-    z est un vecteur à nobs composantes de norme 1
-    pour la pondération uniforme. matvp est une matrice nobsxnpro contenant en 
-    colonnes des vecteurs orthonormés pour la pondération uniforme. En géné
-    La procédure placera 
-        dans phylogram les R2 de la décomposition de z dans la base matvp
+    qui est nul si cette notion n'existe pas. Exemple : la base Bscores d'une phylogÃ©nie a posinega = 0
+    mais la base Ascores a posinega Ã  prendre dans Adim
+    z est un vecteur Ã  nobs composantes de norme 1
+    pour la pondÃ©ration uniforme. matvp est une matrice nobsxnpro contenant en 
+    colonnes des vecteurs orthonormÃ©s pour la pondÃ©ration uniforme. En gÃ©nÃ©
+    La procÃ©dure placera 
+        dans phylogram les R2 de la dÃ©composition de z dans la base matvp
         dans phylo95 les quantiles 0.95 des R2
-        dans sig025 les quantiles 0.025 des R2 cumulés
-        dans sig975 les quantiles 0.975 des R2 cumulés 
+        dans sig025 les quantiles 0.025 des R2 cumulÃ©s
+        dans sig975 les quantiles 0.975 des R2 cumulÃ©s 
         
-    Ecrit à l'origine pour les phylogénies
+    Ecrit Ã  l'origine pour les phylogÃ©nies
     peut servir pour une base de vecteurs propres de voisinage */
         
     
@@ -155,7 +155,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
     vecintalloc (&numero, nobs);
     vecintalloc (&vecrepet, nrepet);
     
-    /* Définitions des variables C locales */
+    /* DÃ©finitions des variables C locales */
     for (i = 1 ; i<= nobs; i++) znorm[i] = z[i-1];
     for (i = 1 ; i<= npro; i++) modelnul[i] = (double) i/ (double) npro;
     k = 0;
@@ -166,7 +166,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
        }
     }
     
-   /* calcul du phylogramme observé */
+   /* calcul du phylogramme observÃ© */
     for (j = 1; j<= npro; j++) {
         provi = 0;
         for (i=1; i<=nobs; i++)  provi = provi + vecpro[i][j]*znorm[i];
@@ -175,7 +175,7 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
    }
     for (i =1 ; i<= npro ; i++) phylogram[i-1] = locphylogram[i];
     /* calcul des simulations     
-    Chaque ligne de simul est un phylogramme après permutation des données */
+    Chaque ligne de simul est un phylogramme aprÃ¨s permutation des donnÃ©es */
     
     for (irepet=1; irepet<=nrepet; irepet++) {
         getpermutation (numero, irepet);
@@ -254,8 +254,8 @@ void VarianceDecompInOrthoBasis (int *param, double *z, double *matvp,
             simul [irepet][j] = simul [irepet][j]-a1;
         }
     }
-    /* simul contient maintenant les cumulés simulés en écarts */
-    /* locphylogram contient maintenant les cumulés observés en écart*/
+    /* simul contient maintenant les cumulÃ©s simulÃ©s en Ã©carts */
+    /* locphylogram contient maintenant les cumulÃ©s observÃ©s en Ã©cart*/
     /* Dmax */
     for (j=1; j<=npro; j++) {
         for (irepet=1; irepet<=nrepet; irepet++) {

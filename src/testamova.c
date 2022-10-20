@@ -113,7 +113,7 @@ void permut(double **a, int **b, int **c, int *som, int increm, double *sst, int
 * c est le tableau structure
 * som contient la somme des termes de samples
 * increm va servir dans la fonction getpermutation pour determiner des nombres aleatoires
-* sst est la diversité totale (qui est constante)
+* sst est la diversitÃ© totale (qui est constante)
 * prindicstr indique la presence d un "vrai" tableau structures
 * prdf contient les degres de liberte
 --------------------------------------------------*/

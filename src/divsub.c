@@ -56,7 +56,7 @@ void popsum(int **b, int *res)
 /***************************************************************/
 void newsamples(int **b, int *vstru, int **res)
 /*--------------------------------------------------
-* Recalcule la matrice samples pour un niveau hiérarchique supérieur
+* Recalcule la matrice samples pour un niveau hiÃ©rarchique supÃ©rieur
 * b est le tableau samples et c est le tableau structures
 --------------------------------------------------*/
 {
@@ -567,14 +567,14 @@ void sigmas(double *pms, double *pn, double *res)
 /***************************************************************/
 void getinttable(int *vp, int *vd, int **res)
 /*--------------------------------------------------
-* calcule une table a partir de deux facteurs ie des deux vecteurs dont les termes vont de 1 à n
+* calcule une table a partir de deux facteurs ie des deux vecteurs dont les termes vont de 1 Ã  n
 * les niveaux de vp seront mis en lignes (haplotypes)
 * les niveaux de vd seront mis en colonnes (samples)
 --------------------------------------------------*/
 {
 
-	/* attention pour generaliser la fonction, il faudra surement modifier ça
-	* pour que les niveaux soient dans le même ordre qu'au début*/
+	/* attention pour generaliser la fonction, il faudra surement modifier Ã§a
+	* pour que les niveaux soient dans le mÃªme ordre qu'au dÃ©but*/
 
 	int i, j, k, lig, nivvp, nivvd;
 	
@@ -626,8 +626,8 @@ void unduplicint(int *vecp, int *res)
 /***************************************************************/
 void vpintunduplicvdint(int *vecp, int *vecd, int *res)
 /*--------------------------------------------------
-* on prend les termes de vecp tels que vecd ne soit pas dupliqué
-* cela correspond à vecp[!duplicated(vecd)]
+* on prend les termes de vecp tels que vecd ne soit pas dupliquÃ©
+* cela correspond Ã  vecp[!duplicated(vecd)]
 --------------------------------------------------*/
 {
 
@@ -662,7 +662,7 @@ void vpintunduplicvdint(int *vecp, int *vecd, int *res)
 /***************************************************************/
 void changeintlevels(int *vecp, int *res)
 /*--------------------------------------------------
-* on va numéroter les levels de vecp de 1 à n
+* on va numÃ©roter les levels de vecp de 1 Ã  n
 --------------------------------------------------*/
 {
 
@@ -692,7 +692,7 @@ void changeintlevels(int *vecp, int *res)
 /***************************************************************/
 void getneworder(int *vecp, int *res)
 /*--------------------------------------------------
-* donne les ordres pour un facteur ie avec des numéros de 1 à n
+* donne les ordres pour un facteur ie avec des numÃ©ros de 1 Ã  n
 --------------------------------------------------*/
 {
 
@@ -712,8 +712,8 @@ void vecintpermut (int *A, int *num, int *B)
 /*---------------------------------------
 * A est un vecteur n elements
 * B est une vecteur n elements
-* num est une permutation alŽatoire des n premiers entiers
-* B contient en sortie les elements de A permutŽes
+* num est une permutation alÂŽatoire des n premiers entiers
+* B contient en sortie les elements de A permutÂŽes
 * ---------------------------------------*/
 
 	int lig, lig1, lig2, i, k;

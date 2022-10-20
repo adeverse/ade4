@@ -51,7 +51,7 @@ Returns an object of class \code{multispati}, which contains the following eleme
 	\item{c1}{principle axes (v), data frame with p rows and (nfposi + nfnega) columns}
 	\item{li}{principal components (XQv), data frame with n rows and (nfposi + nfnega) columns}
 	\item{ls}{lag vector onto the principal axes (LXQv), data frame with n rows and (nfposi + nfnega) columns}
-	\item{as}{principal axes of the dudi analysis (u) onto principal axes of multispati (t(u)Qv), data frame with dudi\$nf rows and (nfposi + nfnega) columns}
+	\item{as}{principal axes of the dudi analysis (u) onto principal axes of multispati (t(u)Qv), data frame with \code{nf} rows and \code{(nfposi + nfnega)} columns}
 }
 \references{
 Dray, S., Said, S. and Debias, F. (2008) Spatial ordination of

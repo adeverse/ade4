@@ -31,7 +31,7 @@ randboot(object, ...)
 
 \value{an object of class \code{randboot} or \code{krandboot}}
 
-\references{Carpenter, J. \& Bithell, J. (2000) Bootstrap confidence
+\references{Carpenter, J. and Bithell, J. (2000) Bootstrap confidence
   intervals: when, which, what? A practical guide for medical
   statisticians.\emph{Statistics in medicine}, 19, 1141-1164}
 

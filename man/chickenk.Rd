@@ -16,7 +16,7 @@
 }
 
 \source{
-Lupo C., le Bouquin S., Balaine L., Michel V., Peraste J., Petetin I., Colin P. \& Chauvin C. (2009) Feasibility of screening broiler chicken flocks for risk markers as an aid for meat inspection. \emph{Epidemiology and Infection}, 137, 1086-1098
+Lupo C., le Bouquin S., Balaine L., Michel V., Peraste J., Petetin I., Colin P. and Chauvin C. (2009) Feasibility of screening broiler chicken flocks for risk markers as an aid for meat inspection. \emph{Epidemiology and Infection}, 137, 1086-1098
 }
 
 \examples{

@@ -2009,7 +2009,7 @@ double calculF(double **XL, double **XQual, double *XQuant, double *D){
   /* Calcul de la valeur de d et F pour ces deux variables */    
     
   double *SY,*SY2,SX=0, SX2=0,*compt,tot=0,F;
-  int lL,cL, i, j, nclass,*classvec,kk=0;
+  int lL,cL, i, j, nclass,*classvec, *comptbin, kk=0;
   double ScIntra, ScTotal,temp;
     
   lL = XL[0][0];
@@ -2021,6 +2021,7 @@ double calculF(double **XL, double **XQual, double *XQuant, double *D){
   vecalloc(&SY,nclass);
   vecalloc(&SY2,nclass);
   vecintalloc(&classvec,cL);
+  vecintalloc(&comptbin,nclass);
     
   /* compt contient le nombre d'individus par classe et classvec le numero de classe de chaque individu*/
   for (i=1; i<=cL; i++)
@@ -2042,7 +2043,8 @@ double calculF(double **XL, double **XQual, double *XQuant, double *D){
         {
 	  if(XL[i][j]>0)// Si XL' n'est pas nul
             {
-	      compt[classvec[j]]=compt[classvec[j]]+XL[i][j];/*nb d'individu par classe*/
+	      compt[classvec[j]]=compt[classvec[j]]+XL[i][j];/*nb d'individu par classe : somme des XL : peut etre des proportions*/
+          comptbin[classvec[j]]=comptbin[classvec[j]]+1;/*nb d'individu par classe : somme des indicatrices des XL : nb de site ou espece par classe*/
 	      tot=tot+XL[i][j]; /*nb total d'individu*/
 	      SX=SX+XL[i][j]*XQuant[i]; /* somme des x */
 	      SX2=SX2+XL[i][j]*XQuant[i]*XQuant[i]; /* somme des x^2 */
@@ -2060,7 +2062,7 @@ double calculF(double **XL, double **XQual, double *XQuant, double *D){
     
   for (i=1;i<=nclass; i++)
     {
-      if(compt[i]>1)
+      if(comptbin[i]>1) /* compute only if a class has at least 2 species/sites*/ 
         {
 	  temp=SY2[i]-(SY[i]*SY[i])/(double)compt[i];
 	  D[i]=temp/ScTotal;
@@ -2082,6 +2084,7 @@ double calculF(double **XL, double **XQual, double *XQuant, double *D){
   freevec(SY2);
   freevec(compt);
   freeintvec(classvec);
+  freeintvec(comptbin);
   return(F);
 }
 
@@ -2097,7 +2100,7 @@ double calculcorratio(double **XL, double **XQual, double *XQuant){
   /* Calcul de la valeur de d et F pour ces deux variables */    
     
   double *SY,*SY2,SX=0, SX2=0,*compt,tot=0,F;
-  int lL,cL, i, j, nclass,*classvec,kk=0;
+  int lL,cL, i, j, nclass,*classvec, *comptbin, kk=0;
   double ScIntra, ScTotal,temp;
     
   lL = XL[0][0];
@@ -2106,6 +2109,7 @@ double calculcorratio(double **XL, double **XQual, double *XQuant){
   /* Allocation locale */
     
   vecalloc (&compt,nclass);
+  vecintalloc (&comptbin,nclass);
   vecalloc(&SY,nclass);
   vecalloc(&SY2,nclass);
   vecintalloc(&classvec,cL);
@@ -2131,6 +2135,7 @@ double calculcorratio(double **XL, double **XQual, double *XQuant){
 	  if(XL[i][j]>0)// Si XL' n'est pas nul
             {
 	      compt[classvec[j]]=compt[classvec[j]]+XL[i][j];/*nb d'individu par classe*/
+          comptbin[classvec[j]]=comptbin[classvec[j]]+1;/*nb d'individu par classe : indicatrices*/
 	      tot=tot+XL[i][j]; /*nb total d'individu*/
 	      SX=SX+XL[i][j]*XQuant[i]; /* somme des x */
 	      SX2=SX2+XL[i][j]*XQuant[i]*XQuant[i]; /* somme des x^2 */
@@ -2148,7 +2153,7 @@ double calculcorratio(double **XL, double **XQual, double *XQuant){
     
   for (i=1;i<=nclass; i++)    
     {
-      if(compt[i]>1)
+      if(comptbin[i]>1)
 	{
 	  temp=SY2[i]-(SY[i]*SY[i])/(double)compt[i];
 	  ScIntra=ScIntra+temp;
@@ -2167,5 +2172,6 @@ double calculcorratio(double **XL, double **XQual, double *XQuant){
   freevec(SY2);
   freevec(compt);
   freeintvec(classvec);
+  freeintvec(comptbin);
   return(F);
 }

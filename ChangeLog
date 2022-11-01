@@ -1,3 +1,70 @@
+2022-11-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-20 ----------
+
+2022-11-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/area.plot.R, R/kdisteuclid.R, R/s.label.R, R/s.logo.R,
+	R/s.value.R, R/supdist.R: Correct if() conditions comparing class()
+	to string, now use inherits() as required by R CMD check
+
+2022-11-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/atlas.Rd, man/atya.Rd, man/avijons.Rd, man/bca.Rd,
+	man/bca.coinertia.Rd, man/buech.Rd, man/butterfly.Rd,
+	man/bwca.dpcoa.Rd, man/capitales.Rd, man/elec88.Rd,
+	man/ggtortoises.Rd, man/irishdata.Rd, man/julliot.Rd, man/jv73.Rd,
+	man/kcponds.Rd, man/mafragh.Rd, man/pcw.Rd, man/sarcelles.Rd,
+	man/supdist.Rd, man/suprow.pta.Rd, man/t3012.Rd, man/tintoodiel.Rd,
+	man/vegtf.Rd, man/wca.Rd, man/wca.coinertia.Rd, man/zealand.Rd: Add
+	a newline at the end of several Rd files
+
+2022-10-28  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* src/fourthcorner.c: Correct a bug to deal with non-integers values
+	in table L Homogenity/correlation ratio measures require to have at least 23
+	individuals per class to be computed (computing a variance requires
+	at leats 2 indiciduals). When dealing with non-integres values in L
+	(e.g. cover, proportion), we must count the number of non-null cells
+	(correpondence) but not the total abundance (which can be less than
+	1 and thus induces a bug in the if condition)
+
+2022-10-20  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* src/divsub.c, src/phylog.c, src/testamova.c: Change encoding from
+	ISO-8859 to UTF-8 Modify the encoding to properly manage accented characters in
+	comments. It induced a WARNING on Rdevel (mail by K Hornick)
+
+2022-10-20  Stéphane Dray <stephane.dray@univ-lyon1.fr>
+
+	* man/chickenk.Rd, man/multispati.Rd, man/randboot.Rd: Remove LateX
+	special characters Remove symbols that returns a NOTE in Rdevel
+
+2022-06-29  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* man/randtest.Rd: added links to other methods & functions for
+	permutation tests
+
+2022-05-05  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/procuste.R, R/procuste.randtest.R: Update of procuste analysis
+	permutation test Functions ade4:::randtest.procuste and procuste.randtest now call
+	the R function procuste.rtest instead of calling the C function
+	testprocuste
+
+2022-05-05  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* : Update mafragh.rda version = 2 for compat with R 2.5
+
+2022-05-05  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* : Update mafragh.rda set class of mafragh$spenames$scientific and mafragh$spenames$code
+	to character
+
+2022-04-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-19 ----------
+
 2022-04-19  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-19 ----------

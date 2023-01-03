@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - ade4-Rcpp
   pull_request:
     branches:
       - main

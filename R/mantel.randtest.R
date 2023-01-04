@@ -6,9 +6,6 @@
     n <- attr(m1, "Size")
     if (n != attr(m2, "Size")) 
         stop("Non convenient dimension")
-    m1 <- as.matrix(m1)
-    m2 <- as.matrix(m2)
-    col <- ncol(m1)
     isim <- testmantelCpp(nrepet, as.matrix(m1), as.matrix(m2))
     obs <- isim[1]
     return(as.randtest(sim = isim[-1], obs = obs, call = match.call(), subclass = "mantelrtest", ...))

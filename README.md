@@ -13,7 +13,7 @@ Installing *ade4*
 
 To install the development version from github:
 
-1. Install the release version of `devtools` from CRAN with `install.packages("devtools")`.
+1. Install the release version of `remotes` from CRAN with `install.packages("remotes")`.
 
 2. Make sure you have a working development environment.
     * **Windows**: Install [Rtools](http://cran.r-project.org/bin/windows/Rtools/).
@@ -23,8 +23,7 @@ To install the development version from github:
 Then:
 
 ```r
-library(devtools)
-install_github("sdray/ade4")
+remotes::install_github("sdray/ade4")
 ```
 
 The stable version can be installed from CRAN using:

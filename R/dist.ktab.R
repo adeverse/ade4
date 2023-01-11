@@ -1553,15 +1553,15 @@ self-similarity\n")
       lis <- lapply(lis, cbind.data.frame)
       
       if(!any(is.na(x[[i]]))){
-        if(methodF!=3 & methodF!=4)
-          res <- lapply(lis, function(u) sqrt(dist.prop(u, method = methodF)))
-        else
-          res <- lapply(lis, function(u) dist.prop(u, method = methodF))
+        res <- lapply(lis, function(u) dist.prop(u, method = methodF))
         funfor0 <- function(x){
           x[x < tol] <- 0
           return(x)
         }
-        thedis <- lapply(res, funfor0) 
+        res <- lapply(res, funfor0)
+        if(methodF!=3 & methodF!=4)
+          res <- lapply(res, sqrt)
+        thedis <- res
         names(thedis) <- attributes(x[[i]])$Labels
       }
       else{
@@ -1569,21 +1569,17 @@ self-similarity\n")
           res <- matrix(0, nlig, nlig)
           positions <- apply(mtflo, 1, function(u) any(is.na(u)))
           dfsansna <- mtflo[!positions, ]
+          resdis <- as.matrix(dist.prop(dfsansna, method = methodF))
+          resdis[resdis < tol] <- 0
+          
           if(methodF!=3 & methodF!=4)
-            resdis <- as.matrix(sqrt(dist.prop(dfsansna, method = methodF)))
-          else
-            resdis <- as.matrix(dist.prop(dfsansna, method = methodF))
+            resdis <- sqrt(resdis)
           res[!positions, !positions] <- as.vector(resdis)
           res[positions, ] <- NA
           res[, positions] <- NA
           return(as.dist(res))
         }
-        listdis <- lapply(lis, fun1.F)
-        funfor0 <- function(x){
-          x[x < tol] <- 0
-          return(x)
-        }
-        thedis <- lapply(listdis, funfor0)
+        thedis <- lapply(lis, fun1.F)
         names(thedis) <- attributes(x[[i]])$Labels
       }
     }

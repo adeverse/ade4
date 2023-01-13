@@ -7,6 +7,7 @@
     dudi1 <- eval.parent(appel[[2]]) ## could work with bca (appel$x) or between (appel$dudi)
     fac <- eval.parent(appel$fac)
     X <- as.matrix(dudi1$tab)
+    X.lw <- dudi1$lw
     if ((!(identical(all.equal(X.lw,rep(1/nrow(X), nrow(X))),TRUE)))) {
       if(as.list(dudi1$call)[[1]] == "dudi.acm" )
     	stop ("Not implemented for non-uniform weights in the case of dudi.acm")

@@ -45,7 +45,7 @@ jobs:
         run: |
           sudo apt-get install libudunits2-dev libproj-dev libgeos-dev libgdal-dev
           
-       name: Install libraries for macOS
+      - name: Install libraries for macOS
         if: runner.os == 'macOS'
         run: |
           brew install udunits

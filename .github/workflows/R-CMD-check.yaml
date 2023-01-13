@@ -48,7 +48,7 @@ jobs:
       - name: Install libraries for macOS
         if: runner.os == 'macOS'
         run: |
-          brew install udunits
+          brew install udunits xquartz
           
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:

@@ -39,12 +39,17 @@ jobs:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
-
+      
       - name: Install libraries for Linux
         if: runner.os == 'Linux'
         run: |
           sudo apt-get install libudunits2-dev libproj-dev libgeos-dev libgdal-dev
-
+          
+      - name: Install libraries for macOS
+        if: runner.os == 'macOS'
+        run: |
+          brew install udunits xquartz gdal proj geos
+          
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           pak-version: devel

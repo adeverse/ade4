@@ -10,6 +10,17 @@
 \alias{testamova}
 \alias{dudi.type}
 \alias{fac2disj}
+\alias{RVrandtestCpp}
+\alias{RVintrarandtestCpp}
+\alias{procusterandtestCpp}
+\alias{testinterCpp}
+\alias{inerbetweenCpp}
+\alias{testmantelCpp}
+\alias{betweenvarCpp}
+\alias{testdiscriminCpp}
+\alias{testertraceCpp}
+\alias{testertracenuCpp}
+\alias{testertracenubisCpp}
 \title{Internal ade4 functions}
 \description{
 Internal ade4 functions

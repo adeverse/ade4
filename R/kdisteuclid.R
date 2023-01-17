@@ -1,7 +1,7 @@
 kdisteuclid <- function(obj,method=c("lingoes","cailliez","quasi")) {
 
     if (is.null(class(obj))) stop ("Object of class 'kdist' expected")
-    if (!inherits(obj,"kdist")) stop ("Object of class 'kdist' expected")
+    if (!inherits(obj, "kdist")) stop ("Object of class 'kdist' expected")
     
     choice <- match.arg(method)
     
@@ -61,4 +61,3 @@ kdisteuclid <- function(obj,method=c("lingoes","cailliez","quasi")) {
     attr(obj, "call") <- match.call()
     return(obj)
 }
-

@@ -17,7 +17,7 @@
     if (!is.null(neig)) {
         if (is.null(class(neig))) 
             neig <- NULL
-        if (!inherits(neig, "neig") )
+        if (!inherits(neig, "neig"))
             neig <- NULL
         deg <- attr(neig, "degrees")
         if ((length(deg)) != (length(coo$x))) 

@@ -23,6 +23,20 @@ extern void testmultispati(void *, void *, void *, void *, void *, void *, void 
 extern void testprocuste(void *, void *, void *, void *, void *, void *, void *);
 extern void VarianceDecompInOrthoBasis(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
 
+/* .Call calls */
+extern void _ade4_RVrandtestCpp(void *, void *, void *);
+extern void _ade4_RVintrarandtestCpp(void *, void *, void *, void *);
+extern void _ade4_procusterandtestCpp(void *, void *, void *);
+extern void _ade4_testinterCpp(void *, void *, void *, void *, void *);
+extern void _ade4_inerbetweenCpp(void *, void *, void *, void *, void *);
+extern void _ade4_testmantelCpp(void *, void *, void *);
+extern void _ade4_testdiscriminCpp(void *, void *, void *, void *, void *);
+extern void _ade4_betweenvarCpp(void *, void *, void *);
+extern void _ade4_testertraceCpp(void *, void *, void *, void *, void *);
+extern void _ade4_testertracenuCpp(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
+extern void _ade4_testertracenubisCpp(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
+
+
 static const R_CMethodDef CEntries[] = {
   {"gearymoran",                 (DL_FUNC) &gearymoran,                  7},
   {"MSTgraph",                   (DL_FUNC) &MSTgraph,                    4},
@@ -45,8 +59,23 @@ static const R_CMethodDef CEntries[] = {
   {NULL, NULL, 0}
 };
 
+static const R_CallMethodDef CallEntries[] = {
+    {"_ade4_procusterandtestCpp", (DL_FUNC) &_ade4_procusterandtestCpp, 3},
+    {"_ade4_RVrandtestCpp", (DL_FUNC) &_ade4_RVrandtestCpp, 3},
+    {"_ade4_RVintrarandtestCpp", (DL_FUNC) &_ade4_RVintrarandtestCpp, 4},
+    {"_ade4_testinterCpp", (DL_FUNC) &_ade4_testinterCpp, 5},
+    {"_ade4_inerbetweenCpp", (DL_FUNC) &_ade4_inerbetweenCpp, 5},
+    {"_ade4_testmantelCpp", (DL_FUNC) &_ade4_testmantelCpp, 3},
+    {"_ade4_testdiscriminCpp", (DL_FUNC) &_ade4_testdiscriminCpp, 5},
+    {"_ade4_betweenvarCpp", (DL_FUNC) &_ade4_betweenvarCpp, 3},
+    {"_ade4_testertraceCpp", (DL_FUNC) &_ade4_testertraceCpp, 5},
+    {"_ade4_testertracenuCpp", (DL_FUNC) &_ade4_testertracenuCpp, 10},
+    {"_ade4_testertracenubisCpp", (DL_FUNC) &_ade4_testertracenubisCpp, 11},
+    {NULL, NULL, 0}
+};
+
 void R_init_ade4(DllInfo *dll)
 {
-  R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
+  R_registerRoutines(dll, CEntries, CallEntries, NULL, NULL);
   R_useDynamicSymbols(dll, FALSE);
 }

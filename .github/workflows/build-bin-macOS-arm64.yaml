@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [main, master]
 
-name: build-macOS
+name: build-macOS-arm64
 
 jobs:
   R-CMD-check:
@@ -19,7 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: macOS-latest, arch: arm64, r: 'release'}
+          - {os: macOS-latest, arch: aarch64, r: 'release'}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

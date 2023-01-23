@@ -10,10 +10,10 @@ on:
 name: build-macOS-arm64
 
 jobs:
-  R-CMD-check:
-    runs-on: ${{ arm64 }}
+  build-bin-macOS-arm64:
+    runs-on: arm64
 
-    name: ${{ arm64 }} (${{ matrix.config.r }})
+    name: arm64 (${{ matrix.config.r }})
 
     strategy:
       fail-fast: false

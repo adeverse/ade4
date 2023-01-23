@@ -10,7 +10,7 @@ on:
 name: build-macOS
 
 jobs:
-  R-CMD-check:
+  build-bin-macOS:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})

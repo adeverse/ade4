@@ -52,5 +52,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: binaries-for-mac
-          path: /Users/runner/work/Mondrian/ade4_*.tgz
+          path: /Users/runner/work/ade4/ade4_*.tgz
           

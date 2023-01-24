@@ -11,15 +11,15 @@ name: build-macOS-arm64
 
 jobs:
   build-bin-macOS-arm64:
-    runs-on: arm64
+    runs-on: ${{ matrix.config.os }}
 
-    name: arm64 (${{ matrix.config.r }})
+    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
     strategy:
       fail-fast: false
       matrix:
         config:
-          - {os: macOS-latest, r: 'release'}
+          - {os: [macos-arm64], r: 'release'}
           
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

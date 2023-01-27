@@ -1,3 +1,168 @@
+2023-01-27  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-21 ----------
+
+2023-01-27  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* : Reduce pnm size to lighten the package
+
+2023-01-25  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS-arm64.yaml: Delete the workflow
+	to build binaries under mac-arm64 configuration not yet available with github actions:
+	https://github.com/actions/runner-images/issues/2187
+
+2023-01-25  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS-arm64.yaml: Update
+	build-bin-macOS-arm64.yaml
+
+2023-01-24  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS-arm64.yaml: Update
+	build-bin-macOS-arm64.yaml: try another label for arm64
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS-arm64.yaml,
+	.github/workflows/build-bin-macOS.yaml,
+	.github/workflows/build-bin-windows.yaml: Update workflows to build
+	binaries for maOS and windows: correct misprints
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS-arm64.yaml: Update
+	build-bin-macOS-arm64.yaml
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS-arm64.yaml: Update
+	build-bin-macOS-arm64
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS-arm64.yaml,
+	.github/workflows/build-bin-macOS.yaml: Separate the workflow script
+	to handle two architectures for mac (intel and arm)
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS.yaml: Update build-bin-macOS:
+	try to also build the package with an 'arm' configuration for macOS
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-windows.yaml: Add
+	build-bin-windows.yaml
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS.yaml: Correct a misprint in
+	build-bin-macOS.yaml
+
+2023-01-23  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/build-bin-macOS.yaml: Add the workflow
+	build-bin-macOS.yaml
+
+2023-01-20  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check-rcpp.yaml: Delete
+	R-CMD-check-rcpp.yaml after merging the ade4-rcpp branch
+
+2023-01-17  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* : commit e484cff4deb9bd91f7e09e39ce11f0170454616f Author: Aurélie
+	Siberchicot <aurelie.siberchicot@univ-lyon1.fr> Date:   Mon Jan 16
+	15:37:38 2023 +0100
+
+2023-01-16  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check-rcpp.yaml: Update
+	R-CMD-check-rcpp.yaml: add libraries for macOS
+
+2023-01-16  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check.yaml: Update R-CMD-check.yaml: add
+	libraries for macOS
+
+2023-01-13  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/randtest.between.R: Update randtest.between.R put back the definition of X.lw
+
+2023-01-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check.yaml: Update R-CMD-check.yaml: add
+	xquartz for macOS
+
+2023-01-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check-rcpp.yaml: Correct indentation in
+	R-CMD-check-rcpp
+
+2023-01-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check-rcpp.yaml: Add a copy of
+	R-CMD-check-rcpp.yaml in the ade4-Rcpp branch
+
+2023-01-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .Rbuildignore: A minor commit to in the ade4-Rcpp branch to
+	trigger R-CMD-check-rcpp
+
+2023-01-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check.yaml: Correct a misprint in
+	R-CMD-check.yaml
+
+2023-01-13  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check.yaml: Update R-CMD-check.yaml:
+	install udunits for macOS
+
+2023-01-11  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check.yaml: Update R-CMD-check.yaml: a lot
+	of tags are deprecated
+
+2023-01-11  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* .github/workflows/R-CMD-check-rcpp.yaml,
+	.github/workflows/R-CMD-check.yaml: Add a workflow to check the
+	ade4-Rcpp branch
+
+2023-01-11  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* README.md: Update README
+
+2023-01-11  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/dist.ktab.R: Correct a bug in the function 'ldist.ktab' for
+	fuzzy data
+
+2023-01-04  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* R/mantel.randtest.R, R/randtest.between.R: Cleaning R code Cleaning R code for unused variables after moving from C to C++
+	calls
+
+2023-01-03  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* : commit 3b3c2d79a1587998868e8599849dfec84afa3ece Author: Aurélie
+	Siberchicot <aurelie.siberchicot@univ-lyon1.fr> Date:   Tue Jan 3
+	15:59:01 2023 +0100
+
+2023-01-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* R/dist.ktab.R: Just indent
+
+2022-11-02  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* man/presid2002.Rd: Update URL in presid2002
+
+2022-11-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-20 ----------
+
 2022-11-01  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-20 ----------

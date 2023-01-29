@@ -474,9 +474,6 @@ arma::vec RVintrarandtestCpp(const arma::mat & X, const arma::mat & Y, Rcpp::Int
  List of lists to store the row numbers in each factor level
 --------------------------------------------------*/
 	Rcpp::List spl1(nlev);
-	for (i=0; i<nlev; i++) {
-		Rcpp::List spl1[i];
-	}
 
 /*--------------------------------------------------
 Fill the list of row numbers that belong to each factor level

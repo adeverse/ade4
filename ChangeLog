@@ -1,3 +1,15 @@
+2023-01-30  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* DESCRIPTION: ---------- release of ade4 1.7-22 ----------
+
+2023-01-29  Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>
+
+	* src/testsCpp.cpp: remove useless declarations of spl1 lists array remove useless declarations of spl1 lists array
+
+2023-01-27  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
+
+	* ChangeLog: ---------- release of ade4 1.7-21 ----------
+
 2023-01-27  Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>
 
 	* DESCRIPTION: ---------- release of ade4 1.7-21 ----------

@@ -92,19 +92,9 @@ meanfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FAL
 covfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FALSE) {
   df <- data.frame(df)
   nr <- nrow(df)
-  if(identical(all.equal(wt, rep(1/nrow(df), nrow(df))), TRUE)) { ## uniform weights
-    if(is.null(fac)) { ## no factor
-      res <- cov(df) * (nr - 1) / nr
-    } else {
-      fac <- as.factor(fac)
-       if(drop)
-         fac <- factor(fac) ## to drop unused levels
-      res <- lapply(split(df,fac), function(x) cov(x) * (nrow(x) - 1) / nrow(x))
-    }
-  } else {
-    if(is.null(fac)) {## no factor
+  if(is.null(fac)) {## no factor
       res <- covwt(df, wt = wt)
-    } else {
+  } else {
       fac <- as.factor(fac)
       if(drop)
         fac <- factor(fac)
@@ -113,7 +103,6 @@ covfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FALS
       res <- lapply(1:nlevels(fac), function(x) covwt(df.list[[x]], wt = wt.list[[x]]))
       names(res) <- names(df.list)
     }
-  }
   return(res)
   ## liste, matrix var/covar, 1 element=1 group (order according to levels(fac))
 }
@@ -125,20 +114,10 @@ covfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FALS
 varfacwt <- function(df, fac = NULL, wt = rep(1 / nrow(df), nrow(df)), drop = FALSE) {
   df <- data.frame(df)
   nr <- nrow(df)
-  if(identical(all.equal(wt, rep(1 / nrow(df), nrow(df))), TRUE)) { ## uniform weights
-    if(is.null(fac)) { ## no factor
-      res <- apply(df, 2, var) * (nr - 1) / nr
-    } else {
-      fac <- as.factor(fac)
-      if(drop)
-        fac <- factor(fac)
-      df.list <- split(df, fac)
-      res <- t(sapply(1:nlevels(fac), FUN = function(x) {apply(df.list[[x]], 2, function(y) var(y) * (NROW(y) - 1) / NROW(y))}))      
-    }
-  } else {
-    if(is.null(fac)) { ## no factor
+
+  if(is.null(fac)) { ## no factor
       res <- apply(df, 2, varwt, wt = wt)
-    } else {
+  } else {
       fac <- as.factor(fac)
       if(drop)
         fac <- factor(fac)
@@ -146,8 +125,7 @@ varfacwt <- function(df, fac = NULL, wt = rep(1 / nrow(df), nrow(df)), drop = FA
       wt.list <- split(wt, fac)
       res <- t(sapply(1:nlevels(fac), FUN = function(x) {apply(df.list[[x]], 2, varwt, wt = wt.list[[x]])}))
       rownames(res) <- names(df.list)
-    }
-  }
+      }
   return(res)
 }
 

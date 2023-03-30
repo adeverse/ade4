@@ -1,0 +1,487 @@
+url: ~
+destination : docs
+
+template:
+  bootstrap: 5
+  bootswatch: minty
+  
+navbar:
+  title: "ade4"
+  left:
+    - text: "New to ade4 ?"
+      menu:
+      - text: "Installation" 
+        href: articles/install.html
+      - text: "Getting started"
+        href: articles/get_started.html
+    - text: "Vignettes"
+      href: vignettes.html
+      menu:
+      - text: "vignette 1" 
+        href: articles/vignette1.html
+      - text: "vignette 2"
+        href: articles/vignette2.html
+    - text: "Related packages"
+      href: articles/related.html
+    - text: "News"
+      href: news/index.html
+    - text: "Reference"
+      href: reference/index.html
+    - text: "Ressources"
+      menu:
+      - text: "FAQ"
+        href: articles/faq.html
+      - text: "adelist"
+        href: "https://listes.univ-lyon1.fr/sympa/info/adelist"
+      - text: "Ade4 book"
+        href: articles/book.html
+      - text: "Papers"
+        href: articles/papers.html        
+  right:
+    - text: "LBBE"
+      icon: fa-leaf
+      href: https://lbbe-web.univ-lyon1.fr/en
+    - icon: fa-github
+      href: https://github.com/sdray/ade4
+
+
+reference:
+  - title: One-table methods
+    contents:
+    - acm.burt
+    - acm.disjonctif
+    - as.dudi
+    - dagnelie.test
+    - dudi.acm
+    - dudi.coa
+    - dudi.dec
+    - dudi.fca
+    - dudi.fpca
+    - dudi.hillsmith
+    - dudi.mix
+    - dudi.nsc
+    - dudi.pca
+    - dudi.pco
+    - dist.dudi
+    - amova
+    - dpcoa
+    - inertia
+    - inertia.dudi
+    - is.dudi
+    - loocv
+    - nipals
+    - prep.fuzzy.var
+    - reciprocal.coa
+    - reconst
+    - redo.dudi
+    - scatter
+    - supcol
+    - suprow
+    - supdist
+    - varipart
+    - scatter.acm
+    - scatter.coa
+    - scatter.dudi
+    - scatter.fca
+    - score.acm
+    - score.mix
+    - score.pca
+    
+  - title: One-table & one-factor methods
+    contents:
+    - bca
+    - bca.coinertia
+    - bca.rlq
+    - bwca.dpcoa
+    - discrimin
+    - discrimin.coa
+    - loocv.discrimin
+    - wca
+    - meanfacwt
+    - scalefacwt
+    - covwt
+    - covfacwt
+    - loocv.between
+    - wca.coinertia
+    - wca.rlq
+    - withinpca
+
+  - title: Coupling
+    desc: 2-tables methods.
+    contents:
+    - coinertia
+    - pcaiv
+    - pcaivortho
+    - niche
+    - niche.param
+    
+  - title: RLQ
+    desc: 3-tables methods.
+    contents:
+    - combine.4thcorner
+    - combine.randtest.rlq
+    - fourthcorner.rlq
+    - rlq
+    - fourthcorner
+    - fourthcorner2
+    - p.adjust.4thcorner
+    
+  - title: K-tables
+    desc: Multitables analysis
+    contents:
+    - col.names
+    - costatis
+    - costatis.randtest
+    - dist.ktab
+    - foucart
+    - is.ktab
+    - mdpcoa
+    - prep.mdpcoa
+    - kdist2ktab
+    - kplot
+    - kplotsepan.coa
+    - kplot.foucart
+    - kplot.mcoa
+    - kplot.mfa
+    - kplot.pta
+    - kplot.statis
+    - kplotX.mdpcoa
+    - ktab.data.frame
+    - ktab.list.df
+    - ktab.list.dudi
+    - ktab.match2ktabs
+    - ktab.within
+    - mbpls
+    - mbpcaiv
+    - mcoa
+    - mfa
+    - pta
+    - sepan
+    - statico
+    - statis
+    - tab.names
+    - suprow.pta
+    
+  - title: Tests
+    desc: Permutation tests, correlation tests and others statistical tests
+    contents:
+    - as.krandboot
+    - as.krandtest
+    - as.krandxval
+    - as.randboot
+    - as.randtest
+    - as.randxval
+    - combine.randtest.rlq
+    - costatis.randtest
+    - gearymoran
+    - mantel.randtest
+    - mantel.rtest
+    - multispati.randtest
+    - multispati.rtest
+    - procuste.randtest
+    - procuste.rtest
+    - randboot
+    - randtest
+    - rtest
+    - RV.rtest
+    - RVdist.randtest
+    - statico.krandtest
+    - testdim
+    - randboot.multiblock
+    - randtest.amova
+    - randtest.between
+    - randtest.coinertia
+    - randtest.discrimin
+    - randtest.dpcoa
+    - randtest.pcaiv
+    - rtest.between
+    - rtest.discrimin
+    - RV.randtest
+    - RVintra.randtest
+    - testdim.multiblock
+    
+  - title: Internal correspondance
+    contents:
+    - witwit.coa
+    - witwitsepan
+    
+  - title: Distance methods
+    contents:
+    - cailliez
+    - dist.binary
+    - dist.dudi
+    - dist.ktab
+    - dist.neig
+    - dist.prop
+    - dist.quant
+    - dist.taxo
+    - kdist
+    - kdist.cor
+    - kdist2ktab
+    - kdisteuclid
+    - ldist.ktab
+    - mantel.randtest
+    - mantel.rtest
+    - mantelkdist
+    - prep.binary
+    - prep.circular
+    - prep.fuzzy
+    - quasieuclid
+    - RVdist.randtest
+    - RVkdist
+    - s.distri
+    - sco.distri
+    - table.dist
+    - as.taxo
+    - is.euclid
+    - lingoes
+    - mstree
+    - pcoscaled
+    
+  - title: Phylogeny methods
+    contents:
+    - dotchart.phylog
+    - enum.phylog
+    - gearymoran
+    - hclust2phylog
+    - newick2phylog
+    - phylog.extract
+    - phylog.permut
+    - radial.phylog
+    - symbols.phylog
+    - table.phylog
+    - taxo2phylog
+    - variance.phylog
+    - originality
+    - PI2newick
+    - symbols.phylog
+    
+  - title: Others
+    contents:
+    - adegraphicsLoaded
+    - disc
+    - divc
+    - divcmax
+    - nb2neig
+    - neig
+    - neig2mat
+    - neig2nb
+    - haar2level
+    - orthobasis.neig
+    - is.orthobasis
+    - orthobasis.circ
+    - orthobasis.haar
+    - orthobasis.line
+    - orthobasis.mat
+    - scores.neig
+    - procuste
+    - scalewt
+    - sco.distri
+    - sco.gauss
+    - sco.quant
+    - score
+    - apqe
+    - gridrowcol
+    - mld
+    - mstree
+    - bicenter.wt
+    
+    
+  - title: Datasets
+    desc: Datasets available in ade4. You can access them by typing `r data(dataset)`.
+    contents:
+    - abouheif.eg
+    - acacia
+    - aminoacyl
+    - apis108
+    - aravo
+    - ardeche
+    - arrival
+    - atlas
+    - atya
+    - avijons
+    - avimedi
+    - aviurba
+    - bacteria
+    - banque
+    - baran95
+    - bf88
+    - bordeaux
+    - bsetal97
+    - buech
+    - butterfly
+    - capitales
+    - carni19
+    - carni70
+    - carniherbi49
+    - casitas
+    - chatcat
+    - chats
+    - chazeb
+    - chevaine
+    - chickenk
+    - clementines
+    - cnc2003
+    - coleo
+    - corvus
+    - deug
+    - doubs
+    - dunedata
+    - ecg
+    - ecomor
+    - elec88
+    - escopage
+    - euro123
+    - fission
+    - friday87
+    - fruits
+    - ggtortoises
+    - granulo
+    - hdpg
+    - houmousr
+    - housetasks
+    - humDNAm
+    - ichtyo
+    - irishdata
+    - julliot
+    - jv73
+    - kcponds
+    - lascaux
+    - lizards
+    - macaca
+    - macon
+    - macroloire
+    - mafragh
+    - maples
+    - mariages
+    - meau
+    - meaudret
+    - microsatt
+    - mjrochet
+    - mollusc
+    - monde84
+    - morphosport
+    - newick.eg
+    - njplot
+    - olympic
+    - oribatid
+    - ours
+    - palm
+    - pap
+    - pcw
+    - perthi02
+    - piosphere
+    - presid2002
+    - procella
+    - rankrock
+    - rhizobium
+    - rhone
+    - rpjdl
+    - santacatalina
+    - sarcelles
+    - seconde
+    - skulls
+    - steppe
+    - syndicats
+    - t3012
+    - tarentaise
+    - taxo.eg
+    - tintoodiel
+    - tithonia
+    - tortues
+    - toxicity
+    - trichometeo
+    - ungulates
+    - vegtf
+    - veuvage
+    - westafrica
+    - woangers
+    - worksurv
+    - yanomama
+    - zealand
+    
+  - title: Graphics
+    contents:
+    - add.scatter
+    - add.scatter.eig
+    - area.plot
+    - area2link
+    - area2poly
+    - poly2area
+    - kplot
+    - dotcircle
+    - kplotsepan.coa
+    - s.hist
+    - s.match.class
+    - scatter
+    - scatterutil.base
+    - scatterutil.chull
+    - scatterutil.convrot90
+    - scatterutil.eigen
+    - scatterutil.ellipse
+    - scatterutil.eti
+    - scatterutil.eti.circ
+    - scatterutil.grid
+    - scatterutil.legend.bw.square
+    - scatterutil.legend.square.grey
+    - scatterutil.legendgris
+    - scatterutil.logo
+    - scatterutil.scaling
+    - scatterutil.sco
+    - scatterutil.star
+    - scatterutil.sub
+    - sco.boxplot
+    - sco.class
+    - sco.label
+    - sco.match
+    - table.cont
+    - table.paint
+    - table.value
+    - triangle.biplot
+    - triangle.class
+    - triangle.plot
+    - multiblock
+    - between
+    - within
+    - s.arrow
+    - s.chull
+    - s.class
+    - s.corcircle
+    - s.distri
+    - s.image
+    - s.kde2d
+    - s.label
+    - s.logo
+    - s.match
+    - s.multinom
+    - s.traject
+    - s.value
+
+    
+  - title: Utilities
+    contents:
+    - has_keyword('utility')
+    - uniquewt.df
+    - scatterutil.base
+    - scatterutil.chull
+    - scatterutil.convrot90
+    - scatterutil.eigen
+    - scatterutil.ellipse
+    - scatterutil.eti
+    - scatterutil.eti.circ
+    - scatterutil.grid
+    - scatterutil.legend.bw.square
+    - scatterutil.legend.square.grey
+    - scatterutil.legendgris
+    - scatterutil.logo
+    - scatterutil.scaling
+    - scatterutil.sco
+    - scatterutil.star
+    - scatterutil.sub
+    - ade4-internal
+    - ade4-package
+    
+  - title: Deprecated
+    contents:
+    - '`Deprecated functions`'
+    - multispati

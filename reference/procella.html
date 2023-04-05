@@ -6,7 +6,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">ade4</a>
 
@@ -18,15 +18,51 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-new-to-ade-">New to ade4 ?</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-new-to-ade-">
+    <a class="dropdown-item" href="../articles/install.html">Installation</a>
+    <a class="dropdown-item" href="../articles/get_started.html">Getting started</a>
+  </div>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="dropdown-item" href="../articles/vignette1.html">vignette 1</a>
+    <a class="dropdown-item" href="../articles/vignette2.html">vignette 2</a>
+  </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../articles/related.html">Related packages</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">News</a>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-ressources">Ressources</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-ressources">
+    <a class="dropdown-item" href="../articles/faq.html">FAQ</a>
+    <a class="external-link dropdown-item" href="https://listes.univ-lyon1.fr/sympa/info/adelist">adelist</a>
+    <a class="dropdown-item" href="../articles/book.html">Ade4 book</a>
+    <a class="dropdown-item" href="../articles/papers.html">Papers</a>
+  </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/sdray/ade4/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a class="external-link nav-link" href="https://lbbe-web.univ-lyon1.fr/en">
+    <span class="fa fa-leaf"></span>
+     
+    LBBE
+  </a>
+</li>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/sdray/ade4">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -105,11 +141,11 @@ col.size: an integer vector that describes the colony size (no nests monitored)<
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   9999 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       Test          Obs    Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 site.fid 0.0999203829 0.71939020 greater 0.2233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 mate.fid 0.1775615101 1.27109420 greater 0.1146</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     mass 0.5446640572 3.76285971 greater 0.0006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4      ALE 0.0009167618 0.01571078 greater 0.4663</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       BF 0.1972100051 1.41085382 greater 0.0905</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 site.fid 0.0999203829 0.72567766 greater 0.2203</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 mate.fid 0.1775615101 1.26721321 greater 0.1129</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     mass 0.5446640572 3.86845973 greater 0.0007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4      ALE 0.0009167618 0.01667017 greater 0.4643</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       BF 0.1972100051 1.38344102 greater 0.0939</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
@@ -118,7 +154,7 @@ col.size: an integer vector that describes the colony size (no nests monitored)<
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Aurélie Siberchicot.</p>
+  <p></p><p>Developed by Stéphane Dray, Anne-Béatrice Dufour, Jean Thioulouse, Aurélie Siberchicot.</p>
 </div>
 
 <div class="pkgdown-footer-right">

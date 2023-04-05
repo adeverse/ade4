@@ -6,7 +6,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">ade4</a>
 
@@ -18,15 +18,51 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-new-to-ade-">New to ade4 ?</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-new-to-ade-">
+    <a class="dropdown-item" href="../articles/install.html">Installation</a>
+    <a class="dropdown-item" href="../articles/get_started.html">Getting started</a>
+  </div>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="dropdown-item" href="../articles/vignette1.html">vignette 1</a>
+    <a class="dropdown-item" href="../articles/vignette2.html">vignette 2</a>
+  </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../articles/related.html">Related packages</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">News</a>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-ressources">Ressources</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-ressources">
+    <a class="dropdown-item" href="../articles/faq.html">FAQ</a>
+    <a class="external-link dropdown-item" href="https://listes.univ-lyon1.fr/sympa/info/adelist">adelist</a>
+    <a class="dropdown-item" href="../articles/book.html">Ade4 book</a>
+    <a class="dropdown-item" href="../articles/papers.html">Papers</a>
+  </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/sdray/ade4/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a class="external-link nav-link" href="https://lbbe-web.univ-lyon1.fr/en">
+    <span class="fa fa-leaf"></span>
+     
+    LBBE
+  </a>
+</li>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/sdray/ade4">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -114,9 +150,9 @@ Daniel Chessel</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Coefficients:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)           A1           A2           A3           A4           A5  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   7.129e-16    2.884e-01    3.291e-01   -1.967e-02    4.661e-02    3.326e-01  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1.886e-16    2.884e-01    3.291e-01   -1.967e-02    4.661e-02    3.326e-01  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          A6           A7           A8           A9          A10          A11  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   9.722e-02   -4.594e-01    5.077e-02   -2.489e-01    3.056e-01    2.126e-01  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  -9.722e-02   -4.594e-01    5.077e-02   -2.489e-01    3.056e-01    2.126e-01  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         A12          A13  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -1.691e-01   -1.293e-01  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -173,11 +209,11 @@ Daniel Chessel</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   999 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Test        Obs    Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 R2Max  0.1801004  0.2762499 greater  0.337</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 SkR2k 11.3482467 -2.6942593 greater  0.998</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Dmax  0.3987362  3.7180404 greater  0.001</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   SCE  1.6017356  4.2749191 greater  0.007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    Test        Obs   Std.Obs   Alter Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 R2Max  0.1801004  0.310080 greater  0.327</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 SkR2k 11.3482467 -2.831918 greater  1.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Dmax  0.3987362  3.816679 greater  0.001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   SCE  1.6017356  4.618755 greater  0.005</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
@@ -186,7 +222,7 @@ Daniel Chessel</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Aurélie Siberchicot.</p>
+  <p></p><p>Developed by Stéphane Dray, Anne-Béatrice Dufour, Jean Thioulouse, Aurélie Siberchicot.</p>
 </div>
 
 <div class="pkgdown-footer-right">

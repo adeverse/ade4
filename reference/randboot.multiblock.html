@@ -10,7 +10,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">ade4</a>
 
@@ -22,15 +22,51 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-new-to-ade-">New to ade4 ?</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-new-to-ade-">
+    <a class="dropdown-item" href="../articles/install.html">Installation</a>
+    <a class="dropdown-item" href="../articles/get_started.html">Getting started</a>
+  </div>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="dropdown-item" href="../articles/vignette1.html">vignette 1</a>
+    <a class="dropdown-item" href="../articles/vignette2.html">vignette 2</a>
+  </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../articles/related.html">Related packages</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">News</a>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-ressources">Ressources</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-ressources">
+    <a class="dropdown-item" href="../articles/faq.html">FAQ</a>
+    <a class="external-link dropdown-item" href="https://listes.univ-lyon1.fr/sympa/info/adelist">adelist</a>
+    <a class="dropdown-item" href="../articles/book.html">Ade4 book</a>
+    <a class="dropdown-item" href="../articles/papers.html">Papers</a>
+  </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/sdray/ade4/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a class="external-link nav-link" href="https://lbbe-web.univ-lyon1.fr/en">
+    <span class="fa fa-leaf"></span>
+     
+    LBBE
+  </a>
+</li>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/sdray/ade4">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -113,27 +149,27 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Number of statistics:   20 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Confidence Interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep          Obs        2.5%        97.5%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10  0.085950032 -0.06676231  0.233338848</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.127497042 -0.28855418 -0.027095355</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 -0.265489511 -0.36035539 -0.162785336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.211732110  0.11823241  0.292369076</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.123235977  0.05219822  0.272625006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10  0.029172129 -0.28439484  0.215450996</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 -0.059863998 -0.22508393  0.031300378</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.516490179 -0.70792734 -0.323244902</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10 -0.145755039 -0.33789126 -0.002275898</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10  0.137730758 -0.15709418  0.134784361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 -0.214346185 -0.47521645 -0.085499929</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.084976485 -0.24768787  0.117197050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10 -0.150139755 -0.24212085 -0.061488208</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10 -0.042997762 -0.18309529 -0.007922106</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10 -0.013488658 -0.23878930  0.002527529</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10 -0.013287061 -0.12577659  0.061464082</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10 -0.001111215 -0.10335898  0.111650761</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10  0.021557816 -0.04678848  0.118629486</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10 -0.169175517 -0.29802367 -0.037876540</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 -0.087462628 -0.15562957  0.052606370</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep          Obs        2.5%       97.5%</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10  0.085950032 -0.03906735  0.23260441</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.127497042 -0.17375796  0.03446525</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 -0.265489511 -0.32271559 -0.08946832</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.211732110 -0.07380568  0.32928975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.123235977 -0.05935949  0.18466622</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10  0.029172129 -0.74757622  0.15580114</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 -0.059863998 -0.09990234  0.19323944</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.516490179 -0.62098664 -0.22043269</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10 -0.145755039 -0.15191010  0.22339202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10  0.137730758  0.06010160  0.34465143</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 -0.214346185 -0.49566335 -0.19150809</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.084976485 -0.36028834  0.06405845</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10 -0.150139755 -0.25693892  0.09219100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10 -0.042997762 -0.20231367  0.14002136</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10 -0.013488658 -0.25540929 -0.04770331</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10 -0.013287061 -0.13203510  0.10587928</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10 -0.001111215 -0.10571153  0.15494407</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10  0.021557816 -0.04156639  0.31892774</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10 -0.169175517 -0.22036072  0.03144169</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 -0.087462628 -0.34524208  0.00127056</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $XYcoef$Mort</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Multiple bootstrap</span>
@@ -142,27 +178,27 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Number of statistics:   20 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Confidence Interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep         Obs         2.5%        97.5%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10 -0.02177842 -0.169743629  0.059919490</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.16676037 -0.264966530 -0.121381925</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 -0.19233216 -0.362398889  0.008244383</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.07785588  0.033853174  0.168019778</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.03201311 -0.130861666  0.169596842</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 -0.10167257 -0.168217120 -0.013554159</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10  0.01497534 -0.029488056  0.097133998</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.11777054 -0.198076002 -0.012466612</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10 -0.03508333 -0.121883666  0.038108770</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10  0.34305114  0.189818586  0.495313393</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 -0.26393644 -0.506866518 -0.183766798</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.52341446 -0.731287378 -0.476245430</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10  0.41893706  0.304068663  0.785902006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10  0.77012837  0.658921484  1.110756818</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10  0.02453140 -0.133709854  0.151034087</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10  0.04633719 -0.019663590  0.209851774</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10  0.07555523 -0.038703399  0.198404122</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10  0.13001678  0.001287297  0.236974178</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10  0.03741639 -0.028632556  0.089122536</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 -0.04820679 -0.151361792  0.075913381</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep         Obs          2.5%       97.5%</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10 -0.02177842 -0.2224063521  0.03412354</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.16676037 -0.2789725662 -0.13408185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 -0.19233216 -0.2445866257 -0.05449679</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.07785588 -0.0001393447  0.26284126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.03201311 -0.0585203573  0.06721960</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 -0.10167257 -0.1801767217 -0.04655880</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10  0.01497534 -0.0221847398  0.13631624</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.11777054 -0.3055192505  0.02261886</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10 -0.03508333 -0.0846619322  0.08179136</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10  0.34305114  0.2146770373  0.54605864</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 -0.26393644 -0.4524412063 -0.16618278</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.52341446 -0.7279164396 -0.33932245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10  0.41893706  0.1566258241  0.62702809</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10  0.77012837  0.4575004958  1.02702044</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10  0.02453140 -0.3270807193  0.24509280</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10  0.04633719 -0.0295152292  0.15999301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10  0.07555523  0.0215327678  0.18080816</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10  0.13001678  0.0759925117  0.18543460</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10  0.03741639 -0.0522632553  0.15948217</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 -0.04820679 -0.1826199211  0.14740494</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $XYcoef$Doa</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Multiple bootstrap</span>
@@ -171,27 +207,27 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Number of statistics:   20 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Confidence Interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep          Obs         2.5%       97.5%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10  0.224056197  0.174015285  0.39672592</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.264513064 -0.403076874 -0.24709229</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10  0.011755267 -0.216793229  0.17100939</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.121222302 -0.017101001  0.28138510</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.002419221 -0.082370611  0.25450336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 -0.073526898 -0.218197106 -0.01572086</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 -0.016030653 -0.083353667  0.10248078</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.069192224 -0.160871372 -0.03092167</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10  0.182877961  0.006753151  0.21383625</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10  0.025942608 -0.148378087  0.03339920</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10  0.148044278  0.051497593  0.26852660</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.189459932 -0.270951623 -0.13106172</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10  0.189734967 -0.035116515  0.37462879</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10  0.167973023 -0.018450286  0.35395167</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10  0.092561748  0.021768053  0.22740794</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10  0.707231857  0.447548301  0.95540930</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10  0.318118255  0.168610955  0.46177162</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10  0.422590200  0.230435887  0.64678278</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10  0.294454715  0.125909774  0.38739000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 -0.180765391 -0.328154757 -0.04557154</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep          Obs         2.5%        97.5%</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10  0.224056197  0.120557479  0.301918280</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.264513064 -0.385221466 -0.194955030</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10  0.011755267 -0.164489563  0.178668559</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.121222302 -0.011844818  0.264585275</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.002419221 -0.107230136  0.084573570</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 -0.073526898 -0.201895393 -0.013722731</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 -0.016030653 -0.100034575  0.063143003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.069192224 -0.117581988  0.039445091</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10  0.182877961  0.111725785  0.236806741</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10  0.025942608 -0.108633951  0.158098462</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10  0.148044278  0.066921222  0.266885733</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.189459932 -0.326138484 -0.003695123</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10  0.189734967 -0.002483747  0.303361003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10  0.167973023  0.027880232  0.387426976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10  0.092561748 -0.031126924  0.205883598</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10  0.707231857  0.367496355  0.916862926</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10  0.318118255  0.045318587  0.447906337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10  0.422590200  0.249137490  0.632290610</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10  0.294454715 -0.015851905  0.520876907</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 -0.180765391 -0.334158563 -0.075103859</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $XYcoef$Condemn</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Multiple bootstrap</span>
@@ -200,27 +236,27 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Number of statistics:   20 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Confidence Interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep         Obs        2.5%        97.5%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10  0.27006287  0.17567985  0.454619510</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.22808090 -0.32116811 -0.112995434</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 -0.09002826 -0.21005373 -0.008714873</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.15250842  0.09972936  0.334944477</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.18942542  0.08542522  0.325930759</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 -0.12573229 -0.27017551 -0.020685463</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 -0.20924391 -0.31123979 -0.115284163</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.04480514 -0.13625609  0.095950243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10  0.18294103  0.14730409  0.310881038</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10 -0.23231059 -0.31912516 -0.071069357</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 -0.28426266 -0.43592709 -0.038073448</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.31450938 -0.44814270 -0.121686215</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10  0.31445584  0.20673696  0.446139560</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10  0.33424825  0.20523485  0.387060145</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10 -0.21904521 -0.29116157 -0.119029213</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10 -0.12741227 -0.24378532 -0.023538826</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10 -0.03286434 -0.13067775  0.061867215</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10 -0.19985852 -0.32520957 -0.102584403</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10 -0.20701408 -0.34578430 -0.197519746</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10  0.49570852  0.41327610  0.635660725</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep         Obs        2.5%       97.5%</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10  0.27006287  0.11939647  0.34056597</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 -0.22808090 -0.37731612 -0.06937182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 -0.09002826 -0.16026824  0.03502699</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10  0.15250842  0.02816817  0.24957335</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10  0.18942542 -0.04588327  0.24599429</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 -0.12573229 -0.18767286 -0.00511289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 -0.20924391 -0.33596883 -0.06804670</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 -0.04480514 -0.13827293  0.02557128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10  0.18294103  0.14520482  0.31052596</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10 -0.23231059 -0.37778897 -0.12961653</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 -0.28426266 -0.32666703  0.01482605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 -0.31450938 -0.48615512 -0.17315011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10  0.31445584  0.02104480  0.66356928</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10  0.33424825  0.22971599  0.51828421</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10 -0.21904521 -0.36431447 -0.03235720</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10 -0.12741227 -0.28250646  0.01625830</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10 -0.03286434 -0.17225338  0.06713479</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10 -0.19985852 -0.34238579 -0.11335048</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10 -0.20701408 -0.31560203 -0.14739459</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10  0.49570852  0.35360465  0.63918969</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $bipc</span>
@@ -230,11 +266,11 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Number of statistics:   4 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Confidence Interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       N.rep       Obs       2.5%     97.5%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> FarmStructure            10 0.1396215 0.09576954 0.2051296</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> OnFarmHistory            10 0.1699454 0.11718154 0.2258844</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> FlockCharacteristics     10 0.4130085 0.32932892 0.5116291</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> CatchingTranspSlaught    10 0.2774246 0.15250067 0.3613141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       N.rep       Obs        2.5%     97.5%</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> FarmStructure            10 0.1396215  0.08641004 0.1581320</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> OnFarmHistory            10 0.1699454 -0.01466760 0.2194437</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> FlockCharacteristics     10 0.4130085  0.39951549 0.5825130</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> CatchingTranspSlaught    10 0.2774246  0.20590862 0.3271753</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $vipc</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Multiple bootstrap</span>
@@ -243,27 +279,27 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Number of statistics:   20 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Confidence Interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep         Obs          2.5%       97.5%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10 0.019021226 -2.089815e-02 0.033331990</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 0.021212869 -7.279937e-03 0.039597666</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 0.013197420 -2.333926e-03 0.022933064</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10 0.013099040 -3.532394e-03 0.023779448</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10 0.007421402 -9.523631e-03 0.012161097</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 0.003391625 -1.729113e-02 0.004203752</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 0.004753272 -7.515674e-03 0.004492328</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 0.064052395  2.166803e-02 0.113762478</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10 0.015960399 -7.123766e-03 0.027869303</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10 0.052742131 -6.639920e-02 0.061089825</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 0.055354532  1.770430e-02 0.093035079</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 0.112544049  7.670366e-02 0.172670339</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10 0.087275951  3.438869e-02 0.148897305</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10 0.193484920  1.469778e-01 0.305587199</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10 0.018566556 -4.503439e-03 0.026581123</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10 0.146563153  6.629130e-02 0.247986524</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10 0.027262859 -7.565564e-05 0.044582150</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10 0.052194126 -1.910206e-03 0.077710991</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10 0.043227691  1.879569e-02 0.061830683</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 0.048674385  5.529955e-03 0.057880289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             N.rep         Obs         2.5%       97.5%</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Area           10 0.019021226  0.004281412 0.027757736</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Soak           10 0.021212869 -0.005516146 0.035363887</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Heat           10 0.013197420 -0.004949365 0.018427845</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sort           10 0.013099040 -0.016641039 0.019766612</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Renov          10 0.007421402 -0.026539912 0.007108007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Vitmin         10 0.003391625 -0.140719137 0.003958630</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchick      10 0.004753272 -0.037507871 0.007030754</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochick      10 0.064052395 -0.035329604 0.097068831</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NbChick        10 0.015960399 -0.017411366 0.022899372</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Typrod         10 0.052742131  0.011448309 0.079428873</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Homochicken    10 0.055354532  0.010928257 0.072374912</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Strain         10 0.112544049  0.022586541 0.198321396</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Locpb          10 0.087275951 -0.005100719 0.156844359</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stress         10 0.193484920  0.134603931 0.309178849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Freqchicken    10 0.018566556 -0.015943799 0.021266835</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> LoadType       10 0.146563153  0.060809944 0.241839132</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RainWind       10 0.027262859 -0.008536418 0.045666878</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> StockingD      10 0.052194126  0.025946982 0.088426051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dlairage       10 0.043227691 -0.045100939 0.068985343</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Evisc          10 0.048674385  0.014099720 0.068800686</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="kw">if</span><span class="op">(</span><span class="fu"><a href="adegraphicsLoaded.html">adegraphicsLoaded</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">test</span><span class="op">$</span><span class="va">bipc</span><span class="op">)</span> </span></span>
@@ -274,7 +310,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Aurélie Siberchicot.</p>
+  <p></p><p>Developed by Stéphane Dray, Anne-Béatrice Dufour, Jean Thioulouse, Aurélie Siberchicot.</p>
 </div>
 
 <div class="pkgdown-footer-right">

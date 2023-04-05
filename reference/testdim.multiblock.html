@@ -6,7 +6,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">ade4</a>
 
@@ -18,15 +18,51 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-new-to-ade-">New to ade4 ?</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-new-to-ade-">
+    <a class="dropdown-item" href="../articles/install.html">Installation</a>
+    <a class="dropdown-item" href="../articles/get_started.html">Getting started</a>
+  </div>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="dropdown-item" href="../articles/vignette1.html">vignette 1</a>
+    <a class="dropdown-item" href="../articles/vignette2.html">vignette 2</a>
+  </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../articles/related.html">Related packages</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">News</a>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-ressources">Ressources</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-ressources">
+    <a class="dropdown-item" href="../articles/faq.html">FAQ</a>
+    <a class="external-link dropdown-item" href="https://listes.univ-lyon1.fr/sympa/info/adelist">adelist</a>
+    <a class="dropdown-item" href="../articles/book.html">Ade4 book</a>
+    <a class="dropdown-item" href="../articles/papers.html">Papers</a>
+  </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/sdray/ade4/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a class="external-link nav-link" href="https://lbbe-web.univ-lyon1.fr/en">
+    <span class="fa fa-leaf"></span>
+     
+    LBBE
+  </a>
+</li>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/sdray/ade4">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -106,49 +142,49 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Root mean square error of calibration:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      N.rep      Mean       25%       75%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax1     10 0.4716791 0.4641123 0.4933095</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax2     10 0.4543050 0.4457906 0.4743353</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax3     10 0.4405810 0.4313468 0.4593048</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax4     10 0.4308410 0.4213864 0.4489029</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax5     10 0.4284431 0.4191585 0.4471565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax6     10 0.4270422 0.4175780 0.4459547</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax7     10 0.4259887 0.4164983 0.4448385</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax8     10 0.4253469 0.4159621 0.4441610</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax9     10 0.4250203 0.4156661 0.4438692</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax10    10 0.4247890 0.4154566 0.4437363</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax11    10 0.4246530 0.4153377 0.4436259</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax12    10 0.4245711 0.4152641 0.4435664</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax13    10 0.4245232 0.4152295 0.4435366</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax14    10 0.4244983 0.4152129 0.4435174</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax15    10 0.4244865 0.4152073 0.4435116</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax16    10 0.4244816 0.4152034 0.4435084</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax17    10 0.4244795 0.4152016 0.4435075</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax18    10 0.4244790 0.4152010 0.4435069</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax19    10 0.4244790 0.4152010 0.4435069</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax20     5 0.4266086 0.4303775 0.4448296</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax1     10 0.4690814 0.4533576 0.4770594</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax2     10 0.4511110 0.4342101 0.4586695</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax3     10 0.4388124 0.4252751 0.4475031</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax4     10 0.4297257 0.4169791 0.4386322</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax5     10 0.4272876 0.4147389 0.4363167</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax6     10 0.4257880 0.4134011 0.4350655</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax7     10 0.4249488 0.4127271 0.4341503</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax8     10 0.4244453 0.4122670 0.4336118</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax9     10 0.4240949 0.4120372 0.4331849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax10    10 0.4238741 0.4118115 0.4330390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax11    10 0.4237377 0.4116243 0.4329503</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax12    10 0.4236722 0.4115627 0.4328775</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax13    10 0.4236168 0.4114991 0.4328378</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax14    10 0.4235947 0.4114647 0.4328120</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax15    10 0.4235841 0.4114563 0.4328030</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax16    10 0.4235791 0.4114507 0.4327979</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax17    10 0.4235770 0.4114470 0.4327966</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax18    10 0.4235765 0.4114462 0.4327958</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax19    10 0.4235763 0.4114460 0.4327957</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax20     0       NaN        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Root mean square error of validation:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      N.rep      Mean       25%       75%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax1     10 0.4818310 0.4475479 0.5003035</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax2     10 0.4769816 0.4419527 0.4965570</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax3     10 0.4722967 0.4345352 0.4993792</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax4     10 0.4631239 0.4278562 0.4868155</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax5     10 0.4639742 0.4279899 0.4824092</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax6     10 0.4646296 0.4284123 0.4859566</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax7     10 0.4661344 0.4293853 0.4877689</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax8     10 0.4673032 0.4298670 0.4901131</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax9     10 0.4675478 0.4293129 0.4900410</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax10    10 0.4680488 0.4299001 0.4904638</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax11    10 0.4682119 0.4298077 0.4905830</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax12    10 0.4682765 0.4296877 0.4903512</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax13    10 0.4683382 0.4297058 0.4904573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax14    10 0.4683644 0.4298108 0.4905940</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax15    10 0.4683296 0.4297837 0.4907205</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax16    10 0.4683616 0.4298126 0.4907421</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax17    10 0.4683463 0.4297568 0.4907395</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax18    10 0.4683420 0.4297668 0.4907426</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax19    10 0.4683408 0.4297606 0.4907320</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ax20     5 0.4622935 0.4238522 0.4554949</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax1     10 0.4906711 0.4757554 0.5214684</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax2     10 0.4832842 0.4690655 0.5155384</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax3     10 0.4754468 0.4608918 0.5055796</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax4     10 0.4688239 0.4482768 0.4968802</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax5     10 0.4701937 0.4504551 0.4950917</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax6     10 0.4718486 0.4521515 0.4958179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax7     10 0.4717316 0.4519835 0.4958594</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax8     10 0.4719134 0.4525781 0.4947473</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax9     10 0.4723897 0.4544861 0.4948546</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax10    10 0.4727856 0.4545376 0.4959799</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax11    10 0.4727394 0.4544661 0.4959825</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax12    10 0.4726002 0.4533196 0.4954309</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax13    10 0.4726117 0.4532949 0.4955191</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax14    10 0.4727451 0.4540990 0.4955697</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax15    10 0.4727257 0.4541325 0.4957000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax16    10 0.4726759 0.4540984 0.4956210</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax17    10 0.4726834 0.4540950 0.4956665</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax18    10 0.4726718 0.4540766 0.4956649</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax19    10 0.4726771 0.4540879 0.4956892</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ax20     0       NaN        NA        NA</span>
 <span class="r-in"><span><span class="kw">if</span><span class="op">(</span><span class="fu"><a href="adegraphicsLoaded.html">adegraphicsLoaded</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
@@ -159,7 +195,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Aurélie Siberchicot.</p>
+  <p></p><p>Developed by Stéphane Dray, Anne-Béatrice Dufour, Jean Thioulouse, Aurélie Siberchicot.</p>
 </div>
 
 <div class="pkgdown-footer-right">

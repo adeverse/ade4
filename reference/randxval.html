@@ -10,7 +10,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">ade4</a>
 
@@ -22,15 +22,51 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-new-to-ade-">New to ade4 ?</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-new-to-ade-">
+    <a class="dropdown-item" href="../articles/install.html">Installation</a>
+    <a class="dropdown-item" href="../articles/get_started.html">Getting started</a>
+  </div>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="dropdown-item" href="../articles/vignette1.html">vignette 1</a>
+    <a class="dropdown-item" href="../articles/vignette2.html">vignette 2</a>
+  </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../articles/related.html">Related packages</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">News</a>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-ressources">Ressources</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-ressources">
+    <a class="dropdown-item" href="../articles/faq.html">FAQ</a>
+    <a class="external-link dropdown-item" href="https://listes.univ-lyon1.fr/sympa/info/adelist">adelist</a>
+    <a class="dropdown-item" href="../articles/book.html">Ade4 book</a>
+    <a class="dropdown-item" href="../articles/papers.html">Papers</a>
+  </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/sdray/ade4/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a class="external-link nav-link" href="https://lbbe-web.univ-lyon1.fr/en">
+    <span class="fa fa-leaf"></span>
+     
+    LBBE
+  </a>
+</li>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/sdray/ade4">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -125,29 +161,29 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Root mean square error of calibration:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    N.rep         Mean        25%       75%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    100 -0.023045958 -0.6775779 0.7853538</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    100  0.070929724 -0.5794345 0.6749000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    100  0.009280394 -1.0074049 0.8506040</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    100 -0.068376845 -0.8208977 0.7314501</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    100 -0.044053202 -0.6390083 0.5586865</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    100 -0.034929497 -0.7635174 0.7506583</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7    100 -0.025129220 -0.7557513 0.6097648</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    100  0.019715420 -0.5089764 0.7197101</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9    100 -0.132353617 -0.8093485 0.4424576</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10   100 -0.223140099 -0.8084690 0.3576265</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    100 -0.039636466 -0.7572116 0.6241607</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    100 -0.045046085 -0.6552390 0.6309689</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    100  0.013782669 -0.6452465 0.6692683</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    100  0.028190280 -0.6304989 0.6937453</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    100  0.003432187 -0.7092973 0.7327481</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    100 -0.070867132 -0.8856270 0.7453371</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7    100  0.095607103 -0.6604491 0.7624138</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8    100 -0.015013575 -0.7022201 0.5512218</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9    100 -0.059771065 -0.7913944 0.5469785</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10   100 -0.050669041 -0.7783178 0.5816659</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Root mean square error of validation:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    N.rep      Mean       25%      75%</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    100 1.2987257 0.6490604 1.832392</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    100 1.0660842 0.2827580 1.933782</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    100 1.0222831 0.3119868 1.708690</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    100 1.0503873 0.3563526 1.721563</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    100 1.0420721 0.3675030 1.782580</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    100 1.1882510 0.4295333 1.935704</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7    100 0.9842381 0.3100206 1.707778</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    100 0.9588359 0.2565921 1.694973</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9    100 1.0978544 0.4648267 1.655480</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10   100 1.0323801 0.3209951 1.602214</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    100 1.0270235 0.4853213 1.687271</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    100 0.9805364 0.3578223 1.622729</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    100 1.1376377 0.5093154 1.781072</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    100 1.0329179 0.4270415 1.631409</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    100 0.9050016 0.1878711 1.574676</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    100 1.1836371 0.4915297 1.967987</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7    100 0.9824240 0.2969359 1.633966</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8    100 1.0241164 0.2549245 1.674557</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9    100 0.9911902 0.3988092 1.595393</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10   100 1.0165538 0.2393220 1.818452</span>
 <span class="r-in"><span><span class="kw">if</span><span class="op">(</span><span class="fu"><a href="adegraphicsLoaded.html">adegraphicsLoaded</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cv</span><span class="op">)</span> </span></span>
 <span class="r-in"><span></span></span>
@@ -158,7 +194,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Aurélie Siberchicot.</p>
+  <p></p><p>Developed by Stéphane Dray, Anne-Béatrice Dufour, Jean Thioulouse, Aurélie Siberchicot.</p>
 </div>
 
 <div class="pkgdown-footer-right">

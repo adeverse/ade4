@@ -1,0 +1,15 @@
+# FAQ
+
+Here are answers to some common questions about ade4.
+
+## How to install ade4?
+
+The easiest way to install ade4 is to use the `install.packages()` function.
+
+## How to install ade4 from github?
+
+To install the development version from github:
+
+```r
+remotes::install_github("sdray/ade4")
+```

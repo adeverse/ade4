@@ -1,0 +1,17 @@
+# Getting started with ade4
+
+## Vignettes
+
+We provide some vignettes to help you get started with ade4. You can also find a list of functions available to users and on our [reference page](file:../reference/index.html).
+
+## Ressources
+
+Check out the [ade4 book](https://link.springer.com/book/10.1007/978-1-4939-8850-1) and its [shiny application](https://ade4.shinyapps.io/Book/) for a complete introduction to the package and to rerun the code present in the book. You can also find some papers to help you understand ade4 methods in the ressource section of the website.
+
+## Shinyapps
+
+Consider giving a try to our shinyapps developped to allow you to run an analysis without having to write your own sript: [ade4shiny](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/ShinyADE4/). You will be able to download the R script used to generate the results as well as the analyses outputs and graphical representations.
+
+## Getting help
+
+You can swing by our [FAQ section](file:///C:/Users/suzon/Documents/Cours/Master_bioinformatique/M2/projet/docs/faq.html) to check if your question has already been answered or ask for help on the ade4 mailing list [adelist](https://listes.univ-lyon1.fr/sympa/info/adelist).

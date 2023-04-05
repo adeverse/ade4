@@ -5,3 +5,6 @@
 ^\.Rproj\.user$
 ^\.github$
 revdep/
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

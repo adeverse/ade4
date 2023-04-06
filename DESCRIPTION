@@ -3,8 +3,8 @@ Version: 1.7-22
 Title: Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences
 Authors@R: c(
    person("Stéphane", "Dray", email = "stephane.dray@univ-lyon1.fr", role = "aut", comment = c(ORCID = "0000-0003-0153-1105")),
-   person("Anne-Béatrice", "Dufour", email = "anne-beatrice.dufour@univ-lyon1.fr", role = "aut"),
-   person("Jean", "Thioulouse", email = "jean.thioulouse@univ-lyon1.fr", role = "aut"),
+   person("Anne-Béatrice", "Dufour", email = "anne-beatrice.dufour@univ-lyon1.fr", role = "aut", comment = c(ORCID = "0000-0002-9339-4293")),
+   person("Jean", "Thioulouse", email = "jean.thioulouse@univ-lyon1.fr", role = "aut", comment = c(ORCID = "0000-0001-7664-0598")),
    person("Daniel", "Chessel", role = "ant"),
    person("Thibaut", "Jombart", role = "ctb"),
    person("Sandrine", "Pavoine",role = "ctb"),
@@ -13,8 +13,8 @@ Authors@R: c(
    person("Daniel", "Borcard", role = "ctb"),
    person("Pierre", "Legendre", role = "ctb"),
    person("Stéphanie", "Bougeard", role = "ctb"),
-   person("Aurélie", "Siberchicot", role = c("ctb", "cre"), email = "aurelie.siberchicot@univ-lyon1.fr")
-   )
+   person("Aurélie", "Siberchicot", role = c("ctb", "cre"), email = "aurelie.siberchicot@univ-lyon1.fr", comment = c(ORCID = "0000-0002-7638-8318"))
+	)
 Author: Stéphane Dray <stephane.dray@univ-lyon1.fr>, Anne-Béatrice Dufour <anne-beatrice.dufour@univ-lyon1.fr>, and Jean Thioulouse <jean.thioulouse@univ-lyon1.fr>, with contributions from Thibaut Jombart, Sandrine Pavoine, Jean R. Lobry, Sébastien Ollier, Daniel Borcard, Pierre Legendre, Stéphanie Bougeard and Aurélie Siberchicot. Based on earlier work by Daniel Chessel.
 Maintainer: Aurélie Siberchicot <aurelie.siberchicot@univ-lyon1.fr>   
 Depends: 
@@ -47,7 +47,10 @@ Suggests:
     foreach, 
     parallel, 
     doParallel, 
-    iterators
+    iterators,
+    knitr
+VignetteBuilder:
+    knitr
 Description: Tools for multivariate data analysis. Several methods are provided for the analysis (i.e., ordination) of one-table (e.g., principal component analysis, correspondence analysis), two-table (e.g., coinertia analysis, redundancy analysis), three-table (e.g., RLQ analysis) and K-table (e.g., STATIS, multiple coinertia analysis). The philosophy of the package is described in Dray and Dufour (2007) <doi:10.18637/jss.v022.i04>.
 License: GPL (>= 2)
 URL: http://pbil.univ-lyon1.fr/ADE-4/

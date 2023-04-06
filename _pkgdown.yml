@@ -17,8 +17,8 @@ navbar:
     - text: "Vignettes"
       href: vignettes.html
       menu:
-      - text: "vignette 1" 
-        href: articles/vignette1.html
+      - text: "Environmental variables structures" 
+        href: articles/ChapEnvVarStruct.html
       - text: "vignette 2"
         href: articles/vignette2.html
     - text: "Related packages"

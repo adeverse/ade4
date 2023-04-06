@@ -28,7 +28,7 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
-    <a class="dropdown-item" href="../articles/vignette1.html">vignette 1</a>
+    <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/vignette2.html">vignette 2</a>
   </div>
 </li>
@@ -172,13 +172,13 @@ print(x, ...)
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   200 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Test  Obs      Std.Obs   Alter      Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 test1  0.0  0.008743543 greater 0.512437811</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 test2  1.2  1.301143823 greater 0.089552239</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 test3  2.4  2.339009045 greater 0.014925373</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 test4  3.4  3.381903348 greater 0.009950249</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 test5  5.4  5.941459967 greater 0.004975124</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 test6 20.4 17.009532582 greater 0.004975124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    Test  Obs     Std.Obs   Alter      Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 test1  0.0 -0.01086109 greater 0.477611940</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 test2  1.2  1.16806499 greater 0.144278607</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 test3  2.4  2.24126489 greater 0.019900498</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 test4  3.4  3.42832201 greater 0.004975124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 test5  5.4  5.16807567 greater 0.004975124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 test6 20.4 18.30165000 greater 0.004975124</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">wkrandtest</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="krandtest-1.png" alt="" width="700" height="433"></span>
@@ -191,10 +191,10 @@ print(x, ...)
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   200 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Test  Obs      Std.Obs   Alter      Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 test1  0.0  0.008743543 greater 0.512437811</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 test4  3.4  3.381903348 greater 0.009950249</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 test6 20.4 17.009532582 greater 0.004975124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    Test  Obs     Std.Obs   Alter      Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 test1  0.0 -0.01086109 greater 0.477611940</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 test4  3.4  3.42832201 greater 0.004975124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 test6 20.4 18.30165000 greater 0.004975124</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="va">wkrandtest</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Monte-Carlo test</span>
@@ -203,11 +203,11 @@ print(x, ...)
 <span class="r-out co"><span class="r-pr">#&gt;</span> Observation: 0 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Based on 200 replicates</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simulated p-value: 0.5124378 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simulated p-value: 0.4776119 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Alternative hypothesis: greater </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       Std.Obs  Expectation Variance</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.008743543 -0.008888672 1.016598</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       Std.Obs Expectation Variance</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -0.01086109  0.01089735 1.003338</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -19,8 +19,8 @@ navbar:
       menu:
       - text: "Environmental variables structures" 
         href: articles/ChapEnvVarStruct.html
-      - text: "vignette 2"
-        href: articles/vignette2.html
+      - text: "Species structures"
+        href: articles/ChapSpeciesStruct.html
     - text: "Related packages"
       href: articles/related.html
     - text: "News"

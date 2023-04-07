@@ -152,8 +152,15 @@ variables measured at 30 sites along the Doubs river in the Jura region
 of 27 fish species that were found in the same sites. The
 <code>doubs$xy</code> data frame contains the spatial coordinates of the
 30 sites (two columns, x and y).</p>
-<p><code><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">library(ade4)</a></code><br><code><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">library(adegraphics)</a></code><br><code>data(doubs)</code><br><code>names(doubs)</code><br><code>[1] "env"     "fish"    "xy"      "species"</code></p>
-<p><code>names(doubs$env)</code><br><code>[1] "dfs" "alt" "slo" "flo" "pH"  "har" "pho" "nit" "amm" "oxy" "bdo"</code></p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">ade4</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">adegraphics</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] "env"     "fish"    "xy"      "species"</span></span></code></pre>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">$</span><span class="va">env</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##  [1] "dfs" "alt" "slo" "flo" "pH"  "har" "pho" "nit" "amm" "oxy" "bdo"</span></span></code></pre>
 <p>The eleven variables are:</p>
 <ol style="list-style-type: decimal">
 <li>
@@ -187,14 +194,25 @@ using the <code>table.value</code> function. As the ranges of variation
 of the differental environmental variables are quite different, we
 scaled the data to allow a common and meaningful graphical
 representation:</p>
-<p><code>env &lt;- doubs$env</code><br><code>apply(env, 2, range)</code><br><code>.     dfs alt   slo  flo pH har pho nit amm oxy bdo</code><br><code>[1,]    3 172 1.099   84 77  40   1  15   0  41  13</code><br><code>[2,] 4530 934 6.176 6900 86 110 422 620 180 124 167</code></p>
-<p><code>table.value(scale(env), symbol = "circle")</code><br><img src="Fig-TabvalueEnv.png" alt="Fig-TabvalueEnv.png" width="500"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">env</span> <span class="op">&lt;-</span> <span class="va">doubs</span><span class="op">$</span><span class="va">env</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">env</span>, <span class="fl">2</span>, <span class="va">range</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##       dfs alt   slo  flo pH har pho nit amm oxy bdo</span></span>
+<span><span class="co">## [1,]    3 172 1.099   84 77  40   1  15   0  41  13</span></span>
+<span><span class="co">## [2,] 4530 934 6.176 6900 86 110 422 620 180 124 167</span></span></code></pre>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/table.value.html">table.value</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/scale.html" class="external-link">scale</a></span><span class="op">(</span><span class="va">env</span><span class="op">)</span>, symbol <span class="op">=</span> <span class="st">"circle"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-4-1.png" width="600" height="600"></p>
 <p>As the spatial coordinates are also available, sites can be plotted
 in the geographical space. The <code>s.label</code> function can be used
 to draw the position of sites, with the site number as label and with
 the <code>s.traject</code> to draw lines between sites.</p>
-<p><code>xy &lt;- doubs$xy</code><br><code>sl1 &lt;- s.label(xy, ppoints.cex = 0, plot = FALSE)</code><br><code>st1 &lt;- s.traject(xy, ppoints.cex = 0, plabels.cex = 0, plot = FALSE)</code><br><code>s1 &lt;- superpose(st1, sl1, plot = TRUE)</code></p>
-<p><img src="Fig-CartoDoubs.png" alt="Fig-CartoDoubs.png" width="500"></p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">xy</span> <span class="op">&lt;-</span> <span class="va">doubs</span><span class="op">$</span><span class="va">xy</span></span>
+<span><span class="va">sl1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">xy</span>, ppoints.cex <span class="op">=</span> <span class="fl">0</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">st1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.traject.html">s.traject</a></span><span class="op">(</span><span class="va">xy</span>, ppoints.cex <span class="op">=</span> <span class="fl">0</span>, plabels.cex <span class="op">=</span> <span class="fl">0</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/superpose.html" class="external-link">superpose</a></span><span class="op">(</span><span class="va">st1</span>, <span class="va">sl1</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> </span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-5-1.png" width="500" height="500"></p>
 <p>To facilitate the interpretation of environmental data, information
 of both figures can be combined by creating thematic maps for all
 variables. To achieve this, we use the <code>s.value</code> function,
@@ -206,8 +224,11 @@ value (white for negative values, black for positive). Here, we modify
 the <code>method</code>, <code>symbol</code> and
 <code>ppalette.quanti</code> parameters to obtain figures with coloured
 circles.</p>
-<p><code>mypal &lt;- colorRampPalette(c("#EDF8FB", "#006D2C"))</code><br><code>s.value(xy, doubs$env, pgrid.draw = FALSE, porigin.draw = FALSE, plegend.drawKey = FALSE,</code><br><code>psub.cex = 2, method = "color", symbol = "circle", ppalette.quanti = mypal, ppoints.cex = 0.5)</code></p>
-<p><img src="Fig-CartoVarDoubs.png" alt="Fig-CartoVarDoubs.png" width="500"></p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mypal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/colorRamp.html" class="external-link">colorRampPalette</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EDF8FB"</span>, <span class="st">"#006D2C"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/s.value.html">s.value</a></span><span class="op">(</span><span class="va">xy</span>, <span class="va">doubs</span><span class="op">$</span><span class="va">env</span>, pgrid.draw <span class="op">=</span> <span class="cn">FALSE</span>, porigin.draw <span class="op">=</span> <span class="cn">FALSE</span>, plegend.drawKey <span class="op">=</span> <span class="cn">FALSE</span>, </span>
+<span>psub.cex <span class="op">=</span> <span class="fl">2</span>, method <span class="op">=</span> <span class="st">"color"</span>, symbol <span class="op">=</span> <span class="st">"circle"</span>, ppalette.quanti <span class="op">=</span> <span class="va">mypal</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-6-1.png" width="600" height="450"></p>
 <p>The maps presented here highlights that some environmental variables
 have similar spatial distributions (e.g., distance from the source
 (<code>dfs</code>) and stream flow (<code>flo</code>)). The objective of
@@ -260,7 +281,8 @@ the diversity of species. In these cases, a covariance matrix PCA
 <p>The PCA of the <code>doubs$env</code> table is computed with the
 <code>dudi.pca</code> function and stored in the <code>pca1</code>
 object:</p>
-<p><code>pca1 &lt;- dudi.pca(env, scale = TRUE, scannf=FALSE, nf=3)</code></p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pca1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dudi.pca.html">dudi.pca</a></span><span class="op">(</span><span class="va">env</span>, scale <span class="op">=</span> <span class="cn">TRUE</span>, scannf<span class="op">=</span><span class="cn">FALSE</span>, nf<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <p>The <code>scale</code> argument is set to <code>TRUE</code> (the
 default value), so the PCA will be computed on the standardised (centred
 and normed) data table. The result is therefore a correlation matrix
@@ -286,7 +308,7 @@ the axes corresponding to eigenvalues placed before (on the left of)
 this discontinuity.</p>
 <p>For example, in the following figure, the user should keep (from left
 to right) 2, 3 and 4 axes.</p>
-<p><img src="Fig-BPex.png" alt="Fig-BPex.png" width="500"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-8-1.png" width="600" height="200"></p>
 <p>Of course these examples are quite caricatural, and in real
 situations, it can be much harder to choose an appropriate number of
 principal components. However the principle remains that the shape of
@@ -297,17 +319,23 @@ easy-to-use rule. As an alternative, the procedure developed by Dray
 (2008) is implemented in the <code>testdim</code> function that can be
 applied on correlation matrix PCA created by the <code>dudi.pca</code>
 function with <code>scale = TRUE</code>.</p>
-<p><code>testdim(pca1)$nb.cor</code><br><code>[1] 2</code></p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/testdim.html">testdim</a></span><span class="op">(</span><span class="va">pca1</span><span class="op">)</span><span class="op">$</span><span class="va">nb.cor</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] 2</span></span></code></pre>
 <p>The next figure shows the barplot of <code>pca1</code> eigenvalues.
 Three principal components were kept (although the <code>testdim</code>
 procedure said two).</p>
-<p><code>screeplot(pca1, main=" ", xlab=" ")</code></p>
-<p><img src="Fig-BPPCADoubs.png" alt="Fig-BPPCADoubs.png" width="500"></p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/screeplot.html" class="external-link">screeplot</a></span><span class="op">(</span><span class="va">pca1</span>, main<span class="op">=</span><span class="st">" "</span>, xlab<span class="op">=</span><span class="st">" "</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-10-1.png" width="600" height="300"></p>
 <p>The correlation circle of the variables (left) and the factor map of
 sites (right) on the first two principal components are shown in the
 next figure.</p>
-<p><code>sc1 &lt;- s.corcircle(pca1$co, plot = FALSE)</code><br><code>sl1 &lt;- s.label(pca1$li, plabels.optim = TRUE, ppoints.cex = 0.5, plot = FALSE)</code><br><code>ADEgS(list(sc1, sl1))</code></p>
-<p><img src="Fig-F1xF2PCADoubs.png" alt="Fig-F1xF2PCADoubs.png" width="600"></p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">sc1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.corcircle.html">s.corcircle</a></span><span class="op">(</span><span class="va">pca1</span><span class="op">$</span><span class="va">co</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">sl1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">pca1</span><span class="op">$</span><span class="va">li</span>, plabels.optim <span class="op">=</span> <span class="cn">TRUE</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">sc1</span>, <span class="va">sl1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-11-1.png" width="600" height="300"></p>
 <p>This correlation circle (<code>sc1</code> object) shows two nearly
 orthogonal gradients: a geomorphological gradient opposing altitude and
 slope to hardness, distance from the source and stream flow, and a
@@ -336,8 +364,10 @@ two, according to altitude and slope, and the lower stream (sites 23 to
 30) is divided according to the pollution variables (ammonium,
 phosphates and BDO) which are higher in sites 23 to 26 and lower in
 sites 27 to 30.</p>
-<p><code>s.value(xy, pca1$li[, 1:2], pgrid.draw = FALSE, porigin.draw = FALSE, method = "size",</code><br><code>symbol = "circle", col = mypal(2), ppoints.cex = 1)</code></p>
-<p><img src="Fig-CartoF1F2Doubs.png" alt="Fig-CartoF1F2Doubs.png" width="600"></p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/s.value.html">s.value</a></span><span class="op">(</span><span class="va">xy</span>, <span class="va">pca1</span><span class="op">$</span><span class="va">li</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>, pgrid.draw <span class="op">=</span> <span class="cn">FALSE</span>, porigin.draw <span class="op">=</span> <span class="cn">FALSE</span>, method <span class="op">=</span> <span class="st">"size"</span>,</span>
+<span>symbol <span class="op">=</span> <span class="st">"circle"</span>, col <span class="op">=</span> <span class="fu">mypal</span><span class="op">(</span><span class="fl">2</span><span class="op">)</span>, ppoints.cex <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-12-1.png" width="600" height="300"></p>
 <p>The upstream-downstream gradients and the particular characteristics
 of highly polluted sites (sites 23 to 26) or of sites with high oxygen
 concentration (11 to 15) appear very clearly on these maps.</p>
@@ -362,7 +392,9 @@ categories are defined automatically for each variable using the
 variables with the <code>apply</code> function, and the resulting
 qualitative variables are stored in the <code>fenv</code> data
 frame.</p>
-<p><code>fenv &lt;- apply(env, 2, cut, breaks = 4, labels = 1:4)</code><br><code>fenv &lt;- as.data.frame(fenv, stringsAsFactors = TRUE)</code></p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fenv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">env</span>, <span class="fl">2</span>, <span class="va">cut</span>, breaks <span class="op">=</span> <span class="fl">4</span>, labels <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></span>
+<span><span class="va">fenv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">fenv</span>, stringsAsFactors <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>This transformation induces a loss of information as different values
 for a quantitative variable are regrouped into a single category of the
 recoded qualitative variable. However, this approach can be useful when
@@ -372,7 +404,9 @@ relationships wherears MCA can identify non-linear trends by reordering
 the categories. When the relationships between variables are (at least
 approximately) linear, the results of both methods should be
 comparable.</p>
-<p><code>plot(env[, 1] ~ fenv[, 1], ylab = "Quantitative dfs", xlab = "Qualitative dfs")</code><br><img src="Fig-RecodeVar.png" alt="Fig-RecodeVar.png" width="400"></p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">env</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">~</span> <span class="va">fenv</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>, ylab <span class="op">=</span> <span class="st">"Quantitative dfs"</span>, xlab <span class="op">=</span> <span class="st">"Qualitative dfs"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-14-1.png" width="400" height="400"></p>
 <p>MCA allows to identify associations between the categories
 (<code>levels</code>) of different qualitative variables
 (<code>factor</code>). The method is implemented in the
@@ -380,12 +414,19 @@ comparable.</p>
 the outputs of this function are grouped in a <code>dudi</code> object
 (subclass <code>acm</code>). Here, we applied MCA on the data frame
 <code>fenv</code>.</p>
-<p><code>acm1 &lt;- dudi.acm(fenv, scannf = FALSE)</code><br><code>screeplot(acm1, main = " ", xlab = " ")</code><br><img src="Fig-BPACMDoubs.png" alt="Fig-BPACMDoubs" width="400"></p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">acm1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dudi.acm.html">dudi.acm</a></span><span class="op">(</span><span class="va">fenv</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/screeplot.html" class="external-link">screeplot</a></span><span class="op">(</span><span class="va">acm1</span>, main <span class="op">=</span> <span class="st">" "</span>, xlab <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-15-1.png" width="600" height="300"></p>
 <p>The main difference between PCA and MCA is that the columns of the
 analysed table are the variables in PCA but the categories of
 qualitative variables in MCA:</p>
-<p><code>ncol(pca1$tab)</code><br><code>[1] 11</code></p>
-<p><code>ncol(acm1$tab)</code><br><code>[1] 44</code></p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">pca1</span><span class="op">$</span><span class="va">tab</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] 11</span></span></code></pre>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">acm1</span><span class="op">$</span><span class="va">tab</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] 44</span></span></code></pre>
 <p>The categories correspond to the different columns in the disjunctive
 table analysed by the MCA which means that their order is not taken into
 account, just like different variables in a PCA. As a consequence, the
@@ -393,8 +434,14 @@ number of eigenvalues is also increased in MCA. Another important
 difference is that MCA weights columns proportionally to the number of
 individuals belonging to the categories so that all variables have the
 same weights (as in PCA):</p>
-<p><code>acm1$cw[1:4] == table(fenv$dfs)/nrow(fenv)/ncol(fenv)</code><br><code>.  1    2    3    4</code><br><code>TRUE TRUE TRUE TRUE</code></p>
-<p><code>as.numeric(by(acm1$cw, rep(1:ncol(fenv), each = 4), sum)) * ncol(fenv)</code><br><code>1 1 1 1 1 1 1 1 1 1 1</code></p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">acm1</span><span class="op">$</span><span class="va">cw</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">fenv</span><span class="op">$</span><span class="va">dfs</span><span class="op">)</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">fenv</span><span class="op">)</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">fenv</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## </span></span>
+<span><span class="co">##    1    2    3    4 </span></span>
+<span><span class="co">## TRUE TRUE TRUE TRUE</span></span></code></pre>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/by.html" class="external-link">by</a></span><span class="op">(</span><span class="va">acm1</span><span class="op">$</span><span class="va">cw</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">fenv</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>, <span class="va">sum</span><span class="op">)</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">fenv</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##  [1] 1 1 1 1 1 1 1 1 1 1 1</span></span></code></pre>
 <p>The next figure shows that, except for an inversion of the sign of
 the second axis, the factor map of sites is still very similar to the
 factor map obtained by the PCA. The same typology of sampling sites
@@ -403,8 +450,11 @@ along the stream is found: upper-stream sites (<code>1</code> to
 are opposed to lower-stream sites (<code>26</code> to <code>30</code>),
 with sites <code>23</code> to <code>25</code> having an exceptionally
 high level of pollution.</p>
-<p><code>sl1 &lt;- s.label(acm1$co, ppoints.cex = 0.5, plabels.optim = TRUE, plot = FALSE)</code><br><code>sl2 &lt;- s.label(acm1$li, ppoints.cex = 0.5, plabels.optim = TRUE, plot = FALSE)</code><br><code>ADEgS(list(sl1, sl2))</code></p>
-<p><img src="Fig-ACMDoubs.png" alt="Fig-ACMDoubs.png" width="600"></p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">sl1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">acm1</span><span class="op">$</span><span class="va">co</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span>, plabels.optim <span class="op">=</span> <span class="cn">TRUE</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">sl2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">acm1</span><span class="op">$</span><span class="va">li</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span>, plabels.optim <span class="op">=</span> <span class="cn">TRUE</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">sl1</span>, <span class="va">sl2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-20-1.png" width="600" height="300"></p>
 <p>The graph of categories (left) is somewhat different because we now
 have one point for each category of each qualitative variable (44
 categories as a whole) instead of 11 points only. The interpretation is
@@ -433,7 +483,9 @@ factor by looking at the positions of categories and individuals. For
 example, on this figure, one can see that the categories of variables
 hardness, phosphorus, nitrates, ammonium and BDO are ordered by
 increasing values along the first MCA factor.</p>
-<p><code>score(acm1, type = "points", col = TRUE, psub.cex = 1.5)</code><br><img src="Fig-scoreACMDoubs.png" alt="Fig-scoreACMDoubs.png" width="600"></p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/score.html">score</a></span><span class="op">(</span><span class="va">acm1</span>, type <span class="op">=</span> <span class="st">"points"</span>, col <span class="op">=</span> <span class="cn">TRUE</span>, psub.cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-21-1.png" width="600" height="450"></p>
 <p>Conversely, the categories of variables altitude, slope, oxygen are
 ordered by decreasing values along the first MCA factor. On the vertical
 axis, the intervals between labels give information of the differences
@@ -445,7 +497,20 @@ correlation ratio for all the qualitative variables, it is expected that
 the more vertical is the regression line for a qualitative variable, the
 higher is its correlation ratio value.</p>
 <p>Correlation ratios are stored in <code>acm1$cr</code>:</p>
-<p><code>acm1$cr</code><br><code>.       RS1     RS2</code><br><code>dfs 0.65017 0.54172</code><br><code>alt 0.54860 0.46824</code><br><code>slo 0.36286 0.18819</code><br><code>flo 0.52995 0.57221</code><br><code>pH  0.02396 0.15609</code><br><code>har 0.37616 0.26756</code><br><code>pho 0.75418 0.33689</code><br><code>nit 0.73984 0.53046</code><br><code>amm 0.71443 0.36912</code><br><code>oxy 0.67304 0.07847</code><br><code>bdo 0.65986 0.38953</code></p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">acm1</span><span class="op">$</span><span class="va">cr</span></span></code></pre></div>
+<pre><code><span><span class="co">##            RS1        RS2</span></span>
+<span><span class="co">## dfs 0.65016681 0.54171843</span></span>
+<span><span class="co">## alt 0.54859870 0.46823722</span></span>
+<span><span class="co">## slo 0.36285735 0.18818923</span></span>
+<span><span class="co">## flo 0.52994726 0.57221033</span></span>
+<span><span class="co">## pH  0.02395703 0.15608652</span></span>
+<span><span class="co">## har 0.37615802 0.26756014</span></span>
+<span><span class="co">## pho 0.75418361 0.33688896</span></span>
+<span><span class="co">## nit 0.73983937 0.53046062</span></span>
+<span><span class="co">## amm 0.71443072 0.36912488</span></span>
+<span><span class="co">## oxy 0.67303617 0.07847305</span></span>
+<span><span class="co">## bdo 0.65985629 0.38952981</span></span></code></pre>
 <p>The second type of graph is shown in the next figure. It can be drawn
 using the <code>plot</code> function. It is a bidimensional plot, with
 two MCA axes as abscissae and ordinates (specified by the
@@ -459,8 +524,9 @@ and the covariance between the coordinates on the two axes gives the
 slope of the ellipse. The interpretation of this figure is the same as
 the previous one, but it is much more easy and detailed, as the
 categories of all the variables are not superimposed.</p>
-<p><code>plot(acm1, col = TRUE, psub.cex = 1.5)</code></p>
-<p><img src="Fig-plotACMDoubs.png" alt="Fig-plotACMDoubs.png" width="600"></p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">acm1</span>, col <span class="op">=</span> <span class="cn">TRUE</span>, psub.cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-23-1.png" width="600" height="450"></p>
 </div>
 <div class="section level2">
 <h2 id="hill-and-smith-analysis">Hill and Smith analysis<a class="anchor" aria-label="anchor" href="#hill-and-smith-analysis"></a>
@@ -507,15 +573,18 @@ weights.</p>
 <p>To illustrate HSA, we consider the Doubs data where the first six
 variables are considered as qualitative and the last five as
 quantitative:</p>
-<p><code>menv &lt;- cbind(fenv[, 1:6], env[, 7:11])</code></p>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">menv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">fenv</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span>, <span class="va">env</span><span class="op">[</span>, <span class="fl">7</span><span class="op">:</span><span class="fl">11</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
 <p>The Hill and Smith Analysis is then computed on the resulting table
 using the <code>dudi.hillsmith</code> function of the
 <strong>ade4</strong> package. The <code>scatter</code> function can
 then be used to draw the biplot, where quantitative variables appear as
 simple labels, while qualitative ones appear with one label for each
 category.</p>
-<p><code>hs1 &lt;- dudi.hillsmith(menv, scannf = FALSE)</code><br><code>scatter(hs1, posieig = "bottomleft")</code></p>
-<p><img src="Fig-scatterHS1.png" alt="Fig-scatterHS1" width="600"></p>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">hs1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dudi.hillsmith.html">dudi.hillsmith</a></span><span class="op">(</span><span class="va">menv</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/scatter.html">scatter</a></span><span class="op">(</span><span class="va">hs1</span>, posieig <span class="op">=</span> <span class="st">"bottomleft"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-25-1.png" width="600" height="600"></p>
 <p>The <code>score</code> function can also be used to highlight the
 properties of the method. HSA maximises the squared correlation for
 quantitative variables (<em>i.e.</em>, the criteria of PCA) and the
@@ -523,9 +592,24 @@ correlation ratio for qualitative variables (<em>i.e.</em>, the criteria
 of MCA). As consequence, the next figure can be interpreted as the
 previous one for quantitative variables and for qualitative
 variables.</p>
-<p><code>score(hs1, col = TRUE)</code><br><img src="Fig-scoreHS1.png" alt="Fig-scoreHS1" width="600"></p>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/score.html">score</a></span><span class="op">(</span><span class="va">hs1</span>, col <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-26-1.png" width="600" height="400"></p>
 <p>These values are also stored in <code>hs1$cr</code>:</p>
-<p><code>hs1$cr</code><br><code>.       RS1      RS2</code><br><code>dfs 0.70222 0.840069</code><br><code>alt 0.65252 0.741726</code><br><code>slo 0.41026 0.157049</code><br><code>flo 0.63965 0.633381</code><br><code>pH  0.02332 0.225875</code><br><code>har 0.42895 0.320770</code><br><code>pho 0.75512 0.046149</code><br><code>nit 0.85903 0.008401</code><br><code>amm 0.70428 0.069365</code><br><code>oxy 0.61287 0.202631</code><br><code>bdo 0.63870 0.126527</code></p>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">hs1</span><span class="op">$</span><span class="va">cr</span></span></code></pre></div>
+<pre><code><span><span class="co">##            RS1         RS2</span></span>
+<span><span class="co">## dfs 0.70221662 0.840069215</span></span>
+<span><span class="co">## alt 0.65252421 0.741725649</span></span>
+<span><span class="co">## slo 0.41025629 0.157049355</span></span>
+<span><span class="co">## flo 0.63964656 0.633380517</span></span>
+<span><span class="co">## pH  0.02332208 0.225874627</span></span>
+<span><span class="co">## har 0.42895368 0.320769976</span></span>
+<span><span class="co">## pho 0.75512094 0.046148513</span></span>
+<span><span class="co">## nit 0.85903395 0.008401339</span></span>
+<span><span class="co">## amm 0.70428031 0.069365094</span></span>
+<span><span class="co">## oxy 0.61287111 0.202631179</span></span>
+<span><span class="co">## bdo 0.63869975 0.126526651</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="other-simple-methods">Other simple methods<a class="anchor" aria-label="anchor" href="#other-simple-methods"></a>

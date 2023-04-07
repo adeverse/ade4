@@ -3,11 +3,12 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   ChapEnvVarStruct: ChapEnvVarStruct.html
+  ChapSpeciesStruct: ChapSpeciesStruct.html
   book: book.html
   faq: faq.html
   get_started: get_started.html
   install: install.html
   papers: papers.html
   related: related.html
-last_built: 2023-04-06T10:35Z
+last_built: 2023-04-07T07:06Z
 

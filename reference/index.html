@@ -77,9 +77,15 @@
     </div>
 
     <div class="section level2">
-      <h2 id="one-table-methods">One-table methods<a class="anchor" aria-label="anchor" href="#one-table-methods"></a></h2>
+      <h2 id="one-table-analysis">One-table analysis<a class="anchor" aria-label="anchor" href="#one-table-analysis"></a></h2>
       
+      <p class="section-desc"></p><p>These functions are designed for the analysis of a single table.</p>
+
       
+    </div><div class="section level2">
+      
+      <h3 id="methods">Methods<a class="anchor" aria-label="anchor" href="#methods"></a></h3>
+      <p class="section-desc"></p><p>Functions to run the analysis</p>
 
       
     </div><div id="" class="section level2">
@@ -92,16 +98,6 @@
           <code><a href="dudi.acm.html">dudi.acm()</a></code> <code><a href="dudi.acm.html">acm.burt()</a></code> <code><a href="dudi.acm.html">acm.disjonctif()</a></code> <code><a href="dudi.acm.html">boxplot(<i>&lt;acm&gt;</i>)</a></code> 
         </dt>
         <dd>Multiple Correspondence Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="dudi.html">as.dudi()</a></code> <code><a href="dudi.html">print(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="dudi.html">is.dudi()</a></code> <code><a href="dudi.html">redo.dudi()</a></code> <code><a href="dudi.html">t(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="dudi.html">summary(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="dudi.html">`[`(<i>&lt;dudi&gt;</i>)</a></code> 
-        </dt>
-        <dd>Duality Diagram</dd>
-      </dl><dl><dt>
-          
-          <code><a href="dagnelie.test.html">dagnelie.test()</a></code> 
-        </dt>
-        <dd>Dagnelie multinormality test</dd>
       </dl><dl><dt>
           
           <code><a href="dudi.coa.html">dudi.coa()</a></code> 
@@ -144,69 +140,35 @@
         <dd>Principal Coordinates Analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="dist.dudi.html">dist.dudi()</a></code> 
+          <code><a href="pcoscaled.html">pcoscaled()</a></code> 
         </dt>
-        <dd>Computation of the Distance Matrix from a Statistical Triplet</dd>
-      </dl><dl><dt>
-          
-          <code><a href="amova.html">amova()</a></code> <code><a href="amova.html">print(<i>&lt;amova&gt;</i>)</a></code> 
-        </dt>
-        <dd>Analysis of molecular variance</dd>
-      </dl><dl><dt>
-          
-          <code><a href="dpcoa.html">dpcoa()</a></code> <code><a href="dpcoa.html">plot(<i>&lt;dpcoa&gt;</i>)</a></code> <code><a href="dpcoa.html">print(<i>&lt;dpcoa&gt;</i>)</a></code> <code><a href="dpcoa.html">summary(<i>&lt;dpcoa&gt;</i>)</a></code> 
-        </dt>
-        <dd>Double principal coordinate analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="inertia.dudi.html">inertia(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="inertia.dudi.html">print(<i>&lt;inertia&gt;</i>)</a></code> <code><a href="inertia.dudi.html">summary(<i>&lt;inertia&gt;</i>)</a></code> 
-        </dt>
-        <dd>Decomposition of inertia (i.e. contributions) in multivariate methods</dd>
-      </dl><dl><dt>
-          
-          <code><a href="loocv.dudi.html">loocv(<i>&lt;dudi&gt;</i>)</a></code> 
-        </dt>
-        <dd>Leave-one-out cross-validation for a <code>dudi</code></dd>
+        <dd>Simplified Analysis in Principal Coordinates</dd>
       </dl><dl><dt>
           
           <code><a href="nipals.html">nipals()</a></code> <code><a href="nipals.html">scatter(<i>&lt;nipals&gt;</i>)</a></code> <code><a href="nipals.html">print(<i>&lt;nipals&gt;</i>)</a></code> 
         </dt>
         <dd>Non-linear Iterative Partial Least Squares (NIPALS) algorithm</dd>
-      </dl><dl><dt>
+      </dl></div><div class="section level2">
+      
+      <h3 id="graphics">Graphics<a class="anchor" aria-label="anchor" href="#graphics"></a></h3>
+      <p class="section-desc"></p><p>Functions to display the results of the analysis</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
           
           <code><a href="score.coa.html">score(<i>&lt;coa&gt;</i>)</a></code> <code><a href="score.coa.html">reciprocal.coa()</a></code> 
         </dt>
         <dd>Reciprocal scaling after a correspondence analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="reconst.html">reconst()</a></code> 
-        </dt>
-        <dd>Reconstitution of Data from a Duality Diagram</dd>
-      </dl><dl><dt>
-          
           <code><a href="scatter.html">scatter()</a></code> <code><a href="scatter.html">biplot(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="scatter.html">screeplot(<i>&lt;dudi&gt;</i>)</a></code> 
         </dt>
         <dd>Graphical representation of the outputs of a multivariate analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="supcol.html">supcol()</a></code> 
-        </dt>
-        <dd>Projections of Supplementary Columns</dd>
-      </dl><dl><dt>
-          
-          <code><a href="suprow.html">suprow(<i>&lt;coa&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="suprow.html">predict(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;pca&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;acm&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;mix&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;fca&gt;</i>)</a></code> 
-        </dt>
-        <dd>Projections of Supplementary Rows</dd>
-      </dl><dl><dt>
-          
-          <code><a href="supdist.html">supdist()</a></code> 
-        </dt>
-        <dd>Projection of additional items in a PCO analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="varipart.html">varipart()</a></code> <code><a href="varipart.html">print(<i>&lt;varipart&gt;</i>)</a></code> 
-        </dt>
-        <dd>Partition of the variation of a response multivariate table by 2 explanatory tables</dd>
       </dl><dl><dt>
           
           <code><a href="scatter.acm.html">scatter(<i>&lt;acm&gt;</i>)</a></code> 
@@ -229,6 +191,11 @@
         <dd>Plot of the factorial maps for a fuzzy correspondence analysis</dd>
       </dl><dl><dt>
           
+          <code><a href="score.html">score()</a></code> <code><a href="score.html">scoreutil.base()</a></code> 
+        </dt>
+        <dd>Graphs for One Dimension</dd>
+      </dl><dl><dt>
+          
           <code><a href="score.acm.html">score(<i>&lt;acm&gt;</i>)</a></code> 
         </dt>
         <dd>Graphs to study one factor in a Multiple Correspondence Analysis</dd>
@@ -243,8 +210,134 @@
         </dt>
         <dd>Graphs to Analyse a factor in PCA</dd>
       </dl></div><div class="section level2">
-      <h2 id="one-table-one-factor-methods">One-table &amp; one-factor methods<a class="anchor" aria-label="anchor" href="#one-table-one-factor-methods"></a></h2>
+      <h2 id="two-table-analysis">Two-table analysis<a class="anchor" aria-label="anchor" href="#two-table-analysis"></a></h2>
       
+      <p class="section-desc"></p><p>These functions are designed for the analysis of a pair of tables.</p>
+
+      
+    </div><div class="section level2">
+      
+      <h3 id="methods-1">Methods<a class="anchor" aria-label="anchor" href="#methods-1"></a></h3>
+      <p class="section-desc"></p><p>Functions to run the analysis</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="coinertia.html">coinertia()</a></code> <code><a href="coinertia.html">plot(<i>&lt;coinertia&gt;</i>)</a></code> <code><a href="coinertia.html">print(<i>&lt;coinertia&gt;</i>)</a></code> <code><a href="coinertia.html">summary(<i>&lt;coinertia&gt;</i>)</a></code> 
+        </dt>
+        <dd>Coinertia Analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="pcaiv.html">pcaiv()</a></code> <code><a href="pcaiv.html">plot(<i>&lt;pcaiv&gt;</i>)</a></code> <code><a href="pcaiv.html">print(<i>&lt;pcaiv&gt;</i>)</a></code> <code><a href="pcaiv.html">summary(<i>&lt;pcaiv&gt;</i>)</a></code> 
+        </dt>
+        <dd>Principal component analysis with respect to instrumental variables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="pcaivortho.html">pcaivortho()</a></code> <code><a href="pcaivortho.html">summary(<i>&lt;pcaivortho&gt;</i>)</a></code> 
+        </dt>
+        <dd>Principal Component Analysis with respect to orthogonal instrumental variables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="procuste.html">procuste()</a></code> <code><a href="procuste.html">plot(<i>&lt;procuste&gt;</i>)</a></code> <code><a href="procuste.html">print(<i>&lt;procuste&gt;</i>)</a></code> <code><a href="procuste.html">randtest(<i>&lt;procuste&gt;</i>)</a></code> 
+        </dt>
+        <dd>Simple Procruste Rotation between two sets of points</dd>
+      </dl><dl><dt>
+          
+          <code><a href="niche.html">niche()</a></code> <code><a href="niche.html">print(<i>&lt;niche&gt;</i>)</a></code> <code><a href="niche.html">plot(<i>&lt;niche&gt;</i>)</a></code> <code><a href="niche.html">niche.param()</a></code> <code><a href="niche.html">rtest(<i>&lt;niche&gt;</i>)</a></code> 
+        </dt>
+        <dd>Method to Analyse a pair of tables : Environmental and Faunistic Data</dd>
+      </dl><dl><dt>
+          
+          <code><a href="varipart.html">varipart()</a></code> <code><a href="varipart.html">print(<i>&lt;varipart&gt;</i>)</a></code> 
+        </dt>
+        <dd>Partition of the variation of a response multivariate table by 2 explanatory tables</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="tests">Tests<a class="anchor" aria-label="anchor" href="#tests"></a></h3>
+      <p class="section-desc"></p><p>Functions to evaluate the significance of observed structures</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="procuste.randtest.html">procuste.randtest()</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on the sum of the singular values of a procustean rotation (in C).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="procuste.rtest.html">procuste.rtest()</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on the sum of the singular values of a procustean rotation (in R).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="randtest.coinertia.html">randtest(<i>&lt;coinertia&gt;</i>)</a></code> 
+        </dt>
+        <dd>Monte-Carlo test on a Co-inertia analysis (in C).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="randtest.pcaiv.html">randtest(<i>&lt;pcaiv&gt;</i>)</a></code> <code><a href="randtest.pcaiv.html">randtest(<i>&lt;pcaivortho&gt;</i>)</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on the percentage of explained (i.e.
+  constrained) inertia</dd>
+      </dl><dl><dt>
+          
+          <code><a href="RV.randtest.html">RV.randtest()</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on the sum of eigenvalues of a co-inertia analysis (in C++ with Rcpp).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="RV.rtest.html">RV.rtest()</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on the sum of eigenvalues of a co-inertia analysis (in R).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="RVintra.randtest.html">RVintra.randtest()</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on the sum of eigenvalues of a within-class co-inertia analysis (in C++ with Rcpp).</dd>
+      </dl></div><div class="section level2">
+      <h2 id="three-table-methods">Three-table methods<a class="anchor" aria-label="anchor" href="#three-table-methods"></a></h2>
+      
+      <p class="section-desc"></p><p>3-tables methods.</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="combine.4thcorner.html">combine.randtest.rlq()</a></code> <code><a href="combine.4thcorner.html">combine.4thcorner()</a></code> <code><a href="combine.4thcorner.html">p.adjust.4thcorner()</a></code> 
+        </dt>
+        <dd>Functions to combine and adjust the outputs 3-table methods</dd>
+      </dl><dl><dt>
+          
+          <code><a href="fourthcorner.html">fourthcorner()</a></code> <code><a href="fourthcorner.html">fourthcorner2()</a></code> <code><a href="fourthcorner.html">print(<i>&lt;4thcorner&gt;</i>)</a></code> <code><a href="fourthcorner.html">summary(<i>&lt;4thcorner&gt;</i>)</a></code> <code><a href="fourthcorner.html">plot(<i>&lt;4thcorner&gt;</i>)</a></code> <code><a href="fourthcorner.html">fourthcorner.rlq()</a></code> 
+        </dt>
+        <dd>Functions to compute the fourth-corner statistic</dd>
+      </dl><dl><dt>
+          
+          <code><a href="rlq.html">rlq()</a></code> <code><a href="rlq.html">print(<i>&lt;rlq&gt;</i>)</a></code> <code><a href="rlq.html">plot(<i>&lt;rlq&gt;</i>)</a></code> <code><a href="rlq.html">summary(<i>&lt;rlq&gt;</i>)</a></code> <code><a href="rlq.html">randtest(<i>&lt;rlq&gt;</i>)</a></code> 
+        </dt>
+        <dd>RLQ analysis</dd>
+      </dl></div><div class="section level2">
+      <h2 id="analysis-including-catgerical-variables-factor-">Analysis including catgerical variables (<code>factor</code>)<a class="anchor" aria-label="anchor" href="#analysis-including-catgerical-variables-factor-"></a></h2>
+      
+      <p class="section-desc"></p><p>These functions allows to consider a partition of individuals to focus on or remove differences between groups.</p>
+
+      
+    </div><div class="section level2">
+      
+      <h3 id="methods-2">Methods<a class="anchor" aria-label="anchor" href="#methods-2"></a></h3>
       
 
       
@@ -285,25 +378,9 @@
         <dd>Discriminant Correspondence Analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="loocv.discrimin.html">loocv(<i>&lt;discrimin&gt;</i>)</a></code> <code><a href="loocv.discrimin.html">print(<i>&lt;discloocv&gt;</i>)</a></code> <code><a href="loocv.discrimin.html">plot(<i>&lt;discloocv&gt;</i>)</a></code> 
-        </dt>
-        <dd>Leave-one-out cross-validation for a <code>discrimin</code> analysis</dd>
-      </dl><dl><dt>
-          
           <code><a href="wca.html">wca(<i>&lt;dudi&gt;</i>)</a></code> 
         </dt>
         <dd>Within-Class Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="scalewt.html">covwt()</a></code> <code><a href="scalewt.html">varwt()</a></code> <code><a href="scalewt.html">scalewt()</a></code> <code><a href="scalewt.html">meanfacwt()</a></code> <code><a href="scalewt.html">varfacwt()</a></code> <code><a href="scalewt.html">covfacwt()</a></code> <code><a href="scalewt.html">scalefacwt()</a></code> 
-        </dt>
-        <dd>Compute or scale data using (weighted) means, variances and
-  covariances (possibly for the levels of a factor)</dd>
-      </dl><dl><dt>
-          
-          <code><a href="loocv.bca.html">loocv(<i>&lt;between&gt;</i>)</a></code> <code><a href="loocv.bca.html">print(<i>&lt;bcaloocv&gt;</i>)</a></code> <code><a href="loocv.bca.html">plot(<i>&lt;bcaloocv&gt;</i>)</a></code> 
-        </dt>
-        <dd>Leave-one-out cross-validation for a <code>bca</code></dd>
       </dl><dl><dt>
           
           <code><a href="wca.coinertia.html">wca(<i>&lt;coinertia&gt;</i>)</a></code> 
@@ -319,10 +396,15 @@
           <code><a href="withinpca.html">withinpca()</a></code> 
         </dt>
         <dd>Normed within principal component analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="witwit.coa.html">witwit.coa()</a></code> <code><a href="witwit.coa.html">summary(<i>&lt;witwit&gt;</i>)</a></code> <code><a href="witwit.coa.html">witwitsepan()</a></code> 
+        </dt>
+        <dd>Internal Correspondence Analysis</dd>
       </dl></div><div class="section level2">
-      <h2 id="coupling">Coupling<a class="anchor" aria-label="anchor" href="#coupling"></a></h2>
       
-      <p class="section-desc"></p><p>2-tables methods.</p>
+      <h3 id="additional-tools">Additional tools<a class="anchor" aria-label="anchor" href="#additional-tools"></a></h3>
+      
 
       
     </div><div id="" class="section level2">
@@ -332,28 +414,38 @@
 
       <dl><dt>
           
-          <code><a href="coinertia.html">coinertia()</a></code> <code><a href="coinertia.html">plot(<i>&lt;coinertia&gt;</i>)</a></code> <code><a href="coinertia.html">print(<i>&lt;coinertia&gt;</i>)</a></code> <code><a href="coinertia.html">summary(<i>&lt;coinertia&gt;</i>)</a></code> 
+          <code><a href="loocv.bca.html">loocv(<i>&lt;between&gt;</i>)</a></code> <code><a href="loocv.bca.html">print(<i>&lt;bcaloocv&gt;</i>)</a></code> <code><a href="loocv.bca.html">plot(<i>&lt;bcaloocv&gt;</i>)</a></code> 
         </dt>
-        <dd>Coinertia Analysis</dd>
+        <dd>Leave-one-out cross-validation for a <code>bca</code></dd>
       </dl><dl><dt>
           
-          <code><a href="pcaiv.html">pcaiv()</a></code> <code><a href="pcaiv.html">plot(<i>&lt;pcaiv&gt;</i>)</a></code> <code><a href="pcaiv.html">print(<i>&lt;pcaiv&gt;</i>)</a></code> <code><a href="pcaiv.html">summary(<i>&lt;pcaiv&gt;</i>)</a></code> 
+          <code><a href="loocv.discrimin.html">loocv(<i>&lt;discrimin&gt;</i>)</a></code> <code><a href="loocv.discrimin.html">print(<i>&lt;discloocv&gt;</i>)</a></code> <code><a href="loocv.discrimin.html">plot(<i>&lt;discloocv&gt;</i>)</a></code> 
         </dt>
-        <dd>Principal component analysis with respect to instrumental variables</dd>
+        <dd>Leave-one-out cross-validation for a <code>discrimin</code> analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="pcaivortho.html">pcaivortho()</a></code> <code><a href="pcaivortho.html">summary(<i>&lt;pcaivortho&gt;</i>)</a></code> 
+          <code><a href="randtest.between.html">randtest(<i>&lt;between&gt;</i>)</a></code> 
         </dt>
-        <dd>Principal Component Analysis with respect to orthogonal instrumental variables</dd>
+        <dd>Monte-Carlo Test on the between-groups inertia percentage (in C).</dd>
       </dl><dl><dt>
           
-          <code><a href="niche.html">niche()</a></code> <code><a href="niche.html">print(<i>&lt;niche&gt;</i>)</a></code> <code><a href="niche.html">plot(<i>&lt;niche&gt;</i>)</a></code> <code><a href="niche.html">niche.param()</a></code> <code><a href="niche.html">rtest(<i>&lt;niche&gt;</i>)</a></code> 
+          <code><a href="randtest.discrimin.html">randtest(<i>&lt;discrimin&gt;</i>)</a></code> 
         </dt>
-        <dd>Method to Analyse a pair of tables : Environmental and Faunistic Data</dd>
+        <dd>Monte-Carlo Test on a Discriminant Analysis (in C).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="rtest.between.html">rtest(<i>&lt;between&gt;</i>)</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on the between-groups inertia percentage (in R).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="rtest.discrimin.html">rtest(<i>&lt;discrimin&gt;</i>)</a></code> 
+        </dt>
+        <dd>Monte-Carlo Test on a Discriminant Analysis (in R).</dd>
       </dl></div><div class="section level2">
-      <h2 id="rlq">RLQ<a class="anchor" aria-label="anchor" href="#rlq"></a></h2>
+      <h2 id="management-of-dudi-objects">Management of <code>dudi</code> objects<a class="anchor" aria-label="anchor" href="#management-of-dudi-objects"></a></h2>
       
-      <p class="section-desc"></p><p>3-tables methods.</p>
+      <p class="section-desc"></p><p>These functions provides functionalities to manage objects of the class <code>dudi</code> (they can be used on the outputs od several methods to analyze one or two tables for instance).</p>
 
       
     </div><div id="" class="section level2">
@@ -363,23 +455,59 @@
 
       <dl><dt>
           
-          <code><a href="combine.4thcorner.html">combine.randtest.rlq()</a></code> <code><a href="combine.4thcorner.html">combine.4thcorner()</a></code> <code><a href="combine.4thcorner.html">p.adjust.4thcorner()</a></code> 
+          <code><a href="dudi.html">as.dudi()</a></code> <code><a href="dudi.html">print(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="dudi.html">is.dudi()</a></code> <code><a href="dudi.html">redo.dudi()</a></code> <code><a href="dudi.html">t(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="dudi.html">summary(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="dudi.html">`[`(<i>&lt;dudi&gt;</i>)</a></code> 
         </dt>
-        <dd>Functions to combine and adjust the outputs 3-table methods</dd>
+        <dd>Duality Diagram</dd>
       </dl><dl><dt>
           
-          <code><a href="fourthcorner.html">fourthcorner()</a></code> <code><a href="fourthcorner.html">fourthcorner2()</a></code> <code><a href="fourthcorner.html">print(<i>&lt;4thcorner&gt;</i>)</a></code> <code><a href="fourthcorner.html">summary(<i>&lt;4thcorner&gt;</i>)</a></code> <code><a href="fourthcorner.html">plot(<i>&lt;4thcorner&gt;</i>)</a></code> <code><a href="fourthcorner.html">fourthcorner.rlq()</a></code> 
+          <code><a href="scatter.html">scatter()</a></code> <code><a href="scatter.html">biplot(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="scatter.html">screeplot(<i>&lt;dudi&gt;</i>)</a></code> 
         </dt>
-        <dd>Functions to compute the fourth-corner statistic</dd>
+        <dd>Graphical representation of the outputs of a multivariate analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="rlq.html">rlq()</a></code> <code><a href="rlq.html">print(<i>&lt;rlq&gt;</i>)</a></code> <code><a href="rlq.html">plot(<i>&lt;rlq&gt;</i>)</a></code> <code><a href="rlq.html">summary(<i>&lt;rlq&gt;</i>)</a></code> <code><a href="rlq.html">randtest(<i>&lt;rlq&gt;</i>)</a></code> 
+          <code><a href="dist.dudi.html">dist.dudi()</a></code> 
         </dt>
-        <dd>RLQ analysis</dd>
+        <dd>Computation of the Distance Matrix from a Statistical Triplet</dd>
+      </dl><dl><dt>
+          
+          <code><a href="inertia.dudi.html">inertia(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="inertia.dudi.html">print(<i>&lt;inertia&gt;</i>)</a></code> <code><a href="inertia.dudi.html">summary(<i>&lt;inertia&gt;</i>)</a></code> 
+        </dt>
+        <dd>Decomposition of inertia (i.e. contributions) in multivariate methods</dd>
+      </dl><dl><dt>
+          
+          <code><a href="loocv.dudi.html">loocv(<i>&lt;dudi&gt;</i>)</a></code> 
+        </dt>
+        <dd>Leave-one-out cross-validation for a <code>dudi</code></dd>
+      </dl><dl><dt>
+          
+          <code><a href="reconst.html">reconst()</a></code> 
+        </dt>
+        <dd>Reconstitution of Data from a Duality Diagram</dd>
+      </dl><dl><dt>
+          
+          <code><a href="supcol.html">supcol()</a></code> 
+        </dt>
+        <dd>Projections of Supplementary Columns</dd>
+      </dl><dl><dt>
+          
+          <code><a href="suprow.html">suprow(<i>&lt;coa&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="suprow.html">predict(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;pca&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;acm&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;mix&gt;</i>)</a></code> <code><a href="suprow.html">suprow(<i>&lt;fca&gt;</i>)</a></code> 
+        </dt>
+        <dd>Projections of Supplementary Rows</dd>
+      </dl><dl><dt>
+          
+          <code><a href="testdim.html">testdim()</a></code> 
+        </dt>
+        <dd>Function to perform a test of dimensionality</dd>
       </dl></div><div class="section level2">
-      <h2 id="k-tables">K-tables<a class="anchor" aria-label="anchor" href="#k-tables"></a></h2>
+      <h2 id="k-table-analysis">K-table analysis<a class="anchor" aria-label="anchor" href="#k-table-analysis"></a></h2>
       
-      <p class="section-desc"></p><p>Multitables analysis</p>
+      <p class="section-desc"></p><p>Functions designed to manage and analyze data structured in several tables (a.k.a. multitable analysis)</p>
+
+      
+    </div><div class="section level2">
+      
+      <h3 id="methods-3">Methods<a class="anchor" aria-label="anchor" href="#methods-3"></a></h3>
+      <p class="section-desc"></p><p>Functions to run the analysis</p>
 
       
     </div><div id="" class="section level2">
@@ -388,25 +516,10 @@
       
 
       <dl><dt>
-          
-          <code><a href="ktab.html">c(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">`[`(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">is.ktab()</a></code> <code><a href="ktab.html">t(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">row.names(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">tab.names()</a></code> <code><a href="ktab.html">col.names()</a></code> <code><a href="ktab.html">ktab.util.names()</a></code> 
-        </dt>
-        <dd>the class of objects 'ktab' (K-tables)</dd>
-      </dl><dl><dt>
           
           <code><a href="costatis.html">costatis()</a></code> 
         </dt>
         <dd>STATIS and Co-Inertia : Analysis of a series of paired ecological tables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="costatis.randtest.html">costatis.randtest()</a></code> 
-        </dt>
-        <dd>Monte-Carlo test on a Costatis analysis (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="dist.ktab.html">dist.ktab()</a></code> <code><a href="dist.ktab.html">ldist.ktab()</a></code> <code><a href="dist.ktab.html">kdist.cor()</a></code> <code><a href="dist.ktab.html">prep.fuzzy()</a></code> <code><a href="dist.ktab.html">prep.binary()</a></code> <code><a href="dist.ktab.html">prep.circular()</a></code> 
-        </dt>
-        <dd>Mixed-variables coefficient of distance</dd>
       </dl><dl><dt>
           
           <code><a href="foucart.html">foucart()</a></code> <code><a href="foucart.html">plot(<i>&lt;foucart&gt;</i>)</a></code> <code><a href="foucart.html">print(<i>&lt;foucart&gt;</i>)</a></code> 
@@ -417,71 +530,6 @@
           <code><a href="mdpcoa.html">mdpcoa()</a></code> <code><a href="mdpcoa.html">kplotX.mdpcoa()</a></code> <code><a href="mdpcoa.html">prep.mdpcoa()</a></code> 
         </dt>
         <dd>Multiple Double Principal Coordinate Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kdist2ktab.html">kdist2ktab()</a></code> 
-        </dt>
-        <dd>Transformation of K distance matrices (object 'kdist') into K Euclidean representations (object 'ktab')</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.html">kplot()</a></code> 
-        </dt>
-        <dd>Generic Function for Multiple Graphs in a K-tables Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.sepan.html">kplot(<i>&lt;sepan&gt;</i>)</a></code> <code><a href="kplot.sepan.html">kplotsepan.coa()</a></code> 
-        </dt>
-        <dd>Multiple Graphs for Separated Analyses in a K-tables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.foucart.html">kplot(<i>&lt;foucart&gt;</i>)</a></code> 
-        </dt>
-        <dd>Multiple Graphs for the Foucart's Correspondence Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.mcoa.html">kplot(<i>&lt;mcoa&gt;</i>)</a></code> 
-        </dt>
-        <dd>Multiple Graphs for a Multiple Co-inertia Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.mfa.html">kplot(<i>&lt;mfa&gt;</i>)</a></code> 
-        </dt>
-        <dd>Multiple Graphs for a Multiple Factorial Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.pta.html">kplot(<i>&lt;pta&gt;</i>)</a></code> 
-        </dt>
-        <dd>Multiple Graphs for a Partial Triadic Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.statis.html">kplot(<i>&lt;statis&gt;</i>)</a></code> 
-        </dt>
-        <dd>Multiple Graphs of a STATIS Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="ktab.data.frame.html">ktab.data.frame()</a></code> 
-        </dt>
-        <dd>Creation of K-tables from a data frame</dd>
-      </dl><dl><dt>
-          
-          <code><a href="ktab.list.df.html">ktab.list.df()</a></code> 
-        </dt>
-        <dd>Creating a K-tables from a list of data frames.</dd>
-      </dl><dl><dt>
-          
-          <code><a href="ktab.list.dudi.html">ktab.list.dudi()</a></code> 
-        </dt>
-        <dd>Creation of a K-tables from a list of duality diagrams</dd>
-      </dl><dl><dt>
-          
-          <code><a href="ktab.match2ktabs.html">ktab.match2ktabs()</a></code> 
-        </dt>
-        <dd>STATIS and Co-Inertia : Analysis of a series of paired ecological tables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="ktab.within.html">ktab.within()</a></code> 
-        </dt>
-        <dd>Process to go from a Within Analysis to a K-tables</dd>
       </dl><dl><dt>
           
           <code><a href="mbpls.html">mbpls()</a></code> 
@@ -522,15 +570,10 @@
           <code><a href="statis.html">statis()</a></code> <code><a href="statis.html">plot(<i>&lt;statis&gt;</i>)</a></code> <code><a href="statis.html">print(<i>&lt;statis&gt;</i>)</a></code> 
         </dt>
         <dd>STATIS, a method for analysing K-tables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="suprow.pta.html">suprow(<i>&lt;pta&gt;</i>)</a></code> 
-        </dt>
-        <dd>Projections of Supplementary Rows for a Partial Triadic Analysis of K-tables</dd>
       </dl></div><div class="section level2">
-      <h2 id="tests">Tests<a class="anchor" aria-label="anchor" href="#tests"></a></h2>
       
-      <p class="section-desc"></p><p>Permutation tests, correlation tests and others statistical tests</p>
+      <h3 id="graphics-1">Graphics<a class="anchor" aria-label="anchor" href="#graphics-1"></a></h3>
+      <p class="section-desc"></p><p>Functions to display the results of the analysis</p>
 
       
     </div><div id="" class="section level2">
@@ -540,94 +583,116 @@
 
       <dl><dt>
           
-          <code><a href="randboot.html">as.krandboot()</a></code> <code><a href="randboot.html">print(<i>&lt;krandboot&gt;</i>)</a></code> <code><a href="randboot.html">as.randboot()</a></code> <code><a href="randboot.html">print(<i>&lt;randboot&gt;</i>)</a></code> <code><a href="randboot.html">randboot()</a></code> 
+          <code><a href="kplot.html">kplot()</a></code> 
         </dt>
-        <dd>Bootstrap simulations</dd>
+        <dd>Generic Function for Multiple Graphs in a K-tables Analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="krandtest.html">as.krandtest()</a></code> <code><a href="krandtest.html">plot(<i>&lt;krandtest&gt;</i>)</a></code> <code><a href="krandtest.html">print(<i>&lt;krandtest&gt;</i>)</a></code> <code><a href="krandtest.html">`[`(<i>&lt;krandtest&gt;</i>)</a></code> <code><a href="krandtest.html">`[[`(<i>&lt;krandtest&gt;</i>)</a></code> 
+          <code><a href="kplot.foucart.html">kplot(<i>&lt;foucart&gt;</i>)</a></code> 
         </dt>
-        <dd>Class of the Permutation Tests (in C).</dd>
+        <dd>Multiple Graphs for the Foucart's Correspondence Analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="randxval.html">as.krandxval()</a></code> <code><a href="randxval.html">print(<i>&lt;krandxval&gt;</i>)</a></code> <code><a href="randxval.html">as.randxval()</a></code> <code><a href="randxval.html">print(<i>&lt;randxval&gt;</i>)</a></code> 
+          <code><a href="kplot.mcoa.html">kplot(<i>&lt;mcoa&gt;</i>)</a></code> 
         </dt>
-        <dd>Two-fold cross-validation</dd>
+        <dd>Multiple Graphs for a Multiple Co-inertia Analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="randtest.html">randtest()</a></code> <code><a href="randtest.html">as.randtest()</a></code> <code><a href="randtest.html">plot(<i>&lt;randtest&gt;</i>)</a></code> <code><a href="randtest.html">print(<i>&lt;randtest&gt;</i>)</a></code> 
+          <code><a href="kplot.mfa.html">kplot(<i>&lt;mfa&gt;</i>)</a></code> 
         </dt>
-        <dd>Class of the Permutation Tests (in C).</dd>
+        <dd>Multiple Graphs for a Multiple Factorial Analysis</dd>
       </dl><dl><dt>
           
-          <code><a href="combine.4thcorner.html">combine.randtest.rlq()</a></code> <code><a href="combine.4thcorner.html">combine.4thcorner()</a></code> <code><a href="combine.4thcorner.html">p.adjust.4thcorner()</a></code> 
+          <code><a href="kplot.pta.html">kplot(<i>&lt;pta&gt;</i>)</a></code> 
         </dt>
-        <dd>Functions to combine and adjust the outputs 3-table methods</dd>
+        <dd>Multiple Graphs for a Partial Triadic Analysis</dd>
       </dl><dl><dt>
+          
+          <code><a href="kplot.sepan.html">kplot(<i>&lt;sepan&gt;</i>)</a></code> <code><a href="kplot.sepan.html">kplotsepan.coa()</a></code> 
+        </dt>
+        <dd>Multiple Graphs for Separated Analyses in a K-tables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="kplot.statis.html">kplot(<i>&lt;statis&gt;</i>)</a></code> 
+        </dt>
+        <dd>Multiple Graphs of a STATIS Analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="mdpcoa.html">mdpcoa()</a></code> <code><a href="mdpcoa.html">kplotX.mdpcoa()</a></code> <code><a href="mdpcoa.html">prep.mdpcoa()</a></code> 
+        </dt>
+        <dd>Multiple Double Principal Coordinate Analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="multiblock.html">summary(<i>&lt;multiblock&gt;</i>)</a></code> <code><a href="multiblock.html">print(<i>&lt;multiblock&gt;</i>)</a></code> 
+        </dt>
+        <dd>Display and summarize multiblock objects</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="utilities">Utilities<a class="anchor" aria-label="anchor" href="#utilities"></a></h3>
+      <p class="section-desc"></p><p>Functions to manage objects of class <code>ktab</code></p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="ktab.html">c(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">`[`(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">is.ktab()</a></code> <code><a href="ktab.html">t(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">row.names(<i>&lt;ktab&gt;</i>)</a></code> <code><a href="ktab.html">tab.names()</a></code> <code><a href="ktab.html">col.names()</a></code> <code><a href="ktab.html">ktab.util.names()</a></code> 
+        </dt>
+        <dd>the class of objects 'ktab' (K-tables)</dd>
+      </dl><dl><dt>
+          
+          <code><a href="ktab.data.frame.html">ktab.data.frame()</a></code> 
+        </dt>
+        <dd>Creation of K-tables from a data frame</dd>
+      </dl><dl><dt>
+          
+          <code><a href="ktab.list.df.html">ktab.list.df()</a></code> 
+        </dt>
+        <dd>Creating a K-tables from a list of data frames.</dd>
+      </dl><dl><dt>
+          
+          <code><a href="ktab.list.dudi.html">ktab.list.dudi()</a></code> 
+        </dt>
+        <dd>Creation of a K-tables from a list of duality diagrams</dd>
+      </dl><dl><dt>
+          
+          <code><a href="ktab.match2ktabs.html">ktab.match2ktabs()</a></code> 
+        </dt>
+        <dd>STATIS and Co-Inertia : Analysis of a series of paired ecological tables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="ktab.within.html">ktab.within()</a></code> 
+        </dt>
+        <dd>Process to go from a Within Analysis to a K-tables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="mdpcoa.html">mdpcoa()</a></code> <code><a href="mdpcoa.html">kplotX.mdpcoa()</a></code> <code><a href="mdpcoa.html">prep.mdpcoa()</a></code> 
+        </dt>
+        <dd>Multiple Double Principal Coordinate Analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="suprow.pta.html">suprow(<i>&lt;pta&gt;</i>)</a></code> 
+        </dt>
+        <dd>Projections of Supplementary Rows for a Partial Triadic Analysis of K-tables</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="tests-1">Tests<a class="anchor" aria-label="anchor" href="#tests-1"></a></h3>
+      <p class="section-desc"></p><p>Functions to evaluate the significance of observed structures</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
           
           <code><a href="costatis.randtest.html">costatis.randtest()</a></code> 
         </dt>
         <dd>Monte-Carlo test on a Costatis analysis (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="gearymoran.html">gearymoran()</a></code> 
-        </dt>
-        <dd>Moran's I and Geary'c randomization tests for spatial and phylogenetic autocorrelation</dd>
-      </dl><dl><dt>
-          
-          <code><a href="mantel.randtest.html">mantel.randtest()</a></code> 
-        </dt>
-        <dd>Mantel test (correlation between two distance matrices (in C).)</dd>
-      </dl><dl><dt>
-          
-          <code><a href="mantel.rtest.html">mantel.rtest()</a></code> 
-        </dt>
-        <dd>Mantel test (correlation between two distance matrices (in R).)</dd>
-      </dl><dl><dt>
-          
-          <code><a href="multispati.randtest.html">multispati.randtest()</a></code> 
-        </dt>
-        <dd>Multivariate spatial autocorrelation test (in C)</dd>
-      </dl><dl><dt>
-          
-          <code><a href="multispati.rtest.html">multispati.rtest()</a></code> 
-        </dt>
-        <dd>Multivariate spatial autocorrelation test</dd>
-      </dl><dl><dt>
-          
-          <code><a href="procuste.randtest.html">procuste.randtest()</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the sum of the singular values of a procustean rotation (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="procuste.rtest.html">procuste.rtest()</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the sum of the singular values of a procustean rotation (in R).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="rtest.html">rtest()</a></code> 
-        </dt>
-        <dd>Class of the Permutation Tests (in R).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="RV.rtest.html">RV.rtest()</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the sum of eigenvalues of a co-inertia analysis (in R).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="RVdist.randtest.html">RVdist.randtest()</a></code> 
-        </dt>
-        <dd>Tests of randomization on the correlation between two distance matrices (in R).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="statico.krandtest.html">statico.krandtest()</a></code> 
-        </dt>
-        <dd>Monte-Carlo test on a Statico analysis (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="testdim.html">testdim()</a></code> 
-        </dt>
-        <dd>Function to perform a test of dimensionality</dd>
       </dl><dl><dt>
           
           <code><a href="randboot.multiblock.html">randboot(<i>&lt;multiblock&gt;</i>)</a></code> 
@@ -635,76 +700,14 @@
         <dd>Bootstraped simulations for multiblock methods</dd>
       </dl><dl><dt>
           
-          <code><a href="randtest.amova.html">randtest(<i>&lt;amova&gt;</i>)</a></code> 
-        </dt>
-        <dd>Permutation tests on an analysis of molecular variance (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="randtest.between.html">randtest(<i>&lt;between&gt;</i>)</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the between-groups inertia percentage (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="randtest.coinertia.html">randtest(<i>&lt;coinertia&gt;</i>)</a></code> 
-        </dt>
-        <dd>Monte-Carlo test on a Co-inertia analysis (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="randtest.discrimin.html">randtest(<i>&lt;discrimin&gt;</i>)</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on a Discriminant Analysis (in C).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="randtest.dpcoa.html">randtest(<i>&lt;dpcoa&gt;</i>)</a></code> 
-        </dt>
-        <dd>Permutation test for double principal coordinate analysis (DPCoA)</dd>
-      </dl><dl><dt>
-          
-          <code><a href="randtest.pcaiv.html">randtest(<i>&lt;pcaiv&gt;</i>)</a></code> <code><a href="randtest.pcaiv.html">randtest(<i>&lt;pcaivortho&gt;</i>)</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the percentage of explained (i.e.
-  constrained) inertia</dd>
-      </dl><dl><dt>
-          
-          <code><a href="rtest.between.html">rtest(<i>&lt;between&gt;</i>)</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the between-groups inertia percentage (in R).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="rtest.discrimin.html">rtest(<i>&lt;discrimin&gt;</i>)</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on a Discriminant Analysis (in R).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="RV.randtest.html">RV.randtest()</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the sum of eigenvalues of a co-inertia analysis (in C++ with Rcpp).</dd>
-      </dl><dl><dt>
-          
-          <code><a href="RVintra.randtest.html">RVintra.randtest()</a></code> 
-        </dt>
-        <dd>Monte-Carlo Test on the sum of eigenvalues of a within-class co-inertia analysis (in C++ with Rcpp).</dd>
-      </dl><dl><dt>
-          
           <code><a href="testdim.multiblock.html">testdim(<i>&lt;multiblock&gt;</i>)</a></code> 
         </dt>
         <dd>Selection of the number of dimension by two-fold cross-validation for multiblock methods</dd>
-      </dl></div><div class="section level2">
-      <h2 id="internal-correspondance">Internal correspondance<a class="anchor" aria-label="anchor" href="#internal-correspondance"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
+      </dl><dl><dt>
           
-          <code><a href="witwit.coa.html">witwit.coa()</a></code> <code><a href="witwit.coa.html">summary(<i>&lt;witwit&gt;</i>)</a></code> <code><a href="witwit.coa.html">witwitsepan()</a></code> 
+          <code><a href="statico.krandtest.html">statico.krandtest()</a></code> 
         </dt>
-        <dd>Internal Correspondence Analysis</dd>
+        <dd>Monte-Carlo test on a Statico analysis (in C).</dd>
       </dl></div><div class="section level2">
       <h2 id="distance-methods">Distance methods<a class="anchor" aria-label="anchor" href="#distance-methods"></a></h2>
       
@@ -758,6 +761,11 @@
         <dd>Taxonomy</dd>
       </dl><dl><dt>
           
+          <code><a href="dudi.pco.html">dudi.pco()</a></code> <code><a href="dudi.pco.html">scatter(<i>&lt;pco&gt;</i>)</a></code> 
+        </dt>
+        <dd>Principal Coordinates Analysis</dd>
+      </dl><dl><dt>
+          
           <code><a href="kdist.html">kdist()</a></code> 
         </dt>
         <dd>the class of objects 'kdist' (K distance matrices)</dd>
@@ -798,14 +806,9 @@
         <dd>Tests of randomization on the correlation between two distance matrices (in R).</dd>
       </dl><dl><dt>
           
-          <code><a href="s.distri.html">s.distri()</a></code> 
+          <code><a href="supdist.html">supdist()</a></code> 
         </dt>
-        <dd>Plot of a frequency distribution</dd>
-      </dl><dl><dt>
-          
-          <code><a href="sco.distri.html">sco.distri()</a></code> 
-        </dt>
-        <dd>Representation by mean- standard deviation of a set of weight distributions on a numeric score</dd>
+        <dd>Projection of additional items in a PCO analysis</dd>
       </dl><dl><dt>
           
           <code><a href="table.dist.html">table.dist()</a></code> 
@@ -832,9 +835,327 @@
         </dt>
         <dd>Simplified Analysis in Principal Coordinates</dd>
       </dl></div><div class="section level2">
-      <h2 id="phylogeny-methods">Phylogeny methods<a class="anchor" aria-label="anchor" href="#phylogeny-methods"></a></h2>
+      <h2 id="graphics-2">Graphics<a class="anchor" aria-label="anchor" href="#graphics-2"></a></h2>
+      
+      <p class="section-desc"></p><p>Functions to draw graphics. See functions of the package <code>adegraphics</code> for a more flexible implementation based on <code>lattice</code>.</p>
+
+      
+    </div><div class="section level2">
+      
+      <h3 id="-d-plot">1D plot<a class="anchor" aria-label="anchor" href="#-d-plot"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
       
       
+      
+
+      <dl><dt>
+          
+          <code><a href="sco.boxplot.html">sco.boxplot()</a></code> 
+        </dt>
+        <dd>Representation of the link between a variable and a set of qualitative variables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="sco.class.html">sco.class()</a></code> 
+        </dt>
+        <dd>1D plot of a numeric score and a factor with labels</dd>
+      </dl><dl><dt>
+          
+          <code><a href="sco.distri.html">sco.distri()</a></code> 
+        </dt>
+        <dd>Representation by mean- standard deviation of a set of weight distributions on a numeric score</dd>
+      </dl><dl><dt>
+          
+          <code><a href="sco.gauss.html">sco.gauss()</a></code> 
+        </dt>
+        <dd>Relationships between one score and qualitative variables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="sco.quant.html">sco.quant()</a></code> 
+        </dt>
+        <dd>Graph to Analyse the Relation between a Score and Quantitative Variables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="sco.label.html">sco.label()</a></code> 
+        </dt>
+        <dd>1D plot of a numeric score with labels</dd>
+      </dl><dl><dt>
+          
+          <code><a href="sco.match.html">sco.match()</a></code> 
+        </dt>
+        <dd>1D plot of a pair of numeric scores with labels</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="-d-plot-1">2D plot<a class="anchor" aria-label="anchor" href="#-d-plot-1"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="s.arrow.html">s.arrow()</a></code> 
+        </dt>
+        <dd>Plot of the factorial maps for the projection of a vector basis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.chull.html">s.chull()</a></code> 
+        </dt>
+        <dd>Plot of the factorial maps with polygons of contour by level of a factor</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.class.html">s.class()</a></code> 
+        </dt>
+        <dd>Plot of factorial maps with representation of point classes</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.corcircle.html">s.corcircle()</a></code> 
+        </dt>
+        <dd>Plot of the factorial maps of a correlation circle</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.distri.html">s.distri()</a></code> 
+        </dt>
+        <dd>Plot of a frequency distribution</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.hist.html">s.hist()</a></code> 
+        </dt>
+        <dd>Display of a scatterplot and its two marginal histograms</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.image.html">s.image()</a></code> 
+        </dt>
+        <dd>Graph of a variable using image and contour</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.kde2d.html">s.kde2d()</a></code> 
+        </dt>
+        <dd>Scatter Plot with Kernel Density Estimate</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.label.html">s.label()</a></code> 
+        </dt>
+        <dd>Scatter Plot</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.logo.html">s.logo()</a></code> 
+        </dt>
+        <dd>Representation of an object in a graph by a picture</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.match.html">s.match()</a></code> 
+        </dt>
+        <dd>Plot of Paired Coordinates</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.match.class.html">s.match.class()</a></code> 
+        </dt>
+        <dd>Scatterplot of two sets of coordinates and a partionning into classes</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.multinom.html">s.multinom()</a></code> 
+        </dt>
+        <dd>Graph of frequency profiles (useful for instance in genetic)</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.traject.html">s.traject()</a></code> 
+        </dt>
+        <dd>Trajectory Plot</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.value.html">s.value()</a></code> 
+        </dt>
+        <dd>Representation of a value in a graph</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="other-types-of-plot">Other types of plot<a class="anchor" aria-label="anchor" href="#other-types-of-plot"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="dotcircle.html">dotcircle()</a></code> 
+        </dt>
+        <dd>Representation of n values on a circle</dd>
+      </dl><dl><dt>
+          
+          <code><a href="table.cont.html">table.cont()</a></code> 
+        </dt>
+        <dd>Plot of Contingency Tables</dd>
+      </dl><dl><dt>
+          
+          <code><a href="table.dist.html">table.dist()</a></code> 
+        </dt>
+        <dd>Graph Display for Distance Matrices</dd>
+      </dl><dl><dt>
+          
+          <code><a href="table.paint.html">table.paint()</a></code> 
+        </dt>
+        <dd>Plot of the arrays by grey levels</dd>
+      </dl><dl><dt>
+          
+          <code><a href="table.value.html">table.value()</a></code> 
+        </dt>
+        <dd>Plot of the Arrays</dd>
+      </dl><dl><dt>
+          
+          <code><a href="triangle.plot.html">triangle.plot()</a></code> <code><a href="triangle.plot.html">triangle.biplot()</a></code> 
+        </dt>
+        <dd>Triangular Plotting</dd>
+      </dl><dl><dt>
+          
+          <code><a href="triangle.class.html">triangle.class()</a></code> 
+        </dt>
+        <dd>Triangular Representation and Groups of points</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="utilities-1">Utilities<a class="anchor" aria-label="anchor" href="#utilities-1"></a></h3>
+      <p class="section-desc"></p><p>These functions are mainly designed for internal use.</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="add.scatter.html">add.scatter()</a></code> <code><a href="add.scatter.html">add.scatter.eig()</a></code> 
+        </dt>
+        <dd>Add graphics to an existing plot</dd>
+      </dl><dl><dt>
+          
+          <code><a href="scatterutil.html">scatterutil</a></code> <code><a href="scatterutil.html">scatterutil.base</a></code> <code><a href="scatterutil.html">scatterutil.sco</a></code> <code><a href="scatterutil.html">scatterutil.chull</a></code> <code><a href="scatterutil.html">scatterutil.eigen</a></code> <code><a href="scatterutil.html">scatterutil.ellipse</a></code> <code><a href="scatterutil.html">scatterutil.eti.circ</a></code> <code><a href="scatterutil.html">scatterutil.eti</a></code> <code><a href="scatterutil.html">scatterutil.grid</a></code> <code><a href="scatterutil.html">scatterutil.legend.bw.square</a></code> <code><a href="scatterutil.html">scatterutil.legend.square.grey</a></code> <code><a href="scatterutil.html">scatterutil.legendgris</a></code> <code><a href="scatterutil.html">scatterutil.scaling</a></code> <code><a href="scatterutil.html">scatterutil.star</a></code> <code><a href="scatterutil.html">scatterutil.sub</a></code> <code><a href="scatterutil.html">scatterutil.convrot90</a></code> 
+        </dt>
+        <dd>Graphical utility functions</dd>
+      </dl><dl><dt>
+          
+          <code><a href="s.logo.html">s.logo()</a></code> 
+        </dt>
+        <dd>Representation of an object in a graph by a picture</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="diversity">Diversity<a class="anchor" aria-label="anchor" href="#diversity"></a></h3>
+      <p class="section-desc"></p><p>Functions focusing on the measurment of diversity. See also the package <code>adiv</code> for more functionalities.</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="amova.html">amova()</a></code> <code><a href="amova.html">print(<i>&lt;amova&gt;</i>)</a></code> 
+        </dt>
+        <dd>Analysis of molecular variance</dd>
+      </dl><dl><dt>
+          
+          <code><a href="apqe.html">apqe()</a></code> <code><a href="apqe.html">print(<i>&lt;apqe&gt;</i>)</a></code> 
+        </dt>
+        <dd>Apportionment of Quadratic Entropy</dd>
+      </dl><dl><dt>
+          
+          <code><a href="disc.html">disc()</a></code> 
+        </dt>
+        <dd>Rao's dissimilarity coefficient</dd>
+      </dl><dl><dt>
+          
+          <code><a href="divc.html">divc()</a></code> 
+        </dt>
+        <dd>Rao's diversity coefficient also called quadratic entropy</dd>
+      </dl><dl><dt>
+          
+          <code><a href="divcmax.html">divcmax()</a></code> 
+        </dt>
+        <dd>Maximal value of Rao's diversity coefficient also called 
+quadratic entropy</dd>
+      </dl><dl><dt>
+          
+          <code><a href="dpcoa.html">dpcoa()</a></code> <code><a href="dpcoa.html">plot(<i>&lt;dpcoa&gt;</i>)</a></code> <code><a href="dpcoa.html">print(<i>&lt;dpcoa&gt;</i>)</a></code> <code><a href="dpcoa.html">summary(<i>&lt;dpcoa&gt;</i>)</a></code> 
+        </dt>
+        <dd>Double principal coordinate analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="originality.html">originality()</a></code> 
+        </dt>
+        <dd>Originality of a species</dd>
+      </dl><dl><dt>
+          
+          <code><a href="randtest.dpcoa.html">randtest(<i>&lt;dpcoa&gt;</i>)</a></code> 
+        </dt>
+        <dd>Permutation test for double principal coordinate analysis (DPCoA)</dd>
+      </dl><dl><dt>
+          
+          <code><a href="randtest.amova.html">randtest(<i>&lt;amova&gt;</i>)</a></code> 
+        </dt>
+        <dd>Permutation tests on an analysis of molecular variance (in C).</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="spatial">Spatial<a class="anchor" aria-label="anchor" href="#spatial"></a></h3>
+      <p class="section-desc"></p><p>Functions focusing on the analysis of spatial data. See also the package <code>adespatial</code> for more functionalities.</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="gridrowcol.html">gridrowcol()</a></code> 
+        </dt>
+        <dd>Complete regular grid analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="mld.html">mld()</a></code> <code><a href="mld.html">haar2level()</a></code> 
+        </dt>
+        <dd>Multi Level Decomposition of unidimensional data</dd>
+      </dl><dl><dt>
+          
+          <code><a href="mstree.html">mstree()</a></code> 
+        </dt>
+        <dd>Minimal Spanning Tree</dd>
+      </dl><dl><dt>
+          
+          <code><a href="orthobasis.html">orthobasis.neig()</a></code> <code><a href="orthobasis.html">orthobasis.line()</a></code> <code><a href="orthobasis.html">orthobasis.circ()</a></code> <code><a href="orthobasis.html">orthobasis.mat()</a></code> <code><a href="orthobasis.html">orthobasis.haar()</a></code> <code><a href="orthobasis.html">print(<i>&lt;orthobasis&gt;</i>)</a></code> <code><a href="orthobasis.html">plot(<i>&lt;orthobasis&gt;</i>)</a></code> <code><a href="orthobasis.html">summary(<i>&lt;orthobasis&gt;</i>)</a></code> <code><a href="orthobasis.html">is.orthobasis()</a></code> 
+        </dt>
+        <dd>Orthonormal basis for orthonormal transform</dd>
+      </dl><dl><dt>
+          
+          <code><a href="multispati.html">multispati()</a></code> <code><a href="multispati.html">plot(<i>&lt;multispati&gt;</i>)</a></code> <code><a href="multispati.html">summary(<i>&lt;multispati&gt;</i>)</a></code> <code><a href="multispati.html">print(<i>&lt;multispati&gt;</i>)</a></code> 
+        </dt>
+        <dd>Multivariate spatial analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="multispati.randtest.html">multispati.randtest()</a></code> 
+        </dt>
+        <dd>Multivariate spatial autocorrelation test (in C)</dd>
+      </dl><dl><dt>
+          
+          <code><a href="multispati.rtest.html">multispati.rtest()</a></code> 
+        </dt>
+        <dd>Multivariate spatial autocorrelation test</dd>
+      </dl><dl><dt>
+          
+          <code><a href="neig.html">neig()</a></code> <code><a href="neig.html">scores.neig()</a></code> <code><a href="neig.html">print(<i>&lt;neig&gt;</i>)</a></code> <code><a href="neig.html">summary(<i>&lt;neig&gt;</i>)</a></code> <code><a href="neig.html">nb2neig()</a></code> <code><a href="neig.html">neig2nb()</a></code> <code><a href="neig.html">neig2mat()</a></code> 
+        </dt>
+        <dd>Neighbourhood Graphs</dd>
+      </dl></div><div class="section level2">
+      <h2 id="phylogenetic-methods">Phylogenetic methods<a class="anchor" aria-label="anchor" href="#phylogenetic-methods"></a></h2>
+      
+      <p class="section-desc"></p><p>These functions allows to manage phylogenetic data. See functions of the package <code>adephylo</code> for a more flexible implementation based on <code>ape</code> and <code>phylobase</code>.</p>
 
       
     </div><div id="" class="section level2">
@@ -884,16 +1205,47 @@
         <dd>The phylogenetic ANOVA</dd>
       </dl><dl><dt>
           
-          <code><a href="originality.html">originality()</a></code> 
-        </dt>
-        <dd>Originality of a species</dd>
-      </dl><dl><dt>
-          
           <code><a href="PI2newick.html">PI2newick()</a></code> 
         </dt>
         <dd>Import data files from Phylogenetic Independance Package</dd>
       </dl></div><div class="section level2">
-      <h2 id="others">Others<a class="anchor" aria-label="anchor" href="#others"></a></h2>
+      <h2 id="tests-2">Tests<a class="anchor" aria-label="anchor" href="#tests-2"></a></h2>
+      
+      <p class="section-desc"></p><p>Utilities functions to manage results of randomization procedures.</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="randboot.html">as.krandboot()</a></code> <code><a href="randboot.html">print(<i>&lt;krandboot&gt;</i>)</a></code> <code><a href="randboot.html">as.randboot()</a></code> <code><a href="randboot.html">print(<i>&lt;randboot&gt;</i>)</a></code> <code><a href="randboot.html">randboot()</a></code> 
+        </dt>
+        <dd>Bootstrap simulations</dd>
+      </dl><dl><dt>
+          
+          <code><a href="krandtest.html">as.krandtest()</a></code> <code><a href="krandtest.html">plot(<i>&lt;krandtest&gt;</i>)</a></code> <code><a href="krandtest.html">print(<i>&lt;krandtest&gt;</i>)</a></code> <code><a href="krandtest.html">`[`(<i>&lt;krandtest&gt;</i>)</a></code> <code><a href="krandtest.html">`[[`(<i>&lt;krandtest&gt;</i>)</a></code> 
+        </dt>
+        <dd>Class of the Permutation Tests (in C).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="randxval.html">as.krandxval()</a></code> <code><a href="randxval.html">print(<i>&lt;krandxval&gt;</i>)</a></code> <code><a href="randxval.html">as.randxval()</a></code> <code><a href="randxval.html">print(<i>&lt;randxval&gt;</i>)</a></code> 
+        </dt>
+        <dd>Two-fold cross-validation</dd>
+      </dl><dl><dt>
+          
+          <code><a href="randtest.html">randtest()</a></code> <code><a href="randtest.html">as.randtest()</a></code> <code><a href="randtest.html">plot(<i>&lt;randtest&gt;</i>)</a></code> <code><a href="randtest.html">print(<i>&lt;randtest&gt;</i>)</a></code> 
+        </dt>
+        <dd>Class of the Permutation Tests (in C).</dd>
+      </dl><dl><dt>
+          
+          <code><a href="rtest.html">rtest()</a></code> 
+        </dt>
+        <dd>Class of the Permutation Tests (in R).</dd>
+      </dl></div><div class="section level2">
+      <h2 id="misc">Misc<a class="anchor" aria-label="anchor" href="#misc"></a></h2>
       
       
 
@@ -905,45 +1257,24 @@
 
       <dl><dt>
           
+          <code><a href="ade4.package.html">ade4-package</a></code> <code><a href="ade4.package.html">ade4</a></code> 
+        </dt>
+        <dd>The ade4 package</dd>
+      </dl><dl><dt>
+          
+          <code><a href="dudi.acm.html">dudi.acm()</a></code> <code><a href="dudi.acm.html">acm.burt()</a></code> <code><a href="dudi.acm.html">acm.disjonctif()</a></code> <code><a href="dudi.acm.html">boxplot(<i>&lt;acm&gt;</i>)</a></code> 
+        </dt>
+        <dd>Multiple Correspondence Analysis</dd>
+      </dl><dl><dt>
+          
           <code><a href="adegraphicsLoaded.html">adegraphicsLoaded()</a></code> 
         </dt>
         <dd>Utility function to test if the package adegraphics is loaded</dd>
       </dl><dl><dt>
           
-          <code><a href="disc.html">disc()</a></code> 
+          <code><a href="bicenter.wt.html">bicenter.wt()</a></code> 
         </dt>
-        <dd>Rao's dissimilarity coefficient</dd>
-      </dl><dl><dt>
-          
-          <code><a href="divc.html">divc()</a></code> 
-        </dt>
-        <dd>Rao's diversity coefficient also called quadratic entropy</dd>
-      </dl><dl><dt>
-          
-          <code><a href="divcmax.html">divcmax()</a></code> 
-        </dt>
-        <dd>Maximal value of Rao's diversity coefficient also called 
-quadratic entropy</dd>
-      </dl><dl><dt>
-          
-          <code><a href="neig.html">neig()</a></code> <code><a href="neig.html">scores.neig()</a></code> <code><a href="neig.html">print(<i>&lt;neig&gt;</i>)</a></code> <code><a href="neig.html">summary(<i>&lt;neig&gt;</i>)</a></code> <code><a href="neig.html">nb2neig()</a></code> <code><a href="neig.html">neig2nb()</a></code> <code><a href="neig.html">neig2mat()</a></code> 
-        </dt>
-        <dd>Neighbourhood Graphs</dd>
-      </dl><dl><dt>
-          
-          <code><a href="mld.html">mld()</a></code> <code><a href="mld.html">haar2level()</a></code> 
-        </dt>
-        <dd>Multi Level Decomposition of unidimensional data</dd>
-      </dl><dl><dt>
-          
-          <code><a href="orthobasis.html">orthobasis.neig()</a></code> <code><a href="orthobasis.html">orthobasis.line()</a></code> <code><a href="orthobasis.html">orthobasis.circ()</a></code> <code><a href="orthobasis.html">orthobasis.mat()</a></code> <code><a href="orthobasis.html">orthobasis.haar()</a></code> <code><a href="orthobasis.html">print(<i>&lt;orthobasis&gt;</i>)</a></code> <code><a href="orthobasis.html">plot(<i>&lt;orthobasis&gt;</i>)</a></code> <code><a href="orthobasis.html">summary(<i>&lt;orthobasis&gt;</i>)</a></code> <code><a href="orthobasis.html">is.orthobasis()</a></code> 
-        </dt>
-        <dd>Orthonormal basis for orthonormal transform</dd>
-      </dl><dl><dt>
-          
-          <code><a href="procuste.html">procuste()</a></code> <code><a href="procuste.html">plot(<i>&lt;procuste&gt;</i>)</a></code> <code><a href="procuste.html">print(<i>&lt;procuste&gt;</i>)</a></code> <code><a href="procuste.html">randtest(<i>&lt;procuste&gt;</i>)</a></code> 
-        </dt>
-        <dd>Simple Procruste Rotation between two sets of points</dd>
+        <dd>Double Weighted Centring</dd>
       </dl><dl><dt>
           
           <code><a href="scalewt.html">covwt()</a></code> <code><a href="scalewt.html">varwt()</a></code> <code><a href="scalewt.html">scalewt()</a></code> <code><a href="scalewt.html">meanfacwt()</a></code> <code><a href="scalewt.html">varfacwt()</a></code> <code><a href="scalewt.html">covfacwt()</a></code> <code><a href="scalewt.html">scalefacwt()</a></code> 
@@ -952,44 +1283,14 @@ quadratic entropy</dd>
   covariances (possibly for the levels of a factor)</dd>
       </dl><dl><dt>
           
-          <code><a href="sco.distri.html">sco.distri()</a></code> 
+          <code><a href="dagnelie.test.html">dagnelie.test()</a></code> 
         </dt>
-        <dd>Representation by mean- standard deviation of a set of weight distributions on a numeric score</dd>
+        <dd>Dagnelie multinormality test</dd>
       </dl><dl><dt>
           
-          <code><a href="sco.gauss.html">sco.gauss()</a></code> 
+          <code><a href="uniquewt.df.html">uniquewt.df()</a></code> 
         </dt>
-        <dd>Relationships between one score and qualitative variables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="sco.quant.html">sco.quant()</a></code> 
-        </dt>
-        <dd>Graph to Analyse the Relation between a Score and Quantitative Variables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="score.html">score()</a></code> <code><a href="score.html">scoreutil.base()</a></code> 
-        </dt>
-        <dd>Graphs for One Dimension</dd>
-      </dl><dl><dt>
-          
-          <code><a href="apqe.html">apqe()</a></code> <code><a href="apqe.html">print(<i>&lt;apqe&gt;</i>)</a></code> 
-        </dt>
-        <dd>Apportionment of Quadratic Entropy</dd>
-      </dl><dl><dt>
-          
-          <code><a href="gridrowcol.html">gridrowcol()</a></code> 
-        </dt>
-        <dd>Complete regular grid analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="mstree.html">mstree()</a></code> 
-        </dt>
-        <dd>Minimal Spanning Tree</dd>
-      </dl><dl><dt>
-          
-          <code><a href="bicenter.wt.html">bicenter.wt()</a></code> 
-        </dt>
-        <dd>Double Weighted Centring</dd>
+        <dd>Elimination of Duplicated Rows in a Array</dd>
       </dl></div><div class="section level2">
       <h2 id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a></h2>
       
@@ -1548,223 +1849,6 @@ by geographical isolation and host specialization</dd>
         </dt>
         <dd>Road distances in New-Zealand</dd>
       </dl></div><div class="section level2">
-      <h2 id="graphics">Graphics<a class="anchor" aria-label="anchor" href="#graphics"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="add.scatter.html">add.scatter()</a></code> <code><a href="add.scatter.html">add.scatter.eig()</a></code> 
-        </dt>
-        <dd>Add graphics to an existing plot</dd>
-      </dl><dl><dt>
-          
-          <code><a href="area.plot.html">area.plot()</a></code> <code><a href="area.plot.html">area2poly()</a></code> <code><a href="area.plot.html">poly2area()</a></code> <code><a href="area.plot.html">area2link()</a></code> <code><a href="area.plot.html">area.util.contour()</a></code> <code><a href="area.plot.html">area.util.xy()</a></code> 
-        </dt>
-        <dd>Graphical Display of Areas</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.html">kplot()</a></code> 
-        </dt>
-        <dd>Generic Function for Multiple Graphs in a K-tables Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="dotcircle.html">dotcircle()</a></code> 
-        </dt>
-        <dd>Representation of n values on a circle</dd>
-      </dl><dl><dt>
-          
-          <code><a href="kplot.sepan.html">kplot(<i>&lt;sepan&gt;</i>)</a></code> <code><a href="kplot.sepan.html">kplotsepan.coa()</a></code> 
-        </dt>
-        <dd>Multiple Graphs for Separated Analyses in a K-tables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.hist.html">s.hist()</a></code> 
-        </dt>
-        <dd>Display of a scatterplot and its two marginal histograms</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.match.class.html">s.match.class()</a></code> 
-        </dt>
-        <dd>Scatterplot of two sets of coordinates and a partionning into classes</dd>
-      </dl><dl><dt>
-          
-          <code><a href="scatter.html">scatter()</a></code> <code><a href="scatter.html">biplot(<i>&lt;dudi&gt;</i>)</a></code> <code><a href="scatter.html">screeplot(<i>&lt;dudi&gt;</i>)</a></code> 
-        </dt>
-        <dd>Graphical representation of the outputs of a multivariate analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="scatterutil.html">scatterutil</a></code> <code><a href="scatterutil.html">scatterutil.base</a></code> <code><a href="scatterutil.html">scatterutil.sco</a></code> <code><a href="scatterutil.html">scatterutil.chull</a></code> <code><a href="scatterutil.html">scatterutil.eigen</a></code> <code><a href="scatterutil.html">scatterutil.ellipse</a></code> <code><a href="scatterutil.html">scatterutil.eti.circ</a></code> <code><a href="scatterutil.html">scatterutil.eti</a></code> <code><a href="scatterutil.html">scatterutil.grid</a></code> <code><a href="scatterutil.html">scatterutil.legend.bw.square</a></code> <code><a href="scatterutil.html">scatterutil.legend.square.grey</a></code> <code><a href="scatterutil.html">scatterutil.legendgris</a></code> <code><a href="scatterutil.html">scatterutil.scaling</a></code> <code><a href="scatterutil.html">scatterutil.star</a></code> <code><a href="scatterutil.html">scatterutil.sub</a></code> <code><a href="scatterutil.html">scatterutil.convrot90</a></code> 
-        </dt>
-        <dd>Graphical utility functions</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.logo.html">s.logo()</a></code> 
-        </dt>
-        <dd>Representation of an object in a graph by a picture</dd>
-      </dl><dl><dt>
-          
-          <code><a href="sco.boxplot.html">sco.boxplot()</a></code> 
-        </dt>
-        <dd>Representation of the link between a variable and a set of qualitative variables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="sco.class.html">sco.class()</a></code> 
-        </dt>
-        <dd>1D plot of a numeric score and a factor with labels</dd>
-      </dl><dl><dt>
-          
-          <code><a href="sco.label.html">sco.label()</a></code> 
-        </dt>
-        <dd>1D plot of a numeric score with labels</dd>
-      </dl><dl><dt>
-          
-          <code><a href="sco.match.html">sco.match()</a></code> 
-        </dt>
-        <dd>1D plot of a pair of numeric scores with labels</dd>
-      </dl><dl><dt>
-          
-          <code><a href="table.cont.html">table.cont()</a></code> 
-        </dt>
-        <dd>Plot of Contingency Tables</dd>
-      </dl><dl><dt>
-          
-          <code><a href="table.paint.html">table.paint()</a></code> 
-        </dt>
-        <dd>Plot of the arrays by grey levels</dd>
-      </dl><dl><dt>
-          
-          <code><a href="table.value.html">table.value()</a></code> 
-        </dt>
-        <dd>Plot of the Arrays</dd>
-      </dl><dl><dt>
-          
-          <code><a href="triangle.plot.html">triangle.plot()</a></code> <code><a href="triangle.plot.html">triangle.biplot()</a></code> 
-        </dt>
-        <dd>Triangular Plotting</dd>
-      </dl><dl><dt>
-          
-          <code><a href="triangle.class.html">triangle.class()</a></code> 
-        </dt>
-        <dd>Triangular Representation and Groups of points</dd>
-      </dl><dl><dt>
-          
-          <code><a href="multiblock.html">summary(<i>&lt;multiblock&gt;</i>)</a></code> <code><a href="multiblock.html">print(<i>&lt;multiblock&gt;</i>)</a></code> 
-        </dt>
-        <dd>Display and summarize multiblock objects</dd>
-      </dl><dl><dt>
-          
-          <code><a href="plot.between.html">plot(<i>&lt;between&gt;</i>)</a></code> <code><a href="plot.between.html">print(<i>&lt;between&gt;</i>)</a></code> <code><a href="plot.between.html">plot(<i>&lt;betcoi&gt;</i>)</a></code> <code><a href="plot.between.html">print(<i>&lt;betcoi&gt;</i>)</a></code> <code><a href="plot.between.html">summary(<i>&lt;between&gt;</i>)</a></code> 
-        </dt>
-        <dd>Between-Class Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="plot.within.html">plot(<i>&lt;within&gt;</i>)</a></code> <code><a href="plot.within.html">print(<i>&lt;within&gt;</i>)</a></code> <code><a href="plot.within.html">plot(<i>&lt;witcoi&gt;</i>)</a></code> <code><a href="plot.within.html">print(<i>&lt;witcoi&gt;</i>)</a></code> <code><a href="plot.within.html">summary(<i>&lt;within&gt;</i>)</a></code> 
-        </dt>
-        <dd>Within-Class Analysis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.arrow.html">s.arrow()</a></code> 
-        </dt>
-        <dd>Plot of the factorial maps for the projection of a vector basis</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.chull.html">s.chull()</a></code> 
-        </dt>
-        <dd>Plot of the factorial maps with polygons of contour by level of a factor</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.class.html">s.class()</a></code> 
-        </dt>
-        <dd>Plot of factorial maps with representation of point classes</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.corcircle.html">s.corcircle()</a></code> 
-        </dt>
-        <dd>Plot of the factorial maps of a correlation circle</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.distri.html">s.distri()</a></code> 
-        </dt>
-        <dd>Plot of a frequency distribution</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.image.html">s.image()</a></code> 
-        </dt>
-        <dd>Graph of a variable using image and contour</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.kde2d.html">s.kde2d()</a></code> 
-        </dt>
-        <dd>Scatter Plot with Kernel Density Estimate</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.label.html">s.label()</a></code> 
-        </dt>
-        <dd>Scatter Plot</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.match.html">s.match()</a></code> 
-        </dt>
-        <dd>Plot of Paired Coordinates</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.multinom.html">s.multinom()</a></code> 
-        </dt>
-        <dd>Graph of frequency profiles (useful for instance in genetic)</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.traject.html">s.traject()</a></code> 
-        </dt>
-        <dd>Trajectory Plot</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.value.html">s.value()</a></code> 
-        </dt>
-        <dd>Representation of a value in a graph</dd>
-      </dl></div><div class="section level2">
-      <h2 id="utilities">Utilities<a class="anchor" aria-label="anchor" href="#utilities"></a></h2>
-      
-      
-
-      
-    </div><div id="" class="section level2">
-      
-      
-      
-
-      <dl><dt>
-          
-          <code><a href="uniquewt.df.html">uniquewt.df()</a></code> 
-        </dt>
-        <dd>Elimination of Duplicated Rows in a Array</dd>
-      </dl><dl><dt>
-          
-          <code><a href="scatterutil.html">scatterutil</a></code> <code><a href="scatterutil.html">scatterutil.base</a></code> <code><a href="scatterutil.html">scatterutil.sco</a></code> <code><a href="scatterutil.html">scatterutil.chull</a></code> <code><a href="scatterutil.html">scatterutil.eigen</a></code> <code><a href="scatterutil.html">scatterutil.ellipse</a></code> <code><a href="scatterutil.html">scatterutil.eti.circ</a></code> <code><a href="scatterutil.html">scatterutil.eti</a></code> <code><a href="scatterutil.html">scatterutil.grid</a></code> <code><a href="scatterutil.html">scatterutil.legend.bw.square</a></code> <code><a href="scatterutil.html">scatterutil.legend.square.grey</a></code> <code><a href="scatterutil.html">scatterutil.legendgris</a></code> <code><a href="scatterutil.html">scatterutil.scaling</a></code> <code><a href="scatterutil.html">scatterutil.star</a></code> <code><a href="scatterutil.html">scatterutil.sub</a></code> <code><a href="scatterutil.html">scatterutil.convrot90</a></code> 
-        </dt>
-        <dd>Graphical utility functions</dd>
-      </dl><dl><dt>
-          
-          <code><a href="s.logo.html">s.logo()</a></code> 
-        </dt>
-        <dd>Representation of an object in a graph by a picture</dd>
-      </dl><dl><dt>
-          
-          <code><a href="ade4-internal.html">testdiscrimin</a></code> <code><a href="ade4-internal.html">testertrace</a></code> <code><a href="ade4-internal.html">testertracenu</a></code> <code><a href="ade4-internal.html">testertracenubis</a></code> <code><a href="ade4-internal.html">testinter</a></code> <code><a href="ade4-internal.html">testprocuste</a></code> <code><a href="ade4-internal.html">testmantel</a></code> <code><a href="ade4-internal.html">testertracerlq</a></code> <code><a href="ade4-internal.html">testamova</a></code> <code><a href="ade4-internal.html">dudi.type</a></code> <code><a href="ade4-internal.html">fac2disj</a></code> <code><a href="ade4-internal.html">RVrandtestCpp</a></code> <code><a href="ade4-internal.html">RVintrarandtestCpp</a></code> <code><a href="ade4-internal.html">procusterandtestCpp</a></code> <code><a href="ade4-internal.html">testinterCpp</a></code> <code><a href="ade4-internal.html">inerbetweenCpp</a></code> <code><a href="ade4-internal.html">testmantelCpp</a></code> <code><a href="ade4-internal.html">betweenvarCpp</a></code> <code><a href="ade4-internal.html">testdiscriminCpp</a></code> <code><a href="ade4-internal.html">testertraceCpp</a></code> <code><a href="ade4-internal.html">testertracenuCpp</a></code> <code><a href="ade4-internal.html">testertracenubisCpp</a></code> 
-        </dt>
-        <dd>Internal ade4 functions</dd>
-      </dl><dl><dt>
-          
-          <code><a href="ade4.package.html">ade4-package</a></code> <code><a href="ade4.package.html">ade4</a></code> 
-        </dt>
-        <dd>The ade4 package</dd>
-      </dl></div><div class="section level2">
       <h2 id="deprecated">Deprecated<a class="anchor" aria-label="anchor" href="#deprecated"></a></h2>
       
       
@@ -1785,6 +1869,16 @@ by geographical isolation and host specialization</dd>
           <code><a href="multispati.html">multispati()</a></code> <code><a href="multispati.html">plot(<i>&lt;multispati&gt;</i>)</a></code> <code><a href="multispati.html">summary(<i>&lt;multispati&gt;</i>)</a></code> <code><a href="multispati.html">print(<i>&lt;multispati&gt;</i>)</a></code> 
         </dt>
         <dd>Multivariate spatial analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="plot.between.html">plot(<i>&lt;between&gt;</i>)</a></code> <code><a href="plot.between.html">print(<i>&lt;between&gt;</i>)</a></code> <code><a href="plot.between.html">plot(<i>&lt;betcoi&gt;</i>)</a></code> <code><a href="plot.between.html">print(<i>&lt;betcoi&gt;</i>)</a></code> <code><a href="plot.between.html">summary(<i>&lt;between&gt;</i>)</a></code> 
+        </dt>
+        <dd>Between-Class Analysis</dd>
+      </dl><dl><dt>
+          
+          <code><a href="plot.within.html">plot(<i>&lt;within&gt;</i>)</a></code> <code><a href="plot.within.html">print(<i>&lt;within&gt;</i>)</a></code> <code><a href="plot.within.html">plot(<i>&lt;witcoi&gt;</i>)</a></code> <code><a href="plot.within.html">print(<i>&lt;witcoi&gt;</i>)</a></code> <code><a href="plot.within.html">summary(<i>&lt;within&gt;</i>)</a></code> 
+        </dt>
+        <dd>Within-Class Analysis</dd>
       </dl></div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>

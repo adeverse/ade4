@@ -223,6 +223,7 @@ cbindADEg(sc1, sv1 + sd1, plot = TRUE)
 Fig.5 - CA of Doubs fish data table. Left: CA biplot (`method = 3`) where sites are positioned by a unit-variance score (`$l1`) and species by weighted averaging (`$co`). Right: principles of weighted averaging illustrated for the grayling (`Thth`). Sites are represented using the `s.value` function with symbols proportional to the abundance of grayling. The positions are given by `$l1`. Then, the function `s.distri` is used to position the grayling by weighted averaging. The species is represented by a star linking the species to all the sites where it occurs.
 </figcaption>
 
+
 ## Centred PCA (cPCA)
 
 CA outputs do not show the effect of the pollution peak on fishes and the loss of almost all species. This is because CA works on profiles, and therefore removes quantitative differences between sites and between species. CA compares the shape of the profiles, which means that sites (or species) with different fish numbers but with the same profile shape will seem identical. Pollution, by killing almost all the fishes indistinctly has no influence on the shape of the profiles, since all the species are affected in the same way.
@@ -250,6 +251,7 @@ plot(rowSums(doubs$fish), xlab = "Sites", ylab = "Fish number")
 <figcaption align = "center">
 Fig.7 - Total number of fishes in the 30 sites of the `doubs$env` data set.
 </figcaption>
+
 
 ## Standardised and non-centred PCA
 

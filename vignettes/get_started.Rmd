@@ -2,7 +2,7 @@
 
 ## Vignettes
 
-We provide some vignettes to help you get started with ade4. You can also find a list of functions available to users and on our [reference page](file:../reference/index.html).
+We provide some vignettes to help you get started with ade4. You can also find a list of functions available to users on our [reference page](http://sdray.github.io/ade4/reference/index.html).
 
 ## Ressources
 

@@ -51,7 +51,7 @@ We provide some vignettes to help you get started with ade4. You can also find a
 
 ## Ressources
 
-Check out the [ade4 book](https://link.springer.com/book/10.1007/978-1-4939-8850-1) and its [shiny application](https://ade4.shinyapps.io/Book/) for a complete introduction to the package and to rerun the code present in the book. You can also find some papers to help you understand ade4 methods in the ressource section of the website.
+Check out the [ade4 book](https://link.springer.com/book/10.1007/978-1-4939-8850-1) and its [shiny application](https://ade4.shinyapps.io/Book/) for a complete introduction to the package and to rerun the code present in the book. You can also find hereafter some [papers](http://sdray.github.io/ade4/articles/papers.html) to help you understand ade4 methods.
 
 ## Shinyapps
 

@@ -1,4 +1,6 @@
-# ade4 related packages
+---
+title: "Related packages"
+---
 
 ### [adegraphics](https://CRAN.R-project.org/package=adegraphics) : Graphical representation of multivariate data
 

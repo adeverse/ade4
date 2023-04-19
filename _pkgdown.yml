@@ -3,7 +3,7 @@ destination : docs
 
 template:
   bootstrap: 5
-  bootswatch: minty
+  bootswatch: yeti
   
 navbar:
   title: "ade4"
@@ -29,6 +29,8 @@ navbar:
       href: reference/index.html
     - text: "Ressources"
       menu:
+      - text: "ade4 shinyapps"
+        href: https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/ShinyADE4/
       - text: "FAQ"
         href: articles/faq.html
       - text: "adelist"
@@ -112,7 +114,7 @@ reference:
   - fourthcorner2
   - p.adjust.4thcorner
 
-- title: Analysis including catgerical variables (`factor`)
+- title: Analysis including categorical variables (`factor`)
   desc: These functions allows to consider a partition of individuals to focus on or remove differences between groups. 
 - subtitle: Methods
   contents:

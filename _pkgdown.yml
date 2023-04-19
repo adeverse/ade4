@@ -29,6 +29,8 @@ navbar:
       href: reference/index.html
     - text: "Ressources"
       menu:
+      - text: "ade4 shinyapps"
+        href: https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/ShinyADE4/
       - text: "FAQ"
         href: articles/faq.html
       - text: "adelist"

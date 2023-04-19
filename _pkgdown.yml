@@ -3,7 +3,7 @@ destination : docs
 
 template:
   bootstrap: 5
-  bootswatch: minty
+  bootswatch: yeti
   
 navbar:
   title: "ade4"

@@ -8,6 +8,10 @@
 
 If you use ade4, please consider [citing us](http://sdray.github.io/ade4/authors.html#citation) !
 
+<p align="center">
+<img src="https://www.freepnglogos.com/uploads/under-construction-png/under-construction-diy-coming-soon-3.png"  width="20%"> </p >
+<p style="text-align:center"> The documentation of this package is currently under construction. Some sections, such as the FAQ and vignettes, will be completed as time goes on. We apologize for the inconvenience. </p >
+
 # Install *ade4*
 
 To install the development version from github:

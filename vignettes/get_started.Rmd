@@ -1,4 +1,6 @@
-# Getting started with ade4
+---
+title: "Getting started with ade4"
+---
 
 ## Vignettes
 

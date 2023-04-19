@@ -1,10 +1,10 @@
-# Analysis of Ecological Data : Exploratory and Euclidean Methods in Environmental Sciences [(ade4)](http://pbil.univ-lyon1.fr/ADE-4/) <img src="man/figures/logo.svg" align="right" />
+# Analysis of Ecological Data : Exploratory and Euclidean Methods in Environmental Sciences [(*ade4*)](http://pbil.univ-lyon1.fr/ADE-4/) <img src="man/figures/logo.svg" align="right" />
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ade4)](http://cran.r-project.org/package=ade4)
 [![CRAN Downloads](https://cranlogs.r-pkg.org/badges/ade4)](https://cran.r-project.org/package=ade4)
 [![R-CMD-check](https://github.com/sdray/ade4/workflows/R-CMD-check/badge.svg)](https://github.com/sdray/ade4/actions)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Ade4 is originally a software developped at LBBE (Laboratoire de Biométrie et Biologie Évolutive - UMR 5558), University Claude Bernard Lyon 1. It became a R package in 2002.
+*Ade4* is originally a software developped at LBBE (Laboratoire de Biométrie et Biologie Évolutive - UMR 5558), University Claude Bernard Lyon 1. It became a R package in 2002.
 
 If you use ade4, please consider [citing us](http://sdray.github.io/ade4/authors.html#citation) !
 

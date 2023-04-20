@@ -16,4 +16,4 @@ Consider giving a try to our shinyapps developped, to allow you to run an analys
 
 ## Getting help
 
-You can swing by our [FAQ section](file:///C:/Users/suzon/Documents/Cours/Master_bioinformatique/M2/projet/docs/faq.html) to check if your question has already been answered or ask for help on the ade4 mailing list [adelist](https://listes.univ-lyon1.fr/sympa/info/adelist).
+You can swing by our [FAQ section](http://sdray.github.io/ade4/articles/faq.html) to check if your question has already been answered or ask for help on the ade4 mailing list [adelist](https://listes.univ-lyon1.fr/sympa/info/adelist).

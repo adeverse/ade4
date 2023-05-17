@@ -1,0 +1,19 @@
+---
+title: "Bibliographic references"
+---
+
+# Ade4 papers
+
+Here is a list of papers about ade4 package and its methods.
+
+Dray S, Dufour A (2007). “The ade4 Package: Implementing the Duality Diagram for Ecologists.” Journal of Statistical Software, 22(4), 1–20. [doi:10.18637/jss.v022.i04](https://doi.org/10.18637/jss.v022.i04). [PDF](http://pbil.univ-lyon1.fr/ade4/article/jss/jss.pdf)
+
+Bougeard S, Dray S (2018). “Supervised Multiblock Analysis in R with the ade4 Package.” Journal of Statistical Software, 86(1), 1–17. [doi:10.18637/jss.v086.i01](https://doi.org/10.18637/jss.v086.i01).
+
+Chessel D, Dufour A, Thioulouse J (2004). “The ade4 Package – I: One-Table Methods.” R News, 4(1), 5–10. [https://cran.r-project.org/doc/Rnews/](https://cran.r-project.org/doc/Rnews/). [PDF](http://pbil.univ-lyon1.fr/JTHome/ref/ade4-Rnews.pdf)
+
+Dray S, Dufour A, Chessel D (2007). “The ade4 Package – II: Two-Table and K-Table Methods.” R News, 7(2), 47–52. [https://cran.r-project.org/doc/Rnews/](https://cran.r-project.org/doc/Rnews/). [PDF](http://pbil.univ-lyon1.fr/ade4/article/rnews2/rnews2.pdf)
+
+Thioulouse, J., D. Chessel, S. Dolédec, and J. M. Olivier. (1997). ADE-4: a multivariate analysis and graphical display software. Statistics and Computing 7:75-83. [doi:10.1023/A:1018513530268](https://doi.org/10.1023/A:1018513530268). [PDF](http://pbil.univ-lyon1.fr/JTHome/ref/sc070108.pdf)
+
+# [Published papers citing ade4](https://scholar.google.com/scholar?scisbd=2&q=ade4&hl=fr&as_sdt=0,5)

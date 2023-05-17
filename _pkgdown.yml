@@ -1,0 +1,514 @@
+url: ~
+destination : docs
+
+template:
+  bootstrap: 5
+  bootswatch: yeti
+  
+navbar:
+  title: "ade4"
+  left:
+    - text: "New to ade4 ?"
+      menu:
+      - text: "Installation" 
+        href: articles/install.html
+      - text: "Getting started"
+        href: articles/get_started.html
+    - text: "Vignettes"
+      href: vignettes.html
+      menu:
+      - text: "Environmental variables structures" 
+        href: articles/ChapEnvVarStruct.html
+      - text: "Species structures"
+        href: articles/ChapSpeciesStruct.html
+    - text: "Related packages"
+      href: articles/related.html
+    - text: "News"
+      href: news/index.html
+    - text: "Reference"
+      href: reference/index.html
+    - text: "Ressources"
+      menu:
+      - text: "ade4 shinyapps"
+        href: https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/ShinyADE4/
+      - text: "FAQ"
+        href: articles/faq.html
+      - text: "adelist"
+        href: "https://listes.univ-lyon1.fr/sympa/info/adelist"
+      - text: "Ade4 book"
+        href: articles/book.html
+      - text: "Papers"
+        href: articles/papers.html        
+  right:
+    - text: "LBBE"
+      icon: fa-leaf
+      href: https://lbbe-web.univ-lyon1.fr/en
+    - icon: fa-github
+      href: https://github.com/sdray/ade4
+
+
+reference:
+
+- title: One-table analysis
+  desc: These functions are designed for the analysis of a single table.
+- subtitle: Methods
+  desc: Functions to run the analysis
+  contents:
+  - dudi.acm
+  - dudi.coa
+  - dudi.dec
+  - dudi.fca
+  - dudi.fpca
+  - dudi.hillsmith
+  - dudi.mix
+  - dudi.nsc
+  - dudi.pca
+  - dudi.pco
+  - pcoscaled
+  - nipals
+- subtitle: Graphics
+  desc: Functions to display the results of the analysis
+  contents:
+  - reciprocal.coa
+  - scatter
+  - scatter.acm
+  - scatter.coa
+  - scatter.dudi
+  - scatter.fca
+  - score
+  - score.acm
+  - score.mix
+  - score.pca
+
+- title: Two-table analysis
+  desc: These functions are designed for the analysis of a pair of tables.
+- subtitle: Methods
+  desc: Functions to run the analysis
+  contents:
+  - coinertia
+  - pcaiv
+  - pcaivortho
+  - procuste
+  - niche
+  - niche.param
+  - varipart
+- subtitle: Tests
+  desc: Functions to evaluate the significance of observed structures
+  contents:
+  - procuste.randtest
+  - procuste.rtest
+  - randtest.coinertia
+  - randtest.pcaiv  
+  - RV.randtest
+  - RV.rtest
+  - RVintra.randtest
+  
+- title: Three-table methods
+  desc: 3-tables methods.
+  contents:
+  - combine.4thcorner
+  - combine.randtest.rlq
+  - fourthcorner.rlq
+  - rlq
+  - fourthcorner
+  - fourthcorner2
+  - p.adjust.4thcorner
+
+- title: Analysis including categorical variables (`factor`)
+  desc: These functions allows to consider a partition of individuals to focus on or remove differences between groups. 
+- subtitle: Methods
+  contents:
+  - bca
+  - bca.coinertia
+  - bca.rlq
+  - bwca.dpcoa
+  - discrimin
+  - discrimin.coa
+  - wca
+  - wca.coinertia
+  - wca.rlq
+  - withinpca
+  - witwit.coa
+  - witwitsepan
+- subtitle: Additional tools
+  contents:
+  - loocv.between
+  - loocv.discrimin
+  - randtest.between
+  - randtest.discrimin
+  - rtest.between
+  - rtest.discrimin
+  
+- title: Management of `dudi` objects
+  desc: These functions provides functionalities to manage objects of the class `dudi` (they can be used on the outputs od several methods to analyze one or two tables for instance).
+  contents:
+  - as.dudi
+  - biplot.dudi
+  - dist.dudi
+  - inertia
+  - inertia.dudi
+  - is.dudi
+  - loocv
+  - reconst
+  - redo.dudi
+  - supcol
+  - suprow
+  - testdim
+    
+- title: K-table analysis
+  desc: Functions designed to manage and analyze data structured in several tables (a.k.a. multitable analysis)
+- subtitle: Methods
+  desc: Functions to run the analysis
+  contents:
+  - costatis
+  - foucart
+  - mdpcoa
+  - mbpls
+  - mbpcaiv
+  - mcoa
+  - mfa
+  - pta
+  - sepan
+  - statico
+  - statis
+- subtitle: Graphics
+  desc: Functions to display the results of the analysis
+  contents:
+  - kplot
+  - kplot.foucart
+  - kplot.mcoa
+  - kplot.mfa
+  - kplot.pta
+  - kplotsepan.coa
+  - kplot.statis
+  - kplotX.mdpcoa
+  - multiblock
+- subtitle: Utilities
+  desc: Functions to manage objects of class `ktab`
+  contents:
+  - col.names
+  - is.ktab
+  - ktab.data.frame
+  - ktab.list.df
+  - ktab.list.dudi
+  - ktab.match2ktabs
+  - ktab.within  
+  - prep.mdpcoa
+  - tab.names
+  - suprow.pta
+- subtitle: Tests
+  desc: Functions to evaluate the significance of observed structures
+  contents:
+  - costatis.randtest
+  - randboot.multiblock
+  - testdim.multiblock
+  - statico.krandtest
+  
+
+- title: Distance methods
+  contents:
+  - cailliez
+  - dist.binary
+  - dist.dudi
+  - dist.ktab
+  - dist.neig
+  - dist.prop
+  - dist.quant
+  - dist.taxo
+  - dudi.pco
+  - kdist
+  - kdist.cor
+  - kdist2ktab
+  - kdisteuclid
+  - ldist.ktab
+  - mantel.randtest
+  - mantel.rtest
+  - mantelkdist
+  - prep.binary
+  - prep.circular
+  - prep.fuzzy
+  - quasieuclid
+  - RVdist.randtest
+  - RVkdist
+  - supdist
+  - table.dist
+  - as.taxo
+  - is.euclid
+  - lingoes
+  - mstree
+  - pcoscaled
+
+- title: Graphics
+  desc: Functions to draw graphics. See functions of the package `adegraphics` for a more flexible implementation based on `lattice`. 
+- subtitle: 1D plot
+  contents: 
+  - sco.boxplot
+  - sco.class
+  - sco.distri
+  - sco.gauss
+  - sco.quant
+  - sco.label
+  - sco.match
+- subtitle: 2D plot
+  contents:
+  - s.arrow
+  - s.chull
+  - s.class
+  - s.corcircle
+  - s.distri
+  - s.hist
+  - s.image
+  - s.kde2d
+  - s.label
+  - s.logo
+  - s.match
+  - s.match.class
+  - s.multinom
+  - s.traject
+  - s.value
+- subtitle: Other types of plot
+  contents:
+  - dotcircle
+  - table.cont
+  - table.dist
+  - table.paint
+  - table.value
+  - triangle.biplot
+  - triangle.class
+  - triangle.plot  
+- subtitle: Utilities
+  desc: These functions are mainly designed for internal use.
+  contents: 
+  - add.scatter
+  - add.scatter.eig
+  - scatterutil.base
+  - scatterutil.chull
+  - scatterutil.convrot90
+  - scatterutil.eigen
+  - scatterutil.ellipse
+  - scatterutil.eti
+  - scatterutil.eti.circ
+  - scatterutil.grid
+  - scatterutil.legend.bw.square
+  - scatterutil.legend.square.grey
+  - scatterutil.legendgris
+  - scatterutil.logo
+  - scatterutil.scaling
+  - scatterutil.sco
+  - scatterutil.star
+  - scatterutil.sub
+
+- subtitle: Diversity
+  desc: Functions focusing on the measurment of diversity. See also the package `adiv` for more functionalities.
+  contents:
+  - amova
+  - apqe
+  - disc
+  - divc
+  - divcmax
+  - dpcoa
+  - originality
+  - randtest.dpcoa
+  - randtest.amova
+  
+- subtitle: Spatial
+  desc: Functions focusing on the analysis of spatial data. See also the package `adespatial` for more functionalities.
+  contents:
+  - gridrowcol
+  - haar2level
+  - mld
+  - mstree
+  - is.orthobasis
+  - orthobasis.circ
+  - orthobasis.haar
+  - orthobasis.line
+  - orthobasis.mat
+  - orthobasis.neig
+  - multispati  
+  - multispati.randtest
+  - multispati.rtest
+  - nb2neig
+  - neig
+  - neig2mat
+  - neig2nb
+  - scores.neig
+  
+  
+- title: Phylogenetic methods
+  desc: These functions allows to manage phylogenetic data. See functions of the package `adephylo` for a more flexible implementation based on `ape` and `phylobase`. 
+  contents:
+  - dotchart.phylog
+  - enum.phylog
+  - gearymoran
+  - hclust2phylog
+  - newick2phylog
+  - phylog.extract
+  - phylog.permut
+  - radial.phylog
+  - symbols.phylog
+  - table.phylog
+  - taxo2phylog
+  - variance.phylog
+  - PI2newick
+  - symbols.phylog
+
+- title: Tests
+  desc: Utilities functions to manage results of randomization procedures.
+  contents:
+  - as.krandboot
+  - as.krandtest
+  - as.krandxval
+  - as.randboot
+  - as.randtest
+  - as.randxval
+  - randboot
+  - randtest
+  - rtest
+
+- title: Misc
+  contents:
+  - ade4-package
+  - acm.burt
+  - acm.disjonctif
+  - adegraphicsLoaded
+  - bicenter.wt
+  - covwt
+  - covfacwt
+  - dagnelie.test
+  - meanfacwt
+  - scalewt
+  - scalefacwt
+  - uniquewt.df
+
+- title: internal
+  contents:
+  - ade4-internal
+  - prep.fuzzy.var
+  - area.plot
+  - area2link
+  - area2poly
+  - poly2area
+
+
+
+
+
+- title: Datasets
+  desc: Datasets available in ade4. You can access them by typing `r data(dataset)`.
+  contents:
+  - abouheif.eg
+  - acacia
+  - aminoacyl
+  - apis108
+  - aravo
+  - ardeche
+  - arrival
+  - atlas
+  - atya
+  - avijons
+  - avimedi
+  - aviurba
+  - bacteria
+  - banque
+  - baran95
+  - bf88
+  - bordeaux
+  - bsetal97
+  - buech
+  - butterfly
+  - capitales
+  - carni19
+  - carni70
+  - carniherbi49
+  - casitas
+  - chatcat
+  - chats
+  - chazeb
+  - chevaine
+  - chickenk
+  - clementines
+  - cnc2003
+  - coleo
+  - corvus
+  - deug
+  - doubs
+  - dunedata
+  - ecg
+  - ecomor
+  - elec88
+  - escopage
+  - euro123
+  - fission
+  - friday87
+  - fruits
+  - ggtortoises
+  - granulo
+  - hdpg
+  - houmousr
+  - housetasks
+  - humDNAm
+  - ichtyo
+  - irishdata
+  - julliot
+  - jv73
+  - kcponds
+  - lascaux
+  - lizards
+  - macaca
+  - macon
+  - macroloire
+  - mafragh
+  - maples
+  - mariages
+  - meau
+  - meaudret
+  - microsatt
+  - mjrochet
+  - mollusc
+  - monde84
+  - morphosport
+  - newick.eg
+  - njplot
+  - olympic
+  - oribatid
+  - ours
+  - palm
+  - pap
+  - pcw
+  - perthi02
+  - piosphere
+  - presid2002
+  - procella
+  - rankrock
+  - rhizobium
+  - rhone
+  - rpjdl
+  - santacatalina
+  - sarcelles
+  - seconde
+  - skulls
+  - steppe
+  - syndicats
+  - t3012
+  - tarentaise
+  - taxo.eg
+  - tintoodiel
+  - tithonia
+  - tortues
+  - toxicity
+  - trichometeo
+  - ungulates
+  - vegtf
+  - veuvage
+  - westafrica
+  - woangers
+  - worksurv
+  - yanomama
+  - zealand
+
+- title: Deprecated
+  contents:
+  - '`Deprecated functions`'
+  - multispati
+  - between
+  - within

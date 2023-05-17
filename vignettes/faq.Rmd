@@ -66,3 +66,6 @@ In simple analysis (e.g., `dudi.pca`), scores for individuals are stored in `$li
 ### How to obtain coordinates for variables?
 In simple analysis (e.g., `dudi.pca`), scores for variables are stored in `$co` element of the returned object
 
+### What are the $l1 and $c1 elements of a dudi ?
+In simple analysis (e.g., `dudi.pca`), the `$c1` element contains the principal axes (aka "loadings" of the variables) and the `$l1` element contains the principal components. The norm of these two elements is equal to 1, which makes them useful for drawing biplots (for example).
+

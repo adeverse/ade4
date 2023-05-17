@@ -10,7 +10,7 @@ These functions are deprecated. See the function \code{multispati} and the metho
 This function ensures a multivariate extension of the univariate method of spatial autocorrelation analysis.
 By accounting for the spatial dependence of data observations and their multivariate covariance simultaneously, 
 complex interactions among many variables are analysed. Using a methodological scheme borrowed from duality diagram 
-analysis, a strategy for the exploratory analysis of spatial pattern in the multivariate is developped.
+analysis, a strategy for the exploratory analysis of spatial pattern in the multivariate is developed.
 }
 \usage{
 multispati(dudi, listw, scannf = TRUE, nfposi = 2, nfnega = 0)

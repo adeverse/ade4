@@ -9,4 +9,3 @@ revdep/
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-^vignettes$

@@ -8,7 +8,7 @@ template:
 navbar:
   title: "ade4"
   left:
-    - text: "New to ade4 ?"
+    - text: "New to ade4?"
       menu:
       - text: "Installation" 
         href: articles/install.html

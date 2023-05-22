@@ -1,8 +1,8 @@
 ---
-title: "*Ade4* book"
+title: "`ade4` book"
 ---
 
-[Multivariate Analysis of Ecological Data with ade4](https://link.springer.com/book/10.1007/978-1-4939-8850-1) is available on Springer website.
+[Multivariate Analysis of Ecological Data with `ade4`](https://link.springer.com/book/10.1007/978-1-4939-8850-1) is available on Springer website.
 
 A part of the R code used in the book is available [here](https://ade4.shinyapps.io/Book/).
 

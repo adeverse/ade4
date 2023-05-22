@@ -5,9 +5,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # [ade4](http://pbil.univ-lyon1.fr/ADE-4/)
-Analysis of Ecological Data : Exploratory and Euclidean Methods in Environmental Sciences
-
-
+Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences
 
 Installing *ade4*
 -------------

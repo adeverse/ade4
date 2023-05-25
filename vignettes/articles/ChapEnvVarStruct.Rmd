@@ -1,11 +1,13 @@
 ---
 title: "Description of environmental variables structures"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Description of environmental variables structures}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
 ## Abstract
 

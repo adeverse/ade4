@@ -1,10 +1,5 @@
 ---
 title: "Description of species structures"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Description of species structures}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ## Abstract

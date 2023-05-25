@@ -8,3 +8,5 @@ ade4.Rproj
 .DS_Store
 revdep/
 docs
+vignettes/*.html
+vignettes/*.R

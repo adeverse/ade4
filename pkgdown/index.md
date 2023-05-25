@@ -12,41 +12,6 @@ If you use `ade4`, please consider [citing us](http://sdray.github.io/ade4/autho
 <img src="https://www.freepnglogos.com/uploads/under-construction-png/under-construction-diy-coming-soon-3.png"  width="20%"> </p >
 <p style="text-align:center"> The documentation of this package is currently under construction. Some sections, such as the FAQ and vignettes, will be completed as time goes on. We apologize for the inconvenience. </p >
 
-# Install *ade4*
-
-To install the development version from github:
-
-1. Install the release version of `remotes` from CRAN with `install.packages("remotes")`.
-
-2. Make sure you have a working development environment.
-    - **Windows**: Install [Rtools](http://cran.r-project.org/bin/windows/Rtools/).
-    - **Mac**: Install Xcode from the Mac App Store.
-    - **Linux**: Install a compiler and various development libraries (details vary across different flavors of Linux).
-
-Then:
-
-```r
-remotes::install_github("sdray/ade4")
-```
-
-The stable version can be installed from CRAN using:
-
-```r
-install.packages("ade4")
-```
-
-Once installed, the package can be loaded using:
-
-```r
-library("ade4")
-```
-
-If you do not wish to install the development environments Rtools (Windows) / XCode (Mac), you can get the binary packages here:
-
-- [**Windows**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/)
-
-- [**macOS**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/)
-
 # Getting started with `ade4`
 
 ## Vignettes

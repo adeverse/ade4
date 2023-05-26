@@ -7,7 +7,13 @@ title: "Installing `ade4`"
 [![R-CMD-check](https://github.com/sdray/ade4/workflows/R-CMD-check/badge.svg)](https://github.com/sdray/ade4/actions)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-To install the development version from github:
+## The stable version can be installed from CRAN using:
+
+```r
+install.packages("ade4")
+```
+
+## To install the development version from github:
 
 1. Install the release version of `remotes` from CRAN with `install.packages("remotes")`.
 
@@ -22,13 +28,7 @@ Then:
 remotes::install_github("sdray/ade4")
 ```
 
-The stable version can be installed from CRAN using:
-
-```r
-install.packages("ade4")
-```
-
-Once installed, the package can be loaded using:
+## Once installed, the package can be loaded using:
 
 ```r
 library("ade4")

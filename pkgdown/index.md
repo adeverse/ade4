@@ -4,13 +4,13 @@
 [![R-CMD-check](https://github.com/sdray/ade4/workflows/R-CMD-check/badge.svg)](https://github.com/sdray/ade4/actions)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-*Ade4* is originally a software developed at LBBE (Laboratoire de Biométrie et Biologie Évolutive - UMR 5558), University Claude Bernard Lyon 1. It became a R package in 2002.
+**ade4** is a software developed in the Biometry and Evolutionary Biology Lab (UMR 5558) - University Lyon 1. It contains **D**ata **A**nalysis functions to analyse **E**cological and **E**nvironmental data in the framework of **E**uclidean **E**xploratory methods, hence the name **ade4**.
 
-If you use `ade4`, please consider [citing us](http://sdray.github.io/ade4/authors.html#citation) !
+If you use **ade4**, please consider citing [these references](http://sdray.github.io/ade4/authors.html#citation) !
 
 <p align="center">
 <img src="https://www.freepnglogos.com/uploads/under-construction-png/under-construction-diy-coming-soon-3.png"  width="20%"> </p >
-<p style="text-align:center"> The documentation of this package is currently under construction. Some sections, such as the FAQ and vignettes, will be completed as time goes on. We apologize for the inconvenience. </p >
+<p style="text-align:center"> This page is currently under construction. Some sections, such as the FAQ and vignettes, will be completed as time goes on. We apologize for the inconvenience. </p >
 
 # Getting started with `ade4`
 

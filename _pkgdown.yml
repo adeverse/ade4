@@ -35,7 +35,7 @@ navbar:
         href: articles/faq.html
       - text: "adelist"
         href: "https://listes.univ-lyon1.fr/sympa/info/adelist"
-      - text: "Ade4 book"
+      - text: "ade4 book"
         href: articles/book.html
       - text: "Papers"
         href: articles/papers.html        

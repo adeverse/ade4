@@ -12,9 +12,9 @@
 
 A book in the *Springer Series in Statistics* collection, [**"Multivariate Analysis of Ecological Data with ade4"**](https://link.springer.com/book/10.1007/978-1-4939-8850-1) presents the package. It is implemented around the mathematical concept of the duality diagram and provides a unified framework for multivariate data analysis. It offers a detailed presentation of the theoretical framework of the **ade4** package and of its application to real-world ecological problems. The organization of the book is based on ecological questions, but these questions correspond to particular classes of data analysis methods. The first chapters present both usual and multiway data analysis methods. Further chapters are dedicated for example to the analysis of spatial data, of phylogenetic structures, and of biodiversity patterns. One chapter deals with multivariate data analysis graphs.
 <p align="center">
-<img src="https://github.com/sdray/ade4/blob/master/vignettes/articles/Book.png"  width="20%">
-<img src="https://github.com/sdray/ade4/blob/master/vignettes/articles/ade4Shiny1.png"  width="40%">
-<img src="https://github.com/sdray/ade4/blob/master/vignettes/articles/ade4Shiny2.png"  width="40%">
+<a href="https://www.springer.com/fr/book/9781493988488"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/Book.png"  width="207" height="312" border="0" alt=""></a>
+<a href="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny1.png"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny1.png"  width="40%"></a>
+<a href="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny2.png"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny2.png"  width="40%"></a>
 </p >
 In each chapter of the book, the basic mathematical definitions of the methods and the outputs of the R functions available in **ade4** are detailed in several boxes. The text of the book itself can be read independently from these boxes. Thus this book offers the opportunity to find information about the ecological situation from which a question raises alongside the mathematical properties of methods that can be applied to answer this question, as well as the details of software outputs. Each example and all the graphs in this book come with [**executable R code**](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/Book/).
 

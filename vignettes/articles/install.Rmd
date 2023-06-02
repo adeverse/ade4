@@ -7,13 +7,13 @@ title: "Installing `ade4`"
 [![R-CMD-check](https://github.com/sdray/ade4/workflows/R-CMD-check/badge.svg)](https://github.com/sdray/ade4/actions)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## The stable version can be installed from CRAN using:
+## The current *stable* version can be installed from CRAN using:
 
 ```r
 install.packages("ade4")
 ```
 
-## To install the development version from github:
+## To install the *development* version from github:
 
 1. Install the release version of `remotes` from CRAN with `install.packages("remotes")`.
 
@@ -22,10 +22,28 @@ install.packages("ade4")
     * **Mac**: Install Xcode from the Mac App Store.
     * **Linux**: Install a compiler and various development libraries (details vary across different flavors of Linux).
 
-Then:
+3. Then you can use the following command:
 
 ```r
 remotes::install_github("sdray/ade4")
+```
+
+**Note:** If you do not wish to install the development environments Rtools (Windows) or XCode (Mac), you can get pre-compiled binary packages here:
+
+* [**Windows**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/)
+
+* [**macOS**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/)
+
+So you can use (for example) the following commands.
+
+* On Windows computers:
+```r
+install.packages("http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/windows/ade4_1.7-22.zip")
+```
+
+* On Mac computers:
+```r
+install.packages("http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/macosxarm/ade4_1.7-22.tgz")
 ```
 
 ## Once installed, the package can be loaded using:
@@ -34,8 +52,3 @@ remotes::install_github("sdray/ade4")
 library("ade4")
 ```
 
-If you do not wish to install the development environments Rtools (Windows) / XCode (Mac), you can get the binary packages here:
-
-* [**Windows**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/)
-
-* [**macOS**](http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/)

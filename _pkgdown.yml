@@ -21,6 +21,8 @@ navbar:
         href: articles/ChapEnvVarStruct.html
       - text: "Species structures"
         href: articles/ChapSpeciesStruct.html
+      - text: "Taking into account groups of sites"
+        href: articles/ChapBetGr.html
     - text: "Related packages"
       href: articles/related.html
     - text: "News"

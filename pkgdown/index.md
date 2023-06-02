@@ -40,6 +40,8 @@ Vignettes are available to help you get started with **ade4** (more to come soon
 
 - [Description of species structures](http://sdray.github.io/ade4/articles/ChapSpeciesStruct.html)
 
+- [Taking into account groups of sites](http://sdray.github.io/ade4/articles/ChapBetGr.html)
+
 ### List of function references
 
 You can also find a list of functions available to users on the [reference page](http://sdray.github.io/ade4/reference/index.html).

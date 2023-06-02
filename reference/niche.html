@@ -30,6 +30,7 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
     <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/ChapSpeciesStruct.html">Species structures</a>
+    <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
   </div>
 </li>
 <li class="nav-item">
@@ -252,24 +253,24 @@ Stéphane Dray <a href="mailto:stephane.dray@univ-lyon1.fr">stephane.dray@univ-l
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   19 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        Test         Obs    Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       Che  2.77316816 -0.1110682 greater   0.45</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2       Hyc  4.44884944 -0.0122368 greater   0.40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3       Hym  0.09548554  0.7910746 greater   0.30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4       Hys  0.63040842 -1.0360667 greater   0.90</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       Psy  0.43447855  9.3888063 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       Aga  1.29116377  5.7389560 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7       Glo  6.17685139  5.9379277 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8       Ath  1.79679264  2.9666269 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9       Cea 12.23859181  5.4407731 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10      Ced  0.87321186  4.4489122 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11      Set  4.28597109  9.6474843 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12      All  0.72091250  1.7342171 greater   0.10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13      Han  1.20620645  0.9291863 greater   0.25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14      Hfo  6.75786236  2.6246775 greater   0.10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15      Hsp  2.89982751  5.8227490 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16      Hve  4.59849113  2.5180221 greater   0.10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17      Sta  0.58873968  4.3961336 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18 OMI.mean  3.04805955  6.4086289 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       Che  2.77316816 -0.2964042 greater   0.50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2       Hyc  4.44884944  0.1807649 greater   0.30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3       Hym  0.09548554  1.1751022 greater   0.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4       Hys  0.63040842 -0.8901515 greater   0.90</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       Psy  0.43447855 11.9429610 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       Aga  1.29116377  4.9512827 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7       Glo  6.17685139 10.7143435 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8       Ath  1.79679264  1.2771926 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9       Cea 12.23859181  5.9263960 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10      Ced  0.87321186  7.9769983 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11      Set  4.28597109 14.0036622 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12      All  0.72091250  1.7083481 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13      Han  1.20620645  1.9292826 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14      Hfo  6.75786236  5.6130005 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15      Hsp  2.89982751  5.3268461 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16      Hve  4.59849113  2.9299073 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17      Sta  0.58873968  2.9662036 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 OMI.mean  3.04805955  6.9083142 greater   0.05</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">rpjdl</span><span class="op">)</span></span></span>

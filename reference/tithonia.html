@@ -30,6 +30,7 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
     <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/ChapSpeciesStruct.html">Species structures</a>
+    <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
   </div>
 </li>
 <li class="nav-item">
@@ -140,20 +141,20 @@ a comparative approach. <em>Evolution</em>, <b>54</b>, 2, 475--484.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   999 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      Test       Obs    Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  morho1 0.7321356  4.8312064 greater  0.006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  morho2 0.3822949  0.3462198 greater  0.331</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  morho3 0.3712126  0.4246652 greater  0.252</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  morho4 0.2572795 -0.9340784 greater  0.800</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  morho5 0.4457180  1.0389793 greater  0.117</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  morho6 0.4089212  0.7532808 greater  0.174</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7   demo7 0.4416215  1.1296057 greater  0.105</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   demo8 0.4822195  1.6226496 greater  0.063</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   demo9 0.3043863 -0.4569090 greater  0.622</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 demo10 0.2744296 -0.8201326 greater  0.802</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 demo11 0.4458932  1.2863166 greater  0.107</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 demo12 0.2640213 -0.9761037 greater  0.881</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 demo13 0.6092138  3.3624473 greater  0.006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 demo14 0.3903768  0.5055148 greater  0.233</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  morho1 0.7321356  5.0158824 greater  0.002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  morho2 0.3822949  0.4120071 greater  0.296</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  morho3 0.3712126  0.3584990 greater  0.267</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  morho4 0.2572795 -0.9356020 greater  0.802</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  morho5 0.4457180  1.1344979 greater  0.107</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  morho6 0.4089212  0.8077786 greater  0.157</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   demo7 0.4416215  1.0222840 greater  0.121</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   demo8 0.4822195  1.6724163 greater  0.060</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   demo9 0.3043863 -0.4339634 greater  0.617</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 demo10 0.2744296 -0.7549102 greater  0.806</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 demo11 0.4458932  1.2945914 greater  0.103</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 demo12 0.2640213 -0.9181249 greater  0.893</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 demo13 0.6092138  3.4907711 greater  0.005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 demo14 0.3903768  0.5445801 greater  0.243</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu"><a href="gearymoran.html">gearymoran</a></span><span class="op">(</span><span class="va">phy</span><span class="op">$</span><span class="va">Amat</span>, <span class="va">tab</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> class: krandtest lightkrandtest </span>
@@ -166,20 +167,20 @@ a comparative approach. <em>Evolution</em>, <b>54</b>, 2, 475--484.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   999 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      Test         Obs    Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  morho1  0.53784586  3.0474575 greater  0.005</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  morho2  0.10046720  0.6183312 greater  0.265</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  morho3  0.07014773  0.3644128 greater  0.336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  morho4 -0.09223746 -0.5698419 greater  0.741</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  morho5  0.35119692  2.1110799 greater  0.034</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  morho6  0.17659490  1.0139518 greater  0.154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7   demo7  0.44981278  2.7304437 greater  0.012</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   demo8  0.25528857  1.3528190 greater  0.104</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   demo9 -0.01050264 -0.1040115 greater  0.508</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 demo10 -0.09660405 -0.5879750 greater  0.683</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 demo11  0.26985310  1.4719050 greater  0.088</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 demo12 -0.19861554 -1.1893931 greater  0.895</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 demo13  0.63572312  3.4892792 greater  0.001</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 demo14  0.05085783  0.2981841 greater  0.382</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  morho1  0.53784586  3.0242586 greater  0.002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  morho2  0.10046720  0.6675920 greater  0.257</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  morho3  0.07014773  0.4398127 greater  0.328</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  morho4 -0.09223746 -0.6214031 greater  0.771</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  morho5  0.35119692  2.0913266 greater  0.033</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  morho6  0.17659490  0.9888545 greater  0.176</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   demo7  0.44981278  2.6764229 greater  0.014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   demo8  0.25528857  1.4315659 greater  0.089</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   demo9 -0.01050264 -0.1172809 greater  0.517</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 demo10 -0.09660405 -0.5978327 greater  0.679</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 demo11  0.26985310  1.4551420 greater  0.088</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 demo12 -0.19861554 -1.1911824 greater  0.895</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 demo13  0.63572312  3.5723380 greater  0.001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 demo14  0.05085783  0.3291447 greater  0.361</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>

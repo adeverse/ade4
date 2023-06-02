@@ -2,6 +2,7 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
+  ChapBetGr: ChapBetGr.html
   ChapEnvVarStruct: ChapEnvVarStruct.html
   ChapSpeciesStruct: ChapSpeciesStruct.html
   book: book.html
@@ -10,5 +11,5 @@ articles:
   papers: papers.html
   related: related.html
   faq: faq.html
-last_built: 2023-05-31T08:33Z
+last_built: 2023-06-02T09:06Z
 

@@ -28,6 +28,7 @@ library(adegraphics)
 
 ```{r, echo = TRUE}
 library(ade4)
+library(adegraphics)
 methods(bca)
 methods(wca)
 ```

@@ -28,6 +28,7 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="external-link dropdown-item" href="https://cran.r-project.org/web/packages/adegraphics/vignettes/adegraphics.html">Graphical representation of multivariate data</a>
     <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/ChapSpeciesStruct.html">Species structures</a>
     <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
@@ -147,7 +148,7 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Shapiro-Wilk normality test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.95664, p-value = 0.002335</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.96637, p-value = 0.01174</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $dim</span>
@@ -158,21 +159,21 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 1.6424352 0.8335736 1.1489009 0.5812641 0.6533181 0.4193325 1.3910663</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [8] 1.0764153 0.5796260 0.8919588 0.6637852 0.8633590 1.4621385 1.4042428</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [15] 1.3293159 0.3997473 0.8186754 0.6223930 0.8061213 0.3854310 2.6506629</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [22] 2.4965718 1.0468963 2.2436408 1.7026997 1.6922557 2.3705096 1.5551572</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [29] 0.4512145 0.7108609 0.3621371 2.1224134 0.6126019 1.9569310 0.9412866</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [36] 1.5812473 0.8770555 0.8999377 2.4122024 0.8117209 0.2330391 1.5070353</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [43] 1.1275769 1.3856404 2.9556172 1.5631121 0.7654822 0.1345167 1.6848388</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [50] 1.5741668 1.5028516 1.9880665 1.5772859 0.8685404 1.6123107 0.5681079</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [57] 1.1322198 1.5316333 0.4079899 0.2404621 1.4372439 1.0611063 1.4709033</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [64] 1.4600653 0.4300632 0.9803009 0.8585169 0.9235040 2.8393054 1.5993587</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [71] 0.8931724 1.8494883 1.2349786 2.8052885 1.0955228 0.8558902 2.1461457</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [78] 0.3982707 0.8167303 0.6963726 1.4132632 1.2776853 1.7298460 3.1384385</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [85] 0.6782328 1.6681678 1.8061427 0.5407062 0.3197567 2.2609178 1.3875935</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [92] 1.4432966 0.9270732 1.4368724 0.3251843 1.0816626 1.3556373 2.0310334</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [99] 0.2699160 0.9922849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 0.4008210 1.1776255 0.6623443 0.8268304 1.3478684 1.8581957 1.3563866</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [8] 1.5131845 1.7713314 0.6608618 0.3076066 0.4186591 1.1608990 0.9904561</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [15] 0.6427957 0.8181496 0.4688408 0.3145254 0.6657938 2.4998912 2.4546832</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [22] 1.8707156 0.9060510 1.2453420 1.0837805 2.3759772 1.8934030 0.6689036</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [29] 2.0188908 1.9757630 2.1854502 2.1638237 0.9585090 0.5104846 1.9383431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [36] 1.9074648 0.6006681 0.6996913 0.5405433 0.6926179 1.4841219 0.3499694</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [43] 1.4942698 0.5757831 0.7609524 0.7469734 1.4510769 0.2464354 1.7470485</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [50] 2.0627467 1.1835844 0.9521071 1.8456401 1.6200484 0.7717651 1.0256698</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [57] 0.9220813 1.3309522 1.6252533 1.6734965 0.8932903 0.8216973 1.3345056</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [64] 1.0471427 0.6179809 1.7910404 2.1769419 2.2409597 1.2591248 2.0224047</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [71] 1.7514519 0.4999599 1.7019045 1.5120792 0.6557168 1.0956462 2.2185104</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [78] 0.5706365 1.3485258 1.8877627 1.2196429 1.7442478 1.6334903 1.8693576</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [85] 1.4700466 1.6718051 1.2725247 1.2239421 0.7826879 0.4627485 1.6615263</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [92] 1.4849050 1.3970360 1.1194460 0.7194050 1.7175276 1.0591981 1.8980957</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [99] 2.2346753 1.6260249</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span> <span class="co"># Example 2: 10 variables, n = 50</span></span></span>
@@ -185,7 +186,7 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Shapiro-Wilk normality test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.97781, p-value = 0.4639</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.9788, p-value = 0.5026</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $dim</span>
@@ -196,13 +197,13 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 3.578404 4.263787 3.103462 3.527919 3.219440 2.348003 2.490448 3.587529</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 3.535955 3.489577 2.128551 2.734819 2.699839 3.511065 2.476924 2.780880</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 3.508852 3.770154 3.205889 3.199050 3.831255 2.132371 4.022579 2.890638</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 2.731185 2.833606 1.801577 2.796372 3.942796 3.040952 3.759753 3.599256</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [33] 4.126348 2.470851 3.012477 2.531753 3.145916 2.023364 2.500465 2.163688</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [41] 2.406960 4.825972 3.064962 3.940907 2.118568 2.959751 2.256232 2.197403</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [49] 2.910672 3.658523</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 2.453511 3.586947 2.896509 2.224004 2.016565 3.393676 2.747412 2.520681</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] 2.696010 3.931090 2.739023 3.168260 3.685184 3.403572 2.818470 2.848615</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] 2.204415 2.736252 3.079037 2.321196 3.784805 2.709860 2.548328 3.230982</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] 3.320482 3.911245 2.444011 3.496484 3.565007 3.313617 3.714980 3.773709</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [33] 3.196540 1.705034 2.834487 2.706208 2.816036 2.612539 2.754396 3.643308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [41] 3.866965 3.017581 4.190098 3.481248 2.429795 3.879378 3.213665 2.827898</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [49] 3.357098 4.044181</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span> <span class="co"># Example 3: 10 variables, n = 100</span></span></span>
@@ -215,7 +216,7 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Shapiro-Wilk normality test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.99223, p-value = 0.8379</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.99235, p-value = 0.846</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $dim</span>
@@ -226,19 +227,19 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 4.724235 4.319079 1.984981 4.054608 4.520809 1.951528 4.123901 2.485002</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [9] 3.013598 2.789583 2.381548 2.414876 3.617634 2.657838 2.394906 3.203368</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [17] 3.469649 3.137265 2.975102 1.431766 2.524043 3.848780 3.141563 2.865103</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [25] 3.338662 2.944737 2.888435 3.978023 2.973063 2.641203 2.489390 3.384032</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [33] 3.288835 2.183471 3.049250 2.584242 3.095295 2.834568 2.260730 3.476024</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [41] 3.930253 3.225327 3.026803 3.180683 3.077369 3.795610 3.170212 3.309668</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [49] 3.102267 3.105156 2.884952 3.069480 2.570306 2.624028 2.328746 3.932688</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [57] 2.347573 3.876515 2.946389 3.479436 3.388576 2.685327 3.284619 3.276427</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [65] 3.301193 2.155496 1.924986 2.637701 2.441744 3.588281 3.930889 3.097933</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [73] 4.502091 2.975153 3.281993 3.055181 2.822023 1.978929 3.501963 2.919273</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [81] 3.563899 3.878228 3.114485 3.412816 2.978031 3.965026 1.931013 3.843818</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [89] 2.964770 3.774832 2.735872 3.875903 2.543938 3.560599 3.185161 2.364002</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [97] 3.103255 2.646074 3.538601 2.035596</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 2.621443 2.364573 3.725018 2.106356 2.662367 3.701618 2.538011 3.065193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [9] 3.022651 2.904188 1.686677 3.879123 2.341109 3.242139 2.671430 3.008384</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [17] 2.427906 3.986797 4.109970 3.100767 2.939084 2.331552 3.504853 3.613647</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [25] 3.731486 2.352393 3.503349 2.423616 2.055727 2.894194 3.120080 3.125488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [33] 4.302799 2.787452 3.048624 2.613461 4.704809 3.484053 2.975541 3.856817</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [41] 3.116642 3.782614 3.347995 2.847453 2.816357 3.380377 2.463734 2.029047</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [49] 2.305564 3.615310 3.558461 3.910656 2.785214 3.144662 2.479179 2.729109</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [57] 2.395161 3.380122 3.485814 3.461883 2.580080 3.648457 2.646461 2.329249</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [65] 3.810617 2.106504 3.558764 3.124060 3.286777 2.783419 2.121563 4.445683</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [73] 3.543857 2.708229 4.581747 2.001756 3.634506 3.771043 3.010629 3.763314</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [81] 3.164376 2.794852 2.570693 3.341163 3.128960 3.391113 2.708725 2.767224</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [89] 3.197639 4.245096 2.351181 3.602302 3.443308 1.666955 3.017758 3.151935</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [97] 3.268928 3.212731 2.779849 3.488153</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span> <span class="co"># Plot a histogram of the Mahalanobis distances</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">out</span><span class="op">$</span><span class="va">D</span><span class="op">)</span></span></span>
@@ -254,7 +255,7 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Shapiro-Wilk normality test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.73149, p-value = 3.183e-08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.78297, p-value = 3.631e-07</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $dim</span>
@@ -265,14 +266,14 @@ The null hypothesis (H0) is that the data are multinormal, a situation where the
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1.1119619 2.8340975 1.0488944 2.1019575 1.0952764 0.8687863 6.4844895</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 6.8750651 1.0768214 0.9169620 1.0745775 3.1258258 1.4007788 2.8567446</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [15] 6.3052219 0.9879229 0.8613514 3.2717380 0.9267343 4.6689014 6.2641898</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [22] 1.4969683 0.9530789 1.6365130 1.1628773 3.0357447 0.8640623 1.1130126</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [29] 1.5588285 1.9775460 1.0092079 2.3451078 2.1484188 6.9264664 0.9462035</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [36] 0.8155212 2.3555688 0.8439690 0.9860041 0.8368564 4.4504434 0.9989624</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [43] 0.9709481 6.7366756 6.4366848 6.2961032 0.8437488 0.8571891 1.0966901</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [50] 1.6256230</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.9019892 2.1657873 0.9413942 4.7374299 0.7500376 2.6389591 1.0477694</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.9783825 0.9439240 1.8918101 0.8562800 1.8502033 1.4903669 3.5193788</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [15] 0.9523627 0.7395873 6.7524437 6.9239997 2.8017933 2.4370130 1.7407354</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [22] 1.0890483 0.8660267 0.8734036 5.3967613 0.9784546 1.4182014 1.0911359</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [29] 4.6332709 0.9846193 5.8233647 0.9135681 0.9954655 3.3688561 5.5869707</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [36] 2.7209993 6.7444355 3.4469278 0.9376716 0.9824854 5.9308313 1.0263802</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [43] 0.8190967 5.0694557 0.8610098 2.4288316 0.8628018 1.7433386 6.2521278</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [50] 1.0446059</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span> <span class="co"># Plot a histogram of the Mahalanobis distances</span></span></span>
 <span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">out</span><span class="op">$</span><span class="va">D</span><span class="op">)</span></span></span>

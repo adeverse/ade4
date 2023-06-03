@@ -52,6 +52,7 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="external-link dropdown-item" href="https://cran.r-project.org/web/packages/adegraphics/vignettes/adegraphics.html">Graphical representation of multivariate data</a>
     <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/ChapSpeciesStruct.html">Species structures</a>
     <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
@@ -449,14 +450,14 @@ be obtained by displaying the <code>rtbetsite</code> object. By default,
 <span><span class="co">#&gt; Observation: 0.4412974 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Based on 999 replicates</span></span>
-<span><span class="co">#&gt; Simulated p-value: 0.004 </span></span>
+<span><span class="co">#&gt; Simulated p-value: 0.002 </span></span>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt;  3.62502569  0.21777904  0.00380193</span></span></code></pre>
+<span><span class="co">#&gt; 3.636205745 0.215846267 0.003844217</span></span></code></pre>
 <p>The observed value of the criterion is equal to 0.4413, which means
 that 44% of the total inertia comes from the differences between sites.
-The simulated <em>p</em>-value is equal to 0.004, which means that the
+The simulated <em>p</em>-value is equal to 0.002, which means that the
 difference between sites is highly significant.</p>
 <p>The following histogram shows the distribution of the values of the
 criterion computed on permuted tables. The observed value for the
@@ -656,7 +657,7 @@ object. By default, 999 permutations are performed.</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;      Std.Obs  Expectation     Variance </span></span>
-<span><span class="co">#&gt; 5.7140117419 0.1303043879 0.0004775717</span></span></code></pre>
+<span><span class="co">#&gt; 5.7860445344 0.1300830004 0.0004674078</span></span></code></pre>
 <p>The observed value of the criterion is equal to 0.2552, which means
 that 26% of the total inertia comes from the differences between
 seasons. The simulated <em>p</em>-value is equal to 0.001, which means

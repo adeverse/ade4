@@ -28,6 +28,7 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="external-link dropdown-item" href="https://cran.r-project.org/web/packages/adegraphics/vignettes/adegraphics.html">Graphical representation of multivariate data</a>
     <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/ChapSpeciesStruct.html">Species structures</a>
     <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
@@ -132,11 +133,11 @@ Chapman and Hall, London, 1--281.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Observation: 0.2999879 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Based on 99 replicates</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simulated p-value: 0.07 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simulated p-value: 0.06 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Alternative hypothesis: greater </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Std.Obs Expectation    Variance </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1.71401284  0.01209522  0.02821195 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      Std.Obs  Expectation     Variance </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1.750476825 -0.002708262  0.029902060 </span>
 <span class="r-in"><span>    <span class="va">t1</span> <span class="op">&lt;-</span> <span class="fu"><a href="procuste.rtest.html">procuste.rtest</a></span><span class="op">(</span><span class="fu"><a href="pcoscaled.html">pcoscaled</a></span><span class="op">(</span><span class="va">gen</span><span class="op">)</span>, <span class="fu"><a href="pcoscaled.html">pcoscaled</a></span><span class="op">(</span><span class="va">ant</span><span class="op">)</span>, <span class="fl">99</span><span class="op">)</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">t1</span>, main <span class="op">=</span> <span class="st">"gen-ant-procuste"</span><span class="op">)</span> ; <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">t1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Monte-Carlo test</span>
@@ -149,7 +150,7 @@ Chapman and Hall, London, 1--281.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Alternative hypothesis: greater </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     Std.Obs Expectation    Variance </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3.503724172 0.550463306 0.001407307 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3.522063350 0.548338622 0.001438079 </span>
 <span class="r-in"><span>    <span class="va">t1</span> <span class="op">&lt;-</span> <span class="fu"><a href="RV.rtest.html">RV.rtest</a></span><span class="op">(</span><span class="fu"><a href="pcoscaled.html">pcoscaled</a></span><span class="op">(</span><span class="va">gen</span><span class="op">)</span>, <span class="fu"><a href="pcoscaled.html">pcoscaled</a></span><span class="op">(</span><span class="va">ant</span><span class="op">)</span>, <span class="fl">99</span><span class="op">)</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">t1</span>, main <span class="op">=</span> <span class="st">"gen-ant-RV"</span><span class="op">)</span> ; <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">t1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Monte-Carlo test</span>
@@ -162,7 +163,7 @@ Chapman and Hall, London, 1--281.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Alternative hypothesis: greater </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     Std.Obs Expectation    Variance </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2.555546214 0.254082978 0.004592638 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3.070533382 0.245413550 0.003507751 </span>
 <span class="r-plt img"><img src="yanomama-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>

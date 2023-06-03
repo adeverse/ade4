@@ -34,7 +34,9 @@ If you use **ade4**, please consider citing [these references](http://sdray.gith
 
 ### Vignettes
 
-Vignettes are available to help you get started with **ade4** (more to come soon !):
+Several vignettes are available to help you get started with **ade4** (more to come soon !):
+
+- [Graphical representation of multivariate data](https://cran.r-project.org/web/packages/adegraphics/vignettes/adegraphics.html)
 
 - [Description of environmental variables structures](http://sdray.github.io/ade4/articles/ChapEnvVarStruct.html)
 

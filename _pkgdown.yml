@@ -17,6 +17,8 @@ navbar:
     - text: "Vignettes"
       href: vignettes.html
       menu:
+      - text: "Graphical representation of multivariate data" 
+        href: https://cran.r-project.org/web/packages/adegraphics/vignettes/adegraphics.html
       - text: "Environmental variables structures" 
         href: articles/ChapEnvVarStruct.html
       - text: "Species structures"

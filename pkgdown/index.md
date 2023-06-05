@@ -44,6 +44,8 @@ Several vignettes are available to help you get started with **ade4** (more to c
 
 - [Taking into account groups of sites](http://sdray.github.io/ade4/articles/ChapBetGr.html)
 
+- [Description of species-environment relationships](http://sdray.github.io/ade4/articles/Chap2tables.html)
+
 ### List of function references
 
 You can also find a list of functions available to users on the [reference page](http://sdray.github.io/ade4/reference/index.html).

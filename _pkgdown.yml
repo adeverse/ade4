@@ -25,6 +25,8 @@ navbar:
         href: articles/ChapSpeciesStruct.html
       - text: "Taking into account groups of sites"
         href: articles/ChapBetGr.html
+      - text: "Description of species-environment relationships"
+        href: articles/Chap2tables.html
     - text: "Related packages"
       href: articles/related.html
     - text: "News"

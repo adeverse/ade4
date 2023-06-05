@@ -36,6 +36,7 @@
     <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/ChapSpeciesStruct.html">Species structures</a>
     <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
+    <a class="dropdown-item" href="../articles/Chap2tables.html">Description of species-environment relationships</a>
   </div>
 </li>
 <li class="nav-item">
@@ -188,54 +189,54 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   holm </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Test Stat           Obs    Std.Obs     Alter Pvalue Pvalue.adj  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Aspect / Height    r  -0.045735104 -0.9507437 two-sided   0.36       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Slope / Height    r   0.094917344  1.6461222 two-sided   0.10       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    Form / Height    F  15.219879474  2.4624832   greater   0.04       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   PhysD / Height    r   0.113164322  1.9634213 two-sided   0.05       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5   ZoogD / Height    F  15.227717714  1.0584338   greater   0.16       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    Snow / Height    r  -0.271739531 -6.4046447 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Aspect / Spread    r  -0.044170141 -1.2738902 two-sided   0.16       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   Slope / Spread    r  -0.017325425 -0.5567991 two-sided   0.55       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9    Form / Spread    F   5.548173196  0.2460955   greater   0.34       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10  PhysD / Spread    r  -0.051680330 -1.9450701 two-sided   0.09       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11  ZoogD / Spread    F   0.120114487 -0.8307627   greater   0.94       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12   Snow / Spread    r   0.065634673  0.7122145 two-sided   0.48       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13  Aspect / Angle    r  -0.090837201 -1.6077568 two-sided   0.12       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14   Slope / Angle    r   0.100281966  2.0910021 two-sided   0.03       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15    Form / Angle    F  30.664664234  7.4949679   greater   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16   PhysD / Angle    r   0.221380084  4.1265749 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17   ZoogD / Angle    F  28.051040522  2.6199916   greater   0.04       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18    Snow / Angle    r  -0.269613756 -5.3799970 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19   Aspect / Area    r   0.031237858  0.6677977 two-sided   0.56       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20    Slope / Area    r  -0.003864605 -0.1792168 two-sided   0.91       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21     Form / Area    F  13.609309880  2.3640171   greater   0.06       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22    PhysD / Area    r  -0.134371361 -2.9886683 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23    ZoogD / Area    F  49.672266332 11.8739263   greater   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24     Snow / Area    r  -0.024574466 -0.7563044 two-sided   0.45       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25  Aspect / Thick    r  -0.058466142 -1.6285289 two-sided   0.16       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26   Slope / Thick    r   0.074151819  1.5067489 two-sided   0.13       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27    Form / Thick    F  14.204346501  1.7689117   greater   0.07       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28   PhysD / Thick    r   0.143161734  2.3098408 two-sided   0.03       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29   ZoogD / Thick    F   2.825887968  0.3630591   greater   0.24       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30    Snow / Thick    r  -0.154660144 -1.5935883 two-sided   0.11       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31    Aspect / SLA    r  -0.007694551 -0.1191551 two-sided   0.94       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32     Slope / SLA    r  -0.235864886 -3.9466368 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33      Form / SLA    F 100.787472071 18.2966238   greater   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34     PhysD / SLA    r  -0.275524984 -4.5193612 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35     ZoogD / SLA    F   0.984301951 -0.7957156   greater   0.82       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36      Snow / SLA    r   0.481181824  8.2529362 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37 Aspect / N_mass    r  -0.061575524 -0.9297074 two-sided   0.34       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38  Slope / N_mass    r  -0.201308154 -3.6366292 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39   Form / N_mass    F  70.042280400 13.1976541   greater   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40  PhysD / N_mass    r  -0.212434381 -3.6937732 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41  ZoogD / N_mass    F  10.300092724  0.7885869   greater   0.19       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42   Snow / N_mass    r   0.429271163  8.1085893 two-sided   0.01       0.48  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43   Aspect / Seed    r   0.011598435  0.4188412 two-sided   0.73       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44    Slope / Seed    r   0.077073974  1.6083651 two-sided   0.10       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45     Form / Seed    F   5.561841954  0.2118182   greater   0.29       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46    PhysD / Seed    r   0.078156305  1.2868271 two-sided   0.18       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47    ZoogD / Seed    F   3.369068338  1.6931478   greater   0.10       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48     Snow / Seed    r  -0.177640721 -1.7474389 two-sided   0.10       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Aspect / Height    r  -0.045735104 -0.9250129 two-sided   0.35       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Slope / Height    r   0.094917344  1.9972816 two-sided   0.06       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    Form / Height    F  15.219879474  2.2424688   greater   0.05       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   PhysD / Height    r   0.113164322  1.8688350 two-sided   0.07       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   ZoogD / Height    F  15.227717714  1.6655939   greater   0.08       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    Snow / Height    r  -0.271739531 -2.6604105 two-sided   0.03       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Aspect / Spread    r  -0.044170141 -1.8200726 two-sided   0.08       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   Slope / Spread    r  -0.017325425 -0.5474183 two-sided   0.59       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9    Form / Spread    F   5.548173196  0.1596143   greater   0.33       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  PhysD / Spread    r  -0.051680330 -0.7016794 two-sided   0.48       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11  ZoogD / Spread    F   0.120114487 -0.9824044   greater   0.94       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12   Snow / Spread    r   0.065634673  0.5409905 two-sided   0.59       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13  Aspect / Angle    r  -0.090837201 -1.5780963 two-sided   0.12       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14   Slope / Angle    r   0.100281966  1.7902132 two-sided   0.10       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15    Form / Angle    F  30.664664234  8.7667985   greater   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16   PhysD / Angle    r   0.221380084  4.0360565 two-sided   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17   ZoogD / Angle    F  28.051040522  3.0256555   greater   0.03       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18    Snow / Angle    r  -0.269613756 -2.7757640 two-sided   0.03       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19   Aspect / Area    r   0.031237858  0.6430323 two-sided   0.55       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20    Slope / Area    r  -0.003864605 -0.1310683 two-sided   0.91       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21     Form / Area    F  13.609309880  2.5519103   greater   0.05       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22    PhysD / Area    r  -0.134371361 -2.3726961 two-sided   0.03       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23    ZoogD / Area    F  49.672266332 14.5564713   greater   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24     Snow / Area    r  -0.024574466 -0.7301142 two-sided   0.46       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25  Aspect / Thick    r  -0.058466142 -1.5447295 two-sided   0.10       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26   Slope / Thick    r   0.074151819  1.3422207 two-sided   0.16       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27    Form / Thick    F  14.204346501  1.8952186   greater   0.07       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28   PhysD / Thick    r   0.143161734  2.0579172 two-sided   0.06       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29   ZoogD / Thick    F   2.825887968  0.5099975   greater   0.30       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30    Snow / Thick    r  -0.154660144 -1.3660761 two-sided   0.20       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31    Aspect / SLA    r  -0.007694551 -0.2621557 two-sided   0.81       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32     Slope / SLA    r  -0.235864886 -3.8946580 two-sided   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33      Form / SLA    F 100.787472071 12.5221908   greater   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34     PhysD / SLA    r  -0.275524984 -4.2741328 two-sided   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35     ZoogD / SLA    F   0.984301951 -1.0480090   greater   0.92       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36      Snow / SLA    r   0.481181824  8.4618654 two-sided   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 Aspect / N_mass    r  -0.061575524 -1.2456761 two-sided   0.23       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38  Slope / N_mass    r  -0.201308154 -3.4038291 two-sided   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39   Form / N_mass    F  70.042280400 10.1402968   greater   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40  PhysD / N_mass    r  -0.212434381 -3.8216556 two-sided   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  ZoogD / N_mass    F  10.300092724  0.9395891   greater   0.18       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42   Snow / N_mass    r   0.429271163  8.5581288 two-sided   0.01       0.48  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43   Aspect / Seed    r   0.011598435  0.5726645 two-sided   0.58       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44    Slope / Seed    r   0.077073974  1.4397178 two-sided   0.16       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45     Form / Seed    F   5.561841954  0.1874846   greater   0.29       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46    PhysD / Seed    r   0.078156305  1.3093912 two-sided   0.22       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47    ZoogD / Seed    F   3.369068338 -0.4741215   greater   0.59       1.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48     Snow / Seed    r  -0.177640721 -1.7108226 two-sided   0.10       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 </span>

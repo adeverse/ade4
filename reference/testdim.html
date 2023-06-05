@@ -36,6 +36,7 @@ correlation matrix. The procedure is based on the computation of the RV coeffici
     <a class="dropdown-item" href="../articles/ChapEnvVarStruct.html">Environmental variables structures</a>
     <a class="dropdown-item" href="../articles/ChapSpeciesStruct.html">Species structures</a>
     <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
+    <a class="dropdown-item" href="../articles/Chap2tables.html">Description of species-environment relationships</a>
   </div>
 </li>
 <li class="nav-item">
@@ -160,21 +161,21 @@ correlation matrix. The procedure is based on the computation of the RV coeffici
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   99 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       Test       Obs     Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Axis 1 0.7227847  3.10085121 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Axis 2 0.6037192 -0.50682536 greater   0.66</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3   Axis 3 0.6204901 -0.49871123 greater   0.65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   Axis 4 0.6120704 -0.86383616 greater   0.74</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5   Axis 5 0.7165053  1.02724121 greater   0.16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6   Axis 6 0.8234526  2.47961941 greater   0.03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7   Axis 7 0.6552391  0.09615986 greater   0.46</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   Axis 8 0.7054599  0.30801417 greater   0.40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   Axis 9 0.8914474  4.66620155 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Axis 10 1.0000000  4.65147098 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Axis 1 0.6017364 -0.03114872 greater   0.45</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Axis 2 0.6239240  0.05145773 greater   0.49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   Axis 3 0.5336886 -1.57324414 greater   0.97</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   Axis 4 0.5856762 -0.57321953 greater   0.67</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   Axis 5 0.6293269 -0.10037844 greater   0.47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   Axis 6 0.7317703  1.06507718 greater   0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   Axis 7 0.6861094 -0.22903215 greater   0.54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   Axis 8 0.7749231  2.94746931 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   Axis 9 0.9099842  4.53061527 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Axis 10 1.0000000  4.69965705 greater   0.01</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="va">test1</span><span class="op">$</span><span class="va">nb</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
 <span class="r-in"><span><span class="va">test1</span><span class="op">$</span><span class="va">nb.cor</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">pca2</span> <span class="op">&lt;-</span> <span class="fu"><a href="dudi.pca.html">dudi.pca</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">$</span><span class="va">env</span>,scannf<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">test2</span> <span class="op">&lt;-</span> <span class="fu">testdim</span><span class="op">(</span><span class="va">pca2</span><span class="op">)</span></span></span>
@@ -188,17 +189,17 @@ correlation matrix. The procedure is based on the computation of the RV coeffici
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   none </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation number:   99 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       Test       Obs    Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Axis 1 0.9276029 10.0553286 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Axis 2 0.8765561  6.9567047 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3   Axis 3 0.8195407 -1.2605072 greater   0.91</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   Axis 4 0.7130800  0.8390653 greater   0.19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5   Axis 5 0.7621707  1.7808396 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6   Axis 6 0.7781209  2.8036746 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7   Axis 7 0.8316557  4.8715804 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   Axis 8 0.9641126  5.9903495 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   Axis 9 0.7978495  1.2262473 greater   0.15</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Axis 10 0.9701563  6.9360816 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 Axis 11 1.0000000  9.0765353 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Axis 1 0.9276029  9.4832245 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Axis 2 0.8765561  6.1911886 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   Axis 3 0.8195407 -1.0738005 greater   0.88</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   Axis 4 0.7130800  0.7240439 greater   0.21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   Axis 5 0.7621707  1.8177966 greater   0.08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   Axis 6 0.7781209  2.5874781 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   Axis 7 0.8316557  4.8922128 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   Axis 8 0.9641126  4.9880395 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   Axis 9 0.7978495  1.5085214 greater   0.12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Axis 10 0.9701563  6.9793387 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 Axis 11 1.0000000  7.3522041 greater   0.01</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="va">test2</span><span class="op">$</span><span class="va">nb</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2</span>

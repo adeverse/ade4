@@ -11,21 +11,25 @@
   These functions allow to compute the fourth-corner statistic for abundance or presence-absence data. The fourth-corner statistic has been developed by Legendre et al (1997) and extended in Dray and Legendre (2008). The statistic measures the link between three tables: a table L (n x p) containing the abundances of p species at n sites, a second table R (n x m) containing the measurements of m environmental variables for the n sites, and a third table Q (p x s) describing s species traits for the p species. 
 }
 \usage{
-fourthcorner(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 =
-FALSE, p.adjust.method.G = p.adjust.methods, p.adjust.method.D =
-p.adjust.methods, p.adjust.D = c("global", "levels"), ...)
-fourthcorner2(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 =
-FALSE, p.adjust.method.G = p.adjust.methods, ...)
-\method{print}{4thcorner}(x, varQ = 1:length(x$varnames.Q), varR =
-1:length(x$varnames.R), stat = c("D", "D2"), ...)
+fourthcorner(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 = FALSE, 
+    p.adjust.method.G = p.adjust.methods, p.adjust.method.D = p.adjust.methods, 
+    p.adjust.D = c("global", "levels"), ...)
+
+fourthcorner2(tabR, tabL, tabQ, modeltype = 6, nrepet = 999, tr01 = FALSE, 
+    p.adjust.method.G = p.adjust.methods, ...)
+
+\method{print}{4thcorner}(x, varQ = 1:length(x$varnames.Q), 
+    varR = 1:length(x$varnames.R), stat = c("D", "D2"), ...)
+
 \method{summary}{4thcorner}(object,...)
-\method{plot}{4thcorner}(x, stat = c("D", "D2", "G"), type = c("table",
-"biplot"), xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, col =
-c("lightgrey", "red", "deepskyblue", "purple"), ...)
-fourthcorner.rlq(xtest, nrepet = 999, modeltype = 6, typetest =
-c("axes", "Q.axes", "R.axes"), p.adjust.method.G = p.adjust.methods,
-p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global",
-"levels"), ...)
+
+\method{plot}{4thcorner}(x, stat = c("D", "D2", "G"), type = c("table", "biplot"), 
+    xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, 
+    col = c("lightgrey", "red", "deepskyblue", "purple"), ...)
+
+fourthcorner.rlq(xtest, nrepet = 999, modeltype = 6, 
+    typetest = c("axes", "Q.axes", "R.axes"), p.adjust.method.G = p.adjust.methods, 
+    p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global", "levels"), ...)
 }
 
 \arguments{
@@ -96,22 +100,20 @@ plotted for variables (G) or for cells (D and D2). In the case of
 qualitative / quantitative association, homogeneity (D) or correlation
 (D2) are plotted.
 }
+
 \value{
   The \code{fourthcorner} function returns a a list where:
-  
-  \code{tabD} is a \code{krandtest} object giving the results of tests
-  for cells of the fourth-corner (homogeneity for quant./qual.).
-  \code{tabD2} is a \code{krandtest} object giving the results of tests
-  for cells of the fourth-corner (Pearson r for quant./qual.).
-  \code{tabG} is a \code{krandtest} object giving the results of tests
-  for variables (Pearson's Chi2 for qual./qual.).
-  
+  \itemize{
+  \item \code{tabD} is a \code{krandtest} object giving the results of tests for cells of the fourth-corner (homogeneity for quant./qual.).
+  \item \code{tabD2} is a \code{krandtest} object giving the results of tests for cells of the fourth-corner (Pearson r for quant./qual.).
+  \item \code{tabG} is a \code{krandtest} object giving the results of tests for variables (Pearson's Chi2 for qual./qual.).
+  }
   The \code{fourthcorner2} function returns a list where:
   
-  \code{tabG} is a \code{krandtest} object giving the results of tests for
-  variables.
-  \code{trRLQ} is a \code{krandtest} object giving the results of tests for
-  the multivariate statistic (i.e. equivalent to \code{randtest.rlq} function).
+  \itemize{
+  \item \code{tabG} is a \code{krandtest} object giving the results of tests for variables.
+  \item \code{trRLQ} is a \code{krandtest} object giving the results of tests for the multivariate statistic (i.e. equivalent to \code{randtest.rlq} function).
+  }
 }
 
 \references{ 

@@ -1,4 +1,6 @@
-plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplot"), xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, col = c("lightgrey", "red", "deepskyblue", "purple"),...) {
+plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplot"), 
+                           xax = 1, yax = 2, x.rlq = NULL, alpha = 0.05, 
+                           col = c("lightgrey", "red", "deepskyblue", "purple"), ...) {
     ## function to display the results obtained with the fourthcorner, fourthcorner2 or fourthcorner.rlq functions
     ## biplot available only for D and D2 stats
     

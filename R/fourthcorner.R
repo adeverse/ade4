@@ -1,4 +1,6 @@
-"fourthcorner" <- function(tabR, tabL, tabQ, modeltype = 6,nrepet = 999, tr01 = FALSE, p.adjust.method.G = p.adjust.methods, p.adjust.method.D = p.adjust.methods, p.adjust.D = c("global","levels"), ...) {  
+"fourthcorner" <- function(tabR, tabL, tabQ, modeltype = 6,nrepet = 999, tr01 = FALSE, 
+                           p.adjust.method.G = p.adjust.methods, p.adjust.method.D = p.adjust.methods, 
+                           p.adjust.D = c("global","levels"), ...) {  
   
   ## tabR ,tabL, tabQ are 3 data frames containing the data    
   ## permut.model is the permutational model and can take 6 values (1:6)   6 corresponds to the combination of 2 and 4    

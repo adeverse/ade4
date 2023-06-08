@@ -12,12 +12,12 @@ as.krandxval <- function(RMSEc, RMSEv, quantiles = c(0.25, 0.75), names = colnam
         
     ## compute stats for RMSEc
     res$repRMSEc <- colSums(!is.na(res$RMSEc))
-    res$statsRMSEc <- cbind.data.frame(Mean = colMeans(res$RMSEc, na.rm = TRUE), t(apply(res$RMSEc,2, quantile, probs = quantiles, na.rm = TRUE)))
+    res$statsRMSEc <- cbind.data.frame(Mean = colMeans(res$RMSEc, na.rm = TRUE), t(apply(res$RMSEc,2, stats::quantile, probs = quantiles, na.rm = TRUE)))
     rownames(res$statsRMSEc) <- names
 
     ## compute stats for RMSEv
     res$repRMSEv <- colSums(!is.na(res$RMSEc))
-    res$statsRMSEv <- cbind.data.frame(Mean = colMeans(res$RMSEv, na.rm = TRUE), t(apply(res$RMSEv,2, quantile, probs = quantiles, na.rm = TRUE)))
+    res$statsRMSEv <- cbind.data.frame(Mean = colMeans(res$RMSEv, na.rm = TRUE), t(apply(res$RMSEv,2, stats::quantile, probs = quantiles, na.rm = TRUE)))
     rownames(res$statsRMSEv) <- names
     
     res$call <- call

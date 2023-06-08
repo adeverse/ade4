@@ -4,8 +4,8 @@
 {
     if (!inherits(object, "pta")) 
         stop("Object of type 'pta' expected")
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
     show <- rep(FALSE, 4)
     if (!is.numeric(which.graph) || any(which.graph < 1) || any(which.graph > 
         4)) 
@@ -13,10 +13,10 @@
     show[which.graph] <- TRUE
     if (is.null(mfrow)) {
         mfcol <- c(length(which.tab), length(which.graph))
-        par(mfcol = mfcol)
+        graphics::par(mfcol = mfcol)
     }
-    else par(mfrow = mfrow)
-    par(ask = ask)
+    else graphics::par(mfrow = mfrow)
+    graphics::par(ask = ask)
     if (show[1]) {
         for (ianal in which.tab) {
             coo2 <- object$Tax[object$T4[, 1] == levels(object$T4[,1])[ianal], c(xax, yax)]
@@ -26,7 +26,7 @@
         }
     }
     if (show[2]) {
-        par(mar = c(0.1, 0.1, 0.1, 0.1))
+        graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
         coo1 <- object$li[, c(xax, yax)]
         cootot <- object$Tli[, c(xax, yax)]
         names(cootot) <- names(coo1)
@@ -43,7 +43,7 @@
         }
     }
     if (show[3]) {
-        par(mar = c(0.1, 0.1, 0.1, 0.1))
+        graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
         coo1 <- object$co[, c(xax, yax)]
         cootot <- object$Tco[, c(xax, yax)]
         names(cootot) <- names(coo1)

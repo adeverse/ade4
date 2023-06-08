@@ -142,14 +142,14 @@ kplotX.mdpcoa <- function(object, xax = 1, yax = 2, mfrow = NULL,
     if (!inherits(object, "mdpcoa")) 
         stop("Object of type 'mdpcoa' expected")
 
-    opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
+    opar <- graphics::par(ask = graphics::par("ask"), mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
 
-    on.exit(par(opar))
+    on.exit(graphics::par(opar))
     if (is.null(mfrow)) 
-        mfrow <- n2mfrow(length(which.tab))
-    par(mfrow = mfrow)
+        mfrow <- grDevices::n2mfrow(length(which.tab))
+    graphics::par(mfrow = mfrow)
     if (length(which.tab) > prod(mfrow)) 
-        par(ask = TRUE)
+        graphics::par(ask = TRUE)
     nbloc <- length(object$nX)
 
     increm <- rep(1:nbloc, object$nX)
@@ -197,7 +197,7 @@ prep.mdpcoa <- function(dnaobj, pop, model, ...)
         if(!is.factor(pop)) stop("pop should be a factor")
 
         fun1 <- function(x){
-            sam1 <- model.matrix(~ -1 + pop)
+            sam1 <- stats::model.matrix(~ -1 + pop)
             colnames(sam1) <- levels(pop)
             sam1 <- as.data.frame(sam1)        
             dis1 <- ape::dist.dna(dnaobj[[x]], model[x], ...)                      
@@ -209,7 +209,7 @@ prep.mdpcoa <- function(dnaobj, pop, model, ...)
             sam1 <- apply(sam1, 2, function(x) tapply(x, fprep, sum))
             sam1 <- as.data.frame(sam1)
             rownames(sam1) <- paste("a", 1:nrow(sam1), sep="")           
-            dis1 <- as.dist(as.matrix(dis1)[prepind, prepind])            
+            dis1 <- stats::as.dist(as.matrix(dis1)[prepind, prepind])            
             attributes(dis1)$Labels <- rownames(sam1)
             alleleseq <- dnaobj[[x]][!duplicated(prep)]
             names(alleleseq) <- rownames(sam1)

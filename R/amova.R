@@ -27,7 +27,7 @@ amova <- function(samples, distances = NULL, structures = NULL) {
     # Deductions of the distances between two groups.
     # Deductions of the weight and composition of a group.
         if (!is.null(unit)) {
-            modunit <- model.matrix(~ -1 + unit)
+            modunit <- stats::model.matrix(~ -1 + unit)
             sumcol <- apply(Np, 2, sum)
             Ng <- modunit * sumcol
             lesnoms <- levels(unit)
@@ -192,7 +192,7 @@ amova <- function(samples, distances = NULL, structures = NULL) {
     names(componentsofcovariance) <- c("Sigma", "%")
     rownames(componentsofcovariance) <- sourceofvariation
     call <- match.call()
-    res <- list(call = call, results = results, componentsofcovariance = componentsofcovariance, distances = as.dist(distances), samples = samples, structures = structures)
+    res <- list(call = call, results = results, componentsofcovariance = componentsofcovariance, distances = stats::as.dist(distances), samples = samples, structures = structures)
     f <- Statphi(sigma)
     statphi <- as.data.frame(f)
     names(statphi) <- "Phi"
@@ -206,7 +206,7 @@ amova <- function(samples, distances = NULL, structures = NULL) {
         lesnoms3 <- c("total", names(structures), "total")
     }
     rownames(statphi) <- paste(lesnoms1, lesnoms2, lesnoms3, sep = "-")
-    res <- list(call = call, results = results, componentsofcovariance = componentsofcovariance, statphi = statphi, distances = as.dist(distances), samples = samples, structures = structures)
+    res <- list(call = call, results = results, componentsofcovariance = componentsofcovariance, statphi = statphi, distances = stats::as.dist(distances), samples = samples, structures = structures)
     class(res) <- "amova"
     return(res)
 }

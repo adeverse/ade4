@@ -464,8 +464,8 @@ self-similarity\n")
       
       if(!any(is.na(df))){
         FUN <- function(u){
-          m <- model.matrix(~-1 + as.factor(u))
-          return(dist(m) / sqrt(2))
+          m <- stats::model.matrix(~-1 + as.factor(u))
+          return(stats::dist(m) / sqrt(2))
         }
         lis <- as.list(df)
         res <- lapply(lis, FUN)
@@ -695,7 +695,7 @@ self-similarity\n")
           res[!positions, !positions] <- as.vector(resdis)
           res[positions, ] <- NA
           res[, positions] <- NA
-          return(as.dist(res))
+          return(stats::as.dist(res))
         }
         listdis <- lapply(lis, fun1.FNA)
         
@@ -785,7 +785,7 @@ self-similarity\n")
           res[!positions, !positions] <- as.vector(resdis)
           res[positions, ] <- NA
           res[, positions] <- NA
-          return(as.dist(res))
+          return(stats::as.dist(res))
         }
         listdis <- lapply(lis, fun1.BNA)
         
@@ -999,7 +999,7 @@ self-similarity\n")
     disglobal <- sqrt(mat / nbvar)
   }
   else{
-    disglobal <- as.dist(sqrt(as.matrix(mat) / ntvar))
+    disglobal <- stats::as.dist(sqrt(as.matrix(mat) / ntvar))
   }
   
   attributes(disglobal)$Labels <- d.names
@@ -1577,7 +1577,7 @@ self-similarity\n")
           res[!positions, !positions] <- as.vector(resdis)
           res[positions, ] <- NA
           res[, positions] <- NA
-          return(as.dist(res))
+          return(stats::as.dist(res))
         }
         thedis <- lapply(lis, fun1.F)
         names(thedis) <- attributes(x[[i]])$Labels
@@ -1631,7 +1631,7 @@ self-similarity\n")
           res[!positions, !positions] <- as.vector(resdis)
           res[positions, ] <- NA
           res[, positions] <- NA
-          return(as.dist(res))
+          return(stats::as.dist(res))
         }
         listdis <- lapply(lis, fun1.B)
         funfor0 <- function(x){
@@ -2218,7 +2218,7 @@ self-similarity\n")
             res[!positions, !positions] <- as.vector(resdis)
             res[positions, ] <- NA
             res[, positions] <- NA
-            return(as.dist(res))
+            return(stats::as.dist(res))
           }
           listdis <- lapply(lis, fun1.F)
           funfor0 <- function(x){
@@ -2277,7 +2277,7 @@ self-similarity\n")
             res[!positions, !positions] <- as.vector(resdis)
             res[positions, ] <- NA
             res[, positions] <- NA
-            return(as.dist(res))
+            return(stats::as.dist(res))
           }
           listdis <- lapply(lis, fun1.B)
           funfor0 <- function(x){
@@ -2781,8 +2781,8 @@ self-similarity\n")
           
           if(!any(is.na(df))){
             FUN <- function(u){
-              m <- model.matrix(~-1 + as.factor(u))
-              return(dist(m) / sqrt(2))
+              m <- stats::model.matrix(~-1 + as.factor(u))
+              return(stats::dist(m) / sqrt(2))
             }
             lis <- as.list(df)
             res <- lapply(lis, FUN)
@@ -3012,7 +3012,7 @@ self-similarity\n")
               res[!positions, !positions] <- as.vector(resdis)
               res[positions, ] <- NA
               res[, positions] <- NA
-              return(as.dist(res))
+              return(stats::as.dist(res))
             }
             listdis <- lapply(lis, fun1.F)
             
@@ -3102,7 +3102,7 @@ self-similarity\n")
               res[!positions, !positions] <- as.vector(resdis)
               res[positions, ] <- NA
               res[, positions] <- NA
-              return(as.dist(res))
+              return(stats::as.dist(res))
             }
             listdis <- lapply(lis, fun1.BNA)
             
@@ -3316,7 +3316,7 @@ self-similarity\n")
         disglobal <- sqrt(mat / nbvar)
       }
       else{
-        disglobal <- as.dist(sqrt(as.matrix(mat) / ntvar))
+        disglobal <- stats::as.dist(sqrt(as.matrix(mat) / ntvar))
       }
       
       attributes(disglobal)$Labels <- d.names
@@ -3329,15 +3329,15 @@ self-similarity\n")
   tabvec <- cbind.data.frame(lapply(ldis, as.vector))
   vecglo <- as.vector(disglob)
   if(squared){
-    paircov <- cov(tabvec^2, use = "pairwise.complete.obs")
-    paircor <- cor(tabvec^2, use = "pairwise.complete.obs")
-    glocor <- cor(tabvec^2, vecglo^2, use = "pairwise.complete.obs")
+    paircov <- stats::cov(tabvec^2, use = "pairwise.complete.obs")
+    paircor <- stats::cor(tabvec^2, use = "pairwise.complete.obs")
+    glocor <- stats::cor(tabvec^2, vecglo^2, use = "pairwise.complete.obs")
     colnames(glocor) <- "global distance"
   }
   else{
-    paircov <- cov(tabvec, use = "pairwise.complete.obs")
-    paircor <- cor(tabvec, use = "pairwise.complete.obs")
-    glocor <- cor(tabvec, vecglo, use = "pairwise.complete.obs")     
+    paircov <- stats::cov(tabvec, use = "pairwise.complete.obs")
+    paircor <- stats::cor(tabvec, use = "pairwise.complete.obs")
+    glocor <- stats::cor(tabvec, vecglo, use = "pairwise.complete.obs")     
     colnames(glocor) <- "global distance"
   }
   return(list(paircov = paircov, paircor = paircor, glocor = glocor))

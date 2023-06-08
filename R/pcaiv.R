@@ -4,13 +4,13 @@
             stop("data.frame expected")
         reponse.generic <- x
         begin <- "reponse.generic ~ "
-        fmla <- as.formula(paste(begin, paste(names(df), collapse = "+")))
+        fmla <- stats::as.formula(paste(begin, paste(names(df), collapse = "+")))
         df <- cbind.data.frame(reponse.generic, df)
-        lm0 <- lm(fmla, data = df, weights = weights)
+        lm0 <- stats::lm(fmla, data = df, weights = weights)
         if (use == 0) 
-            return(predict(lm0))
+            return(stats::predict(lm0))
         else if (use == 1) 
-            return(residuals(lm0))
+            return(stats::residuals(lm0))
         else if (use == -1) 
             return(lm0)
         else stop("Non convenient use")
@@ -46,13 +46,13 @@
     row.names(U) <- names(dudi$li)
     names(U) <- names(X$li)
     X$as <- U
-    w <- apply(X$ls, 2, function(x) coefficients(lm.pcaiv(x, 
+    w <- apply(X$ls, 2, function(x) stats::coefficients(lm.pcaiv(x, 
         df, weights, -1)))
     w <- data.frame(w)
     names(w) <- names(X$l1)
     X$fa <- w
-    fmla <- as.formula(paste("~ ", paste(names(df), collapse = "+")))
-    w <- scalewt(model.matrix(fmla, data = df)[,-1], weights) * weights
+    fmla <- stats::as.formula(paste("~ ", paste(names(df), collapse = "+")))
+    w <- scalewt(stats::model.matrix(fmla, data = df)[,-1], weights) * weights
     w <- t(w) %*% as.matrix(X$l1)
     w <- data.frame(w)
     X$cor <- w
@@ -72,15 +72,15 @@
         stop("Non convenient xax")
     if (yax > x$nf) 
         stop("Non convenient yax")
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
-    layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
+    graphics::layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
         respect = TRUE)
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     # modif mail P. Giraudoux 25/10/2004
-    s.arrow(na.omit(x$fa), xax, yax, sub = "Loadings", csub = 2, 
+    s.arrow(stats::na.omit(x$fa), xax, yax, sub = "Loadings", csub = 2, 
         clabel = 1.25)
-    s.arrow(na.omit(x$cor), xax = xax, yax = yax, sub = "Correlation", 
+    s.arrow(stats::na.omit(x$cor), xax = xax, yax = yax, sub = "Correlation", 
         csub = 2, clabel = 1.25)
     s.corcircle(x$as, xax, yax, sub = "Inertia axes", csub = 2)
     s.match(x$li, x$ls, xax, yax, clabel = 1.5, sub = "Scores and predictions", 

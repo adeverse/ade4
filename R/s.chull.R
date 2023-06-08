@@ -5,9 +5,9 @@
     cgrid = 1, pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE) 
 {
     dfxy <- data.frame(dfxy)
-    opar <- par(mar = par("mar"))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    on.exit(graphics::par(opar))
     coo <- scatterutil.base(dfxy = dfxy, xax = xax, yax = yax, 
         xlim = xlim, ylim = ylim, grid = grid, addaxes = addaxes, 
         cgrid = cgrid, include.origin = include.origin, origin = origin, 
@@ -16,13 +16,13 @@
     scatterutil.chull(coo$x, coo$y, fac, optchull = optchull, col=col)
     if (cpoint > 0) 
     	for (i in 1:nlevels(fac)) {
-	        points(coo$x[fac == levels(fac)[i]], coo$y[fac == levels(fac)[i]], pch = 20, cex = par("cex") * cpoint, col=col[i])
+	        graphics::points(coo$x[fac == levels(fac)[i]], coo$y[fac == levels(fac)[i]], pch = 20, cex = graphics::par("cex") * cpoint, col=col[i])
 	    }
     if (clabel > 0) {
         coox <- tapply(coo$x, fac, mean)
         cooy <- tapply(coo$y, fac, mean)
         scatterutil.eti(coox, cooy, label, clabel, coul = col)
     }
-    box()
+    graphics::box()
     invisible(match.call())
 }

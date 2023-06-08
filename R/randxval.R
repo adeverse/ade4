@@ -5,8 +5,8 @@ as.randxval <- function(RMSEc, RMSEv, quantiles = c(0.25, 0.75), call = match.ca
     if(length(RMSEc) != length(RMSEv))
         stop("Both RMSE should be computed on the same number of repetitions")
     
-    res <- list(RMSEc = RMSEc, RMSEv = RMSEv, rep = c(length(na.omit(RMSEc)), length(na.omit(RMSEv))))
-    res$stats <- rbind(quantile(RMSEc, probs = quantiles, na.rm = TRUE), quantile(RMSEv, probs = quantiles, na.rm = TRUE))
+    res <- list(RMSEc = RMSEc, RMSEv = RMSEv, rep = c(length(stats::na.omit(RMSEc)), length(stats::na.omit(RMSEv))))
+    res$stats <- rbind(stats::quantile(RMSEc, probs = quantiles, na.rm = TRUE), stats::quantile(RMSEv, probs = quantiles, na.rm = TRUE))
     res$stats <- cbind(Mean = c(mean(RMSEc), mean(RMSEv)), res$stats)
     rownames(res$stats) <- c("RMSEc", "RMSEv")
     res$call <- call

@@ -9,7 +9,7 @@
         x <- t(t(x) + y)
         x <- (x + t(x))/2
         diag(x) <- 0
-        x <- as.dist(sqrt(abs(x)))
+        x <- stats::as.dist(sqrt(abs(x)))
         attr(x, "Labels") <- row.names(dudi$tab)
         attr(x, "method") <- "DUDI"
         return(x)
@@ -22,7 +22,7 @@
         x <- t(t(x) + y)
         x <- (x + t(x))/2
         diag(x) <- 0
-        x <- as.dist(sqrt(abs(x)))
+        x <- stats::as.dist(sqrt(abs(x)))
         attr(x, "Labels") <- names(dudi$tab)
         attr(x, "method") <- "DUDI"
         return(x)

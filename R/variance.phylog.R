@@ -20,11 +20,11 @@
         if (na.action == "fail") 
             stop(" missing values in 'z'")
         else if (na.action == "mean") 
-            z[is.na(z)] <- mean(na.omit(z))
+            z[is.na(z)] <- mean(stats::na.omit(z))
         else stop("unknown method for 'na.action'")
     }
     res <- list()
-    z <- (z - mean(z))/sqrt(var(z))
+    z <- (z - mean(z))/sqrt(stats::var(z))
     w1 <- sort(names(z))
     w2 <- sort(names(phylog$leaves))
     if (!all(w1 == w2)) {
@@ -34,10 +34,10 @@
     z <- z[names(phylog$leaves)]
     df <- cbind.data.frame(z, phylog$Ascores[, 1:phylog$Adim])
     begin <- paste(names(df)[1], "~", sep = "")
-    fmla <- as.formula(paste(begin, paste(names(df)[-1], collapse = "+")))
-    lm0 <- lm(fmla, data = df)
+    fmla <- stats::as.formula(paste(begin, paste(names(df)[-1], collapse = "+")))
+    lm0 <- stats::lm(fmla, data = df)
     res$lm <- lm0
-    res$anova <- anova(lm0)
+    res$anova <- stats::anova(lm0)
     a1 <- sum(res$anova$"Sum Sq"[1:phylog$Adim])
     df1 <- phylog$Adim
     r1 <- a1/df1
@@ -45,7 +45,7 @@
     df2 <- res$anova$Df[1 + phylog$Adim]
     r2 <- a2/df2
     Fvalue <- r1/r2
-    proba <- 1 - pf(Fvalue, df1, df2)
+    proba <- 1 - stats::pf(Fvalue, df1, df2)
     dig1 <- max(getOption("digits") - 2, 3)
     sumry <- array(0, c(2, 5), list(c("Phylogenetic", "Residuals"), 
         c("Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)")))

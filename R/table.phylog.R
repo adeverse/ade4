@@ -13,8 +13,8 @@
     n.node <- length(node.names)
     if (f.phylog > 0.8) f.phylog <- 0.8
     if (f.phylog < 0.2) f.phylog <- 0.2
-    opar <- par(mai = par("mai"), srt = par("srt"))
-    on.exit(par(opar))
+    opar <- graphics::par(mai = graphics::par("mai"), srt = graphics::par("srt"))
+    on.exit(graphics::par(opar))
     w1 <- sort(row.names(df))
     w2 <- sort(names(phylog$leaves))
     if (!all(w1 == w2)) {
@@ -27,20 +27,20 @@
 
     df <- df[names(phylog$leaves), ]
     # df données phylog structure
-    frame()
+    graphics::frame()
     labels.row <- paste(" ", labels.row, " ", sep = "")
     labels.col <- paste(" ", labels.col, " ", sep = "")
-    cexrow <- par("cex") * clabel.row
+    cexrow <- graphics::par("cex") * clabel.row
     strx <- 0.1
     if (cexrow > 0) {
-        strx <- max( strwidth(labels.row, units = "inches", cex = cexrow))+0.1
+        strx <- max( graphics::strwidth(labels.row, units = "inches", cex = cexrow))+0.1
     }
-    cexcol <- par("cex") * clabel.col
+    cexcol <- graphics::par("cex") * clabel.col
     stry <- 0.1
     if (cexcol > 0) {
-        stry <- max( strwidth(labels.col, units = "inches", cex = cexcol))+0.1
+        stry <- max( graphics::strwidth(labels.col, units = "inches", cex = cexcol))+0.1
     }
-    par(mai = c(0.1, 0.1, stry, strx))
+    graphics::par(mai = c(0.1, 0.1, stry, strx))
     #nc <- ncol(df)
     #x <- 1/2/nc+(0:(nc-1))/nc
     # modif du 06/01/2005 le oaramètre x avait été oublié
@@ -50,34 +50,34 @@
     x <- (1 - f.phylog) * x + f.phylog
     nl <- nrow(df)
     y <- 1/2/nl+((nl-1):0)/nl
-    par(new = TRUE)
-    plot.default(0, 0, type = "n", xlab = "", ylab = "", 
+    graphics::par(new = TRUE)
+    graphics::plot.default(0, 0, type = "n", xlab = "", ylab = "", 
         xaxt = "n", yaxt = "n", xlim = c(-0.075,1), ylim = c(0,1), 
         xaxs = "i", yaxs = "i", frame.plot = FALSE)
     if (cexrow > 0) {
         for (i in 1:length(y)) {
-            text(1.01, y[i], labels.row[i], adj = 0, 
+            graphics::text(1.01, y[i], labels.row[i], adj = 0, 
               cex = cexrow, xpd = NA)
-            segments(1, y[i], 1.01, y[i], xpd = NA)
+            graphics::segments(1, y[i], 1.01, y[i], xpd = NA)
         }
     }
     if (cexcol > 0) {
-        par(srt = 90)
+        graphics::par(srt = 90)
         for (i in 1:length(x)) {
-            text(x[i], 1.01, labels.col[i], adj = 0, 
+            graphics::text(x[i], 1.01, labels.col[i], adj = 0, 
               cex = cexcol, xpd = NA)
-            segments(x[i], 1.0, x[i], 1.01,, xpd = NA)
+            graphics::segments(x[i], 1.0, x[i], 1.01,, xpd = NA)
         }
-        par(srt = 0)
+        graphics::par(srt = 0)
     }
      if (grid) {
         col <- "lightgray"
-        for (i in 1:length(y)) segments(1,y[i], 
+        for (i in 1:length(y)) graphics::segments(1,y[i], 
             f.phylog, y[i], col = col)
-        for (i in 1:length(x)) segments(x[i], 0, 
+        for (i in 1:length(x)) graphics::segments(x[i], 0, 
             x[i], 1, col = col)
     }
-    rect(f.phylog, 0, 1, 1)
+    graphics::rect(f.phylog, 0, 1, 1)
     xtot <- x[col(as.matrix(df))]
     ytot <- y[row(as.matrix(df))]
     coeff <- diff(range(xtot))/15
@@ -87,11 +87,11 @@
     sq <- csize * coeff * sq/w1
     for (i in 1:length(z)) {
         if (sign(z[i]) >= 0) {
-            symbols(xtot[i], ytot[i], squares = sq[i], bg = "black", 
+            graphics::symbols(xtot[i], ytot[i], squares = sq[i], bg = "black", 
                 fg = "white", add = TRUE, inches = FALSE)
         }
         else {
-            symbols(xtot[i], ytot[i], squares = sq[i], bg = "white", 
+            graphics::symbols(xtot[i], ytot[i], squares = sq[i], bg = "white", 
                 fg = "black", add = TRUE, inches = FALSE)
         }
     }
@@ -108,8 +108,8 @@
     x <- dis
     x <- (x/max(x)) * f.phylog
     for (i in 1:n.leave) {
-        segments(f.phylog, y[i], x[i], y[i], col = grey(0.7))
-        points(x[i], y[i], pch = 20, cex = par("cex") * cleaves)
+        graphics::segments(f.phylog, y[i], x[i], y[i], col = grDevices::grey(0.7))
+        graphics::points(x[i], y[i], pch = 20, cex = graphics::par("cex") * cleaves)
     }
     newlab <- as.character(1:length(phylog$nodes))
     newx <- NULL
@@ -125,13 +125,13 @@
         newy[i] <- y[but]
         newx[i] <- x[but]
         b <- range(y[w])
-        segments(x[but], b[1], x[but], b[2])
+        graphics::segments(x[but], b[1], x[but], b[2])
         x1 <- x[w]
         y1 <- y[w]
         x2 <- rep(x[but], length(w))
-        segments(x1, y1, x2, y1)
+        graphics::segments(x1, y1, x2, y1)
      }
-     if (cnodes > 0) points(newx, newy, pch = 21, bg="white", cex = par("cex") * cnodes, xpd=NA)
+     if (cnodes > 0) graphics::points(newx, newy, pch = 21, bg="white", cex = graphics::par("cex") * cnodes, xpd=NA)
      if (clabel.nod>0) (scatterutil.eti(newx,newy,newlab,clabel.nod))
      if (clegend > 0) 
             scatterutil.legend.bw.square(br0, sq0, sig0, clegend)

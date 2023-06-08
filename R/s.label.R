@@ -6,9 +6,9 @@
     area = NULL, add.plot = FALSE) 
 {
     dfxy <- data.frame(dfxy)
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     coo <- scatterutil.base(dfxy = dfxy, xax = xax, yax = yax, 
         xlim = xlim, ylim = ylim, grid = grid, addaxes = addaxes, 
         cgrid = cgrid, include.origin = include.origin, origin = origin, 
@@ -25,15 +25,15 @@
     }
     if (!is.null(neig)) {
         fun <- function(x, coo) {
-            segments(coo$x[x[1]], coo$y[x[1]], coo$x[x[2]], coo$y[x[2]], 
-                lwd = par("lwd") * cneig)
+            graphics::segments(coo$x[x[1]], coo$y[x[1]], coo$x[x[2]], coo$y[x[2]], 
+                lwd = graphics::par("lwd") * cneig)
         }
         apply(unclass(neig), 1, fun, coo = coo)
     }
     if (clabel > 0) 
         scatterutil.eti(coo$x, coo$y, label, clabel, boxes)
     if (cpoint > 0 & clabel < 1e-6) 
-        points(coo$x, coo$y, pch = pch, cex = par("cex") * cpoint)
-    box()
+        graphics::points(coo$x, coo$y, pch = pch, cex = graphics::par("cex") * cpoint)
+    graphics::box()
     invisible(match.call())
 }

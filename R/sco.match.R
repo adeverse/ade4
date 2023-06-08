@@ -16,20 +16,20 @@
     stop("pos.lab should be between 0 and 1")
   
 
-  oldpar <- par(mar=rep(0.1, 4))
-  on.exit(par(oldpar))
+  oldpar <- graphics::par(mar=rep(0.1, 4))
+  on.exit(graphics::par(oldpar))
   res <- scatterutil.sco(score = c(score1,score2), lim = lim, grid = grid, cgrid = cgrid, include.origin = include.origin, origin = origin, sub = sub, csub = csub, horizontal = horizontal, reverse = reverse)
   if(horizontal){
     if(reverse) {
-      points(score1, rep(1- res[3], nval), pch = pch,  cex = par("cex") * cpoint)
-      abline(h=1- wmatch*res[3])
-      points(score2, rep(1- wmatch*res[3], nval), pch = pch,  cex = par("cex") * cpoint)
-      segments(score1,rep(1- res[3], nval),score2,rep(1- wmatch*res[3], nval))
+      graphics::points(score1, rep(1- res[3], nval), pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::abline(h=1- wmatch*res[3])
+      graphics::points(score2, rep(1- wmatch*res[3], nval), pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::segments(score1,rep(1- res[3], nval),score2,rep(1- wmatch*res[3], nval))
     } else {
-      points(score1, rep(res[3], nval), pch = pch,  cex = par("cex") * cpoint)
-      abline(h=wmatch*res[3])
-      points(score2, rep(wmatch*res[3], nval), pch = pch,  cex = par("cex") * cpoint)
-      segments(score1,rep(res[3], nval),score2,rep(wmatch*res[3], nval))
+      graphics::points(score1, rep(res[3], nval), pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::abline(h=wmatch*res[3])
+      graphics::points(score2, rep(wmatch*res[3], nval), pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::segments(score1,rep(res[3], nval),score2,rep(wmatch*res[3], nval))
     }
     if(clabel>0){
       if(is.null(pos.lab))
@@ -44,31 +44,31 @@
       
       for (i in 1:nval)
         {
-          xh <- strwidth(paste(" ", label[order(score2)][i], " ", sep = ""), cex = par("cex") * clabel)
+          xh <- graphics::strwidth(paste(" ", label[order(score2)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
           tmp <- scatterutil.convrot90(xh,0)
           yh <- tmp[2]
           yreg <- res[1] + (res[2] - res[1])/(nval + 1) * i
-          segments(score2[order(score2)][i],pos.elbow ,yreg, pos.lab)
+          graphics::segments(score2[order(score2)][i],pos.elbow ,yreg, pos.lab)
           if(reverse) {
-            segments(score2[order(score2)][i], 1 - wmatch * res[3], score2[order(score2)][i], pos.elbow)
+            graphics::segments(score2[order(score2)][i], 1 - wmatch * res[3], score2[order(score2)][i], pos.elbow)
             scatterutil.eti(yreg, pos.lab - yh/2, label[order(score2)][i], clabel = clabel, boxes = boxes, horizontal = FALSE)
           } else {
-            segments(score2[order(score2)][i], wmatch * res[3], score2[order(score2)][i], pos.elbow)
+            graphics::segments(score2[order(score2)][i], wmatch * res[3], score2[order(score2)][i], pos.elbow)
             scatterutil.eti(yreg, pos.lab + yh/2, label[order(score2)][i], clabel = clabel, boxes = boxes, horizontal = FALSE)
           }
         }
     }
   } else {
     if(reverse){
-      points(rep(1 - res[3], nval), score1, pch = pch,  cex = par("cex") * cpoint)
-      abline(v=1- wmatch*res[3])
-      points(rep(1- wmatch*res[3], nval), score2, pch = pch,  cex = par("cex") * cpoint)
-      segments(rep(1- res[3], nval),score1,rep(1- wmatch*res[3], nval), score2)
+      graphics::points(rep(1 - res[3], nval), score1, pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::abline(v=1- wmatch*res[3])
+      graphics::points(rep(1- wmatch*res[3], nval), score2, pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::segments(rep(1- res[3], nval),score1,rep(1- wmatch*res[3], nval), score2)
     } else {
-      points(rep(res[3], nval), score1, pch = pch,  cex = par("cex") * cpoint)
-      abline(v=wmatch*res[3])
-      points(rep(wmatch*res[3], nval), score2, pch = pch,  cex = par("cex") * cpoint)
-      segments(rep(res[3], nval),score1,rep(wmatch*res[3], nval), score2)
+      graphics::points(rep(res[3], nval), score1, pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::abline(v=wmatch*res[3])
+      graphics::points(rep(wmatch*res[3], nval), score2, pch = pch,  cex = graphics::par("cex") * cpoint)
+      graphics::segments(rep(res[3], nval),score1,rep(wmatch*res[3], nval), score2)
     }
     if(clabel>0){
       if(is.null(pos.lab))
@@ -83,14 +83,14 @@
       
       for (i in 1:nval)
         {
-          xh <- strwidth(paste(" ", label[order(score2)][i], " ", sep = ""), cex = par("cex") * clabel)
+          xh <- graphics::strwidth(paste(" ", label[order(score2)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
           yreg <- res[1] + (res[2] - res[1])/(nval + 1) * i
-          segments(pos.elbow,score2[order(score2)][i],pos.lab ,yreg)
+          graphics::segments(pos.elbow,score2[order(score2)][i],pos.lab ,yreg)
           if(reverse) {
-            segments(1 - wmatch * res[3],score2[order(score2)][i], pos.elbow, score2[order(score2)][i]) 
+            graphics::segments(1 - wmatch * res[3],score2[order(score2)][i], pos.elbow, score2[order(score2)][i]) 
             scatterutil.eti(pos.lab - xh/2, yreg, label[order(score2)][i], clabel = clabel, boxes = boxes, horizontal = TRUE)
           } else {
-            segments(wmatch * res[3],score2[order(score2)][i], pos.elbow, score2[order(score2)][i]) 
+            graphics::segments(wmatch * res[3],score2[order(score2)][i], pos.elbow, score2[order(score2)][i]) 
             scatterutil.eti(pos.lab + xh/2, yreg, label[order(score2)][i], clabel = clabel, boxes = boxes, horizontal = TRUE)
           }        
         }

@@ -4,13 +4,13 @@
 {
     if (!inherits(object, "mfa")) 
         stop("Object of type 'mfa' expected")
-    opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(ask = graphics::par("ask"), mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     if (is.null(mfrow)) 
-        mfrow <- n2mfrow(length(which.tab))
-    par(mfrow = mfrow)
+        mfrow <- grDevices::n2mfrow(length(which.tab))
+    graphics::par(mfrow = mfrow)
     if (length(which.tab) > prod(mfrow)) 
-        par(ask = TRUE)
+        graphics::par(ask = TRUE)
     for (ianal in which.tab) {
         coolig <- object$lisup[object$TL[, 1] == levels(object$TL[,1])[ianal], c(xax, yax)]
         coocol <- object$co[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
@@ -26,7 +26,7 @@
         s.label(coolig, clabel = cl, cpoint = cpoi)
         if (traject) 
             s.traject(coolig, clabel = 0, add.plot = TRUE)
-        born <- par("usr")
+        born <- graphics::par("usr")
         k1 <- min(coocol[, 1])/born[1]
         k2 <- max(coocol[, 1])/born[2]
         k3 <- min(coocol[, 2])/born[3]

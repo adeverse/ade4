@@ -6,9 +6,9 @@
                        contour = NULL, area = NULL, add.plot = FALSE) 
 {
   
-  opar <- par(mar = par("mar"))
-  par(mar = c(0.1, 0.1, 0.1, 0.1))
-  on.exit(par(opar))
+  opar <- graphics::par(mar = graphics::par("mar"))
+  graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+  on.exit(graphics::par(opar))
   dfxy <- data.frame(dfxy)
   if (!is.data.frame(dfxy)) 
     stop("Non convenient selection for dfxy")
@@ -32,7 +32,7 @@
   if (cpoint > 0)
     for (i in 1:ncol(dfdistri)) {
       pch <- rep(pch, length = nrow(dfxy))
-      points(coo$x[dfdistri[,i] > 0], coo$y[dfdistri[,i] > 0], pch = pch[dfdistri[,i] > 0], cex = par("cex") * cpoint, col=coul[i])
+      graphics::points(coo$x[dfdistri[,i] > 0], coo$y[dfdistri[,i] > 0], pch = pch[dfdistri[,i] > 0], cex = graphics::par("cex") * cpoint, col=coul[i])
     }
   if (cstar > 0) 
     for (i in 1:ncol(dfdistri)) {
@@ -45,6 +45,6 @@
     }
   if (clabel > 0) 
     scatterutil.eti(coox, cooy, label, clabel, coul = col)
-  box()
+  graphics::box()
   invisible(match.call())
 }

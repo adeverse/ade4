@@ -34,23 +34,23 @@ function(df1xy, df2xy, fac, wt = rep(1/nrow(df1xy),nrow(df1xy)), xax = 1, yax = 
   if (nrow(df1xy) != nrow(dfdistri)) 
     stop(paste("Non equal row numbers", nrow(df1xy), nrow(dfdistri)))   
   
-  opar <- par(mar = par("mar"))
-  on.exit(par(opar))
-  par(mar = c(0.1, 0.1, 0.1, 0.1))
+  opar <- graphics::par(mar = graphics::par("mar"))
+  on.exit(graphics::par(opar))
+  graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
   coo <- scatterutil.base(dfxy = rbind.data.frame(df1xy, df2xy), 
                           xax = xax, yax = yax, xlim = xlim, ylim = ylim, grid = grid, 
                           addaxes = addaxes, cgrid = cgrid, include.origin = include.origin, 
                           origin = origin, sub = sub, csub = csub, possub = possub, 
                           pixmap = pixmap, contour = contour, area = area, add.plot = add.plot)
   
-  points(cbind(coox1,cooy1),pch=pch1,cex=4 * par("cex") * cpoint,col=col1)
-  points(cbind(coox2,cooy2),pch=pch2,cex=4 * par("cex") * cpoint,col=col2)
+  graphics::points(cbind(coox1,cooy1),pch=pch1,cex=4 * graphics::par("cex") * cpoint,col=col1)
+  graphics::points(cbind(coox2,cooy2),pch=pch2,cex=4 * graphics::par("cex") * cpoint,col=col2)
   coo1=list(x=coo$x[1:n],y=coo$y[1:n])
   coo2=list(x=coo$x[(n+1):(2*n)],y=coo$y[(n+1):(2*n)])
   if (cpoint > 0){
     for (i in 1:ncol(dfdistri)) {
-      points(coo1$x[dfdistri[, i] > 0], coo1$y[dfdistri[, i] > 0], pch = pch1, cex = par("cex") * cpoint, col = col1[i])
-      points(coo2$x[dfdistri[, i] > 0], coo2$y[dfdistri[, i] > 0], pch = pch2, cex = par("cex") * cpoint, col = col2[i])            
+      graphics::points(coo1$x[dfdistri[, i] > 0], coo1$y[dfdistri[, i] > 0], pch = pch1, cex = graphics::par("cex") * cpoint, col = col1[i])
+      graphics::points(coo2$x[dfdistri[, i] > 0], coo2$y[dfdistri[, i] > 0], pch = pch2, cex = graphics::par("cex") * cpoint, col = col2[i])            
     }
   }
   if (cstar > 0) {
@@ -67,7 +67,7 @@ function(df1xy, df2xy, fac, wt = rep(1/nrow(df1xy),nrow(df1xy)), xax = 1, yax = 
   }
   
   for (i in 1:n) {
-    segments(coox1[i], cooy1[i], coox2[i], cooy2[i], lty = 1, lwd=2)
+    graphics::segments(coox1[i], cooy1[i], coox2[i], cooy2[i], lty = 1, lwd=2)
   }
   if (clabel > 0) {
     a <- (coox1 + coox2)/2
@@ -75,7 +75,7 @@ function(df1xy, df2xy, fac, wt = rep(1/nrow(df1xy),nrow(df1xy)), xax = 1, yax = 
     scatterutil.eti(a, b, label, clabel)
   } 
   
-  box()
+  graphics::box()
   invisible(match.call())
 }
 

@@ -117,11 +117,11 @@
     if (yax > x$nf) 
         stop("Non convenient yax")
     fac <- eval.parent(as.list(x$call)$fac)
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
-    layout(matrix(c(1, 1, 3, 1, 1, 4, 2, 2, 5, 2, 2, 6, 8, 8, 
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
+    graphics::layout(matrix(c(1, 1, 3, 1, 1, 4, 2, 2, 5, 2, 2, 6, 8, 8, 
         7), 3, 5), respect = TRUE)
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.class(x$lsR[, c(xax, yax)], fac = fac, sub = "R row scores and classes", csub = 2, 
         clabel = 1.25)
     s.label(x$lQ[, c(xax, yax)], sub = "Q row scores", csub = 2, 

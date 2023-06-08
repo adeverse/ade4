@@ -27,10 +27,10 @@
     #   r <- quantile(x, c(0.25, 0.75)) 
     #   h <- (r[2] - r[1])/1.34 4 * 1.06 * min(sqrt(var(x)), h) * length(x)^(-1/5)
     # } 
-    opar <- par(no.readonly = TRUE)
-    on.exit(par(opar))
+    opar <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(opar))
 
-    par(mar=c(0.1,0.1,0.1,0.1))
+    graphics::par(mar=c(0.1,0.1,0.1,0.1))
     s.label(dfxy, xax = xax, yax = yax, clabel = 0,
     pch = pch, cpoint = cpoint, neig = neig, 
     cneig = cneig, xlim = xlim, ylim = ylim, grid = grid, addaxes = addaxes, 
@@ -40,7 +40,7 @@
     
     x <- as.numeric(dfxy[,xax])
     y <- as.numeric(dfxy[,yax])
-    xykde = kde2d(x, y, lims=par("usr"))
+    xykde = kde2d(x, y, lims=graphics::par("usr"))
     zlim = range(xykde$z, finite = TRUE)
     lev=seq(zlim[1],zlim[2],le=8)
     lev=lev[2:7]
@@ -48,7 +48,7 @@
     # col0 = heat.colors(6)
     # col0 = rainbow(6)
     col0="blue"
-    contour(xykde,add=TRUE,lwd=2,col=col0,levels=lev,drawlabels=FALSE)
+    graphics::contour(xykde,add=TRUE,lwd=2,col=col0,levels=lev,drawlabels=FALSE)
     invisible(match.call())
  }
 

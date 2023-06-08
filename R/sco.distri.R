@@ -15,25 +15,25 @@
         stop("Non convenient match")
     n <- length(score)
     nvar <- ncol(df)
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     ymin <- scoreutil.base(y = score, xlim = xlim, grid = grid, 
         cgrid = cgrid, include.origin = include.origin, origin = origin, 
         sub = sub, csub = csub)
-    ymax <- par("usr")[4]
-    ylabel <- strheight("A", cex = par("cex") * max(1, clabel)) * 
+    ymax <- graphics::par("usr")[4]
+    ylabel <- graphics::strheight("A", cex = graphics::par("cex") * max(1, clabel)) * 
         1.4
-    xmin <- par("usr")[1]
-    xmax <- par("usr")[2]
-    xaxp <- par("xaxp")
+    xmin <- graphics::par("usr")[1]
+    xmax <- graphics::par("usr")[2]
+    xaxp <- graphics::par("xaxp")
     nline <- xaxp[3] + 1
     v0 <- seq(xaxp[1], xaxp[2], le = nline)
     if (grid) {
-        segments(v0, rep(ymin, nline), v0, rep(ymax, nline), 
-            col = gray(0.5), lty = 1)
+        graphics::segments(v0, rep(ymin, nline), v0, rep(ymax, nline), 
+            col = grDevices::gray(0.5), lty = 1)
     }
-    rect(xmin, ymin, xmax, ymax)
+    graphics::rect(xmin, ymin, xmax, ymax)
     sum.col <- apply(df, 2, sum)
     labels <- labels[sum.col > 0]
     df <- df[, sum.col > 0]
@@ -45,7 +45,7 @@
         y.distri <- drop(score %*% as.matrix(df))
         y.distri <- rank(y.distri)
     }
-    ylabel <- strheight("A", cex = par("cex") * max(1, clabel)) * 
+    ylabel <- graphics::strheight("A", cex = graphics::par("cex") * max(1, clabel)) * 
         1.4
     y.distri <- (y.distri - min(y.distri))/(max(y.distri) - min(y.distri))
     y.distri <- ymin + ylabel + (ymax - ymin - 2 * ylabel) * 
@@ -63,18 +63,18 @@
         etiagauche <- TRUE
         if ((x1 - xmin) < (xmax - x2)) 
             etiagauche <- FALSE
-        segments(x1, y0, x2, y0)
+        graphics::segments(x1, y0, x2, y0)
         if (clabel > 0) {
             cha <- labels[i]
-            cex0 <- par("cex") * clabel
-            xh <- strwidth(cha, cex = cex0)
-            xh <- xh + strwidth("x", cex = cex0)
+            cex0 <- graphics::par("cex") * clabel
+            xh <- graphics::strwidth(cha, cex = cex0)
+            xh <- xh + graphics::strwidth("x", cex = cex0)
             if (etiagauche) 
                 x0 <- x1 - xh/2
             else x0 <- x2 + xh/2
-            text(x0, y0, cha, cex = cex0)
+            graphics::text(x0, y0, cha, cex = cex0)
         }
-        points(x.moy, y0, pch = 20, cex = par("cex") * 2)
+        graphics::points(x.moy, y0, pch = 20, cex = graphics::par("cex") * 2)
     }
     res <- as.data.frame(res)
     names(res) <- c("mean","var")

@@ -14,16 +14,16 @@
     stop("factor expected for fac")
 
 
-  oldpar <- par(mar=rep(0.1, 4))
-  on.exit(par(oldpar))
+  oldpar <- graphics::par(mar=rep(0.1, 4))
+  on.exit(graphics::par(oldpar))
   res <- scatterutil.sco(score = score, lim = lim, grid = grid, cgrid = cgrid, include.origin = include.origin, origin = origin, sub = sub, csub = csub, horizontal = horizontal, reverse = reverse)
   ymean <- tapply(score,fac,mean)
   y2 <- rep(0, nlevels(fac))
   if(horizontal){
     if(reverse) {
-      points(score, rep(1- res[3], nval), pch = pch,  cex = par("cex") * cpoint, col=col[fac])
+      graphics::points(score, rep(1- res[3], nval), pch = pch,  cex = graphics::par("cex") * cpoint, col=col[fac])
     } else {
-      points(score, rep(res[3], nval), pch = pch,  cex = par("cex") * cpoint, col=col[fac])
+      graphics::points(score, rep(res[3], nval), pch = pch,  cex = graphics::par("cex") * cpoint, col=col[fac])
     }
     if(clabel>0){
       if(is.null(pos.lab))
@@ -38,7 +38,7 @@
       
       for (i in 1:nlevels(fac))
         {
-          xh <- strwidth(paste(" ", label[order(ymean)][i], " ", sep = ""), cex = par("cex") * clabel)
+          xh <- graphics::strwidth(paste(" ", label[order(ymean)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
           tmp <- scatterutil.convrot90(xh,0)
           yh <- tmp[2]
           y2[i] <- res[1] + (res[2] - res[1])/(nlevels(fac) + 1) * i
@@ -52,19 +52,19 @@
       for (i in 1:nval)
         {
           lev <- which(levels(fac)==fac[i])
-          segments(score[i],pos.elbow ,y2[which(order(ymean)==lev)], pos.lab, col = col[lev])
+          graphics::segments(score[i],pos.elbow ,y2[which(order(ymean)==lev)], pos.lab, col = col[lev])
           if(reverse) {
-            segments(score[i], 1 - res[3], score[i], pos.elbow, col = col[lev])
+            graphics::segments(score[i], 1 - res[3], score[i], pos.elbow, col = col[lev])
           } else {
-            segments(score[i], res[3], score[i], pos.elbow, col = col[lev])
+            graphics::segments(score[i], res[3], score[i], pos.elbow, col = col[lev])
           }
         }
     }
   } else {
     if(reverse){
-      points(rep(1 - res[3], nval), score, pch = pch,  cex = par("cex") * cpoint, col=col[fac])
+      graphics::points(rep(1 - res[3], nval), score, pch = pch,  cex = graphics::par("cex") * cpoint, col=col[fac])
     } else {
-      points(rep(res[3], nval), score, pch = pch,  cex = par("cex") * cpoint, col=col[fac])
+      graphics::points(rep(res[3], nval), score, pch = pch,  cex = graphics::par("cex") * cpoint, col=col[fac])
     }
     if(clabel>0){
       if(is.null(pos.lab))
@@ -79,7 +79,7 @@
       
       for (i in 1:nlevels(fac))
         {
-          xh <- strwidth(paste(" ", label[order(ymean)][i], " ", sep = ""), cex = par("cex") * clabel)
+          xh <- graphics::strwidth(paste(" ", label[order(ymean)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
           y2[i] <- res[1] + (res[2] - res[1])/(nlevels(fac) + 1) * i
           
           if(reverse) {
@@ -91,12 +91,12 @@
       for (i in 1:nval)
         {
           lev <- which(levels(fac)==fac[i])
-          segments(pos.elbow,score[i],pos.lab ,y2[which(order(ymean)==lev)], col = col[lev])
+          graphics::segments(pos.elbow,score[i],pos.lab ,y2[which(order(ymean)==lev)], col = col[lev])
           if(reverse) {
-            segments(1 - res[3],score[i], pos.elbow, score[i], col = col[lev]) 
+            graphics::segments(1 - res[3],score[i], pos.elbow, score[i], col = col[lev]) 
             
           } else {
-            segments(res[3],score[i], pos.elbow, score[i], col = col[lev]) 
+            graphics::segments(res[3],score[i], pos.elbow, score[i], col = col[lev]) 
             
           }        
         }

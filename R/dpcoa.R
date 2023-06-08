@@ -20,7 +20,7 @@ dpcoa <- function (df, dis = NULL, scannf = TRUE, nf = 2, full = FALSE, tol = 1e
     if (is.null(dis)) {
         dis <- (matrix(1, nesp, nesp) - diag(rep(1, nesp))) * sqrt(2)
         rownames(dis) <- colnames(dis) <- names(df)
-        dis <- as.dist(dis)
+        dis <- stats::as.dist(dis)
     }
     if (is.null(attr(dis, "Labels"))) 
         attr(dis, "Labels") <- names(df)
@@ -89,9 +89,9 @@ plot.dpcoa <- function(x, xax = 1, yax = 2, ...) {
         stop("Non convenient xax")
     if (yax > nf)
         stop("Non convenient yax")
-    opar <- par(no.readonly = TRUE)
-    on.exit (par(opar))
-    par(mfrow = c(2,2))
+    opar <- graphics::par(no.readonly = TRUE)
+    on.exit (graphics::par(opar))
+    graphics::par(mfrow = c(2,2))
     s.corcircle(x$c1[, c(xax, yax)], cgrid = 0, 
                 sub = "Principal axes", csub = 1.5, possub = "topleft", fullcircle = TRUE)
     add.scatter.eig(x$eig, length(x$eig), xax, yax, posi = "bottomleft", ratio = 1/4)

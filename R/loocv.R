@@ -83,7 +83,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
         ## Check that jackknifed axes are in the same direction as  original bca axes;
         ## if not, change the sign
         if (nf1 > 1) for (j in 1:nf1)
-            if (cor(jres$c1[,j], x$c1[,j]) < 0) jres$c1[,j] <- -jres$c1[,j]
+            if (stats::cor(jres$c1[,j], x$c1[,j]) < 0) jres$c1[,j] <- -jres$c1[,j]
         U <- as.matrix(jres$c1) * unlist(jres$cw)
         ## Compute #ind1 row coordinates in this BGA and store it in xcoo1:
         return(as.matrix(dudiCall$tab[ind1,]) %*% U)     
@@ -147,7 +147,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
 			## Check that jackknifed axes are in the same direction as  original bca axes;
 			## if not, change the sign
 			if (nf1 > 1) for (j in 1:nf1)
-				if (cor(jres$c1[,j], x$c1[,j]) < 0) jres$c1[,j] <- -jres$c1[,j]
+				if (stats::cor(jres$c1[,j], x$c1[,j]) < 0) jres$c1[,j] <- -jres$c1[,j]
 			U <- as.matrix(jres$c1) * unlist(jres$cw)
 			## Compute #ind1 row coordinates in this BGA and store it in xcoo1:
 			xcoo1[ind1,] <- as.matrix(dudiCall$tab[ind1,]) %*% U
@@ -229,7 +229,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
 	Oijbga <- x$Oij_bca
 	Oijxval <- x$Oij_XVal
 	dOij <- x$DeltaOij
-	par(mfrow=c(2,2))	
+	graphics::par(mfrow=c(2,2))	
 	# Character string: graph title, permutation test p-value and variance ratio
 	pst1 <- paste0("Permutation test p = ", rt1$pvalue, ", Expl.Var = ", round(bca1$ratio, 2), ", Oij = ", round(Oijbga,2))
 	# Draw BGA factor map
@@ -333,7 +333,7 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
         ## Check that jackknifed axes are in the same direction as  original discrimin axes;
         ## if not, change the sign
         for (j in 1:nf1)
-            if (cor(disc2$fa[,j], x$fa[,j]) < 0) disc2$fa[,j] <- -disc2$fa[,j]
+            if (stats::cor(disc2$fa[,j], x$fa[,j]) < 0) disc2$fa[,j] <- -disc2$fa[,j]
         ## Compute #ind1 row coordinates in this discriminant analysis and store it in xcoo1:
         xcoo1[ind1,] <- as.matrix(dudiOrig$tab[ind1,]) %*% as.matrix(disc2$fa)
     }
@@ -413,7 +413,7 @@ loocv.discrimin <- function(x, nax = 0, progress = FALSE, ...)
 	Oijdisc <- x$Oij_disc
 	Oijxval <- x$Oij_XVal
 	dOij <- x$DeltaOij
-	par(mfrow=c(2,2))	
+	graphics::par(mfrow=c(2,2))	
 	# Character string: graph title, permutation test p-value and variance ratio
 	pst1 <- paste0("Permutation test p = ", rt1$pvalue, ", Oij = ", round(Oijdisc,2))
 	# Draw Discrimin factor map
@@ -474,7 +474,7 @@ loocv.dudi <- function(x, progress = FALSE, ...)
         jdudi <- eval.parent(dudiCall)
         ## Check that axes are in the same direction as orignal analysis axes; if not, change the sign
         for (j in 1:nf1)
-            if (cor(jdudi$c1[, j], x$c1[, j]) < 0) jdudi$c1[,j] <- -jdudi$c1[,j]
+            if (stats::cor(jdudi$c1[, j], x$c1[, j]) < 0) jdudi$c1[,j] <- -jdudi$c1[,j]
         
         ## Compute #ind1 row coordinates in the analysis and store it in xcoo1:
         xcoo1[ind1, ] <- as.matrix(x$tab[ind1, , drop = FALSE]) %*% (as.matrix(jdudi$c1) * jdudi$cw)

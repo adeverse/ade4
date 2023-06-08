@@ -14,20 +14,20 @@
         if (length(fac) != length(score)) 
             stop("Not convenient dimensions")
     }
-    opar <- par(mar = par("mar"), mfrow = par("mfrow"))
-    on.exit(par(opar))
-    par(mar = c(2.6, 2.6, 1.1, 1.1))
+    opar <- graphics::par(mar = graphics::par("mar"), mfrow = graphics::par("mfrow"))
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(2.6, 2.6, 1.1, 1.1))
     nfig <- ncol(df)
-    par(mfrow = n2mfrow(nfig))
+    graphics::par(mfrow = grDevices::n2mfrow(nfig))
     for (i in 1:nfig) {
-        plot(score, df[, i], type = "n")
+        graphics::plot(score, df[, i], type = "n")
         if (!is.null(fac)) {
             s.class(cbind.data.frame(score, df[, i]), fac, 
                 axesell = FALSE, add.plot = TRUE, clabel = clabel)
         }
-        else points(score, df[, i])
+        else graphics::points(score, df[, i])
         if (abline) {
-            abline(lm(df[, i] ~ score))
+            graphics::abline(stats::lm(df[, i] ~ score))
         }
         scatterutil.sub(sub[i], csub, possub)
     }

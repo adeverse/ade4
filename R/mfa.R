@@ -129,10 +129,10 @@
         stop("Non convenient xax")
     if (yax > nf) 
         stop("Non convenient yax")
-    opar <- par(mar = par("mar"), mfrow = par("mfrow"), xpd = par("xpd"))
-    on.exit(par(opar))
-    mfrow <- n2mfrow(length(option.plot))
-    par(mfrow = mfrow)
+    opar <- graphics::par(mar = graphics::par("mar"), mfrow = graphics::par("mfrow"), xpd = graphics::par("xpd"))
+    on.exit(graphics::par(opar))
+    mfrow <- grDevices::n2mfrow(length(option.plot))
+    graphics::par(mfrow = mfrow)
     for (j in option.plot) {
         if (j == 1) {
             coolig <- x$lisup[, c(xax, yax)]
@@ -156,10 +156,10 @@
                 ratio = 1/5)
         }
         if (j == 4) {
-            plot(x$link[, c(xax, yax)])
+            graphics::plot(x$link[, c(xax, yax)])
             scatterutil.grid(0)
-            title(main = "Link")
-            par(xpd = TRUE)
+            graphics::title(main = "Link")
+            graphics::par(xpd = TRUE)
             scatterutil.eti(x$link[, xax], x$link[, yax], 
                 label = row.names(x$link), clabel = 1)
         }

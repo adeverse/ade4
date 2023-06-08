@@ -22,7 +22,7 @@ varipart <- function(Y, X, W = NULL, nrepet = 999, type = c("simulated", "parame
     # fast computation of R2/adjusted
     R2test.QR <- function(df){
         df <- data.frame(df)
-        mf <- model.matrix(~., df)
+        mf <- stats::model.matrix(~., df)
         x <- scalewt(mf[, -1, drop = FALSE], scale = FALSE, wt = lw) * sqrt(lw)
         response.generic <- response.generic * wt
         Q <- qr(x, tol = 1e-06)
@@ -51,16 +51,16 @@ varipart <- function(Y, X, W = NULL, nrepet = 999, type = c("simulated", "parame
     
     R2test.lmwfit <- function(df){ 
         df <- data.frame(df)
-        fmla <- as.formula(paste("response.generic ~", paste(names(df), collapse = "+")))
-        mf <- model.frame(fmla, data = cbind.data.frame(response.generic,df))
+        fmla <- stats::as.formula(paste("response.generic ~", paste(names(df), collapse = "+")))
+        mf <- stats::model.frame(fmla, data = cbind.data.frame(response.generic,df))
         mt <- attr(mf,"terms")
-        x <- model.matrix(mt, mf)
+        x <- stats::model.matrix(mt, mf)
         
         ## Fast function for computing sum of squares of the fitted table
-        obs <- sum((lm.wfit(y = response.generic, x = x, w = lw)$fitted.values * wt)^2) 
+        obs <- sum((stats::lm.wfit(y = response.generic, x = x, w = lw)$fitted.values * wt)^2) 
         isim <- c()
         for (i in 1:nrepet)
-            isim[i] <- sum((lm.wfit(y = response.generic, x = x[sample(nrow(x)),], w = lw)$fitted.values * wt)^2) 
+            isim[i] <- sum((stats::lm.wfit(y = response.generic, x = x[sample(nrow(x)),], w = lw)$fitted.values * wt)^2) 
         
         r2 <- c(obs, isim) / inertot
         

@@ -24,7 +24,7 @@
         m1 <- matrix(0, nind, nind)
         m1[row(m1) > col(m1)] <- kd[[i]]
         m1 <- m1 + t(m1)
-        m1 <- as.dist(m1)
+        m1 <- stats::as.dist(m1)
         m1
     }
     k <- 0
@@ -66,7 +66,7 @@
         m1 <- matrix(0, nind, nind)
         m1[row(m1) > col(m1)] <- kd[[i]]
         m1 <- m1 + t(m1)
-        m1 <- as.dist(m1)
+        m1 <- stats::as.dist(m1)
         m1
     }
     k <- 0
@@ -145,27 +145,27 @@ plot.corkdist <- function (x, whichinrow = NULL, whichincol = NULL, gap = 4, ncl
     if (is.null(whichincol)) whichincol <- 1:ndist
     labels = names(kd)
     nind <- attr(kd, "size")
-    old.par <- par(no.readonly = TRUE)
-    on.exit(par(old.par))
+    old.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(old.par))
     oma <- c(2, 2, 1, 1)
-    par(mfrow = c(length(whichinrow), length(whichincol)), mar = rep(gap/2, 4), oma = oma)
+    graphics::par(mfrow = c(length(whichinrow), length(whichincol)), mar = rep(gap/2, 4), oma = oma)
     for (i in whichinrow) {
         for (j in whichincol) {
             if (i==j) {
-                plot.default(0,0,type="n",asp=1, xlab="", ylab="",xaxt="n",yaxt="n",
+                graphics::plot.default(0,0,type="n",asp=1, xlab="", ylab="",xaxt="n",yaxt="n",
                 xlim=c(0,1), ylim=c(0,1), xaxs="i", yaxs="i", frame.plot=FALSE)
-                l.wid <- strwidth(labels, "user")
+                l.wid <- graphics::strwidth(labels, "user")
                 cex.labels <- max(0.8, min(2, 0.9/max(l.wid)))
-                text(0.5, 0.5, labels[i], cex = cex.labels, font = 1)
+                graphics::text(0.5, 0.5, labels[i], cex = cex.labels, font = 1)
             } else if (i>j) {
                 n0 <- (1:nrow(design))[design$I==i & design$J==j]
                 titre <- row.names(design)[n0]
-                plot(x[[n0]], main = titre, nclass = nclass)
+                graphics::plot(x[[n0]], main = titre, nclass = nclass)
             } else if (j>i) {
                 if (attr(x,"test")=="Mantel's tests")
-                    plot(kd[[i]],kd[[j]])
+                    graphics::plot(kd[[i]],kd[[j]])
                 else {
-                    plot(kdistelem2delta(i),kdistelem2delta(j))
+                    graphics::plot(kdistelem2delta(i),kdistelem2delta(j))
                     
                 }
             }

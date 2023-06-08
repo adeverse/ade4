@@ -15,7 +15,7 @@ covwt <- function(x, wt, na.rm = FALSE) {
   ## compute weighted biased (divided by n) covariance matrix
   x <- as.matrix(x)
   if (na.rm) {
-    x <- na.omit(x)
+    x <- stats::na.omit(x)
     wt <- wt[- attr(x,"na.action")]
   }
   wt <- wt / sum(wt)
@@ -29,7 +29,7 @@ scalewt <- function (df, wt = rep(1/nrow(df), nrow(df)), center = TRUE, scale = 
     df <- as.matrix(df)
     mean.df <- FALSE
     if(center){
-        mean.df <- apply(df, 2, weighted.mean, w = wt)
+        mean.df <- apply(df, 2, stats::weighted.mean, w = wt)
         df <- sweep(df, 2, mean.df, "-") 
     }
     
@@ -70,7 +70,7 @@ meanfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FAL
     }
   } else {
     if(is.null(fac)) { ## no factor
-      res <- apply(df, 2, weighted.mean, w = wt)
+      res <- apply(df, 2, stats::weighted.mean, w = wt)
     } else {
       fac <- as.factor(fac)
       if(drop)
@@ -78,9 +78,9 @@ meanfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FAL
       df.list <- split(df, fac)
       wt.list <- split(wt, fac)
       if(ncol(df) > 1)
-        res <- t(sapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, weighted.mean, w = wt.list[[x]])))
+        res <- t(sapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, stats::weighted.mean, w = wt.list[[x]])))
       else
-        res <- as.matrix(sapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, weighted.mean, w = wt.list[[x]])))
+        res <- as.matrix(sapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, stats::weighted.mean, w = wt.list[[x]])))
       rownames(res) <- names(df.list)
     }
   }

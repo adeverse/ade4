@@ -100,7 +100,7 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
       Y <- as.matrix(Y)
       X <- as.matrix(X)
         
-      f1 <- function(x) lm.wfit(x = x, y = Y, w = res$lw)$fitted.values
+      f1 <- function(x) stats::lm.wfit(x = x, y = Y, w = res$lw)$fitted.values
      
       for(h in 1 : maxdim) {
           
@@ -127,7 +127,7 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
           covutcarre <- 0
           covutk <- rep(0, nblo)   
           for (k in 1 : nblo) {
-              lm1 <- lm.wfit(x = Xk[[k]], y = res$lY[, h], w = res$lw)
+              lm1 <- stats::lm.wfit(x = Xk[[k]], y = res$lY[, h], w = res$lw)
               res$Tfa[[k]][, h] <- lm1$coefficients / sqrt(sum(res$lw * lm1$fitted.values^2))
               res$Tl1[[k]][, h] <- scalewt(lm1$fitted.values, wt = res$lw)
               res$Tli[[k]][, h] <- lm1$fitted.values 
@@ -148,7 +148,7 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
           W[, h]  <- tcrossprod(ginv(crossprod(X)), X) %*% res$lX[, h]
           
           ## Deflation of the Xk datasets on the global components T
-          Xk <- lapply(Xk, function(y) lm.wfit(x = as.matrix(res$lX[, h]), y = y, w = res$lw)$residuals)
+          Xk <- lapply(Xk, function(y) stats::lm.wfit(x = as.matrix(res$lX[, h]), y = y, w = res$lw)$residuals)
           X  <- as.matrix(cbind.data.frame(Xk))
     }
 
@@ -206,7 +206,7 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     ##-----------------------------------------------------------------------
     
     if (scannf) {
-        barplot(res$eig[1:res$rank])
+        graphics::barplot(res$eig[1:res$rank])
         cat("Select the number of global components: ")
         res$nf <- as.integer(readLines(n = 1))
         messageScannf(match.call(), res$nf)
@@ -221,7 +221,7 @@ mbpcaiv <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), s
     res$Tfa <- do.call("rbind", res$Tfa)
     res$Tl1 <- do.call("rbind", res$Tl1)
     res$Tli <- do.call("rbind", res$Tli)
-    res <- modifyList(res, lapply(res[c("Yc1", "Yco", "lY", "Tfa", "Tl1", "Tli", "cov2", "faX", "vip", "vipc", "bip", "bipc")], function(x) x[, 1:res$nf, drop = FALSE]))
+    res <- utils::modifyList(res, lapply(res[c("Yc1", "Yco", "lY", "Tfa", "Tl1", "Tli", "cov2", "faX", "vip", "vipc", "bip", "bipc")], function(x) x[, 1:res$nf, drop = FALSE]))
     res$XYcoef <- lapply(res$XYcoef, function(x) x[, 1:res$nf, drop = FALSE])
     res$call <- match.call()
     class(res) <- c("multiblock", "mbpcaiv")

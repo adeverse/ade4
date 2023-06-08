@@ -43,20 +43,20 @@
         stop("Object of class 'acm' expected")
     if ((xax < 1) || (xax > x$nf)) 
         stop("non convenient axe number")
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
     oritab <- eval.parent(as.list(x$call)[[2]])
     nvar <- ncol(oritab)
     if (nvar <= 7) 
         sco.boxplot(x$l1[, xax], oritab[, 1:nvar], clabel = 1)
     else if (nvar <= 14) {
-        par(mfrow = c(1, 2))
+        graphics::par(mfrow = c(1, 2))
         sco.boxplot(x$l1[, xax], oritab[, 1:(nvar%/%2)], clabel = 1.3)
         sco.boxplot(x$l1[, xax], oritab[, (nvar%/%2 + 1):nvar], 
             clabel = 1.3)
     }
     else {
-        par(mfrow = c(1, 3))
+        graphics::par(mfrow = c(1, 3))
         if ((a0 <- nvar%/%3) < nvar/3) 
             a0 <- a0 + 1
         sco.boxplot(x$l1[, xax], oritab[, 1:a0], clabel = 1.6)

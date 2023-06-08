@@ -3,8 +3,8 @@
 {
     if (!inherits(x, "dudi")) 
         stop("Object of class 'dudi' expected")
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     coolig <- x$li[, c(xax, yax)]
     coocol <- x$c1[, c(xax, yax)]
     if (permute) {
@@ -12,7 +12,7 @@
         coocol <- x$l1[, c(xax, yax)]
     }
     s.label(coolig, clabel = clab.row)
-    born <- par("usr")
+    born <- graphics::par("usr")
     k1 <- min(coocol[, 1])/born[1]
     k2 <- max(coocol[, 1])/born[2]
     k3 <- min(coocol[, 2])/born[3]

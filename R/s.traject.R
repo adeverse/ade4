@@ -5,9 +5,9 @@
     csub = 1, possub = "bottomleft", cgrid = 1, pixmap = NULL, 
     contour = NULL, area = NULL, add.plot = FALSE) 
 {
-    opar <- par(mar = par("mar"))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    on.exit(graphics::par(opar))
     dfxy <- data.frame(dfxy)
     if (!is.data.frame(dfxy)) 
         stop("Non convenient selection for dfxy")
@@ -29,12 +29,12 @@
         d0 <- sqrt((x0 - x1)^2 + (y0 - y1)^2)
         if (d0 < 1e-07) 
             return(invisible())
-        segments(x0, y0, x1, y1, lty = lty)
-        h <- strheight("A", cex = par("cex"))
+        graphics::segments(x0, y0, x1, y1, lty = lty)
+        h <- graphics::strheight("A", cex = graphics::par("cex"))
         x0 <- x1 - h * (x1 - x0)/d0
         y0 <- y1 - h * (y1 - y0)/d0
         if (edge) 
-            arrows(x0, y0, x1, y1, angle = 15, length = 0.1, lty = 1)
+            graphics::arrows(x0, y0, x1, y1, angle = 15, length = 0.1, lty = 1)
     }
     trajec <- function(X, cpoint, clabel, label) {
         if (nrow(X) == 1) 
@@ -53,7 +53,7 @@
             y1 <- y[ord[i + 1]]
             arrow1(x0, y0, x1, y1, lty = fac, edge = edge)
             if (cpoint > 0) 
-                points(x0, y0, pch = (14 + fac)%%25, cex = par("cex") * 
+                graphics::points(x0, y0, pch = (14 + fac)%%25, cex = graphics::par("cex") * 
                   cpoint)
             d0 <- sqrt((origin[1] - (x0 + x1)/2)^2 + (origin[2] - 
                 (y0 + y1)/2)^2)
@@ -64,8 +64,8 @@
             }
         }
         if (cpoint > 0) 
-            points(x[ord[length(x)]], y[ord[length(x)]], pch = (14 + 
-                fac)%%25, cex = par("cex") * cpoint)
+            graphics::points(x[ord[length(x)]], y[ord[length(x)]], pch = (14 + 
+                fac)%%25, cex = graphics::par("cex") * cpoint)
         return(c(xmax, ymax))
     }
     provi <- cbind.data.frame(x = coo$x, y = coo$y, fac = fac, 
@@ -76,6 +76,6 @@
     w <- t(data.frame(w))
     if (clabel > 0) 
         scatterutil.eti(w[, 1], w[, 2], label, clabel)
-    box()
+    graphics::box()
     invisible(match.call())
 }

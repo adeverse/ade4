@@ -4,14 +4,14 @@
     sub = "", csub = 0, possub = "topright", show.position = TRUE, 
     scale = TRUE, min3 = NULL, max3 = NULL, box = FALSE) 
 {
-    seg <- function(a, b, col = par("col")) {
-        segments(a[1], a[2], b[1], b[2], col = col)
+    seg <- function(a, b, col = graphics::par("col")) {
+        graphics::segments(a[1], a[2], b[1], b[2], col = col)
     }
     nam <- names(ta)
     ta <- t(apply(ta, 1, function(x) x/sum(x)))
     d <- triangle.param(ta, scale = scale, min3 = min3, max3 = max3)
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     A <- d$A
     B <- d$B
     C <- d$C
@@ -20,27 +20,27 @@
     maxi <- d$maxi
     if (show.position) 
         add.position.triangle(d)
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
         1), xlab = "", ylab = "", xaxt = "n", yaxt = "n", asp = 1, 
         frame.plot = FALSE)
     seg(A, B)
     seg(B, C)
     seg(C, A)
-    text(C[1], C[2], labels = paste(mini[1]), pos = 2)
-    text(C[1], C[2], labels = paste(maxi[3]), pos = 4)
+    graphics::text(C[1], C[2], labels = paste(mini[1]), pos = 2)
+    graphics::text(C[1], C[2], labels = paste(maxi[3]), pos = 4)
     if (labeltriangle) 
-        text((A + C)[1]/2, (A + C)[2]/2, labels = nam[1], cex = 1.5, 
+        graphics::text((A + C)[1]/2, (A + C)[2]/2, labels = nam[1], cex = 1.5, 
             pos = 2)
-    text(A[1], A[2], labels = paste(maxi[1]), pos = 2)
-    text(A[1], A[2], labels = paste(mini[2]), pos = 1)
+    graphics::text(A[1], A[2], labels = paste(maxi[1]), pos = 2)
+    graphics::text(A[1], A[2], labels = paste(mini[2]), pos = 1)
     if (labeltriangle) 
-        text((A + B)[1]/2, (A + B)[2]/2, labels = nam[2], cex = 1.5, 
+        graphics::text((A + B)[1]/2, (A + B)[2]/2, labels = nam[2], cex = 1.5, 
             pos = 1)
-    text(B[1], B[2], labels = paste(maxi[2]), pos = 1)
-    text(B[1], B[2], labels = paste(mini[3]), pos = 4)
+    graphics::text(B[1], B[2], labels = paste(maxi[2]), pos = 1)
+    graphics::text(B[1], B[2], labels = paste(mini[3]), pos = 4)
     if (labeltriangle) 
-        text((B + C)[1]/2, (B + C)[2]/2, labels = nam[3], cex = 1.5, 
+        graphics::text((B + C)[1]/2, (B + C)[2]/2, labels = nam[3], cex = 1.5, 
             pos = 4)
     if (draw.line) {
         nlg <- 10 * (maxi[1] - mini[1])
@@ -57,13 +57,13 @@
         }
     }
     if (cpoint > 0) 
-        points(xy, pch = 20, cex = par("cex") * cpoint)
+        graphics::points(xy, pch = 20, cex = graphics::par("cex") * cpoint)
     if (clabel > 0) 
         scatterutil.eti(xy[, 1], xy[, 2], label, clabel)
     if (addaxes) {
         pr0 <- dudi.pca(ta, scale = FALSE, scannf = FALSE)$c1
         w1 <- triangle.posipoint(apply(ta, 2, mean), mini, maxi)
-        points(w1[1], w1[2], pch = 16, cex = 2)
+        graphics::points(w1[1], w1[2], pch = 16, cex = 2)
         a1 <- pr0[, 1]
         x1 <- a1[1] * A + a1[2] * B + a1[3] * C
         seg(w1 - x1, w1 + x1)
@@ -74,29 +74,29 @@
     if (addmean) {
         m <- apply(ta, 2, mean)
         w1 <- triangle.posipoint(m, mini, maxi)
-        points(w1[1], w1[2], pch = 16, cex = 2)
+        graphics::points(w1[1], w1[2], pch = 16, cex = 2)
         w2 <- triangle.posipoint(c(m[1], mini[2], 1 - m[1] - 
             mini[2]), mini, maxi)
         w3 <- triangle.posipoint(c(1 - m[2] - mini[3], m[2], 
             mini[3]), mini, maxi)
         w4 <- triangle.posipoint(c(mini[1], 1 - m[3] - mini[1], 
             m[3]), mini, maxi)
-        points(w2[1], w2[2], pch = 20, cex = 2)
-        points(w3[1], w3[2], pch = 20, cex = 2)
-        points(w4[1], w4[2], pch = 20, cex = 2)
+        graphics::points(w2[1], w2[2], pch = 20, cex = 2)
+        graphics::points(w3[1], w3[2], pch = 20, cex = 2)
+        graphics::points(w4[1], w4[2], pch = 20, cex = 2)
         seg(w1, w2)
         seg(w1, w3)
         seg(w1, w4)
-        text(w2[1], w2[2], labels = as.character(round(m[1], 
+        graphics::text(w2[1], w2[2], labels = as.character(round(m[1], 
             digits = 3)), cex = 1.5, pos = 2)
-        text(w3[1], w3[2], labels = as.character(round(m[2], 
+        graphics::text(w3[1], w3[2], labels = as.character(round(m[2], 
             digits = 3)), cex = 1.5, pos = 1)
-        text(w4[1], w4[2], labels = as.character(round(m[3], 
+        graphics::text(w4[1], w4[2], labels = as.character(round(m[3], 
             digits = 3)), cex = 1.5, pos = 4)
     }
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
-    if (box) box()
+    if (box) graphics::box()
     return(invisible(xy))
 } 
 
@@ -111,7 +111,7 @@
 
 ######################### add.position.triangle ######################################
 "add.position.triangle" <- function (d) {
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     w <- matrix(0, 3, 3)
     w[1, 1] <- d$mini[1]
     w[1, 2] <- d$mini[2]
@@ -128,12 +128,12 @@
     a <- triangle.posipoint(w[1, ], c(0, 0, 0), c(1, 1, 1))
     b <- triangle.posipoint(w[2, ], c(0, 0, 0), c(1, 1, 1))
     c <- triangle.posipoint(w[3, ], c(0, 0, 0), c(1, 1, 1))
-    plot(0, 0, type = "n", xlim = c(-0.71, 4 - 0.71), ylim = c(-4 + 
+    graphics::plot(0, 0, type = "n", xlim = c(-0.71, 4 - 0.71), ylim = c(-4 + 
         0.85, 0.85), xlab = "", ylab = "", xaxt = "n", yaxt = "n", 
         asp = 1, frame.plot = FALSE)
-    polygon(c(A[1], B[1], C[1]), c(A[2], B[2], C[2]))
-    polygon(c(a[1], b[1], c[1]), c(a[2], b[2], c[2]), col = grey(0.75))
-    par(new = TRUE)
+    graphics::polygon(c(A[1], B[1], C[1]), c(A[2], B[2], C[2]))
+    graphics::polygon(c(a[1], b[1], c[1]), c(a[2], b[2], c[2]), col = grDevices::grey(0.75))
+    graphics::par(new = TRUE)
 
 }
 
@@ -142,14 +142,14 @@
     show.position = TRUE, scale = TRUE) 
 {
     seg <- function(a, b, col = 1) {
-        segments(a[1], a[2], b[1], b[2], col = col)
+        graphics::segments(a[1], a[2], b[1], b[2], col = col)
     }
     nam <- names(ta1)
     ta1 <- t(apply(ta1, 1, function(x) x/sum(x)))
     ta2 <- t(apply(ta2, 1, function(x) x/sum(x)))
     d <- triangle.param(rbind(ta1, ta2), scale = scale)
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     A <- d$A
     B <- d$B
     C <- d$C
@@ -158,24 +158,24 @@
     maxi <- d$maxi
     if (show.position) 
         add.position.triangle(d)
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
         1), xlab = "", ylab = "", xaxt = "n", yaxt = "n", asp = 1, 
         frame.plot = FALSE)
     seg(A, B)
     seg(B, C)
     seg(C, A)
-    text(C[1], C[2], labels = paste(mini[1]), pos = 2)
-    text(C[1], C[2], labels = paste(maxi[3]), pos = 4)
-    text((A + C)[1]/2, (A + C)[2]/2, labels = nam[1], cex = 1.5, 
+    graphics::text(C[1], C[2], labels = paste(mini[1]), pos = 2)
+    graphics::text(C[1], C[2], labels = paste(maxi[3]), pos = 4)
+    graphics::text((A + C)[1]/2, (A + C)[2]/2, labels = nam[1], cex = 1.5, 
         pos = 2)
-    text(A[1], A[2], labels = paste(maxi[1]), pos = 2)
-    text(A[1], A[2], labels = paste(mini[2]), pos = 1)
-    text((A + B)[1]/2, (A + B)[2]/2, labels = nam[2], cex = 1.5, 
+    graphics::text(A[1], A[2], labels = paste(maxi[1]), pos = 2)
+    graphics::text(A[1], A[2], labels = paste(mini[2]), pos = 1)
+    graphics::text((A + B)[1]/2, (A + B)[2]/2, labels = nam[2], cex = 1.5, 
         pos = 1)
-    text(B[1], B[2], labels = paste(maxi[2]), pos = 1)
-    text(B[1], B[2], labels = paste(mini[3]), pos = 4)
-    text((B + C)[1]/2, (B + C)[2]/2, labels = nam[3], cex = 1.5, 
+    graphics::text(B[1], B[2], labels = paste(maxi[2]), pos = 1)
+    graphics::text(B[1], B[2], labels = paste(mini[3]), pos = 4)
+    graphics::text((B + C)[1]/2, (B + C)[2]/2, labels = nam[3], cex = 1.5, 
         pos = 4)
     if (draw.line) {
         nlg <- 10 * (maxi[1] - mini[1])
@@ -193,11 +193,11 @@
     }
     nl <- nrow(ta1)
     for (i in (1:nl)) {
-        arrows(xy[i, 1], xy[i, 2], xy[i + nl, 1], xy[i + nl, 
+        graphics::arrows(xy[i, 1], xy[i, 2], xy[i + nl, 1], xy[i + nl, 
             2], length = 0.1, angle = 15)
     }
-    points(xy[1:nrow(ta1), ])
-    text(xy[1:nrow(ta1), ], label, pos = 4)
+    graphics::points(xy[1:nrow(ta1), ])
+    graphics::text(xy[1:nrow(ta1), ], label, pos = 4)
  }
 
 ######################### triangle.param ######################################

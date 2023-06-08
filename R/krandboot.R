@@ -6,9 +6,9 @@ as.krandboot <- function(obs, boot, quantiles = c(0.025, 0.975), names = colname
         stop("Wrong number of statistics")
     
     res <- list(obs = obs, boot = boot)
-    res$rep <- apply(boot, 2, function(x) length(na.omit(x)))
+    res$rep <- apply(boot, 2, function(x) length(stats::na.omit(x)))
 
-    res$stats <- t(sapply(1:length(obs), function(i) obs[i] - quantile(boot[,i] - obs[i], probs = rev(quantiles), na.rm = TRUE)))
+    res$stats <- t(sapply(1:length(obs), function(i) obs[i] - stats::quantile(boot[,i] - obs[i], probs = rev(quantiles), na.rm = TRUE)))
     colnames(res$stats) <- rev(colnames(res$stats))
     if(is.null(names))
         names <- 1: nrow(res$stats)

@@ -37,7 +37,7 @@
       nf <- ade4TkGUI::chooseaxes(eig, rank)
     }
     else {
-      barplot(eig[1:rank])
+      graphics::barplot(eig[1:rank])
       cat("Select the number of axes: ")
       nf <- as.integer(readLines(n = 1))
       messageScannf(call, nf)
@@ -191,11 +191,11 @@ screeplot.dudi <- function (x, npcs = length(x$eig), type = c("barplot","lines")
   pcs <- x$eig
   xp <- seq_len(npcs)
   if (type == "barplot") 
-    barplot(pcs[xp], names.arg = 1:npcs, main = main, ylab = "Inertia", xlab = "Axis", col = col, ...)
+    graphics::barplot(pcs[xp], names.arg = 1:npcs, main = main, ylab = "Inertia", xlab = "Axis", col = col, ...)
   else {
-    plot(xp, pcs[xp], type = "b", axes = FALSE, main = main, xlab = "Axis", ylab = "Inertia", col = col, ...)
-    axis(2)
-    axis(1, at = xp, labels = 1:npcs)
+    graphics::plot(xp, pcs[xp], type = "b", axes = FALSE, main = main, xlab = "Axis", ylab = "Inertia", col = col, ...)
+    graphics::axis(2)
+    graphics::axis(1, at = xp, labels = 1:npcs)
   }
   invisible()
   

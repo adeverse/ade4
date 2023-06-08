@@ -284,8 +284,8 @@ if(p.adjust.D == "levels"){
       idx.varR <- which(res$assignR == j)
       idx.varQ <- which(res$assignQ == i)
       idx.vars <- ncolG * (idx.varQ - 1) + idx.varR
-      res$tabD$adj.pvalue[idx.vars] <- p.adjust(res$tabD$pvalue[idx.vars], method = p.adjust.method.D)
-      res$tabD2$adj.pvalue[idx.vars] <- p.adjust(res$tabD2$pvalue[idx.vars], method = p.adjust.method.D)
+      res$tabD$adj.pvalue[idx.vars] <- stats::p.adjust(res$tabD$pvalue[idx.vars], method = p.adjust.method.D)
+      res$tabD2$adj.pvalue[idx.vars] <- stats::p.adjust(res$tabD2$pvalue[idx.vars], method = p.adjust.method.D)
     }
   }
   res$tabD$adj.method <- res$tabD2$adj.method <- paste(p.adjust.method.D, "by levels")

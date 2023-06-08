@@ -4,13 +4,13 @@
             stop("data.frame expected")
         reponse.generic <- x
         begin <- "reponse.generic ~ "
-        fmla <- as.formula(paste(begin, paste(names(df), collapse = "+")))
+        fmla <- stats::as.formula(paste(begin, paste(names(df), collapse = "+")))
         df <- cbind.data.frame(reponse.generic, df)
-        lm0 <- lm(fmla, data = df, weights = weights)
+        lm0 <- stats::lm(fmla, data = df, weights = weights)
         if (use == 0) 
-            return(predict(lm0))
+            return(stats::predict(lm0))
         else if (use == 1) 
-            return(residuals(lm0))
+            return(stats::residuals(lm0))
         else if (use == -1) 
             return(lm0)
         else stop("Non convenient use")

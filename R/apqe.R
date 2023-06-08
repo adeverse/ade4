@@ -29,7 +29,7 @@ apqe <- function(samples, dis = NULL, structures = NULL){
     Ssd.util <- function(dp2, Np, unit){
         # Dissimilarity between two groups. Weight and composition of a group.      
         if (!is.null(unit)) {
-            modunit <- model.matrix(~ -1 + unit)
+            modunit <- stats::model.matrix(~ -1 + unit)
             sumcol <- apply(Np, 2, sum)
             Ng <- modunit * sumcol
             lesnoms <- levels(unit)
@@ -89,7 +89,7 @@ apqe <- function(samples, dis = NULL, structures = NULL){
     rownames(results) <- lesnoms
     sourceofvariation <- c(paste("Variations ", rownames(results)[1:(nrow(results) - 1)]), "Total variations")
     call <- match.call()
-    res <- list(call = call, results = results, dis = as.dist(dis), samples = samples, structures = structures)    
+    res <- list(call = call, results = results, dis = stats::as.dist(dis), samples = samples, structures = structures)    
     class(res) <- "apqe"
     return(res)
 }

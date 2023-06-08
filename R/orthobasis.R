@@ -1,5 +1,5 @@
 ## define 'orthobasis' as a subclass of 'data.frame'. This allows to introduce an 'orthobasis' object in slot @data in sp objects.
-setOldClass(c("orthobasis","data.frame"))
+methods::setOldClass(c("orthobasis","data.frame"))
 
 ## TODO NEW
 is.orthobasis <- function(x){
@@ -8,7 +8,7 @@ is.orthobasis <- function(x){
   wt <- attr(x,"weights")
   x <- as.matrix(x)
   # vectors should be centred
-  test <- isTRUE(all.equal(rep(0, ncol(x)), apply(x, 2, weighted.mean, w = wt), check.attributes = FALSE))
+  test <- isTRUE(all.equal(rep(0, ncol(x)), apply(x, 2, stats::weighted.mean, w = wt), check.attributes = FALSE))
   # test orthogonality
   if(test){
     test <- test & isTRUE(all.equal(diag(1,ncol(x)), crossprod(x*wt,x), check.attributes = FALSE))

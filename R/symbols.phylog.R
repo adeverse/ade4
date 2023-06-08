@@ -35,10 +35,10 @@
             data <- data[names(phylog$leaves)]
         }
     }
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    plot.default(0, 0, type = "n", xlab = "", ylab = "", xaxt = "n", 
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::plot.default(0, 0, type = "n", xlab = "", ylab = "", xaxt = "n", 
         yaxt = "n", ylim = c(-0.2, 1.05), xlim = c(0, 1), xaxs = "i", 
         yaxs = "i", frame.plot = TRUE)
     symbol.max <- csize/20
@@ -60,32 +60,32 @@
         cha <- as.character(br0[1])
         for (i in (2:(length(br0)))) cha <- paste(cha, br0[i], 
             sep = " ")
-        cex0 <- par("cex") * clegend
-        yh <- max(c(strheight(cha, cex = cex0), sq0))
-        h <- strheight(cha, cex = cex0)
-        y0 <- par("usr")[3] + yh/2 + h
-        x0 <- par("usr")[1] + h/2
+        cex0 <- graphics::par("cex") * clegend
+        yh <- max(c(graphics::strheight(cha, cex = cex0), sq0))
+        h <- graphics::strheight(cha, cex = cex0)
+        y0 <- graphics::par("usr")[3] + yh/2 + h
+        x0 <- graphics::par("usr")[1] + h/2
         for (i in (1:(length(sq0)))) {
             cha <- br0[i]
             cha <- paste(" ", cha, sep = "")
-            xh <- strwidth(cha, cex = cex0)
-            text(x0 + xh/2, y0, cha, cex = cex0)
+            xh <- graphics::strwidth(cha, cex = cex0)
+            graphics::text(x0 + xh/2, y0, cha, cex = cex0)
             z0 <- sq0[i]
             x0 <- x0 + xh + z0/2
             if (sig0[i] >= 0) {
                 if (type == 1) 
-                  symbols(x0, y0, squares = z0, bg = "black", 
+                  graphics::symbols(x0, y0, squares = z0, bg = "black", 
                     fg = "white", add = TRUE, inches = FALSE)
                 else if (type == 2) 
-                  symbols(x0, y0, circles = z0/2, bg = "black", 
+                  graphics::symbols(x0, y0, circles = z0/2, bg = "black", 
                     fg = "white", add = TRUE, inches = FALSE)
             }
             else {
                 if (type == 1) 
-                  symbols(x0, y0, squares = z0, bg = "white", 
+                  graphics::symbols(x0, y0, squares = z0, bg = "white", 
                     fg = "black", add = TRUE, inches = FALSE)
                 else if (type == 2) 
-                  symbols(x0, y0, circles = z0/2, bg = "white", 
+                  graphics::symbols(x0, y0, circles = z0/2, bg = "white", 
                     fg = "black", add = TRUE, inches = FALSE)
             }
             x0 <- x0 + z0/2
@@ -97,11 +97,11 @@
         but <- names(phylog$parts)[i]
         y[but] <- mean(y[w])
         b <- range(y[w])
-        segments(b[1], x[but], b[2], x[but])
+        graphics::segments(b[1], x[but], b[2], x[but])
         x1 <- x[w]
         y1 <- y[w]
         x2 <- rep(x[but], length(w))
-        segments(y1, x1, y1, x2)
+        graphics::segments(y1, x1, y1, x2)
     }
     if (!is.null(data)) {
         sq <- sqrt(abs(data))
@@ -110,11 +110,11 @@
         if (type == 1) {
             for (i in 1:n) {
                 if (sign(data[i]) >= 0) {
-                  symbols(yinit[i], xinit[i], squares = sq[i], 
+                  graphics::symbols(yinit[i], xinit[i], squares = sq[i], 
                     bg = "black", fg = "white", add = TRUE, inches = FALSE)
                 }
                 else {
-                  symbols(yinit[i], xinit[i], squares = sq[i], 
+                  graphics::symbols(yinit[i], xinit[i], squares = sq[i], 
                     bg = "white", fg = "black", add = TRUE, inches = FALSE)
                 }
             }
@@ -122,11 +122,11 @@
         else if (type == 2) {
             for (i in 1:n) {
                 if (sign(data[i]) >= 0) {
-                  symbols(yinit[i], xinit[i], circles = sq[i]/2, 
+                  graphics::symbols(yinit[i], xinit[i], circles = sq[i]/2, 
                     bg = "black", fg = "white", add = TRUE, inches = FALSE)
                 }
                 else {
-                  symbols(yinit[i], xinit[i], circles = sq[i]/2, 
+                  graphics::symbols(yinit[i], xinit[i], circles = sq[i]/2, 
                     bg = "white", fg = "black", add = TRUE, inches = FALSE)
                 }
             }

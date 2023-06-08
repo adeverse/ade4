@@ -5,9 +5,9 @@
     possub = "bottomleft", cgrid = 1, pixmap = NULL, contour = NULL, 
     area = NULL, add.plot = FALSE) 
 {
-    opar <- par(mar = par("mar"))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    on.exit(graphics::par(opar))
     dfxy <- data.frame(dfxy)
     dfdistri <- data.frame(dfdistri)
     if (!is.data.frame(dfxy)) 
@@ -31,7 +31,7 @@
         sub = sub, csub = csub, possub = possub, pixmap = pixmap, 
         contour = contour, area = area, add.plot = add.plot)
     if (cpoint > 0) 
-        points(coo$x, coo$y, pch = pch, cex = par("cex") * cpoint)
+        graphics::points(coo$x, coo$y, pch = pch, cex = graphics::par("cex") * cpoint)
     if (cstar > 0) 
         for (i in 1:ncol(dfdistri)) {
             scatterutil.star(coo$x, coo$y, dfdistri[, i], cstar = cstar)
@@ -43,6 +43,6 @@
         }
     if (clabel > 0) 
         scatterutil.eti(unlist(coox), unlist(cooy), label, clabel)
-    box()
+    graphics::box()
     invisible(match.call())
 }

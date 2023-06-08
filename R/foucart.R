@@ -73,14 +73,14 @@
 {
     if (!inherits(object, "foucart")) 
         stop("Object of type 'foucart' expected")
-    opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(ask = graphics::par("ask"), mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     if (is.null(mfrow)) 
-        mfrow <- n2mfrow(length(which.tab))
-    par(mfrow = mfrow)
+        mfrow <- grDevices::n2mfrow(length(which.tab))
+    graphics::par(mfrow = mfrow)
     nblo <- length(object$blo)
     if (length(which.tab) > prod(mfrow)) 
-        par(ask = TRUE)
+        graphics::par(ask = TRUE)
     rank.fac <- factor(rep(1:nblo, object$rank))
     nf <- ncol(object$li)
     coolig <- object$Tli[, c(xax, yax)]
@@ -103,9 +103,9 @@
 "plot.foucart" <- function (x, xax = 1, yax = 2, clab = 1, csub = 2, possub = "bottomright", ...) {
     if (!inherits(x, "foucart")) 
         stop("Object of type 'foucart' expected")
-    opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
-    on.exit(par(opar))
-    par(mfrow = c(2, 2))
+    opar <- graphics::par(ask = graphics::par("ask"), mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
+    graphics::par(mfrow = c(2, 2))
     cootot <- x$li[, c(xax, yax)]
     auxi <- x$co[, c(xax, yax)]
     names(auxi) <- names(cootot)

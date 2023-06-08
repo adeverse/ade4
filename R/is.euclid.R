@@ -9,7 +9,7 @@
   lambda <- eigen(delta, symmetric = TRUE, only.values = TRUE)$values
   w0 <- lambda[n]/lambda[1]
   if (plot) 
-    barplot(lambda)
+    graphics::barplot(lambda)
   if (print) 
     print(lambda)
   return((w0 > -tol))

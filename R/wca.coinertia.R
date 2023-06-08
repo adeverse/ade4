@@ -91,11 +91,11 @@ plot.witcoi <- function(x, xax = 1, yax = 2, ...) {
     stop("Non convenient yax")
   appel <- as.list(x$call)
   fac <- eval.parent(appel$fac)
-  def.par <- par(no.readonly = TRUE)
-  on.exit(par(def.par))
-  nf <- layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3),
+  def.par <- graphics::par(no.readonly = TRUE)
+  on.exit(graphics::par(def.par))
+  nf <- graphics::layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3),
                respect = TRUE)
-  par(mar = c(0.1, 0.1, 0.1, 0.1))
+  graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
   s.arrow(x$aX, xax, yax, sub = "X axes", csub = 2, clabel = 1.25)
   s.arrow(x$aY, xax, yax, sub = "Y axes", csub = 2, clabel = 1.25)
   scatterutil.eigen(x$eig, wsel = c(xax, yax))

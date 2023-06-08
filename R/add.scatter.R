@@ -30,11 +30,11 @@ add.scatter <- function(func,posi=c("bottomleft","bottomright","topleft","toprig
 
   inset[inset<0] <- 0  
   
-  plotreg0 <- par('plt')
+  plotreg0 <- graphics::par('plt')
   plotreg <- plotreg0 + c(inset.x,-inset.x,inset.y,-inset.y)
 
   # restore full plot region and previous graphic parameters on exit 
-  on.exit(par(plt=plotreg0))
+  on.exit(graphics::par(plt=plotreg0))
 
   # handle position
   # "top" and "bottom" are considered as "topleft" and "bottomleft"
@@ -58,14 +58,14 @@ add.scatter <- function(func,posi=c("bottomleft","bottomright","topleft","toprig
   y2 <- y1+ratio
 
   # clean subplot region
-  par(plt=c(x1,x2,y1,y2),new=TRUE)
-  plot.new()
-  polygon(c(-0.1, 1.1, 1.1, -0.1), c(-0.1, -0.1, 1.1, 1.1), border = NA, col = bg.col)
+  graphics::par(plt=c(x1,x2,y1,y2),new=TRUE)
+  graphics::plot.new()
+  graphics::polygon(c(-0.1, 1.1, 1.1, -0.1), c(-0.1, -0.1, 1.1, 1.1), border = NA, col = bg.col)
 
   # draw the subplot
   # beware: if func uses par, it must specify "par(...,plt=par("plt",...)"
   # (due to weired par interaction, e.g. with par(mar))
-  par(plt=c(x1,x2,y1,y2),new=TRUE)
+  graphics::par(plt=c(x1,x2,y1,y2),new=TRUE)
   eval(func)
 
   return(invisible(match.call()))
@@ -77,9 +77,9 @@ add.scatter <- function(func,posi=c("bottomleft","bottomright","topleft","toprig
 # Function add.scatter.eig
 ###########################
 "add.scatter.eig" <- function (w, nf=NULL, xax, yax, posi = "bottomleft", ratio = .25, inset = .01, sub="Eigenvalues",csub=2*ratio){
-  opar <- par("mar","xaxt","yaxt")
-  on.exit(par(opar))
-  par(mar=rep(.1,4),xaxt="n",yaxt="n")
+  opar <- graphics::par("mar","xaxt","yaxt")
+  on.exit(graphics::par(opar))
+  graphics::par(mar=rep(.1,4),xaxt="n",yaxt="n")
 
   fgraph <- function(){
     scatterutil.eigen(w, nf=nf, wsel=c(xax,yax), sub=sub, csub=csub, box=TRUE)

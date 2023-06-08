@@ -34,7 +34,7 @@
     sumry <- cbind(sumry, Pvalue = xrand$pvalue)
     if (xrand$adj.method != "none") 
       sumry <- cbind(sumry, Pvalue.adj = xrand$adj.pvalue)
-    signifpval <- symnum(xrand$adj.pvalue, corr = FALSE, na = FALSE, cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1), symbols = c("***", "**", "*", ".", " "))
+    signifpval <- stats::symnum(xrand$adj.pvalue, corr = FALSE, na = FALSE, cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1), symbols = c("***", "**", "*", ".", " "))
     sumry <- cbind(sumry,signifpval)
     colnames(sumry)[ncol(sumry)] <- " "
     sumry <- sumry[idx.vars, , drop = FALSE]

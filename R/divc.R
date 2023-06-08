@@ -7,9 +7,9 @@ divc <- function(df, dis = NULL, scale = FALSE){
         if (!is.euclid(dis)) warning("Euclidean property is expected for distance")
         dis <- as.matrix(dis)
         if (nrow(df)!= nrow(dis)) stop("Non convenient df")
-        dis <- as.dist(dis)
+        dis <- stats::as.dist(dis)
     }
-    if (is.null(dis)) dis <- as.dist((matrix(1, nrow(df), nrow(df))
+    if (is.null(dis)) dis <- stats::as.dist((matrix(1, nrow(df), nrow(df))
         - diag(rep(1, nrow(df)))) * sqrt(2))
     div <- as.data.frame(rep(0, ncol(df)))
     names(div) <- "diversity"

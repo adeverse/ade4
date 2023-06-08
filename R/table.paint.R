@@ -4,8 +4,8 @@
 {
     x <- rank(x)
     y <- rank(y)
-    opar <- par(mai = par("mai"), srt = par("srt"))
-    on.exit(par(opar))
+    opar <- graphics::par(mai = graphics::par("mai"), srt = graphics::par("srt"))
+    on.exit(graphics::par(opar))
     table.prepare(x = x, y = y, row.labels = row.labels, col.labels = col.labels, 
         clabel.row = clabel.row, clabel.col = clabel.col, grid = FALSE, 
         pos = "paint")
@@ -21,8 +21,8 @@
     numclass <- cut.default(z, br0, include.lowest = TRUE, labels = FALSE)
     valgris <- seq(1, 0, le = (nborn - 1))
     h <- csize * coeff
-    rect(xtot - xdelta, ytot - ydelta, xtot + xdelta, ytot + 
-        ydelta, col = gray(valgris[numclass]))
+    graphics::rect(xtot - xdelta, ytot - ydelta, xtot + xdelta, ytot + 
+        ydelta, col = grDevices::gray(valgris[numclass]))
     if (clegend > 0) 
         scatterutil.legend.square.grey(br0, valgris, h/2, clegend)
 }

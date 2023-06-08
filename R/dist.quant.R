@@ -26,7 +26,7 @@
         d <- unlist(apply(index, 1, fun1))
     }
     else if (method == 2) {
-        dfcov <- cov(df) * (nlig - 1)/nlig
+        dfcov <- stats::cov(df) * (nlig - 1)/nlig
         jor <- diag(dfcov)
         jor[jor == 0] <- 1
         jor <- 1/sqrt(jor)
@@ -34,7 +34,7 @@
         d <- unlist(apply(index, 1, fun1))
     }
     else if (method == 3) {
-        dfcov <- cov(df) * (nlig - 1)/nlig
+        dfcov <- stats::cov(df) * (nlig - 1)/nlig
         maha <- eigen(dfcov, symmetric = TRUE)
         maha.r <- sum(maha$values > (maha$values[1] * tol))
         maha.e <- 1/sqrt(maha$values[1:maha.r])

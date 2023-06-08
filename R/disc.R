@@ -23,7 +23,7 @@ disc <- function(samples, dis = NULL, structures=NULL){
     ##}
     Structutil <- function(dp2, Np, unit){    
         if (!is.null(unit)) {
-            modunit <- model.matrix(~ -1 + unit)
+            modunit <- stats::model.matrix(~ -1 + unit)
             sumcol <- apply(Np, 2, sum)
             Ng <- modunit * sumcol
             lesnoms <- levels(unit)
@@ -47,12 +47,12 @@ disc <- function(samples, dis = NULL, structures=NULL){
     Diss <- function(dis, nbhaplotypes, samples, structures){
         structutil <- list(0)
         structutil[[1]] <- Structutil(dp2 = dis, Np = samples, NULL)
-        diss <- list(sqrt(as.dist(structutil[[1]]$dg2)))
+        diss <- list(sqrt(stats::as.dist(structutil[[1]]$dg2)))
         if(!is.null(structures)){
             for(i in 1:length(structures)){
                 structutil[[i+1]] <- Structutil(structutil[[1]]$dg2, structutil[[1]]$Ng, structures[,i])    
             }
-            diss <- c(diss, tapply(1:length(structures), factor(1:length(structures)), function(x) sqrt(as.dist(structutil[[x + 1]]$dg2))))
+            diss <- c(diss, tapply(1:length(structures), factor(1:length(structures)), function(x) sqrt(stats::as.dist(structutil[[x + 1]]$dg2))))
         }
         return(diss)
     }

@@ -14,5 +14,5 @@
             break
         res <- res + auxi2
     }
-    return(as.dist(res))
+    return(stats::as.dist(res))
 }

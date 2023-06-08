@@ -5,17 +5,17 @@
         score.acm(x, 1)
         return(invisible())
     }
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
     oritab <- eval.parent(as.list(x$call)[[2]])
     nvar <- ncol(oritab)
     # modif samedi, juin 11, 2005 at 15:38 
     # message de Ivailo Stoyanov istoyanov@ecolab.bas.bg
-    if (is.null(mfrow)) mfrow = n2mfrow(nvar)
-    old.par <- par(no.readonly = TRUE)
-    on.exit(par(old.par))
-    par(mfrow = mfrow)
-    if (prod(mfrow)<nvar) par(ask=TRUE)
+    if (is.null(mfrow)) mfrow = grDevices::n2mfrow(nvar)
+    old.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(old.par))
+    graphics::par(mfrow = mfrow)
+    if (prod(mfrow)<nvar) graphics::par(ask=TRUE)
     # modif lundi, décembre 16, 2002 at 16:48 
     # suite à message d'Alain Guerreau  
     for (i in 1:(nvar)) s.class(x$li, oritab[, i], xax=xax, yax=yax, clabel = 1.5, 

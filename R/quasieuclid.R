@@ -10,7 +10,7 @@
     ncompo <- sum(eig$value > 0)
     tabnew <- eig$vectors[, 1:ncompo] * rep(sqrt(eig$values[1:ncompo]), 
         rep(n, ncompo))
-    res <- dist(tabnew)
+    res <- stats::dist(tabnew)
     attributes(res) <- attributes(distmat)
     attr(res, "call") <- match.call()
     return(res)

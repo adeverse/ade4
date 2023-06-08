@@ -9,11 +9,11 @@
     stop("Non convenient xax")
   if (yax > x$nf) 
     stop("Non convenient yax")
-  def.par <- par(no.readonly = TRUE)
-  on.exit(par(def.par))
-  layout(matrix(c(1, 1, 3, 1, 1, 4, 2, 2,5,2,2,6,8,8,7), 3, 5), 
+  def.par <- graphics::par(no.readonly = TRUE)
+  on.exit(graphics::par(def.par))
+  graphics::layout(matrix(c(1, 1, 3, 1, 1, 4, 2, 2,5,2,2,6,8,8,7), 3, 5), 
          respect = TRUE)
-  par(mar = c(0.1, 0.1, 0.1, 0.1))
+  graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
   s.label(x$lR[, c(xax, yax)], sub = "R row scores",csub = 2,clabel = 1.25)
   s.label(x$lQ[, c(xax, yax)], sub = "Q row scores",csub = 2,clabel = 1.25)
   s.corcircle(x$aR, xax, yax, sub = "R axes", csub = 2, clabel = 1.25)

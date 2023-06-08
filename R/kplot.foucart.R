@@ -3,13 +3,13 @@
 {
     if (!inherits(object, "foucart")) 
         stop("Object of type 'foucart' expected")
-    opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(ask = graphics::par("ask"), mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     if (is.null(mfrow)) 
-        mfrow <- n2mfrow(length(which.tab))
-    par(mfrow = mfrow)
+        mfrow <- grDevices::n2mfrow(length(which.tab))
+    graphics::par(mfrow = mfrow)
     if (length(which.tab) > prod(mfrow)) 
-        par(ask = TRUE)
+        graphics::par(ask = TRUE)
     coolig <- object$Tli[, c(xax, yax)]
     coocol <- object$Tco[, c(xax, yax)]
     names(coocol) <- names(coolig)

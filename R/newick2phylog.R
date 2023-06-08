@@ -343,7 +343,7 @@ taxo2phylog <- function (taxo, add.tools = FALSE, root = "Root", abbrev = TRUE)
     w <- diag(res$Wmat)
     w <- matrix(w, nleaves, nleaves)
     w <- w + t(w) - 2 * res$Wmat
-    w <- as.dist(sqrt(w))
+    w <- stats::as.dist(sqrt(w))
     attr(w, "Labels") <- leave.names
     
     res$Wdist <- w

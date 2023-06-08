@@ -82,7 +82,7 @@
     }
     pseudoeig <- valsing^2
     if (scannf) {
-        barplot(pseudoeig)
+        graphics::barplot(pseudoeig)
         cat("Select the number of axes: ")
         nf <- as.integer(readLines(n = 1))
         messageScannf(match.call(), nf)
@@ -204,9 +204,9 @@
         stop("Non convenient xax")
     if (yax > nf) 
         stop("Non convenient yax")
-    opar <- par(mar = par("mar"), mfrow = par("mfrow"), xpd = par("xpd"))
-    on.exit(par(opar))
-    par(mfrow = c(2, 2))
+    opar <- graphics::par(mar = graphics::par("mar"), mfrow = graphics::par("mfrow"), xpd = graphics::par("xpd"))
+    on.exit(graphics::par(opar))
+    graphics::par(mfrow = c(2, 2))
     coolig <- x$SynVar[, c(xax, yax)]
     for (k in 2:nrow(x$cov2)) {
         coolig <- rbind.data.frame(coolig, x$SynVar[, c(xax, 
@@ -220,33 +220,33 @@
     coocol <- x$Tco[, c(xax, yax)]
     s.arrow(coocol, sub = "Col projection", csub = 1.5)
     valpr <- function(x) {
-        opar <- par(mar = par("mar"))
-        on.exit(par(opar))
-        born <- par("usr")
+        opar <- graphics::par(mar = graphics::par("mar"))
+        on.exit(graphics::par(opar))
+        born <- graphics::par("usr")
         w <- x$pseudoeig
-        col <- rep(grey(1), length(w))
-        col[1:nf] <- grey(0.8)
-        col[c(xax, yax)] <- grey(0)
+        col <- rep(grDevices::grey(1), length(w))
+        col[1:nf] <- grDevices::grey(0.8)
+        col[c(xax, yax)] <- grDevices::grey(0)
         l0 <- length(w)
         xx <- seq(born[1], born[1] + (born[2] - born[1]) * l0/60, 
             le = l0 + 1)
         w <- w/max(w)
         w <- w * (born[4] - born[3])/4
-        par(mar = c(0.1, 0.1, 0.1, 0.1))
+        graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
         if (eig.bottom) 
             m3 <- born[3]
         else m3 <- born[4] - w[1]
         w <- m3 + w
-        rect(xx[1], m3, xx[l0 + 1], w[1], col = grey(1))
-        for (i in 1:l0) rect(xx[i], m3, xx[i + 1], w[i], col = col[i])
+        graphics::rect(xx[1], m3, xx[l0 + 1], w[1], col = grDevices::grey(1))
+        for (i in 1:l0) graphics::rect(xx[i], m3, xx[i + 1], w[i], col = col[i])
     }
     s.corcircle(x$Tax[x$T4[, 2] == 1, ], fullcircle = FALSE, 
         sub = "First axis projection", possub = "topright", csub = 1.5)
     valpr(x)
-    plot(x$cov2[, c(xax, yax)])
+    graphics::plot(x$cov2[, c(xax, yax)])
     scatterutil.grid(0)
-    title(main = "Pseudo-eigen values")
-    par(xpd = TRUE)
+    graphics::title(main = "Pseudo-eigen values")
+    graphics::par(xpd = TRUE)
     scatterutil.eti(x$cov2[, xax], x$cov2[, yax], label = row.names(x$cov2), 
         clabel = 1)
 }

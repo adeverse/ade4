@@ -16,9 +16,9 @@
         cat(paste("Cailliez constant =", round(c, digits = 5), "\n"))
     if(cor.zero){
       distmat[distmat > tol] <- distmat[distmat > tol] + c
-      distmat <- as.dist(distmat)
+      distmat <- stats::as.dist(distmat)
     } else {      
-      distmat <- as.dist(distmat + c)
+      distmat <- stats::as.dist(distmat + c)
     }
     attr(distmat, "call") <- match.call()
     attr(distmat, "method") <- "Cailliez"

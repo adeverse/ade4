@@ -49,7 +49,7 @@
     eig <- eig1$values
     rank <- sum((eig/eig[1]) > tol)
     if (scannf) {
-        barplot(eig[1:rank])
+        graphics::barplot(eig[1:rank])
         cat("Select the number of axes: ")
         nf <- as.integer(readLines(n = 1))
         messageScannf(match.call(), nf)
@@ -119,10 +119,10 @@
         stop("Non convenient xax")
     if (yax > nf) 
         stop("Non convenient yax")
-    opar <- par(mar = par("mar"), mfrow = par("mfrow"), xpd = par("xpd"))
-    on.exit(par(opar))
-    mfrow <- n2mfrow(length(option))
-    par(mfrow = mfrow)
+    opar <- graphics::par(mar = graphics::par("mar"), mfrow = graphics::par("mfrow"), xpd = graphics::par("xpd"))
+    on.exit(graphics::par(opar))
+    mfrow <- grDevices::n2mfrow(length(option))
+    graphics::par(mfrow = mfrow)
     for (j in option) {
         if (j == 1) {
             coolig <- x$RV.coo[, c(1, 2)]
@@ -148,11 +148,11 @@
                 posi = "bottomleft", ratio = 1/5)
         }
         if (j == 3) {
-            plot(x$RV.tabw, x$cos2, xlab = "Tables weights", 
+            graphics::plot(x$RV.tabw, x$cos2, xlab = "Tables weights", 
                 ylab = "Cos 2")
             scatterutil.grid(0)
-            title(main = "Typological value")
-            par(xpd = TRUE)
+            graphics::title(main = "Typological value")
+            graphics::par(xpd = TRUE)
             scatterutil.eti(x$RV.tabw, x$cos2, label = x$tab.names, 
                 clabel = 1)
         }

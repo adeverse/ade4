@@ -22,7 +22,7 @@
   covar$vectors <- covar$vectors[, abs(covar$values)>NEARZERO]
   
   if (scannf) {
-    barplot(res$eig)
+    graphics::barplot(res$eig)
     cat("Select the first number of axes (>=1): ")
     nfposi <- as.integer(readLines(n = 1))
     
@@ -197,26 +197,26 @@
     stop("Non convenient yax")
   f1 <- function () 
   {
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     m <- length(x$eig)
-    par(mar = c(0.8, 2.8, 0.8, 0.8))
-    col.w <- rep(grey(1), m) # elles sont toutes blanches
-    col.w[1:x$nfposi] <- grey(0.8)
-    if (x$nfnega>0) col.w[m:(m-x$nfnega+1)] = grey(0.8)
+    graphics::par(mar = c(0.8, 2.8, 0.8, 0.8))
+    col.w <- rep(grDevices::grey(1), m) # elles sont toutes blanches
+    col.w[1:x$nfposi] <- grDevices::grey(0.8)
+    if (x$nfnega>0) col.w[m:(m-x$nfnega+1)] = grDevices::grey(0.8)
     j1 <- xax
     if (j1>x$nfposi) j1 = j1-x$nfposi +m -x$nfnega
     j2 <- yax
     if (j2>x$nfposi) j2 = j2-x$nfposi +m -x$nfnega
-    col.w[c(j1,j2)] = grey(0)
-    barplot(x$eig, col = col.w)
+    col.w[c(j1,j2)] = grDevices::grey(0)
+    graphics::barplot(x$eig, col = col.w)
     scatterutil.sub(cha ="Eigen values", csub = 2, possub = "topright")
   }
   
-  def.par <- par(no.readonly = TRUE)
-  on.exit(par(def.par))
-  layout(matrix(c(3, 3, 1, 3, 3, 2), 3, 2))
-  par(mar = c(0.2, 0.2, 0.2, 0.2))
+  def.par <- graphics::par(no.readonly = TRUE)
+  on.exit(graphics::par(def.par))
+  graphics::layout(matrix(c(3, 3, 1, 3, 3, 2), 3, 2))
+  graphics::par(mar = c(0.2, 0.2, 0.2, 0.2))
   f1()
   s.arrow(x$c1, xax = xax, yax = yax, sub = "Canonical weights", 
           csub = 2, clabel = 1.25)

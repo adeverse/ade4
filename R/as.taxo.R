@@ -38,6 +38,6 @@ function(taxo)
         distance = distance +  2*(1-toto%*%t(toto))
     }
     dimnames(distance) <- list(row.names(taxo),row.names(taxo))
-    return(as.dist(sqrt(distance)))
+    return(stats::as.dist(sqrt(distance)))
 } 
 

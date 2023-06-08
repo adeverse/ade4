@@ -40,10 +40,10 @@
     }
     
     w <- plot.phylog(x = phylog, y = y, clabel.leaves = 0, f.phylog = f.phylog, ...)
-    mar.old <- par("mar")
-    on.exit(par(mar = mar.old))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    par(usr = c(0, 1, -0.05, 1))
+    mar.old <- graphics::par("mar")
+    on.exit(graphics::par(mar = mar.old))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::par(usr = c(0, 1, -0.05, 1))
     
     x1 <- w$xbase
     space <- (1 - w$xbase - (w$xbase - max(w$xy$x))/2*nvar)/nvar
@@ -69,29 +69,29 @@
     maxy <- max(w$xy$y)
     nleg <- length(xleg)
    
-    segments(xleg, rep(miny, nleg), xleg, rep(maxy, nleg), col = grey(0.85))
-    segments(w$xy$x, w$xy$y, rep(max(w$xy$x), n), w$xy$y, col = grey(0.85))
-    segments(rep(xleg[1], n), w$xy$y, rep(max(xleg), n), w$xy$y, col = grey(0.85))
+    graphics::segments(xleg, rep(miny, nleg), xleg, rep(maxy, nleg), col = grDevices::grey(0.85))
+    graphics::segments(w$xy$x, w$xy$y, rep(max(w$xy$x), n), w$xy$y, col = grDevices::grey(0.85))
+    graphics::segments(rep(xleg[1], n), w$xy$y, rep(max(xleg), n), w$xy$y, col = grDevices::grey(0.85))
     
     if (cdot > 0) 
-        points(fun1(values[,i]), w$xy$y, pch = 15, cex = cdot, bg = 1)
+        graphics::points(fun1(values[,i]), w$xy$y, pch = 15, cex = cdot, bg = 1)
 
     if (ceti > 0){
         if (trunc(i/2) < (i/2))
-            text(xleg, rep((miny - 0.05)*2/3, nleg), as.character(val.ref), cex = par("cex") * ceti)
+            graphics::text(xleg, rep((miny - 0.05)*2/3, nleg), as.character(val.ref), cex = graphics::par("cex") * ceti)
             else
-                text(xleg, rep((miny - 0.05)*1/3, nleg), as.character(val.ref), cex = par("cex") * ceti)
+                graphics::text(xleg, rep((miny - 0.05)*1/3, nleg), as.character(val.ref), cex = graphics::par("cex") * ceti)
         }
                 
     if (joining == TRUE){
         if (is.null(yjoining)) origin <- mean(values[,i])
             else origin <- 0
-        segments(fun1(origin), miny, fun1(origin), maxy, lty = 2, col = grey(0.50))
-        segments(fun1(values[,i]), w$xy$y, fun1(origin), w$xy$y, col = grey(0.50))
+        graphics::segments(fun1(origin), miny, fun1(origin), maxy, lty = 2, col = grDevices::grey(0.50))
+        graphics::segments(fun1(values[,i]), w$xy$y, fun1(origin), w$xy$y, col = grDevices::grey(0.50))
         }    
         
     if (csub > 0)
-        text(xleg[3], 1 - (1-max(w$xy$y))/3, names(values)[i], cex = par("cex") * csub)
+        graphics::text(xleg[3], 1 - (1-max(w$xy$y))/3, names(values)[i], cex = graphics::par("cex") * csub)
     
     ret[,i] <- fun1(values[,i])
         

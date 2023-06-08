@@ -9,20 +9,20 @@
         d0 <- sqrt((x0 - x1)^2 + (y0 - y1)^2)
         if (d0 < 1e-07) 
             return(invisible())
-        segments(x0, y0, x1, y1, lty = lty)
-        h <- strheight("A", cex = par("cex"))
+        graphics::segments(x0, y0, x1, y1, lty = lty)
+        h <- graphics::strheight("A", cex = graphics::par("cex"))
         if (d0 > 2 * h) {
             x0 <- x1 - h * (x1 - x0)/d0
             y0 <- y1 - h * (y1 - y0)/d0
             if (edge) 
-                arrows(x0, y0, x1, y1, angle = ang, length = len, 
+                graphics::arrows(x0, y0, x1, y1, angle = ang, length = len, 
                   lty = 1)
         }
     }
     dfxy <- data.frame(dfxy)
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     coo <- scatterutil.base(dfxy = dfxy, xax = xax, yax = yax, 
         xlim = xlim, ylim = ylim, grid = grid, addaxes = addaxes, 
         cgrid = cgrid, include.origin = TRUE, origin = origin, 
@@ -31,15 +31,15 @@
     if (grid & !add.plot) 
         scatterutil.grid(cgrid)
     if (addaxes & !add.plot) 
-        abline(h = 0, v = 0, lty = 1)
+        graphics::abline(h = 0, v = 0, lty = 1)
     if (cpoint > 0) 
-        points(coo$x, coo$y, pch = pch, cex = par("cex") * cpoint)
+        graphics::points(coo$x, coo$y, pch = pch, cex = graphics::par("cex") * cpoint)
     for (i in 1:(length(coo$x))) arrow1(origin[1], origin[2], 
         coo$x[i], coo$y[i], edge = edge)
     if (clabel > 0) 
         scatterutil.eti.circ(coo$x, coo$y, label, clabel, origin, boxes)
     if (csub > 0) 
         scatterutil.sub(sub, csub, possub)
-    box()
+    graphics::box()
     invisible(match.call())
 }

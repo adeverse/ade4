@@ -17,7 +17,7 @@
     if (print) 
         cat("Lingoes constant =", round(abs(lder), digits = 6), 
             "\n")
-    distmat <- as.dist(distmat)
+    distmat <- stats::as.dist(distmat)
     attr(distmat, "call") <- match.call()
     attr(distmat, "method") <- "Lingoes"
     return(distmat)

@@ -26,9 +26,9 @@
     clogo=rep(clogo,length=npoi)
     if (!is.numeric(clogo)) 
        stop(paste(deparse(substitute(clogo)),'is not numeric'))
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     coo <- scatterutil.base(dfxy = dfxy, xax = xax, yax = yax, 
         xlim = xlim, ylim = ylim, grid = grid, addaxes = addaxes, 
         cgrid = cgrid, include.origin = include.origin, origin = origin, 
@@ -45,29 +45,29 @@
     }
     if (!is.null(neig)) {
         fun <- function(x, coo) {
-            segments(coo$x[x[1]], coo$y[x[1]], coo$x[x[2]], coo$y[x[2]], 
-                lwd = par("lwd") * cneig)
+            graphics::segments(coo$x[x[1]], coo$y[x[1]], coo$x[x[2]], coo$y[x[2]], 
+                lwd = graphics::par("lwd") * cneig)
         }
         apply(unclass(neig), 1, fun, coo = coo)
     }
     scatterutil.logo(coo$x, coo$y, listlogo, klogo, clogo, rectlogo)
-    box()
+    graphics::box()
     invisible(match.call())
 }
 
 "scatterutil.logo" <- function(coox,cooy,lico,kico,cico,rico) {
     drawlogo <- function (pixmap, x , y, clogo=1, rectangle = TRUE) {
-        w <- par("usr")
+        w <- graphics::par("usr")
         luser <- w[2]-w[1]
-        lpixe <- 96*(par("pin")[1])/clogo
+        lpixe <- 96*(graphics::par("pin")[1])/clogo
         llogo <- attr(pixmap,"size")[2]
         l <- llogo*luser/lpixe/2
         huser <- w[4]-w[3]
-        hpixe <- 96*(par("pin")[2])/clogo
+        hpixe <- 96*(graphics::par("pin")[2])/clogo
         hlogo <- attr(pixmap,"size")[1]
         h <- hlogo*huser/hpixe/2
         pixmap::addlogo(pixmap, c(x-l,x+l),c(y-h,y+h))
-        if (rectangle) rect(x-l,y-h,x+l,y+h)
+        if (rectangle) graphics::rect(x-l,y-h,x+l,y+h)
     }
 
     for (k in 1:length(coox)) {

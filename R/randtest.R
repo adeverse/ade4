@@ -10,9 +10,9 @@
         res <- list(obs = obs)
         
     res$alter <- match.arg(alter)
-    sim <- na.omit(sim)
+    sim <- stats::na.omit(sim)
     res$rep <- length(sim)
-    res$expvar <- c(Std.Obs=(res$obs-mean(sim))/sd(sim),Expectation=mean(sim),Variance=var(sim))
+    res$expvar <- c(Std.Obs=(res$obs-mean(sim))/stats::sd(sim),Expectation=mean(sim),Variance=stats::var(sim))
     if(res$alter=="greater"){
       res$pvalue <- (sum(sim >= obs) + 1)/(length(sim) + 1)
     }
@@ -31,7 +31,7 @@
         l0 <- max(sim) - min(sim)
         w0 <- l0/(log(length(sim), base = 2) + 1)
         xlim0 <- range(r0) + c(-w0, w0)
-        h0 <- hist(sim, plot = FALSE, nclass = 10)
+        h0 <- graphics::hist(sim, plot = FALSE, nclass = 10)
         res$plot <- list(hist = h0, xlim = xlim0)
     }
     
@@ -64,15 +64,15 @@
     w0 <- l0/(log(length(x$sim), base = 2) + 1)
     w0 <- w0 * coeff
     xlim0 <- range(r0) + c(-w0, w0)
-    h0 <- hist(x$sim, plot = FALSE, nclass = nclass)
+    h0 <- graphics::hist(x$sim, plot = FALSE, nclass = nclass)
     } else {
         h0 <- x$plot$hist
         xlim0 <- x$plot$xlim
     }
     y0 <- max(h0$counts)
 
-    plot(h0, xlim = xlim0, col = grey(0.8), ...)
-    lines(c(x$obs, x$obs), c(y0/2, 0))
-    points(x$obs, y0/2, pch = 18, cex = 2)
+    graphics::plot(h0, xlim = xlim0, col = grDevices::grey(0.8), ...)
+    graphics::lines(c(x$obs, x$obs), c(y0/2, 0))
+    graphics::points(x$obs, y0/2, pch = 18, cex = 2)
     invisible()
 }

@@ -88,11 +88,11 @@
     if (yax > x$nf) 
         stop("Non convenient yax")
     fac <- eval.parent(as.list(x$call)$fac)
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
-    layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
+    graphics::layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
         respect = TRUE)
-    par(mar = c(0.2, 0.2, 0.2, 0.2))
+    graphics::par(mar = c(0.2, 0.2, 0.2, 0.2))
     s.arrow(x$fa, xax = xax, yax = yax, sub = "Canonical weights", 
         csub = 2, clabel = 1.25)
     s.corcircle(x$va, xax = xax, yax = yax, sub = "Cos(variates,canonical variates)", 

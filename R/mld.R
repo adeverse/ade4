@@ -9,7 +9,7 @@ if (any(is.na(x))) {
         if (na.action == "fail") 
             stop(" missing values in 'x'")
         else if (na.action == "mean") 
-            x[is.na(x)] <- mean(na.omit(x))
+            x[is.na(x)] <- mean(stats::na.omit(x))
         else stop("unknown method for 'na.action'")
     }
 
@@ -55,30 +55,30 @@ diag(w) <- 0
 # on fait les sorties graphiques si elles sont demandées: c'est pas parfait mais c'est pour donner une idée
 if (plot==TRUE){
     # rajouter les données circulaires
-    if (is.ts(x)){
+    if (stats::is.ts(x)){
         # pour les séries temporelles
         u <- attributes(x)$tsp
-        tab <- ts(res, start = u[1], end = u[2], frequency = u[3])
-        tab <- ts.union(x, tab)
+        tab <- stats::ts(res, start = u[1], end = u[2], frequency = u[3])
+        tab <- stats::ts.union(x, tab)
         u <- range(tab)
-        opar <- par(mfrow = par("mfrow"), mar = par("mar"))
-        on.exit(par(opar))
-        mfrow <- n2mfrow(nlevels(level)+1)
-        par(mfrow = mfrow)
-        par(mar = c(2.5, 5, 1.5, 0.6))
-        plot.ts(x, ylim = u, ylab = "x", main = "multi-levels decomposition")
+        opar <- graphics::par(mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
+        on.exit(graphics::par(opar))
+        mfrow <- grDevices::n2mfrow(nlevels(level)+1)
+        graphics::par(mfrow = mfrow)
+        graphics::par(mar = c(2.5, 5, 1.5, 0.6))
+        stats::plot.ts(x, ylim = u, ylab = "x", main = "multi-levels decomposition")
         for (i in 1:nlevels(level))
-                plot(tab[,i+1], ylim = u, ylab = names(res)[i], main = "")
+                graphics::plot(tab[,i+1], ylim = u, ylab = names(res)[i], main = "")
         }
         
     if (is.vector(x)){
         if (!is.null(dfxy)){
             # pour les données 2 D
-            opar <- par(mfrow = par("mfrow"), mar = par("mar"))
-            on.exit(par(opar))
-            mfrow <- n2mfrow(nlevels(level)+1)
-            par(mfrow = mfrow)
-            par(mar = c(0.6, 2.6, 0.6, 0.6))
+            opar <- graphics::par(mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
+            on.exit(graphics::par(opar))
+            mfrow <- grDevices::n2mfrow(nlevels(level)+1)
+            graphics::par(mfrow = mfrow)
+            graphics::par(mar = c(0.6, 2.6, 0.6, 0.6))
             s.value(dfxy, x, sub = "x", ...)
             for (i in 1:nlevels(level))
                 if (max((1:(nobs-1))[level == levels(level)[i]])<(nobs/2)){
@@ -97,19 +97,19 @@ if (plot==TRUE){
                 }
             else {
                 # pour les transects
-                par(mfrow = c(nlevels(level)+1,1))
-                par(mar = c(2, 5, 1.5, 0.6))
+                graphics::par(mfrow = c(nlevels(level)+1,1))
+                graphics::par(mar = c(2, 5, 1.5, 0.6))
                 u <- range(cbind(x, res))
                 w <- trunc(u)
                 w <- c(w[1],0,w[2])
-                plot(x, type="h", ylim = u, axes = FALSE, ylab = "x", main = "multi-levels decomposition")
-                axis(side = 2, at = w, labels = as.character(w))
+                graphics::plot(x, type="h", ylim = u, axes = FALSE, ylab = "x", main = "multi-levels decomposition")
+                graphics::axis(side = 2, at = w, labels = as.character(w))
                 for (i in 1:nlevels(level)){
-                    plot(res[,i], type="h", ylim = u, axes = FALSE, ylab = names(res)[i], main = "")
-                    axis(side = 2, at = w, labels = as.character(w))
+                    graphics::plot(res[,i], type="h", ylim = u, axes = FALSE, ylab = names(res)[i], main = "")
+                    graphics::axis(side = 2, at = w, labels = as.character(w))
                     }
                 v <- seq(0, nobs, by = (nobs/10))
-                axis(side=1, at = v, labels = as.character(v))
+                graphics::axis(side=1, at = v, labels = as.character(v))
                 }        
             }        
         }

@@ -18,16 +18,16 @@
     stop("Wrong dimensions for df and score")
   if (!all(unlist(lapply(df, is.factor)))) 
     stop("All variables in df must be factors")
-  opar <- par(mar = par("mar"), mfrow = par("mfrow"))
-  on.exit(par(opar))
-  par(mar=rep(0.1, 4))
+  opar <- graphics::par(mar = graphics::par("mar"), mfrow = graphics::par("mfrow"))
+  on.exit(graphics::par(opar))
+  graphics::par(mar=rep(0.1, 4))
   nfig <- ncol(df)
-  par(mfrow = n2mfrow(nfig+1))
+  graphics::par(mfrow = grDevices::n2mfrow(nfig+1))
   if (legen){
-    par(mfrow = n2mfrow(nfig+1))
+    graphics::par(mfrow = grDevices::n2mfrow(nfig+1))
     sco.label(score = score, label = label, clabel = clabel, grid = grid, cgrid = cgrid, include.origin = include.origin, origin = origin )
   } else {
-    par(mfrow = n2mfrow(nfig)) 
+    graphics::par(mfrow = grDevices::n2mfrow(nfig)) 
   }
   
   
@@ -35,9 +35,9 @@
     res <- scatterutil.sco(score = score, lim = xlim, grid = grid, cgrid = cgrid, include.origin = include.origin, origin = origin, sub = sub[i], csub = csub, horizontal = TRUE, reverse = FALSE)
     nlevs <- nlevels(df[,i])
     means <- by(score, df[,i], mean)
-    sds <- by(score, df[,i], sd)
+    sds <- by(score, df[,i], stats::sd)
     xi <- seq(res[1], res[2], by=(res[2]-res[1])/steps)
-    yi <- lapply(1:nlevs,function(x) dnorm(xi, means[[x]], sds[[x]]))
+    yi <- lapply(1:nlevs,function(x) stats::dnorm(xi, means[[x]], sds[[x]]))
     if(is.null(ymax)){
       maxy <- (max(unlist(yi))) * 1.15
     } else {
@@ -45,10 +45,10 @@
     }
     for (j in 1:nlevs) {
      
-      lines(xi, yi[[j]] * (1 - res[3])/maxy + res[3])
+      graphics::lines(xi, yi[[j]] * (1 - res[3])/maxy + res[3])
       xmaxi <- xi[which.max(yi[[j]])]
       ymaxi <- max(yi[[j]])
-      text(xmaxi, ymaxi * (1 - res[3])/maxy + res[3], levels(df[,i])[j], pos=3, offset=.2, cex=clabel * par("cex"))
+      graphics::text(xmaxi, ymaxi * (1 - res[3])/maxy + res[3], levels(df[,i])[j], pos=3, offset=.2, cex=clabel * graphics::par("cex"))
     }
     
   }

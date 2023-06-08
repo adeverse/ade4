@@ -81,8 +81,8 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
             ## plot results as a table with white, light grey and dark grey
             x1 <- 1:ncol(df)
             y <- nrow(df):1
-            opar <- par(mai = par("mai"), srt = par("srt"))
-            on.exit(par(opar))
+            opar <- graphics::par(mai = graphics::par("mai"), srt = graphics::par("srt"))
+            on.exit(graphics::par(opar))
             table.prepare(x = x1, y = y, row.labels = row.names(df), col.labels = names(df), 
                           clabel.row = 1, clabel.col = 1, grid = FALSE, 
                           pos = "paint")
@@ -94,7 +94,7 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
             ##valgris <- c("white","grey20","grey80")
             
             z <- unlist(df)
-            rect(xtot - xdelta, ytot - ydelta, xtot + xdelta, ytot + 
+            graphics::rect(xtot - xdelta, ytot - ydelta, xtot + xdelta, ytot + 
                  ydelta, col = col[1:3][z], border = "grey90")
             
             if((stat == "D") | (stat == "D2")){
@@ -102,11 +102,11 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
                 idR <- which(diff(assignR)==1)
                 idQ <- which(diff(assignQ)==1)
                 if(length(idR) > 0)
-                    segments(sort(unique(xtot))[idR]+xdelta, max(ytot+ydelta), sort(unique(xtot))[idR]+xdelta, min(ytot-ydelta), lwd=2)
+                    graphics::segments(sort(unique(xtot))[idR]+xdelta, max(ytot+ydelta), sort(unique(xtot))[idR]+xdelta, min(ytot-ydelta), lwd=2)
                 if(length(idQ) > 0)
-                    segments(max(xtot+xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, min(xtot-xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, lwd=2)
+                    graphics::segments(max(xtot+xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, min(xtot-xdelta), sort(unique(ytot), decreasing = TRUE)[idQ+1]+ydelta, lwd=2)
             }
-            rect(min(xtot) - xdelta, min(ytot) - ydelta, max(xtot) + xdelta, max(ytot) + ydelta, col = NULL)
+            graphics::rect(min(xtot) - xdelta, min(ytot) - ydelta, max(xtot) + xdelta, max(ytot) + ydelta, col = NULL)
             
         }
     
@@ -114,14 +114,14 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
     biplot.rlq4thcorner <- function (res.4thcorner, obj.rlq, stat, alpha, xax, yax, clab.traits, clab.env, col) 
         {
             ## plot associations between variables on a biplot
-            opar <- par(mar = par("mar"))
-            on.exit(par(opar))
+            opar <- graphics::par(mar = graphics::par("mar"))
+            on.exit(graphics::par(opar))
             coolig <- obj.rlq$li[, c(xax, yax)]
             coocol <- obj.rlq$c1[, c(xax, yax)]
             
             s.label(coolig, clabel = 0, cpoint = 0, xlim = 1.2 * range(coolig[,1]))
             
-            born <- par("usr")
+            born <- graphics::par("usr")
             k1 <- min(coocol[, 1])/born[1]
             k2 <- max(coocol[, 1])/born[2]
             k3 <- min(coocol[, 2])/born[3]
@@ -133,7 +133,7 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
             idx.neg <- which(t(res.4thcorner)==3, arr.ind=TRUE) ## negative association
             idx.tot <- list(unique(c(idx.pos[,1],idx.neg[,1])), unique(c(idx.pos[,2],idx.neg[,2])))
             
-            par(mar = c(0.1, 0.1, 0.1, 0.1))
+            graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
 
             ## variables with no significant links
             if(length(idx.tot[[1]]) > 0)
@@ -147,10 +147,10 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
                 }
             
             if(nrow(idx.pos) > 0)
-                segments(coolig[idx.pos[,1],1],coolig[idx.pos[,1],2],coocol[idx.pos[,2],1],coocol[idx.pos[,2],2], lty = 1, lwd = 2, col = col[2])
+                graphics::segments(coolig[idx.pos[,1],1],coolig[idx.pos[,1],2],coocol[idx.pos[,2],1],coocol[idx.pos[,2],2], lty = 1, lwd = 2, col = col[2])
             
             if(nrow(idx.neg) > 0)
-                segments(coolig[idx.neg[,1],1],coolig[idx.neg[,1],2],coocol[idx.neg[,2],1],coocol[idx.neg[,2],2], lty = 1, lwd = 2, col = col[3])
+                graphics::segments(coolig[idx.neg[,1],1],coolig[idx.neg[,1],2],coocol[idx.neg[,2],1],coocol[idx.neg[,2],2], lty = 1, lwd = 2, col = col[3])
             
             if(length(idx.tot[[1]]) > 0)
                 {
@@ -158,8 +158,8 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
                     ##s.label(coolig[idx.tot[[1]],], clabel = clab.env, add.plot = TRUE)
                     ##scatterutil.eti(coocol[idx.tot[[2]],1], coocol[idx.tot[[2]],2],label=row.names(coocol)[idx.tot[[2]]], clabel = clab.traits, boxes = TRUE,bg = 'grey')
                     scatterutil.eti.circ(coocol[idx.tot[[2]],1], coocol[idx.tot[[2]],2],label=row.names(coocol)[idx.tot[[2]]], clabel = clab.traits, boxes = FALSE)
-                    points(coolig[idx.tot[[1]],], pch = 17)
-                    points(coocol[idx.tot[[2]],], pch = 19)
+                    graphics::points(coolig[idx.tot[[1]],], pch = 17)
+                    graphics::points(coocol[idx.tot[[2]],], pch = 19)
                 }
         }
     
@@ -167,8 +167,8 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
     
     
     biplot.axesrlq4thcorner <- function(res.4thcorner, coo, alpha, xax, yax, type.axes, col){
-        opar <- par(mar = par("mar"))
-        on.exit(par(opar))
+        opar <- graphics::par(mar = graphics::par("mar"))
+        on.exit(graphics::par(opar))
         
         s.label(coo, clabel = 0, cpoint = 0)
         
@@ -191,7 +191,7 @@ plot.4thcorner <- function(x, stat = c("D", "D2", "G"), type = c("table", "biplo
         idx.both <- which((res.4thcorner[1,] > 1) & (res.4thcorner[2,] > 1))
         idx.tot <- c(idx.xax, idx.yax, idx.both)
         
-        par(mar = c(0.1, 0.1, 0.1, 0.1))
+        graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
 
         if(length(idx.tot) > 0)
             {

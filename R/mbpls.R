@@ -145,7 +145,7 @@ mbpls <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), sca
         W[, h]  <- tcrossprod(ginv(crossprod(X)), X) %*% res$lX[, h]
         
         ## Deflation of the Xk datasets on the global components T
-        Xk <- lapply(Xk, function(y) lm.wfit(x = as.matrix(res$lX[, h]), y = y, w = res$lw)$residuals)
+        Xk <- lapply(Xk, function(y) stats::lm.wfit(x = as.matrix(res$lX[, h]), y = y, w = res$lw)$residuals)
         X  <- as.matrix(cbind.data.frame(Xk))
     }
 
@@ -202,7 +202,7 @@ mbpls <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), sca
     ##-----------------------------------------------------------------------
     
     if (scannf) {
-        barplot(res$eig[1:res$rank])
+        graphics::barplot(res$eig[1:res$rank])
         cat("Select the number of global components: ")
         res$nf <- as.integer(readLines(n = 1))
         messageScannf(match.call(), res$nf)
@@ -217,7 +217,7 @@ mbpls <- function(dudiY, ktabX, scale = TRUE, option = c("uniform", "none"), sca
     res$Tc1 <- do.call("rbind", res$Tc1)
     res$TlX <- do.call("rbind", res$TlX)
     
-    res <- modifyList(res, lapply(res[c("Yc1", "Yco", "lY", "Tc1", "TlX", "cov2", "faX", "vip", "vipc", "bip", "bipc")], function(x) x[, 1:res$nf, drop = FALSE]))
+    res <- utils::modifyList(res, lapply(res[c("Yc1", "Yco", "lY", "Tc1", "TlX", "cov2", "faX", "vip", "vipc", "bip", "bipc")], function(x) x[, 1:res$nf, drop = FALSE]))
     res$XYcoef <- lapply(res$XYcoef, function(x) x[, 1:res$nf, drop = FALSE])
     res$call   <- match.call()
     class(res) <- c("multiblock", "mbpls")

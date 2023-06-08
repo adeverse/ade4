@@ -1,11 +1,11 @@
 "scatter.fca" <- function (x, xax = 1, yax = 2, clab.moda = 1, labels = names(x$tab),
     sub = NULL, csub = 2, ...) 
 {
-    opar <- par(mfrow = par("mfrow"))
-    on.exit(par(opar))
+    opar <- graphics::par(mfrow = graphics::par("mfrow"))
+    on.exit(graphics::par(opar))
     if ((xax == yax) || (x$nf == 1)) 
         stop("Unidimensional plot (xax=yax) not yet implemented")
-    par(mfrow = n2mfrow(length(x$blo)))
+    graphics::par(mfrow = grDevices::n2mfrow(length(x$blo)))
     oritab <- eval.parent(as.list(x$call)[[2]])
     indica <- factor(rep(names(x$blo), x$blo))
     for (j in levels(indica)) 

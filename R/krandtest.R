@@ -9,7 +9,7 @@
     alter <- rep(alter, length = length(obs))
   res$alter <- alter
   ## Invalid permutations are stored as NA
-  res$rep <- apply(sim, 2, function(x) length(na.omit(x)))
+  res$rep <- apply(sim, 2, function(x) length(stats::na.omit(x)))
   res$ntest <- length(obs)
   res$expvar <- data.frame(matrix(0, res$ntest, 3))
   if(!is.null(names)){
@@ -22,21 +22,21 @@
   res$pvalue <- rep(0,length(obs))
   for(i in 1:length(obs)){
       
-    vec.sim <- na.omit(sim[,i])
+    vec.sim <- stats::na.omit(sim[,i])
     if(length(vec.sim > 0)){
         ## compute histogram (mainly used for 'light' randtest)
         r0 <- c(vec.sim, obs[i])
         l0 <- max(vec.sim) - min(vec.sim)
         w0 <- l0/(log(length(vec.sim), base = 2) + 1)
         xlim0 <- range(r0) + c(-w0, w0)
-        h0 <- hist(vec.sim, plot = FALSE, nclass = 10)
+        h0 <- graphics::hist(vec.sim, plot = FALSE, nclass = 10)
         res$plot[[i]] <- list(hist = h0, xlim = xlim0)
     }
     
     res$alter[i] <- match.arg(res$alter[i], c("greater", "less", "two-sided"))
-    res$expvar[i,1] <- (obs[i] - mean(vec.sim)) / sd(vec.sim)
+    res$expvar[i,1] <- (obs[i] - mean(vec.sim)) / stats::sd(vec.sim)
     res$expvar[i,2] <- mean(vec.sim)
-    res$expvar[i,3] <- sd(vec.sim)
+    res$expvar[i,3] <- stats::sd(vec.sim)
     
     if(res$alter[i]=="greater"){
       res$pvalue[i] <- (sum(vec.sim >= obs[i]) + 1)/(res$rep[i] + 1)
@@ -52,7 +52,7 @@
   }
   
   p.adjust.method <- match.arg(p.adjust.method, p.adjust.methods)
-  res$adj.pvalue <- p.adjust(res$pvalue, method = p.adjust.method)
+  res$adj.pvalue <- stats::p.adjust(res$pvalue, method = p.adjust.method)
   res$adj.method <- p.adjust.method
   res$call <- call
   class(res) <- "krandtest"
@@ -67,19 +67,19 @@
   if (!inherits(x, "krandtest")) 
     stop("to be used with 'krandtest' object")
   if (is.null(mfrow))
-    mfrow = n2mfrow(x$ntest)
-  def.par <- par(no.readonly = TRUE)
-  on.exit(par(def.par))
-  par(mfrow = mfrow)
-  par(mar = c(3.1, 2.5, 2.1, 2.1))
+    mfrow = grDevices::n2mfrow(x$ntest)
+  def.par <- graphics::par(no.readonly = TRUE)
+  on.exit(graphics::par(def.par))
+  graphics::par(mfrow = mfrow)
+  graphics::par(mar = c(3.1, 2.5, 2.1, 2.1))
   if (length(main.title)!=length(x$names)) 
     main.title <- x$names
   if(inherits(x, "lightkrandtest")) {
     for (k in 1:x$ntest) {
         y0 <- max(x$plot[[k]]$hist$counts)
-      plot(x$plot[[k]]$hist, xlim = x$plot[[k]]$xlim, col = grey(0.8), main = main.title[k], ...)
-      lines(c(x$obs[k], x$obs[k]), c(y0/2, 0))
-      points(x$obs[k], y0/2, pch = 18, cex = 2)
+      graphics::plot(x$plot[[k]]$hist, xlim = x$plot[[k]]$xlim, col = grDevices::grey(0.8), main = main.title[k], ...)
+      graphics::lines(c(x$obs[k], x$obs[k]), c(y0/2, 0))
+      graphics::points(x$obs[k], y0/2, pch = 18, cex = 2)
     }
       } else {
   

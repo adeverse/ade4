@@ -90,10 +90,10 @@ bwca.dpcoa <- function(x, fac, cofac, scannf = TRUE, nf = 2, ...){
     if (!is.factor(fac) || !is.factor(cofac) ) 
         stop("factor expected")
 
-    cofac01 <- model.matrix( ~ -1 + cofac)
-    fac01 <- model.matrix( ~ -1 + fac)
-    x.resid <- lm.wfit(x = cofac01, y = fac01, w = x$lw)$residuals
-    tab <- lm.wfit(x = x.resid, y = as.matrix(x$tab), w = x$lw)$fitted.values
+    cofac01 <- stats::model.matrix( ~ -1 + cofac)
+    fac01 <- stats::model.matrix( ~ -1 + fac)
+    x.resid <- stats::lm.wfit(x = cofac01, y = fac01, w = x$lw)$residuals
+    tab <- stats::lm.wfit(x = x.resid, y = as.matrix(x$tab), w = x$lw)$fitted.values
     res <- as.dudi(data.frame(tab), x$cw, x$lw, scannf = scannf, nf = nf, call = match.call(), type = "betwitdpcoa")
 
     res$ratio <- sum(res$eig)/sum(x$eig)
@@ -139,20 +139,20 @@ randtest.betwit <- function(xtest, nrepet = 999, ...){
     fac <- eval.parent(appel$fac)
     cofac <- eval.parent(appel$cofac)
     inertot <- sum(dudi1$eig)
-    cofac01 <- model.matrix( ~ -1 + cofac)
-    fac01 <- model.matrix( ~ -1 + fac)
-    x.resid <- lm.wfit(x = cofac01, y = fac01, w = dudi1$lw)$residuals
+    cofac01 <- stats::model.matrix( ~ -1 + cofac)
+    fac01 <- stats::model.matrix( ~ -1 + fac)
+    x.resid <- stats::lm.wfit(x = cofac01, y = fac01, w = dudi1$lw)$residuals
     
-    lm1 <- lm.wfit(x = cofac01, y = as.matrix(dudi1$tab), w = dudi1$lw)
+    lm1 <- stats::lm.wfit(x = cofac01, y = as.matrix(dudi1$tab), w = dudi1$lw)
     Y.r <- lm1$residuals
     Y.f <- lm1$fitted.values
     
     wt <- outer(sqrt(dudi1$lw), sqrt(dudi1$cw))
-    obs <- sum((lm.wfit(y = Y.f + Y.r, x = x.resid, w = dudi1$lw)$fitted.values * wt)^2)/inertot
+    obs <- sum((stats::lm.wfit(y = Y.f + Y.r, x = x.resid, w = dudi1$lw)$fitted.values * wt)^2)/inertot
     isim <- c()
     ## permutation under reduced-model
     for (i in 1:nrepet)
-        isim[i] <- sum((lm.wfit(y =  Y.f + Y.r[sample(nrow(Y.r)), ], x = x.resid, w = dudi1$lw)$fitted.values * wt)^2)/inertot
+        isim[i] <- sum((stats::lm.wfit(y =  Y.f + Y.r[sample(nrow(Y.r)), ], x = x.resid, w = dudi1$lw)$fitted.values * wt)^2)/inertot
     return(as.randtest(isim, obs, call = match.call(), ...))
 }
 

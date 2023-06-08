@@ -9,7 +9,7 @@ dagnelie.test <- function(x)
     
     # Centre the data matrix by columns
     x.cent <- scale(X, center = TRUE, scale = FALSE)
-    rank.x <- qr(cov(X))$rank
+    rank.x <- qr(stats::cov(X))$rank
     if (n < (rank.x + 2))
         stop("n =",
             n,
@@ -19,9 +19,9 @@ dagnelie.test <- function(x)
     
     # Compute inverse of the dispersion matrix
     if (rank.x == p) {
-        invS <- solve(cov(X))             # Use normal inverse
+        invS <- solve(stats::cov(X))             # Use normal inverse
     } else {
-        invS <- ginv(cov(X))
+        invS <- ginv(stats::cov(X))
     }   # Use generalized inverse if rank.x < p
     
     # Mahalanobis distances between the objects and the multidimensional mean
@@ -43,7 +43,7 @@ dagnelie.test <- function(x)
     }
     
     # Shapiro-Wilk test on vector D
-    multinorm <- shapiro.test(D)
+    multinorm <- stats::shapiro.test(D)
     
     # Warning messages
     if (p == 1) {

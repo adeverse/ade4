@@ -74,16 +74,16 @@
         if (n.sample[k] >0) cell <- coeff/sqrt(n.sample[k]) else cell <- 0
         ell <- util.ellipse(w, cell)
         if (!is.null(ell)) {
-            polygon(ell$x, ell$y,border=coulrowprof[k],col=coulrowprof[k], lwd=2)
+            graphics::polygon(ell$x, ell$y,border=coulrowprof[k],col=coulrowprof[k], lwd=2)
             if (axesell) {
-                segments(ell$seg1[1], ell$seg1[2], ell$seg1[3], ell$seg1[4]) #, lty = 2
-                segments(ell$seg2[1], ell$seg2[2], ell$seg2[3], ell$seg2[4]) #, lty = 2
+                graphics::segments(ell$seg1[1], ell$seg1[2], ell$seg1[3], ell$seg1[4]) #, lty = 2
+                graphics::segments(ell$seg2[1], ell$seg2[2], ell$seg2[3], ell$seg2[4]) #, lty = 2
             }
         }
     }
-    opar <- par(mar = par("mar"))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    on.exit(graphics::par(opar))
     
     # calcul des paramètres de position et dispersion
     res <- t( matrix(unlist(lapply(1:nrowprof,calcul.rowprof)),nrow=5))
@@ -104,8 +104,8 @@
     if (clabelrowprof > 0) 
         scatterutil.eti(as.numeric(res$mx), as.numeric(res$my),labelrowprof, clabelrowprof, coul = coulrowprof)
     if (clabelrowprof == 0) 
-        points(as.numeric(res$mx), as.numeric(res$my), pch=pchrowprof, cex=par("cex")*cpointrowprof)
-    box()
+        graphics::points(as.numeric(res$mx), as.numeric(res$my), pch=pchrowprof, cex=graphics::par("cex")*cpointrowprof)
+    graphics::box()
     res[,1:2] <- sweep(res[,1:2],2,mgene,"+")
     return(invisible(list(ell=res,tra=mgene,call=match.call())))
     

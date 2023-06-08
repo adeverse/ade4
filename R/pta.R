@@ -194,10 +194,10 @@
         stop("Non convenient xax")
     if (yax > nf) 
         stop("Non convenient yax")
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
-    mfrow <- n2mfrow(length(option))
-    par(mfrow = mfrow)
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
+    mfrow <- grDevices::n2mfrow(length(option))
+    graphics::par(mfrow = mfrow)
     for (j in option) {
         if (j == 1) {
             coolig <- x$RV.coo[, c(1, 2)]
@@ -221,11 +221,11 @@
                 possub = "topleft")
         }
         if (j == 4) {
-            plot(x$tabw, x$cos2, xlab = "Tables weights", 
+            graphics::plot(x$tabw, x$cos2, xlab = "Tables weights", 
                 ylab = "Cos 2")
             scatterutil.grid(0)
-            title(main = "Typological value")
-            par(xpd = TRUE)
+            graphics::title(main = "Typological value")
+            graphics::par(xpd = TRUE)
             scatterutil.eti(x$tabw, x$cos2, label = x$tab.names, 
                 clabel = 1)
         }

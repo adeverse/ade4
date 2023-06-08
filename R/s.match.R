@@ -9,13 +9,13 @@
         d0 <- sqrt((x0 - x1)^2 + (y0 - y1)^2)
         if (d0 < 1e-07) 
             return(invisible())
-        segments(x0, y0, x1, y1, lty = lty)
-        h <- strheight("A", cex = par("cex"))
+        graphics::segments(x0, y0, x1, y1, lty = lty)
+        h <- graphics::strheight("A", cex = graphics::par("cex"))
         if (d0 > 2 * h) {
             x0 <- x1 - h * (x1 - x0)/d0
             y0 <- y1 - h * (y1 - y0)/d0
             if (edge) 
-                arrows(x0, y0, x1, y1, angle = ang, length = len, 
+                graphics::arrows(x0, y0, x1, y1, angle = ang, length = len, 
                   lty = 1)
         }
     }
@@ -32,9 +32,9 @@
     n <- nrow(df1xy)
     if (n != nrow(df2xy)) 
         stop("Non equal row numbers")
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     coo <- scatterutil.base(dfxy = rbind.data.frame(df1xy, df2xy), 
         xax = xax, yax = yax, xlim = xlim, ylim = ylim, grid = grid, 
         addaxes = addaxes, cgrid = cgrid, include.origin = include.origin, 
@@ -45,13 +45,13 @@
             lty = 1, edge = edge)
     }
     if (cpoint > 0) 
-        points(coo$x[1:n], coo$y[1:n], pch = pch, cex = par("cex") * 
+        graphics::points(coo$x[1:n], coo$y[1:n], pch = pch, cex = graphics::par("cex") * 
             cpoint)
     if (clabel > 0) {
         a <- (coo$x[1:n] + coo$x[(n + 1):(2 * n)])/2
         b <- (coo$y[1:n] + coo$y[(n + 1):(2 * n)])/2
         scatterutil.eti(a, b, label, clabel)
     }
-    box()
+    graphics::box()
     invisible(match.call())
 }

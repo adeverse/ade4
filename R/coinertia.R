@@ -49,7 +49,7 @@
             if (exists("ade4TkGUIFlag")) {
                 nf <- ade4TkGUI::chooseaxes(w1$values, rank)
             } else {
-                barplot(w1$values[1:rank])
+                graphics::barplot(w1$values[1:rank])
                 cat("Select the number of axes: ")
                 nf <- as.integer(readLines(n = 1))
                 messageScannf(match.call(), nf)
@@ -162,11 +162,11 @@
         stop("Non convenient xax")
     if (yax > x$nf) 
         stop("Non convenient yax")
-    def.par <- par(no.readonly = TRUE)
-    on.exit(par(def.par))
-    layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
+    def.par <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(def.par))
+    graphics::layout(matrix(c(1, 2, 3, 4, 4, 5, 4, 4, 6), 3, 3), 
         respect = TRUE)
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     s.corcircle(x$aX, xax, yax, sub = "X axes", csub = 2, 
         clabel = 1.25)
     s.corcircle(x$aY, xax, yax, sub = "Y axes", csub = 2, 

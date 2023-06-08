@@ -41,7 +41,7 @@
             else {
                 w <- df[, j]
                 deg.poly <- 2
-                w <- sqrt(nl - 1) * poly(w, deg.poly)
+                w <- sqrt(nl - 1) * stats::poly(w, deg.poly)
                 cha <- paste(names(df)[j], c(".L", ".Q"), sep = "")
                 res <- cbind(res, as.matrix(w))
                 provinames <- c(provinames, cha)
@@ -53,7 +53,7 @@
         else if (index[j] == "o") {
             w <- as.numeric(df[, j])
             deg.poly <- min(nlevels(df[, j]) - 1, 2)
-            w <- sqrt(nl - 1) * poly(w, deg.poly)
+            w <- sqrt(nl - 1) * stats::poly(w, deg.poly)
             if (deg.poly == 1) 
                 cha <- names(df)[j]
             else cha <- paste(names(df)[j], c(".L", ".Q"), sep = "")

@@ -8,14 +8,14 @@ p.adjust.4thcorner <- function(x, p.adjust.method.G = p.adjust.methods, p.adjust
   p.adjust.method.G <- match.arg(p.adjust.method.G)
 
   ## for objects created by fourthcorner, fourthcorner2 or fourthcorner.rlq
-  x$tabG$adj.pvalue <- p.adjust(x$tabG$pvalue, method=p.adjust.method.G)
+  x$tabG$adj.pvalue <- stats::p.adjust(x$tabG$pvalue, method=p.adjust.method.G)
   x$tabG$adj.method <- p.adjust.method.G
 
   ## tabD and tabD2 (i.e. not fourthcorner2)
   if(!inherits(x, "4thcorner.rlq")){
     if(p.adjust.D == "global"){
-      x$tabD$adj.pvalue <- p.adjust(x$tabD$pvalue, method=p.adjust.method.D)
-      x$tabD2$adj.pvalue <- p.adjust(x$tabD2$pvalue, method=p.adjust.method.D)
+      x$tabD$adj.pvalue <- stats::p.adjust(x$tabD$pvalue, method=p.adjust.method.D)
+      x$tabD2$adj.pvalue <- stats::p.adjust(x$tabD2$pvalue, method=p.adjust.method.D)
       x$tabD$adj.method <- x$tabD2$adj.method <- p.adjust.method.D
     }
     
@@ -26,8 +26,8 @@ p.adjust.4thcorner <- function(x, p.adjust.method.G = p.adjust.methods, p.adjust
           idx.varR <- which(x$assignR == j)
           idx.varQ <- which(x$assignQ == i)
           idx.vars <- length(x$varnames.R) * (idx.varQ - 1) + idx.varR
-          x$tabD$adj.pvalue[idx.vars] <- p.adjust(x$tabD$pvalue[idx.vars], method = p.adjust.method.D)
-          x$tabD2$adj.pvalue[idx.vars] <- p.adjust(x$tabD2$pvalue[idx.vars], method = p.adjust.method.D)
+          x$tabD$adj.pvalue[idx.vars] <- stats::p.adjust(x$tabD$pvalue[idx.vars], method = p.adjust.method.D)
+          x$tabD2$adj.pvalue[idx.vars] <- stats::p.adjust(x$tabD2$pvalue[idx.vars], method = p.adjust.method.D)
         }
       }
       x$tabD$adj.method <- x$tabD2$adj.method <- paste(p.adjust.method.D, "by levels")

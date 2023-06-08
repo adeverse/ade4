@@ -39,7 +39,7 @@
         if (exists("ade4TkGUIFlag")) {
             nf <- ade4TkGUI::chooseaxes(lambda, length(lambda))
         } else {
-            barplot(lambda)
+            graphics::barplot(lambda)
             cat("Select the number of axes: ")
             nf <- as.integer(readLines(n = 1))
             messageScannf(match.call(), nf)
@@ -105,8 +105,8 @@
 {
     if (!inherits(x, "pco")) 
         stop("Object of class 'pco' expected")
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     coolig <- x$li[, c(xax, yax)]
     s.label(coolig, clabel = clab.row, sub=sub, csub=csub)
     add.scatter.eig(x$eig, x$nf, xax, yax, posi = posieig, ratio = 1/4)

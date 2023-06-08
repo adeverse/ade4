@@ -17,10 +17,10 @@
     # si il est non nul, doit être de dimensions (nombre de niveaux de x[,1] , 2) et
     # contenir les coordonnées dans l'ordre de unique(x[,1])
     x.area <- x
-    if(dev.cur() == 1) plot.new()
-    opar <- par(mar = par("mar")) #, new = par("new")
-    on.exit(par(opar))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    if(grDevices::dev.cur() == 1) graphics::plot.new()
+    opar <- graphics::par(mar = graphics::par("mar")) #, new = graphics::par("new")
+    on.exit(graphics::par(opar))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     if (!is.factor(x.area[, 1])) 
         stop("Factor expected in x.area[1,]")
     fac <- x.area[, 1]
@@ -30,7 +30,7 @@
     x2 <- x.area[, 3]
     r1 <- range(x1)
     r2 <- range(x2)
-    plot(r1, r2, type = "n", asp = 1, xlab = "", ylab = "", xaxt = "n", 
+    graphics::plot(r1, r2, type = "n", asp = 1, xlab = "", ylab = "", xaxt = "n", 
         yaxt = "n", frame.plot = FALSE)
     if (!is.null(values)) {
         if (!is.vector(values)) 
@@ -49,13 +49,13 @@
             stop("graph need an object of class 'ng'")
     }
     if (cpoint != 0) 
-        points(x1, x2, pch = 20, cex = par("cex") * cpoint)
+        graphics::points(x1, x2, pch = 20, cex = graphics::par("cex") * cpoint)
     for (i in 1:nlev) {
         a1 <- x1[fac == lev.poly[i]]
         a2 <- x2[fac == lev.poly[i]]
         if (!is.null(values)) 
-            polygon(a1, a2, col = grey(valgris[numclass[i]]))
-        else polygon(a1, a2)
+            graphics::polygon(a1, a2, col = grDevices::grey(valgris[numclass[i]]))
+        else graphics::polygon(a1, a2)
     }
     if (!is.null(graph) | (clabel > 0)) {
         if (!is.null(center)) {
@@ -68,7 +68,7 @@
      }
     if (!is.null(graph)) {
         for (i in 1:nrow(graph)) {
-            segments(w$x[graph[i, 1]], w$y[graph[i, 1]], w$x[graph[i, 
+            graphics::segments(w$x[graph[i, 1]], w$y[graph[i, 1]], w$x[graph[i, 
                 2]], w$y[graph[i, 2]], lwd = lwdgraph)
         }
     }

@@ -21,16 +21,16 @@
         if (clab > 0) 
             labels <- lab
         else labels <- NULL
-        dotchart(a, labels = labels, groups = gr, pch = 20)
+        graphics::dotchart(a, labels = labels, groups = gr, pch = 20)
     }
     if (dotchart) {
         clab <- clab.r * clab.c
         dudi.coa.dotchart(x, xax, clab)
         return(invisible())
     }
-    def.par <- par(mar = par("mar"))
-    on.exit(par(def.par))
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
+    def.par <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(def.par))
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
     sco.distri.class.2g <- function(score, fac1, fac2, weight, 
         labels1 = as.character(levels(fac1)), labels2 = as.character(levels(fac2)), 
         clab1, clab2, cpoi, cet) {
@@ -39,17 +39,17 @@
         ymin <- scoreutil.base(y = score, xlim = NULL, grid = TRUE, 
             cgrid = 0.75, include.origin = TRUE, origin = 0, 
             sub = NULL, csub = 0)
-        ymax <- par("usr")[4]
-        ylabel <- strheight("A", cex = par("cex") * max(1, clab1, 
+        ymax <- graphics::par("usr")[4]
+        ylabel <- graphics::strheight("A", cex = graphics::par("cex") * max(1, clab1, 
             clab2)) * 1.4
-        xmin <- par("usr")[1]
-        xmax <- par("usr")[2]
-        xaxp <- par("xaxp")
+        xmin <- graphics::par("usr")[1]
+        xmax <- graphics::par("usr")[2]
+        xaxp <- graphics::par("xaxp")
         nline <- xaxp[3] + 1
         v0 <- seq(xaxp[1], xaxp[2], le = nline)
-        segments(v0, rep(ymin, nline), v0, rep(ymax, nline), 
-            col = gray(0.5), lty = 1)
-        rect(xmin, ymin, xmax, ymax)
+        graphics::segments(v0, rep(ymin, nline), v0, rep(ymax, nline), 
+            col = grDevices::gray(0.5), lty = 1)
+        graphics::rect(xmin, ymin, xmax, ymax)
         sum.col1 <- unlist(tapply(weight, fac1, sum))
         sum.col2 <- unlist(tapply(weight, fac2, sum))
         sum.col1[sum.col1 == 0] <- 1
@@ -61,7 +61,7 @@
         y.distri2 <- tapply(score * weight2, fac2, sum)
         y.distri2 <- rank(y.distri2) + nvar1 + 2
         y.distri <- c(y.distri1, y.distri2)
-        ylabel <- strheight("A", cex = par("cex") * max(1, clab1, 
+        ylabel <- graphics::strheight("A", cex = graphics::par("cex") * max(1, clab1, 
             clab2)) * 1.4
         y.distri1 <- (y.distri1 - min(y.distri))/(max(y.distri) - 
             min(y.distri))
@@ -82,21 +82,21 @@
             etiagauche <- TRUE
             if ((x1 - xmin) < (xmax - x2)) 
                 etiagauche <- FALSE
-            segments(x1, y0, x2, y0)
+            graphics::segments(x1, y0, x2, y0)
             if (clab1 > 0) {
                 cha <- labels1[i]
-                cex0 <- par("cex") * clab1
-                xh <- strwidth(cha, cex = cex0)
-                xh <- xh + strwidth("x", cex = cex0)
-                yh <- strheight(cha, cex = cex0) * 5/6
+                cex0 <- graphics::par("cex") * clab1
+                xh <- graphics::strwidth(cha, cex = cex0)
+                xh <- xh + graphics::strwidth("x", cex = cex0)
+                yh <- graphics::strheight(cha, cex = cex0) * 5/6
                 if (etiagauche) 
                   x0 <- x1 - xh/2
                 else x0 <- x2 + xh/2
-                rect(x0 - xh/2, y0 - yh, x0 + xh/2, y0 + yh, 
+                graphics::rect(x0 - xh/2, y0 - yh, x0 + xh/2, y0 + yh, 
                   col = "white", border = 1)
-                text(x0, y0, cha, cex = cex0)
+                graphics::text(x0, y0, cha, cex = cex0)
             }
-            points(x.moy, y0, pch = 20, cex = par("cex") * cpoi)
+            graphics::points(x.moy, y0, pch = 20, cex = graphics::par("cex") * cpoi)
         }
         for (i in 1:nvar2) {
             w <- weight2[fac2 == levels(fac2)[i]]
@@ -109,21 +109,21 @@
             etiagauche <- TRUE
             if ((x1 - xmin) < (xmax - x2)) 
                 etiagauche <- FALSE
-            segments(x1, y0, x2, y0)
+            graphics::segments(x1, y0, x2, y0)
             if (clab2 > 0) {
                 cha <- labels2[i]
-                cex0 <- par("cex") * clab2
-                xh <- strwidth(cha, cex = cex0)
-                xh <- xh + strwidth("x", cex = cex0)
-                yh <- strheight(cha, cex = cex0) * 5/6
+                cex0 <- graphics::par("cex") * clab2
+                xh <- graphics::strwidth(cha, cex = cex0)
+                xh <- xh + graphics::strwidth("x", cex = cex0)
+                yh <- graphics::strheight(cha, cex = cex0) * 5/6
                 if (etiagauche) 
                   x0 <- x1 - xh/2
                 else x0 <- x2 + xh/2
-                rect(x0 - xh/2, y0 - yh, x0 + xh/2, y0 + yh, 
+                graphics::rect(x0 - xh/2, y0 - yh, x0 + xh/2, y0 + yh, 
                   col = "white", border = 1)
-                text(x0, y0, cha, cex = cex0)
+                graphics::text(x0, y0, cha, cex = cex0)
             }
-            points(x.moy, y0, pch = 20, cex = par("cex") * cpoi)
+            graphics::points(x.moy, y0, pch = 20, cex = graphics::par("cex") * cpoi)
         }
     }
     if (inherits(x, "witwit")) {

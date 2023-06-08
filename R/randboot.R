@@ -7,8 +7,8 @@ as.randboot <- function(obs, boot, quantiles = c(0.025, 0.975), call = match.cal
     ## boot: a vector (length n) with bootstrapped values
     ## n: number of repetitions
         
-    res <- list(obs = obs, boot = boot, rep = length(na.omit(boot)))
-    res$stats <- obs - quantile(boot - obs, probs = rev(quantiles), na.rm = TRUE)
+    res <- list(obs = obs, boot = boot, rep = length(stats::na.omit(boot)))
+    res$stats <- obs - stats::quantile(boot - obs, probs = rev(quantiles), na.rm = TRUE)
     names(res$stats) <- rev(names(res$stats))
     res$call <- call
     class(res) <- "randboot"

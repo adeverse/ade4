@@ -9,8 +9,8 @@
 { 
     # modifiée le 18/11/2004 par cohérence avec triangle.param
    
-    seg <- function(a, b, col = par("col")) {
-        segments(a[1], a[2], b[1], b[2], col = col)
+    seg <- function(a, b, col = graphics::par("col")) {
+        graphics::segments(a[1], a[2], b[1], b[2], col = col)
     }
  
     ta <- data.frame(ta)
@@ -27,8 +27,8 @@
     nam <- names(ta)
     ta <- t(apply(ta, 1, function(x) x/sum(x)))
     d <- triangle.param(ta, scale = scale, min3 = min3, max3 = max3)
-    opar <- par(mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     A <- d$A
     B <- d$B
     C <- d$C
@@ -37,27 +37,27 @@
     mini <- d$mini
     maxi <- d$maxi
     if (show.position) add.position.triangle(d)
-    par(mar = c(0.1, 0.1, 0.1, 0.1))
-    plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
+    graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
+    graphics::plot(0, 0, type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.6, 
         1), xlab = "", ylab = "", xaxt = "n", yaxt = "n", asp = 1, 
         frame.plot = FALSE)
     seg(A, B)
     seg(B, C)
     seg(C, A)
-    text(C[1], C[2], labels = paste(mini[1]), pos = 2)
-    text(C[1], C[2], labels = paste(maxi[3]), pos = 4)
+    graphics::text(C[1], C[2], labels = paste(mini[1]), pos = 2)
+    graphics::text(C[1], C[2], labels = paste(maxi[3]), pos = 4)
     if (labeltriangle) 
-        text((A + C)[1]/2, (A + C)[2]/2, labels = nam[1], cex = 1.5, 
+        graphics::text((A + C)[1]/2, (A + C)[2]/2, labels = nam[1], cex = 1.5, 
             pos = 2)
-    text(A[1], A[2], labels = paste(maxi[1]), pos = 2)
-    text(A[1], A[2], labels = paste(mini[2]), pos = 1)
+    graphics::text(A[1], A[2], labels = paste(maxi[1]), pos = 2)
+    graphics::text(A[1], A[2], labels = paste(mini[2]), pos = 1)
     if (labeltriangle) 
-        text((A + B)[1]/2, (A + B)[2]/2, labels = nam[2], cex = 1.5, 
+        graphics::text((A + B)[1]/2, (A + B)[2]/2, labels = nam[2], cex = 1.5, 
             pos = 1)
-    text(B[1], B[2], labels = paste(maxi[2]), pos = 1)
-    text(B[1], B[2], labels = paste(mini[3]), pos = 4)
+    graphics::text(B[1], B[2], labels = paste(maxi[2]), pos = 1)
+    graphics::text(B[1], B[2], labels = paste(mini[3]), pos = 4)
     if (labeltriangle) 
-        text((B + C)[1]/2, (B + C)[2]/2, labels = nam[3], cex = 1.5, 
+        graphics::text((B + C)[1]/2, (B + C)[2]/2, labels = nam[3], cex = 1.5, 
             pos = 4)
     if (draw.line) {
         nlg <- 10 * (maxi[1] - mini[1])
@@ -75,7 +75,7 @@
     }
     if (cpoint > 0)
         for (i in 1:ncol(dfdistri)) {
-            points(xy[dfdistri[,i] > 0,],pch = pch, cex = par("cex") * cpoint, col=coul[i])
+            graphics::points(xy[dfdistri[,i] > 0,],pch = pch, cex = graphics::par("cex") * cpoint, col=coul[i])
         }
 
     if (cstar > 0) 

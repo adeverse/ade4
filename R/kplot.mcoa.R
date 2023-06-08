@@ -4,16 +4,16 @@
 {
     if (!inherits(object, "mcoa")) 
         stop("Object of type 'mcoa' expected")
-    opar <- par(ask = par("ask"), mfrow = par("mfrow"), mar = par("mar"))
-    on.exit(par(opar))
+    opar <- graphics::par(ask = graphics::par("ask"), mfrow = graphics::par("mfrow"), mar = graphics::par("mar"))
+    on.exit(graphics::par(opar))
     option <- option[1]
     if (option == "points") {
         if (is.null(mfrow)) 
-            mfrow <- n2mfrow(length(which.tab) + 1)
-        par(mfrow = mfrow)
+            mfrow <- grDevices::n2mfrow(length(which.tab) + 1)
+        graphics::par(mfrow = mfrow)
         if (length(which.tab) > prod(mfrow) - 1) 
-            par(ask = TRUE)
-        par(mar = c(0.1, 0.1, 0.1, 0.1))
+            graphics::par(ask = TRUE)
+        graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
         coo1 <- object$SynVar[, c(xax, yax)]
         cootot <- object$Tl1[, c(xax, yax)]
         names(cootot) <- names(coo1)
@@ -35,11 +35,11 @@
         return(invisible())
     }
     if (is.null(mfrow)) 
-        mfrow <- n2mfrow(length(which.tab))
-    par(mfrow = mfrow)
+        mfrow <- grDevices::n2mfrow(length(which.tab))
+    graphics::par(mfrow = mfrow)
     if (option == "axis") {
         if (length(which.tab) > prod(mfrow)) 
-            par(ask = TRUE)
+            graphics::par(ask = TRUE)
         for (ianal in which.tab) {
             coo2 <- object$Tax[object$T4[, 1] == levels(object$T4[,1])[ianal], c(xax, yax)]
             row.names(coo2) <- as.character(1:4)
@@ -50,7 +50,7 @@
     }
     if (option == "columns") {
         if (length(which.tab) > prod(mfrow)) 
-            par(ask = TRUE)
+            graphics::par(ask = TRUE)
         for (ianal in which.tab) {
             coo2 <- object$Tco[object$TC[, 1] == levels(object$TC[,1])[ianal], c(xax, yax)]
             s.arrow(coo2, clabel = clab, sub = row.names(object$cov2)[ianal], 

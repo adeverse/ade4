@@ -42,8 +42,13 @@ dudi.type <- function(x){
 
 
 adegraphicsLoaded <- function() {
+    res <- FALSE
     ## check if adegraphics is loaded
-    "package:adegraphics"%in%search()
+    if("package:adegraphics"%in%search())
+        ## check if adegraphics is loaded after ade4
+        if(which("package:adegraphics" == search()) < which("package:ade4" == search()))
+           res <- TRUE
+    return(res)
 }
     
 messageScannf <- function(oldCall, myNf) {

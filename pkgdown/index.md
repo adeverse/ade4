@@ -10,9 +10,7 @@
 
 **ade4** is a package for the [**R** software](https://www.r-project.org) since 2002. It contains functions for exploratory multivariate data analysis and graphical display, many numerical data sets and bibliographic references. Simple one-table methods are described in [Chessel et al. (2004)](http://pbil.univ-lyon1.fr/JTHome/ref/ade4-Rnews.pdf). Two-table and K-table methods are described in [Dray et al. (2007)](http://pbil.univ-lyon1.fr/ade4/article/rnews2/rnews2.pdf). The theory of the duality diagram and its implementation in ade4 are discussed in [Dray et Dufour (2007)](http://pbil.univ-lyon1.fr/ade4/article/jss/jss.pdf).
 
-A book in the *Springer Series in Statistics* collection, [**"Multivariate Analysis of Ecological Data with ade4"**](http://sdray.github.io/ade4/articles/book.html) presents the package. 
-
-Each example and all the graphs in this book come with [**executable R code**](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/Book/).
+A book in the *Springer Series in Statistics* collection, [**"Multivariate Analysis of Ecological Data with ade4"**](http://sdray.github.io/ade4/articles/book.html) presents the package. The examples and the graphs in this book can be [**reproduced online here**](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/Book/).
 
 If you use **ade4**, please consider citing [these references](http://sdray.github.io/ade4/authors.html#citation) !
 
@@ -54,8 +52,10 @@ You can also find a list of functions available to users on the [reference page]
 
 ### Other resources
 
-Check out the [ade4 book](https://link.springer.com/book/10.1007/978-1-4939-8850-1) and its [shiny application](https://ade4.shinyapps.io/Book/) for a complete introduction to the package and to rerun the code present in the book. 
+Check out the [ade4 book](http://sdray.github.io/ade4/articles/book.html) and its [shiny application](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/Book/) for a complete introduction to the package and to rerun the code present in the book. 
 You can also check these [bibliographic references](http://sdray.github.io/ade4/articles/papers.html) to help you understand **ade4** methods.
+
+Note for nostalgics &#x1F609; : the **old ade4 web site** is still available here: [http://pbil.univ-lyon1.fr/ADE-4/](http://pbil.univ-lyon1.fr/ADE-4/accueil2.php). 
 
 ### Using **ade4** online: the Shiny app
 

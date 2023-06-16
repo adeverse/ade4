@@ -32,12 +32,12 @@ Sébastien Ollier \email{sebastien.ollier@u-psud.fr}
 }
 \seealso{\code{\link{dudi}},\code{\link[spdep]{mat2listw}}}
 \examples{
-if (requireNamespace("spdep", quietly = TRUE)) {
+if (requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
     data(mafragh)
     maf.listw <- spdep::nb2listw(neig2nb(mafragh$neig))
     maf.pca <- dudi.pca(mafragh$env, scannf = FALSE)
     multispati.rtest(maf.pca, maf.listw)
-    maf.pca.ms <- multispati(maf.pca, maf.listw, scannf = FALSE)
+    maf.pca.ms <- adespatial::multispati(maf.pca, maf.listw, scannf = FALSE)
     plot(maf.pca.ms)
 }
 }

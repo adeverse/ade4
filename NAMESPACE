@@ -45,7 +45,6 @@ S3method("plot","foucart")
 S3method("plot","krandtest")
 S3method("plot","mcoa")
 S3method("plot","mfa")
-S3method("plot","multispati")
 S3method("plot","niche")
 S3method("plot","orthobasis")
 S3method("plot","pcaiv")
@@ -84,7 +83,6 @@ S3method("print","inertia")
 S3method("print","mcoa")
 S3method("print","mfa")
 S3method("print","multiblock")
-S3method("print","multispati")
 S3method("print","neig")
 S3method("print","niche")
 S3method("print","nipals")
@@ -147,7 +145,6 @@ S3method("summary","mcoa")
 S3method("summary","mfa")
 S3method("summary","inertia")
 S3method("summary","multiblock")
-S3method("summary","multispati")
 S3method("summary","neig")
 S3method("summary","orthobasis")
 S3method("summary","pcaiv")
@@ -235,7 +232,7 @@ export("originality")
 export("haar2level", "mld", "orthobasis.circ", "orthobasis.haar", "orthobasis.line", "orthobasis.mat", "orthobasis.neig", "is.orthobasis")
 
 ## ******* spatial *******
-export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multispati", "multispati.randtest", "mstree", "multispati.rtest", "nb2neig", "neig", "neig2mat", "neig2nb", "poly2area", "scores.neig")
+export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multispati.randtest", "mstree", "multispati.rtest", "nb2neig", "neig", "neig2mat", "neig2nb", "poly2area", "scores.neig")
 
 ## ******* misc *********
 export("bwca.dpcoa")
@@ -275,6 +272,10 @@ export("testertracenubisCpp")
 ## "randEH"
 ## "within"
 ## "withincoinertia"
+## "multispati"
+## "plot.multispati"
+## "print.multispati"
+## "plot.multispati"
 
 ## ******* internal utilities *******
 

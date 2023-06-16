@@ -84,11 +84,11 @@ if(adegraphicsLoaded()) {
   par(mfrow = c(1, 1))
 }
 
-if(requireNamespace("spdep", quietly = TRUE)) {
+if(requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
   lw1 <- apply(link1, 1, function(x) x[x > 0])
   listw1 <- spdep::nb2listw(nb1, lw1)
   coa1 <- dudi.coa(mafragh$flo, scan = FALSE, nf = 4)
-  ms1 <- multispati(coa1, listw1, scan = FALSE, nfp = 2, nfn = 0)
+  ms1 <- adespatial::multispati(coa1, listw1, scan = FALSE, nfp = 2, nfn = 0)
   summary(ms1)
   
   if(adegraphicsLoaded()) {

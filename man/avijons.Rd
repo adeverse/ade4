@@ -70,14 +70,15 @@ if(!adegraphicsLoaded()) {
   }
 
   if(requireNamespace("spdep", quietly = TRUE) & 
-    requireNamespace("pixmap", quietly = TRUE)) {
+    requireNamespace("pixmap", quietly = TRUE) &
+    requireNamespace("adespatial", quietly = TRUE)) {
     
     link1 <- area2link(avijons$area)
     lw1 <- apply(link1, 1, function(x) x[x > 0])
     neig1 <- neig(mat01 = 1*(link1 > 0))
     nb1 <- neig2nb(neig1)
     listw1 <- spdep::nb2listw(nb1,lw1)
-    jons.ms <- multispati(jons.coa, listw1, scan = FALSE, nfp = 3, nfn = 2)
+    jons.ms <- adespatial::multispati(jons.coa, listw1, scan = FALSE, nfp = 3, nfn = 2)
     summary(jons.ms)
     par(mfrow = c(2, 2))
     barplot(jons.coa$eig)

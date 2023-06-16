@@ -66,12 +66,12 @@ if(adegraphicsLoaded()) {
   barplot(afri.pco$li[, 3])
 }
 
-if(requireNamespace("spdep", quietly = TRUE)) {
+if(requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
   # multivariate spatial analysis
   afri.neig <- neig(n.line = 33)
   afri.nb <- neig2nb(afri.neig)
   afri.listw <- spdep::nb2listw(afri.nb)
-  afri.ms <- multispati(afri.pco, afri.listw, scannf = FALSE, nfposi = 6, nfnega = 0)
+  afri.ms <- adespatial::multispati(afri.pco, afri.listw, scannf = FALSE, nfposi = 6, nfnega = 0)
   
   if(adegraphicsLoaded()) {
     G2 <- s1d.barchart(afri.ms$li[, 1:3], p1d.horizontal = FALSE, plabels.cex = 0)

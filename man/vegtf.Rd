@@ -30,10 +30,10 @@
 }
 
 \examples{
-if(requireNamespace("spdep", quietly = TRUE)) {
+if(requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
   data(vegtf)
   coa1 <- dudi.coa(vegtf$veg, scannf = FALSE)
-  ms.coa1 <- multispati(coa1, listw = spdep::nb2listw(vegtf$nb), nfposi = 2, 
+  ms.coa1 <- adespatial::multispati(coa1, listw = spdep::nb2listw(vegtf$nb), nfposi = 2, 
     nfnega = 0, scannf = FALSE)
   summary(ms.coa1)
   plot(ms.coa1)

@@ -34,6 +34,7 @@ Suggests:
     ade4TkGUI, 
     adegraphics, 
     adephylo, 
+    adespatial,
     ape, 
     CircStats, 
     deldir, 

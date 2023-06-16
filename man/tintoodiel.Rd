@@ -39,9 +39,10 @@ if(!adegraphicsLoaded()) {
   
   estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
   
-  if(requireNamespace("spdep", quietly = TRUE)) {
+  if(requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
     estuary.listw <- spdep::nb2listw(neig2nb(tintoodiel$neig))
-    estuary.pca.ms <- multispati(estuary.pca, estuary.listw, scan = FALSE, nfposi = 3, nfnega = 2)
+    estuary.pca.ms <- adespatial::multispati(estuary.pca, estuary.listw, scan = FALSE, 
+        nfposi = 3, nfnega = 2)
     summary(estuary.pca.ms)
     par(mfrow = c(1, 2))
     barplot(estuary.pca$eig)

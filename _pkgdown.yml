@@ -330,7 +330,6 @@ reference:
   - orthobasis.line
   - orthobasis.mat
   - orthobasis.neig
-  - multispati  
   - multispati.randtest
   - multispati.rtest
   - nb2neig

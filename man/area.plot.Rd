@@ -70,7 +70,8 @@ par(mfrow = c(2, 2))
 area.plot(elec88$area, cpoint = 1)
 area.plot(elec88$area, lab = elec88$lab$dep, clab = 0.75)
 area.plot(elec88$area, clab = 0.75)
-area.plot(elec88$area, graph = neig(area = elec88$area), sub = "Neighbourhood graph", possub = "topright")
+area.plot(elec88$area, graph = neig(area = elec88$area), sub = "Neighbourhood graph", 
+    possub = "topright")
 par(mfrow = c(1, 1))
 
 \dontrun{

@@ -39,7 +39,7 @@ Daniel Chessel
 # a spatial example
 data(mafragh)
 tab0 <- (as.data.frame(scalewt(mafragh$env)))
-bilis0 <- neig2mat(mafragh$neig)
+bilis0 <- neig2mat(nb2neig(mafragh$nb))
 gm0 <- gearymoran(bilis0, tab0, 999)
 gm0
 plot(gm0, nclass = 20)

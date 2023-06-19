@@ -129,7 +129,7 @@ par(mfrow = c(1, 1))
 \dontrun{
 # a spatial orthobasis
 data(mafragh)
-w <- orthobasis.neig(mafragh$neig)
+w <- orthobasis.neig(neig2nb(mafragh$nb))
 if(adegraphicsLoaded()) {
   s.value(mafragh$xy, w[, 1:8], plegend.drawKey = FALSE)
   s1d.barchart(attr(w, "values"), p1d.horizontal = FALSE)

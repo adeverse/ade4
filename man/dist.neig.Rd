@@ -21,7 +21,7 @@ Stéphane Dray \email{stephane.dray@univ-lyon1.fr}
 }
 \examples{
     data(elec88)
-    d0 <- dist.neig(elec88$neig)
+    d0 <- dist.neig(nb2neig(elec88$nb))
     plot(dist(elec88$xy),d0)
 }
 \keyword{array}

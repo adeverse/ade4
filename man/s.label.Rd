@@ -48,8 +48,6 @@ if(!adegraphicsLoaded()) {
   data(atlas)
   s.label(atlas$xy, lab = atlas$names.district, 
     area = atlas$area, inc = FALSE, addax = FALSE)
-  data(mafragh)
-  s.label(mafragh$xy, inc = FALSE, neig = mafragh$neig, addax = FALSE)
   data(irishdata)
   s.label(irishdata$xy, inc = FALSE, contour = irishdata$contour, 
     addax = FALSE)

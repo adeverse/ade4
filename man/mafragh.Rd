@@ -15,7 +15,6 @@
   \describe{
     \item{xy}{the coordinates of 97 sites}
     \item{flo}{a data frame with 97 sites and 56 species}
-    \item{neig}{the neighbourhood graph of the 97 sites (an object of class \code{neig})}
     \item{env}{a data frame with 97 sites and 11 environmental variables}
     \item{partition}{a factor classifying the 97 sites in 7 classes}
     \item{area}{a data frame of class \code{area}}
@@ -55,7 +54,6 @@ if(adegraphicsLoaded()) {
 
 } else {
   par(mfrow = c(3, 2))
-  s.label(mafragh$xy, inc = FALSE, neig = mafragh$neig, sub = "Samples & Neighbourhood graph")
   s.value(mafragh$xy, coa1$li[, 1], sub = "Axis 1 - COA")
   s.value(mafragh$xy, pca1$li[, 1], sub = "Axis 1 - PCA")
   s.class(pca1$li, mafragh$partition, sub = "Plane 1-2 - PCA")

@@ -16,7 +16,6 @@
   \describe{
     \item{tab}{a data frame with 14 rows-areas and 12 columns-months}
     \item{xy}{a data frame with the 2 spatial coordinates of the 14 region centers}
-    \item{neig}{the neighbouring graph between areas, object of the class \code{neig}}
     \item{col.names}{a vector containing the month items}
     \item{nb}{a neighborhood object (class \code{nb} defined in package \code{spdep})}
 }}

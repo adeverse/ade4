@@ -16,7 +16,7 @@ Authors@R: c(
    person("Aurélie", "Siberchicot", role = c("ctb", "cre"), email = "aurelie.siberchicot@univ-lyon1.fr", comment = c(ORCID = "0000-0002-7638-8318"))
 	)
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5.0)
 Imports: 
     graphics, 
     grDevices, 

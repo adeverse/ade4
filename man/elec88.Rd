@@ -24,7 +24,6 @@
       The second and third variables return the coordinates (x, y) of the points of the boundary line.}
     \item{contour}{a data frame with 4 variables (x1, y1, x2, y2) for the contour display of France}
     \item{xy}{a data frame with two variables (x, y) giving the position of the center for each department}
-    \item{neig}{the neighbouring graph between departments, object of the class \code{neig}}
     \item{nb}{the neighbouring graph between departments, object of the class \code{nb}}
     \item{Spatial}{the map of the french departments in Lambert II coordinates 
       (an object of the class \code{SpatialPolygons} of \code{sp})}
@@ -68,8 +67,6 @@ if(adegraphicsLoaded()) {
   plot(elec88$area[, 2:3], type = "n", asp = 1)
   lpoly <- split(elec88$area[, 2:3], elec88$area[, 1])
   lapply(lpoly, function(x) {points(x, type = "l"); invisible()})
-  polygon(elec88$area[elec88$area$V1 == "D25", 2:3], col = 1)
-  area.plot(elec88$area, graph = elec88$neig, lwdg = 1)
   polygon(elec88$area[elec88$area$V1 == "D25", 2:3], col = 1)
   area.plot(elec88$area, val = elec88$xy[, 1] + elec88$xy[, 2])
   area.plot(elec88$area, val = pca1$li[, 1], sub = "F1 PCA", 

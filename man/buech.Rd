@@ -15,7 +15,6 @@
     \item{tab1}{a data frame with 10 environmental variables collected on 31 sites in Juin (1984)}
     \item{tab2}{a data frame with 10 environmental variables collected on 31 sites in September (1984)}
     \item{xy}{a data frame with the coordinates of the sites}
-    \item{neig}{an object of class \code{neig}}
     \item{contour}{a data frame for background map}
     \item{nb}{the neighbouring graph between sites, object of the class \code{nb}}
     \item{Spatial}{an object of the class \code{SpatialPolygons} of \code{sp},
@@ -57,12 +56,6 @@ if(adegraphicsLoaded()) {
       Sp = buech$Spatial, nb = buech$nb, pSp.col = "transparent", plot = FALSE)
     G <- cbindADEg(g1, g2, plot = TRUE)
   }
-} else {
-  par(mfrow = c(1,2))
-  s.label(buech$xy, contour = buech$contour, neig = buech$neig)
-  s.value(buech$xy, buech$tab2$Suspens - buech$tab1$Suspens,
-    contour = buech$contour, neig = buech$neig, csi = 3)
-  par(mfrow = c(1,1))
 }}
 
 \keyword{datasets}

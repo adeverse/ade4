@@ -15,7 +15,6 @@
   \describe{
     \item{xy}{a data frame with the coordinates of the 31 sites}
     \item{gen}{a data frame with 22 variables collected on 31 sites}
-    \item{neig}{an object of class \code{neig}}
     \item{nb}{a neighborhood object (class \code{nb} defined in package \code{spdep})}
 }}
 
@@ -41,7 +40,7 @@ if(requireNamespace("pixmap", quietly = TRUE)) {
   points(atya$xy, pch = 20, cex = 2)
 }
 if(requireNamespace("spdep", quietly = TRUE)) {
-  plot(neig2nb(atya$neig), atya$xy, col = "red", add = TRUE, lwd = 2)
+  plot(atya$nb, atya$xy, col = "red", add = TRUE, lwd = 2)
   par(mfrow = c(1,1))
 }
 }}

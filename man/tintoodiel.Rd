@@ -16,7 +16,6 @@
   \describe{
     \item{xy}{a data frame that contains spatial coordinates of the 52 sites}   
     \item{tab}{a data frame with 12 columns (concentration of heavy metals) and 52 rows (sites)}
-    \item{neig}{an object of class \code{neig}}
     \item{nb}{the neighbourhood graph of the 52 sites (an object of class \code{nb})}
 }}
 
@@ -29,18 +28,10 @@
 
 \examples{
 data(tintoodiel)
-if(!adegraphicsLoaded()) {
-  \dontrun{
-  if(requireNamespace("pixmap", quietly = TRUE)) {
-    estuary.pnm <- pixmap::read.pnm(system.file("pictures/tintoodiel.pnm", package = "ade4"))
-    s.label(tintoodiel$xy, pixmap = estuary.pnm, neig = tintoodiel$neig,
-      clab = 0, cpoi = 2, cneig = 3, addax = FALSE, cgrid = 0, grid = FALSE)
-  }}
-  
   estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
   
   if(requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
-    estuary.listw <- spdep::nb2listw(neig2nb(tintoodiel$neig))
+    estuary.listw <- spdep::nb2listw(tintoodiel$nb)
     estuary.pca.ms <- adespatial::multispati(estuary.pca, estuary.listw, scan = FALSE, 
         nfposi = 3, nfnega = 2)
     summary(estuary.pca.ms)
@@ -48,6 +39,6 @@ if(!adegraphicsLoaded()) {
     barplot(estuary.pca$eig)
     barplot(estuary.pca.ms$eig)
     par(mfrow = c(1, 1))
-}}}
+}}
 
 \keyword{datasets}

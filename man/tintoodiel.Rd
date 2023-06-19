@@ -28,9 +28,9 @@
 
 \examples{
 data(tintoodiel)
-  estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
-  
-  if(requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
+estuary.pca <- dudi.pca(tintoodiel$tab, scan = FALSE, nf = 4)
+
+if(requireNamespace("spdep", quietly = TRUE) & requireNamespace("adespatial", quietly = TRUE)) {
     estuary.listw <- spdep::nb2listw(tintoodiel$nb)
     estuary.pca.ms <- adespatial::multispati(estuary.pca, estuary.listw, scan = FALSE, 
         nfposi = 3, nfnega = 2)

@@ -102,9 +102,6 @@
     <dt>flo</dt>
 <dd><p>a data frame with 97 sites and 56 species</p></dd>
 
-    <dt>neig</dt>
-<dd><p>the neighbourhood graph of the 97 sites (an object of class <code>neig</code>)</p></dd>
-
     <dt>env</dt>
 <dd><p>a data frame with 97 sites and 11 environmental variables</p></dd>
 
@@ -165,7 +162,6 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="s.label.html">s.label</a></span><span class="op">(</span><span class="va">mafragh</span><span class="op">$</span><span class="va">xy</span>, inc <span class="op">=</span> <span class="cn">FALSE</span>, neig <span class="op">=</span> <span class="va">mafragh</span><span class="op">$</span><span class="va">neig</span>, sub <span class="op">=</span> <span class="st">"Samples &amp; Neighbourhood graph"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="s.value.html">s.value</a></span><span class="op">(</span><span class="va">mafragh</span><span class="op">$</span><span class="va">xy</span>, <span class="va">coa1</span><span class="op">$</span><span class="va">li</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>, sub <span class="op">=</span> <span class="st">"Axis 1 - COA"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="s.value.html">s.value</a></span><span class="op">(</span><span class="va">mafragh</span><span class="op">$</span><span class="va">xy</span>, <span class="va">pca1</span><span class="op">$</span><span class="va">li</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>, sub <span class="op">=</span> <span class="st">"Axis 1 - PCA"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="s.class.html">s.class</a></span><span class="op">(</span><span class="va">pca1</span><span class="op">$</span><span class="va">li</span>, <span class="va">mafragh</span><span class="op">$</span><span class="va">partition</span>, sub <span class="op">=</span> <span class="st">"Plane 1-2 - PCA"</span><span class="op">)</span></span></span>

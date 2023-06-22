@@ -46,6 +46,8 @@ Several vignettes are available to help you get started with **ade4** (more to c
 
 - [Description of species-environment relationships](http://sdray.github.io/ade4/articles/Chap2tables.html)
 
+- [Analysing Changes in Structures](http://sdray.github.io/ade4/articles/ChapKtables.html)
+
 ### List of function references
 
 You can also find a list of functions available to users on the [reference page](http://sdray.github.io/ade4/reference/index.html).

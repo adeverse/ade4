@@ -30,6 +30,6 @@ if(adegraphicsLoaded()) {
     posi = "bottomleft")
 } else {
   scatter(dudi.coa(bacteria$espcodon, scann = FALSE), 
-    posi = "bottom")
+    posi = "bottomleft")
 }}
 \keyword{datasets}

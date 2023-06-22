@@ -173,16 +173,16 @@ regions for samples.</p>
 </h3>
 <p>Here are a few examples of <span class="math inline">\(K\)</span>-table data sets taken from
 <strong>ade4</strong> that correspond to the different cases presented
-in the previous Figure. The <code>friday87</code> data set contains one
-table (<code>friday87$fau</code>) with 91 macro-invertebrate species
-sampled in 16 ponds. The 91 species are grouped in 10 taxonomic groups:
-Hemiptera, Odonata, Trichoptera, Ephemeroptera, Coleoptera, Diptera,
-Hydracarina, Malacostraca, Mollusca, Oligochaeta. These species data can
-be considered as a <span class="math inline">\(K\)</span>-table with 10
-tables (one for each taxonomic group), each table having 16 rows and a
-number of columns equal to the number of species in each group (11, 7,
-13, 4, 13, 22, 4, 3, 8, 6 respectively). This data set corresponds to
-the case presented in case A of the previous Figure.</p>
+in the previous Figure. The <code>friday87</code> data set (Friday 1987)
+contains one table (<code>friday87$fau</code>) with 91
+macro-invertebrate species sampled in 16 ponds. The 91 species are
+grouped in 10 taxonomic groups: Hemiptera, Odonata, Trichoptera,
+Ephemeroptera, Coleoptera, Diptera, Hydracarina, Malacostraca, Mollusca,
+Oligochaeta. These species data can be considered as a <span class="math inline">\(K\)</span>-table with 10 tables (one for each
+taxonomic group), each table having 16 rows and a number of columns
+equal to the number of species in each group (11, 7, 13, 4, 13, 22, 4,
+3, 8, 6 respectively). This data set corresponds to the case presented
+in case A of the previous Figure.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">friday87</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">friday87</span><span class="op">$</span><span class="va">fau</span><span class="op">)</span></span></code></pre></div>
@@ -215,16 +215,16 @@ corresponds to the case B presented in the previous Figure.</p>
 <span><span class="co">#&gt;         8         5         6         8         4         5        16         3 </span></span>
 <span><span class="co">#&gt;   Drugeon  Furieuse     Lison      Loue </span></span>
 <span><span class="co">#&gt;         6         9         5        17</span></span></code></pre>
-<p>The third example comes from a paper by about the influence of
-vegetation successions on bird communities composition in European
-forests. The <code>bf88</code> data set in the <strong>ade4</strong>
-package contains the number of birds of 79 species observed in four
-regions (Burgundy, Provence, Corsica, Poland) along a gradient of six
-stages of vegetation succession (from 1: “open, bushy growth less than 1
-m” to 6: “closed, forest with trees higher than 20 m”). Data are
-arranged in a list of six data frames, corresponding to the six
-ecological stages, each data frame having 79 rows (bird species) and
-four columns (the four regions). This data set corresponds to a data
+<p>The third example comes from a paper by Blondel 1988 about the
+influence of vegetation successions on bird communities composition in
+European forests. The <code>bf88</code> data set in the
+<strong>ade4</strong> package contains the number of birds of 79 species
+observed in four regions (Burgundy, Provence, Corsica, Poland) along a
+gradient of six stages of vegetation succession (from 1: “open, bushy
+growth less than 1 m” to 6: “closed, forest with trees higher than 20
+m”). Data are arranged in a list of six data frames, corresponding to
+the six ecological stages, each data frame having 79 rows (bird species)
+and four columns (the four regions). This data set corresponds to a data
 cube as presented in case C of the Figure, with vegetation stages
 instead of dates.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
@@ -440,25 +440,27 @@ if they have been firstly transposed.</li>
 <p>The first two methods are also named “STATIS on tables”. Both “STATIS
 on tables” and “STATIS on operators” methods share many similarities.
 All these methods can be decomposed in three steps, called the
-Interstructure, the Compromise and the Intrastructure . The
-Interstructure uses the RV coefficients to compute a matrix of scalar
-products between the tables that measures their relationships. When all
-the tables have both the same rows and columns, STATIS, and the
+Interstructure, the Compromise and the Intrastructure (Lavit 1988, Lavit
+1994). The Interstructure uses the RV coefficients to compute a matrix
+of scalar products between the tables that measures their relationships.
+When all the tables have both the same rows and columns, STATIS, and the
 associated computation of the RV coefficient, is performed directly on
 tables. Two analyses have been developed in this case: Partial Triadic
-Analysis and Foucart Correspondence Analysis .</p>
+Analysis (Thioulouse 1987) and Foucart Correspondence Analysis (Foucart
+1978, Pavoine 2007).</p>
 <p>When the tables have only one common dimension (rows or columns), the
 analysis, including the computation of RV coefficients, is performed on
-Escoufier operators . In this framework, the RV coefficient is a
-multivariate generalisation of the squared correlation coefficient that
-allows to measure the link between two tables with only one common
-dimension (rows or columns). It is used for example in Coinertia
-Analysis. The case where the rows (sites or samples) are common to all
-the tables is called STATIS-WD, while the case where the columns
-(variables or species) are in common is called STATIS-VQ.</p>
+Escoufier operators (Escoufier 1973). In this framework, the RV
+coefficient is a multivariate generalisation of the squared correlation
+coefficient that allows to measure the link between two tables with only
+one common dimension (rows or columns). It is used for example in
+Coinertia Analysis. The case where the rows (sites or samples) are
+common to all the tables is called STATIS-WD, while the case where the
+columns (variables or species) are in common is called STATIS-VQ.</p>
 <p>Then, the Compromise is computed as a combination of the <span class="math inline">\(K\)</span> tables, and the Intrastructure projects
 the elements (rows and columns) of each table onto the analysis of the
-Compromise. This approach gave rise to many generalisations .</p>
+Compromise. This approach gave rise to many generalisations (see for
+example Abdi 2012).</p>
 </div>
 <div class="section level2">
 <h2 id="partial-triadic-analysis">Partial Triadic Analysis<a class="anchor" aria-label="anchor" href="#partial-triadic-analysis"></a>
@@ -466,11 +468,11 @@ Compromise. This approach gave rise to many generalisations .</p>
 <p>The theoretical background of Triadic Analysis was established in the
 PhD thesis of Jaffrenou, 1978. He showed that it was in fact equivalent
 to Tucker’s Three Mode Factor Analysis (Tucker, 1966). An application of
-a particular case (called
-<code>Partial Triadic Analysis'') to ecological situations was published by Thioulouse, 1987. The extension to the complete case (</code>Complete
-Triadic Analysis’’) was then explained by Kroonenberg 1989, in the
-framework of Three-mode Principal Component Analysis (Kronenberg,
-1983).</p>
+a particular case (called “Partial Triadic Analysis”) to ecological
+situations was published by Thioulouse, 1987. The extension to the
+complete case (“Complete Triadic Analysis”) was then explained by
+Kroonenberg 1989, in the framework of Three-mode Principal Component
+Analysis (Kronenberg, 1983).</p>
 <p>The main characteristic of PTA is its simplicity: computations can be
 done with a simple PCA software, and interpretations are usually easy.
 One drawback is the constraint on the number of samples and variables
@@ -619,8 +621,8 @@ samples). If tables have different rows different columns, then none of
 these methods can be used.</p>
 <p>When variables are identical across all the tables, then STATIS
 compares covariance matrices (VQ) and analyses similarities between
-variables. This is called the ``STATIS on VQ’’ strategy.</p>
-<p>The ``STATIS on WD’’ strategy is used when the tables have the same
+variables. This is called the “STATIS on VQ” strategy.</p>
+<p>The “STATIS on WD” strategy is used when the tables have the same
 rows. It compares matrices of scalar products between individuals (WD),
 and analyses similarities between individuals.</p>
 <p>In the <strong>ade4</strong> package, these differences are not
@@ -911,7 +913,7 @@ environmental variables table (Concordance Analysis).</p>
 <p>The <span class="math inline">\(K\)</span>-table data analysis
 methods that have been broached in this chapter belong to three
 families: STATIS, MFA and MCOA. When all the tables of the <span class="math inline">\(K\)</span>-table have the same individuals and the
-same variables, the ``STATIS on tables’’ strategy can be used, with for
+same variables, the “STATIS on tables” strategy can be used, with for
 example the PTA and Foucart COA methods. When the tables have only one
 dimension in common, then the STATIS on WD (same individuals) and STATIS
 on VQ (same variables) can be used.</p>
@@ -922,16 +924,18 @@ generalisations.</p>
 <p>Lastly, MCOA is a generalisation of Coinertia Analysis. In this
 example of application, it was used to analyse a -table including ten
 faunistic tables and an environmental table. However, in this context,
-Concordance Analysis , a generalisation of MCOA to the analysis of <span class="math inline">\(K+1\)</span> tables, could be preferred as it
-considers explicitly the environmental table as a reference table to
-ordinate the <span class="math inline">\(K\)</span> faunistic tables.
-Unfortunately, this method is not yet implemented in
-<strong>ade4</strong>. Two other <span class="math inline">\(K+1\)</span> methods are available in
-<strong>ade4</strong>: Multiblock Partial Least Square (PLS) and
-Multiblock PCAIV. These two regression-based methods are able to analyse
-the effect of <span class="math inline">\(K\)</span> explanatory tables
-on a response table. They are implemented in the <code>mbpls</code> and
-<code>mbpcaiv</code> functions (Dray 2019).</p>
+Concordance Analysis (Lafosse 1997, Bady 2004), a generalisation of MCOA
+to the analysis of <span class="math inline">\(K+1\)</span> tables,
+could be preferred as it considers explicitly the environmental table as
+a reference table to ordinate the <span class="math inline">\(K\)</span>
+faunistic tables. Unfortunately, this method is not yet implemented in
+<strong>ade4</strong>.</p>
+<p>Two other <span class="math inline">\(K+1\)</span> methods are
+available in <strong>ade4</strong>: Multiblock Partial Least Square
+(PLS) and Multiblock PCAIV. These two regression-based methods are able
+to analyse the effect of <span class="math inline">\(K\)</span>
+explanatory tables on a response table. They are implemented in the
+<code>mbpls</code> and <code>mbpcaiv</code> functions (Dray 2019).</p>
 <p>Tha last Figure shows the main <span class="math inline">\(K\)</span>-table data analysis methods available
 in the <strong>ade4</strong> package. The <code>ktab</code> class allows
 to handle all these methods in the same way and using the same utility

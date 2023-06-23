@@ -19,8 +19,8 @@ Tomassone, R., Danzard, M., Daudin, J. J. and Masson J. P.  (1988)
 }
 \examples{
 data(chazeb)
-if(!adegraphicsLoaded())
-  plot(discrimin(dudi.pca(chazeb$tab, scan = FALSE), 
+#if(!adegraphicsLoaded())
+  ade4:::plot.discrimin(discrimin(dudi.pca(chazeb$tab, scan = FALSE), 
     chazeb$cla, scan = FALSE))
 }
 \keyword{datasets}

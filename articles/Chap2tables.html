@@ -169,9 +169,9 @@ for each analysis.</p>
 between the axes kept in the two analyses can be computed:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cor</a></span><span class="op">(</span><span class="va">pca.env</span><span class="op">$</span><span class="va">li</span>, <span class="va">pca.fish</span><span class="op">$</span><span class="va">li</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt;            Axis1      Axis2</span></span>
-<span><span class="co">#&gt; Axis1  0.5682058 -0.3483176</span></span>
-<span><span class="co">#&gt; Axis2 -0.4679404 -0.6308694</span></span></code></pre>
+<pre><code><span><span class="co">#&gt;            Axis1     Axis2</span></span>
+<span><span class="co">#&gt; Axis1  0.5682058 0.3483176</span></span>
+<span><span class="co">#&gt; Axis2 -0.4679404 0.6308694</span></span></code></pre>
 <p>The two ordinations are strongly linked. The first two axes of the
 fish ordination (columns) are linked to the two main environmental
 gradients (first two axes of PCA of the environmental table). To
@@ -180,17 +180,17 @@ original environmental variables and species ordination scores:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cor</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">$</span><span class="va">env</span>, <span class="va">pca.fish</span><span class="op">$</span><span class="va">li</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt;           Axis1        Axis2</span></span>
-<span><span class="co">#&gt; dfs  0.81690724 -0.113670362</span></span>
-<span><span class="co">#&gt; alt -0.67742048 -0.001438816</span></span>
-<span><span class="co">#&gt; slo -0.57154952 -0.093089123</span></span>
-<span><span class="co">#&gt; flo  0.78476404  0.013730306</span></span>
-<span><span class="co">#&gt; pH  -0.04933278  0.252401703</span></span>
-<span><span class="co">#&gt; har  0.44764032 -0.038390495</span></span>
-<span><span class="co">#&gt; pho  0.11485956 -0.537131173</span></span>
-<span><span class="co">#&gt; nit  0.46860409 -0.309248079</span></span>
-<span><span class="co">#&gt; amm  0.08400315 -0.557866204</span></span>
-<span><span class="co">#&gt; oxy -0.40335527  0.655908104</span></span>
-<span><span class="co">#&gt; bdo  0.08547836 -0.702449371</span></span></code></pre>
+<span><span class="co">#&gt; dfs  0.81690724  0.113670362</span></span>
+<span><span class="co">#&gt; alt -0.67742048  0.001438816</span></span>
+<span><span class="co">#&gt; slo -0.57154952  0.093089123</span></span>
+<span><span class="co">#&gt; flo  0.78476404 -0.013730306</span></span>
+<span><span class="co">#&gt; pH  -0.04933278 -0.252401703</span></span>
+<span><span class="co">#&gt; har  0.44764032  0.038390495</span></span>
+<span><span class="co">#&gt; pho  0.11485956  0.537131173</span></span>
+<span><span class="co">#&gt; nit  0.46860409  0.309248079</span></span>
+<span><span class="co">#&gt; amm  0.08400315  0.557866204</span></span>
+<span><span class="co">#&gt; oxy -0.40335527 -0.655908104</span></span>
+<span><span class="co">#&gt; bdo  0.08547836  0.702449371</span></span></code></pre>
 <p>The first axis is mainly correlated to geomorphological variables
 (distance from the source, flow, altitude, slope) whereas the second
 axis is more linked to chemical processes (biological demand for oxygen,
@@ -203,12 +203,12 @@ performed by the <code>supcol</code> function.</p>
 <code class="sourceCode R"><span><span class="va">supcol.env</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/supcol.html">supcol</a></span><span class="op">(</span><span class="va">pca.fish</span>, <span class="va">pca.env</span><span class="op">$</span><span class="va">tab</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">supcol.env</span><span class="op">$</span><span class="va">cosup</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt;           Comp1        Comp2</span></span>
-<span><span class="co">#&gt; dfs  0.81690724 -0.113670362</span></span>
-<span><span class="co">#&gt; alt -0.67742048 -0.001438816</span></span>
-<span><span class="co">#&gt; slo -0.57154952 -0.093089123</span></span>
-<span><span class="co">#&gt; flo  0.78476404  0.013730306</span></span>
-<span><span class="co">#&gt; pH  -0.04933278  0.252401703</span></span>
-<span><span class="co">#&gt; har  0.44764032 -0.038390495</span></span></code></pre>
+<span><span class="co">#&gt; dfs  0.81690724  0.113670362</span></span>
+<span><span class="co">#&gt; alt -0.67742048  0.001438816</span></span>
+<span><span class="co">#&gt; slo -0.57154952  0.093089123</span></span>
+<span><span class="co">#&gt; flo  0.78476404 -0.013730306</span></span>
+<span><span class="co">#&gt; pH  -0.04933278 -0.252401703</span></span>
+<span><span class="co">#&gt; har  0.44764032  0.038390495</span></span></code></pre>
 <p>These correlations can also be depicted on a correlation circle.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/s.corcircle.html">s.corcircle</a></span><span class="op">(</span><span class="va">supcol.env</span><span class="op">$</span><span class="va">cosup</span><span class="op">)</span></span></code></pre></div>
@@ -427,7 +427,7 @@ tested by random permutation of the rows of both tables (function
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt; 8.598936809 0.083390215 0.001823211</span></span></code></pre>
+<span><span class="co">#&gt; 8.672846871 0.084919048 0.001777374</span></span></code></pre>
 <p>In this case, the link between the composition of species assemblages
 and environmental conditions is highly significant.</p>
 <p>Coinertia Analysis maximises covariances and thus can handle tables
@@ -470,7 +470,7 @@ rows of the second table:</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;      Std.Obs  Expectation     Variance </span></span>
-<span><span class="co">#&gt; 10.687059185  0.107915619  0.002444639</span></span></code></pre>
+<span><span class="co">#&gt; 10.433383234  0.107775425  0.002566323</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="analysis-on-instrumental-variables">Analysis on instrumental variables<a class="anchor" aria-label="anchor" href="#analysis-on-instrumental-variables"></a>
@@ -639,7 +639,7 @@ of the explanatory table:</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt; 5.559729502 0.367744999 0.004992718</span></span></code></pre>
+<span><span class="co">#&gt; 4.159157859 0.385680680 0.008125379</span></span></code></pre>
 <p>Lastly, the <code>summary</code> function also returns information on
 the eigenvalues and their decomposition. The initial analysis
 (<code>pca.fish</code>) seeks linear combination of the variables with

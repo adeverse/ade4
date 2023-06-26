@@ -48,6 +48,8 @@ Several vignettes are available to help you get started with **ade4** (more to c
 
 - [Analysing Changes in Structures](http://sdray.github.io/ade4/articles/ChapKtables.html)
 
+- [Analysing Changes in Co-structures](http://sdray.github.io/ade4/articles/Chap2Ktables.html)
+
 ### List of function references
 
 You can also find a list of functions available to users on the [reference page](http://sdray.github.io/ade4/reference/index.html).

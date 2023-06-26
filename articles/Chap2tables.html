@@ -58,6 +58,7 @@
     <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
     <a class="dropdown-item" href="../articles/Chap2tables.html">Description of species-environment relationships</a>
     <a class="dropdown-item" href="../articles/ChapKtables.html">Analysing Changes in Structures</a>
+    <a class="dropdown-item" href="../articles/Chap2Ktables.html">Analysing Changes in Co-structures</a>
   </div>
 </li>
 <li class="nav-item">
@@ -427,7 +428,7 @@ tested by random permutation of the rows of both tables (function
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt;  8.89017465  0.08303441  0.00170902</span></span></code></pre>
+<span><span class="co">#&gt; 8.104763677 0.086262499 0.002020339</span></span></code></pre>
 <p>In this case, the link between the composition of species assemblages
 and environmental conditions is highly significant.</p>
 <p>Coinertia Analysis maximises covariances and thus can handle tables
@@ -469,8 +470,8 @@ rows of the second table:</p>
 <span><span class="co">#&gt; Simulated p-value: 0.001 </span></span>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;      Std.Obs  Expectation     Variance </span></span>
-<span><span class="co">#&gt; 11.251760297  0.106476332  0.002217446</span></span></code></pre>
+<span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
+<span><span class="co">#&gt; 10.48481025  0.10606124  0.00255772</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="analysis-on-instrumental-variables">Analysis on instrumental variables<a class="anchor" aria-label="anchor" href="#analysis-on-instrumental-variables"></a>
@@ -639,7 +640,7 @@ of the explanatory table:</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt; 4.836776364 0.370842164 0.006493178</span></span></code></pre>
+<span><span class="co">#&gt; 4.686974389 0.372794984 0.006845752</span></span></code></pre>
 <p>Lastly, the <code>summary</code> function also returns information on
 the eigenvalues and their decomposition. The initial analysis
 (<code>pca.fish</code>) seeks linear combination of the variables with

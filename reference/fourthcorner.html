@@ -34,6 +34,7 @@
     <a class="dropdown-item" href="../articles/ChapBetGr.html">Taking into account groups of sites</a>
     <a class="dropdown-item" href="../articles/Chap2tables.html">Description of species-environment relationships</a>
     <a class="dropdown-item" href="../articles/ChapKtables.html">Analysing Changes in Structures</a>
+    <a class="dropdown-item" href="../articles/Chap2Ktables.html">Analysing Changes in Co-structures</a>
   </div>
 </li>
 <li class="nav-item">
@@ -282,50 +283,50 @@ responses to environmental variation. <em>Ecology</em>, <b>95</b>, 14--21. doi:1
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   holm </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      Test Stat          Obs     Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        farms / feed.hab Chi2   4.36429268  1.65970487 greater   0.08</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    small.bui / feed.hab Chi2   5.57481613 -0.31453233 greater   0.51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     high.bui / feed.hab Chi2   3.11706174  0.45864922 greater   0.24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4     industry / feed.hab Chi2   2.05615534  0.30757011 greater   0.30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       fields / feed.hab Chi2  14.01139382  0.15471728 greater   0.29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    grassland / feed.hab Chi2   1.27966991 -0.26874427 greater   0.50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7      scrubby / feed.hab Chi2   2.87647118  0.80910009 greater   0.15</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    deciduous / feed.hab Chi2   2.56301663  0.59169273 greater   0.20</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9      conifer / feed.hab Chi2   0.67773900 -0.57428494 greater   0.68</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10       noisy / feed.hab Chi2   8.04038367 -0.09371950 greater   0.47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11   veg.cover / feed.hab Chi2  29.48926101 -0.08074327 greater   0.42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12     farms / feed.strat Chi2   4.29284964  0.44502960 greater   0.24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 small.bui / feed.strat Chi2  13.59643807  1.06020439 greater   0.13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14  high.bui / feed.strat Chi2   8.13102044  1.77538941 greater   0.08</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15  industry / feed.strat Chi2   1.60089833 -0.45272200 greater   0.57</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16    fields / feed.strat Chi2   7.89491358  2.28010549 greater   0.04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 grassland / feed.strat Chi2   2.11779967 -0.24948458 greater   0.48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18   scrubby / feed.strat Chi2   5.17033389  0.24781601 greater   0.24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 deciduous / feed.strat Chi2   4.27795300  0.25177062 greater   0.35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20   conifer / feed.strat Chi2   3.27694136  0.00766799 greater   0.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21     noisy / feed.strat Chi2   6.75501319  0.81865167 greater   0.14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22 veg.cover / feed.strat Chi2  78.31693213  3.23550456 greater   0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23       farms / breeding Chi2   3.23430156 -0.46726183 greater   0.59</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24   small.bui / breeding Chi2  27.79316236  1.58892837 greater   0.09</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25    high.bui / breeding Chi2  12.43543038  0.86039779 greater   0.17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26    industry / breeding Chi2  22.28586480  3.64277527 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27      fields / breeding Chi2  38.33899311  1.86810922 greater   0.06</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28   grassland / breeding Chi2  16.69969331  2.16037752 greater   0.04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29     scrubby / breeding Chi2   7.93877813  0.36005814 greater   0.28</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30   deciduous / breeding Chi2  36.37422465  6.79796419 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31     conifer / breeding Chi2   8.13155633  0.38238206 greater   0.30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32       noisy / breeding Chi2  22.81746753  1.28589924 greater   0.14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33   veg.cover / breeding Chi2 118.24035270  5.66523061 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34      farms / migratory Chi2   3.19878341  0.64710689 greater   0.22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35  small.bui / migratory Chi2   0.98799705  0.01733171 greater   0.30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36   high.bui / migratory Chi2   0.62908910 -0.31771368 greater   0.45</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37   industry / migratory Chi2   0.98753393  0.07437081 greater   0.31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38     fields / migratory Chi2   5.39284445 -0.08217305 greater   0.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39  grassland / migratory Chi2   0.09775421 -0.67890081 greater   0.71</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40    scrubby / migratory Chi2   3.40196612  1.93616326 greater   0.09</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41  deciduous / migratory Chi2   0.00146756 -0.64105403 greater   0.97</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42    conifer / migratory Chi2   0.18177435 -0.46048920 greater   0.52</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43      noisy / migratory Chi2   0.99220442  0.21325413 greater   0.31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44  veg.cover / migratory Chi2   9.14414536  0.73846450 greater   0.21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        farms / feed.hab Chi2   4.36429268  1.73217032 greater   0.08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    small.bui / feed.hab Chi2   5.57481613  2.22679529 greater   0.04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     high.bui / feed.hab Chi2   3.11706174  1.27571661 greater   0.14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     industry / feed.hab Chi2   2.05615534  0.24444495 greater   0.34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       fields / feed.hab Chi2  14.01139382  0.02138830 greater   0.38</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    grassland / feed.hab Chi2   1.27966991 -0.27388025 greater   0.48</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      scrubby / feed.hab Chi2   2.87647118  0.54601019 greater   0.25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8    deciduous / feed.hab Chi2   2.56301663  0.69943807 greater   0.22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      conifer / feed.hab Chi2   0.67773900 -0.51026554 greater   0.58</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10       noisy / feed.hab Chi2   8.04038367 -0.29547624 greater   0.54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11   veg.cover / feed.hab Chi2  29.48926101 -0.27028683 greater   0.54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     farms / feed.strat Chi2   4.29284964  0.36568318 greater   0.23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 small.bui / feed.strat Chi2  13.59643807  0.85410637 greater   0.17</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  high.bui / feed.strat Chi2   8.13102044  1.45670973 greater   0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  industry / feed.strat Chi2   1.60089833 -0.45362016 greater   0.59</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16    fields / feed.strat Chi2   7.89491358  1.66235641 greater   0.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 grassland / feed.strat Chi2   2.11779967 -0.20702420 greater   0.43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18   scrubby / feed.strat Chi2   5.17033389  0.55201952 greater   0.20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 deciduous / feed.strat Chi2   4.27795300  0.39239170 greater   0.24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20   conifer / feed.strat Chi2   3.27694136  0.11168555 greater   0.36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21     noisy / feed.strat Chi2   6.75501319  1.31924430 greater   0.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 veg.cover / feed.strat Chi2  78.31693213  2.91108273 greater   0.03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23       farms / breeding Chi2   3.23430156 -0.36068570 greater   0.49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24   small.bui / breeding Chi2  27.79316236  1.25215110 greater   0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25    high.bui / breeding Chi2  12.43543038  1.19844116 greater   0.13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26    industry / breeding Chi2  22.28586480  2.98825252 greater   0.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27      fields / breeding Chi2  38.33899311  1.14108533 greater   0.14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28   grassland / breeding Chi2  16.69969331  1.87550868 greater   0.08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29     scrubby / breeding Chi2   7.93877813  0.37812030 greater   0.27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30   deciduous / breeding Chi2  36.37422465  6.71903522 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31     conifer / breeding Chi2   8.13155633  0.53599202 greater   0.26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32       noisy / breeding Chi2  22.81746753  3.26901901 greater   0.03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33   veg.cover / breeding Chi2 118.24035270  5.30623668 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34      farms / migratory Chi2   3.19878341  1.83510034 greater   0.08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  small.bui / migratory Chi2   0.98799705  0.07249322 greater   0.28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36   high.bui / migratory Chi2   0.62908910 -0.23233134 greater   0.40</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37   industry / migratory Chi2   0.98753393  0.03722555 greater   0.28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     fields / migratory Chi2   5.39284445  3.48963797 greater   0.03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  grassland / migratory Chi2   0.09775421 -0.67335544 greater   0.76</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40    scrubby / migratory Chi2   3.40196612  1.78231349 greater   0.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  deciduous / migratory Chi2   0.00146756 -0.71283290 greater   0.96</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42    conifer / migratory Chi2   0.18177435 -0.58009523 greater   0.57</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43      noisy / migratory Chi2   0.99220442  0.32584488 greater   0.27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44  veg.cover / migratory Chi2   9.14414536  0.91927777 greater   0.16</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    Pvalue.adj  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1        1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2        1.00  </span>
@@ -348,11 +349,11 @@ responses to environmental variation. <em>Ecology</em>, <b>95</b>, 14--21. doi:1
 <span class="r-out co"><span class="r-pr">#&gt;</span> 19       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 20       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 21       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22       0.80  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 23       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 24       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 25       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26       0.44  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26       0.72  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 27       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 28       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 29       1.00  </span>
@@ -385,96 +386,96 @@ responses to environmental variation. <em>Ecology</em>, <b>95</b>, 14--21. doi:1
 <span class="r-out co"><span class="r-pr">#&gt;</span> Permutation method  Comb. 2 and 4  ( 99  permutations)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   fdr </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      Test Stat          Obs     Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        farms / feed.hab Chi2   4.36429268  0.14098594 greater   0.37</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    small.bui / feed.hab Chi2   5.57481613 -0.62830171 greater   0.62</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     high.bui / feed.hab Chi2   3.11706174 -0.73110268 greater   0.73</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4     industry / feed.hab Chi2   2.05615534 -0.12687204 greater   0.51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       fields / feed.hab Chi2  14.01139382 -0.13151354 greater   0.47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    grassland / feed.hab Chi2   1.27966991 -0.81920280 greater   0.80</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7      scrubby / feed.hab Chi2   2.87647118  0.50916529 greater   0.26</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    deciduous / feed.hab Chi2   2.56301663 -0.63051189 greater   0.69</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9      conifer / feed.hab Chi2   0.67773900 -0.70191608 greater   0.75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10       noisy / feed.hab Chi2   8.04038367 -0.29590003 greater   0.57</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11   veg.cover / feed.hab Chi2  29.48926101 -0.41638804 greater   0.57</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12     farms / feed.strat Chi2   4.29284964  0.06472752 greater   0.33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 small.bui / feed.strat Chi2  13.59643807  0.70076412 greater   0.22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14  high.bui / feed.strat Chi2   8.13102044  0.52320904 greater   0.19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15  industry / feed.strat Chi2   1.60089833 -0.34312386 greater   0.51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16    fields / feed.strat Chi2   7.89491358 -0.40962024 greater   0.58</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 grassland / feed.strat Chi2   2.11779967 -0.43000197 greater   0.53</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18   scrubby / feed.strat Chi2   5.17033389  1.36235087 greater   0.10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 deciduous / feed.strat Chi2   4.27795300 -0.08281372 greater   0.48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20   conifer / feed.strat Chi2   3.27694136  0.89553699 greater   0.19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21     noisy / feed.strat Chi2   6.75501319 -0.20189849 greater   0.48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22 veg.cover / feed.strat Chi2  78.31693213  2.43241641 greater   0.03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23       farms / breeding Chi2   3.23430156 -0.80911007 greater   0.78</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24   small.bui / breeding Chi2  27.79316236  1.41490491 greater   0.12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25    high.bui / breeding Chi2  12.43543038  0.55070585 greater   0.24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26    industry / breeding Chi2  22.28586480  6.24323832 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27      fields / breeding Chi2  38.33899311  1.65937893 greater   0.07</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28   grassland / breeding Chi2  16.69969331  2.93499676 greater   0.03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29     scrubby / breeding Chi2   7.93877813  0.60574641 greater   0.22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30   deciduous / breeding Chi2  36.37422465  5.05903945 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31     conifer / breeding Chi2   8.13155633  0.58493326 greater   0.27</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32       noisy / breeding Chi2  22.81746753  1.49706275 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33   veg.cover / breeding Chi2 118.24035270  3.37067211 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34      farms / migratory Chi2   3.19878341  0.34225864 greater   0.24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35  small.bui / migratory Chi2   0.98799705 -0.57414904 greater   0.65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36   high.bui / migratory Chi2   0.62908910 -0.62729351 greater   0.73</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37   industry / migratory Chi2   0.98753393 -0.19231255 greater   0.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38     fields / migratory Chi2   5.39284445 -0.15403905 greater   0.42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39  grassland / migratory Chi2   0.09775421 -0.73788873 greater   0.77</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40    scrubby / migratory Chi2   3.40196612  1.53653006 greater   0.10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41  deciduous / migratory Chi2   0.00146756 -0.72862441 greater   0.99</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42    conifer / migratory Chi2   0.18177435 -0.68782764 greater   0.71</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43      noisy / migratory Chi2   0.99220442 -0.63023502 greater   0.70</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44  veg.cover / migratory Chi2   9.14414536 -0.61079010 greater   0.71</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      Test Stat          Obs      Std.Obs   Alter Pvalue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        farms / feed.hab Chi2   4.36429268  0.331192713 greater   0.28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    small.bui / feed.hab Chi2   5.57481613 -0.456861497 greater   0.58</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     high.bui / feed.hab Chi2   3.11706174 -0.588808629 greater   0.68</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     industry / feed.hab Chi2   2.05615534 -0.127324563 greater   0.44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       fields / feed.hab Chi2  14.01139382  0.085565461 greater   0.44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    grassland / feed.hab Chi2   1.27966991 -0.735194061 greater   0.78</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      scrubby / feed.hab Chi2   2.87647118  0.486526184 greater   0.22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8    deciduous / feed.hab Chi2   2.56301663 -0.611272999 greater   0.65</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      conifer / feed.hab Chi2   0.67773900 -0.794774423 greater   0.79</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10       noisy / feed.hab Chi2   8.04038367 -0.292368288 greater   0.59</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11   veg.cover / feed.hab Chi2  29.48926101 -0.181724460 greater   0.50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     farms / feed.strat Chi2   4.29284964  0.179848981 greater   0.31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 small.bui / feed.strat Chi2  13.59643807  1.123554849 greater   0.16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  high.bui / feed.strat Chi2   8.13102044  0.602497801 greater   0.26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  industry / feed.strat Chi2   1.60089833 -0.371334580 greater   0.58</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16    fields / feed.strat Chi2   7.89491358 -0.373039577 greater   0.50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 grassland / feed.strat Chi2   2.11779967 -0.418223518 greater   0.54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18   scrubby / feed.strat Chi2   5.17033389  1.250291753 greater   0.13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 deciduous / feed.strat Chi2   4.27795300 -0.039040906 greater   0.42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20   conifer / feed.strat Chi2   3.27694136  0.805271652 greater   0.20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21     noisy / feed.strat Chi2   6.75501319 -0.221140091 greater   0.53</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 veg.cover / feed.strat Chi2  78.31693213  3.305527911 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23       farms / breeding Chi2   3.23430156 -0.462876449 greater   0.65</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24   small.bui / breeding Chi2  27.79316236  1.697239069 greater   0.09</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25    high.bui / breeding Chi2  12.43543038  0.716353695 greater   0.20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26    industry / breeding Chi2  22.28586480  2.469468553 greater   0.06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27      fields / breeding Chi2  38.33899311  1.719758763 greater   0.09</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28   grassland / breeding Chi2  16.69969331  2.059407812 greater   0.06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29     scrubby / breeding Chi2   7.93877813  0.352539599 greater   0.25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30   deciduous / breeding Chi2  36.37422465  5.767851164 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31     conifer / breeding Chi2   8.13155633  0.273273562 greater   0.31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32       noisy / breeding Chi2  22.81746753  1.605732923 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33   veg.cover / breeding Chi2 118.24035270  3.094529420 greater   0.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34      farms / migratory Chi2   3.19878341  1.137740876 greater   0.09</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  small.bui / migratory Chi2   0.98799705 -0.575798341 greater   0.70</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36   high.bui / migratory Chi2   0.62908910 -0.550253469 greater   0.68</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37   industry / migratory Chi2   0.98753393 -0.002496004 greater   0.34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     fields / migratory Chi2   5.39284445 -0.165410772 greater   0.35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  grassland / migratory Chi2   0.09775421 -0.732076388 greater   0.82</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40    scrubby / migratory Chi2   3.40196612  1.536050491 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  deciduous / migratory Chi2   0.00146756 -0.717429100 greater   1.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42    conifer / migratory Chi2   0.18177435 -0.700435356 greater   0.68</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43      noisy / migratory Chi2   0.99220442 -0.643162703 greater   0.64</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44  veg.cover / migratory Chi2   9.14414536 -0.536400703 greater   0.64</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    Pvalue.adj  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1     0.81400  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2     0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4     0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5     0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6     0.81860  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7     0.63556  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8     0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9     0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12    0.76421  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13    0.62118  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14    0.59714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18    0.40000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20    0.59714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22    0.22000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24    0.44000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25    0.62118  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26    0.11000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27    0.34222  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28    0.22000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29    0.38720  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     0.64842  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6     0.82762  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7     0.56941  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8     0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9     0.82762  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12    0.68200  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13    0.50286  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14    0.63556  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18    0.44000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20    0.55000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22    0.11000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24    0.36667  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25    0.55000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26    0.17600  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27    0.36667  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28    0.17600  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29    0.39286  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 30    0.11000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31    0.40966  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32    0.27500  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33    0.11000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34    0.62118  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40    0.40000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41    0.99000  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43    0.81714  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44    0.81714  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31    0.44000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32    0.36667  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33    0.14667  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34    0.36667  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35    0.77000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37    0.70000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38    0.70000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39    0.83907  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40    0.36667  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41    1.00000  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43    0.76718  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44    0.76718  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 </span>
@@ -493,50 +494,50 @@ responses to environmental variation. <em>Ecology</em>, <b>95</b>, 14--21. doi:1
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Adjustment method for multiple comparisons:   holm </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      Test Stat          Obs     Std.Obs   Alter Pvalue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        farms / feed.hab Chi2   4.36429268  1.46462292 greater   0.09</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    small.bui / feed.hab Chi2   5.57481613  2.32198684 greater   0.03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     high.bui / feed.hab Chi2   3.11706174  1.26329800 greater   0.12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4     industry / feed.hab Chi2   2.05615534  0.19588488 greater   0.33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       fields / feed.hab Chi2  14.01139382  0.07037321 greater   0.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    grassland / feed.hab Chi2   1.27966991 -0.25494731 greater   0.44</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7      scrubby / feed.hab Chi2   2.87647118  0.56819741 greater   0.24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    deciduous / feed.hab Chi2   2.56301663  0.63555739 greater   0.22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9      conifer / feed.hab Chi2   0.67773900 -0.60665839 greater   0.66</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10       noisy / feed.hab Chi2   8.04038367  3.50567692 greater   0.03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11   veg.cover / feed.hab Chi2  29.48926101 -0.22201062 greater   0.53</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12     farms / feed.strat Chi2   4.29284964  0.52011724 greater   0.23</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 small.bui / feed.strat Chi2  13.59643807  0.79872794 greater   0.21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14  high.bui / feed.strat Chi2   8.13102044  1.09864170 greater   0.12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15  industry / feed.strat Chi2   1.60089833 -0.50255469 greater   0.60</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16    fields / feed.strat Chi2   7.89491358  2.28911546 greater   0.04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 grassland / feed.strat Chi2   2.11779967 -0.30855450 greater   0.50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18   scrubby / feed.strat Chi2   5.17033389  0.68650900 greater   0.24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 deciduous / feed.strat Chi2   4.27795300  0.15619500 greater   0.26</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20   conifer / feed.strat Chi2   3.27694136 -0.08112939 greater   0.42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21     noisy / feed.strat Chi2   6.75501319  0.77392891 greater   0.12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22 veg.cover / feed.strat Chi2  78.31693213  3.07972101 greater   0.03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23       farms / breeding Chi2   3.23430156 -0.54141154 greater   0.63</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24   small.bui / breeding Chi2  27.79316236  2.05851961 greater   0.04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25    high.bui / breeding Chi2  12.43543038  0.99021831 greater   0.12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26    industry / breeding Chi2  22.28586480  4.96578233 greater   0.02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27      fields / breeding Chi2  38.33899311  1.98009654 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28   grassland / breeding Chi2  16.69969331  1.98260191 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29     scrubby / breeding Chi2   7.93877813  0.43506180 greater   0.23</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30   deciduous / breeding Chi2  36.37422465  5.30958695 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31     conifer / breeding Chi2   8.13155633  0.18908208 greater   0.29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32       noisy / breeding Chi2  22.81746753  2.98546151 greater   0.04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33   veg.cover / breeding Chi2 118.24035270  6.17355913 greater   0.01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34      farms / migratory Chi2   3.19878341  1.70986028 greater   0.05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35  small.bui / migratory Chi2   0.98799705  0.00843955 greater   0.32</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36   high.bui / migratory Chi2   0.62908910 -0.17968842 greater   0.37</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37   industry / migratory Chi2   0.98753393  0.11715495 greater   0.32</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38     fields / migratory Chi2   5.39284445 -0.16539589 greater   0.46</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39  grassland / migratory Chi2   0.09775421 -0.66784805 greater   0.70</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40    scrubby / migratory Chi2   3.40196612  1.62744549 greater   0.08</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41  deciduous / migratory Chi2   0.00146756 -0.82416892 greater   0.97</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42    conifer / migratory Chi2   0.18177435 -0.56989029 greater   0.63</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43      noisy / migratory Chi2   0.99220442 -0.05174918 greater   0.35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44  veg.cover / migratory Chi2   9.14414536  1.11319286 greater   0.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        farms / feed.hab Chi2   4.36429268  1.78293010 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    small.bui / feed.hab Chi2   5.57481613 -0.36804842 greater   0.49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     high.bui / feed.hab Chi2   3.11706174  1.34279996 greater   0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     industry / feed.hab Chi2   2.05615534  0.32395027 greater   0.29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       fields / feed.hab Chi2  14.01139382 -0.01335235 greater   0.43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    grassland / feed.hab Chi2   1.27966991 -0.20644053 greater   0.45</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      scrubby / feed.hab Chi2   2.87647118  0.62561347 greater   0.23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8    deciduous / feed.hab Chi2   2.56301663  0.53687695 greater   0.24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      conifer / feed.hab Chi2   0.67773900 -0.57269857 greater   0.64</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10       noisy / feed.hab Chi2   8.04038367 -0.15545056 greater   0.49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11   veg.cover / feed.hab Chi2  29.48926101 -0.22913192 greater   0.50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     farms / feed.strat Chi2   4.29284964  0.30574566 greater   0.27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 small.bui / feed.strat Chi2  13.59643807  0.83601261 greater   0.16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  high.bui / feed.strat Chi2   8.13102044  1.39750993 greater   0.04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  industry / feed.strat Chi2   1.60089833 -0.55743715 greater   0.67</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16    fields / feed.strat Chi2   7.89491358  1.97422060 greater   0.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 grassland / feed.strat Chi2   2.11779967 -0.35623195 greater   0.53</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18   scrubby / feed.strat Chi2   5.17033389  0.38320762 greater   0.25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 deciduous / feed.strat Chi2   4.27795300  0.19189951 greater   0.31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20   conifer / feed.strat Chi2   3.27694136  0.09432177 greater   0.33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21     noisy / feed.strat Chi2   6.75501319  1.55958174 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 veg.cover / feed.strat Chi2  78.31693213  2.85755986 greater   0.03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23       farms / breeding Chi2   3.23430156 -0.54392732 greater   0.63</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24   small.bui / breeding Chi2  27.79316236  1.37684766 greater   0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25    high.bui / breeding Chi2  12.43543038  1.26539161 greater   0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26    industry / breeding Chi2  22.28586480  3.62776199 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27      fields / breeding Chi2  38.33899311  1.45209231 greater   0.10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28   grassland / breeding Chi2  16.69969331  2.49492840 greater   0.05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29     scrubby / breeding Chi2   7.93877813  0.24520191 greater   0.32</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30   deciduous / breeding Chi2  36.37422465  6.17371715 greater   0.01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31     conifer / breeding Chi2   8.13155633  0.64043069 greater   0.22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32       noisy / breeding Chi2  22.81746753  1.44648992 greater   0.12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33   veg.cover / breeding Chi2 118.24035270  3.24557708 greater   0.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34      farms / migratory Chi2   3.19878341  1.84673740 greater   0.06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  small.bui / migratory Chi2   0.98799705  0.20478248 greater   0.29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36   high.bui / migratory Chi2   0.62908910 -0.16992268 greater   0.41</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37   industry / migratory Chi2   0.98753393 -0.06145937 greater   0.34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     fields / migratory Chi2   5.39284445 -0.06209816 greater   0.38</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  grassland / migratory Chi2   0.09775421 -0.66379288 greater   0.69</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40    scrubby / migratory Chi2   3.40196612  1.78297641 greater   0.08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  deciduous / migratory Chi2   0.00146756 -0.73198484 greater   0.99</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42    conifer / migratory Chi2   0.18177435 -0.54612814 greater   0.64</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43      noisy / migratory Chi2   0.99220442  0.22677120 greater   0.27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44  veg.cover / migratory Chi2   9.14414536  0.79504879 greater   0.24</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    Pvalue.adj  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1        1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2        1.00  </span>
@@ -563,14 +564,14 @@ responses to environmental variation. <em>Ecology</em>, <b>95</b>, 14--21. doi:1
 <span class="r-out co"><span class="r-pr">#&gt;</span> 23       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 24       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 25       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26       0.84  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26       0.44  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 27       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 28       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 29       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 30       0.44  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 31       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 32       1.00  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33       0.44  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33       0.82  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 34       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 35       1.00  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 36       1.00  </span>

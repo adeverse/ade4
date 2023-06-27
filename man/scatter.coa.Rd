@@ -18,7 +18,7 @@ performs the scatter diagrams of a correspondence analysis.
     3 Rows variance 1 and columns by averaging}
   \item{clab.row}{a character size for the rows}
   \item{clab.col}{a character size for the columns}
-  \item{posieig}{if "top" the eigenvalues bar plot is upside,vif "bottom" it is downside, if "none" no plot}
+  \item{posieig}{if "top", the eigenvalues bar plot is upside; if "bottom", it is downside; if "none", no plot}
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
   \item{\dots}{further arguments passed to or from other methods}

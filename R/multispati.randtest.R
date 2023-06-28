@@ -1,4 +1,8 @@
 "multispati.randtest" <- function (dudi, listw, nrepet = 999, ...) {
+    
+    .Deprecated(new="multispati.randtest", package="ade4", 
+                msg="The 'multispati.randtest' function is now deprecated in 'ade4' and will soon be available in the 'adespatial' package.")
+    
     if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected") 
     if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
     if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 

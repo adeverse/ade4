@@ -2,6 +2,7 @@
 \alias{multispati.randtest}
 \title{Multivariate spatial autocorrelation test (in C)}
 \description{
+This function is now deprecated in 'ade4' and will soon be available in the 'adespatial' package.
 This function performs a multivariate autocorrelation test.
 }
 \usage{

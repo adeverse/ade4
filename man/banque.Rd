@@ -66,7 +66,7 @@
     \itemize{
       \item \code{p4} credit balance > 20000 
       \item \code{p3} credit balance 12000-20000 
-      \item \code{p2} credit balance 4000-120000 
+      \item \code{p2} credit balance 4000-12000 
       \item \code{p1} credit balance >0-4000 
       \item \code{n1} debit balance  0-4000 
       \item \code{n2} debit balance >4000  }

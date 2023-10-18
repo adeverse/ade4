@@ -7,10 +7,10 @@ on:
   pull_request:
     branches: [main, master]
 
-name: build-macOS
+name: build-macOS-x64
 
 jobs:
-  build-bin-macOS:
+  build-bin-macOS-x64:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -51,6 +51,6 @@ jobs:
       
       - uses: actions/upload-artifact@v3
         with:
-          name: binaries-for-mac
+          name: binaries-for-mac-x64
           path: /Users/runner/work/ade4/ade4_*.tgz
           

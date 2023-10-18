@@ -1,5 +1,5 @@
 # pkgdown <img src="man/figures/logo.svg" align="right" />
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ade4)](http://cran.r-project.org/package=ade4)
+[![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/ade4)](http://cran.r-project.org/package=ade4)
 [![CRAN Downloads](https://cranlogs.r-pkg.org/badges/ade4)](https://cran.r-project.org/package=ade4)
 [![R-CMD-check](https://github.com/sdray/ade4/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/sdray/ade4/actions/workflows/R-CMD-check.yaml)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

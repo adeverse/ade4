@@ -66,7 +66,7 @@ meanfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FAL
       fac <- as.factor(fac)
       if(drop)
         fac <- factor(fac)
-      res <- t(sapply(split(df,fac),colMeans))
+      res <- do.call("rbind", lapply(split(df,fac),colMeans))
     }
   } else {
     if(is.null(fac)) { ## no factor
@@ -77,10 +77,7 @@ meanfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FAL
          fac <- factor(fac)
       df.list <- split(df, fac)
       wt.list <- split(wt, fac)
-      if(ncol(df) > 1)
-        res <- t(sapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, stats::weighted.mean, w = wt.list[[x]])))
-      else
-        res <- as.matrix(sapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, stats::weighted.mean, w = wt.list[[x]])))
+      res <- do.call("rbind", lapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, stats::weighted.mean, w = wt.list[[x]])))
       rownames(res) <- names(df.list)
     }
   }
@@ -110,7 +107,6 @@ covfacwt <- function(df, fac = NULL, wt = rep(1/nrow(df), nrow(df)), drop = FALS
 
 
 
-## attention works only with data.frame or matrix
 varfacwt <- function(df, fac = NULL, wt = rep(1 / nrow(df), nrow(df)), drop = FALSE) {
   df <- data.frame(df)
   nr <- nrow(df)
@@ -123,7 +119,7 @@ varfacwt <- function(df, fac = NULL, wt = rep(1 / nrow(df), nrow(df)), drop = FA
         fac <- factor(fac)
       df.list <- split(df, fac)
       wt.list <- split(wt, fac)
-      res <- t(sapply(1:nlevels(fac), FUN = function(x) {apply(df.list[[x]], 2, varwt, wt = wt.list[[x]])}))
+      res <- do.call("rbind", lapply(1:nlevels(fac), function(x) apply(df.list[[x]], 2, varwt, w = wt.list[[x]])))
       rownames(res) <- names(df.list)
       }
   return(res)

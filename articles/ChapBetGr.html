@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Taking into account groups of sites">
 <meta property="og:description" content="ade4">
@@ -453,14 +453,14 @@ be obtained by displaying the <code>rtbetsite</code> object. By default,
 <span><span class="co">#&gt; Observation: 0.4412974 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Based on 999 replicates</span></span>
-<span><span class="co">#&gt; Simulated p-value: 0.006 </span></span>
+<span><span class="co">#&gt; Simulated p-value: 0.004 </span></span>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt; 3.531653448 0.214990390 0.004106197</span></span></code></pre>
+<span><span class="co">#&gt;  3.48757814  0.21852085  0.00408029</span></span></code></pre>
 <p>The observed value of the criterion is equal to 0.4413, which means
 that 44% of the total inertia comes from the differences between sites.
-The simulated <em>p</em>-value is equal to 0.006, which means that the
+The simulated <em>p</em>-value is equal to 0.004, which means that the
 difference between sites is highly significant.</p>
 <p>The following histogram shows the distribution of the values of the
 criterion computed on permuted tables. The observed value for the
@@ -660,7 +660,7 @@ object. By default, 999 permutations are performed.</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;      Std.Obs  Expectation     Variance </span></span>
-<span><span class="co">#&gt; 5.9065330296 0.1304145188 0.0004461585</span></span></code></pre>
+<span><span class="co">#&gt; 5.6422908143 0.1307713265 0.0004861339</span></span></code></pre>
 <p>The observed value of the criterion is equal to 0.2552, which means
 that 26% of the total inertia comes from the differences between
 seasons. The simulated <em>p</em>-value is equal to 0.001, which means

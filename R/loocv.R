@@ -55,7 +55,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
         ## The original analysis can be any dudi, so wee need to start from dudiCall$call:
         jcall1 <- dudiCall$call
         ## Change the df argument to discard row #ind1:
-        jcall1[[2]] <- data.frame(eval.parent(jcall1[[2]]))[-ind1, , drop = FALSE]
+        jcall1[[2]] <- data.frame(eval.parent(jcall1[[2]], n = 2))[-ind1, , drop = FALSE]
         ## Check that the scannf argument is set to FALSE:
         if (any(names(jcall1) == "scannf")) jcall1[[which(names(jcall1) == "scannf")]] <- FALSE
         else {

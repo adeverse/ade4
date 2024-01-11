@@ -53,6 +53,6 @@ VignetteBuilder:
     knitr
 Description: Tools for multivariate data analysis. Several methods are provided for the analysis (i.e., ordination) of one-table (e.g., principal component analysis, correspondence analysis), two-table (e.g., coinertia analysis, redundancy analysis), three-table (e.g., RLQ analysis) and K-table (e.g., STATIS, multiple coinertia analysis). The philosophy of the package is described in Dray and Dufour (2007) <doi:10.18637/jss.v022.i04>.
 License: GPL (>= 2)
-URL: https://sdray.github.io/ade4/
+URL: https://sdray.github.io/ade4/, http://pbil.univ-lyon1.fr/ADE-4/
 BugReports: https://github.com/sdray/ade4/issues
 Encoding: UTF-8

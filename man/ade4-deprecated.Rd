@@ -15,6 +15,8 @@
   - \code{freq2genet}: replaced by \code{df2genind} and \code{genind2genpop} in the \code{adegenet} package \cr
   - \code{fuzzygenet}: replaced by \code{df2genind} in the \code{adegenet} package \cr
   - \code{multispati}: replaced by \code{multispati} in the \code{adespatial} package \cr
+  - \code{multispati.rtest} \cr
+  - \code{multispati.randtest} \cr
   - \code{optimEH}: replaced by \code{optimEH} in the \code{adiv} package \cr
   - \code{orisaved}: replaced by \code{orisaved} in the \code{adiv} package \cr
   - \code{orthogram}: replaced by \code{orthogram} in the \code{adephylo} package \cr

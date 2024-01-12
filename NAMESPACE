@@ -232,7 +232,7 @@ export("originality")
 export("haar2level", "mld", "orthobasis.circ", "orthobasis.haar", "orthobasis.line", "orthobasis.mat", "orthobasis.neig", "is.orthobasis")
 
 ## ******* spatial *******
-export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "multispati.randtest", "mstree", "multispati.rtest", "nb2neig", "neig", "neig2mat", "neig2nb", "poly2area", "scores.neig")
+export("area2link", "area2poly", "area.plot", "dist.neig", "gridrowcol", "mstree", "nb2neig", "neig", "neig2mat", "neig2nb", "poly2area", "scores.neig")
 
 ## ******* misc *********
 export("bwca.dpcoa")
@@ -276,6 +276,8 @@ export("testertracenubisCpp")
 ## "plot.multispati"
 ## "print.multispati"
 ## "plot.multispati"
+## "multispati.randtest"
+## "multispati.rtest"
 
 ## ******* internal utilities *******
 

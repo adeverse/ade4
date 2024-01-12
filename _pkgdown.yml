@@ -334,8 +334,6 @@ reference:
   - orthobasis.line
   - orthobasis.mat
   - orthobasis.neig
-  - multispati.randtest
-  - multispati.rtest
   - nb2neig
   - neig
   - neig2mat

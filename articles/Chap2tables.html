@@ -161,7 +161,7 @@ instance, we apply a centred PCA on the species data while the
 environmental table is treated by a standardised PCA. Two axes are kept
 for each analysis.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">ade4</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://sdray.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">adegraphics</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">)</span></span>
 <span><span class="va">pca.fish</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dudi.pca.html">dudi.pca</a></span><span class="op">(</span><span class="va">doubs</span><span class="op">$</span><span class="va">fish</span>, scale <span class="op">=</span> <span class="cn">FALSE</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span>, nf <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
@@ -428,7 +428,7 @@ tested by random permutation of the rows of both tables (function
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt; 8.495755365 0.083243104 0.001869263</span></span></code></pre>
+<span><span class="co">#&gt; 8.641820673 0.084918410 0.001790166</span></span></code></pre>
 <p>In this case, the link between the composition of species assemblages
 and environmental conditions is highly significant.</p>
 <p>Coinertia Analysis maximises covariances and thus can handle tables
@@ -471,7 +471,7 @@ rows of the second table:</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;      Std.Obs  Expectation     Variance </span></span>
-<span><span class="co">#&gt; 11.361499620  0.107136214  0.002169403</span></span></code></pre>
+<span><span class="co">#&gt; 11.170213923  0.106065149  0.002253433</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="analysis-on-instrumental-variables">Analysis on instrumental variables<a class="anchor" aria-label="anchor" href="#analysis-on-instrumental-variables"></a>
@@ -640,7 +640,7 @@ of the explanatory table:</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt; 4.594589873 0.372483937 0.007135251</span></span></code></pre>
+<span><span class="co">#&gt; 5.237186126 0.374708156 0.005428934</span></span></code></pre>
 <p>Lastly, the <code>summary</code> function also returns information on
 the eigenvalues and their decomposition. The initial analysis
 (<code>pca.fish</code>) seeks linear combination of the variables with

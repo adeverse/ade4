@@ -10,8 +10,7 @@ This data set contains various exemples of phylogenetic trees in Newick format.
 \code{newick.eg} is a list containing 14 character strings in Newick format. 
 }
 \source{
-Trees 1 to 7 were obtained from the URL \cr 
-\url{http://evolution.genetics.washington.edu/phylip/newicktree.html}. 
+Trees 1 to 7 were obtained from the phylip software. 
 
 Trees 8 and 9 were obtained by Clémentine Carpentier-Gimaret. 
 

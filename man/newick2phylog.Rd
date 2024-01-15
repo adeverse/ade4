@@ -15,8 +15,8 @@ taxo2phylog(taxo, add.tools = FALSE, root="Root", abbrev=TRUE)
 newick2phylog.addtools(res, tol = 1e-07)
 }
 \arguments{
-  \item{x.tre}{a character string corresponding to a phylogenetic tree in Newick format\cr
-   (\url{http://evolution.genetics.washington.edu/phylip/newicktree.html})}
+  \item{x.tre}{a character string corresponding to a phylogenetic tree in Newick format
+   (see the phylip software)}
   \item{add.tools}{if TRUE, executes the function \code{newick2phylog.addtools}}
   \item{call}{call}
   \item{hc}{an object of class \code{hclust}}

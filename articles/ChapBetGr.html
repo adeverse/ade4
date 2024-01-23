@@ -94,7 +94,7 @@
   </a>
 </li>
 <li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/sdray/ade4">
+  <a class="external-link nav-link" href="https://github.com/adeverse/ade4">
     <span class="fa fa-github"></span>
      
   </a>
@@ -114,7 +114,7 @@
       <img src="../logo.svg" class="logo" alt=""><h1>Taking into account groups of sites</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/sdray/ade4/blob/HEAD/vignettes/articles/ChapBetGr.Rmd" class="external-link"><code>vignettes/articles/ChapBetGr.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/adeverse/ade4/blob/HEAD/vignettes/articles/ChapBetGr.Rmd" class="external-link"><code>vignettes/articles/ChapBetGr.Rmd</code></a></small>
       <div class="d-none name"><code>ChapBetGr.Rmd</code></div>
     </div>
 
@@ -157,7 +157,7 @@ functions are named <code>bca</code> (formerly <code>between</code>) and
 <code>wca</code> (formerly <code>within</code>) and several methods are
 provided:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://sdray.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adeverse.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">adegraphics</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/methods.html" class="external-link">methods</a></span><span class="op">(</span><span class="va">bca</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; [1] bca.coinertia* bca.dpcoa*     bca.dudi*      bca.rlq*      </span></span>
@@ -203,7 +203,7 @@ upstream the Méaudret and Bourne confluence.</p>
 <p>The <code>meau$env</code> data frame therefore has 24 rows and 10
 columns:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://sdray.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adeverse.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">adegraphics</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">meau</span><span class="op">)</span></span>
 <span><span class="va">env</span> <span class="op">&lt;-</span> <span class="va">meau</span><span class="op">$</span><span class="va">env</span></span>
@@ -453,14 +453,14 @@ be obtained by displaying the <code>rtbetsite</code> object. By default,
 <span><span class="co">#&gt; Observation: 0.4412974 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Based on 999 replicates</span></span>
-<span><span class="co">#&gt; Simulated p-value: 0.006 </span></span>
+<span><span class="co">#&gt; Simulated p-value: 0.004 </span></span>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     Std.Obs Expectation    Variance </span></span>
-<span><span class="co">#&gt; 3.602944126 0.215431505 0.003929942</span></span></code></pre>
+<span><span class="co">#&gt;  3.49187753  0.21588242  0.00416723</span></span></code></pre>
 <p>The observed value of the criterion is equal to 0.4413, which means
 that 44% of the total inertia comes from the differences between sites.
-The simulated <em>p</em>-value is equal to 0.006, which means that the
+The simulated <em>p</em>-value is equal to 0.004, which means that the
 difference between sites is highly significant.</p>
 <p>The following histogram shows the distribution of the values of the
 criterion computed on permuted tables. The observed value for the
@@ -660,7 +660,7 @@ object. By default, 999 permutations are performed.</p>
 <span><span class="co">#&gt; Alternative hypothesis: greater </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;      Std.Obs  Expectation     Variance </span></span>
-<span><span class="co">#&gt; 5.6808976966 0.1303170620 0.0004830574</span></span></code></pre>
+<span><span class="co">#&gt; 5.5758618945 0.1312528722 0.0004939399</span></span></code></pre>
 <p>The observed value of the criterion is equal to 0.2552, which means
 that 26% of the total inertia comes from the differences between
 seasons. The simulated <em>p</em>-value is equal to 0.001, which means

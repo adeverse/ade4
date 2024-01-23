@@ -94,7 +94,7 @@
   </a>
 </li>
 <li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/sdray/ade4">
+  <a class="external-link nav-link" href="https://github.com/adeverse/ade4">
     <span class="fa fa-github"></span>
      
   </a>
@@ -114,7 +114,7 @@
       <img src="../logo.svg" class="logo" alt=""><h1>Description of species structures</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/sdray/ade4/blob/HEAD/vignettes/articles/ChapSpeciesStruct.Rmd" class="external-link"><code>vignettes/articles/ChapSpeciesStruct.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/adeverse/ade4/blob/HEAD/vignettes/articles/ChapSpeciesStruct.Rmd" class="external-link"><code>vignettes/articles/ChapSpeciesStruct.Rmd</code></a></small>
       <div class="d-none name"><code>ChapSpeciesStruct.Rmd</code></div>
     </div>
 
@@ -147,7 +147,7 @@ arrangement, sites (respectively species) are ordered so that the
 position of a given site (respectively species) should reflect its
 similarity with others.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://sdray.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adeverse.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://pbil.univ-lyon1.fr/ADE-4/" class="external-link">adegraphics</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">dunedata</span><span class="op">)</span></span>
 <span><span class="va">afc1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dudi.coa.html">dudi.coa</a></span><span class="op">(</span><span class="va">dunedata</span><span class="op">$</span><span class="va">veg</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
@@ -203,7 +203,7 @@ to categories of two categorical variables. In <strong>R</strong>, the
 <strong>ade4</strong>) according to their order and diet is obtained
 by:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://sdray.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adeverse.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">carniherbi49</span><span class="op">)</span></span>
 <span><span class="op">(</span><span class="va">tab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">carniherbi49</span><span class="op">$</span><span class="va">taxo</span><span class="op">$</span><span class="va">ord</span>, <span class="va">carniherbi49</span><span class="op">$</span><span class="va">tab2</span><span class="op">$</span><span class="va">clade</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##                 </span></span>

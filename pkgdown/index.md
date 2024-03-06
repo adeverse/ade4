@@ -63,7 +63,7 @@ Note for nostalgics &#x1F609; : the **old ade4 web site** is still available her
 
 ### Using **ade4** online: the Shiny app
 
-Consider giving a try to our shiny app, developed to allow you to run an analysis without having to write your own script: [ade4shiny](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/ShinyADE4/).
+Consider giving a try to our shiny app, developed to allow you to run an analysis without having to write your own script: [ade4shiny](https://lbbe-shiny.univ-lyon1.fr/ade4shiny/).
 You will be able to download the R script used to generate the results as well as the analyses outputs and graphical representations.
 
 ### Getting help: FAQ & Mailing list

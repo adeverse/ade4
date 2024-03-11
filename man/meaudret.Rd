@@ -11,7 +11,7 @@ and Ephemeroptera Species.
     \code{meaudret} is a list of 4 components.
 \describe{
         \item{env}{is a data frame with 20 sites and 9 variables.}
-        \item{fau}{is a data frame with 20 sites and 13 Ephemeroptera Species.}
+        \item{spe}{is a data frame with 20 sites and 13 Ephemeroptera Species.}
         \item{design}{is a data frame with 20 sites and 2 factors.
             \itemize{
                 \item \code{season} is a factor with 4 levels = seasons.

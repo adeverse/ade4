@@ -120,19 +120,13 @@
 
     
     
-<p><a href="http://cran.r-project.org/package=ade4" class="external-link"><img src="http://www.r-pkg.org/badges/version/ade4" alt="CRAN_Status_Badge"></a> <a href="https://cran.r-project.org/package=ade4" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/ade4" alt="CRAN Downloads"></a>
-<a href="https://github.com/adeverse/ade4/actions" class="external-link"><img src="https://github.com/adeverse/ade4/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a> <a href="https://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></p>
+<p><a href="http://cran.r-project.org/package=ade4" class="external-link"><img src="http://www.r-pkg.org/badges/version-ago/ade4" alt="CRAN_Release_Badge"></a> <a href="https://cran.r-project.org/package=ade4" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/ade4" alt="CRAN Downloads"></a>
+<a href="https://github.com/adeverse/ade4/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/adeverse/ade4/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></p>
 <div class="section level2">
-<h2 id="the-current-stable-version-can-be-installed-from-cran-using">The current <em>stable</em> version can be installed from CRAN
-using:<a class="anchor" aria-label="anchor" href="#the-current-stable-version-can-be-installed-from-cran-using"></a>
+<h2 id="installing-the-development-version-of-ade4">Installing the <em>development</em> version of
+<code>ade4</code><a class="anchor" aria-label="anchor" href="#installing-the-development-version-of-ade4"></a>
 </h2>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ade4"</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="to-install-the-development-version-from-github">To install the <em>development</em> version from github:<a class="anchor" aria-label="anchor" href="#to-install-the-development-version-from-github"></a>
-</h2>
-<ol style="list-style-type: decimal">
+<ul>
 <li><p>Install the release version of <code>remotes</code> from CRAN
 with <code>install.packages("remotes")</code>.</p></li>
 <li>
@@ -147,33 +141,29 @@ with <code>install.packages("remotes")</code>.</p></li>
 libraries (details vary across different flavors of Linux).</li>
 </ul>
 </li>
-<li><p>Then you can use the following command:</p></li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+</ul>
+<p>Then:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"adeverse/ade4"</span><span class="op">)</span></span></code></pre></div>
-<p><strong>Note:</strong> If you do not wish to install the development
-environments Rtools (Windows) or XCode (Mac), you can get pre-compiled
-binary packages here:</p>
-<ul>
-<li><p><a href="http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/" class="external-link"><strong>Windows</strong></a></p></li>
-<li><p><a href="http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/" class="external-link"><strong>macOS</strong></a></p></li>
-</ul>
-<p>So you can use (for example) the following commands.</p>
-<ul>
-<li>On Windows computers:</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"http://pbil.univ-lyon1.fr/members/thioulouse/bin/windows/windows/ade4_1.7-22.zip"</span><span class="op">)</span></span></code></pre></div>
-<ul>
-<li>On Mac computers:</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"http://pbil.univ-lyon1.fr/members/thioulouse/bin/macosx/macosxarm/ade4_1.7-22.tgz"</span><span class="op">)</span></span></code></pre></div>
+<p>If you do not wish to install the development environments Rtools
+(Windows) / XCode (Mac), we can supply binary packages of the
+development version of <code>ade4</code> on request.</p>
+<p>You can also find these binary packages as artifacts of GitHub
+Actions: <a href="https://github.com/adeverse/ade4/actions/workflows/build-bin-windows.yaml" class="external-link">here</a>
+for Windows and <a href="https://github.com/adeverse/ade4/actions/workflows/build-bin-macOS-x64.yaml" class="external-link">here</a>
+and <a href="https://github.com/adeverse/ade4/actions/workflows/build-bin-macOS-M1.yaml" class="external-link">here</a>
+for macOS.</p>
 </div>
 <div class="section level2">
-<h2 id="once-installed-the-package-can-be-loaded-using">Once installed, the package can be loaded using:<a class="anchor" aria-label="anchor" href="#once-installed-the-package-can-be-loaded-using"></a>
+<h2 id="installing-the-stable-version-of-ade4">Installing the <em>stable</em> version of <code>ade4</code><a class="anchor" aria-label="anchor" href="#installing-the-stable-version-of-ade4"></a>
 </h2>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ade4"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="loading-ade4">Loading <code>ade4</code><a class="anchor" aria-label="anchor" href="#loading-ade4"></a>
+</h2>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://adeverse.github.io/ade4/" class="external-link">"ade4"</a></span><span class="op">)</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

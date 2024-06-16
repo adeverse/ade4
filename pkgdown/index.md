@@ -12,12 +12,14 @@
 
 A book in the *Springer Series in Statistics* collection, [**"Multivariate Analysis of Ecological Data with ade4"**](http://adeverse.github.io/ade4/articles/book.html) presents the package. The examples and the graphs in this book can be [**reproduced online here**](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/Book/).
 
+The **ade4shiny** dashboard allows you to use the basic functions of the **ade4** package online, directly in your browser: no need to install **R** and the necessary packages on your computer. [**ade4shiny**](https://lbbe-shiny.univ-lyon1.fr/ade4shiny/)
+
 If you use **ade4**, please consider citing [these references](http://adeverse.github.io/ade4/authors.html#citation) !
 
 <p align="center">
 <a href="https://www.springer.com/fr/book/9781493988488"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/Book.png"  width="207" height="312" border="0" alt=""></a>
-<a href="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny1.png"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny1.png"  width="40%"></a>
-<a href="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny2.png"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny2.png"  width="40%"></a>
+<a href="https://lbbe-shiny.univ-lyon1.fr/ade4shiny/"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny1.png"  width="40%"></a>
+<a href="https://lbbe-shiny.univ-lyon1.fr/ade4shiny/"><img src="https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny2.png"  width="40%"></a>
 </p >
 
 <!--

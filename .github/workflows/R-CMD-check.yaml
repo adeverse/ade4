@@ -48,7 +48,7 @@ jobs:
       - name: Install libraries for macOS
         if: runner.os == 'macOS'
         run: |
-          brew install udunits xquartz gdal proj geos jpeg
+          brew install udunits xquartz gdal proj geos
           
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:

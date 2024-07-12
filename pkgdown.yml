@@ -1,18 +1,17 @@
 pandoc: 3.1.11
-pkgdown: 2.0.9
+pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
-  book: book.html
-  Chap2Ktables: Chap2Ktables.html
-  Chap2tables: Chap2tables.html
-  ChapBetGr: ChapBetGr.html
-  ChapEnvVarStruct: ChapEnvVarStruct.html
-  ChapKtables: ChapKtables.html
-  ChapSpeciesStruct: ChapSpeciesStruct.html
+  articles/book: book.html
+  articles/Chap2Ktables: Chap2Ktables.html
+  articles/Chap2tables: Chap2tables.html
+  articles/ChapBetGr: ChapBetGr.html
+  articles/ChapEnvVarStruct: ChapEnvVarStruct.html
+  articles/ChapKtables: ChapKtables.html
+  articles/ChapSpeciesStruct: ChapSpeciesStruct.html
   faq: faq.html
-  get_started: get_started.html
-  install: install.html
-  papers: papers.html
-  related: related.html
-last_built: 2024-06-27T14:38Z
-
+  articles/get_started: get_started.html
+  articles/install: install.html
+  articles/papers: papers.html
+  articles/related: related.html
+last_built: 2024-07-12T10:06Z

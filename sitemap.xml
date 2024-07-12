@@ -1,924 +1,310 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/articles/Chap2Ktables.html</loc>
-  </url>
-  <url>
-    <loc>/articles/Chap2tables.html</loc>
-  </url>
-  <url>
-    <loc>/articles/ChapBetGr.html</loc>
-  </url>
-  <url>
-    <loc>/articles/ChapEnvVarStruct.html</loc>
-  </url>
-  <url>
-    <loc>/articles/ChapKtables.html</loc>
-  </url>
-  <url>
-    <loc>/articles/ChapSpeciesStruct.html</loc>
-  </url>
-  <url>
-    <loc>/articles/book.html</loc>
-  </url>
-  <url>
-    <loc>/articles/faq.html</loc>
-  </url>
-  <url>
-    <loc>/articles/get_started.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/articles/install.html</loc>
-  </url>
-  <url>
-    <loc>/articles/papers.html</loc>
-  </url>
-  <url>
-    <loc>/articles/related.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/PI2newick.html</loc>
-  </url>
-  <url>
-    <loc>/reference/RV.randtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/RV.rtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/RVdist.randtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/RVintra.randtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/abouheif.eg.html</loc>
-  </url>
-  <url>
-    <loc>/reference/acacia.html</loc>
-  </url>
-  <url>
-    <loc>/reference/add.scatter.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ade4-deprecated.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ade4-internal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ade4.package.html</loc>
-  </url>
-  <url>
-    <loc>/reference/adegraphicsLoaded.html</loc>
-  </url>
-  <url>
-    <loc>/reference/aminoacyl.html</loc>
-  </url>
-  <url>
-    <loc>/reference/amova.html</loc>
-  </url>
-  <url>
-    <loc>/reference/apis108.html</loc>
-  </url>
-  <url>
-    <loc>/reference/apqe.html</loc>
-  </url>
-  <url>
-    <loc>/reference/aravo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ardeche.html</loc>
-  </url>
-  <url>
-    <loc>/reference/area.plot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/arrival.html</loc>
-  </url>
-  <url>
-    <loc>/reference/as.taxo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/atlas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/atya.html</loc>
-  </url>
-  <url>
-    <loc>/reference/avijons.html</loc>
-  </url>
-  <url>
-    <loc>/reference/avimedi.html</loc>
-  </url>
-  <url>
-    <loc>/reference/aviurba.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bacteria.html</loc>
-  </url>
-  <url>
-    <loc>/reference/banque.html</loc>
-  </url>
-  <url>
-    <loc>/reference/baran95.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bca.coinertia.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bca.rlq.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bf88.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bicenter.wt.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bordeaux.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bsetal97.html</loc>
-  </url>
-  <url>
-    <loc>/reference/buech.html</loc>
-  </url>
-  <url>
-    <loc>/reference/butterfly.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bwca.dpcoa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/cailliez.html</loc>
-  </url>
-  <url>
-    <loc>/reference/capitales.html</loc>
-  </url>
-  <url>
-    <loc>/reference/carni19.html</loc>
-  </url>
-  <url>
-    <loc>/reference/carni70.html</loc>
-  </url>
-  <url>
-    <loc>/reference/carniherbi49.html</loc>
-  </url>
-  <url>
-    <loc>/reference/casitas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chatcat.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chats.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chazeb.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chevaine.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chickenk.html</loc>
-  </url>
-  <url>
-    <loc>/reference/clementines.html</loc>
-  </url>
-  <url>
-    <loc>/reference/cnc2003.html</loc>
-  </url>
-  <url>
-    <loc>/reference/coinertia.html</loc>
-  </url>
-  <url>
-    <loc>/reference/coleo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/combine.4thcorner.html</loc>
-  </url>
-  <url>
-    <loc>/reference/corkdist.html</loc>
-  </url>
-  <url>
-    <loc>/reference/corvus.html</loc>
-  </url>
-  <url>
-    <loc>/reference/costatis.html</loc>
-  </url>
-  <url>
-    <loc>/reference/costatis.randtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dagnelie.test.html</loc>
-  </url>
-  <url>
-    <loc>/reference/deug.html</loc>
-  </url>
-  <url>
-    <loc>/reference/disc.html</loc>
-  </url>
-  <url>
-    <loc>/reference/discrimin.coa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/discrimin.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dist.binary.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dist.dudi.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dist.ktab.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dist.neig.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dist.prop.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dist.quant.html</loc>
-  </url>
-  <url>
-    <loc>/reference/divc.html</loc>
-  </url>
-  <url>
-    <loc>/reference/divcmax.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dotchart.phylog.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dotcircle.html</loc>
-  </url>
-  <url>
-    <loc>/reference/doubs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dpcoa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.acm.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.coa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.dec.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.fca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.hillsmith.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.mix.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.nsc.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.pca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dudi.pco.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dunedata.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ecg.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ecomor.html</loc>
-  </url>
-  <url>
-    <loc>/reference/elec88.html</loc>
-  </url>
-  <url>
-    <loc>/reference/escopage.html</loc>
-  </url>
-  <url>
-    <loc>/reference/euro123.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fission.html</loc>
-  </url>
-  <url>
-    <loc>/reference/foucart.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fourthcorner.html</loc>
-  </url>
-  <url>
-    <loc>/reference/friday87.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fruits.html</loc>
-  </url>
-  <url>
-    <loc>/reference/gearymoran.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ggtortoises.html</loc>
-  </url>
-  <url>
-    <loc>/reference/granulo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/gridrowcol.html</loc>
-  </url>
-  <url>
-    <loc>/reference/hdpg.html</loc>
-  </url>
-  <url>
-    <loc>/reference/houmousr.html</loc>
-  </url>
-  <url>
-    <loc>/reference/housetasks.html</loc>
-  </url>
-  <url>
-    <loc>/reference/humDNAm.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ichtyo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/inertia.dudi.html</loc>
-  </url>
-  <url>
-    <loc>/reference/irishdata.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is.euclid.html</loc>
-  </url>
-  <url>
-    <loc>/reference/julliot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/jv73.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kcponds.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kdist.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kdist2ktab.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kdisteuclid.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kplot.foucart.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kplot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kplot.mcoa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kplot.mfa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kplot.pta.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kplot.sepan.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kplot.statis.html</loc>
-  </url>
-  <url>
-    <loc>/reference/krandtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ktab.data.frame.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ktab.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ktab.list.df.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ktab.list.dudi.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ktab.match2ktabs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ktab.within.html</loc>
-  </url>
-  <url>
-    <loc>/reference/lascaux.html</loc>
-  </url>
-  <url>
-    <loc>/reference/lingoes.html</loc>
-  </url>
-  <url>
-    <loc>/reference/lizards.html</loc>
-  </url>
-  <url>
-    <loc>/reference/loocv.bca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/loocv.discrimin.html</loc>
-  </url>
-  <url>
-    <loc>/reference/loocv.dudi.html</loc>
-  </url>
-  <url>
-    <loc>/reference/macaca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/macon.html</loc>
-  </url>
-  <url>
-    <loc>/reference/macroloire.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mafragh.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mantel.randtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mantel.rtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/maples.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mariages.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mbpcaiv.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mbpls.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mcoa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mdpcoa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/meau.html</loc>
-  </url>
-  <url>
-    <loc>/reference/meaudret.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mfa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/microsatt.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mjrochet.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mld.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mollusc.html</loc>
-  </url>
-  <url>
-    <loc>/reference/monde84.html</loc>
-  </url>
-  <url>
-    <loc>/reference/morphosport.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mstree.html</loc>
-  </url>
-  <url>
-    <loc>/reference/multiblock.html</loc>
-  </url>
-  <url>
-    <loc>/reference/neig.html</loc>
-  </url>
-  <url>
-    <loc>/reference/newick.eg.html</loc>
-  </url>
-  <url>
-    <loc>/reference/newick2phylog.html</loc>
-  </url>
-  <url>
-    <loc>/reference/niche.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nipals.html</loc>
-  </url>
-  <url>
-    <loc>/reference/njplot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/olympic.html</loc>
-  </url>
-  <url>
-    <loc>/reference/oribatid.html</loc>
-  </url>
-  <url>
-    <loc>/reference/originality.html</loc>
-  </url>
-  <url>
-    <loc>/reference/orthobasis.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ours.html</loc>
-  </url>
-  <url>
-    <loc>/reference/palm.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pap.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pcaiv.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pcaivortho.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pcoscaled.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pcw.html</loc>
-  </url>
-  <url>
-    <loc>/reference/perthi02.html</loc>
-  </url>
-  <url>
-    <loc>/reference/phylog.html</loc>
-  </url>
-  <url>
-    <loc>/reference/piosphere.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot.between.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot.phylog.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot.within.html</loc>
-  </url>
-  <url>
-    <loc>/reference/presid2002.html</loc>
-  </url>
-  <url>
-    <loc>/reference/procella.html</loc>
-  </url>
-  <url>
-    <loc>/reference/procuste.html</loc>
-  </url>
-  <url>
-    <loc>/reference/procuste.randtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/procuste.rtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pta.html</loc>
-  </url>
-  <url>
-    <loc>/reference/quasieuclid.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randboot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randboot.multiblock.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randtest.amova.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randtest.between.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randtest.coinertia.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randtest.discrimin.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randtest.dpcoa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randtest.pcaiv.html</loc>
-  </url>
-  <url>
-    <loc>/reference/randxval.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rankrock.html</loc>
-  </url>
-  <url>
-    <loc>/reference/reconst.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rhizobium.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rhone.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rlq.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rpjdl.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rtest.between.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rtest.discrimin.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.arrow.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.chull.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.class.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.corcircle.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.distri.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.hist.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.image.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.kde2d.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.label.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.logo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.match.class.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.match.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.multinom.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.traject.html</loc>
-  </url>
-  <url>
-    <loc>/reference/s.value.html</loc>
-  </url>
-  <url>
-    <loc>/reference/santacatalina.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sarcelles.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scalewt.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scatter.acm.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scatter.coa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scatter.dudi.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scatter.fca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scatter.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scatterutil.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sco.boxplot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sco.class.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sco.distri.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sco.gauss.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sco.label.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sco.match.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sco.quant.html</loc>
-  </url>
-  <url>
-    <loc>/reference/score.acm.html</loc>
-  </url>
-  <url>
-    <loc>/reference/score.coa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/score.html</loc>
-  </url>
-  <url>
-    <loc>/reference/score.mix.html</loc>
-  </url>
-  <url>
-    <loc>/reference/score.pca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/seconde.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sepan.html</loc>
-  </url>
-  <url>
-    <loc>/reference/skulls.html</loc>
-  </url>
-  <url>
-    <loc>/reference/statico.html</loc>
-  </url>
-  <url>
-    <loc>/reference/statico.krandtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/statis.html</loc>
-  </url>
-  <url>
-    <loc>/reference/steppe.html</loc>
-  </url>
-  <url>
-    <loc>/reference/supcol.html</loc>
-  </url>
-  <url>
-    <loc>/reference/supdist.html</loc>
-  </url>
-  <url>
-    <loc>/reference/suprow.html</loc>
-  </url>
-  <url>
-    <loc>/reference/suprow.pta.html</loc>
-  </url>
-  <url>
-    <loc>/reference/symbols.phylog.html</loc>
-  </url>
-  <url>
-    <loc>/reference/syndicats.html</loc>
-  </url>
-  <url>
-    <loc>/reference/t3012.html</loc>
-  </url>
-  <url>
-    <loc>/reference/table.cont.html</loc>
-  </url>
-  <url>
-    <loc>/reference/table.dist.html</loc>
-  </url>
-  <url>
-    <loc>/reference/table.paint.html</loc>
-  </url>
-  <url>
-    <loc>/reference/table.phylog.html</loc>
-  </url>
-  <url>
-    <loc>/reference/table.value.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tarentaise.html</loc>
-  </url>
-  <url>
-    <loc>/reference/taxo.eg.html</loc>
-  </url>
-  <url>
-    <loc>/reference/testdim.html</loc>
-  </url>
-  <url>
-    <loc>/reference/testdim.multiblock.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tintoodiel.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tithonia.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tortues.html</loc>
-  </url>
-  <url>
-    <loc>/reference/toxicity.html</loc>
-  </url>
-  <url>
-    <loc>/reference/triangle.class.html</loc>
-  </url>
-  <url>
-    <loc>/reference/triangle.plot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/trichometeo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ungulates.html</loc>
-  </url>
-  <url>
-    <loc>/reference/uniquewt.df.html</loc>
-  </url>
-  <url>
-    <loc>/reference/variance.phylog.html</loc>
-  </url>
-  <url>
-    <loc>/reference/varipart.html</loc>
-  </url>
-  <url>
-    <loc>/reference/vegtf.html</loc>
-  </url>
-  <url>
-    <loc>/reference/veuvage.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wca.coinertia.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wca.rlq.html</loc>
-  </url>
-  <url>
-    <loc>/reference/westafrica.html</loc>
-  </url>
-  <url>
-    <loc>/reference/withinpca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/witwit.coa.html</loc>
-  </url>
-  <url>
-    <loc>/reference/woangers.html</loc>
-  </url>
-  <url>
-    <loc>/reference/worksurv.html</loc>
-  </url>
-  <url>
-    <loc>/reference/yanomama.html</loc>
-  </url>
-  <url>
-    <loc>/reference/zealand.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/articles/Chap2Ktables.html</loc></url>
+<url><loc>/articles/Chap2tables.html</loc></url>
+<url><loc>/articles/ChapBetGr.html</loc></url>
+<url><loc>/articles/ChapEnvVarStruct.html</loc></url>
+<url><loc>/articles/ChapKtables.html</loc></url>
+<url><loc>/articles/ChapSpeciesStruct.html</loc></url>
+<url><loc>/articles/book.html</loc></url>
+<url><loc>/articles/faq.html</loc></url>
+<url><loc>/articles/get_started.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/install.html</loc></url>
+<url><loc>/articles/papers.html</loc></url>
+<url><loc>/articles/related.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/PI2newick.html</loc></url>
+<url><loc>/reference/RV.randtest.html</loc></url>
+<url><loc>/reference/RV.rtest.html</loc></url>
+<url><loc>/reference/RVdist.randtest.html</loc></url>
+<url><loc>/reference/RVintra.randtest.html</loc></url>
+<url><loc>/reference/abouheif.eg.html</loc></url>
+<url><loc>/reference/acacia.html</loc></url>
+<url><loc>/reference/add.scatter.html</loc></url>
+<url><loc>/reference/ade4-deprecated.html</loc></url>
+<url><loc>/reference/ade4-internal.html</loc></url>
+<url><loc>/reference/ade4.package.html</loc></url>
+<url><loc>/reference/adegraphicsLoaded.html</loc></url>
+<url><loc>/reference/aminoacyl.html</loc></url>
+<url><loc>/reference/amova.html</loc></url>
+<url><loc>/reference/apis108.html</loc></url>
+<url><loc>/reference/apqe.html</loc></url>
+<url><loc>/reference/aravo.html</loc></url>
+<url><loc>/reference/ardeche.html</loc></url>
+<url><loc>/reference/area.plot.html</loc></url>
+<url><loc>/reference/arrival.html</loc></url>
+<url><loc>/reference/as.taxo.html</loc></url>
+<url><loc>/reference/atlas.html</loc></url>
+<url><loc>/reference/atya.html</loc></url>
+<url><loc>/reference/avijons.html</loc></url>
+<url><loc>/reference/avimedi.html</loc></url>
+<url><loc>/reference/aviurba.html</loc></url>
+<url><loc>/reference/bacteria.html</loc></url>
+<url><loc>/reference/banque.html</loc></url>
+<url><loc>/reference/baran95.html</loc></url>
+<url><loc>/reference/bca.coinertia.html</loc></url>
+<url><loc>/reference/bca.html</loc></url>
+<url><loc>/reference/bca.rlq.html</loc></url>
+<url><loc>/reference/bf88.html</loc></url>
+<url><loc>/reference/bicenter.wt.html</loc></url>
+<url><loc>/reference/bordeaux.html</loc></url>
+<url><loc>/reference/bsetal97.html</loc></url>
+<url><loc>/reference/buech.html</loc></url>
+<url><loc>/reference/butterfly.html</loc></url>
+<url><loc>/reference/bwca.dpcoa.html</loc></url>
+<url><loc>/reference/cailliez.html</loc></url>
+<url><loc>/reference/capitales.html</loc></url>
+<url><loc>/reference/carni19.html</loc></url>
+<url><loc>/reference/carni70.html</loc></url>
+<url><loc>/reference/carniherbi49.html</loc></url>
+<url><loc>/reference/casitas.html</loc></url>
+<url><loc>/reference/chatcat.html</loc></url>
+<url><loc>/reference/chats.html</loc></url>
+<url><loc>/reference/chazeb.html</loc></url>
+<url><loc>/reference/chevaine.html</loc></url>
+<url><loc>/reference/chickenk.html</loc></url>
+<url><loc>/reference/clementines.html</loc></url>
+<url><loc>/reference/cnc2003.html</loc></url>
+<url><loc>/reference/coinertia.html</loc></url>
+<url><loc>/reference/coleo.html</loc></url>
+<url><loc>/reference/combine.4thcorner.html</loc></url>
+<url><loc>/reference/corkdist.html</loc></url>
+<url><loc>/reference/corvus.html</loc></url>
+<url><loc>/reference/costatis.html</loc></url>
+<url><loc>/reference/costatis.randtest.html</loc></url>
+<url><loc>/reference/dagnelie.test.html</loc></url>
+<url><loc>/reference/deug.html</loc></url>
+<url><loc>/reference/disc.html</loc></url>
+<url><loc>/reference/discrimin.coa.html</loc></url>
+<url><loc>/reference/discrimin.html</loc></url>
+<url><loc>/reference/dist.binary.html</loc></url>
+<url><loc>/reference/dist.dudi.html</loc></url>
+<url><loc>/reference/dist.ktab.html</loc></url>
+<url><loc>/reference/dist.neig.html</loc></url>
+<url><loc>/reference/dist.prop.html</loc></url>
+<url><loc>/reference/dist.quant.html</loc></url>
+<url><loc>/reference/divc.html</loc></url>
+<url><loc>/reference/divcmax.html</loc></url>
+<url><loc>/reference/dotchart.phylog.html</loc></url>
+<url><loc>/reference/dotcircle.html</loc></url>
+<url><loc>/reference/doubs.html</loc></url>
+<url><loc>/reference/dpcoa.html</loc></url>
+<url><loc>/reference/dudi.acm.html</loc></url>
+<url><loc>/reference/dudi.coa.html</loc></url>
+<url><loc>/reference/dudi.dec.html</loc></url>
+<url><loc>/reference/dudi.fca.html</loc></url>
+<url><loc>/reference/dudi.hillsmith.html</loc></url>
+<url><loc>/reference/dudi.html</loc></url>
+<url><loc>/reference/dudi.mix.html</loc></url>
+<url><loc>/reference/dudi.nsc.html</loc></url>
+<url><loc>/reference/dudi.pca.html</loc></url>
+<url><loc>/reference/dudi.pco.html</loc></url>
+<url><loc>/reference/dunedata.html</loc></url>
+<url><loc>/reference/ecg.html</loc></url>
+<url><loc>/reference/ecomor.html</loc></url>
+<url><loc>/reference/elec88.html</loc></url>
+<url><loc>/reference/escopage.html</loc></url>
+<url><loc>/reference/euro123.html</loc></url>
+<url><loc>/reference/fission.html</loc></url>
+<url><loc>/reference/foucart.html</loc></url>
+<url><loc>/reference/fourthcorner.html</loc></url>
+<url><loc>/reference/friday87.html</loc></url>
+<url><loc>/reference/fruits.html</loc></url>
+<url><loc>/reference/gearymoran.html</loc></url>
+<url><loc>/reference/ggtortoises.html</loc></url>
+<url><loc>/reference/granulo.html</loc></url>
+<url><loc>/reference/gridrowcol.html</loc></url>
+<url><loc>/reference/hdpg.html</loc></url>
+<url><loc>/reference/houmousr.html</loc></url>
+<url><loc>/reference/housetasks.html</loc></url>
+<url><loc>/reference/humDNAm.html</loc></url>
+<url><loc>/reference/ichtyo.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/inertia.dudi.html</loc></url>
+<url><loc>/reference/irishdata.html</loc></url>
+<url><loc>/reference/is.euclid.html</loc></url>
+<url><loc>/reference/julliot.html</loc></url>
+<url><loc>/reference/jv73.html</loc></url>
+<url><loc>/reference/kcponds.html</loc></url>
+<url><loc>/reference/kdist.html</loc></url>
+<url><loc>/reference/kdist2ktab.html</loc></url>
+<url><loc>/reference/kdisteuclid.html</loc></url>
+<url><loc>/reference/kplot.foucart.html</loc></url>
+<url><loc>/reference/kplot.html</loc></url>
+<url><loc>/reference/kplot.mcoa.html</loc></url>
+<url><loc>/reference/kplot.mfa.html</loc></url>
+<url><loc>/reference/kplot.pta.html</loc></url>
+<url><loc>/reference/kplot.sepan.html</loc></url>
+<url><loc>/reference/kplot.statis.html</loc></url>
+<url><loc>/reference/krandtest.html</loc></url>
+<url><loc>/reference/ktab.data.frame.html</loc></url>
+<url><loc>/reference/ktab.html</loc></url>
+<url><loc>/reference/ktab.list.df.html</loc></url>
+<url><loc>/reference/ktab.list.dudi.html</loc></url>
+<url><loc>/reference/ktab.match2ktabs.html</loc></url>
+<url><loc>/reference/ktab.within.html</loc></url>
+<url><loc>/reference/lascaux.html</loc></url>
+<url><loc>/reference/lingoes.html</loc></url>
+<url><loc>/reference/lizards.html</loc></url>
+<url><loc>/reference/loocv.bca.html</loc></url>
+<url><loc>/reference/loocv.discrimin.html</loc></url>
+<url><loc>/reference/loocv.dudi.html</loc></url>
+<url><loc>/reference/macaca.html</loc></url>
+<url><loc>/reference/macon.html</loc></url>
+<url><loc>/reference/macroloire.html</loc></url>
+<url><loc>/reference/mafragh.html</loc></url>
+<url><loc>/reference/mantel.randtest.html</loc></url>
+<url><loc>/reference/mantel.rtest.html</loc></url>
+<url><loc>/reference/maples.html</loc></url>
+<url><loc>/reference/mariages.html</loc></url>
+<url><loc>/reference/mbpcaiv.html</loc></url>
+<url><loc>/reference/mbpls.html</loc></url>
+<url><loc>/reference/mcoa.html</loc></url>
+<url><loc>/reference/mdpcoa.html</loc></url>
+<url><loc>/reference/meau.html</loc></url>
+<url><loc>/reference/meaudret.html</loc></url>
+<url><loc>/reference/mfa.html</loc></url>
+<url><loc>/reference/microsatt.html</loc></url>
+<url><loc>/reference/mjrochet.html</loc></url>
+<url><loc>/reference/mld.html</loc></url>
+<url><loc>/reference/mollusc.html</loc></url>
+<url><loc>/reference/monde84.html</loc></url>
+<url><loc>/reference/morphosport.html</loc></url>
+<url><loc>/reference/mstree.html</loc></url>
+<url><loc>/reference/multiblock.html</loc></url>
+<url><loc>/reference/neig.html</loc></url>
+<url><loc>/reference/newick.eg.html</loc></url>
+<url><loc>/reference/newick2phylog.html</loc></url>
+<url><loc>/reference/niche.html</loc></url>
+<url><loc>/reference/nipals.html</loc></url>
+<url><loc>/reference/njplot.html</loc></url>
+<url><loc>/reference/olympic.html</loc></url>
+<url><loc>/reference/oribatid.html</loc></url>
+<url><loc>/reference/originality.html</loc></url>
+<url><loc>/reference/orthobasis.html</loc></url>
+<url><loc>/reference/ours.html</loc></url>
+<url><loc>/reference/palm.html</loc></url>
+<url><loc>/reference/pap.html</loc></url>
+<url><loc>/reference/pcaiv.html</loc></url>
+<url><loc>/reference/pcaivortho.html</loc></url>
+<url><loc>/reference/pcoscaled.html</loc></url>
+<url><loc>/reference/pcw.html</loc></url>
+<url><loc>/reference/perthi02.html</loc></url>
+<url><loc>/reference/phylog.html</loc></url>
+<url><loc>/reference/piosphere.html</loc></url>
+<url><loc>/reference/plot.between.html</loc></url>
+<url><loc>/reference/plot.phylog.html</loc></url>
+<url><loc>/reference/plot.within.html</loc></url>
+<url><loc>/reference/presid2002.html</loc></url>
+<url><loc>/reference/procella.html</loc></url>
+<url><loc>/reference/procuste.html</loc></url>
+<url><loc>/reference/procuste.randtest.html</loc></url>
+<url><loc>/reference/procuste.rtest.html</loc></url>
+<url><loc>/reference/pta.html</loc></url>
+<url><loc>/reference/quasieuclid.html</loc></url>
+<url><loc>/reference/randboot.html</loc></url>
+<url><loc>/reference/randboot.multiblock.html</loc></url>
+<url><loc>/reference/randtest.amova.html</loc></url>
+<url><loc>/reference/randtest.between.html</loc></url>
+<url><loc>/reference/randtest.coinertia.html</loc></url>
+<url><loc>/reference/randtest.discrimin.html</loc></url>
+<url><loc>/reference/randtest.dpcoa.html</loc></url>
+<url><loc>/reference/randtest.html</loc></url>
+<url><loc>/reference/randtest.pcaiv.html</loc></url>
+<url><loc>/reference/randxval.html</loc></url>
+<url><loc>/reference/rankrock.html</loc></url>
+<url><loc>/reference/reconst.html</loc></url>
+<url><loc>/reference/rhizobium.html</loc></url>
+<url><loc>/reference/rhone.html</loc></url>
+<url><loc>/reference/rlq.html</loc></url>
+<url><loc>/reference/rpjdl.html</loc></url>
+<url><loc>/reference/rtest.between.html</loc></url>
+<url><loc>/reference/rtest.discrimin.html</loc></url>
+<url><loc>/reference/rtest.html</loc></url>
+<url><loc>/reference/s.arrow.html</loc></url>
+<url><loc>/reference/s.chull.html</loc></url>
+<url><loc>/reference/s.class.html</loc></url>
+<url><loc>/reference/s.corcircle.html</loc></url>
+<url><loc>/reference/s.distri.html</loc></url>
+<url><loc>/reference/s.hist.html</loc></url>
+<url><loc>/reference/s.image.html</loc></url>
+<url><loc>/reference/s.kde2d.html</loc></url>
+<url><loc>/reference/s.label.html</loc></url>
+<url><loc>/reference/s.logo.html</loc></url>
+<url><loc>/reference/s.match.class.html</loc></url>
+<url><loc>/reference/s.match.html</loc></url>
+<url><loc>/reference/s.multinom.html</loc></url>
+<url><loc>/reference/s.traject.html</loc></url>
+<url><loc>/reference/s.value.html</loc></url>
+<url><loc>/reference/santacatalina.html</loc></url>
+<url><loc>/reference/sarcelles.html</loc></url>
+<url><loc>/reference/scalewt.html</loc></url>
+<url><loc>/reference/scatter.acm.html</loc></url>
+<url><loc>/reference/scatter.coa.html</loc></url>
+<url><loc>/reference/scatter.dudi.html</loc></url>
+<url><loc>/reference/scatter.fca.html</loc></url>
+<url><loc>/reference/scatter.html</loc></url>
+<url><loc>/reference/scatterutil.html</loc></url>
+<url><loc>/reference/sco.boxplot.html</loc></url>
+<url><loc>/reference/sco.class.html</loc></url>
+<url><loc>/reference/sco.distri.html</loc></url>
+<url><loc>/reference/sco.gauss.html</loc></url>
+<url><loc>/reference/sco.label.html</loc></url>
+<url><loc>/reference/sco.match.html</loc></url>
+<url><loc>/reference/sco.quant.html</loc></url>
+<url><loc>/reference/score.acm.html</loc></url>
+<url><loc>/reference/score.coa.html</loc></url>
+<url><loc>/reference/score.html</loc></url>
+<url><loc>/reference/score.mix.html</loc></url>
+<url><loc>/reference/score.pca.html</loc></url>
+<url><loc>/reference/seconde.html</loc></url>
+<url><loc>/reference/sepan.html</loc></url>
+<url><loc>/reference/skulls.html</loc></url>
+<url><loc>/reference/statico.html</loc></url>
+<url><loc>/reference/statico.krandtest.html</loc></url>
+<url><loc>/reference/statis.html</loc></url>
+<url><loc>/reference/steppe.html</loc></url>
+<url><loc>/reference/supcol.html</loc></url>
+<url><loc>/reference/supdist.html</loc></url>
+<url><loc>/reference/suprow.html</loc></url>
+<url><loc>/reference/suprow.pta.html</loc></url>
+<url><loc>/reference/symbols.phylog.html</loc></url>
+<url><loc>/reference/syndicats.html</loc></url>
+<url><loc>/reference/t3012.html</loc></url>
+<url><loc>/reference/table.cont.html</loc></url>
+<url><loc>/reference/table.dist.html</loc></url>
+<url><loc>/reference/table.paint.html</loc></url>
+<url><loc>/reference/table.phylog.html</loc></url>
+<url><loc>/reference/table.value.html</loc></url>
+<url><loc>/reference/tarentaise.html</loc></url>
+<url><loc>/reference/taxo.eg.html</loc></url>
+<url><loc>/reference/testdim.html</loc></url>
+<url><loc>/reference/testdim.multiblock.html</loc></url>
+<url><loc>/reference/tintoodiel.html</loc></url>
+<url><loc>/reference/tithonia.html</loc></url>
+<url><loc>/reference/tortues.html</loc></url>
+<url><loc>/reference/toxicity.html</loc></url>
+<url><loc>/reference/triangle.class.html</loc></url>
+<url><loc>/reference/triangle.plot.html</loc></url>
+<url><loc>/reference/trichometeo.html</loc></url>
+<url><loc>/reference/ungulates.html</loc></url>
+<url><loc>/reference/uniquewt.df.html</loc></url>
+<url><loc>/reference/variance.phylog.html</loc></url>
+<url><loc>/reference/varipart.html</loc></url>
+<url><loc>/reference/vegtf.html</loc></url>
+<url><loc>/reference/veuvage.html</loc></url>
+<url><loc>/reference/wca.coinertia.html</loc></url>
+<url><loc>/reference/wca.html</loc></url>
+<url><loc>/reference/wca.rlq.html</loc></url>
+<url><loc>/reference/westafrica.html</loc></url>
+<url><loc>/reference/withinpca.html</loc></url>
+<url><loc>/reference/witwit.coa.html</loc></url>
+<url><loc>/reference/woangers.html</loc></url>
+<url><loc>/reference/worksurv.html</loc></url>
+<url><loc>/reference/yanomama.html</loc></url>
+<url><loc>/reference/zealand.html</loc></url>
 </urlset>
+

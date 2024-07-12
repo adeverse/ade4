@@ -24,10 +24,15 @@ combine.4thcorner <- function(four1,four2){
     stop("can not combine objects: diferent adjustment methods for tabG")
   for(i in 1:length(res$tabG$names)){
     idx <- ifelse(four2$tabG$adj.pvalue[i] > four1$tabG$adj.pvalue[i], 1, 2)
-    if(idx==1) {
-      tmp <- four2
+    if(is.na(idx)){ 
+      if(is.na(four2$tabG$adj.pvalue[i]))
+          tmp <- four2
+      else
+          tmp <- four1
+    } else if(idx==1) {
+          tmp <- four2
     } else if(idx==2){
-      tmp <- four1
+          tmp <- four1
     }
     res$tabG$expvar[i,] <-  tmp$tabG$expvar[i,]
     res$tabG$pvalue[i] <-  tmp$tabG$pvalue[i]
@@ -46,11 +51,15 @@ combine.4thcorner <- function(four1,four2){
     for(i in 1:length(res$tabD$names)){
       ## For tabD
       idx <- ifelse(four2$tabD$adj.pvalue[i] > four1$tabD$adj.pvalue[i], 1, 2)
-      idx <- ifelse(is.na(idx), 1, idx) ## NA could occur in the case of factor with one level. In this case, return the first output
-      if(idx == 1) {
-        tmp <- four2
-      } else if(idx == 2){
-        tmp <- four1
+      if(is.na(idx)){ 
+          if(is.na(four2$tabG$adj.pvalue[i]))
+              tmp <- four2
+          else
+              tmp <- four1
+      } else if(idx==1) {
+          tmp <- four2
+      } else if(idx==2){
+          tmp <- four1
       }
       res$tabD$expvar[i,] <-  tmp$tabD$expvar[i,]
       res$tabD$pvalue[i] <-  tmp$tabD$pvalue[i]
@@ -61,11 +70,17 @@ combine.4thcorner <- function(four1,four2){
       
       ## For tabD2
       idx <- ifelse(four2$tabD2$adj.pvalue[i] > four1$tabD2$adj.pvalue[i], 1, 2)
-      if(idx==1) {
-        tmp <- four2
+      if(is.na(idx)){ 
+          if(is.na(four2$tabG$adj.pvalue[i]))
+              tmp <- four2
+          else
+              tmp <- four1
+      } else if(idx==1) {
+          tmp <- four2
       } else if(idx==2){
-        tmp <- four1
+          tmp <- four1
       }
+      
       res$tabD2$expvar[i,] <-  tmp$tabD2$expvar[i,]
       res$tabD2$pvalue[i] <-  tmp$tabD2$pvalue[i]
       res$tabD2$adj.pvalue[i] <- tmp$tabD2$adj.pvalue[i]

@@ -11,8 +11,6 @@ A data frame containing 180 rows (allelic forms on 8 loci) and 10 columns (popul
 Nimba, Celinda, Pretoria, Chalkidiki, Forli, Valenciennes, Umea and Seville).
 } 
 \source{
-\url{https://www1.montpellier.inra.fr/URLB/apis/libanfreq.pdf}\cr
-
 Franck P., Garnery L., Solignac M. and Cornuet J.M. (2000) Molecular confirmation of a fourth lineage in honeybees from the Near-East. 
 \emph{Apidologie}, \bold{31}, 167--180.
 }

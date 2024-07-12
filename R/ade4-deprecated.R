@@ -1199,3 +1199,81 @@
     s.match(x$li, x$ls, xax = xax, yax = yax, sub = "Scores and lag scores", csub = 2, clabel = 0.75) 
     
 }
+
+"multispati.randtest" <- function (dudi, listw, nrepet = 999, ...) {
+    
+    .Deprecated(new="multispati.randtest", package="ade4", 
+                msg="The 'multispati.randtest' function is now deprecated in 'ade4' and will soon be available in the 'adespatial' package.")
+    
+    if(!inherits(dudi,"dudi")) stop ("object of class 'dudi' expected") 
+    if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
+    if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
+    
+    "testmultispati"<- function(nrepet, nr, nc, tab, mat, lw, cw) {
+        .C("testmultispati", 
+           as.integer(nrepet),
+           as.integer(nr),
+           as.integer(nc),
+           as.double(as.matrix(tab)),
+           as.double(mat),
+           as.double(lw),
+           as.double(cw),
+           inersim=double(nrepet+1),
+           PACKAGE="ade4")$inersim
+    }
+    
+    tab<- dudi$tab
+    nr<-nrow(tab)
+    nc<-ncol(tab)
+    mat<-spdep::listw2mat(listw)
+    lw<- dudi$lw
+    cw<- dudi$cw
+    if (!(identical(all.equal(lw,rep(1/nrow(tab), nrow(tab))),TRUE))) {
+        stop ("Not implemented for non-uniform weights")
+    }
+    inersim<- testmultispati(nrepet, nr, nc, tab, mat, lw, cw)
+    inertot<- sum(dudi$eig)
+    inersim<- inersim/inertot
+    obs <- inersim[1]
+    w <- as.randtest(sim = inersim[-1], obs = obs, call = match.call(), ...)
+    return(w)
+}
+
+"multispati.rtest" <- function (dudi, listw, nrepet = 99, ...) {
+    
+    .Deprecated(new="multispati.rtest", package="ade4", 
+                msg="The 'multispati.rtest' function is now deprecated in 'ade4' and will soon be available in the 'adespatial' package.")
+    
+    if(!inherits(listw,"listw")) stop ("object of class 'listw' expected") 
+    if(listw$style!="W") stop ("object of class 'listw' with style 'W' expected") 
+    if (!(identical(all.equal(dudi$lw,rep(1/nrow(dudi$tab), nrow(dudi$tab))),TRUE))) {
+        stop ("Not implemented for non-uniform weights")
+    }
+    
+    n <- length(listw$weights)
+    fun.lag <- function (x) spdep::lag.listw(listw,x,TRUE)
+    fun <- function (permuter = TRUE) {
+        if (permuter) {
+            permutation <- sample(n)
+            y <- dudi$tab[permutation,]
+            yw <- dudi$lw[permutation]
+        } else {
+            y <-dudi$tab
+            yw <- dudi$lw
+        }
+        y <- as.matrix(y)
+        ymoy <- apply(y, 2, fun.lag)
+        ymoy <- ymoy*yw
+        y <- y*ymoy
+        indexmoran <- sum(apply(y,2,sum)*dudi$cw)
+        return(indexmoran)
+    }
+    inertot <- sum(dudi$eig)
+    obs <- fun (permuter = FALSE)/inertot
+    if (nrepet == 0) return(obs)
+    perm <- unlist(lapply(1:nrepet, fun))/inertot
+    w <- as.randtest(obs = obs, sim = perm, call = match.call(), ...)
+    return(w)
+}
+
+

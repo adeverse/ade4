@@ -19,8 +19,7 @@
  } 
 }
 \source{
- Data prepared by D. Charif \email{Delphine.Charif@versailles.inra.fr} starting from:\cr
- \url{http://www.expasy.org/sprot/}
+ Data prepared by D. Charif \email{Delphine.Charif@versailles.inra.fr}
 }
 \references{
 Chiapello H., Olivier E., Landes-Devauchelle C., Nitschké P. and Risler J.L (1999) 

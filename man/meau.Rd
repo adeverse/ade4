@@ -11,7 +11,7 @@ and Ephemeroptera Species.
 \code{meau} is a list of 3 components.
 \describe{
    \item{env}{is a data frame with 24 sites and 10 physicochemical variables.}
-   \item{fau}{is a data frame with 24 sites and 13 Ephemeroptera Species.}
+   \item{spe}{is a data frame with 24 sites and 13 Ephemeroptera Species.}
    \item{design}{is a data frame with 24 sites and 2 factors.
             \itemize{
                 \item \code{season}: is a factor with 4 levels = seasons.

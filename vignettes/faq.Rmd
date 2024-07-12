@@ -26,7 +26,7 @@ The easiest way to install ade4 is to use `install.packages("ade4")` in your R s
 To install the development version from github:
 
 ```r
-remotes::install_github("sdray/ade4")
+remotes::install_github("adeverse/ade4")
 ```
 
 ### How do I know which `ade4` version I'm using?

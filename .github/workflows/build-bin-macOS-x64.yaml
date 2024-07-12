@@ -26,7 +26,7 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -49,7 +49,7 @@ jobs:
           pkgbuild::build(".", binary = TRUE)
         shell: Rscript {0}
       
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: binaries-for-mac-x64
           path: /Users/runner/work/ade4/ade4_*.tgz

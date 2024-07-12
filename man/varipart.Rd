@@ -16,7 +16,7 @@ variables). By default, no covariables are considered (\code{W} is \code{NULL}) 
 \item{nrepet}{an integer indicating the number of permutations
 .}
 
-\item{type}{a character specifying the algorithm which should be used to adjust R-squared (either \code{"simulated"} or \ code{"parametric"}).}
+\item{type}{a character specifying the algorithm which should be used to adjust R-squared (either \code{"simulated"} or \code{"parametric"}).}
 
 \item{scale}{If \code{Y} is not a dudi, a \code{logical} indicating if variables should be scaled}
 

@@ -10,7 +10,7 @@ s.label(dfxy, xax = 1, yax = 2, label = row.names(dfxy),
     neig = NULL, cneig = 2, xlim = NULL, ylim = NULL, grid = TRUE, 
     addaxes = TRUE, cgrid = 1, include.origin = TRUE, origin = c(0,0), 
     sub = "", csub = 1.25, possub = "bottomleft", pixmap = NULL, 
-    contour = NULL, area = NULL, add.plot = FALSE)
+    contour = NULL, area = NULL, add.plot = FALSE, plotstyle = "graphics")
 }
 \arguments{
   \item{dfxy}{a data frame with at least two coordinates}
@@ -37,6 +37,10 @@ s.label(dfxy, xax = 1, yax = 2, label = row.names(dfxy),
   \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a segment (x1,y1,x2,y2)}
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
+  \item{plotstyle}{\code{"graphics"} or \code{"ggplot"}. 
+  If \code{"graphics"}, the display is built with \code{\link{graphics}} functions. 
+  If \code{"ggplot"}, a graphic object output is created with \code{ggplot2} functions (the \code{ggplot2} package must be installed).}
+
 }
 \value{
 The matched call.

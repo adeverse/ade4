@@ -38,6 +38,7 @@ Suggests:
     ape, 
     CircStats, 
     deldir, 
+    ggplot2,
     lattice, 
     spdep, 
     splancs, 

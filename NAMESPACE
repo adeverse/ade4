@@ -185,6 +185,7 @@ importFrom("utils", "modifyList", "read.table", "write.table")
 importFrom("methods", "setOldClass")
 importFrom("MASS", "ginv", "kde2d")
 importFrom("Rcpp", "sourceCpp")
+importFrom("rlang", ".data")
 
 #####################################
 ##               Export            ##

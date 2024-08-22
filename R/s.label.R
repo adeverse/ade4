@@ -8,10 +8,9 @@
   # check the 'plotstyle' argument
   plotstyle <- match.arg(plotstyle[1], choices = c("graphics", "ggplot"), several.ok = FALSE)
   
-  dfxy <- data.frame(dfxy)
-  
   if(plotstyle == "graphics") {
     
+    dfxy <- data.frame(dfxy)
     opar <- graphics::par(mar = graphics::par("mar"))
     on.exit(graphics::par(opar))
     graphics::par(mar = c(0.1, 0.1, 0.1, 0.1))
@@ -42,10 +41,22 @@
       graphics::points(coo$x, coo$y, pch = pch, cex = graphics::par("cex") * cpoint)
     graphics::box()
     invisible(match.call())
+    
   } else if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("ggplot2 needed for this function to work with plotstyle = 'ggplot'. Please install it", call. = FALSE)
     
   } else {
-    return(NULL)
+    dfxy <- data.frame(dfxy[, c(xax, yax)])
+    
+    ggslabel <- ggplot2::ggplot(data = dfxy, ggplot2::aes(.data$x, .data$y)) +
+      ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
+      ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
+      ggplot2::geom_label(ggplot2::aes(label = label), size = clabel * 4) +
+      ggplot2::theme_bw() +
+      ggplot2::theme(axis.text = ggplot2::element_blank(), 
+                     axis.title = ggplot2::element_blank(),
+                     axis.ticks = ggplot2::element_blank())
+    
+    return(ggslabel)
   }
 }

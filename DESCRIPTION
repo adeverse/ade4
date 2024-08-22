@@ -26,7 +26,8 @@ Imports:
     MASS, 
     pixmap, 
     sp, 
-    Rcpp
+    Rcpp,
+    rlang
 LinkingTo: 
     Rcpp, 
     RcppArmadillo

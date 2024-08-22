@@ -7,7 +7,7 @@ performs the scatter diagram of a correlation circle.
 \usage{
 s.corcircle(dfxy, xax = 1, yax = 2, label = row.names(df), 
     clabel = 1, grid = TRUE, sub = "", csub = 1, possub = "bottomleft", 
-    cgrid = 0, fullcircle = TRUE, box = FALSE, add.plot = FALSE)
+    cgrid = 0, fullcircle = TRUE, box = FALSE, add.plot = FALSE, plotstyle = "graphics")
 }
 \arguments{
   \item{dfxy}{a data frame with two coordinates }
@@ -23,6 +23,9 @@ s.corcircle(dfxy, xax = 1, yax = 2, label = row.names(df),
   \item{fullcircle}{a logical value indicating whether the complete circle sould be drawn}
   \item{box}{a logical value indcating whether a box should be drawn}
   \item{add.plot}{if TRUE uses the current graphics window}
+  \item{plotstyle}{\code{"graphics"} or \code{"ggplot"}. 
+  If \code{"graphics"}, the display is built with \code{\link{graphics}} functions. 
+  If \code{"ggplot"}, a graphic object output is created with \code{ggplot2} functions (the \code{ggplot2} package must be installed).}
 }
 \value{
 The matched call.

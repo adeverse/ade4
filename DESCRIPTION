@@ -27,7 +27,11 @@ Imports:
     pixmap, 
     sp, 
     Rcpp,
-    rlang
+    rlang,
+    ggplot2,
+    ggforce,
+    ggrepel,
+    ggpp
 LinkingTo: 
     Rcpp, 
     RcppArmadillo
@@ -39,7 +43,6 @@ Suggests:
     ape, 
     CircStats, 
     deldir, 
-    ggplot2,
     lattice, 
     spdep, 
     splancs, 

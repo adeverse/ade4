@@ -186,6 +186,10 @@ importFrom("methods", "setOldClass")
 importFrom("MASS", "ginv", "kde2d")
 importFrom("Rcpp", "sourceCpp")
 importFrom("rlang", ".data")
+importFrom("ggplot2", "ggplot", "aes", "geom_hline", "geom_vline", "geom_segment", "unit", "arrow")
+importFrom("ggforce", "geom_circle")
+importFrom("ggrepel", "geom_label_repel")
+importFrom("ggpp", "position_nudge_center")
 
 #####################################
 ##               Export            ##

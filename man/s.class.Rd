@@ -11,7 +11,8 @@ s.class(dfxy, fac, wt = rep(1, length(fac)), xax = 1,
     col = rep(1, length(levels(fac))), xlim = NULL, ylim = NULL, 
     grid = TRUE, addaxes = TRUE, origin = c(0,0), 
     include.origin = TRUE, sub = "", csub = 1, possub = "bottomleft", 
-    cgrid = 1, pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE)
+    cgrid = 1, pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE,
+    plotstyle = "graphics")
 }
 \arguments{
   \item{dfxy}{a data frame containing the two columns for the axes}
@@ -41,6 +42,9 @@ s.class(dfxy, fac, wt = rep(1, length(fac)), xax = 1,
   \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a segment (x1,y1,x2,y2)}
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
+  \item{plotstyle}{\code{"graphics"} or \code{"ggplot"}. 
+  If \code{"graphics"}, the display is built with \code{\link{graphics}} functions. 
+  If \code{"ggplot"}, a graphic object output is created with \code{ggplot2} functions (the \code{ggplot2} package must be installed).}
 }
 \value{
 The matched call.

@@ -55,6 +55,24 @@
     stop("ggplot2 needed for this function to work with plotstyle = 'ggplot'. Please install it", call. = FALSE)
     
   } else {
-    return(NULL)
+    ggdfxy <- data.frame(x = dfxy[, xax], y = dfxy[, yax], fac = fac)
+    dfcentroid <- data.frame(meanx = tapply(ggdfxy$x, ggdfxy$fac, mean),
+                             meany = tapply(ggdfxy$y, ggdfxy$fac, mean), 
+                             label = levels(ggdfxy$fac))
+    ggdfxy <- merge(ggdfxy, dfcentroid, by.x = "fac", by.y = "label", all.x = TRUE)
+    
+    ggsclass <- ggplot2::ggplot(data = ggdfxy, ggplot2::aes(.data$x, .data$y)) +
+      ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
+      ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
+      ggplot2::geom_point() +
+      ggplot2::geom_segment(aes(x = .data$x, y = .data$y, xend = .data$meanx, yend = .data$meany)) +
+      ggplot2::geom_label(data = dfcentroid, mapping = aes(x = .data$meanx, y = .data$meany, label = .data$label), inherit.aes = FALSE) +
+      ggplot2::theme_bw() +
+      ggplot2::theme(aspect.ratio = 1,
+                     axis.text = ggplot2::element_blank(), 
+                     axis.title = ggplot2::element_blank(),
+                     axis.ticks = ggplot2::element_blank())
+    
+    return(ggsclass)
   }
 }

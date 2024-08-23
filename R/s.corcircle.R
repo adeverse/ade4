@@ -102,9 +102,9 @@
     stop("ggplot2 needed for this function to work with plotstyle = 'ggplot'. Please install it", call. = FALSE)
     
   } else {
-    ggdf <- data.frame(x = dfxy[, xax], y = dfxy[, yax], lab = row.names(dfxy))
+    ggdfxy <- data.frame(x = dfxy[, xax], y = dfxy[, yax], lab = row.names(dfxy))
     
-    ggscorcircle <- ggplot2::ggplot(data = ggdf, ggplot2::aes(x = .data$x, y = .data$y, label = .data$lab)) +
+    ggscorcircle <- ggplot2::ggplot(data = ggdfxy, ggplot2::aes(x = .data$x, y = .data$y, label = .data$lab)) +
       ggplot2::geom_hline(aes(yintercept = 0), linewidth = .2) +
       ggplot2::geom_vline(aes(xintercept = 0), linewidth = .2) +
       ggforce::geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +

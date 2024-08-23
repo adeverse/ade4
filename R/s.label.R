@@ -46,9 +46,9 @@
     stop("ggplot2 needed for this function to work with plotstyle = 'ggplot'. Please install it", call. = FALSE)
     
   } else {
-    dfxy <- data.frame(dfxy[, c(xax, yax)])
+    ggdfxy <- data.frame(dfxy[, c(xax, yax)])
     
-    ggslabel <- ggplot2::ggplot(data = dfxy, ggplot2::aes(.data$x, .data$y)) +
+    ggslabel <- ggplot2::ggplot(data = ggdfxy, ggplot2::aes(.data$x, .data$y)) +
       ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
       ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
       ggplot2::geom_label(ggplot2::aes(label = label), size = clabel * 4) +

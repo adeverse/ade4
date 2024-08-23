@@ -10,3 +10,4 @@ revdep/
 ^docs$
 ^pkgdown$
 ^vignettes/articles$
+.lintr

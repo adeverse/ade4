@@ -1,11 +1,11 @@
 library(ade4)
 library(ggplot2)
 
-x <- runif(50, -2, 2)
-y <- runif(50, -2, 2)
-dfxy <- data.frame(x, y)
+x1 <- runif(50, -2, 2)
+y1 <- runif(50, -2, 2)
+dfxy <- data.frame(x1, y1)
 label <- row.names(dfxy)
-z <- x^2 + y^2
+z <- x1^2 + y1^2
 
 # graphics
 

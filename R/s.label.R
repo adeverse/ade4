@@ -47,8 +47,12 @@
     
   } else {
     ggdfxy <- data.frame(x = dfxy[, xax], y = dfxy[, yax], lab = label)
+    colnames(ggdfxy)[1:2] <- colnames(dfxy)[c(xax, yax)]
     
-    ggslabel <- ggplot2::ggplot(data = ggdfxy, ggplot2::aes(.data$x, .data$y, label = .data$lab)) +
+    ggslabel <- 
+      ggplot2::ggplot(data = ggdfxy, ggplot2::aes(x = .data[[colnames(ggdfxy)[1]]], 
+                                                  y = .data[[colnames(ggdfxy)[2]]], 
+                                                  label = .data$lab)) +
       ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
       ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
       ggplot2::geom_label() +

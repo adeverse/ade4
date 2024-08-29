@@ -1,11 +1,11 @@
 library(ade4)
 library(ggplot2)
 
-x1 <- runif(50, -2, 2)
-y1 <- runif(50, -2, 2)
-dfxy <- data.frame(x1, y1)
+monx <- runif(50, -2, 2)
+mony <- runif(50, -2, 2)
+dfxy <- data.frame(monx, mony)
 label <- row.names(dfxy)
-z <- x1^2 + y1^2
+z <- monx^2 + mony^2
 
 # graphics
 
@@ -21,10 +21,14 @@ s.label(dfxy, lab = as.character(z < 1), plotstyle = "ggplot")
 s.label(dfxy, plotstyle = "ggplot") +
   ggplot2::geom_label(aes(label = as.character(z < 1)))
 
-s.label(dfxy, plotstyle = "ggplot") +
-  geom_label(size = 2) 
-  # geom_point()
+aa <- s.label(dfxy, plotstyle = "ggplot") +
+  geom_point()
+# to remove labels a posteriori
+aa$layers[[3]] <- NULL
+aa
 
 s.label(dfxy, plotstyle = "ggplot") +
   ggplot2::theme(axis.text=element_text())
-  
+
+# the data contained in the ggplot2 graph has the same columns names as the input data
+names(aa$data)

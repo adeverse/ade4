@@ -20,4 +20,6 @@ library(ggforce)
 library(ggrepel)
 library(ggpp)
  
-s.corcircle(dudi1$co, lab = names(olympic$tab), plotstyle = "ggplot")
+aa <- s.corcircle(dudi1$co, lab = names(olympic$tab), plotstyle = "ggplot")
+aa
+all(colnames(aa$data)[1:2] == colnames(dudi1$co)[1:2])

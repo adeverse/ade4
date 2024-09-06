@@ -1,0 +1,571 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "ade4",
+  "description": "Tools for multivariate data analysis. Several methods are provided for the analysis (i.e., ordination) of one-table (e.g., principal component analysis, correspondence analysis), two-table (e.g., coinertia analysis, redundancy analysis), three-table (e.g., RLQ analysis) and K-table (e.g., STATIS, multiple coinertia analysis). The philosophy of the package is described in Dray and Dufour (2007) <doi:10.18637/jss.v022.i04>.",
+  "name": "ade4: Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences",
+  "relatedLink": ["https://adeverse.github.io/ade4/", "https://CRAN.R-project.org/package=ade4"],
+  "codeRepository": "https://github.com/adeverse/ade4",
+  "issueTracker": "https://github.com/adeverse/ade4/issues",
+  "license": "https://spdx.org/licenses/GPL-2.0",
+  "version": "1.7.23",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.4.1 (2024-06-14)",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Stéphane",
+      "familyName": "Dray",
+      "email": "stephane.dray@univ-lyon1.fr",
+      "@id": "https://orcid.org/0000-0003-0153-1105"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Anne-Béatrice",
+      "familyName": "Dufour",
+      "email": "anne-beatrice.dufour@univ-lyon1.fr",
+      "@id": "https://orcid.org/0000-0002-9339-4293"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Jean",
+      "familyName": "Thioulouse",
+      "email": "jean.thioulouse@univ-lyon1.fr",
+      "@id": "https://orcid.org/0000-0001-7664-0598"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Thibaut",
+      "familyName": "Jombart"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Sandrine",
+      "familyName": "Pavoine"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Jean R.",
+      "familyName": "Lobry"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Sébastien",
+      "familyName": "Ollier"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Daniel",
+      "familyName": "Borcard"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Pierre",
+      "familyName": "Legendre"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Stéphanie",
+      "familyName": "Bougeard"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Aurélie",
+      "familyName": "Siberchicot",
+      "email": "aurelie.siberchicot@univ-lyon1.fr",
+      "@id": "https://orcid.org/0000-0002-7638-8318"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Aurélie",
+      "familyName": "Siberchicot",
+      "email": "aurelie.siberchicot@univ-lyon1.fr",
+      "@id": "https://orcid.org/0000-0002-7638-8318"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ade4TkGUI",
+      "name": "ade4TkGUI",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ade4TkGUI"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "adegraphics",
+      "name": "adegraphics",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=adegraphics"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "adephylo",
+      "name": "adephylo",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=adephylo"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "adespatial",
+      "name": "adespatial",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=adespatial"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ape",
+      "name": "ape",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ape"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "CircStats",
+      "name": "CircStats",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=CircStats"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "deldir",
+      "name": "deldir",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=deldir"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "lattice",
+      "name": "lattice",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=lattice"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "spdep",
+      "name": "spdep",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=spdep"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "splancs",
+      "name": "splancs",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=splancs"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "waveslim",
+      "name": "waveslim",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=waveslim"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "progress",
+      "name": "progress",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=progress"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "foreach",
+      "name": "foreach",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=foreach"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "parallel",
+      "name": "parallel"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "doParallel",
+      "name": "doParallel",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=doParallel"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "iterators",
+      "name": "iterators",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=iterators"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.5.0"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "graphics",
+      "name": "graphics"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "grDevices",
+      "name": "grDevices"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "methods",
+      "name": "methods"
+    },
+    "5": {
+      "@type": "SoftwareApplication",
+      "identifier": "stats",
+      "name": "stats"
+    },
+    "6": {
+      "@type": "SoftwareApplication",
+      "identifier": "utils",
+      "name": "utils"
+    },
+    "7": {
+      "@type": "SoftwareApplication",
+      "identifier": "MASS",
+      "name": "MASS",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=MASS"
+    },
+    "8": {
+      "@type": "SoftwareApplication",
+      "identifier": "pixmap",
+      "name": "pixmap",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=pixmap"
+    },
+    "9": {
+      "@type": "SoftwareApplication",
+      "identifier": "sp",
+      "name": "sp",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sp"
+    },
+    "10": {
+      "@type": "SoftwareApplication",
+      "identifier": "Rcpp",
+      "name": "Rcpp",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=Rcpp"
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "16566.186KB",
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "datePublished": "2007",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "St\\'ephane",
+          "familyName": "Dray"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Anne--B\\'eatrice",
+          "familyName": "Dufour"
+        }
+      ],
+      "name": "The {ade4} Package: Implementing the Duality Diagram for Ecologists",
+      "identifier": "10.18637/jss.v022.i04",
+      "pagination": "1--20",
+      "@id": "https://doi.org/10.18637/jss.v022.i04",
+      "sameAs": "https://doi.org/10.18637/jss.v022.i04",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "4",
+        "datePublished": "2007",
+        "isPartOf": {
+          "@type": ["PublicationVolume", "Periodical"],
+          "volumeNumber": "22",
+          "name": "Journal of Statistical Software"
+        }
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "datePublished": "2018",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "St\\'ephanie",
+          "familyName": "Bougeard",
+          "email": "stephanie.bougeard@anses.fr"
+        },
+        {
+          "@type": "Person",
+          "givenName": "St\\'ephane",
+          "familyName": "Dray",
+          "email": "stephane.dray@univ-lyon1.fr"
+        }
+      ],
+      "name": "Supervised Multiblock Analysis in {R} with the {ade4} Package",
+      "identifier": "10.18637/jss.v086.i01",
+      "pagination": "1--17",
+      "@id": "https://doi.org/10.18637/jss.v086.i01",
+      "sameAs": "https://doi.org/10.18637/jss.v086.i01",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "1",
+        "datePublished": "2018",
+        "isPartOf": {
+          "@type": ["PublicationVolume", "Periodical"],
+          "volumeNumber": "86",
+          "name": "Journal of Statistical Software"
+        }
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "datePublished": "2004",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "Daniel",
+          "familyName": "Chessel"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Anne-B\\'eatrice",
+          "familyName": "Dufour"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Jean",
+          "familyName": "Thioulouse"
+        }
+      ],
+      "name": "The {ade4} Package -- {I}: One-Table Methods",
+      "url": "https://cran.r-project.org/doc/Rnews/",
+      "pagination": "5--10",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "1",
+        "datePublished": "2004",
+        "isPartOf": {
+          "@type": ["PublicationVolume", "Periodical"],
+          "volumeNumber": "4",
+          "name": "R News"
+        }
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "datePublished": "2007",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "St\\'ephane",
+          "familyName": "Dray"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Anne-B\\'eatrice",
+          "familyName": "Dufour"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Daniel",
+          "familyName": "Chessel"
+        }
+      ],
+      "name": "The {ade4} Package -- {II}: Two-Table and {K}-Table Methods",
+      "url": "https://cran.r-project.org/doc/Rnews/",
+      "pagination": "47--52",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "2",
+        "datePublished": "2007",
+        "isPartOf": {
+          "@type": ["PublicationVolume", "Periodical"],
+          "volumeNumber": "7",
+          "name": "R News"
+        }
+      }
+    },
+    {
+      "@type": "Book",
+      "datePublished": "2018",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "Jean",
+          "familyName": "Thioulouse"
+        },
+        {
+          "@type": "Person",
+          "givenName": "St\\'ephane",
+          "familyName": "Dray"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Anne--B\\'eatrice",
+          "familyName": "Dufour"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Aur\\'elie",
+          "familyName": "Siberchicot"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Thibaut",
+          "familyName": "Jombart"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Sandrine",
+          "familyName": "Pavoine"
+        }
+      ],
+      "name": "Multivariate Analysis of Ecological Data with {ade4}",
+      "identifier": "10.1007/978-1-4939-8850-1",
+      "@id": "https://doi.org/10.1007/978-1-4939-8850-1",
+      "sameAs": "https://doi.org/10.1007/978-1-4939-8850-1"
+    }
+  ],
+  "releaseNotes": "https://github.com/adeverse/ade4/blob/main/NEWS.md",
+  "readme": "https://github.com/adeverse/ade4/blob/master/README.md",
+  "contIntegration": "https://github.com/adeverse/ade4/actions/workflows/R-CMD-check.yaml"
+}

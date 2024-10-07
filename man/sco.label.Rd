@@ -8,7 +8,7 @@ Draws evenly spaced labels, each label linked to the corresponding value of a nu
 sco.label(score, label = names(score), clabel = 1, horizontal = TRUE,
 reverse = FALSE, pos.lab = 0.5, pch = 20, cpoint = 1, boxes = TRUE, lim
 = NULL, grid = TRUE, cgrid = 1, include.origin = TRUE, origin = c(0, 0),
-sub = "", csub = 1.25, possub = "bottomleft")
+sub = "", csub = 1.25, possub = "bottomleft", plotstyle = "graphics")
 }
 \arguments{
   \item{score}{a numeric vector}
@@ -32,6 +32,9 @@ sub = "", csub = 1.25, possub = "bottomleft")
   \item{sub}{a string of characters to be inserted as legend}
   \item{csub}{a character size for the legend, used with \code{par("cex")*csub}}
   \item{possub}{a string of characters indicating the sub-title position ("topleft", "topright", "bottomleft", "bottomright")}
+  \item{plotstyle}{\code{"graphics"} or \code{"ggplot"}. 
+  If \code{"graphics"}, the display is built with \code{\link{graphics}} functions. 
+  If \code{"ggplot"}, a graphic object output is created with \code{ggplot2} functions (the \code{ggplot2} package must be installed).}
 }
 \value{
 The matched call.

@@ -161,8 +161,8 @@
         oritab <- eval.parent(as.list(y$call)[[2]])
     }
     else oritab <- eval.parent(as.list(x$call)[[2]])
-    l.names <- rownames(oritab)
-    c.names <- colnames(oritab)
+    l.names <- rownames(oritab)[rowSums(oritab) > 0]
+    c.names <- colnames(oritab)[colSums(oritab) > 0]
     oritab <- as.matrix(oritab)
     f1 <- function(x, oritab, xax){
       a <- x$co[col(oritab), xax]

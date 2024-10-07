@@ -1,5 +1,5 @@
 pandoc: 3.1.11
-pkgdown: 2.1.0
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   articles/book: book.html
@@ -14,4 +14,4 @@ articles:
   articles/install: install.html
   articles/papers: papers.html
   articles/related: related.html
-last_built: 2024-09-06T13:51Z
+last_built: 2024-10-07T08:08Z

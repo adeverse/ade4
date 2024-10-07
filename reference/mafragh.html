@@ -168,7 +168,7 @@
 <span class="r-in"><span>  <span class="va">lw1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">link1</span>, <span class="fl">1</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="va">x</span><span class="op">[</span><span class="va">x</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">listw1</span> <span class="op">&lt;-</span> <span class="fu">spdep</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2listw.html" class="external-link">nb2listw</a></span><span class="op">(</span><span class="va">nb1</span>, <span class="va">lw1</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">coa1</span> <span class="op">&lt;-</span> <span class="fu"><a href="dudi.coa.html">dudi.coa</a></span><span class="op">(</span><span class="va">mafragh</span><span class="op">$</span><span class="va">flo</span>, scan <span class="op">=</span> <span class="cn">FALSE</span>, nf <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="va">ms1</span> <span class="op">&lt;-</span> <span class="fu">adespatial</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/adespatial/man/multispati.html" class="external-link">multispati</a></span><span class="op">(</span><span class="va">coa1</span>, <span class="va">listw1</span>, scan <span class="op">=</span> <span class="cn">FALSE</span>, nfp <span class="op">=</span> <span class="fl">2</span>, nfn <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="va">ms1</span> <span class="op">&lt;-</span> <span class="fu">adespatial</span><span class="fu">::</span><span class="fu"><a href="http://adeverse.github.io/adespatial/reference/multispati.html" class="external-link">multispati</a></span><span class="op">(</span><span class="va">coa1</span>, <span class="va">listw1</span>, scan <span class="op">=</span> <span class="cn">FALSE</span>, nfp <span class="op">=</span> <span class="fl">2</span>, nfn <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">ms1</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span>  <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="adegraphicsLoaded.html">adegraphicsLoaded</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
@@ -201,7 +201,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>

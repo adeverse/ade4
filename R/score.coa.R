@@ -161,25 +161,23 @@
         oritab <- eval.parent(as.list(y$call)[[2]])
     }
     else oritab <- eval.parent(as.list(x$call)[[2]])
-    l.names <- row.names(oritab)
-    c.names <- names(oritab)
+    l.names <- rownames(oritab)
+    c.names <- colnames(oritab)
     oritab <- as.matrix(oritab)
-    f1 <- function(x,oritab,xax){
+    f1 <- function(x, oritab, xax){
       a <- x$co[col(oritab), xax]
       a <- a + x$li[row(oritab), xax]
       a <- a/sqrt(2 * x$eig[xax] * (1 + sqrt(x$eig[xax])))
       a <- a[oritab > 0]
     }
-    res <- sapply(1:x$nf,f1,x=x,oritab=oritab)
+    res <- sapply(1:x$nf, f1, x = x, oritab = oritab)
     aco <- col(oritab)[oritab > 0]
-    aco <- factor(aco)
-    levels(aco) <- c.names
+    aco <- factor(aco, labels = c.names)
     ali <- row(oritab)[oritab > 0]
-    ali <- factor(ali)
-    levels(ali) <- l.names
+    ali <- factor(ali, labels = l.names)
     aw <- oritab[oritab > 0]/sum(oritab)
-    res <- cbind.data.frame(res,Row=ali,Col=aco,Weight=aw)
-    names(res)[1:x$nf] <- paste("Scor",1:x$nf,sep="")
-    rownames(res) <- paste(ali,aco,sep="")
+    res <- cbind.data.frame(res, Row = ali, Col = aco, Weight = aw)
+    names(res)[1:x$nf] <- paste("Scor", 1:x$nf, sep = "")
+    # rownames(res) <- paste(ali, aco, sep = "")
     return(res)
 }

@@ -18,7 +18,7 @@
   if (pos.lab>1 | pos.lab<0)
     stop("pos.lab should be between 0 and 1")
   
-
+  
   oldpar <- graphics::par(mar=rep(0.1, 4))
   on.exit(graphics::par(oldpar))
   res <- scatterutil.sco(score = score, lim = lim, grid = grid, cgrid = cgrid, include.origin = include.origin, origin = origin, sub = sub, csub = csub, horizontal = horizontal, reverse = reverse)
@@ -39,21 +39,20 @@
         pos.elbow <- res[3] + (pos.lab - res[3])/5
       }
       
-      for (i in 1:nval)
-        {
-          xh <- graphics::strwidth(paste(" ", label[order(score)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
-          tmp <- scatterutil.convrot90(xh,0)
-          yh <- tmp[2]
-          y2 <- res[1] + (res[2] - res[1])/(nval + 1) * i
-          graphics::segments(score[order(score)][i],pos.elbow ,y2, pos.lab)
-          if(reverse) {
-            graphics::segments(score[order(score)][i], 1 - res[3], score[order(score)][i], pos.elbow)
-            scatterutil.eti(y2, pos.lab - yh/2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = FALSE)
-          } else {
-            graphics::segments(score[order(score)][i], res[3], score[order(score)][i], pos.elbow)
-            scatterutil.eti(y2, pos.lab + yh/2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = FALSE)
-          }
+      for (i in 1:nval) {
+        xh <- graphics::strwidth(paste(" ", label[order(score)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
+        tmp <- scatterutil.convrot90(xh,0)
+        yh <- tmp[2]
+        y2 <- res[1] + (res[2] - res[1])/(nval + 1) * i
+        graphics::segments(score[order(score)][i],pos.elbow ,y2, pos.lab)
+        if(reverse) {
+          graphics::segments(score[order(score)][i], 1 - res[3], score[order(score)][i], pos.elbow)
+          scatterutil.eti(y2, pos.lab - yh/2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = FALSE)
+        } else {
+          graphics::segments(score[order(score)][i], res[3], score[order(score)][i], pos.elbow)
+          scatterutil.eti(y2, pos.lab + yh/2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = FALSE)
         }
+      }
     }
   } else {
     if(reverse){
@@ -72,19 +71,18 @@
         pos.elbow <- res[3] + (pos.lab - res[3])/5
       }
       
-      for (i in 1:nval)
-        {
-          xh <- graphics::strwidth(paste(" ", label[order(score)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
-          y2 <- res[1] + (res[2] - res[1])/(nval + 1) * i
-          graphics::segments(pos.elbow,score[order(score)][i],pos.lab ,y2)
-          if(reverse) {
-            graphics::segments(1 - res[3],score[order(score)][i], pos.elbow, score[order(score)][i]) 
-            scatterutil.eti(pos.lab - xh/2, y2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = TRUE)
-          } else {
-            graphics::segments(res[3],score[order(score)][i], pos.elbow, score[order(score)][i]) 
-            scatterutil.eti(pos.lab + xh/2, y2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = TRUE)
-          }        
-        }
+      for (i in 1:nval) {
+        xh <- graphics::strwidth(paste(" ", label[order(score)][i], " ", sep = ""), cex = graphics::par("cex") * clabel)
+        y2 <- res[1] + (res[2] - res[1])/(nval + 1) * i
+        graphics::segments(pos.elbow,score[order(score)][i],pos.lab ,y2)
+        if(reverse) {
+          graphics::segments(1 - res[3],score[order(score)][i], pos.elbow, score[order(score)][i]) 
+          scatterutil.eti(pos.lab - xh/2, y2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = TRUE)
+        } else {
+          graphics::segments(res[3],score[order(score)][i], pos.elbow, score[order(score)][i]) 
+          scatterutil.eti(pos.lab + xh/2, y2, label[order(score)][i], clabel = clabel, boxes = boxes, horizontal = TRUE)
+        }        
+      }
     }
   }
   invisible(match.call()) 

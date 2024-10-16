@@ -32,3 +32,12 @@ s.label(dfxy, plotstyle = "ggplot") +
 
 # the data contained in the ggplot2 graph has the same columns names as the input data
 names(aa$data)
+
+
+###### doubs example 
+
+data(doubs)
+pca1 <- dudi.pca(doubs$env, scan = FALSE)
+
+s.label(pca1$li)
+s.label(pca1$li, plotstyle = "ggplot")

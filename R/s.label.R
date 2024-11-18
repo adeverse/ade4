@@ -57,10 +57,10 @@
       ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
       ggplot2::geom_label() +
       ggplot2::theme_bw() +
-      ggplot2::coord_fixed(ratio = 1) +
-      ggplot2::theme(axis.text = ggplot2::element_blank(),
-                     axis.title = ggplot2::element_blank(),
-                     axis.ticks = ggplot2::element_blank())
+      ggplot2::coord_fixed(ratio = 1) # +
+      # ggplot2::theme(axis.text = ggplot2::element_blank(),
+      #               axis.title = ggplot2::element_blank(),
+      #               axis.ticks = ggplot2::element_blank())
     
     return(ggslabel)
   }

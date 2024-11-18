@@ -103,6 +103,29 @@
     stop("ggplot2 needed for this function to work with plotstyle = 'ggplot'. Please install it", call. = FALSE)
     
   } else {
-    return(NULL)
+    ggscore <- score[order(score)]
+    gglabel <- label[order(score)]
+    ggdfxy <- data.frame(x0 = ggscore, x1 = seq(min(ggscore), max(ggscore), length.out = length(ggscore)),
+                         y0 = 0, y1 = 1, lab = gglabel)
+    
+    ggscolabel <-
+      ggplot2::ggplot(data = ggdfxy, ggplot2::aes(x0, y0, xend = x1, yend = y1, label = .data$lab)) +
+      ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
+      ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
+      ggplot2::geom_segment() +
+      ggplot2::geom_point(ggplot2::aes(x = x0, y = y0)) +
+      {if (horizontal) ggplot2::geom_label(ggplot2::aes(x = x1, y = y1, label = .data$lab), angle = 90) else ggplot2::geom_label(ggplot2::aes(x = x1, y = y1, label = .data$lab))} +
+      {if (!horizontal) ggplot2::coord_flip()} + 
+      {if (reverse && horizontal) ggplot2::scale_x_reverse()} +
+      {if (reverse && !horizontal) ggplot2::scale_y_reverse()} +
+      ggplot2::theme_bw() +
+      ggplot2::ylim(0, 1.5) +
+      ggplot2::theme(aspect.ratio = 1,
+                     axis.text = ggplot2::element_blank(),
+                     axis.title = ggplot2::element_blank(),
+                     axis.ticks = ggplot2::element_blank())
+    
+    return(ggscolabel)
+    
   }
 }

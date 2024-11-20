@@ -1,4 +1,4 @@
-"s.corcircle" <- function(dfxy, xax = 1, yax = 2, label = row.names(df), clabel = 1,
+"s.corcircle" <- function(dfxy, xax = 1, yax = 2, label = row.names(dfxy), clabel = 1,
                           grid = TRUE, sub = "", csub = 1, possub = "bottomleft", cgrid = 0,
                           fullcircle = TRUE, box = FALSE, add.plot = FALSE, plotstyle = "graphics") {
   
@@ -114,7 +114,8 @@
       ggforce::geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
       ggplot2::geom_segment(aes(x = 0, y = 0, xend = .data[[colnames(ggdfxy)[1]]], yend = .data[[colnames(ggdfxy)[2]]]),
                    arrow = ggplot2::arrow(length = ggplot2::unit(0.5, "cm"))) +
-      ggrepel::geom_label_repel(position = ggpp::position_nudge_center(x = 0.01, y = 0.01, center_x = 0, center_y = 0)) +
+      ggrepel::geom_label_repel(position = ggpp::position_nudge_center(x = 0.01, y = 0.01, center_x = 0, center_y = 0),
+                               max.overlaps = 12) +
       ggplot2::theme_bw() +
       ggplot2::theme(aspect.ratio=1,
                      axis.text = ggplot2::element_blank(),

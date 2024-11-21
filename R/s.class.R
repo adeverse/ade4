@@ -76,10 +76,7 @@
                                 yend = .data$meany)) +
       ggplot2::geom_label(data = dfcentroid, mapping = aes(x = .data$meanx, y = .data$meany, label = .data$label), inherit.aes = FALSE) +
       ggplot2::theme_bw() +
-      ggplot2::theme(aspect.ratio = 1,
-                     axis.text = ggplot2::element_blank(), 
-                     axis.title = ggplot2::element_blank(),
-                     axis.ticks = ggplot2::element_blank())
+      ggplot2::coord_fixed(ratio = 1))
     
     return(ggsclass)
   }

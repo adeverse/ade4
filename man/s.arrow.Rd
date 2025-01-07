@@ -1,15 +1,13 @@
 \name{s.arrow}
 \alias{s.arrow}
 \title{Plot of the factorial maps for the projection of a vector basis}
-\description{
-performs the scatter diagrams of the projection of a vector basis. 
-}
+\description{Performs the scatter diagrams of the projection of a vector basis.}
 \usage{
 s.arrow(dfxy, xax = 1, yax = 2, label = row.names(dfxy), 
     clabel = 1, pch = 20, cpoint = 0, boxes = TRUE, edge = TRUE, origin = c(0,0), 
     xlim = NULL, ylim = NULL, grid = TRUE, addaxes = TRUE, cgrid = 1, 
     sub = "", csub = 1.25, possub = "bottomleft", pixmap = NULL, 
-    contour = NULL, area = NULL, add.plot = FALSE)
+    contour = NULL, area = NULL, add.plot = FALSE, plotstyle = "graphics")
 }
 \arguments{
   \item{dfxy}{a data frame containing the two columns for the axes}
@@ -34,13 +32,14 @@ s.arrow(dfxy, xax = 1, yax = 2, label = row.names(dfxy),
   \item{contour}{a data frame with 4 columns to plot the contour of the map : each row gives a segment (x1,y1,x2,y2)}
   \item{area}{a data frame of class 'area' to plot a set of surface units in contour}
   \item{add.plot}{if TRUE uses the current graphics window}
+  \item{plotstyle}{\code{"graphics"} or \code{"ggplot"}. 
+    If \code{"graphics"}, the display is built with \code{\link{graphics}} functions. 
+    If \code{"ggplot"}, a graphic object output is created with \code{ggplot2} functions (the \code{ggplot2} package must be installed).}
 }
-\value{
-The matched call.
-}
-\author{Daniel Chessel }
+\value{The matched call}
+\author{Daniel Chessel}
 \examples{
-s.arrow(cbind.data.frame(runif(55,-2,3), runif(55,-3,2)))
+  s.arrow(cbind.data.frame(runif(55,-2,3), runif(55,-3,2)))
 }
 \keyword{multivariate}
 \keyword{hplot}

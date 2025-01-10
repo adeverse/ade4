@@ -8,10 +8,12 @@ yax <- 2
 clab.row <- 0.75
 clab.col <- 1
 
+# graphics version
+dd1 <- dudi.pca(deug$tab, scannf = FALSE, nf = 4)
+scatter(dd1, posieig = "none")
 
-scatter(dd1 <- dudi.pca(deug$tab, scannf = FALSE, nf = 4), posieig = "none")
 
-
+# ggplot version
 coolig <- x$li[, c(xax, yax)]
 coocol <- x$c1[, c(xax, yax)]
 s.label(coolig, clabel = clab.row)
@@ -26,17 +28,5 @@ k <- c(k1, k2, k3, k4)
 coocol <- 0.9 * coocol/max(k)
 (ggarrow <- s.arrow(coocol, clabel = clab.col, possub = "bottomright", plotstyle = "ggplot"))
 
-gglab + ggarrow
-
-
-
-
-
-
-########################################################################### 
-###########################################################################
-
-data(rhone)
-dd1 <- dudi.pca(rhone$tab, nf = 4, scann = FALSE)
-scatter(dd1, row.psub.text = "Principal component analysis")
-scatter(dd1, sub = "Principal component analysis")
+# superpose labels and arrows
+gglab + ggarrow$layers[[3]] + ggarrow$layers[[4]] 

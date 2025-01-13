@@ -1,6 +1,5 @@
 library(ade4)
 library(ggplot2)
-library(tune)
 
 monx <- runif(50, -2, 2)
 mony <- runif(50, -2, 2)

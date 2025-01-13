@@ -109,12 +109,12 @@
                          y0 = 0, y1 = 1, lab = gglabel)
     
     ggscolabel <-
-      ggplot2::ggplot(data = ggdfxy, ggplot2::aes(x0, y0, xend = x1, yend = y1, label = .data$lab)) +
+      ggplot2::ggplot(data = ggdfxy, ggplot2::aes(.data$x0, .data$y0, xend = .data$x1, yend = .data$y1, label = .data$lab)) +
       ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
       ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
       ggplot2::geom_segment() +
-      ggplot2::geom_point(ggplot2::aes(x = x0, y = y0)) +
-      {if (horizontal) ggplot2::geom_label(ggplot2::aes(x = x1, y = y1, label = .data$lab), angle = 90) else ggplot2::geom_label(ggplot2::aes(x = x1, y = y1, label = .data$lab))} +
+      ggplot2::geom_point(ggplot2::aes(x = .data$x0, y = .data$y0)) +
+      {if (horizontal) ggplot2::geom_label(ggplot2::aes(x = .data$x1, y = .data$y1, label = .data$lab), angle = 90) else ggplot2::geom_label(ggplot2::aes(x = .data$x1, y = .data$y1, label = .data$lab))} +
       {if (!horizontal) ggplot2::coord_flip()} + 
       {if (reverse && horizontal) ggplot2::scale_x_reverse()} +
       {if (reverse && !horizontal) ggplot2::scale_y_reverse()} +

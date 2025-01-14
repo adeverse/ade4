@@ -6,7 +6,7 @@ performs the scatter diagrams of objects of class \code{dudi}.
 }
 \usage{
 \method{scatter}{dudi}(x, xax = 1, yax = 2, clab.row = 0.75, clab.col = 1, 
-    permute = FALSE, posieig = "top", sub = NULL, \dots)
+    permute = FALSE, posieig = "top", sub = NULL, plotstyle = "graphics", \dots)
 }
 \arguments{
   \item{x}{an object of class \code{dudi}}
@@ -17,6 +17,9 @@ performs the scatter diagrams of objects of class \code{dudi}.
   \item{permute}{if FALSE, the rows are plotted by points and the columns by arrows. If TRUE it is the opposite.}
   \item{posieig}{if "top" the eigenvalues bar plot is upside, if "bottom" it is downside, if "none" no plot}
   \item{sub}{a string of characters to be inserted as legend}
+  \item{plotstyle}{\code{"graphics"} or \code{"ggplot"}. 
+  If \code{"graphics"}, the display is built with \code{\link{graphics}} functions. 
+  If \code{"ggplot"}, a graphic object output is created with \code{ggplot2} functions (the \code{ggplot2} package must be installed).}
   \item{\dots}{further arguments passed to or from other methods}
 }
 \details{

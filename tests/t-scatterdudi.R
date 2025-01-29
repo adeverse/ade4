@@ -15,3 +15,14 @@ scatter(dd1, posieig = "none")
 gg1 + ggplot2::theme_grey()
 gg1 + ggplot2::geom_label(colour = "red")
 gg1 + ggplot2::geom_label(label.size = NA)
+
+
+# =========================
+data(rhone)
+dd1 <- dudi.pca(rhone$tab, nf = 4, scann = FALSE)
+
+# graphics
+scatter(dd1, row.psub.text = "Principal component analysis")
+
+# ggplot2
+scatter(dd1, row.psub.text = "Principal component analysis", plotstyle = "ggplot")

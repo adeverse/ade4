@@ -34,6 +34,7 @@
   } else {
     gglab <- s.label(coolig, clabel = clab.row, plotstyle = "ggplot")
     ggarrow <- s.arrow(coocol, clabel = clab.col, possub = "bottomright", plotstyle = "ggplot")
-    gglab + ggarrow$layers[[3]] + ggarrow$layers[[4]] 
+    ggscatterdudi <- gglab + ggarrow$layers[[3]] + ggarrow$layers[[4]]
+    return(ggscatterdudi)
   }
 }

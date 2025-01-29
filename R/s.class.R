@@ -8,6 +8,10 @@
   # check the 'plotstyle' argument
   plotstyle <- match.arg(plotstyle[1], choices = c("graphics", "ggplot"), several.ok = FALSE)
   
+  dfdistri <- fac2disj(fac) * wt
+  w1 <- unlist(lapply(dfdistri, sum))
+  dfdistri <- t(t(dfdistri) / w1)
+  
   if(plotstyle == "graphics") {
     
     opar <- graphics::par(mar = graphics::par("mar"))
@@ -20,10 +24,8 @@
       stop("NA non implemented")
     if (!is.factor(fac))
       stop("factor expected for fac")
-    dfdistri <- fac2disj(fac) * wt
     coul <- col
-    w1 <- unlist(lapply(dfdistri, sum))
-    dfdistri <- t(t(dfdistri) / w1)
+    
     coox <- as.matrix(t(dfdistri)) %*% dfxy[, xax]
     cooy <- as.matrix(t(dfdistri)) %*% dfxy[, yax]
     if (nrow(dfxy) != nrow(dfdistri))
@@ -60,7 +62,20 @@
     
     dfcentroid <- data.frame(meanx = tapply(ggdfxy[[colnames(dfxy)[xax]]], ggdfxy$fac, mean),
                              meany = tapply(ggdfxy[[colnames(dfxy)[yax]]], ggdfxy$fac, mean), 
-                             label = levels(ggdfxy$fac))
+                             label = levels(ggdfxy$fac),
+                             a = NA, b = NA, angle = NA)
+    for (i in seq_len(nlevels(ggdfxy$fac))) {
+      x <- dfxy[, xax]
+      y <- dfxy[, yax]
+      z <- dfdistri[, i]
+      z <- z/sum(z)
+      m1 <- sum(x * z)
+      m2 <- sum(y * z)
+      v1 <- sum((x - m1) * (x - m1) * z)
+      v2 <- sum((y - m2) * (y - m2) * z)
+      cxy <- sum((x - m1) * (y - m2) * z)
+      dfcentroid[i, c("a", "b", "angle")] <- c(v1, v2, cxy)
+    }
     ggdfxy <- merge(ggdfxy, dfcentroid, by.x = "fac", by.y = "label", all.x = TRUE)
     ggdfxy <- ggdfxy[, c(colnames(dfxy)[c(xax, yax)], "meanx", "meany", "fac")]
     
@@ -75,6 +90,7 @@
                                 xend = .data$meanx, 
                                 yend = .data$meany)) +
       ggplot2::geom_label(data = dfcentroid, mapping = aes(x = .data$meanx, y = .data$meany, label = .data$label), inherit.aes = FALSE) +
+      ggforce::geom_ellipse(data = dfcentroid, mapping = aes(x0 = .data$meanx, y0 = .data$meany, a = .data$a, b = .data$b, angle = .data$angle), inherit.aes = FALSE) +
       ggplot2::theme_bw() +
       ggplot2::coord_fixed(ratio = 1)
     

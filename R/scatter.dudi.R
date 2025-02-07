@@ -16,6 +16,7 @@
   }
   
   born <- graphics::par("usr")
+  born <- c(min(coolig[,1]), max(coolig[1]), min(coolig[,2]), max(coolig[2]))
   k1 <- min(coocol[, 1]) / born[1]
   k2 <- max(coocol[, 1]) / born[2]
   k3 <- min(coocol[, 2]) / born[3]

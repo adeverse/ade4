@@ -21,7 +21,7 @@
 }
 \source{
 Site of the ministry of the Interior, of the Internal Security and of the local liberties\cr
-\url{https://www.interieur.gouv.fr/Elections/Les-resultats/Presidentielles/elecresult__presidentielle_2002/(path)/presidentielle_2002/index.html}
+\url{https://www.archives-resultats-elections.interieur.gouv.fr/resultats/presidentielle_2002/index.php}
 }
 \seealso{
 This dataset is compatible with \code{elec88} and \code{cnc2003}}

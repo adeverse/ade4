@@ -1,4 +1,6 @@
-# Latest Ade4 news
+# Latest ade4 news
+
+# ade4 v1.7-23 (Feb 14, 2024)
 
 # ade4 v1.7-22 (Feb 6, 2023)
 

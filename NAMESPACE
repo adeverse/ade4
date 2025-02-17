@@ -128,6 +128,7 @@ S3method("scatter","dudi")
 S3method("scatter","fca")
 S3method("scatter","nipals")
 S3method("scatter","pco")
+S3method("scatter_gg","dudi")
 S3method("score","acm")
 S3method("score","coa")
 S3method("score","mix")
@@ -206,7 +207,7 @@ export("bicenter.wt", "covfacwt", "covwt", "meanfacwt", "scalefacwt", "scalewt",
 export("cailliez", "dist.binary", "dist.ktab", "dist.prop", "dist.quant", "is.euclid", "lingoes", "quasieuclid", "supdist")
 
 ## ******* generic *******
-export("bca", "col.names", "col.names<-", "inertia", "kplot", "loocv", "reconst", "randboot", "randtest", "rtest", "scatter", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )
+export("bca", "col.names", "col.names<-", "inertia", "kplot", "loocv", "reconst", "randboot", "randtest", "rtest", "scatter", "scatter_gg", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )
 
 ## ******* graphics *******
 export("s.arrow", "s.class", "s.chull", "s.corcircle", "s.distri", "s.hist", "s.image", "s.kde2d", "s.label", "s.logo", "s.match", "s.match.class", "s.multinom", "s.traject", "s.value")

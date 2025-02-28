@@ -19,8 +19,8 @@
     k4 <- max(coocol[, 2]) / born[4]
     k <- c(k1, k2, k3, k4)
     coocol <- 0.9 * coocol / max(k)
-    gglab <- s.label(coolig, clabel = clab.row, plotstyle = "ggplot")
-    ggarrow <- s.arrow(coocol, clabel = clab.col, possub = "bottomright", plotstyle = "ggplot")
+    gglab <- s_gg.label(coolig, clabel = clab.row)
+    ggarrow <- s_gg.arrow(coocol, clabel = clab.col, possub = "bottomright")
     ggscatterdudi <- gglab + ggarrow$layers[[3]] + ggarrow$layers[[4]]
     return(ggscatterdudi)
   }

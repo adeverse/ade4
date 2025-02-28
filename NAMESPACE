@@ -210,7 +210,7 @@ export("cailliez", "dist.binary", "dist.ktab", "dist.prop", "dist.quant", "is.eu
 export("bca", "col.names", "col.names<-", "inertia", "kplot", "loocv", "reconst", "randboot", "randtest", "rtest", "scatter", "scatter_gg", "score", "supcol", "suprow", "tab.names", "tab.names<-", "testdim", "wca" )
 
 ## ******* graphics *******
-export("s.arrow", "s.class", "s.chull", "s.corcircle", "s.distri", "s.hist", "s.image", "s.kde2d", "s.label", "s.logo", "s.match", "s.match.class", "s.multinom", "s.traject", "s.value")
+export("s.arrow", "s_gg.arrow", "s.class", "s_gg.class", "s.chull", "s.corcircle", "s_gg.corcircle", "s.distri", "s.hist", "s.image", "s.kde2d", "s.label", "s_gg.label", "s.logo", "s.match", "s.match.class", "s.multinom", "s.traject", "s.value")
 ## export("scatter.acm", "scatter.coa", "scatter.dudi", "scatter.fca", "scatter.nipals", "scatter.pco")
 export("sco.boxplot", "sco.class", "sco.distri", "sco.gauss", "sco.label", "sco.match", "sco.quant")
 ## export("score.acm", "score.coa", "score.mix", "score.pca")

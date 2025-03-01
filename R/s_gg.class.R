@@ -30,7 +30,7 @@
       v1 <- sum((x - m1) * (x - m1) * z)
       v2 <- sum((y - m2) * (y - m2) * z)
       cxy <- sum((x - m1) * (y - m2) * z)
-      dfcentroid[i, c("a", "b", "angle")] <- c(v1, v2, cxy)
+      dfcentroid[i, c("a", "b", "angle")] <- c(v1, v2, -cxy)
     }
     ggdfxy <- merge(ggdfxy, dfcentroid, by.x = "fac", by.y = "label", all.x = TRUE)
     ggdfxy <- ggdfxy[, c(colnames(dfxy)[c(xax, yax)], "meanx", "meany", "fac")]

@@ -1,5 +1,5 @@
 "s_gg.chull" <- function (dfxy, fac, xax = 1, yax = 2, optchull = c(0.25, 0.5,
-    0.75, 1), label = levels(fac), clabel = 1, cpoint = 0, col = rep(1, length(levels(fac))),
+    0.75, 1), label = levels(fac), clabel = 4, cpoint = 0, col = rep(1, length(levels(fac))),
     xlim = NULL, ylim = NULL, grid = TRUE, addaxes = TRUE, origin = c(0, 0), 
     include.origin = TRUE, sub = "", csub = 1, possub = "bottomleft", 
     cgrid = 1, pixmap = NULL, contour = NULL, area = NULL, add.plot = FALSE) 
@@ -9,6 +9,12 @@
     
   } else {
   
+    if (clabel > 0) {
+        coox <- tapply(dfxy[, xax], fac, mean)
+        cooy <- tapply(dfxy[, yax], fac, mean)
+        ggcooxy <- data.frame(x = coox, y = cooy, lab = levels(fac))
+    }
+    
   	ggdfxy <- data.frame(x = dfxy[, xax], y = dfxy[, yax], lab = fac)
     colnames(ggdfxy)[1:2] <- colnames(dfxy)[c(xax, yax)]
 
@@ -22,8 +28,10 @@
 			ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
 			ggplot2::aes(fill = lab) +
 			ggplot2::geom_polygon(data = hulls, alpha = 0.5) +
-			ggplot2::geom_point(shape = 21) +
-			ggplot2::coord_fixed(ratio = 1)
+			ggplot2::geom_point(shape = 21, size = cpoint) +
+			ggplot2::coord_fixed(ratio = 1) + 
+			ggplot2::geom_label(data = ggcooxy, ggplot2::aes(x = .data$x, 
+            y = .data$y, label = .data$lab), size = clabel)
   }
   return(ggschull)
 }

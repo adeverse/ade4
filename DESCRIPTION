@@ -31,7 +31,8 @@ Imports:
     ggplot2,
     ggforce,
     ggrepel,
-    ggpp
+    ggpp,
+    dplyr
 LinkingTo: 
     Rcpp, 
     RcppArmadillo

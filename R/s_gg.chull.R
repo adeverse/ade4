@@ -16,22 +16,26 @@
     }
     
   	ggdfxy <- data.frame(x = dfxy[, xax], y = dfxy[, yax], lab = fac)
-    colnames(ggdfxy)[1:2] <- colnames(dfxy)[c(xax, yax)]
 
 	hulls <- ggdfxy %>%
-	  group_by(lab) %>%
-	  slice(chull(Axis1, Axis2))
+	  dplyr::group_by(lab) %>%
+	  dplyr::slice(chull(x, y))
 	
+	colnames(ggdfxy)[1:2] <- colnames(dfxy)[c(xax, yax)]
+	colnames(hulls)[1:2] <- colnames(dfxy)[c(xax, yax)]
+
 	ggschull <- ggplot2::ggplot(data = ggdfxy, ggplot2::aes(x = .data[[colnames(ggdfxy)[1]]],
-			y = .data[[colnames(ggdfxy)[2]]], label = .data$lab)) +
-			ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
-			ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
-			ggplot2::aes(fill = lab) +
-			ggplot2::geom_polygon(data = hulls, alpha = 0.5) +
-			ggplot2::geom_point(shape = 21, size = cpoint) +
-			ggplot2::coord_fixed(ratio = 1) + 
-			ggplot2::geom_label(data = ggcooxy, ggplot2::aes(x = .data$x, 
-            y = .data$y, label = .data$lab), size = clabel)
+			y = .data[[colnames(ggdfxy)[2]]], fill = lab))
+			ggschull <- ggschull + ggplot2::coord_fixed(ratio = 1)
+			if (addaxes) {
+				ggschull <- ggschull + ggplot2::geom_hline(ggplot2::aes(yintercept = 0))
+				ggschull <- ggschull + ggplot2::geom_vline(ggplot2::aes(xintercept = 0))
+			}
+			ggschull <- ggschull + ggplot2::geom_polygon(data = hulls, alpha = 0.5)
+			if (cpoint > 0) ggschull <- ggschull + ggplot2::geom_point(shape = 21, size = cpoint, show.legend = FALSE)
+			if (clabel > 0) ggschull <- ggschull + ggplot2::geom_label(data = ggcooxy, ggplot2::aes(x = .data$x, 
+            y = .data$y, label = .data$lab), size = clabel, show.legend = FALSE)
+            if (length(sub) > 0) ggschull <- ggschull + ggplot2::labs(caption = sub)
   }
   return(ggschull)
 }

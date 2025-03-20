@@ -1,5 +1,5 @@
 Package: ade4
-Version: 1.7-23
+Version: 1.7-24
 Title: Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences
 Authors@R: c(
    person("Stéphane", "Dray", email = "stephane.dray@univ-lyon1.fr", role = "aut", comment = c(ORCID = "0000-0003-0153-1105")),

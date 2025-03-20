@@ -51,7 +51,7 @@ Two types of algorithm are provided to adjust R-squared. The "simulated" procedu
 estimates the unadjusted R-squared expected under the null hypothesis H0 and uses it to adjust the
 observed R-squared as follows: R2.adj = 1 - (1 - R2) / (1 - E(R2|H0)) with R2.adj the
 adjusted R-squared and R2 the unadjusted R-squared.
-The "parametric" procedure performs the Ezequiel's adjustement on the unadjusted R-squared as: 
+The "parametric" procedure performs the Ezekiel's adjustement on the unadjusted R-squared as: 
 R2.adj = 1 - (1 - R2) / (1 - p / (n - 1)) where n is the number of sites, and p the number of
 predictors.
 }
@@ -79,6 +79,8 @@ of ecological variation. Ecology 73:1045.
 
 Peres-Neto, P. R., P. Legendre, S. Dray, and D. Borcard. 2006. Variation partitioning of
 species data matrices: estimation and comparison of fractions. Ecology 87:2614-2625.
+
+Ezekiel, M. 1930. Methods of correlation analysis. John Wiley and Sons, New York.
 }
 \seealso{
 \code{\link{pcaiv}}

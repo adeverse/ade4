@@ -2,8 +2,11 @@
                           grid = TRUE, sub = "", csub = 1, possub = "bottomleft", cgrid = 0,
                           fullcircle = TRUE, box = FALSE, add.plot = FALSE) {
   
-  if (!requireNamespace("ggplot2", quietly = TRUE)) {
-    stop("ggplot2 needed for this function. Please install it", call. = FALSE)
+  
+  if (!requireNamespace("ggplot2", quietly = TRUE) ||
+      !requireNamespace("ggrepel", quietly = TRUE)) {
+    stop("Packages 'ggplot2' and 'ggrepel' are required. Please install them.", call. = FALSE)
+    
     
   } else {
     ggdfxy <- data.frame(x = dfxy[, xax], y = dfxy[, yax], lab = label)

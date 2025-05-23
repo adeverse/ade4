@@ -4,8 +4,9 @@
                       csub = 1.25, possub = "bottomleft", pixmap = NULL, contour = NULL,
                       area = NULL, add.plot = FALSE) {
   
-  if (!requireNamespace("ggplot2", quietly = TRUE)) {
-    stop("ggplot2 needed for this function. Please install it", call. = FALSE)
+  if (!requireNamespace("ggplot2", quietly = TRUE) ||
+      !requireNamespace("ggrepel", quietly = TRUE)) {
+    stop("Packages 'ggplot2' and 'ggrepel' are required. Please install them.", call. = FALSE)
     
   } else {
     ggdfxy <- data.frame(x = dfxy[, xax], y = dfxy[, yax], lab = label)

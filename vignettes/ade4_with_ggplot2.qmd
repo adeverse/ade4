@@ -1,0 +1,55 @@
+---
+title: "Use ade4 with ggplot2"
+format: 
+  html:
+    number-sections: true
+---
+
+
+```{r}
+library(ade4)
+data(dunedata)
+acp1 <- dudi.pca(df = dunedata$veg, scannf = FALSE)
+```
+
+## `s.label` with `ggplot2`
+
+```{r}
+(gg1 <- s_gg.label(acp1$li))
+
+# Details about layers
+names(gg1$layers)
+```
+
+
+### Remove the horizontal axis
+```{r}
+gg1$layers$geom_hline <- NULL
+gg1
+names(gg1$layers)
+```
+
+### Update axis colors
+```{r}
+gg2 <- s_gg.label(acp1$li)
+gg2$layers$geom_hline$aes_params$colour <- 2 # Horizontal axis in red
+gg2$layers$geom_vline$aes_params$colour <- 3 # Vertical axis in green
+gg2$layers$geom_vline$aes_params$size <- 2 # Vertical axis wider
+gg2
+```
+
+
+### Update labels colors
+```{r}
+gg3 <- s_gg.label(acp1$li)
+
+# All points in black except numbers 2, 5, 6, 7 and 10 in red
+col1 <- rep(1, 20)
+col1[c(2, 5, 6, 7, 10)] <- rep(2, 5)
+
+gg3$layers$geom_label$aes_params$colour <- col1
+gg3$layers$geom_label$aes_params$fill <- "lightblue"   # Background color
+
+gg3
+```
+

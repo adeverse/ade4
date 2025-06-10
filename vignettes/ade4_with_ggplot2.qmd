@@ -53,3 +53,49 @@ gg3$layers$geom_label$aes_params$fill <- "lightblue"   # Background color
 gg3
 ```
 
+
+### Manage titles (main, subtitle, axis titles)
+```{r}
+library(ggplot2)
+data(banque)
+dudi1 <- dudi.acm(banque, scannf = FALSE)
+ggbanque <- s_gg.label(dudi1$li)
+# Add title and subtitle
+ggbanque + ggplot2::labs(title = "Factorial map from ACM", subtitle = "Here is a subtitle")
+# Remove x-axis title
+ggbanque + ggplot2::labs(x = NULL)
+# Update y-axis title
+ggbanque + ggplot2::labs(y = "My new title for y-axis")
+```
+
+
+## `s.arrow` with `ggplot2`
+
+```{r}
+(ga1 <- s_gg.arrow(cbind.data.frame(runif(55,-2,3), runif(55,-3,2))))
+names(ga1$layers)
+```
+
+```{r}
+ga1$layers$geom_hline <- NULL
+ga1$layers$geom_vline <- NULL
+ga1
+```
+
+
+## `s.class` with `ggplot2`
+```{r}
+xy <- cbind.data.frame(x = runif(200, -1, 1), y = runif(200, -1, 1))
+posi <- factor(xy$x > 0) : factor(xy$y > 0)
+coul <- c("black", "red", "green", "blue")
+
+s.class(xy, posi)
+gs1 <- s_gg.class(xy, posi) # by default, each level is colored
+gs1
+```
+
+### Update colors
+```{r}
+cols <- c("FALSE:TRUE" = "red", "TRUE:TRUE" = "blue", "FALSE:FALSE" = "black", "TRUE:FALSE" = "green")
+gs1 + ggplot2::scale_colour_manual(values = cols)
+```

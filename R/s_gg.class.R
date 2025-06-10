@@ -47,8 +47,8 @@
                                 xend = .data$meanx, 
                                 yend = .data$meany, 
                                 col = .data$fac)) +
-      ggplot2::geom_label(data = dfcentroid, mapping = aes(x = .data$meanx, y = .data$meany, label = .data$label, col = .data$label), inherit.aes = FALSE) +
       ggforce::geom_ellipse(data = dfcentroid, mapping = aes(x0 = .data$meanx, y0 = .data$meany, a = .data$a, b = .data$b, angle = .data$angle, col = .data$label), inherit.aes = FALSE) +
+      ggplot2::geom_label(data = dfcentroid, mapping = aes(x = .data$meanx, y = .data$meany, label = .data$label, col = .data$label), inherit.aes = FALSE) +
       ggplot2::theme_bw() +
       ggplot2::coord_fixed(ratio = 1) +
       ggplot2::guides(color = "none")

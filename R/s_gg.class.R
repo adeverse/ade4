@@ -37,16 +37,18 @@
     
     ggsclass <- 
       ggplot2::ggplot(data = ggdfxy, ggplot2::aes(x = .data[[colnames(ggdfxy)[1]]],
-                                                  y = .data[[colnames(ggdfxy)[2]]])) +
+                                                  y = .data[[colnames(ggdfxy)[2]]], 
+                                                  col = .data$fac)) +
       ggplot2::geom_hline(ggplot2::aes(yintercept = 0)) +
       ggplot2::geom_vline(ggplot2::aes(xintercept = 0)) +
       ggplot2::geom_point() +
       ggplot2::geom_segment(aes(x = .data[[colnames(ggdfxy)[1]]], 
                                 y = .data[[colnames(ggdfxy)[2]]], 
                                 xend = .data$meanx, 
-                                yend = .data$meany)) +
-      ggplot2::geom_label(data = dfcentroid, mapping = aes(x = .data$meanx, y = .data$meany, label = .data$label), inherit.aes = FALSE) +
-      ggforce::geom_ellipse(data = dfcentroid, mapping = aes(x0 = .data$meanx, y0 = .data$meany, a = .data$a, b = .data$b, angle = .data$angle), inherit.aes = FALSE) +
+                                yend = .data$meany, 
+                                col = .data$fac)) +
+      ggplot2::geom_label(data = dfcentroid, mapping = aes(x = .data$meanx, y = .data$meany, label = .data$label, col = .data$label), inherit.aes = FALSE) +
+      ggforce::geom_ellipse(data = dfcentroid, mapping = aes(x0 = .data$meanx, y0 = .data$meany, a = .data$a, b = .data$b, angle = .data$angle, col = .data$label), inherit.aes = FALSE) +
       ggplot2::theme_bw() +
       ggplot2::coord_fixed(ratio = 1)
     

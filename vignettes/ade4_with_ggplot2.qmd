@@ -7,6 +7,8 @@ format:
 
 
 ```{r}
+# Remember to install the ggplot2 branch (if needed...)
+pak::pak("adeverse/ade4@ggplot2")
 library(ade4)
 data(dunedata)
 acp1 <- dudi.pca(df = dunedata$veg, scannf = FALSE)

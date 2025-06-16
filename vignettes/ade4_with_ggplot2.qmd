@@ -101,3 +101,15 @@ gs1
 cols <- c("FALSE:TRUE" = "red", "TRUE:TRUE" = "blue", "FALSE:FALSE" = "black", "TRUE:FALSE" = "green")
 gs1 + ggplot2::scale_colour_manual(values = cols)
 ```
+
+## `s.chull` with `ggplot2`
+```{r}
+xy <- cbind.data.frame(x = runif(200, -1, 1), y = runif(200, -1, 1))
+posi <- factor(xy$x > 0) : factor(xy$y > 0)
+coul <- c("black", "red", "green", "blue")
+
+s.chull(xy, posi, cpoint=1, col=coul)
+gs1 <- s_gg.chull(xy, posi, cpoint=1) # by default, each level is colored
+gs1
+```
+

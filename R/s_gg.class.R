@@ -21,6 +21,7 @@
                              label = levels(ggdfxy$fac),
                              a = NA, b = NA, angle = NA)
     for (i in seq_len(nlevels(ggdfxy$fac))) {
+      ni <- table(fac)[i]
       x <- dfxy[, xax]
       y <- dfxy[, yax]
       z <- dfdistri[, i]
@@ -30,7 +31,10 @@
       v1 <- sum((x - m1) * (x - m1) * z)
       v2 <- sum((y - m2) * (y - m2) * z)
       cxy <- sum((x - m1) * (y - m2) * z)
-      dfcentroid[i, c("a", "b", "angle")] <- c(v1, v2, cxy)
+      v11 <- sqrt(v1)*ni/(ni-1)
+      v21 <- sqrt(v2)*ni/(ni-1)
+      cxy1 <- cxy/v11/v21
+      dfcentroid[i, c("a", "b", "angle")] <- c(v11, v21, cxy1)
     }
     ggdfxy <- merge(ggdfxy, dfcentroid, by.x = "fac", by.y = "label", all.x = TRUE)
     ggdfxy <- ggdfxy[, c(colnames(dfxy)[c(xax, yax)], "meanx", "meany", "fac")]

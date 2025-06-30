@@ -6,12 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Description of species-environment relationships • ade4</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
@@ -922,16 +921,16 @@ when only one categorical variable is used as explanatory:</p>
 <p>These outputs are also equivalent to the results obtained with the
 <code>rda</code> function of the <strong>vegan</strong> package:</p>
 <div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vegandevs/vegan" class="external-link">vegan</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vegandevs.github.io/vegan/" class="external-link">vegan</a></span><span class="op">)</span></span>
 <span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">envpca</span><span class="op">$</span><span class="va">tab</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/vegan/man/eigenvals.html" class="external-link">eigenvals</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/vegan/man/cca.html" class="external-link">rda</a></span><span class="op">(</span><span class="va">envpca</span><span class="op">$</span><span class="va">tab</span> <span class="op">~</span> <span class="va">meau</span><span class="op">$</span><span class="va">design</span><span class="op">$</span><span class="va">season</span><span class="op">)</span>, <span class="st">"constrained"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></span></code></pre></div>
+<span><span class="fu"><a href="https://vegandevs.github.io/vegan/reference/eigenvals.html" class="external-link">eigenvals</a></span><span class="op">(</span><span class="fu"><a href="https://vegandevs.github.io/vegan/reference/cca.html" class="external-link">rda</a></span><span class="op">(</span><span class="va">envpca</span><span class="op">$</span><span class="va">tab</span> <span class="op">~</span> <span class="va">meau</span><span class="op">$</span><span class="va">design</span><span class="op">$</span><span class="va">season</span><span class="op">)</span>, <span class="st">"constrained"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt;      RDA1      RDA2      RDA3 </span></span>
 <span><span class="co">#&gt; 1.6227340 1.0841458 0.6174937</span></span></code></pre>
 <div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">envpcaiv</span><span class="op">$</span><span class="va">eig</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span> <span class="op">*</span> <span class="va">n</span><span class="op">/</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; [1] 1.6227340 1.0841458 0.6174937</span></span></code></pre>
 <div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/vegan/man/eigenvals.html" class="external-link">eigenvals</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/vegan/man/cca.html" class="external-link">rda</a></span><span class="op">(</span><span class="va">envpca</span><span class="op">$</span><span class="va">tab</span> <span class="op">~</span> <span class="fu">Condition</span><span class="op">(</span><span class="va">meau</span><span class="op">$</span><span class="va">design</span><span class="op">$</span><span class="va">season</span><span class="op">)</span><span class="op">)</span>, </span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://vegandevs.github.io/vegan/reference/eigenvals.html" class="external-link">eigenvals</a></span><span class="op">(</span><span class="fu"><a href="https://vegandevs.github.io/vegan/reference/cca.html" class="external-link">rda</a></span><span class="op">(</span><span class="va">envpca</span><span class="op">$</span><span class="va">tab</span> <span class="op">~</span> <span class="fu">Condition</span><span class="op">(</span><span class="va">meau</span><span class="op">$</span><span class="va">design</span><span class="op">$</span><span class="va">season</span><span class="op">)</span><span class="op">)</span>, </span>
 <span>    <span class="st">"unconstrained"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt;       PC1       PC2       PC3       PC4       PC5 </span></span>
 <span><span class="co">#&gt; 4.8527410 0.9078930 0.5807134 0.4069956 0.2143978</span></span></code></pre>
@@ -952,7 +951,7 @@ when only one categorical variable is used as explanatory:</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer>

@@ -104,7 +104,7 @@ varipart <- function(Y, X, W = NULL, nrepet = 999, type = c("simulated", "parame
  
         res <- list(R2 = c(a = a, b = b, c = c, d = d), R2.adj = c(a = a.adj, b = b.adj, c = c.adj, d = d.adj))
         if (nrepet > 0) {       
-        test <- as.krandtest(obs = c(rda.ab$r2[1], rda.bc$r2[1], rda.abc$r2[1]), sim = cbind(rda.ab$r2, rda.bc$r2, rda.abc$r2)[-1,], names = c("ab", "bc", "abc"), call = match.call(), ...) 
+        test <- as.krandtest(obs = c(rda.ab$r2[1], rda.bc$r2[1], rda.abc$r2[1]), sim = cbind(rda.ab$r2, rda.bc$r2, rda.abc$r2)[-1,], names = c("ab(X)", "bc(W)", "abc(XW)"), call = match.call(), ...) 
         res[["test"]] <- test
         }
         

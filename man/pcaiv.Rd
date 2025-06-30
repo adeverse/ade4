@@ -6,6 +6,9 @@
 \title{Principal component analysis with respect to instrumental variables}
 \description{
 performs a principal component analysis with respect to instrumental variables. 
+It includes redundancy analysis (RDA, if \code{dudi} argument is created with 
+\code{dudi.pca}) and canonical correspondence analysis (CCA, if \code{dudi} 
+argument is created with \code{dudi.coa}) as special cases. 
 }
 \usage{
 pcaiv(dudi, df, scannf = TRUE, nf = 2)
@@ -33,9 +36,9 @@ returns an object of class \code{pcaiv}, sub-class of class \code{dudi}
   \item{rank}{an integer indicating the rank of the studied matrix}
   \item{nf}{an integer indicating the number of kept axes}
   \item{c1}{a data frame with the Pseudo Principal Axes (PPA)}
-  \item{li}{a data frame \code{dudi$ls} with the predicted values by X}
+  \item{li}{a data frame with the predicted values by X}
   \item{co}{a data frame with the inner products between the CPC and Y}
-  \item{l1}{data frame with the Constraint Principal Components (CPC)}
+  \item{l1}{data frame with the Constrained Principal Components (CPC)}
   \item{call}{the matched call}
   \item{X}{a data frame with the explanatory variables}
   \item{Y}{a data frame with the dependant variables}

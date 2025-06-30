@@ -140,8 +140,8 @@
     cat("\n")
     sumry <- array("", c(4, 4), list(rep("", 4), c("data.frame", 
         "nrow", "ncol", "content")))
-    sumry[1, ] <- c("$fa", nrow(x$fa), ncol(x$fa), "Loadings (CPC as linear combinations of X")
-    sumry[2, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "CPC Constraint Principal Components")
+    sumry[1, ] <- c("$fa", nrow(x$fa), ncol(x$fa), "Loadings (CPC as linear combinations of X)")
+    sumry[2, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "CPC Constrained Principal Components")
     sumry[3, ] <- c("$co", nrow(x$co), ncol(x$co), "inner product CPC - Y")
     sumry[4, ] <- c("$cor", nrow(x$cor), ncol(x$cor), "correlation CPC - X")
     

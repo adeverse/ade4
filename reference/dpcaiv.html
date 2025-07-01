@@ -241,27 +241,27 @@ Lisa Nicvert</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $lw    51     numeric row weigths (from dudi)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  $cw    40     numeric col weigths (from dudi)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame nrow ncol content                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $Y         51   40   Dependant variables                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $tab       51   40   modified array (projected variables)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $dfR       51   11   Explanatory variables for rows      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $dfQ       40   4    Explanatory variables for columns   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame nrow ncol content                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $Y         51   40   Dependant variables              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $tab       51   40   modified array (predicted table) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $dfR       51   11   Explanatory variables for rows   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $dfQ       40   4    Explanatory variables for columns</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame nrow ncol content                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $c1        40   2    PPA Pseudo Principal Axes             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $asR       2    2    Principal axis of dudi$tab on PAP     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $lsR       51   2    projection of lines of dudi$tab on PPA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $asQ       2    2    Principal axis of dudi$tab on PAP     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $lsQ       40   2    projection of lines of dudi$tab on PPA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $li        51   2    $lsR predicted by R                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame nrow ncol content                                             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $c1        40   2    Constrained Principal Axes (CPA)                    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $faQ       9    2    Loadings for Q to build the CPA (linear combination)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $corQ      8    2    Correlations between the CPA and Q                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $li        51   2    Constrained (by R) row score (LC score)             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $asR       2    2    Principal axis of dudi$tab on CPA                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $lsR       51   2    Unconstrained row score (WA score)                  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame nrow ncol content                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $l1        51   2    CPC Constraint Principal Components      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $faR       18   2    Loadings (CPC as linear combinations of R</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $corR      17   2    correlation CPC - R                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $faQ       9    2    Loadings (CPC as linear combinations of Q</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $corQ      8    2    correlation CPC - Q                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $co        40   2    inner product CPC - Y                    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  data.frame nrow ncol content                                             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $l1        51   2    Constrained Principal Components (CPC)              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $faR       18   2    Loadings for R to build the CPC (linear combination)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $corR      17   2    Correlations between the CPC and R                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $co        40   2    Constrained (by Q) column score (LC score)          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $asQ       2    2    Principal component of dudi$tab on CPC              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $lsQ       40   2    Unconstrained column score (WA score)               </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">dcca</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Double canonical correspondence analysis</span>

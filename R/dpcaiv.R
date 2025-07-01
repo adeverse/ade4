@@ -219,7 +219,7 @@ dpcaiv <- function (dudi,
     sumry <- array("", c(2, 4), list(rep("", 2), c("data.frame", 
                                                    "nrow", "ncol", "content")))
     sumry[1, ] <- c("$Y", nrow(x$Y), ncol(x$Y), "Dependant variables")
-    sumry[2, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "modified array (projected variables)")
+    sumry[2, ] <- c("$tab", nrow(x$tab), ncol(x$tab), "modified array (predicted table)")
     if(!is.null(x$dfR))
         sumry <- rbind(sumry, c("$dfR", nrow(x$dfR), ncol(x$dfR), "Explanatory variables for rows"))
     if(!is.null(x$dfQ))
@@ -229,32 +229,31 @@ dpcaiv <- function (dudi,
     cat("\n")
     sumry <- array("", c(1, 4), list(rep("", 1), c("data.frame", 
                                                    "nrow", "ncol", "content")))
-    sumry[1, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "PPA Pseudo Principal Axes")
-    if(!is.null(x$dfR)){
-        sumry <- rbind(sumry, c("$asR", nrow(x$asR), ncol(x$asR), "Principal axis of dudi$tab on PAP"))
-        sumry <- rbind(sumry, c("$lsR", nrow(x$lsR), ncol(x$lsR), "projection of lines of dudi$tab on PPA"))
-    }
+    sumry[1, ] <- c("$c1", nrow(x$c1), ncol(x$c1), "Constrained Principal Axes (CPA)")
     if(!is.null(x$dfQ)){
-        sumry <- rbind(sumry, c("$asQ", nrow(x$asQ), ncol(x$asQ), "Principal axis of dudi$tab on PAP"))
-        sumry <- rbind(sumry, c("$lsQ", nrow(x$lsQ), ncol(x$lsQ), "projection of lines of dudi$tab on PPA"))
+        sumry <- rbind(sumry, c("$faQ", nrow(x$faQ), ncol(x$faQ), "Loadings for Q to build the CPA (linear combination)"))
+        sumry <- rbind(sumry, c("$corQ", nrow(x$corQ), ncol(x$corQ), "Correlations between the CPA and Q"))
     }
-    sumry <- rbind(sumry, c("$li", nrow(x$li), ncol(x$li), "$lsR predicted by R"))
+    sumry <- rbind(sumry, c("$li", nrow(x$li), ncol(x$li), "Constrained (by R) row score (LC score)"))
+    if(!is.null(x$dfR)){
+        sumry <- rbind(sumry, c("$asR", nrow(x$asR), ncol(x$asR), "Principal axis of dudi$tab on CPA"))
+        sumry <- rbind(sumry, c("$lsR", nrow(x$lsR), ncol(x$lsR), "Unconstrained row score (WA score)"))
+    }
     
     print(sumry, quote = FALSE)
     cat("\n")
     sumry <- array("", c(1, 4), list(rep("", 1), c("data.frame", 
                                                    "nrow", "ncol", "content")))
-    sumry[1, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "CPC Constraint Principal Components")
+    sumry[1, ] <- c("$l1", nrow(x$l1), ncol(x$l1), "Constrained Principal Components (CPC)")
     if(!is.null(x$dfR)){
-        sumry <- rbind(sumry, c("$faR", nrow(x$faR), ncol(x$faR), "Loadings (CPC as linear combinations of R"))
-        sumry <- rbind(sumry, c("$corR", nrow(x$corR), ncol(x$corR), "correlation CPC - R"))
+        sumry <- rbind(sumry, c("$faR", nrow(x$faR), ncol(x$faR), "Loadings for R to build the CPC (linear combination)"))
+        sumry <- rbind(sumry, c("$corR", nrow(x$corR), ncol(x$corR), "Correlations between the CPC and R"))
     }
-    
+    sumry <- rbind(sumry, c("$co", nrow(x$co), ncol(x$co), "Constrained (by Q) column score (LC score)"))
     if(!is.null(x$dfQ)){
-        sumry <- rbind(sumry, c("$faQ", nrow(x$faQ), ncol(x$faQ), "Loadings (CPC as linear combinations of Q"))
-        sumry <- rbind(sumry, c("$corQ", nrow(x$corQ), ncol(x$corQ), "correlation CPC - Q"))
+        sumry <- rbind(sumry, c("$asQ", nrow(x$asQ), ncol(x$asQ), "Principal component of dudi$tab on CPC"))
+        sumry <- rbind(sumry, c("$lsQ", nrow(x$lsQ), ncol(x$lsQ), "Unconstrained column score (WA score)"))
     }
-    sumry <- rbind(sumry, c("$co", nrow(x$co), ncol(x$co), "inner product CPC - Y"))
     
     print(sumry, quote = FALSE)
     cat("\n")

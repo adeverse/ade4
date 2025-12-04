@@ -108,7 +108,7 @@ loocv.between <- function(x, nax = 0, progress = FALSE, parallel = FALSE, ...)
 	# LOOCV loop on individuals
 	if (parallel) {
 		# Note: Use function syntax of %dopar% operator, since foreach is not imported (thanks Aurelie)
-		xcoo1 <- foreach::"%dopar%"(foreach::foreach(j = 1:lig1, .combine = rbind) , {trt1(dudiCall, fac1, nf1, x, j)})
+		xcoo1 <- foreach::"%dopar%"(foreach::foreach(j = 1:lig1, .combine = rbind, .export=ls(.GlobalEnv)) , {trt1(dudiCall, fac1, nf1, x, j)})
 	} else {
 		for (ind1 in 1:lig1) {
 			if (progress) pb$tick()

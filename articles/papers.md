@@ -1,0 +1,43 @@
+# Bibliographic references
+
+## **ade4** papers
+
+Here is a list of references about **ade4** package and its methods.
+
+- Thioulouse J, Dray S, Dufour AB, Siberchicot A, Jombart T,
+  Pavoine S. 2018. Multivariate Analysis of Ecological Data with ade4.
+  doi:
+  [10.1007/978-1-4939-8850-1](https://doi.org/10.1007/978-1-4939-8850-1).
+
+- Bougeard S, Dray S (2018). *Supervised Multiblock Analysis in R with
+  the `ade4` Package*. Journal of Statistical Software. doi:
+  [10.18637/jss.v086.i01](https://doi.org/10.18637/jss.v086.i01)
+  ([PDF](https://www.jstatsoft.org/index.php/jss/article/view/v086i01/1238)).
+
+- Siberchicot A, Julien-Laferrière A, Dufour AB, Thioulouse J, Dray
+  S (2017) *adegraphics: An S4 Lattice-Based Package for the
+  Representation of Multivariate Data*. The R Journal 9, 2, 198-212.
+  doi: [10.32614/RJ-2017-042](https://doi.org/10.32614/RJ-2017-042)
+  ([PDF](https://journal.r-project.org/archive/2017/RJ-2017-042/RJ-2017-042.pdf)).
+
+- Dray S & Dufour A (2007). *The `ade4` Package: Implementing the
+  Duality Diagram for Ecologists*. Journal of Statistical Software. doi:
+  [10.18637/jss.v022.i04](https://doi.org/10.18637/jss.v022.i04)
+  ([PDF](http://pbil.univ-lyon1.fr/ade4/article/jss/jss.pdf)).
+
+- Dray S, Dufour A, Chessel D (2007). *The `ade4` Package – II:
+  Two-Table and K-Table Methods.* R News.
+  <https://cran.r-project.org/doc/Rnews/>
+  ([PDF](http://pbil.univ-lyon1.fr/ade4/article/rnews2/rnews2.pdf)).
+
+- Chessel D, Dufour A, Thioulouse J (2004). *The `ade4` Package – I:
+  One-Table Methods.* R News. <https://cran.r-project.org/doc/Rnews/>
+  ([PDF](http://pbil.univ-lyon1.fr/JTHome/ref/ade4-Rnews.pdf)).
+
+- Thioulouse J, Chessel D, Dolédec S, Olivier JM (1997). *`ADE-4`: a
+  multivariate analysis and graphical display software*. Statistics and
+  Computing. doi:
+  [10.1023/A:1018513530268](https://doi.org/10.1023/A:1018513530268)
+  ([PDF](http://pbil.univ-lyon1.fr/JTHome/ref/sc070108.pdf)).
+
+## [Google Scholar](https://scholar.google.com/scholar?scisbd=2&q=ade4&hl=fr&as_sdt=0,5) list of papers citing **ade4**.

@@ -1,0 +1,53 @@
+# Correspondence Analysis Table
+
+This array contains the socio-professionnal repartitions of 5850
+couples.
+
+## Usage
+
+``` r
+data(mariages)
+```
+
+## Format
+
+The `mariages` data frame has 9 rows and 9 columns. The rows represent
+the wife's socio-professionnal category and the columns the husband's
+socio-professionnal category (1982).  
+
+Codes for rows and columns are identical : agri (Farmers), ouva (Farm
+workers), pat (Company directors (commerce and industry)), sup (Liberal
+profession, executives and higher intellectual professions), moy
+(Intermediate professions), emp (Other white-collar workers), ouv
+(Manual workers), serv (Domestic staff), aut (other workers).
+
+## Source
+
+Vallet, L.A. (1986) Activité professionnelle de la femme mariée et
+détermination de la position sociale de la famille. Un test empirique :
+la France entre 1962 et 1982. *Revue Française de Sociologie*, **27**,
+656–696.
+
+## Examples
+
+``` r
+data(mariages)
+w <- dudi.coa(mariages, scan = FALSE, nf = 3)
+
+if(adegraphicsLoaded()) {
+  g1 <- scatter(w, met = 1, posi = "bottomleft", plot = FALSE)
+  g2 <- scatter(w, met = 2, posi = "bottomleft", plot = FALSE)
+  g3 <- scatter(w, met = 3, posi = "bottomleft", plot = FALSE)
+  ## g4 <- score(w, 3)
+  G <- ADEgS(list(g1, g2, g3), layout = c(2, 2))
+
+} else {
+  par(mfrow = c(2, 2))
+  scatter(w, met = 1, posi = "bottom")
+  scatter(w, met = 2, posi = "bottom")
+  scatter(w, met = 3, posi = "bottom")
+  score(w, 3)
+  par(mfrow = c(1, 1))
+}
+#> Error in match.arg(position[1], choices = c("bottomleft", "bottomright",     "topleft", "topright", "none"), several.ok = FALSE): 'arg' should be one of “bottomleft”, “bottomright”, “topleft”, “topright”, “none”
+```

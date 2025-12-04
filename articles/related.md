@@ -1,0 +1,23 @@
+# Related packages
+
+- [adegraphics](https://CRAN.R-project.org/package=adegraphics):
+  Graphical representation of multivariate data (check out the
+  [vignette](https://cran.r-project.org/web/packages/adegraphics/vignettes/adegraphics.html)).
+- [adespatial](https://cran.r-project.org/web/packages/adespatial/index.html):
+  Multivariate Multiscale Spatial Analysis
+- [adegenet](https://CRAN.R-project.org/package=adegenet): Multivariate
+  analysis of genetic markers
+- [adephylo](https://CRAN.R-project.org/package=adephylo): Exploratory
+  analyses for the phylogenetic comparative method
+- [ade4TkGUI](https://CRAN.R-project.org/package=ade4TkGUI): Graphical
+  User Interface for ade4
+- [adehabitatHR](https://CRAN.R-project.org/package=adehabitatHR): Home
+  range estimation
+- [adehabitatMA](https://CRAN.R-project.org/package=adehabitatMA): Tools
+  to deal with raster maps
+- [adehabitatLT](https://CRAN.R-project.org/package=adehabitatLT):
+  Analysis of animal movements
+- [adehabitatHS](https://CRAN.R-project.org/package=adehabitatHS):
+  Habitat selection analysis
+- [adiv](https://cran.r-project.org/web/packages/adiv/index.html):
+  Analysis of Diversity

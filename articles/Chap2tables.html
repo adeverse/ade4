@@ -184,7 +184,7 @@ performed by the <code>supcol</code> function.</p>
 <p>These correlations can also be depicted on a correlation circle.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/s.corcircle.html">s.corcircle</a></span><span class="op">(</span><span class="va">supcol.env</span><span class="op">$</span><span class="va">cosup</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Chap2tables_files/figure-html/unnamed-chunk-6-1.png" width="600" height="600"></p>
+<p><img src="Chap2tables_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="600" height="600"></p>
 <p>Correlations between environmental variables and sites scores on the
 first two axes of the PCA of fish species data.</p>
 <p>Symmetrically, <strong>ade4</strong> also offers the possibility to
@@ -270,7 +270,7 @@ clearly indicates that two dimensions should be used to interpret the
 main structures of fish-environment relationships.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">coia.doubs</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Chap2tables_files/figure-html/unnamed-chunk-8-1.png" width="600" height="600"></p>
+<p><img src="Chap2tables_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" width="600" height="600"></p>
 <p>Plot of the outputs of a Coinertia Analysis. This is a composite plot
 made of six graphs (see text for an explanation of the six graphs).</p>
 <p>Coinertia Analysis computes coefficients for environmental variables
@@ -506,7 +506,7 @@ values predicted by environmental variables:</p>
 analysis.</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">rda.doubs</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Chap2tables_files/figure-html/unnamed-chunk-15-1.png" width="600" height="600"></p>
+<p><img src="Chap2tables_files/figure-html/unnamed-chunk-15-1.png" class="r-plt" width="600" height="600"></p>
 <p>Plot of the outputs of a Redundancy Analysis. This is a composite
 plot made of six graphs (see text for an explanation of the six
 graphs).</p>
@@ -687,7 +687,7 @@ class. As for other two-table methods, the <code>plot</code> function
 displays the main outputs of the analysis.</p>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cca.doubs</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Chap2tables_files/figure-html/unnamed-chunk-22-1.png" width="600" height="600"></p>
+<p><img src="Chap2tables_files/figure-html/unnamed-chunk-22-1.png" class="r-plt" width="600" height="600"></p>
 <p>According to the niche viewpoint, CCA seeks loadings for
 environmental variables (<code>cca.doubs$fa</code>) that are used to
 compute a site score (<code>cca.doubs$l1</code>).</p>
@@ -695,7 +695,7 @@ compute a site score (<code>cca.doubs$l1</code>).</p>
 <code class="sourceCode R"><span><span class="va">cca.coef</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.arrow.html">s.arrow</a></span><span class="op">(</span><span class="va">cca.doubs</span><span class="op">$</span><span class="va">fa</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">cca.site</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">cca.doubs</span><span class="op">$</span><span class="va">l1</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">cca.site</span>,<span class="va">cca.coef</span><span class="op">)</span>, positions<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0.6</span>,<span class="fl">0.4</span>,<span class="fl">1</span>,<span class="fl">0.3</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0.7</span><span class="op">)</span>, byrow<span class="op">=</span><span class="cn">TRUE</span>,nrow<span class="op">=</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Chap2tables_files/figure-html/unnamed-chunk-23-1.png" width="600" height="600"></p>
+<p><img src="Chap2tables_files/figure-html/unnamed-chunk-23-1.png" class="r-plt" width="600" height="600"></p>
 <p>Plot of the outputs of a Canonical Correspondence Analysis. Site
 scores as linear combination of environmental variables
 (<code>$l1</code>) and loadings for the environmental variables
@@ -721,7 +721,7 @@ the species to the sites where it is present.</p>
 <code class="sourceCode R"><span><span class="va">cca.Satr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.distri.html">s.distri</a></span><span class="op">(</span><span class="va">cca.doubs</span><span class="op">$</span><span class="va">l1</span>, <span class="va">doubs</span><span class="op">$</span><span class="va">fish</span><span class="op">[</span>, <span class="fl">2</span>, drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">]</span>, </span>
 <span>  ellipseSize<span class="op">=</span><span class="fl">0</span>, plines.lty <span class="op">=</span> <span class="fl">2</span>, plabels.cex <span class="op">=</span> <span class="fl">2</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/superpose.html" class="external-link">superpose</a></span><span class="op">(</span><span class="va">cca.Satr</span>,<span class="va">cca.site</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Chap2tables_files/figure-html/unnamed-chunk-26-1.png" width="600" height="600"></p>
+<p><img src="Chap2tables_files/figure-html/unnamed-chunk-26-1.png" class="r-plt" width="600" height="600"></p>
 <p>Plot of the outputs of a Canonical Correspondence Analysis. Site
 scores as linear combination of environmental variables
 (<code>$l1</code>) and species positioned by weighted averaging (here,
@@ -745,7 +745,7 @@ species scores (<code>$co</code>) on the same plot.</p>
 <div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">cca.species</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">cca.doubs</span><span class="op">$</span><span class="va">co</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/superpose.html" class="external-link">superpose</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/update.html" class="external-link">update</a></span><span class="op">(</span><span class="va">cca.site</span>, plabels.cex <span class="op">=</span> <span class="fl">0</span>, plot<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>, <span class="va">cca.species</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="Chap2tables_files/figure-html/unnamed-chunk-29-1.png" width="600" height="600"></p>
+<p><img src="Chap2tables_files/figure-html/unnamed-chunk-29-1.png" class="r-plt" width="600" height="600"></p>
 <p>Plot of the outputs of a canonical correspondence analysis.
 Simultaneous representation of site and species scores.</p>
 </div>
@@ -951,7 +951,7 @@ when only one categorical variable is used as explanatory:</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

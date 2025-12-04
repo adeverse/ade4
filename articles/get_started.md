@@ -1,0 +1,32 @@
+# Getting started with ade4
+
+## Vignettes
+
+We provide some vignettes to help you get started with `ade4.` You can
+also find a list of functions available to users on our [reference
+page](http://adeverse.github.io/ade4/reference/index.md).
+
+## Ressources
+
+Check out the [`ade4`
+book](https://link.springer.com/book/10.1007/978-1-4939-8850-1) and its
+[shiny application](https://ade4.shinyapps.io/Book/) for a complete
+introduction to the package and to rerun the code present in the book.
+You can also find hereafter some
+[papers](http://adeverse.github.io/ade4/articles/papers.md) to help you
+understand `ade4` methods.
+
+## Shinyapps
+
+Consider giving a try to our shiny app developed, to allow you to run an
+analysis without having to write your own script:
+[ade4shiny](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/ShinyADE4/).
+You will be able to download the R script used to generate the results
+as well as the analyses outputs and graphical representations.
+
+## Getting help
+
+You can swing by our [FAQ
+section](http://adeverse.github.io/ade4/articles/faq.md) to check if
+your question has already been answered or ask for help on the `ade4`
+mailing list [adelist](https://listes.univ-lyon1.fr/sympa/info/adelist).

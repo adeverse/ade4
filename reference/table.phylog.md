@@ -1,0 +1,110 @@
+# Plot arrays in front of a phylogenetic tree
+
+This function gives a graphical display for viewing the numbers of a
+table by square sizes in front of the corresponding phylogenetic tree.
+
+## Usage
+
+``` r
+table.phylog(df, phylog, x = 1:ncol(df), f.phylog = 0.5,
+ labels.row = gsub("[_]", " ", row.names(df)), clabel.row = 1,
+ labels.col = names(df), clabel.col = 1,
+ labels.nod = names(phylog$nodes), clabel.nod = 0, cleaves = 1,
+ cnodes = 1, csize = 1, grid = TRUE, clegend = 0.75)
+```
+
+## Arguments
+
+- df:
+
+  : a data frame or a matrix
+
+- phylog:
+
+  : an object of class `'phylog'`
+
+- x:
+
+  : a vector of values to position the columns
+
+- f.phylog:
+
+  : a size coefficient for tree size (a parameter to draw the tree in
+  proportion to leaves labels)
+
+- labels.row:
+
+  : a vector of strings of characters for row labels
+
+- clabel.row:
+
+  : a character size for the leaves labels, used with
+  `par("cex")*clabel.row`. If zero, no row labels are drawn
+
+- labels.col:
+
+  : a vector of strings of characters for columns labels
+
+- clabel.col:
+
+  : a character size for the leaves labels, used with
+  `par("cex")*clabel.col`. If zero, no column labels are drawn
+
+- labels.nod:
+
+  : a vector of strings of characters for the nodes labels
+
+- clabel.nod:
+
+  : a character size for the nodes labels, used with
+  `par("cex")*clabel.nodes`. If zero, no nodes labels are drawn
+
+- cleaves:
+
+  : a character size for plotting the points that represent the leaves,
+  used with `par("cex")*cleaves`. If zero, no points are drawn
+
+- cnodes:
+
+  : a character size for plotting the points that represent the nodes,
+  used with `par("cex")*cnodes`. If zero, no points are drawn
+
+- csize:
+
+  : a size coefficient for symbols
+
+- grid:
+
+  : a logical value indicating whether the grid should be plotted
+
+- clegend:
+
+  : a character size for the legend (if 0, no legend)
+
+## Author
+
+Daniel Chessel  
+Sébastien Ollier <sebastien.ollier@u-psud.fr>
+
+## Details
+
+The function verifies that
+`sort(row.names(df))==sort(names(phylog$leaves))`. If `df` is a matrix
+the function uses `as.data.frame(df)`.
+
+## See also
+
+[`symbols.phylog`](symbols.phylog.md) for one variable
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+data(newick.eg)
+w.phy <- newick2phylog(newick.eg[[9]])
+w.tab <- data.frame(matrix(rnorm(620), 31, 20))
+row.names(w.tab) <- sort(names(w.phy$leaves))
+table.phylog(w.tab, w.phy, csi = 1.5, f = 0.5,
+ clabel.n = 0.75, clabel.c = 0.5)
+} # }
+```

@@ -231,7 +231,7 @@ labels). See Thioulouse 2011 for further interpretations.</p>
 <span><span class="va">clt</span> <span class="op">&lt;-</span> <span class="fu">superpose</span><span class="op">(</span><span class="va">cl2</span>, <span class="va">cl1</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu">ADEgS</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">clt</span>, <span class="va">ar1</span>, <span class="va">ar2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.2</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.6</span>, <span class="fl">0.4</span>, <span class="fl">1</span><span class="op">)</span>,</span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0.4</span>, <span class="fl">0.4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="Chap2Ktables_files/figure-html/unnamed-chunk-4-1.png" width="600" height="600"><figcaption align="center"><p>BGCOIA of the <code>meau</code> data set. The Ephemeroptera species
+<img src="Chap2Ktables_files/figure-html/unnamed-chunk-4-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>BGCOIA of the <code>meau</code> data set. The Ephemeroptera species
 factor map (top-left) is drawn with the <code>s.arrow</code> function
 and the coordinates in <code>bgcoia2$l1</code>. The environmental
 variables factor map (bottom-left) is drawn with the
@@ -297,7 +297,7 @@ and the next Figure shows the result of the plot function on this
 object.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="../reference/statico.krandtest.html">statico.krandtest</a></span><span class="op">(</span><span class="va">kta.env</span>, <span class="va">kta.spe</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="Chap2Ktables_files/figure-html/unnamed-chunk-6-1.png" width="600" height="600"><figcaption align="center"><p>Graphs of the four permutation tests obtained with the
+<img src="Chap2Ktables_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Graphs of the four permutation tests obtained with the
 <code>statico.krandtest</code> function to test the statistical
 significance of the four Coinertia Analyses.</p>
 </figcaption><p>The next Figure is a compound graph that sums up the first two steps
@@ -305,7 +305,7 @@ of the STATICO method: Interstructure and Compromise. It is simply
 obtained with the generic <code>plot</code> function.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">statico.envspe</span><span class="op">)</span></span></code></pre></div>
-<img src="Chap2Ktables_files/figure-html/unnamed-chunk-7-1.png" width="600" height="600"><figcaption align="center"><p>Interstructure and Compromise of STATICO on the <code>meau</code>
+<img src="Chap2Ktables_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Interstructure and Compromise of STATICO on the <code>meau</code>
 data set.</p>
 </figcaption><p>The Interstructure plot (top-left) shows that autumn and summer are
 the two most important seasons for defining the Compromise, while winter
@@ -342,7 +342,7 @@ Compromise analysis (<code>statico.envspe$Tli</code> and
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.75</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">sa1</span><span class="op">@</span><span class="va">positions</span> <span class="op">&lt;-</span> <span class="va">sa2</span><span class="op">@</span><span class="va">positions</span> <span class="op">&lt;-</span> <span class="va">pos1</span></span>
 <span><span class="fu">ADEgS</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">sa1</span>, <span class="va">sa2</span><span class="op">)</span>, layout <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="Chap2Ktables_files/figure-html/unnamed-chunk-8-1.png" width="800" height="400"><figcaption align="center"><p>Intrastructure of environmental variables (top) and Ephemeroptera
+<img src="Chap2Ktables_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" width="800" height="400"><figcaption align="center"><p>Intrastructure of environmental variables (top) and Ephemeroptera
 species (bottom) of STATICO on the <code>meau</code> data set.</p>
 </figcaption><p>Autumn is clearly the season where the structures are the strongest
 (arrows are much longer at this date), both for environmental variables
@@ -383,7 +383,7 @@ react to pollution increase (maximum reached in autumn) or decrease
 <span><span class="va">s1</span> <span class="op">&lt;-</span> <span class="fu">superpose</span><span class="op">(</span><span class="va">st1</span>, <span class="va">sla1</span><span class="op">)</span></span>
 <span><span class="va">s2</span> <span class="op">&lt;-</span> <span class="fu">superpose</span><span class="op">(</span><span class="va">st2</span>, <span class="va">sla2</span><span class="op">)</span></span>
 <span><span class="fu">ADEgS</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">s2</span><span class="op">)</span>, layout <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="Chap2Ktables_files/figure-html/unnamed-chunk-9-1.png" width="800" height="400"><figcaption align="center"><p>Intrastructure of <strong>sites</strong> for environmental variables
+<img src="Chap2Ktables_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" width="800" height="400"><figcaption align="center"><p>Intrastructure of <strong>sites</strong> for environmental variables
 (top) and for Ephemeroptera species (bottom) of STATICO on the
 <code>meau</code> data set.</p>
 </figcaption><p>This Figure shows the differences between sites among the seasons for
@@ -461,7 +461,7 @@ this permutation test (function <code>costatis.randtest</code>) gave a
 <span>    plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">s2</span> <span class="op">&lt;-</span> <span class="fu">superpose</span><span class="op">(</span><span class="va">sa2</span>, <span class="va">sc2</span><span class="op">)</span></span>
 <span><span class="fu">ADEgS</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">s2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="Chap2Ktables_files/figure-html/unnamed-chunk-11-1.png" width="800" height="400"><figcaption align="center"><p>Results of the COSTATIS analysis on the <code>meau</code> data
+<img src="Chap2Ktables_files/figure-html/unnamed-chunk-11-1.png" class="r-plt" width="800" height="400"><figcaption align="center"><p>Results of the COSTATIS analysis on the <code>meau</code> data
 set.</p>
 </figcaption><p>The Coinertia Analysis is done on the Compromises of two
 <em>K</em>-table analyses. Here, we used two Partial Triadic Analyses,
@@ -582,7 +582,7 @@ series of co-structures).</p></li>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

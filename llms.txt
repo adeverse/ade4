@@ -1,0 +1,885 @@
+# Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences (**ade4**)
+
+[![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/ade4)](http://cran.r-project.org/package=ade4)
+[![CRAN
+Downloads](https://cranlogs.r-pkg.org/badges/ade4)](https://cran.r-project.org/package=ade4)
+[![R-CMD-check](https://github.com/adeverse/ade4/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/adeverse/ade4/actions/workflows/R-CMD-check.yaml)
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+## Presentation
+
+**ade4** is a software developed in the Biometry and Evolutionary
+Biology Lab (UMR 5558) - University Lyon 1 for the **D**ata **A**nalysis
+of **E**cological and **E**nvironmental data in the framework of
+**E**uclidean **E**xploratory methods, hence the name **ade4**.
+
+**ade4** is a package for the [**R**
+software](https://www.r-project.org) since 2002. It contains functions
+for exploratory multivariate data analysis and graphical display, many
+numerical data sets and bibliographic references. Simple one-table
+methods are described in [Chessel et
+al. (2004)](http://pbil.univ-lyon1.fr/JTHome/ref/ade4-Rnews.pdf).
+Two-table and K-table methods are described in [Dray et
+al. (2007)](http://pbil.univ-lyon1.fr/ade4/article/rnews2/rnews2.pdf).
+The theory of the duality diagram and its implementation in ade4 are
+discussed in [Dray et Dufour
+(2007)](http://pbil.univ-lyon1.fr/ade4/article/jss/jss.pdf).
+
+A book in the *Springer Series in Statistics* collection,
+[**“Multivariate Analysis of Ecological Data with
+ade4”**](http://adeverse.github.io/ade4/articles/book.md) presents the
+package. The examples and the graphs in this book can be [**reproduced
+online
+here**](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/Book/).
+
+The **ade4shiny** dashboard allows you to use the basic functions of the
+**ade4** package online, directly in your browser: no need to install
+**R** and the necessary packages on your computer.
+[**ade4shiny**](https://lbbe-shiny.univ-lyon1.fr/ade4shiny/)
+
+If you use **ade4**, please consider citing [these
+references](http://adeverse.github.io/ade4/authors.html#citation) !
+
+[![](https://pbil.univ-lyon1.fr/members/thioulouse/github/Book.png)](https://www.springer.com/fr/book/9781493988488)
+[![](https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny1.png)](https://lbbe-shiny.univ-lyon1.fr/ade4shiny/)
+[![](https://pbil.univ-lyon1.fr/members/thioulouse/github/ade4Shiny2.png)](https://lbbe-shiny.univ-lyon1.fr/ade4shiny/)
+
+## Getting started with **ade4**
+
+### Installing **ade4**
+
+[This page](http://adeverse.github.io/ade4/articles/install.md) explains
+how to install the **ade4** package in **R**.
+
+### Vignettes
+
+Several vignettes are available to help you get started with **ade4**
+(more to come soon !):
+
+- [Graphical representation of multivariate
+  data](https://cran.r-project.org/web/packages/adegraphics/vignettes/adegraphics.html)
+
+- [Description of environmental variables
+  structures](http://adeverse.github.io/ade4/articles/ChapEnvVarStruct.md)
+
+- [Description of species
+  structures](http://adeverse.github.io/ade4/articles/ChapSpeciesStruct.md)
+
+- [Taking into account groups of
+  sites](http://adeverse.github.io/ade4/articles/ChapBetGr.md)
+
+- [Description of species-environment
+  relationships](http://adeverse.github.io/ade4/articles/Chap2tables.md)
+
+- [Analysing Changes in
+  Structures](http://adeverse.github.io/ade4/articles/ChapKtables.md)
+
+- [Analysing Changes in
+  Co-structures](http://adeverse.github.io/ade4/articles/Chap2Ktables.md)
+
+### List of function references
+
+You can also find a list of functions available to users on the
+[reference page](http://adeverse.github.io/ade4/reference/index.md).
+
+### Other resources
+
+Check out the [ade4
+book](http://adeverse.github.io/ade4/articles/book.md) and its [shiny
+application](https://lbbe-shiny.univ-lyon1.fr/Reproducible_Research/Book/)
+for a complete introduction to the package and to rerun the code present
+in the book. You can also check these [bibliographic
+references](http://adeverse.github.io/ade4/articles/papers.md) to help
+you understand **ade4** methods.
+
+Note for nostalgics 😉 : the **old ade4 web site** is still available
+here:
+[http://pbil.univ-lyon1.fr/ADE-4/](http://pbil.univ-lyon1.fr/ADE-4/accueil2.php).
+
+### Using **ade4** online: the Shiny app
+
+Consider giving a try to our shiny app, developed to allow you to run an
+analysis without having to write your own script:
+[ade4shiny](https://lbbe-shiny.univ-lyon1.fr/ade4shiny/). You will be
+able to download the R script used to generate the results as well as
+the analyses outputs and graphical representations.
+
+### Getting help: FAQ & Mailing list
+
+You can also check the [FAQ
+section](http://adeverse.github.io/ade4/articles/faq.md) to check if
+your question has already been answered or ask for help on the **ade4**
+mailing list
+[adelist](https://listes.univ-lyon1.fr/sympa/info/adelist).  
+
+# Package index
+
+## One-table analysis
+
+These functions are designed for the analysis of a single table.
+
+### Methods
+
+Functions to run the analysis
+
+- [`dudi.acm()`](dudi.acm.md) [`acm.burt()`](dudi.acm.md)
+  [`acm.disjonctif()`](dudi.acm.md)
+  [`boxplot(`*`<acm>`*`)`](dudi.acm.md) : Multiple Correspondence
+  Analysis
+- [`dudi.coa()`](dudi.coa.md) : Correspondence Analysis
+- [`dudi.dec()`](dudi.dec.md) : Decentred Correspondence Analysis
+- [`prep.fuzzy.var()`](dudi.fca.md) [`dudi.fca()`](dudi.fca.md)
+  [`dudi.fpca()`](dudi.fca.md) : Fuzzy Correspondence Analysis and Fuzzy
+  Principal Components Analysis
+- [`dudi.hillsmith()`](dudi.hillsmith.md) : Ordination of Tables mixing
+  quantitative variables and factors
+- [`dudi.mix()`](dudi.mix.md) : Ordination of Tables mixing quantitative
+  variables and factors
+- [`dudi.nsc()`](dudi.nsc.md) : Non symmetric correspondence analysis
+- [`dudi.pca()`](dudi.pca.md) : Principal Component Analysis
+- [`dudi.pco()`](dudi.pco.md) [`scatter(`*`<pco>`*`)`](dudi.pco.md) :
+  Principal Coordinates Analysis
+- [`pcoscaled()`](pcoscaled.md) : Simplified Analysis in Principal
+  Coordinates
+- [`nipals()`](nipals.md) [`scatter(`*`<nipals>`*`)`](nipals.md)
+  [`print(`*`<nipals>`*`)`](nipals.md) : Non-linear Iterative Partial
+  Least Squares (NIPALS) algorithm
+
+### Graphics
+
+Functions to display the results of the analysis
+
+- [`score(`*`<coa>`*`)`](score.coa.md)
+  [`reciprocal.coa()`](score.coa.md) : Reciprocal scaling after a
+  correspondence analysis
+- [`scatter()`](scatter.md) [`biplot(`*`<dudi>`*`)`](scatter.md)
+  [`screeplot(`*`<dudi>`*`)`](scatter.md) : Graphical representation of
+  the outputs of a multivariate analysis
+- [`scatter(`*`<acm>`*`)`](scatter.acm.md) : Plot of the factorial maps
+  in a Multiple Correspondence Analysis
+- [`scatter(`*`<coa>`*`)`](scatter.coa.md) : Plot of the factorial maps
+  for a correspondence analysis
+- [`scatter(`*`<dudi>`*`)`](scatter.dudi.md) : Plot of the Factorial
+  Maps
+- [`scatter(`*`<fca>`*`)`](scatter.fca.md) : Plot of the factorial maps
+  for a fuzzy correspondence analysis
+- [`score()`](score.md) [`scoreutil.base()`](score.md) : Graphs for One
+  Dimension
+- [`score(`*`<acm>`*`)`](score.acm.md) : Graphs to study one factor in a
+  Multiple Correspondence Analysis
+- [`score(`*`<mix>`*`)`](score.mix.md) : Graphs to Analyse a factor in a
+  Mixed Analysis
+- [`score(`*`<pca>`*`)`](score.pca.md) : Graphs to Analyse a factor in
+  PCA
+
+## Two-table analysis
+
+These functions are designed for the analysis of a pair of tables.
+
+### Methods
+
+Functions to run the analysis
+
+- [`coinertia()`](coinertia.md)
+  [`plot(`*`<coinertia>`*`)`](coinertia.md)
+  [`print(`*`<coinertia>`*`)`](coinertia.md)
+  [`summary(`*`<coinertia>`*`)`](coinertia.md) : Coinertia Analysis
+- [`pcaiv()`](pcaiv.md) [`plot(`*`<pcaiv>`*`)`](pcaiv.md)
+  [`print(`*`<pcaiv>`*`)`](pcaiv.md)
+  [`summary(`*`<pcaiv>`*`)`](pcaiv.md) : Principal component analysis
+  with respect to instrumental variables
+- [`pcaivortho()`](pcaivortho.md)
+  [`summary(`*`<pcaivortho>`*`)`](pcaivortho.md) : Principal Component
+  Analysis with respect to orthogonal instrumental variables
+- [`procuste()`](procuste.md) [`plot(`*`<procuste>`*`)`](procuste.md)
+  [`print(`*`<procuste>`*`)`](procuste.md)
+  [`randtest(`*`<procuste>`*`)`](procuste.md) : Simple Procruste
+  Rotation between two sets of points
+- [`niche()`](niche.md) [`print(`*`<niche>`*`)`](niche.md)
+  [`plot(`*`<niche>`*`)`](niche.md) [`niche.param()`](niche.md)
+  [`rtest(`*`<niche>`*`)`](niche.md) : Method to Analyse a pair of
+  tables : Environmental and Faunistic Data
+- [`varipart()`](varipart.md) [`print(`*`<varipart>`*`)`](varipart.md) :
+  Partition of the variation of a response multivariate table by 2
+  explanatory tables
+
+### Tests
+
+Functions to evaluate the significance of observed structures
+
+- [`procuste.randtest()`](procuste.randtest.md) : Monte-Carlo Test on
+  the sum of the singular values of a procustean rotation (in C).
+- [`procuste.rtest()`](procuste.rtest.md) : Monte-Carlo Test on the sum
+  of the singular values of a procustean rotation (in R).
+- [`randtest(`*`<coinertia>`*`)`](randtest.coinertia.md) : Monte-Carlo
+  test on a Co-inertia analysis (in C).
+- [`randtest(`*`<pcaiv>`*`)`](randtest.pcaiv.md)
+  [`randtest(`*`<pcaivortho>`*`)`](randtest.pcaiv.md) : Monte-Carlo Test
+  on the percentage of explained (i.e. constrained) inertia
+- [`RV.randtest()`](RV.randtest.md) : Monte-Carlo Test on the sum of
+  eigenvalues of a co-inertia analysis (in C++ with Rcpp).
+- [`RV.rtest()`](RV.rtest.md) : Monte-Carlo Test on the sum of
+  eigenvalues of a co-inertia analysis (in R).
+- [`RVintra.randtest()`](RVintra.randtest.md) : Monte-Carlo Test on the
+  sum of eigenvalues of a within-class co-inertia analysis (in C++ with
+  Rcpp).
+
+## Three-table methods
+
+3-tables methods.
+
+- [`combine.randtest.rlq()`](combine.4thcorner.md)
+  [`combine.4thcorner()`](combine.4thcorner.md)
+  [`p.adjust.4thcorner()`](combine.4thcorner.md) : Functions to combine
+  and adjust the outputs 3-table methods
+- [`dpcaiv()`](dpcaiv.md) [`plot(`*`<dpcaiv>`*`)`](dpcaiv.md)
+  [`print(`*`<dpcaiv>`*`)`](dpcaiv.md)
+  [`summary(`*`<dpcaiv>`*`)`](dpcaiv.md)
+  [`randtest(`*`<dpcaiv>`*`)`](dpcaiv.md) [`dvaripart()`](dpcaiv.md)
+  [`print(`*`<dvaripart>`*`)`](dpcaiv.md) : Double principal component
+  analysis with respect to instrumental variables
+- [`fourthcorner`](fourthcorner.md) [`fourthcorner2`](fourthcorner.md)
+  [`print.4thcorner`](fourthcorner.md)
+  [`summary.4thcorner`](fourthcorner.md)
+  [`plot.4thcorner`](fourthcorner.md)
+  [`fourthcorner.rlq`](fourthcorner.md) : Functions to compute the
+  fourth-corner statistic
+- [`rlq()`](rlq.md) [`print(`*`<rlq>`*`)`](rlq.md)
+  [`plot(`*`<rlq>`*`)`](rlq.md) [`summary(`*`<rlq>`*`)`](rlq.md)
+  [`randtest(`*`<rlq>`*`)`](rlq.md) : RLQ analysis
+
+## Analysis including categorical variables (`factor`)
+
+These functions allows to consider a partition of individuals to focus
+on or remove differences between groups.
+
+### Methods
+
+- [`bca(`*`<dudi>`*`)`](bca.md) : Between-Class Analysis
+- [`bca(`*`<coinertia>`*`)`](bca.coinertia.md) : Between-class coinertia
+  analysis
+- [`bca(`*`<rlq>`*`)`](bca.rlq.md) [`plot(`*`<betrlq>`*`)`](bca.rlq.md)
+  [`print(`*`<betrlq>`*`)`](bca.rlq.md) : Between-Class RLQ analysis
+- [`bwca.dpcoa()`](bwca.dpcoa.md) [`bca(`*`<dpcoa>`*`)`](bwca.dpcoa.md)
+  [`wca(`*`<dpcoa>`*`)`](bwca.dpcoa.md)
+  [`randtest(`*`<betwit>`*`)`](bwca.dpcoa.md)
+  [`summary(`*`<betwit>`*`)`](bwca.dpcoa.md)
+  [`print(`*`<witdpcoa>`*`)`](bwca.dpcoa.md)
+  [`print(`*`<betdpcoa>`*`)`](bwca.dpcoa.md) : Between- and within-class
+  double principal coordinate analysis
+- [`discrimin()`](discrimin.md)
+  [`plot(`*`<discrimin>`*`)`](discrimin.md)
+  [`print(`*`<discrimin>`*`)`](discrimin.md) : Linear Discriminant
+  Analysis (descriptive statistic)
+- [`discrimin.coa()`](discrimin.coa.md) : Discriminant Correspondence
+  Analysis
+- [`wca(`*`<dudi>`*`)`](wca.md) : Within-Class Analysis
+- [`wca(`*`<coinertia>`*`)`](wca.coinertia.md) : Within-class coinertia
+  analysis
+- [`wca(`*`<rlq>`*`)`](wca.rlq.md) [`plot(`*`<witrlq>`*`)`](wca.rlq.md)
+  [`print(`*`<witrlq>`*`)`](wca.rlq.md) : Within-Class RLQ analysis
+- [`withinpca()`](withinpca.md) : Normed within principal component
+  analysis
+- [`witwit.coa()`](witwit.coa.md)
+  [`summary(`*`<witwit>`*`)`](witwit.coa.md)
+  [`witwitsepan()`](witwit.coa.md) : Internal Correspondence Analysis
+
+### Additional tools
+
+- [`loocv(`*`<between>`*`)`](loocv.bca.md)
+  [`print(`*`<bcaloocv>`*`)`](loocv.bca.md)
+  [`plot(`*`<bcaloocv>`*`)`](loocv.bca.md) :
+
+  Leave-one-out cross-validation for a `bca`
+
+- [`loocv(`*`<discrimin>`*`)`](loocv.discrimin.md)
+  [`print(`*`<discloocv>`*`)`](loocv.discrimin.md)
+  [`plot(`*`<discloocv>`*`)`](loocv.discrimin.md) :
+
+  Leave-one-out cross-validation for a `discrimin` analysis
+
+- [`randtest(`*`<between>`*`)`](randtest.between.md) : Monte-Carlo Test
+  on the between-groups inertia percentage (in C).
+
+- [`randtest(`*`<discrimin>`*`)`](randtest.discrimin.md) : Monte-Carlo
+  Test on a Discriminant Analysis (in C).
+
+- [`rtest(`*`<between>`*`)`](rtest.between.md) : Monte-Carlo Test on the
+  between-groups inertia percentage (in R).
+
+- [`rtest(`*`<discrimin>`*`)`](rtest.discrimin.md) : Monte-Carlo Test on
+  a Discriminant Analysis (in R).
+
+## Management of `dudi` objects
+
+These functions provides functionalities to manage objects of the class
+`dudi` (they can be used on the outputs od several methods to analyze
+one or two tables for instance).
+
+- [`as.dudi()`](dudi.md) [`print(`*`<dudi>`*`)`](dudi.md)
+  [`is.dudi()`](dudi.md) [`redo.dudi()`](dudi.md)
+  [`t(`*`<dudi>`*`)`](dudi.md) [`summary(`*`<dudi>`*`)`](dudi.md)
+  [`` `[`( ``*`<dudi>`*`)`](dudi.md) : Duality Diagram
+
+- [`scatter()`](scatter.md) [`biplot(`*`<dudi>`*`)`](scatter.md)
+  [`screeplot(`*`<dudi>`*`)`](scatter.md) : Graphical representation of
+  the outputs of a multivariate analysis
+
+- [`dist.dudi()`](dist.dudi.md) : Computation of the Distance Matrix
+  from a Statistical Triplet
+
+- [`inertia(`*`<dudi>`*`)`](inertia.dudi.md)
+  [`print(`*`<inertia>`*`)`](inertia.dudi.md)
+  [`summary(`*`<inertia>`*`)`](inertia.dudi.md) : Decomposition of
+  inertia (i.e. contributions) in multivariate methods
+
+- [`loocv(`*`<dudi>`*`)`](loocv.dudi.md) :
+
+  Leave-one-out cross-validation for a `dudi`
+
+- [`reconst()`](reconst.md) : Reconstitution of Data from a Duality
+  Diagram
+
+- [`supcol()`](supcol.md) : Projections of Supplementary Columns
+
+- [`suprow(`*`<coa>`*`)`](suprow.md) [`suprow(`*`<dudi>`*`)`](suprow.md)
+  [`predict(`*`<dudi>`*`)`](suprow.md)
+  [`suprow(`*`<pca>`*`)`](suprow.md) [`suprow(`*`<acm>`*`)`](suprow.md)
+  [`suprow(`*`<mix>`*`)`](suprow.md) [`suprow(`*`<fca>`*`)`](suprow.md)
+  : Projections of Supplementary Rows
+
+- [`testdim()`](testdim.md) : Function to perform a test of
+  dimensionality
+
+## K-table analysis
+
+Functions designed to manage and analyze data structured in several
+tables (a.k.a. multitable analysis)
+
+### Methods
+
+Functions to run the analysis
+
+- [`costatis()`](costatis.md) : STATIS and Co-Inertia : Analysis of a
+  series of paired ecological tables
+- [`foucart()`](foucart.md) [`plot(`*`<foucart>`*`)`](foucart.md)
+  [`print(`*`<foucart>`*`)`](foucart.md) : K-tables Correspondence
+  Analysis with the same rows and the same columns
+- [`mdpcoa()`](mdpcoa.md) [`kplotX.mdpcoa()`](mdpcoa.md)
+  [`prep.mdpcoa()`](mdpcoa.md) : Multiple Double Principal Coordinate
+  Analysis
+- [`mbpls()`](mbpls.md) : Multiblock partial least squares
+- [`mbpcaiv()`](mbpcaiv.md) : Multiblock principal component analysis
+  with instrumental variables
+- [`mcoa()`](mcoa.md) [`print(`*`<mcoa>`*`)`](mcoa.md)
+  [`summary(`*`<mcoa>`*`)`](mcoa.md) [`plot(`*`<mcoa>`*`)`](mcoa.md) :
+  Multiple CO-inertia Analysis
+- [`mfa()`](mfa.md) [`plot(`*`<mfa>`*`)`](mfa.md)
+  [`print(`*`<mfa>`*`)`](mfa.md) [`summary(`*`<mfa>`*`)`](mfa.md) :
+  Multiple Factorial Analysis
+- [`pta()`](pta.md) [`plot(`*`<pta>`*`)`](pta.md)
+  [`print(`*`<pta>`*`)`](pta.md) : Partial Triadic Analysis of a
+  K-tables
+- [`sepan()`](sepan.md) [`plot(`*`<sepan>`*`)`](sepan.md)
+  [`summary(`*`<sepan>`*`)`](sepan.md)
+  [`print(`*`<sepan>`*`)`](sepan.md) : Separated Analyses in a K-tables
+- [`statico()`](statico.md) : STATIS and Co-Inertia : Analysis of a
+  series of paired ecological tables
+- [`statis()`](statis.md) [`plot(`*`<statis>`*`)`](statis.md)
+  [`print(`*`<statis>`*`)`](statis.md) : STATIS, a method for analysing
+  K-tables
+
+### Graphics
+
+Functions to display the results of the analysis
+
+- [`kplot()`](kplot.md) : Generic Function for Multiple Graphs in a
+  K-tables Analysis
+- [`kplot(`*`<foucart>`*`)`](kplot.foucart.md) : Multiple Graphs for the
+  Foucart's Correspondence Analysis
+- [`kplot(`*`<mcoa>`*`)`](kplot.mcoa.md) : Multiple Graphs for a
+  Multiple Co-inertia Analysis
+- [`kplot(`*`<mfa>`*`)`](kplot.mfa.md) : Multiple Graphs for a Multiple
+  Factorial Analysis
+- [`kplot(`*`<pta>`*`)`](kplot.pta.md) : Multiple Graphs for a Partial
+  Triadic Analysis
+- [`kplot(`*`<sepan>`*`)`](kplot.sepan.md)
+  [`kplotsepan.coa()`](kplot.sepan.md) : Multiple Graphs for Separated
+  Analyses in a K-tables
+- [`kplot(`*`<statis>`*`)`](kplot.statis.md) : Multiple Graphs of a
+  STATIS Analysis
+- [`mdpcoa()`](mdpcoa.md) [`kplotX.mdpcoa()`](mdpcoa.md)
+  [`prep.mdpcoa()`](mdpcoa.md) : Multiple Double Principal Coordinate
+  Analysis
+- [`summary(`*`<multiblock>`*`)`](multiblock.md)
+  [`print(`*`<multiblock>`*`)`](multiblock.md) : Display and summarize
+  multiblock objects
+
+### Utilities
+
+Functions to manage objects of class `ktab`
+
+- [`c(`*`<ktab>`*`)`](ktab.md) [`` `[`( ``*`<ktab>`*`)`](ktab.md)
+  [`is.ktab()`](ktab.md) [`t(`*`<ktab>`*`)`](ktab.md)
+  [`row.names(`*`<ktab>`*`)`](ktab.md) [`tab.names()`](ktab.md)
+  [`col.names()`](ktab.md) [`ktab.util.names()`](ktab.md) : the class of
+  objects 'ktab' (K-tables)
+- [`ktab.data.frame()`](ktab.data.frame.md) : Creation of K-tables from
+  a data frame
+- [`ktab.list.df()`](ktab.list.df.md) : Creating a K-tables from a list
+  of data frames.
+- [`ktab.list.dudi()`](ktab.list.dudi.md) : Creation of a K-tables from
+  a list of duality diagrams
+- [`ktab.match2ktabs()`](ktab.match2ktabs.md) : STATIS and Co-Inertia :
+  Analysis of a series of paired ecological tables
+- [`ktab.within()`](ktab.within.md) : Process to go from a Within
+  Analysis to a K-tables
+- [`mdpcoa()`](mdpcoa.md) [`kplotX.mdpcoa()`](mdpcoa.md)
+  [`prep.mdpcoa()`](mdpcoa.md) : Multiple Double Principal Coordinate
+  Analysis
+- [`suprow(`*`<pta>`*`)`](suprow.pta.md) : Projections of Supplementary
+  Rows for a Partial Triadic Analysis of K-tables
+
+### Tests
+
+Functions to evaluate the significance of observed structures
+
+- [`costatis.randtest()`](costatis.randtest.md) : Monte-Carlo test on a
+  Costatis analysis (in C).
+- [`randboot(`*`<multiblock>`*`)`](randboot.multiblock.md) : Bootstraped
+  simulations for multiblock methods
+- [`testdim(`*`<multiblock>`*`)`](testdim.multiblock.md) : Selection of
+  the number of dimension by two-fold cross-validation for multiblock
+  methods
+- [`statico.krandtest()`](statico.krandtest.md) : Monte-Carlo test on a
+  Statico analysis (in C).
+
+## Distance methods
+
+- [`cailliez()`](cailliez.md) : Transformation to make Euclidean a
+  distance matrix
+- [`dist.binary()`](dist.binary.md) : Computation of Distance Matrices
+  for Binary Data
+- [`dist.dudi()`](dist.dudi.md) : Computation of the Distance Matrix
+  from a Statistical Triplet
+- [`dist.ktab()`](dist.ktab.md) [`ldist.ktab()`](dist.ktab.md)
+  [`kdist.cor()`](dist.ktab.md) [`prep.fuzzy()`](dist.ktab.md)
+  [`prep.binary()`](dist.ktab.md) [`prep.circular()`](dist.ktab.md) :
+  Mixed-variables coefficient of distance
+- [`dist.neig()`](dist.neig.md) : Computation of the Distance Matrix
+  associated to a Neighbouring Graph
+- [`dist.prop()`](dist.prop.md) : Computation of Distance Matrices of
+  Percentage Data
+- [`dist.quant()`](dist.quant.md) : Computation of Distance Matrices on
+  Quantitative Variables
+- [`as.taxo()`](as.taxo.md) [`dist.taxo()`](as.taxo.md) : Taxonomy
+- [`dudi.pco()`](dudi.pco.md) [`scatter(`*`<pco>`*`)`](dudi.pco.md) :
+  Principal Coordinates Analysis
+- [`kdist()`](kdist.md) : the class of objects 'kdist' (K distance
+  matrices)
+- [`kdist2ktab()`](kdist2ktab.md) : Transformation of K distance
+  matrices (object 'kdist') into K Euclidean representations (object
+  'ktab')
+- [`kdisteuclid()`](kdisteuclid.md) : a way to obtain Euclidean distance
+  matrices
+- [`mantel.randtest()`](mantel.randtest.md) : Mantel test (correlation
+  between two distance matrices (in C).)
+- [`mantel.rtest()`](mantel.rtest.md) : Mantel test (correlation between
+  two distance matrices (in R).)
+- [`mantelkdist()`](corkdist.md) [`RVkdist()`](corkdist.md)
+  [`plot(`*`<corkdist>`*`)`](corkdist.md) : Tests of randomization
+  between distances applied to 'kdist' objetcs
+- [`quasieuclid()`](quasieuclid.md) : Transformation of a distance
+  matrice to a Euclidean one
+- [`RVdist.randtest()`](RVdist.randtest.md) : Tests of randomization on
+  the correlation between two distance matrices (in R).
+- [`supdist()`](supdist.md) : Projection of additional items in a PCO
+  analysis
+- [`table.dist()`](table.dist.md) : Graph Display for Distance Matrices
+- [`is.euclid()`](is.euclid.md) [`summary(`*`<dist>`*`)`](is.euclid.md)
+  : Is a Distance Matrix Euclidean?
+- [`lingoes()`](lingoes.md) : Transformation of a Distance Matrix for
+  becoming Euclidean
+- [`mstree()`](mstree.md) : Minimal Spanning Tree
+- [`pcoscaled()`](pcoscaled.md) : Simplified Analysis in Principal
+  Coordinates
+
+## Graphics
+
+Functions to draw graphics. See functions of the package `adegraphics`
+for a more flexible implementation based on `lattice`.
+
+### 1D plot
+
+- [`sco.boxplot()`](sco.boxplot.md) : Representation of the link between
+  a variable and a set of qualitative variables
+- [`sco.class()`](sco.class.md) : 1D plot of a numeric score and a
+  factor with labels
+- [`sco.distri()`](sco.distri.md) : Representation by mean- standard
+  deviation of a set of weight distributions on a numeric score
+- [`sco.gauss()`](sco.gauss.md) : Relationships between one score and
+  qualitative variables
+- [`sco.quant()`](sco.quant.md) : Graph to Analyse the Relation between
+  a Score and Quantitative Variables
+- [`sco.label()`](sco.label.md) : 1D plot of a numeric score with labels
+- [`sco.match()`](sco.match.md) : 1D plot of a pair of numeric scores
+  with labels
+
+### 2D plot
+
+- [`s.arrow()`](s.arrow.md) : Plot of the factorial maps for the
+  projection of a vector basis
+- [`s.chull()`](s.chull.md) : Plot of the factorial maps with polygons
+  of contour by level of a factor
+- [`s.class()`](s.class.md) : Plot of factorial maps with representation
+  of point classes
+- [`s.corcircle()`](s.corcircle.md) : Plot of the factorial maps of a
+  correlation circle
+- [`s.distri()`](s.distri.md) : Plot of a frequency distribution
+- [`s.hist()`](s.hist.md) : Display of a scatterplot and its two
+  marginal histograms
+- [`s.image()`](s.image.md) : Graph of a variable using image and
+  contour
+- [`s.kde2d()`](s.kde2d.md) : Scatter Plot with Kernel Density Estimate
+- [`s.label()`](s.label.md) : Scatter Plot
+- [`s.logo()`](s.logo.md) : Representation of an object in a graph by a
+  picture
+- [`s.match()`](s.match.md) : Plot of Paired Coordinates
+- [`s.match.class()`](s.match.class.md) : Scatterplot of two sets of
+  coordinates and a partionning into classes
+- [`s.multinom()`](s.multinom.md) : Graph of frequency profiles (useful
+  for instance in genetic)
+- [`s.traject()`](s.traject.md) : Trajectory Plot
+- [`s.value()`](s.value.md) : Representation of a value in a graph
+
+### Other types of plot
+
+- [`dotcircle()`](dotcircle.md) : Representation of n values on a circle
+- [`table.cont()`](table.cont.md) : Plot of Contingency Tables
+- [`table.dist()`](table.dist.md) : Graph Display for Distance Matrices
+- [`table.paint()`](table.paint.md) : Plot of the arrays by grey levels
+- [`table.value()`](table.value.md) : Plot of the Arrays
+- [`triangle.plot()`](triangle.plot.md)
+  [`triangle.biplot()`](triangle.plot.md) : Triangular Plotting
+- [`triangle.class()`](triangle.class.md) : Triangular Representation
+  and Groups of points
+
+### Utilities
+
+These functions are mainly designed for internal use.
+
+- [`add.scatter()`](add.scatter.md)
+  [`add.scatter.eig()`](add.scatter.md) : Add graphics to an existing
+  plot
+- [`scatterutil`](scatterutil.md) [`scatterutil.base`](scatterutil.md)
+  [`scatterutil.sco`](scatterutil.md)
+  [`scatterutil.chull`](scatterutil.md)
+  [`scatterutil.eigen`](scatterutil.md)
+  [`scatterutil.ellipse`](scatterutil.md)
+  [`scatterutil.eti.circ`](scatterutil.md)
+  [`scatterutil.eti`](scatterutil.md)
+  [`scatterutil.grid`](scatterutil.md)
+  [`scatterutil.legend.bw.square`](scatterutil.md)
+  [`scatterutil.legend.square.grey`](scatterutil.md)
+  [`scatterutil.legendgris`](scatterutil.md)
+  [`scatterutil.scaling`](scatterutil.md)
+  [`scatterutil.star`](scatterutil.md)
+  [`scatterutil.sub`](scatterutil.md)
+  [`scatterutil.convrot90`](scatterutil.md) : Graphical utility
+  functions
+- [`s.logo()`](s.logo.md) : Representation of an object in a graph by a
+  picture
+
+### Diversity
+
+Functions focusing on the measurment of diversity. See also the package
+`adiv` for more functionalities.
+
+- [`amova()`](amova.md) [`print(`*`<amova>`*`)`](amova.md) : Analysis of
+  molecular variance
+- [`apqe()`](apqe.md) [`print(`*`<apqe>`*`)`](apqe.md) : Apportionment
+  of Quadratic Entropy
+- [`disc()`](disc.md) : Rao's dissimilarity coefficient
+- [`divc()`](divc.md) : Rao's diversity coefficient also called
+  quadratic entropy
+- [`divcmax()`](divcmax.md) : Maximal value of Rao's diversity
+  coefficient also called quadratic entropy
+- [`dpcoa()`](dpcoa.md) [`plot(`*`<dpcoa>`*`)`](dpcoa.md)
+  [`print(`*`<dpcoa>`*`)`](dpcoa.md)
+  [`summary(`*`<dpcoa>`*`)`](dpcoa.md) : Double principal coordinate
+  analysis
+- [`originality()`](originality.md) : Originality of a species
+- [`randtest(`*`<dpcoa>`*`)`](randtest.dpcoa.md) : Permutation test for
+  double principal coordinate analysis (DPCoA)
+- [`randtest(`*`<amova>`*`)`](randtest.amova.md) : Permutation tests on
+  an analysis of molecular variance (in C).
+
+### Spatial
+
+Functions focusing on the analysis of spatial data. See also the package
+`adespatial` for more functionalities.
+
+- [`gridrowcol()`](gridrowcol.md) : Complete regular grid analysis
+- [`mld()`](mld.md) [`haar2level()`](mld.md) : Multi Level Decomposition
+  of unidimensional data
+- [`mstree()`](mstree.md) : Minimal Spanning Tree
+- [`orthobasis.neig()`](orthobasis.md)
+  [`orthobasis.line()`](orthobasis.md)
+  [`orthobasis.circ()`](orthobasis.md)
+  [`orthobasis.mat()`](orthobasis.md)
+  [`orthobasis.haar()`](orthobasis.md)
+  [`print(`*`<orthobasis>`*`)`](orthobasis.md)
+  [`plot(`*`<orthobasis>`*`)`](orthobasis.md)
+  [`summary(`*`<orthobasis>`*`)`](orthobasis.md)
+  [`is.orthobasis()`](orthobasis.md) : Orthonormal basis for orthonormal
+  transform
+- [`neig()`](neig.md) [`scores.neig()`](neig.md)
+  [`print(`*`<neig>`*`)`](neig.md) [`summary(`*`<neig>`*`)`](neig.md)
+  [`nb2neig()`](neig.md) [`neig2nb()`](neig.md) [`neig2mat()`](neig.md)
+  : Neighbourhood Graphs
+
+## Phylogenetic methods
+
+These functions allows to manage phylogenetic data. See functions of the
+package `adephylo` for a more flexible implementation based on `ape` and
+`phylobase`.
+
+- [`dotchart.phylog()`](dotchart.phylog.md) : Representation of many
+  quantitative variables in front of a phylogenetic tree
+- [`plot(`*`<phylog>`*`)`](plot.phylog.md)
+  [`radial.phylog()`](plot.phylog.md) [`enum.phylog()`](plot.phylog.md)
+  : Plot phylogenies
+- [`gearymoran()`](gearymoran.md) : Moran's I and Geary'c randomization
+  tests for spatial and phylogenetic autocorrelation
+- [`newick2phylog()`](newick2phylog.md)
+  [`hclust2phylog()`](newick2phylog.md)
+  [`taxo2phylog()`](newick2phylog.md)
+  [`newick2phylog.addtools()`](newick2phylog.md) : Create phylogeny
+- [`print(`*`<phylog>`*`)`](phylog.md) [`phylog.extract()`](phylog.md)
+  [`phylog.permut()`](phylog.md) : Phylogeny
+- [`symbols.phylog()`](symbols.phylog.md) : Representation of a
+  quantitative variable in front of a phylogenetic tree
+- [`table.phylog()`](table.phylog.md) : Plot arrays in front of a
+  phylogenetic tree
+- [`variance.phylog()`](variance.phylog.md) : The phylogenetic ANOVA
+- [`PI2newick()`](PI2newick.md) : Import data files from Phylogenetic
+  Independance Package
+
+## Tests
+
+Utilities functions to manage results of randomization procedures.
+
+- [`as.krandboot()`](randboot.md)
+  [`print(`*`<krandboot>`*`)`](randboot.md)
+  [`as.randboot()`](randboot.md)
+  [`print(`*`<randboot>`*`)`](randboot.md) [`randboot()`](randboot.md) :
+  Bootstrap simulations
+- [`as.krandtest()`](krandtest.md)
+  [`plot(`*`<krandtest>`*`)`](krandtest.md)
+  [`print(`*`<krandtest>`*`)`](krandtest.md)
+  [`` `[`( ``*`<krandtest>`*`)`](krandtest.md)
+  [`` `[[`( ``*`<krandtest>`*`)`](krandtest.md) : Class of the
+  Permutation Tests (in C).
+- [`as.krandxval()`](randxval.md)
+  [`print(`*`<krandxval>`*`)`](randxval.md)
+  [`as.randxval()`](randxval.md)
+  [`print(`*`<randxval>`*`)`](randxval.md) : Two-fold cross-validation
+- [`randtest()`](randtest.md) [`as.randtest()`](randtest.md)
+  [`plot(`*`<randtest>`*`)`](randtest.md)
+  [`print(`*`<randtest>`*`)`](randtest.md) : Class of the Permutation
+  Tests (in C).
+- [`rtest()`](rtest.md) : Class of the Permutation Tests (in R).
+
+## Misc
+
+- [`ade4-package`](ade4.package.md) [`ade4`](ade4.package.md) : The ade4
+  package
+- [`dudi.acm()`](dudi.acm.md) [`acm.burt()`](dudi.acm.md)
+  [`acm.disjonctif()`](dudi.acm.md)
+  [`boxplot(`*`<acm>`*`)`](dudi.acm.md) : Multiple Correspondence
+  Analysis
+- [`adegraphicsLoaded()`](adegraphicsLoaded.md) : Utility function to
+  test if the adegraphics package is loaded
+- [`bicenter.wt()`](bicenter.wt.md) : Double Weighted Centring
+- [`covwt()`](scalewt.md) [`varwt()`](scalewt.md)
+  [`scalewt()`](scalewt.md) [`meanfacwt()`](scalewt.md)
+  [`varfacwt()`](scalewt.md) [`covfacwt()`](scalewt.md)
+  [`scalefacwt()`](scalewt.md) : Compute or scale data using (weighted)
+  means, variances and covariances (possibly for the levels of a factor)
+- [`dagnelie.test()`](dagnelie.test.md) : Dagnelie multinormality test
+- [`uniquewt.df()`](uniquewt.df.md) : Elimination of Duplicated Rows in
+  a Array
+
+## Datasets
+
+Datasets available in ade4. You can access them by typing
+`r data(dataset)`.
+
+- [`abouheif.eg`](abouheif.eg.md) : Phylogenies and quantitative traits
+  from Abouheif
+- [`acacia`](acacia.md) : Spatial pattern analysis in plant communities
+- [`aminoacyl`](aminoacyl.md) : Codon usage
+- [`apis108`](apis108.md) : Allelic frequencies in ten honeybees
+  populations at eight microsatellites loci
+- [`aravo`](aravo.md) : Distribution of Alpine plants in Aravo
+  (Valloire, France)
+- [`ardeche`](ardeche.md) : Fauna Table with double (row and column)
+  partitioning
+- [`arrival`](arrival.md) : Arrivals at an intensive care unit
+- [`atlas`](atlas.md) : Small Ecological Dataset
+- [`atya`](atya.md) : Genetic variability of Cacadors
+- [`avijons`](avijons.md) : Bird species distribution
+- [`avimedi`](avimedi.md) : Fauna Table for Constrained Ordinations
+- [`aviurba`](aviurba.md) : Ecological Tables Triplet
+- [`bacteria`](bacteria.md) : Genomes of 43 Bacteria
+- [`banque`](banque.md) : Table of Factors
+- [`baran95`](baran95.md) : African Estuary Fishes
+- [`bf88`](bf88.md) : Cubic Ecological Data
+- [`bordeaux`](bordeaux.md) : Wine Tasting
+- [`bsetal97`](bsetal97.md) : Ecological and Biological Traits
+- [`buech`](buech.md) : Buech basin
+- [`butterfly`](butterfly.md) : Genetics-Ecology-Environment Triple
+- [`capitales`](capitales.md) : Road Distances
+- [`carni19`](carni19.md) : Phylogeny and quantative trait of carnivora
+- [`carni70`](carni70.md) : Phylogeny and quantitative traits of
+  carnivora
+- [`carniherbi49`](carniherbi49.md) : Taxonomy, phylogenies and
+  quantitative traits of carnivora and herbivora
+- [`casitas`](casitas.md) : Enzymatic polymorphism in Mus musculus
+- [`chatcat`](chatcat.md) : Qualitative Weighted Variables
+- [`chats`](chats.md) : Pair of Variables
+- [`chazeb`](chazeb.md) : Charolais-Zebus
+- [`chevaine`](chevaine.md) : Enzymatic polymorphism in Leuciscus
+  cephalus
+- [`chickenk`](chickenk.md) : Veterinary epidemiological study to assess
+  the risk factors for losses in broiler chickens
+- [`clementines`](clementines.md) : Fruit Production
+- [`cnc2003`](cnc2003.md) : Frequenting movie theaters in France in 2003
+- [`coleo`](coleo.md) : Table of Fuzzy Biological Traits
+- [`corvus`](corvus.md) : Corvus morphology
+- [`deug`](deug.md) : Exam marks for some students
+- [`doubs`](doubs.md) : Pair of Ecological Tables
+- [`dunedata`](dunedata.md) : Dune Meadow Data
+- [`ecg`](ecg.md) : Electrocardiogram data
+- [`ecomor`](ecomor.md) : Ecomorphological Convergence
+- [`elec88`](elec88.md) : Electoral Data
+- [`escopage`](escopage.md) : K-tables of wine-tasting
+- [`euro123`](euro123.md) : Triangular Data
+- [`fission`](fission.md) : Fission pattern and heritable morphological
+  traits
+- [`friday87`](friday87.md) : Faunistic K-tables
+- [`fruits`](fruits.md) : Pair of Tables
+- [`ggtortoises`](ggtortoises.md) : Microsatellites of Galapagos
+  tortoises populations
+- [`granulo`](granulo.md) : Granulometric Curves
+- [`hdpg`](hdpg.md) : Genetic Variation In Human Populations
+- [`houmousr`](houmousr.md) : Morphometric data set
+- [`housetasks`](housetasks.md) : Contingency Table
+- [`humDNAm`](humDNAm.md) : human mitochondrial DNA restriction data
+- [`ichtyo`](ichtyo.md) : Point sampling of fish community
+- [`irishdata`](irishdata.md) : Geary's Irish Data
+- [`julliot`](julliot.md) : Seed dispersal
+- [`jv73`](jv73.md) : K-tables Multi-Regions
+- [`kcponds`](kcponds.md) : Ponds in a nature reserve
+- [`lascaux`](lascaux.md) : Genetic/Environment and types of variables
+- [`lizards`](lizards.md) : Phylogeny and quantitative traits of lizards
+- [`macaca`](macaca.md) : Landmarks
+- [`macon`](macon.md) : Wine Tasting
+- [`macroloire`](macroloire.md) : Assemblages of Macroinvertebrates in
+  the Loire River (France)
+- [`mafragh`](mafragh.md) : Phyto-Ecological Survey
+- [`maples`](maples.md) : Phylogeny and quantitative traits of flowers
+- [`mariages`](mariages.md) : Correspondence Analysis Table
+- [`meau`](meau.md) : Ecological Data : sites-variables, sites-species,
+  where and when
+- [`meaudret`](meaudret.md) : Ecological Data : sites-variables,
+  sites-species, where and when
+- [`microsatt`](microsatt.md) : Genetic Relationships between cattle
+  breeds with microsatellites
+- [`mjrochet`](mjrochet.md) : Phylogeny and quantitative traits of
+  teleos fishes
+- [`mollusc`](mollusc.md) : Faunistic Communities and Sampling
+  Experiment
+- [`monde84`](monde84.md) : Global State of the World in 1984
+- [`morphosport`](morphosport.md) : Athletes' Morphology
+- [`newick.eg`](newick.eg.md) : Phylogenetic trees in Newick format
+- [`njplot`](njplot.md) : Phylogeny and trait of bacteria
+- [`olympic`](olympic.md) : Olympic Decathlon
+- [`oribatid`](oribatid.md) : Oribatid mite
+- [`ours`](ours.md) : A table of Qualitative Variables
+- [`palm`](palm.md) : Phylogenetic and quantitative traits of amazonian
+  palm trees
+- [`pap`](pap.md) : Taxonomy and quantitative traits of carnivora
+- [`pcw`](pcw.md) : Distribution of of tropical trees along the Panama
+  canal
+- [`perthi02`](perthi02.md) : Contingency Table with a partition in
+  Molecular Biology
+- [`piosphere`](piosphere.md) : Plant traits response to grazing
+- [`presid2002`](presid2002.md) : Results of the French presidential
+  elections of 2002
+- [`procella`](procella.md) : Phylogeny and quantitative traits of birds
+- [`rankrock`](rankrock.md) : Ordination Table
+- [`rhizobium`](rhizobium.md) : Genetic structure of two nitrogen fixing
+  bacteria influenced by geographical isolation and host specialization
+- [`rhone`](rhone.md) : Physico-Chemistry Data
+- [`rpjdl`](rpjdl.md) : Avifauna and Vegetation
+- [`santacatalina`](santacatalina.md) : Indirect Ordination
+- [`sarcelles`](sarcelles.md) : Array of Recapture of Rings
+- [`seconde`](seconde.md) : Students and Subjects
+- [`skulls`](skulls.md) : Morphometric Evolution
+- [`steppe`](steppe.md) : Transect in the Vegetation
+- [`syndicats`](syndicats.md) : Two Questions asked on a Sample of 1000
+  Respondents
+- [`t3012`](t3012.md) : Average temperatures of 30 French cities
+- [`tarentaise`](tarentaise.md) : Mountain Avifauna
+- [`taxo.eg`](taxo.eg.md) : Examples of taxonomy
+- [`tintoodiel`](tintoodiel.md) : Tinto and Odiel estuary geochemistry
+- [`tithonia`](tithonia.md) : Phylogeny and quantitative traits of
+  flowers
+- [`tortues`](tortues.md) : Morphological Study of the Painted Turtle
+- [`toxicity`](toxicity.md) : Homogeneous Table
+- [`trichometeo`](trichometeo.md) : Pair of Ecological Data
+- [`ungulates`](ungulates.md) : Phylogeny and quantitative traits of
+  ungulates.
+- [`vegtf`](vegtf.md) : Vegetation in Trois-Fontaines
+- [`veuvage`](veuvage.md) : Example for Centring in PCA
+- [`westafrica`](westafrica.md) : Freshwater fish zoogeography in west
+  Africa
+- [`woangers`](woangers.md) : Plant assemblages in woodlands of the
+  conurbation of Angers (France)
+- [`worksurv`](worksurv.md) : French Worker Survey (1970)
+- [`yanomama`](yanomama.md) : Distance Matrices
+- [`zealand`](zealand.md) : Road distances in New-Zealand
+
+## Deprecated
+
+- [`ade4-deprecated`](ade4-deprecated.md) : Deprecated functions in ade4
+- [`plot(`*`<between>`*`)`](plot.between.md)
+  [`print(`*`<between>`*`)`](plot.between.md)
+  [`plot(`*`<betcoi>`*`)`](plot.between.md)
+  [`print(`*`<betcoi>`*`)`](plot.between.md)
+  [`summary(`*`<between>`*`)`](plot.between.md) : Between-Class Analysis
+- [`plot(`*`<within>`*`)`](plot.within.md)
+  [`print(`*`<within>`*`)`](plot.within.md)
+  [`plot(`*`<witcoi>`*`)`](plot.within.md)
+  [`print(`*`<witcoi>`*`)`](plot.within.md)
+  [`summary(`*`<within>`*`)`](plot.within.md) : Within-Class Analysis
+
+# Articles
+
+### All vignettes
+
+- [ade4 book](book.md):
+- [Analysing changes in co-structures](Chap2Ktables.md):
+- [Description of species-environment relationships](Chap2tables.md):
+- [Taking into account groups of sites](ChapBetGr.md):
+- [Description of environmental variables
+  structures](ChapEnvVarStruct.md):
+- [Analysing Changes in Structures](ChapKtables.md):
+- [Description of species structures](ChapSpeciesStruct.md):
+- [FAQ](faq.md):
+- [Getting started with ade4](get_started.md):
+- [Installing \`ade4\`](install.md):
+- [Bibliographic references](papers.md):
+- [Related packages](related.md):

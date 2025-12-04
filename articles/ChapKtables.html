@@ -379,7 +379,7 @@ biplots (see the following Figure).</p>
 <span>    col <span class="op">=</span> <span class="st">"red"</span>, psub.cex <span class="op">=</span> <span class="fl">2</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/superpose.html" class="external-link">superpose</a></span><span class="op">(</span><span class="va">kp1</span>, <span class="va">tr1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">s1</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapKtables_files/figure-html/unnamed-chunk-5-1.png" width="600" height="600"></p>
+<p><img src="ChapKtables_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" width="600" height="600"></p>
 <figcaption align="center"><p>Plot of the four separate PCA (one for each season) of the
 <code>meaudret</code> data set. Physico-chemical variables are
 represented by their labels with arrows from the origin, and the five
@@ -497,7 +497,7 @@ have variables in columns, and the PTA is computed with the
 <span><span class="va">kta1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ktab.within.html">ktab.within</a></span><span class="op">(</span><span class="va">wit1</span>, colnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"S1"</span>, <span class="st">"S2"</span>, <span class="st">"S3"</span>, <span class="st">"S4"</span>, <span class="st">"S5"</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">pta1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pta.html">pta</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">kta1</span><span class="op">)</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">pta1</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-6-1.png" width="600" height="600"><figcaption align="center"><p>Plot of the PTA of the <code>meaudret</code> data set (Interstructure
+<img src="ChapKtables_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Plot of the PTA of the <code>meaudret</code> data set (Interstructure
 and Compromise steps).</p>
 </figcaption><p>The <code>plot</code> function draws the final Figure. The
 Interstructure graph (top-left) shows that the winter table structure is
@@ -516,7 +516,7 @@ principal axes) differs from the structures of the others but
 interpretation is easier.</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/kplot.html">kplot</a></span><span class="op">(</span><span class="va">pta1</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-7-1.png" width="600" height="600"><figcaption align="center"><p>Plot of the PTA of the <code>meaudret</code> data set (Intrastructure
+<img src="ChapKtables_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Plot of the PTA of the <code>meaudret</code> data set (Intrastructure
 step). The first column of graphs shows the projection of the principal
 axes of the PCA of each table into the PTA. The second column shows the
 factor map of sites. The third column shows the factor map of
@@ -545,7 +545,7 @@ it is distorted in each table.</p>
 <span><span class="va">s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/superpose.html" class="external-link">superpose</a></span><span class="op">(</span><span class="va">tr1</span>, <span class="va">la1</span><span class="op">)</span></span>
 <span><span class="va">s2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/superpose.html" class="external-link">superpose</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">ar1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">s2</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-8-1.png" width="600" height="600"><figcaption align="center"><p>Plot of the PTA of the <code>meaudret</code> data set (Intrastructure
+<img src="ChapKtables_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Plot of the PTA of the <code>meaudret</code> data set (Intrastructure
 step) split by season.</p>
 </figcaption>
 </div>
@@ -570,7 +570,7 @@ method:</p>
 <code class="sourceCode R"><span><span class="va">fou1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/foucart.html">foucart</a></span><span class="op">(</span><span class="va">bf88</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span>, nf <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">fou1</span>, psub.cex <span class="op">=</span> <span class="fl">2</span>, col.plabels.col <span class="op">=</span> <span class="st">"red"</span>, </span>
 <span>    colB.plabels.col <span class="op">=</span> <span class="st">"red"</span>, rowB.plabels.optim <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-9-1.png" width="600" height="600"><figcaption align="center"><p>Plot of the Foucart COA of the <code>bf88</code> data set.</p>
+<img src="ChapKtables_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Plot of the Foucart COA of the <code>bf88</code> data set.</p>
 </figcaption><p>This Figure is a summary of the Common structure and of the
 Intrastructure of this analysis. The two graphs on the top of the figure
 are the row and column graphs of the Common structure (mean of the
@@ -592,7 +592,7 @@ positions changes along the vegetation gradient.</p>
 <span>    label <span class="op">=</span> <span class="va">fou1</span><span class="op">$</span><span class="va">TC</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span><span class="op">)</span>, row.plabels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>cex <span class="op">=</span> <span class="fl">2</span>, </span>
 <span>    label <span class="op">=</span> <span class="va">fou1</span><span class="op">$</span><span class="va">TL</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span>, plabels.boxes.draw <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>, </span>
 <span>    psub.cex <span class="op">=</span> <span class="fl">3</span>, pgrid.text.cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-10-1.png" width="600" height="400"><figcaption align="center"><p><code>kplot</code> of the Foucart COA of the <code>bf88</code> data
+<img src="ChapKtables_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" width="600" height="400"><figcaption align="center"><p><code>kplot</code> of the Foucart COA of the <code>bf88</code> data
 set.</p>
 </figcaption><p>The final interpretation is made easier on the next Figure, where
 only the coordinates of the four regions in the Intrastructure is kept.
@@ -607,7 +607,7 @@ environments.</p>
 <span>    chullSize <span class="op">=</span> <span class="fl">1</span>, starSize <span class="op">=</span> <span class="fl">0</span>, ellipseSize <span class="op">=</span> <span class="fl">0</span>, plabels.cex <span class="op">=</span> <span class="fl">0</span>,</span>
 <span>    plegend.drawKey <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">pols</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">fou1</span><span class="op">$</span><span class="va">Tco</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-11-1.png" width="600" height="600"><figcaption align="center"><p>Interpretation of Foucart COA of the <code>bf88</code> data set.</p>
+<img src="ChapKtables_files/figure-html/unnamed-chunk-11-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Interpretation of Foucart COA of the <code>bf88</code> data set.</p>
 </figcaption>
 </div>
 <div class="section level2">
@@ -653,7 +653,7 @@ is then built with the <code>ktab.data.frame</code> function:</p>
 <span>    tabnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">friday87</span><span class="op">$</span><span class="va">tab.names</span>, <span class="st">"Environment"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">sep1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/sepan.html">sepan</a></span><span class="op">(</span><span class="va">kta1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">sep1</span>, psub.cex <span class="op">=</span> <span class="fl">2</span>, paxes.draw <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-12-1.png" width="800" height="600"><figcaption align="center"><p>Eigenvalues of the separate analyses of the <code>friday87</code>
+<img src="ChapKtables_files/figure-html/unnamed-chunk-12-1.png" class="r-plt" width="800" height="600"><figcaption align="center"><p>Eigenvalues of the separate analyses of the <code>friday87</code>
 data set.</p>
 </figcaption><p>This Figure shows the eigenvalues barcharts of the 11 separate
 analyses (one for each table). STATIS measures the importance of a table
@@ -692,7 +692,7 @@ Hydracarina.</p>
 <span>    psub <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>text <span class="op">=</span> <span class="st">"Eigenvalues"</span>, cex<span class="op">=</span><span class="fl">2</span><span class="op">)</span> , plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">cs2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.corcircle.html">s.corcircle</a></span><span class="op">(</span><span class="va">statis1</span><span class="op">$</span><span class="va">RV.coo</span>, pbackground.box <span class="op">=</span> <span class="cn">FALSE</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">cs2</span>, <span class="va">bc2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.55</span>, <span class="fl">0.45</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-14-1.png" width="400" height="400"><figcaption align="center"><p>STATIS analysis of the <code>friday87</code> data set: eigenvalues
+<img src="ChapKtables_files/figure-html/unnamed-chunk-14-1.png" class="r-plt" width="400" height="400"><figcaption align="center"><p>STATIS analysis of the <code>friday87</code> data set: eigenvalues
 barchart and correlation circle of the Interstructure.</p>
 </figcaption><p>The analysis of the Compromise gives a second eigenvalues barchart
 with two prominent eigenvalues. These values can be found in
@@ -706,7 +706,7 @@ with two prominent eigenvalues. These values can be found in
 <span>    pbackground.box <span class="op">=</span> <span class="cn">FALSE</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">slC</span>, <span class="va">ccC</span>, <span class="va">bcC</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>,</span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.35</span>, <span class="fl">0</span>, <span class="fl">0.65</span>, <span class="fl">0.4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-15-1.png" width="800" height="400"><figcaption align="center"><p>Compromise of the STATIS analysis of the <code>friday87</code> data
+<img src="ChapKtables_files/figure-html/unnamed-chunk-15-1.png" class="r-plt" width="800" height="400"><figcaption align="center"><p>Compromise of the STATIS analysis of the <code>friday87</code> data
 set: eigenvalues barchart (middle), ponds factor map (left), and
 environmental variables (right).</p>
 </figcaption><p>The factor map of the Compromise for the 16 ponds (left) is drawn
@@ -738,7 +738,7 @@ the species data (excluding the environmental variables table).</p>
 <span>          pgrid.text.cex <span class="op">=</span> <span class="fl">2</span>, plabels.cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="va">glc</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-16-1.png" width="800" height="600"><figcaption align="center"><p>Distribution of the abundance of the 91 species in the 16 ponds.</p>
+<img src="ChapKtables_files/figure-html/unnamed-chunk-16-1.png" class="r-plt" width="800" height="600"><figcaption align="center"><p>Distribution of the abundance of the 91 species in the 16 ponds.</p>
 </figcaption><p>The <code>for</code> loop operates on the 10 tables of the
 <code>ktab</code> (the 10 species groups), drawing one graph for each
 group. The resulting 10 graphs are collected in the <code>glc</code>
@@ -762,7 +762,7 @@ and shows which species is more abundant (or which environmental
 variable is higher) in each pond.</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">kp1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kplot.html">kplot</a></span><span class="op">(</span><span class="va">statis1</span>, plabels.cex <span class="op">=</span> <span class="fl">1.5</span>, psub.cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-17-1.png" width="800" height="600"><figcaption align="center"><p>Columns Compromise plot of the STATIS analysis.</p>
+<img src="ChapKtables_files/figure-html/unnamed-chunk-17-1.png" class="r-plt" width="800" height="600"><figcaption align="center"><p>Columns Compromise plot of the STATIS analysis.</p>
 </figcaption><p>The generic plot of the STATIS analysis (<code>plot</code> function)
 is a collection made of the Interstructure plot (top-left), the rows
 (ponds) Compromise plot (top-right), the <code>Typological value</code>
@@ -773,7 +773,7 @@ projection of the first principal vector of each table on the Compromise
 factor map.</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">statis1</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-18-1.png" width="600" height="600"><figcaption align="center"><p>Generic plot of the <code>statis</code> analysis of the
+<img src="ChapKtables_files/figure-html/unnamed-chunk-18-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Generic plot of the <code>statis</code> analysis of the
 <code>friday87</code> data set.</p>
 </figcaption>
 </div>
@@ -798,7 +798,7 @@ compute a MFA. All the outputs of this function are grouped in a
 <code class="sourceCode R"><span><span class="va">afm1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mfa.html">mfa</a></span><span class="op">(</span><span class="va">kta1</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span>, nf <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">afm1</span>, comp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>plabels.boxes.draw <span class="op">=</span> <span class="cn">FALSE</span>, </span>
 <span>    psub.position <span class="op">=</span> <span class="st">"topright"</span><span class="op">)</span>, pgrid.text.pos <span class="op">=</span> <span class="st">"bottomright"</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-19-1.png" width="600" height="600"><figcaption align="center"><p>Generic plot of the Multiple Factor Analysis of the
+<img src="ChapKtables_files/figure-html/unnamed-chunk-19-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Generic plot of the Multiple Factor Analysis of the
 <code>friday87</code> data set.</p>
 </figcaption><p>This Figure shows the results of MFA on the <code>friday87</code>
 data set. The eigenvalues barchart is very similar to the eigenvalues
@@ -818,7 +818,7 @@ Although computations are completely different, it is also very similar
 to the Compromise plot of STATIS.</p>
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">afm1</span><span class="op">$</span><span class="va">li</span>, plabels.optim <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-20-1.png" width="600" height="600"><figcaption align="center"><p>Plot of the 16 ponds in the MFA of the <code>friday87</code> data
+<img src="ChapKtables_files/figure-html/unnamed-chunk-20-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Plot of the 16 ponds in the MFA of the <code>friday87</code> data
 set.</p>
 </figcaption><p>It is possible to draw a map of sites (ponds) for each table (taxa),
 in the same way as in STATIS trajectories. The coordinates of the rows
@@ -830,7 +830,7 @@ composition within each pond, while the second one allows to compare the
 distribution of species in the ponds for each taxon.</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/s.class.html">s.class</a></span><span class="op">(</span><span class="va">afm1</span><span class="op">$</span><span class="va">lisup</span>, <span class="va">afm1</span><span class="op">$</span><span class="va">TL</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/row.names.html" class="external-link">row.names</a></span><span class="op">(</span><span class="va">afm1</span><span class="op">$</span><span class="va">tab</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-21-1.png" width="600" height="600"><figcaption align="center"><p>Plot of the 16 ponds for the eleven taxa in the MFA of
+<img src="ChapKtables_files/figure-html/unnamed-chunk-21-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Plot of the 16 ponds for the eleven taxa in the MFA of
 <code>friday87</code> data.</p>
 </figcaption><p>In the first Figure, the coordinates of the rows (ponds) for all the
 tables (taxa) are grouped by pond. A star and an ellipse are drawn for
@@ -842,7 +842,7 @@ figure shows that the species composition of ponds can be very
 different, some ponds sheltering particular taxa.</p>
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">kp2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kplot.html">kplot</a></span><span class="op">(</span><span class="va">afm1</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-22-1.png" width="800" height="600"><figcaption align="center"><p>Plot of the 16 ponds for the eleven taxa in the Multiple Factor
+<img src="ChapKtables_files/figure-html/unnamed-chunk-22-1.png" class="r-plt" width="800" height="600"><figcaption align="center"><p>Plot of the 16 ponds for the eleven taxa in the Multiple Factor
 Analysis of the <code>friday87</code> data set. The coordinates of
 species are split by taxon (plus the set of environmental
 variables).</p>
@@ -920,7 +920,7 @@ clouds, but the optimality of the variables representation is lost.</p>
 an inversion of the second axis.</p>
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">mcoa1</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-24-1.png" width="600" height="600"><figcaption align="center"><p>Generic plot of the Multiple Coinertia Analysis of the
+<img src="ChapKtables_files/figure-html/unnamed-chunk-24-1.png" class="r-plt" width="600" height="600"><figcaption align="center"><p>Generic plot of the Multiple Coinertia Analysis of the
 <code>friday87</code> data set.</p>
 </figcaption><p>The <code>kplot</code> of MCOA compares the projection of the cloud
 of points in each space with the synthetic typology (called
@@ -930,7 +930,7 @@ faunistic
 to an environmental variables table (Concordance Analysis).</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/kplot.html">kplot</a></span><span class="op">(</span><span class="va">mcoa1</span><span class="op">)</span></span></code></pre></div>
-<img src="ChapKtables_files/figure-html/unnamed-chunk-25-1.png" width="600" height="800"><figcaption align="center"><p><code>kplot</code> of the Multiple Coinertia Analysis of the
+<img src="ChapKtables_files/figure-html/unnamed-chunk-25-1.png" class="r-plt" width="600" height="800"><figcaption align="center"><p><code>kplot</code> of the Multiple Coinertia Analysis of the
 <code>friday87</code> data set.</p>
 </figcaption>
 </div>
@@ -1008,7 +1008,7 @@ Co-structures”) is also based of this concept.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

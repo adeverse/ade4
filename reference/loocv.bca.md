@@ -64,9 +64,10 @@ for BGA- `Oij_XVal`: the mean overlap index for cross-validation-
 
 ## References
 
-Thioulouse J, Renaud S, Dufour AB, Dray S. Overcoming the Spurious
-Groups Problem in Between-Group PCA. Evolutionary Biology (2021).
-(Accepted).
+Thioulouse J, Renaud S, Dufour AB, Dray S. (2021) Overcoming the
+Spurious Groups Problem in Between-Group PCA. Evolutionary Biology,
+48(4), 458-471.
+[doi:10.1007/s11692-021-09550-0](https://doi.org/10.1007/s11692-021-09550-0)
 
 Cardini A, Polly D. Cross-validated Between Group PCA Scatterplots: A
 Solution to Spurious Group Separation ? Evolutionary Biology (2020)

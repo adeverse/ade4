@@ -181,7 +181,7 @@ representation:</p>
 <span><span class="co">#&gt; [2,] 4530 934 6.176 6900 86 110 422 620 180 124 167</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/table.value.html">table.value</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/scale.html" class="external-link">scale</a></span><span class="op">(</span><span class="va">env</span><span class="op">)</span>, symbol <span class="op">=</span> <span class="st">"circle"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" width="600" height="600"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" alt="" width="600" height="600"></p>
 <p>As the spatial coordinates are also available, sites can be plotted
 in the geographical space. The <code>s.label</code> function can be used
 to draw the position of sites, with the site number as label and with
@@ -191,7 +191,7 @@ the <code>s.traject</code> to draw lines between sites.</p>
 <span><span class="va">sl1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">xy</span>, ppoints.cex <span class="op">=</span> <span class="fl">0</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">st1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.traject.html">s.traject</a></span><span class="op">(</span><span class="va">xy</span>, ppoints.cex <span class="op">=</span> <span class="fl">0</span>, plabels.cex <span class="op">=</span> <span class="fl">0</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/superpose.html" class="external-link">superpose</a></span><span class="op">(</span><span class="va">st1</span>, <span class="va">sl1</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> </span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="500" height="500"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" alt="" width="500" height="500"></p>
 <p>To facilitate the interpretation of environmental data, information
 of both figures can be combined by creating thematic maps for all
 variables. To achieve this, we use the <code>s.value</code> function,
@@ -207,7 +207,7 @@ circles.</p>
 <code class="sourceCode R"><span><span class="va">mypal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/colorRamp.html" class="external-link">colorRampPalette</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#EDF8FB"</span>, <span class="st">"#006D2C"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/s.value.html">s.value</a></span><span class="op">(</span><span class="va">xy</span>, <span class="va">doubs</span><span class="op">$</span><span class="va">env</span>, pgrid.draw <span class="op">=</span> <span class="cn">FALSE</span>, porigin.draw <span class="op">=</span> <span class="cn">FALSE</span>, plegend.drawKey <span class="op">=</span> <span class="cn">FALSE</span>, </span>
 <span>psub.cex <span class="op">=</span> <span class="fl">2</span>, method <span class="op">=</span> <span class="st">"color"</span>, symbol <span class="op">=</span> <span class="st">"circle"</span>, ppalette.quanti <span class="op">=</span> <span class="va">mypal</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="600" height="450"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" alt="" width="600" height="450"></p>
 <p>The maps presented here highlights that some environmental variables
 have similar spatial distributions (e.g., distance from the source
 (<code>dfs</code>) and stream flow (<code>flo</code>)). The objective of
@@ -287,7 +287,7 @@ the axes corresponding to eigenvalues placed before (on the left of)
 this discontinuity.</p>
 <p>For example, in the following figure, the user should keep (from left
 to right) 2, 3 and 4 axes.</p>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" width="600" height="200"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" alt="" width="600" height="200"></p>
 <p>Of course these examples are quite caricatural, and in real
 situations, it can be much harder to choose an appropriate number of
 principal components. However the principle remains that the shape of
@@ -306,7 +306,7 @@ Three principal components were kept (although the <code>testdim</code>
 procedure said two).</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/screeplot.html" class="external-link">screeplot</a></span><span class="op">(</span><span class="va">pca1</span>, main<span class="op">=</span><span class="st">" "</span>, xlab<span class="op">=</span><span class="st">" "</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-11-1.png" class="r-plt" width="600" height="300"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-11-1.png" class="r-plt" alt="" width="600" height="300"></p>
 <p>The correlation circle of the variables (left) and the factor map of
 sites (right) on the first two principal components are shown in the
 next figure.</p>
@@ -314,7 +314,7 @@ next figure.</p>
 <code class="sourceCode R"><span><span class="va">sc1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.corcircle.html">s.corcircle</a></span><span class="op">(</span><span class="va">pca1</span><span class="op">$</span><span class="va">co</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">sl1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">pca1</span><span class="op">$</span><span class="va">li</span>, plabels.optim <span class="op">=</span> <span class="cn">TRUE</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">sc1</span>, <span class="va">sl1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-12-1.png" class="r-plt" width="600" height="300"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-12-1.png" class="r-plt" alt="" width="600" height="300"></p>
 <p>This correlation circle (<code>sc1</code> object) shows two nearly
 orthogonal gradients: a geomorphological gradient opposing altitude and
 slope to hardness, distance from the source and stream flow, and a
@@ -346,7 +346,7 @@ sites 27 to 30.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/s.value.html">s.value</a></span><span class="op">(</span><span class="va">xy</span>, <span class="va">pca1</span><span class="op">$</span><span class="va">li</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>, pgrid.draw <span class="op">=</span> <span class="cn">FALSE</span>, porigin.draw <span class="op">=</span> <span class="cn">FALSE</span>, method <span class="op">=</span> <span class="st">"size"</span>,</span>
 <span>symbol <span class="op">=</span> <span class="st">"circle"</span>, col <span class="op">=</span> <span class="fu">mypal</span><span class="op">(</span><span class="fl">2</span><span class="op">)</span>, ppoints.cex <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" width="600" height="300"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" alt="" width="600" height="300"></p>
 <p>The upstream-downstream gradients and the particular characteristics
 of highly polluted sites (sites 23 to 26) or of sites with high oxygen
 concentration (11 to 15) appear very clearly on these maps.</p>
@@ -385,7 +385,7 @@ approximately) linear, the results of both methods should be
 comparable.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">env</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">~</span> <span class="va">fenv</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>, ylab <span class="op">=</span> <span class="st">"Quantitative dfs"</span>, xlab <span class="op">=</span> <span class="st">"Qualitative dfs"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-15-1.png" class="r-plt" width="400" height="400"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-15-1.png" class="r-plt" alt="" width="400" height="400"></p>
 <p>MCA allows to identify associations between the categories
 (<code>levels</code>) of different qualitative variables
 (<code>factor</code>). The method is implemented in the
@@ -396,7 +396,7 @@ the outputs of this function are grouped in a <code>dudi</code> object
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">acm1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dudi.acm.html">dudi.acm</a></span><span class="op">(</span><span class="va">fenv</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/screeplot.html" class="external-link">screeplot</a></span><span class="op">(</span><span class="va">acm1</span>, main <span class="op">=</span> <span class="st">" "</span>, xlab <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-16-1.png" class="r-plt" width="600" height="300"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-16-1.png" class="r-plt" alt="" width="600" height="300"></p>
 <p>The main difference between PCA and MCA is that the columns of the
 analysed table are the variables in PCA but the categories of
 qualitative variables in MCA:</p>
@@ -433,7 +433,7 @@ high level of pollution.</p>
 <code class="sourceCode R"><span><span class="va">sl1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">acm1</span><span class="op">$</span><span class="va">co</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span>, plabels.optim <span class="op">=</span> <span class="cn">TRUE</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">sl2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/s.label.html">s.label</a></span><span class="op">(</span><span class="va">acm1</span><span class="op">$</span><span class="va">li</span>, ppoints.cex <span class="op">=</span> <span class="fl">0.5</span>, plabels.optim <span class="op">=</span> <span class="cn">TRUE</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/adegraphics/man/ADEgS.html" class="external-link">ADEgS</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">sl1</span>, <span class="va">sl2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-21-1.png" class="r-plt" width="600" height="300"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-21-1.png" class="r-plt" alt="" width="600" height="300"></p>
 <p>The graph of categories (left) is somewhat different because we now
 have one point for each category of each qualitative variable (44
 categories as a whole) instead of 11 points only. The interpretation is
@@ -464,7 +464,7 @@ hardness, phosphorus, nitrates, ammonium and BDO are ordered by
 increasing values along the first MCA factor.</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/score.html">score</a></span><span class="op">(</span><span class="va">acm1</span>, type <span class="op">=</span> <span class="st">"points"</span>, col <span class="op">=</span> <span class="cn">TRUE</span>, psub.cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-22-1.png" class="r-plt" width="600" height="450"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-22-1.png" class="r-plt" alt="" width="600" height="450"></p>
 <p>Conversely, the categories of variables altitude, slope, oxygen are
 ordered by decreasing values along the first MCA factor. On the vertical
 axis, the intervals between labels give information of the differences
@@ -505,7 +505,7 @@ the previous one, but it is much more easy and detailed, as the
 categories of all the variables are not superimposed.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">acm1</span>, col <span class="op">=</span> <span class="cn">TRUE</span>, psub.cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-24-1.png" class="r-plt" width="600" height="450"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-24-1.png" class="r-plt" alt="" width="600" height="450"></p>
 </div>
 <div class="section level2">
 <h2 id="hill-and-smith-analysis">Hill and Smith analysis<a class="anchor" aria-label="anchor" href="#hill-and-smith-analysis"></a>
@@ -566,7 +566,7 @@ category.</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">hs1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dudi.hillsmith.html">dudi.hillsmith</a></span><span class="op">(</span><span class="va">menv</span>, scannf <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/scatter.html">scatter</a></span><span class="op">(</span><span class="va">hs1</span>, posieig <span class="op">=</span> <span class="st">"bottomleft"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-26-1.png" class="r-plt" width="600" height="600"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-26-1.png" class="r-plt" alt="" width="600" height="600"></p>
 <p>The <code>score</code> function can also be used to highlight the
 properties of the method. HSA maximises the squared correlation for
 quantitative variables (<em>i.e.</em>, the criteria of PCA) and the
@@ -576,7 +576,7 @@ previous one for quantitative variables and for qualitative
 variables.</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/score.html">score</a></span><span class="op">(</span><span class="va">hs1</span>, col <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-27-1.png" class="r-plt" width="600" height="400"></p>
+<p><img src="ChapEnvVarStruct_files/figure-html/unnamed-chunk-27-1.png" class="r-plt" alt="" width="600" height="400"></p>
 <p>These values are also stored in <code>hs1$cr</code>:</p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">hs1</span><span class="op">$</span><span class="va">cr</span></span>

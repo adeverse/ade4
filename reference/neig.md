@@ -203,6 +203,6 @@ if(!adegraphicsLoaded()) {
 
 
 
-#> Warning: neighbour object has 13 sub-graphs
-#> Warning: neighbour object has 2 sub-graphs
+#> Warning: neighbour object has 14 sub-graphs
+#> Warning: neighbour object has 7 sub-graphs
 ```

@@ -48,10 +48,10 @@ gearymoran(fis.phy$Amat, fission$tab)
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   999 
 #>   Test         Obs    Std.Obs   Alter Pvalue
-#> 1  GM1 -0.22782145 -1.3183959 greater  0.976
-#> 2  GM2 -0.12668808 -0.6890983 greater  0.739
-#> 3  GM3 -0.05388833 -0.2865592 greater  0.475
-#> 4  GN1 -0.04535827 -0.2623303 greater  0.473
-#> 5  GN2 -0.20293610 -1.1322056 greater  0.927
+#> 1  GM1 -0.22782145 -1.3368395 greater  0.977
+#> 2  GM2 -0.12668808 -0.6820275 greater  0.712
+#> 3  GM3 -0.05388833 -0.3101623 greater  0.508
+#> 4  GN1 -0.04535827 -0.2617513 greater  0.505
+#> 5  GN2 -0.20293610 -1.1108906 greater  0.920
 #> 
 ```

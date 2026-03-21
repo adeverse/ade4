@@ -55,11 +55,11 @@ methods in biology* Chapman and Hall, London, 1–281.
 #> Observation: 0.2999879 
 #> 
 #> Based on 99 replicates
-#> Simulated p-value: 0.05 
+#> Simulated p-value: 0.04 
 #> Alternative hypothesis: greater 
 #> 
 #>      Std.Obs  Expectation     Variance 
-#>  1.884638540 -0.007312857  0.026587110 
+#>  1.827914868 -0.008470837  0.028476213 
     t1 <- procuste.rtest(pcoscaled(gen), pcoscaled(ant), 99)
     plot(t1, main = "gen-ant-procuste") ; print(t1)
 #> Monte-Carlo test
@@ -72,7 +72,7 @@ methods in biology* Chapman and Hall, London, 1–281.
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 3.433480727 0.546194601 0.001562212 
+#> 3.396865708 0.541544013 0.001707338 
     t1 <- RV.rtest(pcoscaled(gen), pcoscaled(ant), 99)
     plot(t1, main = "gen-ant-RV") ; print(t1)
 #> Monte-Carlo test
@@ -85,5 +85,5 @@ methods in biology* Chapman and Hall, London, 1–281.
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 2.683953117 0.256077861 0.004068335 
+#> 2.751980726 0.253456163 0.003989118 
 ```

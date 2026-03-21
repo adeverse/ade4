@@ -31,7 +31,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/adeverse/ade4/blob/master/inst/CITATION)
+[`inst/CITATION`](https://github.com/adeverse/ade4/blob/v1.7-24/inst/CITATION)
 
 Dray S, Dufour A (2007). “The ade4 Package: Implementing the Duality
 Diagram for Ecologists.” *Journal of Statistical Software*, **22**(4),

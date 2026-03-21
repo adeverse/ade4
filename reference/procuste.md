@@ -198,7 +198,7 @@ randtest(pro3)
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 6.746043740 0.342170480 0.002166918 
+#> 6.660648652 0.343165813 0.002208769 
 
 data(fruits)
 plot(procuste(scalewt(fruits$jug), scalewt(fruits$var)))

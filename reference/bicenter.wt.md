@@ -42,5 +42,5 @@ bicenter.wt(w, c(0.2,0.6,0.2), c(0.3,0.7))
 
 w <- matrix(1:20, 5, 4)
 sum(bicenter.wt(w, runif(5), runif(4))^2)
-#> [1] 1.972152e-29
+#> [1] 2.129924e-29
 ```

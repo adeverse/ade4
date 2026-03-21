@@ -266,50 +266,50 @@ summary(four.comb.default)
 #> 
 #> Adjustment method for multiple comparisons:   holm 
 #>                      Test Stat          Obs     Std.Obs   Alter Pvalue
-#> 1        farms / feed.hab Chi2   4.36429268  1.47044895 greater   0.08
-#> 2    small.bui / feed.hab Chi2   5.57481613  1.92964858 greater   0.04
-#> 3     high.bui / feed.hab Chi2   3.11706174  0.49737198 greater   0.20
-#> 4     industry / feed.hab Chi2   2.05615534  0.38207662 greater   0.30
-#> 5       fields / feed.hab Chi2  14.01139382  0.17778577 greater   0.39
-#> 6    grassland / feed.hab Chi2   1.27966991 -0.31437919 greater   0.48
-#> 7      scrubby / feed.hab Chi2   2.87647118  0.49470626 greater   0.26
-#> 8    deciduous / feed.hab Chi2   2.56301663  0.89795624 greater   0.21
-#> 9      conifer / feed.hab Chi2   0.67773900 -0.64513542 greater   0.73
-#> 10       noisy / feed.hab Chi2   8.04038367 -0.04308534 greater   0.47
-#> 11   veg.cover / feed.hab Chi2  29.48926101 -0.20732202 greater   0.50
-#> 12     farms / feed.strat Chi2   4.29284964  0.25863484 greater   0.30
-#> 13 small.bui / feed.strat Chi2  13.59643807  0.59494119 greater   0.21
-#> 14  high.bui / feed.strat Chi2   8.13102044  1.56937970 greater   0.09
-#> 15  industry / feed.strat Chi2   1.60089833 -0.45666411 greater   0.59
-#> 16    fields / feed.strat Chi2   7.89491358  1.43431195 greater   0.07
-#> 17 grassland / feed.strat Chi2   2.11779967 -0.31063666 greater   0.48
-#> 18   scrubby / feed.strat Chi2   5.17033389  0.40204166 greater   0.25
-#> 19 deciduous / feed.strat Chi2   4.27795300  0.44648285 greater   0.21
-#> 20   conifer / feed.strat Chi2   3.27694136 -0.03133941 greater   0.35
-#> 21     noisy / feed.strat Chi2   6.75501319  0.93969752 greater   0.16
-#> 22 veg.cover / feed.strat Chi2  78.31693213  2.55253518 greater   0.03
-#> 23       farms / breeding Chi2   3.23430156 -0.35381060 greater   0.60
-#> 24   small.bui / breeding Chi2  27.79316236  1.11689516 greater   0.14
-#> 25    high.bui / breeding Chi2  12.43543038  0.87799625 greater   0.11
-#> 26    industry / breeding Chi2  22.28586480  2.72799261 greater   0.04
-#> 27      fields / breeding Chi2  38.33899311  1.43288500 greater   0.10
-#> 28   grassland / breeding Chi2  16.69969331  2.10394232 greater   0.04
-#> 29     scrubby / breeding Chi2   7.93877813  0.35925168 greater   0.26
-#> 30   deciduous / breeding Chi2  36.37422465  6.40428616 greater   0.01
-#> 31     conifer / breeding Chi2   8.13155633  0.27989049 greater   0.24
-#> 32       noisy / breeding Chi2  22.81746753  1.29660280 greater   0.13
-#> 33   veg.cover / breeding Chi2 118.24035270  2.71174382 greater   0.03
-#> 34      farms / migratory Chi2   3.19878341  1.51673588 greater   0.08
-#> 35  small.bui / migratory Chi2   0.98799705  0.14955495 greater   0.26
-#> 36   high.bui / migratory Chi2   0.62908910 -0.24106656 greater   0.43
-#> 37   industry / migratory Chi2   0.98753393  0.06861460 greater   0.26
-#> 38     fields / migratory Chi2   5.39284445  2.72670910 greater   0.05
-#> 39  grassland / migratory Chi2   0.09775421 -0.70923993 greater   0.72
-#> 40    scrubby / migratory Chi2   3.40196612  1.46140502 greater   0.10
-#> 41  deciduous / migratory Chi2   0.00146756 -0.80847750 greater   0.97
-#> 42    conifer / migratory Chi2   0.18177435 -0.63984920 greater   0.69
-#> 43      noisy / migratory Chi2   0.99220442 -0.05884608 greater   0.36
-#> 44  veg.cover / migratory Chi2   9.14414536  0.77632059 greater   0.20
+#> 1        farms / feed.hab Chi2   4.36429268  1.56087440 greater   0.09
+#> 2    small.bui / feed.hab Chi2   5.57481613  2.35447089 greater   0.04
+#> 3     high.bui / feed.hab Chi2   3.11706174  0.80753196 greater   0.15
+#> 4     industry / feed.hab Chi2   2.05615534  0.18657462 greater   0.27
+#> 5       fields / feed.hab Chi2  14.01139382  0.01587947 greater   0.36
+#> 6    grassland / feed.hab Chi2   1.27966991 -0.27049787 greater   0.52
+#> 7      scrubby / feed.hab Chi2   2.87647118  0.99403402 greater   0.14
+#> 8    deciduous / feed.hab Chi2   2.56301663  0.41013645 greater   0.26
+#> 9      conifer / feed.hab Chi2   0.67773900 -0.63151584 greater   0.64
+#> 10       noisy / feed.hab Chi2   8.04038367 -0.10370159 greater   0.45
+#> 11   veg.cover / feed.hab Chi2  29.48926101 -0.24754824 greater   0.55
+#> 12     farms / feed.strat Chi2   4.29284964  0.25988328 greater   0.34
+#> 13 small.bui / feed.strat Chi2  13.59643807  3.02576397 greater   0.03
+#> 14  high.bui / feed.strat Chi2   8.13102044  1.59705808 greater   0.08
+#> 15  industry / feed.strat Chi2   1.60089833 -0.41105820 greater   0.57
+#> 16    fields / feed.strat Chi2   7.89491358  1.31018587 greater   0.11
+#> 17 grassland / feed.strat Chi2   2.11779967 -0.34769650 greater   0.56
+#> 18   scrubby / feed.strat Chi2   5.17033389  0.71915112 greater   0.22
+#> 19 deciduous / feed.strat Chi2   4.27795300  0.26846000 greater   0.25
+#> 20   conifer / feed.strat Chi2   3.27694136  0.03158244 greater   0.35
+#> 21     noisy / feed.strat Chi2   6.75501319  0.90623837 greater   0.14
+#> 22 veg.cover / feed.strat Chi2  78.31693213  2.82198434 greater   0.02
+#> 23       farms / breeding Chi2   3.23430156 -0.59395510 greater   0.66
+#> 24   small.bui / breeding Chi2  27.79316236  2.07240650 greater   0.04
+#> 25    high.bui / breeding Chi2  12.43543038  1.57218462 greater   0.11
+#> 26    industry / breeding Chi2  22.28586480  3.20618256 greater   0.03
+#> 27      fields / breeding Chi2  38.33899311  1.74871835 greater   0.08
+#> 28   grassland / breeding Chi2  16.69969331  1.66338951 greater   0.09
+#> 29     scrubby / breeding Chi2   7.93877813  0.25828663 greater   0.29
+#> 30   deciduous / breeding Chi2  36.37422465  6.77846693 greater   0.01
+#> 31     conifer / breeding Chi2   8.13155633  0.56589136 greater   0.25
+#> 32       noisy / breeding Chi2  22.81746753  1.22387736 greater   0.13
+#> 33   veg.cover / breeding Chi2 118.24035270  5.43023816 greater   0.01
+#> 34      farms / migratory Chi2   3.19878341  2.22349324 greater   0.05
+#> 35  small.bui / migratory Chi2   0.98799705  0.18275687 greater   0.27
+#> 36   high.bui / migratory Chi2   0.62908910 -0.23006340 greater   0.44
+#> 37   industry / migratory Chi2   0.98753393  0.17182282 greater   0.30
+#> 38     fields / migratory Chi2   5.39284445 -0.19129813 greater   0.35
+#> 39  grassland / migratory Chi2   0.09775421 -0.68415537 greater   0.76
+#> 40    scrubby / migratory Chi2   3.40196612  2.02022480 greater   0.05
+#> 41  deciduous / migratory Chi2   0.00146756 -0.84220932 greater   0.97
+#> 42    conifer / migratory Chi2   0.18177435 -0.67104944 greater   0.69
+#> 43      noisy / migratory Chi2   0.99220442 -0.10863722 greater   0.39
+#> 44  veg.cover / migratory Chi2   9.14414536  0.76897839 greater   0.21
 #>    Pvalue.adj  
 #> 1        1.00  
 #> 2        1.00  
@@ -332,7 +332,7 @@ summary(four.comb.default)
 #> 19       1.00  
 #> 20       1.00  
 #> 21       1.00  
-#> 22       1.00  
+#> 22       0.82  
 #> 23       1.00  
 #> 24       1.00  
 #> 25       1.00  
@@ -343,7 +343,7 @@ summary(four.comb.default)
 #> 30       0.44  
 #> 31       1.00  
 #> 32       1.00  
-#> 33       1.00  
+#> 33       0.44  
 #> 34       1.00  
 #> 35       1.00  
 #> 36       1.00  
@@ -371,95 +371,95 @@ summary(four.comb.fdr)
 #> 
 #> Adjustment method for multiple comparisons:   fdr 
 #>                      Test Stat          Obs     Std.Obs   Alter Pvalue
-#> 1        farms / feed.hab Chi2   4.36429268  0.21983769 greater   0.30
-#> 2    small.bui / feed.hab Chi2   5.57481613 -0.42155454 greater   0.56
-#> 3     high.bui / feed.hab Chi2   3.11706174 -0.57464143 greater   0.62
-#> 4     industry / feed.hab Chi2   2.05615534 -0.22297946 greater   0.49
-#> 5       fields / feed.hab Chi2  14.01139382  0.22468885 greater   0.33
-#> 6    grassland / feed.hab Chi2   1.27966991 -0.77843441 greater   0.77
-#> 7      scrubby / feed.hab Chi2   2.87647118  0.17763999 greater   0.31
-#> 8    deciduous / feed.hab Chi2   2.56301663 -0.52024529 greater   0.58
-#> 9      conifer / feed.hab Chi2   0.67773900 -0.76015969 greater   0.74
-#> 10       noisy / feed.hab Chi2   8.04038367 -0.15287620 greater   0.48
-#> 11   veg.cover / feed.hab Chi2  29.48926101 -0.13771174 greater   0.48
-#> 12     farms / feed.strat Chi2   4.29284964  0.30373352 greater   0.26
-#> 13 small.bui / feed.strat Chi2  13.59643807  0.63102781 greater   0.21
-#> 14  high.bui / feed.strat Chi2   8.13102044  0.59730374 greater   0.23
-#> 15  industry / feed.strat Chi2   1.60089833 -0.40337641 greater   0.58
-#> 16    fields / feed.strat Chi2   7.89491358 -0.41694746 greater   0.57
-#> 17 grassland / feed.strat Chi2   2.11779967 -0.49361061 greater   0.68
-#> 18   scrubby / feed.strat Chi2   5.17033389  1.38960050 greater   0.12
-#> 19 deciduous / feed.strat Chi2   4.27795300 -0.16417181 greater   0.43
-#> 20   conifer / feed.strat Chi2   3.27694136  1.23476326 greater   0.16
-#> 21     noisy / feed.strat Chi2   6.75501319 -0.09658378 greater   0.45
-#> 22 veg.cover / feed.strat Chi2  78.31693213  2.47152676 greater   0.04
-#> 23       farms / breeding Chi2   3.23430156 -0.55073564 greater   0.63
-#> 24   small.bui / breeding Chi2  27.79316236  1.38830117 greater   0.14
-#> 25    high.bui / breeding Chi2  12.43543038  0.50710154 greater   0.34
-#> 26    industry / breeding Chi2  22.28586480  2.66605923 greater   0.04
-#> 27      fields / breeding Chi2  38.33899311  1.26641577 greater   0.14
-#> 28   grassland / breeding Chi2  16.69969331  1.85736371 greater   0.07
-#> 29     scrubby / breeding Chi2   7.93877813  1.55811209 greater   0.10
-#> 30   deciduous / breeding Chi2  36.37422465  4.65140561 greater   0.02
-#> 31     conifer / breeding Chi2   8.13155633  0.24065201 greater   0.26
-#> 32       noisy / breeding Chi2  22.81746753  1.29038398 greater   0.14
-#> 33   veg.cover / breeding Chi2 118.24035270  3.25419489 greater   0.01
-#> 34      farms / migratory Chi2   3.19878341  0.75016832 greater   0.21
-#> 35  small.bui / migratory Chi2   0.98799705 -0.61194596 greater   0.70
-#> 36   high.bui / migratory Chi2   0.62908910 -0.63618057 greater   0.67
-#> 37   industry / migratory Chi2   0.98753393 -0.17227226 greater   0.41
-#> 38     fields / migratory Chi2   5.39284445 -0.10459945 greater   0.35
-#> 39  grassland / migratory Chi2   0.09775421 -0.78392585 greater   0.80
-#> 40    scrubby / migratory Chi2   3.40196612  1.59720437 greater   0.10
-#> 41  deciduous / migratory Chi2   0.00146756 -0.83580140 greater   0.99
-#> 42    conifer / migratory Chi2   0.18177435 -0.47918681 greater   0.57
-#> 43      noisy / migratory Chi2   0.99220442 -0.61507722 greater   0.56
-#> 44  veg.cover / migratory Chi2   9.14414536 -0.45339920 greater   0.63
+#> 1        farms / feed.hab Chi2   4.36429268  0.08444920 greater   0.39
+#> 2    small.bui / feed.hab Chi2   5.57481613 -0.56245485 greater   0.63
+#> 3     high.bui / feed.hab Chi2   3.11706174 -0.69931944 greater   0.73
+#> 4     industry / feed.hab Chi2   2.05615534 -0.27089109 greater   0.53
+#> 5       fields / feed.hab Chi2  14.01139382  0.01585856 greater   0.37
+#> 6    grassland / feed.hab Chi2   1.27966991 -0.90002289 greater   0.80
+#> 7      scrubby / feed.hab Chi2   2.87647118  0.14874735 greater   0.33
+#> 8    deciduous / feed.hab Chi2   2.56301663 -0.75412800 greater   0.72
+#> 9      conifer / feed.hab Chi2   0.67773900 -0.77044266 greater   0.77
+#> 10       noisy / feed.hab Chi2   8.04038367 -0.10955155 greater   0.51
+#> 11   veg.cover / feed.hab Chi2  29.48926101 -0.31871265 greater   0.57
+#> 12     farms / feed.strat Chi2   4.29284964  0.10793165 greater   0.32
+#> 13 small.bui / feed.strat Chi2  13.59643807  0.84406222 greater   0.22
+#> 14  high.bui / feed.strat Chi2   8.13102044  0.66374667 greater   0.21
+#> 15  industry / feed.strat Chi2   1.60089833 -0.43596531 greater   0.54
+#> 16    fields / feed.strat Chi2   7.89491358 -0.43961301 greater   0.57
+#> 17 grassland / feed.strat Chi2   2.11779967 -0.49403371 greater   0.63
+#> 18   scrubby / feed.strat Chi2   5.17033389  1.14639007 greater   0.14
+#> 19 deciduous / feed.strat Chi2   4.27795300 -0.13570810 greater   0.47
+#> 20   conifer / feed.strat Chi2   3.27694136  0.92459971 greater   0.17
+#> 21     noisy / feed.strat Chi2   6.75501319 -0.21024895 greater   0.49
+#> 22 veg.cover / feed.strat Chi2  78.31693213  2.92822358 greater   0.02
+#> 23       farms / breeding Chi2   3.23430156 -0.65859532 greater   0.72
+#> 24   small.bui / breeding Chi2  27.79316236  1.76629982 greater   0.08
+#> 25    high.bui / breeding Chi2  12.43543038  0.58935710 greater   0.31
+#> 26    industry / breeding Chi2  22.28586480  2.24498500 greater   0.06
+#> 27      fields / breeding Chi2  38.33899311  1.39180530 greater   0.09
+#> 28   grassland / breeding Chi2  16.69969331  1.91881467 greater   0.07
+#> 29     scrubby / breeding Chi2   7.93877813  0.18231271 greater   0.37
+#> 30   deciduous / breeding Chi2  36.37422465  4.62627399 greater   0.01
+#> 31     conifer / breeding Chi2   8.13155633  0.31347821 greater   0.27
+#> 32       noisy / breeding Chi2  22.81746753  1.14946772 greater   0.14
+#> 33   veg.cover / breeding Chi2 118.24035270  3.43046783 greater   0.02
+#> 34      farms / migratory Chi2   3.19878341  0.51243250 greater   0.21
+#> 35  small.bui / migratory Chi2   0.98799705 -0.61512396 greater   0.66
+#> 36   high.bui / migratory Chi2   0.62908910 -0.66947687 greater   0.72
+#> 37   industry / migratory Chi2   0.98753393 -0.31724978 greater   0.53
+#> 38     fields / migratory Chi2   5.39284445 -0.10085539 greater   0.41
+#> 39  grassland / migratory Chi2   0.09775421 -0.68397948 greater   0.76
+#> 40    scrubby / migratory Chi2   3.40196612  0.76937961 greater   0.15
+#> 41  deciduous / migratory Chi2   0.00146756 -0.77391304 greater   0.99
+#> 42    conifer / migratory Chi2   0.18177435 -0.61336604 greater   0.64
+#> 43      noisy / migratory Chi2   0.99220442 -0.51612418 greater   0.57
+#> 44  veg.cover / migratory Chi2   9.14414536 -0.54359751 greater   0.67
 #>    Pvalue.adj  
-#> 1     0.70000  
-#> 2     0.74919  
-#> 3     0.74919  
-#> 4     0.74919  
-#> 5     0.70000  
-#> 6     0.80667  
-#> 7     0.70000  
-#> 8     0.74919  
-#> 9     0.79415  
-#> 10    0.74919  
-#> 11    0.74919  
-#> 12    0.67294  
-#> 13    0.61600  
-#> 14    0.63250  
-#> 15    0.74919  
-#> 16    0.74919  
-#> 17    0.76718  
-#> 18    0.51333  
-#> 19    0.74919  
-#> 20    0.54154  
-#> 21    0.74919  
-#> 22    0.29333  
-#> 23    0.74919  
-#> 24    0.51333  
-#> 25    0.70000  
-#> 26    0.14667  
-#> 27    0.51333  
+#> 1     0.80300  
+#> 2     0.80300  
+#> 3     0.80300  
+#> 4     0.80300  
+#> 5     0.80300  
+#> 6     0.81860  
+#> 7     0.76421  
+#> 8     0.80300  
+#> 9     0.80667  
+#> 10    0.80300  
+#> 11    0.80300  
+#> 12    0.76421  
+#> 13    0.60500  
+#> 14    0.60500  
+#> 15    0.80300  
+#> 16    0.80300  
+#> 17    0.80300  
+#> 18    0.55000  
+#> 19    0.80300  
+#> 20    0.57538  
+#> 21    0.80300  
+#> 22    0.14667  
+#> 23    0.80300  
+#> 24    0.44000  
+#> 25    0.76421  
+#> 26    0.18857  
+#> 27    0.44000  
 #> 28    0.19250  
-#> 29    0.51333  
-#> 30    0.17600  
-#> 31    0.38323  
-#> 32    0.51333  
-#> 33    0.11000  
-#> 34    0.61600  
-#> 35    0.77000  
-#> 36    0.76718  
-#> 37    0.74919  
-#> 38    0.70000  
-#> 39    0.81860  
-#> 40    0.51333  
+#> 29    0.47882  
+#> 30    0.14667  
+#> 31    0.40966  
+#> 32    0.55000  
+#> 33    0.14667  
+#> 34    0.60500  
+#> 35    0.80300  
+#> 36    0.80300  
+#> 37    0.80300  
+#> 38    0.80300  
+#> 39    0.80667  
+#> 40    0.55000  
 #> 41    0.99000  
-#> 42    0.74919  
-#> 43    0.74919  
-#> 44    0.74919  
+#> 42    0.80300  
+#> 43    0.80300  
+#> 44    0.80300  
 #> 
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
@@ -476,51 +476,51 @@ summary(four.comb)
 #> Permutation method  Comb. 2 and 4  ( 99  permutations)
 #> 
 #> Adjustment method for multiple comparisons:   holm 
-#>                      Test Stat          Obs     Std.Obs   Alter Pvalue
-#> 1        farms / feed.hab Chi2   4.36429268  1.83160009 greater   0.08
-#> 2    small.bui / feed.hab Chi2   5.57481613 -0.42152279 greater   0.56
-#> 3     high.bui / feed.hab Chi2   3.11706174  0.66266577 greater   0.23
-#> 4     industry / feed.hab Chi2   2.05615534  0.26548417 greater   0.29
-#> 5       fields / feed.hab Chi2  14.01139382  0.16762752 greater   0.32
-#> 6    grassland / feed.hab Chi2   1.27966991 -0.17049393 greater   0.38
-#> 7      scrubby / feed.hab Chi2   2.87647118  0.68261666 greater   0.20
-#> 8    deciduous / feed.hab Chi2   2.56301663  0.71806243 greater   0.23
-#> 9      conifer / feed.hab Chi2   0.67773900 -0.49866678 greater   0.55
-#> 10       noisy / feed.hab Chi2   8.04038367 -0.16926715 greater   0.49
-#> 11   veg.cover / feed.hab Chi2  29.48926101 -0.22169729 greater   0.50
-#> 12     farms / feed.strat Chi2   4.29284964  0.22442150 greater   0.23
-#> 13 small.bui / feed.strat Chi2  13.59643807  0.94214154 greater   0.16
-#> 14  high.bui / feed.strat Chi2   8.13102044  1.69467551 greater   0.05
-#> 15  industry / feed.strat Chi2   1.60089833 -0.47504381 greater   0.59
-#> 16    fields / feed.strat Chi2   7.89491358  1.44532170 greater   0.11
-#> 17 grassland / feed.strat Chi2   2.11779967 -0.34934427 greater   0.48
-#> 18   scrubby / feed.strat Chi2   5.17033389  0.44167475 greater   0.23
-#> 19 deciduous / feed.strat Chi2   4.27795300  0.56741372 greater   0.22
-#> 20   conifer / feed.strat Chi2   3.27694136  0.27112249 greater   0.30
-#> 21     noisy / feed.strat Chi2   6.75501319  0.99290322 greater   0.14
-#> 22 veg.cover / feed.strat Chi2  78.31693213  7.09217364 greater   0.01
-#> 23       farms / breeding Chi2   3.23430156 -0.55356074 greater   0.69
-#> 24   small.bui / breeding Chi2  27.79316236  1.34525655 greater   0.10
-#> 25    high.bui / breeding Chi2  12.43543038  1.69084138 greater   0.10
-#> 26    industry / breeding Chi2  22.28586480  3.81982042 greater   0.01
-#> 27      fields / breeding Chi2  38.33899311  1.14419769 greater   0.17
-#> 28   grassland / breeding Chi2  16.69969331  1.87692221 greater   0.06
-#> 29     scrubby / breeding Chi2   7.93877813  0.36391300 greater   0.26
-#> 30   deciduous / breeding Chi2  36.37422465  6.53404529 greater   0.01
-#> 31     conifer / breeding Chi2   8.13155633  0.57813152 greater   0.19
-#> 32       noisy / breeding Chi2  22.81746753  1.10381195 greater   0.15
-#> 33   veg.cover / breeding Chi2 118.24035270  2.93271697 greater   0.02
-#> 34      farms / migratory Chi2   3.19878341  1.78990001 greater   0.08
-#> 35  small.bui / migratory Chi2   0.98799705  0.10224520 greater   0.24
-#> 36   high.bui / migratory Chi2   0.62908910 -0.35450956 greater   0.44
-#> 37   industry / migratory Chi2   0.98753393  0.16733461 greater   0.24
-#> 38     fields / migratory Chi2   5.39284445 -0.04847707 greater   0.33
-#> 39  grassland / migratory Chi2   0.09775421 -0.63791494 greater   0.69
-#> 40    scrubby / migratory Chi2   3.40196612  2.12003415 greater   0.09
-#> 41  deciduous / migratory Chi2   0.00146756 -0.71676567 greater   0.98
-#> 42    conifer / migratory Chi2   0.18177435 -0.53716782 greater   0.58
-#> 43      noisy / migratory Chi2   0.99220442 -0.08916338 greater   0.39
-#> 44  veg.cover / migratory Chi2   9.14414536  1.07923006 greater   0.15
+#>                      Test Stat          Obs      Std.Obs   Alter Pvalue
+#> 1        farms / feed.hab Chi2   4.36429268  1.772923100 greater   0.08
+#> 2    small.bui / feed.hab Chi2   5.57481613 -0.399943628 greater   0.57
+#> 3     high.bui / feed.hab Chi2   3.11706174  0.749742625 greater   0.20
+#> 4     industry / feed.hab Chi2   2.05615534  0.191832523 greater   0.31
+#> 5       fields / feed.hab Chi2  14.01139382  0.076776654 greater   0.38
+#> 6    grassland / feed.hab Chi2   1.27966991 -0.251632434 greater   0.46
+#> 7      scrubby / feed.hab Chi2   2.87647118  0.865325650 greater   0.12
+#> 8    deciduous / feed.hab Chi2   2.56301663  0.553225900 greater   0.20
+#> 9      conifer / feed.hab Chi2   0.67773900 -0.611164174 greater   0.74
+#> 10       noisy / feed.hab Chi2   8.04038367 -0.103092634 greater   0.41
+#> 11   veg.cover / feed.hab Chi2  29.48926101 -0.211120806 greater   0.51
+#> 12     farms / feed.strat Chi2   4.29284964  0.538062185 greater   0.23
+#> 13 small.bui / feed.strat Chi2  13.59643807  0.434536385 greater   0.24
+#> 14  high.bui / feed.strat Chi2   8.13102044  1.307090757 greater   0.12
+#> 15  industry / feed.strat Chi2   1.60089833 -0.567452153 greater   0.71
+#> 16    fields / feed.strat Chi2   7.89491358  2.061937072 greater   0.06
+#> 17 grassland / feed.strat Chi2   2.11779967 -0.254530348 greater   0.48
+#> 18   scrubby / feed.strat Chi2   5.17033389  0.635419257 greater   0.18
+#> 19 deciduous / feed.strat Chi2   4.27795300  0.252059758 greater   0.24
+#> 20   conifer / feed.strat Chi2   3.27694136 -0.004285558 greater   0.37
+#> 21     noisy / feed.strat Chi2   6.75501319  1.055741945 greater   0.09
+#> 22 veg.cover / feed.strat Chi2  78.31693213  2.271444296 greater   0.04
+#> 23       farms / breeding Chi2   3.23430156 -0.451190525 greater   0.61
+#> 24   small.bui / breeding Chi2  27.79316236  1.591234205 greater   0.10
+#> 25    high.bui / breeding Chi2  12.43543038  1.078922685 greater   0.11
+#> 26    industry / breeding Chi2  22.28586480  2.975074748 greater   0.02
+#> 27      fields / breeding Chi2  38.33899311  1.581865812 greater   0.08
+#> 28   grassland / breeding Chi2  16.69969331  2.001497202 greater   0.07
+#> 29     scrubby / breeding Chi2   7.93877813  0.350146560 greater   0.33
+#> 30   deciduous / breeding Chi2  36.37422465  5.283761734 greater   0.02
+#> 31     conifer / breeding Chi2   8.13155633  0.314074536 greater   0.30
+#> 32       noisy / breeding Chi2  22.81746753  1.254935621 greater   0.11
+#> 33   veg.cover / breeding Chi2 118.24035270  5.766599014 greater   0.01
+#> 34      farms / migratory Chi2   3.19878341  2.429138820 greater   0.06
+#> 35  small.bui / migratory Chi2   0.98799705  0.102422159 greater   0.32
+#> 36   high.bui / migratory Chi2   0.62908910 -0.360852256 greater   0.49
+#> 37   industry / migratory Chi2   0.98753393 -0.186837026 greater   0.41
+#> 38     fields / migratory Chi2   5.39284445 -0.146690057 greater   0.37
+#> 39  grassland / migratory Chi2   0.09775421 -0.655215841 greater   0.72
+#> 40    scrubby / migratory Chi2   3.40196612  2.740580924 greater   0.04
+#> 41  deciduous / migratory Chi2   0.00146756 -0.689265187 greater   0.97
+#> 42    conifer / migratory Chi2   0.18177435 -0.538937155 greater   0.59
+#> 43      noisy / migratory Chi2   0.99220442 -0.048754914 greater   0.32
+#> 44  veg.cover / migratory Chi2   9.14414536  0.911176423 greater   0.15
 #>    Pvalue.adj  
 #> 1        1.00  
 #> 2        1.00  
@@ -543,18 +543,18 @@ summary(four.comb)
 #> 19       1.00  
 #> 20       1.00  
 #> 21       1.00  
-#> 22       0.44  
+#> 22       1.00  
 #> 23       1.00  
 #> 24       1.00  
 #> 25       1.00  
-#> 26       0.44  
+#> 26       0.72  
 #> 27       1.00  
 #> 28       1.00  
 #> 29       1.00  
-#> 30       0.44  
+#> 30       0.72  
 #> 31       1.00  
 #> 32       1.00  
-#> 33       0.80  
+#> 33       0.44  
 #> 34       1.00  
 #> 35       1.00  
 #> 36       1.00  

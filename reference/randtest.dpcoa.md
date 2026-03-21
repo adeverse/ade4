@@ -85,9 +85,9 @@ randtest(dpcoahum)
 #> Observation: 0.2167909 
 #> 
 #> Based on 99 replicates
-#> Simulated p-value: 0.05 
+#> Simulated p-value: 0.04 
 #> Alternative hypothesis: greater 
 #> 
 #>      Std.Obs  Expectation     Variance 
-#> 1.9526484914 0.1644421414 0.0007187271 
+#> 2.1282663844 0.1643843113 0.0006063442 
 ```

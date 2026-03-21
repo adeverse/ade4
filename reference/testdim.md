@@ -80,17 +80,17 @@ test1
 #> 
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   99 
-#>       Test       Obs    Std.Obs   Alter Pvalue
-#> 1   Axis 1 0.5570477 -1.0757637 greater   0.88
-#> 2   Axis 2 0.5787471 -0.7853241 greater   0.77
-#> 3   Axis 3 0.6508501  0.3988549 greater   0.37
-#> 4   Axis 4 0.6589775  0.1652640 greater   0.44
-#> 5   Axis 5 0.6368085 -0.5087175 greater   0.65
-#> 6   Axis 6 0.7563664  1.2178194 greater   0.14
-#> 7   Axis 7 0.8464656  3.0624920 greater   0.01
-#> 8   Axis 8 0.9130082  6.7610745 greater   0.01
-#> 9   Axis 9 0.8550816  2.5678211 greater   0.01
-#> 10 Axis 10 1.0000000  9.2027679 greater   0.01
+#>       Test       Obs     Std.Obs   Alter Pvalue
+#> 1   Axis 1 0.6580329  1.32486919 greater   0.10
+#> 2   Axis 2 0.6309330  0.26912909 greater   0.38
+#> 3   Axis 3 0.6658111  0.50984403 greater   0.29
+#> 4   Axis 4 0.6202781 -1.70717354 greater   0.97
+#> 5   Axis 5 0.6196827 -0.13192691 greater   0.49
+#> 6   Axis 6 0.6900110  0.03591369 greater   0.46
+#> 7   Axis 7 0.8115369  3.16747215 greater   0.01
+#> 8   Axis 8 0.8210232  1.47529292 greater   0.08
+#> 9   Axis 9 0.9594895  5.58116968 greater   0.01
+#> 10 Axis 10 1.0000000  5.36193350 greater   0.01
 #> 
 test1$nb
 #> [1] 0
@@ -109,17 +109,17 @@ test2
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   99 
 #>       Test       Obs    Std.Obs   Alter Pvalue
-#> 1   Axis 1 0.9276029  9.1427097 greater   0.01
-#> 2   Axis 2 0.8765561  6.0660714 greater   0.01
-#> 3   Axis 3 0.8195407 -1.1600615 greater   0.92
-#> 4   Axis 4 0.7130800  0.8252687 greater   0.20
-#> 5   Axis 5 0.7621707  2.0772142 greater   0.03
-#> 6   Axis 6 0.7781209  2.4413907 greater   0.02
-#> 7   Axis 7 0.8316557  4.5964103 greater   0.01
-#> 8   Axis 8 0.9641126  5.1590387 greater   0.01
-#> 9   Axis 9 0.7978495  1.6243849 greater   0.09
-#> 10 Axis 10 0.9701563  6.3310252 greater   0.01
-#> 11 Axis 11 1.0000000  8.1467307 greater   0.01
+#> 1   Axis 1 0.9276029  9.9297925 greater   0.01
+#> 2   Axis 2 0.8765561  6.0619974 greater   0.01
+#> 3   Axis 3 0.8195407 -1.1215301 greater   0.88
+#> 4   Axis 4 0.7130800  0.7551182 greater   0.24
+#> 5   Axis 5 0.7621707  1.7438702 greater   0.04
+#> 6   Axis 6 0.7781209  2.1766583 greater   0.04
+#> 7   Axis 7 0.8316557  5.5496561 greater   0.01
+#> 8   Axis 8 0.9641126  6.0739346 greater   0.01
+#> 9   Axis 9 0.7978495  1.6458067 greater   0.08
+#> 10 Axis 10 0.9701563  6.2886713 greater   0.01
+#> 11 Axis 11 1.0000000  7.9859208 greater   0.01
 #> 
 test2$nb
 #> [1] 2

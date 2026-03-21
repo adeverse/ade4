@@ -126,7 +126,7 @@ for (x0 in c(2.4,3.4,5.4,20.4)) {
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#>  2.36001692  0.03874227  1.00105180 
+#>  2.52534677 -0.06809839  0.95517488 
 
 #> Monte-Carlo test
 #> Call: as.randtest(sim = rnorm(200), obs = x0)
@@ -134,11 +134,11 @@ for (x0 in c(2.4,3.4,5.4,20.4)) {
 #> Observation: 3.4 
 #> 
 #> Based on 200 replicates
-#> Simulated p-value: 0.009950249 
+#> Simulated p-value: 0.004975124 
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#>   3.3621557   0.0947391   0.9664421 
+#>  3.62282773 -0.08809012  0.92700063 
 
 #> Monte-Carlo test
 #> Call: as.randtest(sim = rnorm(200), obs = x0)
@@ -150,7 +150,7 @@ for (x0 in c(2.4,3.4,5.4,20.4)) {
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#>   5.2455171  -0.1210944   1.1078315 
+#> 5.456294899 0.009056801 0.976188849 
 
 #> Monte-Carlo test
 #> Call: as.randtest(sim = rnorm(200), obs = x0)
@@ -161,8 +161,8 @@ for (x0 in c(2.4,3.4,5.4,20.4)) {
 #> Simulated p-value: 0.004975124 
 #> Alternative hypothesis: greater 
 #> 
-#>      Std.Obs  Expectation     Variance 
-#> 20.166577286 -0.009527243  1.024239451 
+#>     Std.Obs Expectation    Variance 
+#> 21.11721706 -0.02989225  0.93596322 
 
 par(mfrow = c(1,1))
 ```

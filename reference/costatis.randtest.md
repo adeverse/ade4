@@ -57,9 +57,9 @@ costatis.randtest(kta1, kta2)
 #> Observation: 0.8204725 
 #> 
 #> Based on 999 replicates
-#> Simulated p-value: 0.003 
+#> Simulated p-value: 0.006 
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#>  2.69777374  0.50186607  0.01394755 
+#>  2.80235653  0.49209258  0.01373113 
 ```

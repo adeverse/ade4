@@ -55,6 +55,6 @@ rv1
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 7.615218306 0.088467137 0.002260829 
+#>  7.23431835  0.08981169  0.00248660 
 plot(rv1)
 ```

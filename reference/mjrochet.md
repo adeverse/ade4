@@ -79,10 +79,10 @@ if (requireNamespace("adephylo", quietly = TRUE)) {
 #> 
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   999 
-#>    Test        Obs   Std.Obs   Alter Pvalue
-#> 1 R2Max  0.1501481  1.065401 greater  0.132
-#> 2 SkR2k 14.7098590 -3.577331 greater  1.000
-#> 3  Dmax  0.3519553  3.845578 greater  0.001
-#> 4   SCE  2.5268895  8.633494 greater  0.001
+#>    Test        Obs    Std.Obs   Alter Pvalue
+#> 1 R2Max  0.1501481  0.9559279 greater  0.161
+#> 2 SkR2k 14.7098590 -3.4520798 greater  0.999
+#> 3  Dmax  0.3519553  3.7323900 greater  0.002
+#> 4   SCE  2.5268895  7.8117220 greater  0.002
 #> 
 ```

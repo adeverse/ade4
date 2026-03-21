@@ -54,7 +54,7 @@ rv1
 #> Simulated p-value: 0.01 
 #> Alternative hypothesis: greater 
 #> 
-#>      Std.Obs  Expectation     Variance 
-#> 10.150581067  0.077683439  0.001349401 
+#>     Std.Obs Expectation    Variance 
+#> 8.332566040 0.087028506 0.001903352 
 plot(rv1)
 ```

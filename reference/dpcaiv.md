@@ -288,8 +288,8 @@ randtest(dcca)
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   99 
 #>     Test       Obs  Std.Obs   Alter Pvalue
-#> 1 Model2 0.1359425 4.329949 greater   0.01
-#> 2 Model4 0.1359425 2.193395 greater   0.02
+#> 1 Model2 0.1359425 4.319917 greater   0.01
+#> 2 Model4 0.1359425 2.186859 greater   0.02
 #> 
 dvaripart(coa, aviurba$mil, aviurba$trait, nrepet = 99)
 #> Variation Partitioning
@@ -305,10 +305,10 @@ dvaripart(coa, aviurba$mil, aviurba$trait, nrepet = 99)
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   99 
 #>          Test       Obs  Std.Obs   Alter Pvalue
-#> 1       ab(R) 0.4215783 3.969993 greater   0.01
-#> 2       bc(Q) 0.2556643 2.002752 greater   0.02
-#> 3 b(RQ)_Rperm 0.1359425 4.476797 greater   0.01
-#> 4 b(RQ)_Qperm 0.1359425 2.054284 greater   0.04
+#> 1       ab(R) 0.4215783 3.798372 greater   0.01
+#> 2       bc(Q) 0.2556643 1.966883 greater   0.03
+#> 3 b(RQ)_Rperm 0.1359425 4.100120 greater   0.01
+#> 4 b(RQ)_Qperm 0.1359425 2.059175 greater   0.04
 #> 
 #> 
 #> Individual fractions:
@@ -317,5 +317,5 @@ dvaripart(coa, aviurba$mil, aviurba$trait, nrepet = 99)
 #> 
 #> Adjusted fractions:
 #>          a          b          c          d 
-#> 0.09030311 0.03351889 0.01377559 0.86240242 
+#> 0.08505095 0.03283768 0.01503950 0.86707187 
 ```

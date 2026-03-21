@@ -86,17 +86,17 @@ gm0
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   999 
 #>            Test        Obs   Std.Obs   Alter Pvalue
-#> 1          Clay 0.42436873  7.188935 greater  0.001
-#> 2          Silt 0.33796853  5.604470 greater  0.001
-#> 3          Sand 0.09947991  1.986724 greater  0.033
-#> 4           K2O 0.27277951  4.641801 greater  0.001
-#> 5          Mg++ 0.18577104  3.211976 greater  0.001
-#> 6      Na+/100g 0.26673592  4.450748 greater  0.002
-#> 7            K+ 0.66106701 11.027058 greater  0.001
-#> 8  Conductivity 0.29969555  5.012424 greater  0.001
-#> 9     Retention 0.20099816  3.656422 greater  0.001
-#> 10        Na+/l 0.24300034  4.079808 greater  0.001
-#> 11    Elevation 0.59526831  9.727258 greater  0.001
+#> 1          Clay 0.42436873  7.327564 greater  0.001
+#> 2          Silt 0.33796853  5.653068 greater  0.001
+#> 3          Sand 0.09947991  1.934529 greater  0.043
+#> 4           K2O 0.27277951  4.747172 greater  0.001
+#> 5          Mg++ 0.18577104  3.029056 greater  0.005
+#> 6      Na+/100g 0.26673592  4.355048 greater  0.001
+#> 7            K+ 0.66106701 11.462323 greater  0.001
+#> 8  Conductivity 0.29969555  4.970038 greater  0.001
+#> 9     Retention 0.20099816  3.684954 greater  0.001
+#> 10        Na+/l 0.24300034  4.058754 greater  0.001
+#> 11    Elevation 0.59526831  9.752550 greater  0.001
 #> 
 plot(gm0, nclass = 20)
 

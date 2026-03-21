@@ -58,6 +58,6 @@ Stéphane Dray <stephane.dray@univ-lyon1.fr>
 #> Simulated p-value: 0.01 
 #> Alternative hypothesis: greater 
 #> 
-#>      Std.Obs  Expectation     Variance 
-#>  3.474064150 -0.005003676  0.021934863 
+#>     Std.Obs Expectation    Variance 
+#>  3.32630250 -0.01197838  0.02458002 
 ```

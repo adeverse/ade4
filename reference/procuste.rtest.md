@@ -60,6 +60,6 @@ protest1
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 6.552568740 0.342274191 0.002295254 
+#> 6.531562734 0.342144314 0.002311953 
 plot(protest1)
 ```

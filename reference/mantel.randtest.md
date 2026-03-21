@@ -54,9 +54,9 @@ r1
 #> Observation: 0.5095199 
 #> 
 #> Based on 999 replicates
-#> Simulated p-value: 0.002 
+#> Simulated p-value: 0.004 
 #> Alternative hypothesis: greater 
 #> 
-#>      Std.Obs  Expectation     Variance 
-#>  3.295987674 -0.003492398  0.024226151 
+#>     Std.Obs Expectation    Variance 
+#> 3.198302800 0.001914909 0.025189099 
 ```

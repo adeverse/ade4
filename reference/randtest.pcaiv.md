@@ -55,5 +55,5 @@ randtest(caiv1)
 #> Alternative hypothesis: greater 
 #> 
 #>      Std.Obs  Expectation     Variance 
-#> 3.899993e+01 4.529693e-02 2.809731e-05 
+#> 4.415128e+01 4.481157e-02 2.202635e-05 
 ```

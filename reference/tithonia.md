@@ -69,20 +69,20 @@ gearymoran(phy$Wmat, tab)
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   999 
 #>      Test       Obs    Std.Obs   Alter Pvalue
-#> 1  morho1 0.7321356  4.4756496 greater  0.004
-#> 2  morho2 0.3822949  0.3431711 greater  0.323
-#> 3  morho3 0.3712126  0.3186884 greater  0.261
-#> 4  morho4 0.2572795 -0.9215946 greater  0.783
-#> 5  morho5 0.4457180  1.1775848 greater  0.118
-#> 6  morho6 0.4089212  0.8161762 greater  0.161
-#> 7   demo7 0.4416215  1.1715011 greater  0.092
-#> 8   demo8 0.4822195  1.7040732 greater  0.066
-#> 9   demo9 0.3043863 -0.4368997 greater  0.623
-#> 10 demo10 0.2744296 -0.7745213 greater  0.809
-#> 11 demo11 0.4458932  1.2905809 greater  0.105
-#> 12 demo12 0.2640213 -0.9029662 greater  0.863
-#> 13 demo13 0.6092138  3.5006374 greater  0.004
-#> 14 demo14 0.3903768  0.4925647 greater  0.243
+#> 1  morho1 0.7321356  4.4427417 greater  0.004
+#> 2  morho2 0.3822949  0.3498091 greater  0.320
+#> 3  morho3 0.3712126  0.3118137 greater  0.263
+#> 4  morho4 0.2572795 -0.9311740 greater  0.789
+#> 5  morho5 0.4457180  1.1598022 greater  0.120
+#> 6  morho6 0.4089212  0.7963224 greater  0.167
+#> 7   demo7 0.4416215  1.1968312 greater  0.091
+#> 8   demo8 0.4822195  1.7202482 greater  0.065
+#> 9   demo9 0.3043863 -0.4473044 greater  0.631
+#> 10 demo10 0.2744296 -0.7843237 greater  0.808
+#> 11 demo11 0.4458932  1.2906286 greater  0.104
+#> 12 demo12 0.2640213 -0.9073976 greater  0.864
+#> 13 demo13 0.6092138  3.5112447 greater  0.004
+#> 14 demo14 0.3903768  0.4885546 greater  0.242
 #> 
 gearymoran(phy$Amat, tab)
 #> class: krandtest lightkrandtest 
@@ -95,19 +95,19 @@ gearymoran(phy$Amat, tab)
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   999 
 #>      Test         Obs     Std.Obs   Alter Pvalue
-#> 1  morho1  0.53784586  2.92757199 greater  0.006
-#> 2  morho2  0.10046720  0.59542278 greater  0.276
-#> 3  morho3  0.07014773  0.40140646 greater  0.325
-#> 4  morho4 -0.09223746 -0.59479431 greater  0.767
-#> 5  morho5  0.35119692  2.18143858 greater  0.026
-#> 6  morho6  0.17659490  1.12223812 greater  0.143
-#> 7   demo7  0.44981278  2.61801829 greater  0.010
-#> 8   demo8  0.25528857  1.44887928 greater  0.085
-#> 9   demo9 -0.01050264 -0.08490146 greater  0.494
-#> 10 demo10 -0.09660405 -0.57036811 greater  0.674
-#> 11 demo11  0.26985310  1.42718089 greater  0.094
-#> 12 demo12 -0.19861554 -1.13662673 greater  0.875
-#> 13 demo13  0.63572312  3.35296073 greater  0.003
-#> 14 demo14  0.05085783  0.31633099 greater  0.360
+#> 1  morho1  0.53784586  2.95709481 greater  0.006
+#> 2  morho2  0.10046720  0.59268450 greater  0.280
+#> 3  morho3  0.07014773  0.40817620 greater  0.325
+#> 4  morho4 -0.09223746 -0.59356172 greater  0.768
+#> 5  morho5  0.35119692  2.20027965 greater  0.024
+#> 6  morho6  0.17659490  1.12524178 greater  0.141
+#> 7   demo7  0.44981278  2.59234126 greater  0.011
+#> 8   demo8  0.25528857  1.44537595 greater  0.085
+#> 9   demo9 -0.01050264 -0.08526142 greater  0.493
+#> 10 demo10 -0.09660405 -0.57276585 greater  0.676
+#> 11 demo11  0.26985310  1.43831652 greater  0.092
+#> 12 demo12 -0.19861554 -1.13430360 greater  0.874
+#> 13 demo13  0.63572312  3.36426413 greater  0.003
+#> 14 demo14  0.05085783  0.32000782 greater  0.356
 #> 
 ```

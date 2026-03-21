@@ -151,9 +151,9 @@ if (requireNamespace("adephylo", quietly = TRUE) & requireNamespace("ape", quiet
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   999 
 #>    Test        Obs    Std.Obs   Alter Pvalue
-#> 1 R2Max  0.1801004  0.2895183 greater  0.339
-#> 2 SkR2k 11.3482467 -2.7907091 greater  0.999
-#> 3  Dmax  0.3987362  3.7605169 greater  0.002
-#> 4   SCE  1.6017356  4.7360403 greater  0.004
+#> 1 R2Max  0.1801004  0.2794671 greater  0.348
+#> 2 SkR2k 11.3482467 -2.7391551 greater  0.998
+#> 3  Dmax  0.3987362  3.6215755 greater  0.001
+#> 4   SCE  1.6017356  4.4691585 greater  0.007
 #> 
 ```

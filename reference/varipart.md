@@ -135,10 +135,10 @@ vprda
 #> Alternative hypothesis: greater 
 #> 
 #>      Std.Obs  Expectation     Variance 
-#> 8.3772329451 0.1141957726 0.0002136902 
+#> 8.3740208264 0.1142734107 0.0002135831 
 #> 
 #> Adjusted fractions:
-#> [1] 0.1382468
+#> [1] 0.1381713
 # Variation partitioning based on RDA
 # with covariables and parametric estimation
 vprda <- varipart(dudiY,  mafragh$env, mafragh$xy, type = "parametric")
@@ -156,9 +156,9 @@ vprda
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   999 
 #>      Test       Obs   Std.Obs   Alter Pvalue
-#> 1   ab(X) 0.2366554  8.059125 greater  0.001
-#> 2   bc(W) 0.1192681 15.511157 greater  0.001
-#> 3 abc(XW) 0.3051848 10.941404 greater  0.001
+#> 1   ab(X) 0.2366554  8.067619 greater  0.001
+#> 2   bc(W) 0.1192681 15.513056 greater  0.001
+#> 3 abc(XW) 0.3051848 10.924429 greater  0.001
 #> 
 #> 
 #> Individual fractions:

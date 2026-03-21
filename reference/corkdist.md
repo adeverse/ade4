@@ -115,8 +115,8 @@ m1
 #> Simulated p-value: 0.001 
 #> Alternative hypothesis: greater 
 #> 
-#>      Std.Obs  Expectation     Variance 
-#>  3.278949999 -0.002036214  0.024372974 
+#>     Std.Obs Expectation    Variance 
+#> 3.196556810 0.001240244 0.025318383 
 #> 
 #> ant-geo 
 #> Monte-Carlo test
@@ -129,7 +129,7 @@ m1
 #> Alternative hypothesis: greater 
 #> 
 #>      Std.Obs  Expectation     Variance 
-#>  5.292931208 -0.004731232  0.025640373 
+#>  5.432687465 -0.005692316  0.024393370 
 #> 
 #> ant-gen 
 #> Monte-Carlo test
@@ -138,11 +138,11 @@ m1
 #> Observation: 0.2995506 
 #> 
 #> Based on 999 replicates
-#> Simulated p-value: 0.046 
+#> Simulated p-value: 0.051 
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 1.732640491 0.004340406 0.029029908 
+#> 1.689089145 0.009678608 0.029451488 
 #> list of 3 'randtest' objects
 summary(m1)
 #> Mantel's tests for 'kdist' object
@@ -151,6 +151,6 @@ summary(m1)
 #>         1     2 3
 #> geo     -     - -
 #> gen 0.001     - -
-#> ant 0.001 0.046 -
+#> ant 0.001 0.051 -
 plot(m1)
 ```

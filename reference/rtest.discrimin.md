@@ -51,7 +51,7 @@ rand1
 #> Alternative hypothesis: greater 
 #> 
 #>      Std.Obs  Expectation     Variance 
-#> 5.2100843292 0.1581614011 0.0007780565 
+#> 5.1534617114 0.1578045982 0.0007991576 
 #Monte-Carlo test
 #Observation: 0.3035 
 #Call: as.rtest(sim = sim, obs = obs)

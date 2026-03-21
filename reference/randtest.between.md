@@ -50,10 +50,10 @@ rand1
 #> Observation: 0.3722686 
 #> 
 #> Based on 99 replicates
-#> Simulated p-value: 0.02 
+#> Simulated p-value: 0.01 
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 3.146051911 0.159352208 0.004580222 
+#> 3.830964196 0.156778141 0.003164025 
 plot(rand1, main = "Monte-Carlo test")
 ```

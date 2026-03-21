@@ -54,6 +54,6 @@ rand1
 #> Alternative hypothesis: greater 
 #> 
 #>     Std.Obs Expectation    Variance 
-#> 3.771460875 0.158979218 0.003198301 
+#> 3.776103252 0.156065169 0.003278215 
 plot(rand1, main = "Monte-Carlo test")
 ```

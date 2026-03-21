@@ -70,11 +70,11 @@ gearymoran(pro.phy$Amat,wt,9999)
 #> 
 #> Adjustment method for multiple comparisons:   none 
 #> Permutation number:   9999 
-#>       Test          Obs      Std.Obs   Alter Pvalue
-#> 1 site.fid 0.0999203829  0.741020383 greater 0.2193
-#> 2 mate.fid 0.1775615101  1.237425240 greater 0.1157
-#> 3     mass 0.5446640572  3.866273406 greater 0.0002
-#> 4      ALE 0.0009167618 -0.005105059 greater 0.4721
-#> 5       BF 0.1972100051  1.411421375 greater 0.0872
+#>       Test          Obs    Std.Obs   Alter Pvalue
+#> 1 site.fid 0.0999203829 0.72303864 greater 0.2233
+#> 2 mate.fid 0.1775615101 1.26397101 greater 0.1141
+#> 3     mass 0.5446640572 3.78244037 greater 0.0007
+#> 4      ALE 0.0009167618 0.01544887 greater 0.4614
+#> 5       BF 0.1972100051 1.38344521 greater 0.0954
 #> 
 ```

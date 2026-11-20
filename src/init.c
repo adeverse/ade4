@@ -24,18 +24,17 @@ extern void testprocuste(void *, void *, void *, void *, void *, void *, void *)
 extern void VarianceDecompInOrthoBasis(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
 
 /* .Call calls */
-extern void _ade4_RVrandtestCpp(void *, void *, void *);
-extern void _ade4_RVintrarandtestCpp(void *, void *, void *, void *);
-extern void _ade4_procusterandtestCpp(void *, void *, void *);
-extern void _ade4_testinterCpp(void *, void *, void *, void *, void *);
-extern void _ade4_inerbetweenCpp(void *, void *, void *, void *, void *);
-extern void _ade4_testmantelCpp(void *, void *, void *);
-extern void _ade4_testdiscriminCpp(void *, void *, void *, void *, void *);
-extern void _ade4_betweenvarCpp(void *, void *, void *);
-extern void _ade4_testertraceCpp(void *, void *, void *, void *, void *);
-extern void _ade4_testertracenuCpp(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
-extern void _ade4_testertracenubisCpp(void *, void *, void *, void *, void *, void *, void *, void *, void *, void *, void *);
-
+extern SEXP _ade4_RVrandtestCpp(SEXP, SEXP, SEXP);
+extern SEXP _ade4_RVintrarandtestCpp(SEXP, SEXP, SEXP, SEXP);
+extern SEXP _ade4_procusterandtestCpp(SEXP, SEXP, SEXP);
+extern SEXP _ade4_testinterCpp(SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP _ade4_inerbetweenCpp(SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP _ade4_testmantelCpp(SEXP, SEXP, SEXP);
+extern SEXP _ade4_testdiscriminCpp(SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP _ade4_betweenvarCpp(SEXP, SEXP, SEXP);
+extern SEXP _ade4_testertraceCpp(SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP _ade4_testertracenuCpp(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP _ade4_testertracenubisCpp(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 
 static const R_CMethodDef CEntries[] = {
   {"gearymoran",                 (DL_FUNC) &gearymoran,                  7},
